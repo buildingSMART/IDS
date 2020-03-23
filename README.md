@@ -1,10 +1,10 @@
-# Exchange Information Requirements standard
-Machine readable standard to define Exchange Information Requirements (according to ISO19650)
+# Information Delivery specification standard
+Machine readable standard to define Information Delivery Specifications (Machine readable Exchange Requirement definition as described in IDM and ISO1960 series)
 
-## EIR
-Experimental repo to work on JSON based Exchange Information Requirements.
+## IDS
+Experimental repo to work on JSON based Information Delivery Specification.
 
-Experiment to defines property requiremets for IfcSite and IfcProject on https://github.com/buildingSMART/EIR/tree/master/examples/project%20and%20site%20properties 
+Experiment to defines property requiremets for IfcSite and IfcProject on https://github.com/buildingSMART/IDS/tree/master/examples/project%20and%20site%20properties 
 
 Please be aware this is not a formal buildingSMART project yet, but first experiments to define a direction and roadmap.
 
