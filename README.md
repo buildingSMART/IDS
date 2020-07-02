@@ -1,6 +1,6 @@
 # Information Delivery specification standard
-Machine readable standard to define Information Delivery Specifications (Machine readable Exchange Requirement definition as described in IDM and ISO1960 series)
-This work is done in collaboration with the CEN group 'Level of Information Need' (LOIN).
+Machine readable standard to define Information Delivery Specifications (Machine readable Exchange Requirement definition as described in IDM and ISO 19650 series)
+This work is done in collaboration with the CEN group 'Level of Information Needs' (LOIN).
 
 ## IDS
 Repo to work on JSON based computer interpretable Information Delivery Specification.
