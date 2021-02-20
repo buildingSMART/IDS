@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<IDSSpecification globalId="04f9e8c2-1e63-4244-8e93-0dd8f3165107" name="IDS01">
+    <description>IDS Example</description>
+    <context purpose="Visualization" informationDeliveryMileStone="Preliminary Design" sendingActor="Architect" receivingActor="Client"/>
+    <specificationPerObjectTypeList globalId="99b37edd-e108-4601-91d4-abfbfd069963">
+        <objectType name="Door" refToClassification="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcsharedbldgelements/lexical/ifcdoor.htm" refToDataModelType="IfcDoor">
+            <subTypeOf name="BuildingElement" refToClassification="https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/FINAL/HTML/ifcproductextension/lexical/ifcelement.htm" refToDataModelType="IfcElement"/>
+        </objectType>
+        <alphanumericInformationSpecification>
+            <Description>Door object alphanumeric information</Description>
+            <propertySets>
+                <propertySet name="Door Properties" refToClassification="Classification001">
+                    <properties>
+                        <property name="Width" unit="cm" refToClassification="http://bsdd.buildingsmart.org/#concept/details/0C$q01fAv9ZOabWvo68xm6">
+                            <dataType type="BOOLEAN"/>
+                        </property>
+                    </properties>
+                </propertySet>
+            </propertySets>
+        </alphanumericInformationSpecification>
+    </specificationPerObjectTypeList>
+    <specificationPerObjectTypeList globalId="99b37edd-e108-4601-91d4-abfbfd069977">
+        <objectType name="Door" refToClassification="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcsharedbldgelements/lexical/ifcdoor.htm" refToDataModelType="IfcDoor">
+            <subTypeOf name="BuildingElement" refToClassification="https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/FINAL/HTML/ifcproductextension/lexical/ifcelement.htm" refToDataModelType="IfcElement"/>
+        </objectType>
+        <alphanumericInformationSpecification>
+            <Description>Interior Door object alphanumeric information</Description>
+            <propertySets>
+                <propertySet name="FireCodeProperties" refToClassification="Classification001">
+                    <properties>
+                        <property name="FireResistanceRating" unit="NONE" refToClassification="http://bsdd.buildingsmart.org/#concept/details/07RqSAS5b3xgKYraRjwwZP">
+                            <dataType type="BOOLEAN"/>
+                        </property>
+                        <property name="IsCombustible" unit="NONE" refToClassification="http://bsdd.buildingsmart.org/#concept/details/08fiQpHdbDr8e3q81XFwRb">
+                            <dataType type="BOOLEAN"/>
+                        </property>
+                    </properties>
+                </propertySet>
+            </propertySets>
+        </alphanumericInformationSpecification>
+    </specificationPerObjectTypeList>
+</IDSSpecification>

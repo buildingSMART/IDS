@@ -1,0 +1,218 @@
+#
+#	User defined propertyset Aedes ILS
+#	-----------------
+#	Propertyset voor schakeling diverse onderdelen naar een te benoemen set.
+#	De inhoud van dit bestand is vrij van rechten en kan door iedereen worden gebruikt
+#	dan wel aangepast voor eigen indeling en parameters.
+#	-----------------
+#	Gelieve iedere wijziging in de versie log hieronder vast te leggen.
+#	-----------------
+#	Auteur ROOT BV
+#	Wilco Kelder
+#	versie 1.0
+#	datum 18-03-2018
+#	wke@root-bv.nl
+#	-----------------
+#	versie 1.0 log
+#	
+#	Mogelijke datatypes voor IFC mapping
+#	Area, Boolean, ClassificationReference, ColorTemperature, Count, Currency
+#	ElecticalCurrent, ElecticalEfficacy, ElectricalVoltage, Force, Frequency, Identifier,
+#	Illuminance, Integer, Label, Length, LinearVelocity, Logical, LuminousFlux, LuminousIntensity,
+#	NormalisedRation, PlaneAngle, PositiveLength, PositivePlaneAngle, PositiveRatio, Power,
+#	Pressure, Ration, Real, Text, ThermalTransmittance, ThermodynamicTemperature, Volume,
+#	VolumetricFlowRate	
+#
+#	
+############################################################################################
+####
+####	IfcBuilding
+####
+############################################################################################
+#PropertySet:		ILS	I				IfcBuilding
+#	Gebouwnaam							Text	Building name
+#	GUID								Text	IfcGUID
+#	Projectnaam							Text	Project Name
+#	Projectnummer						Text	Project Number
+############################################################################################
+####
+####	IfcSpace
+####
+############################################################################################
+PropertySet:		ILS	I				IfcSpace
+#ILS Generiek
+	WoningtypeId						Text
+	AdresId								Text
+	IfcExportAs							Text
+	BagPandId							Text
+	BagVerblijfsObjectId				Text
+	ComplexId							Text
+	RuimteRelatieId						Text
+	EenheidId							Text
+	GUID								Text	IfcGUID
+	Oppervlaktecategorie				Text
+	Element								Text	Objecttype
+	BouwlaagCode						Text	Level
+	Gebruiksfunctie						Text
+	Ruimtefunctie						Text
+	Ruimtenummer						Text	Number
+	Ruimtetype							Text	Name
+#ILS Kwantitatief
+	Hoogte								Length	Unbounded Height
+	Inhoud								Volume	Volume
+	Oppervlakte							Area	Area
+#ILS Kwalitatief
+	AlgemeneRuimte						Boolean
+	Exterieur							Boolean	IsExternal
+	HandicapToegankelijk				Boolean	HandicapAccessible
+	Oppervlaktecategorie				Text
+	Overdekt							Boolean
+	Verwarmd							Boolean
+#	Zonenaam 1							Text	ZoneName
+#	Zonenaam 2							Text	ZoneName 2
+#	Zonenaam 3							Text	ZoneName 3
+#	Zonenaam 4							Text	ZoneName 4
+#	Zoneomschrijving 1					Text	ZoneDescription
+#	Zoneomschrijving 2					Text	ZoneDescription 2
+#	Zoneomschrijving 3					Text	ZoneDescription 3
+#	Zoneomschrijving 4					Text	ZoneDescription 4
+#	Zonetype 1							Text	ZoneObjectType
+#	Zonetype 2							Text	ZoneObjectType 2
+#	Zonetype 3							Text	ZoneObjectType 3
+#	Zonetype 4							Text	ZoneObjectType 4
+############################################################################################
+####
+####	IfcElement
+####
+############################################################################################			
+PropertySet:			ILS	I			IfcElement
+#ILS Samenstellingen
+	KozijncombinatieId					Text
+	DakkapelId							Text
+	RaamId								Text
+	KozijnId							Text
+	DeurId								Text
+	SchuifpuiId							Text
+	LuifelId							Text
+	RaamId								Text
+	SchoorsteenId						Text
+	ErkerId								Text
+#ILS Generiek
+	Element								Text	Keynote
+	Nlsfb4								Text	Assembly Code
+	GUID								Text	IfcGUID	
+	IfcExportAs							Text
+	EenheidId							Text
+	RuimteRelatieId						Text
+	BagVerblijfsObjectId				Text
+	ComplexId							Text
+	BagPandId							Text
+	Bronreferentie						Text	StatusSourceReference
+	BouwlaagCode						Text	Level
+	BouwlaagCode						Text	Base Constraint
+	BouwlaagCode						Text	Base Level
+	BouwlaagCode						Text	Schedule Level
+	BouwlaagCode						Text	Reference Level
+	BouwlaagCode						Text	Work Plane
+#ILS Kwantitatief
+	Asbesthoudend						Boolean
+	ZelfAangebrachteVoorziening			Boolean
+	Breedte								Length
+	Breedte								Length	radius
+	Breedte								Length	Width
+	Diameter							Length
+	Diameter							Length	diameter
+	Diepte								Length
+	Diepte								Length	radius
+	Hoogte								Length
+	Hoogte								Length	Height
+	Hoogte								Length	Unconnected Height
+	Hoogte								Length	Railing Height
+	Lengte								Length
+	Lengte								Length	Length
+	Lengte								Length	Cut Length
+	Lengte								Length	dorpel_lengte
+	LengteOppervlaktebescherming		Length
+	Oppervlakte							Area
+	Oppervlakte							Area	Area
+	Oppervlakte							Area	Surface Area
+	OppervlakteOppervlaktebescherming	Area
+#ILS Kwalitatief
+	Aandrijving							Text
+	Aangepast							Boolean
+	AantalLagen							Integer
+	Afsluitbaar							Boolean
+	Afvoer								Boolean
+	AntiSlip							Boolean	HasNonSkidSurface
+	Bediening							Text
+	Bevochtigen							Boolean
+	Blusmiddel							Text
+	Brandwerendheid						Text	FireRating
+	Collectief							Boolean
+	Combiketel							Boolean
+	Constructief						Boolean	LoadBearing
+	Deurdranger							Boolean	SelfClosing
+	Dicht								Boolean
+	DubbelHardGebakken					Boolean
+	Exterieur							Boolean	IsExternal
+#	Exterieur							Logical	Function
+	SteenFormaat						Text
+	GaskeurHr							Text
+	Geglazuurd							Boolean
+	Geisoleerd							Boolean
+	GeschiktVoorAantalWoningen			Integer					
+	GeschiktVoorCv						Boolean					
+	GeschiktVoorTapwater				Boolean					
+	GevaarlijkeStoffen					Boolean					
+#	HandicapToegankelijk				Boolean	HandicapAccessible					
+	HrClassificatie						Text								
+	InHoogteVerstelbaar					Boolean					
+	Koelcapaciteit						Real				
+	Koelen								Boolean						
+	Lamptype							Text									
+	Luchthoeveelheid					Real					
+	Massief								Boolean			
+	Materiaal							Text	Materiaal
+	MateriaalAfwerking					Text
+	Mechanisch							Boolean
+	Medium								Text
+	Mengkraan							Boolean
+	Merknaam							Text
+	Monumentaal							Boolean
+	NaIsolatie							Boolean
+	NominaalVermogen					Real	NominaalVermogen
+	Opdek								Boolean
+	Opgeklampt							Boolean
+	Opklapbaar							Boolean
+	Oppervlaktebescherming				Text					
+	Plaatsingsjaar						Text				
+	PolitiekeurmerkVeiligWonen			Boolean						
+	ProductType 						Text							
+	Subsysteem							Text				
+#	Subsysteem							Text	System Name			
+	Suskast								Boolean			
+	Systeem								Text			
+#	Systeem								Text	System Classifcation		
+#	Systeem								Text	System Type		
+	Tankinhoud							Volume				
+	TerPlaatseVan						Text				
+	Thermostatisch						Boolean				
+	Toevoer								Boolean			
+	Type								Text	Model		
+	Uitklapbaar							Boolean
+	Uitvoering							Text				
+	Vast								Boolean			
+	Verwarmen							Boolean				
+	Vluchtrichting						Text										
+	Voegwerk							Boolean				
+	Aardlekschakelaar					Boolean					
+	Ballastlaag							Boolean					
+	HangEnSluitwerk						Boolean									
+	Mineraal							Boolean					
+	Ophangconstructie					Boolean					
+	Sensor								Boolean					
+	Toplaag								Boolean					
+	Warmteterugwinning					Boolean
+	ConstructieMethode					Text
+	PlaatsVanMontage					Text
+	Windstreek							Text

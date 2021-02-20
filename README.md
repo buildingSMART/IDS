@@ -1,15 +1,11 @@
 # Information Delivery specification standard
-Machine readable standard to define Information Delivery Specifications (Machine readable Exchange Requirement definition as described in IDM and ISO 19650 series)
+Machine readable standard to define Information Delivery Specifications.
 This work is done in collaboration with the CEN group 'Level of Information Needs' (LOIN).
 
-Please be aware: the info on this repo is experimental. The official IDS project is collecting usecases and defining scope. Based on that work technology choices will be made.
+The repo is collecting use-cases, developing and publishing the XSD including XML examples.
 
-## experiment
-Repo to experiment with JSON based computer interpretable Information Delivery Specification.
+## Objectives
 
-Example to define property requiremets for IfcSite and IfcProject on https://github.com/buildingSMART/IDS/tree/master/examples/project%20and%20site%20properties 
-
-
-![alt text](images/geolocation_example.png "example of EIR (left) in a prototype implementation to check and add properties")
+Project information and objectives can be found on: http://technical.buildingsmart.org/projects/information-delivery-specification-ids/ 
 
 

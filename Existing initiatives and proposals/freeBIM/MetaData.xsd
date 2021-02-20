@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MetaData" targetNamespace="http://tempuri.org/MetaData.xsd" xmlns:mstns="http://tempuri.org/MetaData.xsd" xmlns="http://tempuri.org/MetaData.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MetaData" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="MetaData" msprop:Generator_UserDSName="MetaData">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Subjects" msprop:Generator_TableClassName="SubjectsDataTable" msprop:Generator_TableVarName="tableSubjects" msprop:Generator_TablePropName="Subjects" msprop:Generator_RowDeletingName="SubjectsRowDeleting" msprop:Generator_RowChangingName="SubjectsRowChanging" msprop:Generator_RowEvHandlerName="SubjectsRowChangeEventHandler" msprop:Generator_RowDeletedName="SubjectsRowDeleted" msprop:Generator_UserTableName="Subjects" msprop:Generator_RowChangedName="SubjectsRowChanged" msprop:Generator_RowEvArgName="SubjectsRowChangeEvent" msprop:Generator_RowClassName="SubjectsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="freeBIM_Guid" msprop:Generator_ColumnVarNameInTable="columnfreeBIM_Guid" msprop:Generator_ColumnPropNameInRow="freeBIM_Guid" msprop:Generator_ColumnPropNameInTable="freeBIM_GuidColumn" msprop:Generator_UserColumnName="freeBIM_Guid" type="xs:string" />
+              <xs:element name="bSDD_Guid" msprop:Generator_ColumnVarNameInTable="columnbSDD_Guid" msprop:Generator_ColumnPropNameInRow="bSDD_Guid" msprop:Generator_ColumnPropNameInTable="bSDD_GuidColumn" msprop:Generator_UserColumnName="bSDD_Guid" type="xs:string" minOccurs="0" />
+              <xs:element name="Parent_Guid" msprop:Generator_ColumnVarNameInTable="columnParent_Guid" msprop:Generator_ColumnPropNameInRow="Parent_Guid" msprop:Generator_ColumnPropNameInTable="Parent_GuidColumn" msprop:Generator_UserColumnName="Parent_Guid" type="xs:string" minOccurs="0" />
+              <xs:element name="Name_Int" msprop:Generator_ColumnVarNameInTable="columnName_Int" msprop:Generator_ColumnPropNameInRow="Name_Int" msprop:Generator_ColumnPropNameInTable="Name_IntColumn" msprop:Generator_UserColumnName="Name_Int" type="xs:string" minOccurs="0" />
+              <xs:element name="Name_Loc" msprop:Generator_ColumnVarNameInTable="columnName_Loc" msprop:Generator_ColumnPropNameInRow="Name_Loc" msprop:Generator_ColumnPropNameInTable="Name_LocColumn" msprop:Generator_UserColumnName="Name_Loc" type="xs:string" minOccurs="0" />
+              <xs:element name="ShortName" msprop:Generator_ColumnVarNameInTable="columnShortName" msprop:Generator_ColumnPropNameInRow="ShortName" msprop:Generator_ColumnPropNameInTable="ShortNameColumn" msprop:Generator_UserColumnName="ShortName" type="xs:string" minOccurs="0" />
+              <xs:element name="Description_Int" msprop:Generator_ColumnVarNameInTable="columnDescription_Int" msprop:Generator_ColumnPropNameInRow="Description_Int" msprop:Generator_ColumnPropNameInTable="Description_IntColumn" msprop:Generator_UserColumnName="Description_Int" type="xs:string" minOccurs="0" />
+              <xs:element name="Description_Loc" msprop:Generator_ColumnVarNameInTable="columnDescription_Loc" msprop:Generator_ColumnPropNameInRow="Description_Loc" msprop:Generator_ColumnPropNameInTable="Description_LocColumn" msprop:Generator_UserColumnName="Description_Loc" type="xs:string" minOccurs="0" />
+              <xs:element name="Ifc_Name" msprop:Generator_ColumnVarNameInTable="columnIfc_Name" msprop:Generator_ColumnPropNameInRow="Ifc_Name" msprop:Generator_ColumnPropNameInTable="Ifc_NameColumn" msprop:Generator_UserColumnName="Ifc_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="IsMat" msprop:Generator_ColumnVarNameInTable="columnIsMat" msprop:Generator_ColumnPropNameInRow="IsMat" msprop:Generator_ColumnPropNameInTable="IsMatColumn" msprop:Generator_UserColumnName="IsMat" type="xs:boolean" minOccurs="0" />
+              <xs:element name="bIsExtension" msprop:Generator_ColumnVarNameInTable="columnbIsExtension" msprop:Generator_ColumnPropNameInRow="bIsExtension" msprop:Generator_ColumnPropNameInTable="bIsExtensionColumn" msprop:Generator_UserColumnName="bIsExtension" type="xs:boolean" default="false" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Properties" msprop:Generator_TableClassName="PropertiesDataTable" msprop:Generator_TableVarName="tableProperties" msprop:Generator_TablePropName="Properties" msprop:Generator_RowDeletingName="PropertiesRowDeleting" msprop:Generator_RowChangingName="PropertiesRowChanging" msprop:Generator_RowEvHandlerName="PropertiesRowChangeEventHandler" msprop:Generator_RowDeletedName="PropertiesRowDeleted" msprop:Generator_UserTableName="Properties" msprop:Generator_RowChangedName="PropertiesRowChanged" msprop:Generator_RowEvArgName="PropertiesRowChangeEvent" msprop:Generator_RowClassName="PropertiesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="freeBIM_Guid" msprop:Generator_ColumnVarNameInTable="columnfreeBIM_Guid" msprop:Generator_ColumnPropNameInRow="freeBIM_Guid" msprop:Generator_ColumnPropNameInTable="freeBIM_GuidColumn" msprop:Generator_UserColumnName="freeBIM_Guid" type="xs:string" />
+              <xs:element name="bSDD_Guid" msprop:Generator_ColumnVarNameInTable="columnbSDD_Guid" msprop:Generator_ColumnPropNameInRow="bSDD_Guid" msprop:Generator_ColumnPropNameInTable="bSDD_GuidColumn" msprop:Generator_UserColumnName="bSDD_Guid" type="xs:string" minOccurs="0" />
+              <xs:element name="Name_Int" msprop:Generator_ColumnVarNameInTable="columnName_Int" msprop:Generator_ColumnPropNameInRow="Name_Int" msprop:Generator_ColumnPropNameInTable="Name_IntColumn" msprop:Generator_UserColumnName="Name_Int" type="xs:string" minOccurs="0" />
+              <xs:element name="Name_Loc" msprop:Generator_ColumnVarNameInTable="columnName_Loc" msprop:Generator_ColumnPropNameInRow="Name_Loc" msprop:Generator_ColumnPropNameInTable="Name_LocColumn" msprop:Generator_UserColumnName="Name_Loc" type="xs:string" minOccurs="0" />
+              <xs:element name="ShortName" msprop:Generator_ColumnVarNameInTable="columnShortName" msprop:Generator_ColumnPropNameInRow="ShortName" msprop:Generator_ColumnPropNameInTable="ShortNameColumn" msprop:Generator_UserColumnName="ShortName" type="xs:string" minOccurs="0" />
+              <xs:element name="Description_Int" msprop:Generator_ColumnVarNameInTable="columnDescription_Int" msprop:Generator_ColumnPropNameInRow="Description_Int" msprop:Generator_ColumnPropNameInTable="Description_IntColumn" msprop:Generator_UserColumnName="Description_Int" type="xs:string" minOccurs="0" />
+              <xs:element name="Description_Loc" msprop:Generator_ColumnVarNameInTable="columnDescription_Loc" msprop:Generator_ColumnPropNameInRow="Description_Loc" msprop:Generator_ColumnPropNameInTable="Description_LocColumn" msprop:Generator_UserColumnName="Description_Loc" type="xs:string" minOccurs="0" />
+              <xs:element name="bIsInIFC_PSet" msprop:Generator_ColumnVarNameInTable="columnbIsInIFC_PSet" msprop:Generator_ColumnPropNameInRow="bIsInIFC_PSet" msprop:Generator_ColumnPropNameInTable="bIsInIFC_PSetColumn" msprop:Generator_UserColumnName="bIsInIFC_PSet" type="xs:boolean" minOccurs="0" />
+              <xs:element name="bIsGeneric" msprop:Generator_ColumnVarNameInTable="columnbIsGeneric" msprop:Generator_ColumnPropNameInRow="bIsGeneric" msprop:Generator_ColumnPropNameInTable="bIsGenericColumn" msprop:Generator_UserColumnName="bIsGeneric" type="xs:boolean" minOccurs="0" />
+              <xs:element name="bIsExtension" msprop:Generator_ColumnVarNameInTable="columnbIsExtension" msprop:Generator_ColumnPropNameInRow="bIsExtension" msprop:Generator_ColumnPropNameInTable="bIsExtensionColumn" msprop:Generator_UserColumnName="bIsExtension" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="NameEqualRel" msprop:Generator_ColumnVarNameInTable="columnNameEqualRel" msprop:Generator_ColumnPropNameInRow="NameEqualRel" msprop:Generator_ColumnPropNameInTable="NameEqualRelColumn" msprop:Generator_UserColumnName="NameEqualRel" type="xs:string" minOccurs="0" />
+              <xs:element name="Ifc_Name" msprop:Generator_ColumnVarNameInTable="columnIfc_Name" msprop:Generator_ColumnPropNameInRow="Ifc_Name" msprop:Generator_ColumnPropNameInTable="Ifc_NameColumn" msprop:Generator_UserColumnName="Ifc_Name" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Measures" msprop:Generator_TableClassName="MeasuresDataTable" msprop:Generator_TableVarName="tableMeasures" msprop:Generator_TablePropName="Measures" msprop:Generator_RowDeletingName="MeasuresRowDeleting" msprop:Generator_RowChangingName="MeasuresRowChanging" msprop:Generator_RowEvHandlerName="MeasuresRowChangeEventHandler" msprop:Generator_RowDeletedName="MeasuresRowDeleted" msprop:Generator_UserTableName="Measures" msprop:Generator_RowChangedName="MeasuresRowChanged" msprop:Generator_RowEvArgName="MeasuresRowChangeEvent" msprop:Generator_RowClassName="MeasuresRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="freeBIM_Guid" msprop:Generator_ColumnVarNameInTable="columnfreeBIM_Guid" msprop:Generator_ColumnPropNameInRow="freeBIM_Guid" msprop:Generator_ColumnPropNameInTable="freeBIM_GuidColumn" msprop:Generator_UserColumnName="freeBIM_Guid" type="xs:string" />
+              <xs:element name="bSDD_Guid" msprop:Generator_ColumnVarNameInTable="columnbSDD_Guid" msprop:Generator_ColumnPropNameInRow="bSDD_Guid" msprop:Generator_ColumnPropNameInTable="bSDD_GuidColumn" msprop:Generator_UserColumnName="bSDD_Guid" type="xs:string" minOccurs="0" />
+              <xs:element name="Name_Int" msprop:Generator_ColumnVarNameInTable="columnName_Int" msprop:Generator_ColumnPropNameInRow="Name_Int" msprop:Generator_ColumnPropNameInTable="Name_IntColumn" msprop:Generator_UserColumnName="Name_Int" type="xs:string" minOccurs="0" />
+              <xs:element name="Name_Loc" msprop:Generator_ColumnVarNameInTable="columnName_Loc" msprop:Generator_ColumnPropNameInRow="Name_Loc" msprop:Generator_ColumnPropNameInTable="Name_LocColumn" msprop:Generator_UserColumnName="Name_Loc" type="xs:string" minOccurs="0" />
+              <xs:element name="ShortName" msprop:Generator_ColumnVarNameInTable="columnShortName" msprop:Generator_ColumnPropNameInRow="ShortName" msprop:Generator_ColumnPropNameInTable="ShortNameColumn" msprop:Generator_UserColumnName="ShortName" type="xs:string" minOccurs="0" />
+              <xs:element name="Description_Int" msprop:Generator_ColumnVarNameInTable="columnDescription_Int" msprop:Generator_ColumnPropNameInRow="Description_Int" msprop:Generator_ColumnPropNameInTable="Description_IntColumn" msprop:Generator_UserColumnName="Description_Int" type="xs:string" minOccurs="0" />
+              <xs:element name="Description_Loc" msprop:Generator_ColumnVarNameInTable="columnDescription_Loc" msprop:Generator_ColumnPropNameInRow="Description_Loc" msprop:Generator_ColumnPropNameInTable="Description_LocColumn" msprop:Generator_UserColumnName="Description_Loc" type="xs:string" minOccurs="0" />
+              <xs:element name="DataType" msprop:Generator_ColumnVarNameInTable="columnDataType" msprop:Generator_ColumnPropNameInRow="DataType" msprop:Generator_ColumnPropNameInTable="DataTypeColumn" msprop:Generator_UserColumnName="DataType" type="xs:string" minOccurs="0" />
+              <xs:element name="Unit" msprop:Generator_ColumnVarNameInTable="columnUnit" msprop:Generator_ColumnPropNameInRow="Unit" msprop:Generator_ColumnPropNameInTable="UnitColumn" msprop:Generator_UserColumnName="Unit" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Values" msprop:Generator_TableClassName="ValuesDataTable" msprop:Generator_TableVarName="tableValues" msprop:Generator_TablePropName="Values" msprop:Generator_RowDeletingName="ValuesRowDeleting" msprop:Generator_RowChangingName="ValuesRowChanging" msprop:Generator_RowEvHandlerName="ValuesRowChangeEventHandler" msprop:Generator_RowDeletedName="ValuesRowDeleted" msprop:Generator_UserTableName="Values" msprop:Generator_RowChangedName="ValuesRowChanged" msprop:Generator_RowEvArgName="ValuesRowChangeEvent" msprop:Generator_RowClassName="ValuesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="freeBIM_Guid" msprop:Generator_ColumnVarNameInTable="columnfreeBIM_Guid" msprop:Generator_ColumnPropNameInRow="freeBIM_Guid" msprop:Generator_ColumnPropNameInTable="freeBIM_GuidColumn" msprop:Generator_UserColumnName="freeBIM_Guid" type="xs:string" />
+              <xs:element name="bSDD_Guid" msprop:Generator_ColumnVarNameInTable="columnbSDD_Guid" msprop:Generator_ColumnPropNameInRow="bSDD_Guid" msprop:Generator_ColumnPropNameInTable="bSDD_GuidColumn" msprop:Generator_UserColumnName="bSDD_Guid" type="xs:string" minOccurs="0" />
+              <xs:element name="Name_Int" msprop:Generator_ColumnVarNameInTable="columnName_Int" msprop:Generator_ColumnPropNameInRow="Name_Int" msprop:Generator_ColumnPropNameInTable="Name_IntColumn" msprop:Generator_UserColumnName="Name_Int" type="xs:string" minOccurs="0" />
+              <xs:element name="Name_Loc" msprop:Generator_ColumnVarNameInTable="columnName_Loc" msprop:Generator_ColumnPropNameInRow="Name_Loc" msprop:Generator_ColumnPropNameInTable="Name_LocColumn" msprop:Generator_UserColumnName="Name_Loc" type="xs:string" minOccurs="0" />
+              <xs:element name="ShortName" msprop:Generator_ColumnVarNameInTable="columnShortName" msprop:Generator_ColumnPropNameInRow="ShortName" msprop:Generator_ColumnPropNameInTable="ShortNameColumn" msprop:Generator_UserColumnName="ShortName" type="xs:string" minOccurs="0" />
+              <xs:element name="Description_Int" msprop:Generator_ColumnVarNameInTable="columnDescription_Int" msprop:Generator_ColumnPropNameInRow="Description_Int" msprop:Generator_ColumnPropNameInTable="Description_IntColumn" msprop:Generator_UserColumnName="Description_Int" type="xs:string" minOccurs="0" />
+              <xs:element name="Description_Loc" msprop:Generator_ColumnVarNameInTable="columnDescription_Loc" msprop:Generator_ColumnPropNameInRow="Description_Loc" msprop:Generator_ColumnPropNameInTable="Description_LocColumn" msprop:Generator_UserColumnName="Description_Loc" type="xs:string" minOccurs="0" />
+              <xs:element name="Comment" msprop:Generator_ColumnVarNameInTable="columnComment" msprop:Generator_ColumnPropNameInRow="Comment" msprop:Generator_ColumnPropNameInTable="CommentColumn" msprop:Generator_UserColumnName="Comment" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Phases" msprop:Generator_TableClassName="PhasesDataTable" msprop:Generator_TableVarName="tablePhases" msprop:Generator_TablePropName="Phases" msprop:Generator_RowDeletingName="PhasesRowDeleting" msprop:Generator_RowChangingName="PhasesRowChanging" msprop:Generator_RowEvHandlerName="PhasesRowChangeEventHandler" msprop:Generator_RowDeletedName="PhasesRowDeleted" msprop:Generator_UserTableName="Phases" msprop:Generator_RowChangedName="PhasesRowChanged" msprop:Generator_RowEvArgName="PhasesRowChangeEvent" msprop:Generator_RowClassName="PhasesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="freeBIM_Guid" msprop:Generator_ColumnVarNameInTable="columnfreeBIM_Guid" msprop:Generator_ColumnPropNameInRow="freeBIM_Guid" msprop:Generator_ColumnPropNameInTable="freeBIM_GuidColumn" msprop:Generator_UserColumnName="freeBIM_Guid" type="xs:string" />
+              <xs:element name="bSDD_Guid" msprop:Generator_ColumnVarNameInTable="columnbSDD_Guid" msprop:Generator_ColumnPropNameInRow="bSDD_Guid" msprop:Generator_ColumnPropNameInTable="bSDD_GuidColumn" msprop:Generator_UserColumnName="bSDD_Guid" type="xs:string" minOccurs="0" />
+              <xs:element name="Name_Int" msprop:Generator_ColumnVarNameInTable="columnName_Int" msprop:Generator_ColumnPropNameInRow="Name_Int" msprop:Generator_ColumnPropNameInTable="Name_IntColumn" msprop:Generator_UserColumnName="Name_Int" type="xs:string" minOccurs="0" />
+              <xs:element name="Name_Loc" msprop:Generator_ColumnVarNameInTable="columnName_Loc" msprop:Generator_ColumnPropNameInRow="Name_Loc" msprop:Generator_ColumnPropNameInTable="Name_LocColumn" msprop:Generator_UserColumnName="Name_Loc" type="xs:string" minOccurs="0" />
+              <xs:element name="ShortName" msprop:Generator_ColumnVarNameInTable="columnShortName" msprop:Generator_ColumnPropNameInRow="ShortName" msprop:Generator_ColumnPropNameInTable="ShortNameColumn" msprop:Generator_UserColumnName="ShortName" type="xs:string" minOccurs="0" />
+              <xs:element name="Description_Int" msprop:Generator_ColumnVarNameInTable="columnDescription_Int" msprop:Generator_ColumnPropNameInRow="Description_Int" msprop:Generator_ColumnPropNameInTable="Description_IntColumn" msprop:Generator_UserColumnName="Description_Int" type="xs:string" minOccurs="0" />
+              <xs:element name="Description_Loc" msprop:Generator_ColumnVarNameInTable="columnDescription_Loc" msprop:Generator_ColumnPropNameInRow="Description_Loc" msprop:Generator_ColumnPropNameInTable="Description_LocColumn" msprop:Generator_UserColumnName="Description_Loc" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Assigns_Properties" msprop:Generator_TableClassName="Assigns_PropertiesDataTable" msprop:Generator_TableVarName="tableAssigns_Properties" msprop:Generator_TablePropName="Assigns_Properties" msprop:Generator_RowDeletingName="Assigns_PropertiesRowDeleting" msprop:Generator_RowChangingName="Assigns_PropertiesRowChanging" msprop:Generator_RowEvHandlerName="Assigns_PropertiesRowChangeEventHandler" msprop:Generator_RowDeletedName="Assigns_PropertiesRowDeleted" msprop:Generator_UserTableName="Assigns_Properties" msprop:Generator_RowChangedName="Assigns_PropertiesRowChanged" msprop:Generator_RowEvArgName="Assigns_PropertiesRowChangeEvent" msprop:Generator_RowClassName="Assigns_PropertiesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Guid_Subject" msprop:Generator_ColumnVarNameInTable="columnGuid_Subject" msprop:Generator_ColumnPropNameInRow="Guid_Subject" msprop:Generator_ColumnPropNameInTable="Guid_SubjectColumn" msprop:Generator_UserColumnName="Guid_Subject" type="xs:string" minOccurs="0" />
+              <xs:element name="Guid_Property" msprop:Generator_ColumnVarNameInTable="columnGuid_Property" msprop:Generator_ColumnPropNameInRow="Guid_Property" msprop:Generator_ColumnPropNameInTable="Guid_PropertyColumn" msprop:Generator_UserColumnName="Guid_Property" type="xs:string" minOccurs="0" />
+              <xs:element name="Guid_Phase" msprop:Generator_ColumnVarNameInTable="columnGuid_Phase" msprop:Generator_ColumnPropNameInRow="Guid_Phase" msprop:Generator_ColumnPropNameInTable="Guid_PhaseColumn" msprop:Generator_UserColumnName="Guid_Phase" type="xs:string" minOccurs="0" />
+              <xs:element name="bIsExtension" msprop:Generator_ColumnVarNameInTable="columnbIsExtension" msprop:Generator_ColumnPropNameInRow="bIsExtension" msprop:Generator_ColumnPropNameInTable="bIsExtensionColumn" msprop:Generator_UserColumnName="bIsExtension" type="xs:boolean" default="false" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Assigns_Measures" msprop:Generator_TableClassName="Assigns_MeasuresDataTable" msprop:Generator_TableVarName="tableAssigns_Measures" msprop:Generator_TablePropName="Assigns_Measures" msprop:Generator_RowDeletingName="Assigns_MeasuresRowDeleting" msprop:Generator_RowChangingName="Assigns_MeasuresRowChanging" msprop:Generator_RowEvHandlerName="Assigns_MeasuresRowChangeEventHandler" msprop:Generator_RowDeletedName="Assigns_MeasuresRowDeleted" msprop:Generator_UserTableName="Assigns_Measures" msprop:Generator_RowChangedName="Assigns_MeasuresRowChanged" msprop:Generator_RowEvArgName="Assigns_MeasuresRowChangeEvent" msprop:Generator_RowClassName="Assigns_MeasuresRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Guid_Property" msprop:Generator_ColumnVarNameInTable="columnGuid_Property" msprop:Generator_ColumnPropNameInRow="Guid_Property" msprop:Generator_ColumnPropNameInTable="Guid_PropertyColumn" msprop:Generator_UserColumnName="Guid_Property" type="xs:string" minOccurs="0" />
+              <xs:element name="Guid_Measure" msprop:Generator_ColumnVarNameInTable="columnGuid_Measure" msprop:Generator_ColumnPropNameInRow="Guid_Measure" msprop:Generator_ColumnPropNameInTable="Guid_MeasureColumn" msprop:Generator_UserColumnName="Guid_Measure" type="xs:string" minOccurs="0" />
+              <xs:element name="bIsExtension" msprop:Generator_ColumnVarNameInTable="columnbIsExtension" msprop:Generator_ColumnPropNameInRow="bIsExtension" msprop:Generator_ColumnPropNameInTable="bIsExtensionColumn" msprop:Generator_UserColumnName="bIsExtension" type="xs:boolean" default="false" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Project_Types" msprop:Generator_TableClassName="Project_TypesDataTable" msprop:Generator_TableVarName="tableProject_Types" msprop:Generator_RowChangedName="Project_TypesRowChanged" msprop:Generator_TablePropName="Project_Types" msprop:Generator_RowDeletingName="Project_TypesRowDeleting" msprop:Generator_RowChangingName="Project_TypesRowChanging" msprop:Generator_RowEvHandlerName="Project_TypesRowChangeEventHandler" msprop:Generator_RowDeletedName="Project_TypesRowDeleted" msprop:Generator_RowClassName="Project_TypesRow" msprop:Generator_UserTableName="Project_Types" msprop:Generator_RowEvArgName="Project_TypesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Prop_Comp_Assignments" msprop:Generator_TableClassName="Prop_Comp_AssignmentsDataTable" msprop:Generator_TableVarName="tableProp_Comp_Assignments" msprop:Generator_RowChangedName="Prop_Comp_AssignmentsRowChanged" msprop:Generator_TablePropName="Prop_Comp_Assignments" msprop:Generator_RowDeletingName="Prop_Comp_AssignmentsRowDeleting" msprop:Generator_RowChangingName="Prop_Comp_AssignmentsRowChanging" msprop:Generator_RowEvHandlerName="Prop_Comp_AssignmentsRowChangeEventHandler" msprop:Generator_RowDeletedName="Prop_Comp_AssignmentsRowDeleted" msprop:Generator_RowClassName="Prop_Comp_AssignmentsRow" msprop:Generator_UserTableName="Prop_Comp_Assignments" msprop:Generator_RowEvArgName="Prop_Comp_AssignmentsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Project_Type_ID" msprop:Generator_ColumnVarNameInTable="columnProject_Type_ID" msprop:Generator_ColumnPropNameInRow="Project_Type_ID" msprop:Generator_ColumnPropNameInTable="Project_Type_IDColumn" msprop:Generator_UserColumnName="Project_Type_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Subject_ID" msprop:Generator_ColumnVarNameInTable="columnSubject_ID" msprop:Generator_ColumnPropNameInRow="Subject_ID" msprop:Generator_ColumnPropNameInTable="Subject_IDColumn" msprop:Generator_UserColumnName="Subject_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="Property_ID" msprop:Generator_ColumnVarNameInTable="columnProperty_ID" msprop:Generator_ColumnPropNameInRow="Property_ID" msprop:Generator_ColumnPropNameInTable="Property_IDColumn" msprop:Generator_UserColumnName="Property_ID" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PropertySets" msprop:Generator_TableClassName="PropertySetsDataTable" msprop:Generator_TableVarName="tablePropertySets" msprop:Generator_TablePropName="PropertySets" msprop:Generator_RowDeletingName="PropertySetsRowDeleting" msprop:Generator_RowChangingName="PropertySetsRowChanging" msprop:Generator_RowEvHandlerName="PropertySetsRowChangeEventHandler" msprop:Generator_RowDeletedName="PropertySetsRowDeleted" msprop:Generator_UserTableName="PropertySets" msprop:Generator_RowChangedName="PropertySetsRowChanged" msprop:Generator_RowEvArgName="PropertySetsRowChangeEvent" msprop:Generator_RowClassName="PropertySetsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="freeBIM_Guid" msprop:Generator_ColumnVarNameInTable="columnfreeBIM_Guid" msprop:Generator_ColumnPropNameInRow="freeBIM_Guid" msprop:Generator_ColumnPropNameInTable="freeBIM_GuidColumn" msprop:Generator_UserColumnName="freeBIM_Guid" type="xs:string" />
+              <xs:element name="bSDD_Guid" msprop:Generator_ColumnVarNameInTable="columnbSDD_Guid" msprop:Generator_ColumnPropNameInRow="bSDD_Guid" msprop:Generator_ColumnPropNameInTable="bSDD_GuidColumn" msprop:Generator_UserColumnName="bSDD_Guid" type="xs:string" minOccurs="0" />
+              <xs:element name="Name_Int" msprop:Generator_ColumnVarNameInTable="columnName_Int" msprop:Generator_ColumnPropNameInRow="Name_Int" msprop:Generator_ColumnPropNameInTable="Name_IntColumn" msprop:Generator_UserColumnName="Name_Int" type="xs:string" minOccurs="0" />
+              <xs:element name="Name_Loc" msprop:Generator_ColumnVarNameInTable="columnName_Loc" msprop:Generator_ColumnPropNameInRow="Name_Loc" msprop:Generator_ColumnPropNameInTable="Name_LocColumn" msprop:Generator_UserColumnName="Name_Loc" type="xs:string" minOccurs="0" />
+              <xs:element name="ShortName" msprop:Generator_ColumnVarNameInTable="columnShortName" msprop:Generator_ColumnPropNameInRow="ShortName" msprop:Generator_ColumnPropNameInTable="ShortNameColumn" msprop:Generator_UserColumnName="ShortName" type="xs:string" minOccurs="0" />
+              <xs:element name="Description_Int" msprop:Generator_ColumnVarNameInTable="columnDescription_Int" msprop:Generator_ColumnPropNameInRow="Description_Int" msprop:Generator_ColumnPropNameInTable="Description_IntColumn" msprop:Generator_UserColumnName="Description_Int" type="xs:string" minOccurs="0" />
+              <xs:element name="Description_Loc" msprop:Generator_ColumnVarNameInTable="columnDescription_Loc" msprop:Generator_ColumnPropNameInRow="Description_Loc" msprop:Generator_ColumnPropNameInTable="Description_LocColumn" msprop:Generator_UserColumnName="Description_Loc" type="xs:string" minOccurs="0" />
+              <xs:element name="PSetType" msprop:Generator_ColumnVarNameInTable="columnPSetType" msprop:Generator_ColumnPropNameInRow="PSetType" msprop:Generator_ColumnPropNameInTable="PSetTypeColumn" msprop:Generator_UserColumnName="PSetType" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AssignsPropertiesToSets" msprop:Generator_TableClassName="AssignsPropertiesToSetsDataTable" msprop:Generator_TableVarName="tableAssignsPropertiesToSets" msprop:Generator_TablePropName="AssignsPropertiesToSets" msprop:Generator_RowDeletingName="AssignsPropertiesToSetsRowDeleting" msprop:Generator_RowChangingName="AssignsPropertiesToSetsRowChanging" msprop:Generator_RowEvHandlerName="AssignsPropertiesToSetsRowChangeEventHandler" msprop:Generator_RowDeletedName="AssignsPropertiesToSetsRowDeleted" msprop:Generator_UserTableName="AssignsPropertiesToSets" msprop:Generator_RowChangedName="AssignsPropertiesToSetsRowChanged" msprop:Generator_RowEvArgName="AssignsPropertiesToSetsRowChangeEvent" msprop:Generator_RowClassName="AssignsPropertiesToSetsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="PropertySet_ID" msprop:Generator_ColumnVarNameInTable="columnPropertySet_ID" msprop:Generator_ColumnPropNameInRow="PropertySet_ID" msprop:Generator_ColumnPropNameInTable="PropertySet_IDColumn" msprop:Generator_UserColumnName="PropertySet_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="Property_ID" msprop:Generator_ColumnVarNameInTable="columnProperty_ID" msprop:Generator_ColumnPropNameInRow="Property_ID" msprop:Generator_ColumnPropNameInTable="Property_IDColumn" msprop:Generator_UserColumnName="Property_ID" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Lists" msprop:Generator_TableClassName="ListsDataTable" msprop:Generator_TableVarName="tableLists" msprop:Generator_RowChangedName="ListsRowChanged" msprop:Generator_TablePropName="Lists" msprop:Generator_RowDeletingName="ListsRowDeleting" msprop:Generator_RowChangingName="ListsRowChanging" msprop:Generator_RowEvHandlerName="ListsRowChangeEventHandler" msprop:Generator_RowDeletedName="ListsRowDeleted" msprop:Generator_RowClassName="ListsRow" msprop:Generator_UserTableName="Lists" msprop:Generator_RowEvArgName="ListsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="freeBIM_Guid" msprop:Generator_ColumnVarNameInTable="columnfreeBIM_Guid" msprop:Generator_ColumnPropNameInRow="freeBIM_Guid" msprop:Generator_ColumnPropNameInTable="freeBIM_GuidColumn" msprop:Generator_UserColumnName="freeBIM_Guid" type="xs:string" />
+              <xs:element name="bsDD_Guid" msprop:Generator_ColumnVarNameInTable="columnbsDD_Guid" msprop:Generator_ColumnPropNameInRow="bsDD_Guid" msprop:Generator_ColumnPropNameInTable="bsDD_GuidColumn" msprop:Generator_UserColumnName="bsDD_Guid" type="xs:string" minOccurs="0" />
+              <xs:element name="Name_Int" msprop:Generator_ColumnVarNameInTable="columnName_Int" msprop:Generator_ColumnPropNameInRow="Name_Int" msprop:Generator_ColumnPropNameInTable="Name_IntColumn" msprop:Generator_UserColumnName="Name_Int" type="xs:string" minOccurs="0" />
+              <xs:element name="Name_Loc" msprop:Generator_ColumnVarNameInTable="columnName_Loc" msprop:Generator_ColumnPropNameInRow="Name_Loc" msprop:Generator_ColumnPropNameInTable="Name_LocColumn" msprop:Generator_UserColumnName="Name_Loc" type="xs:string" minOccurs="0" />
+              <xs:element name="ShortName" msprop:Generator_ColumnVarNameInTable="columnShortName" msprop:Generator_ColumnPropNameInRow="ShortName" msprop:Generator_ColumnPropNameInTable="ShortNameColumn" msprop:Generator_UserColumnName="ShortName" type="xs:string" minOccurs="0" />
+              <xs:element name="Description_Int" msprop:Generator_ColumnVarNameInTable="columnDescription_Int" msprop:Generator_ColumnPropNameInRow="Description_Int" msprop:Generator_ColumnPropNameInTable="Description_IntColumn" msprop:Generator_UserColumnName="Description_Int" type="xs:string" minOccurs="0" />
+              <xs:element name="Description_Loc" msprop:Generator_ColumnVarNameInTable="columnDescription_Loc" msprop:Generator_ColumnPropNameInRow="Description_Loc" msprop:Generator_ColumnPropNameInTable="Description_LocColumn" msprop:Generator_UserColumnName="Description_Loc" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Assigns_Values" msprop:Generator_TableClassName="Assigns_ValuesDataTable" msprop:Generator_TableVarName="tableAssigns_Values" msprop:Generator_TablePropName="Assigns_Values" msprop:Generator_RowDeletingName="Assigns_ValuesRowDeleting" msprop:Generator_RowChangingName="Assigns_ValuesRowChanging" msprop:Generator_RowEvHandlerName="Assigns_ValuesRowChangeEventHandler" msprop:Generator_RowDeletedName="Assigns_ValuesRowDeleted" msprop:Generator_UserTableName="Assigns_Values" msprop:Generator_RowChangedName="Assigns_ValuesRowChanged" msprop:Generator_RowEvArgName="Assigns_ValuesRowChangeEvent" msprop:Generator_RowClassName="Assigns_ValuesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Guid_List" msprop:Generator_ColumnVarNameInTable="columnGuid_List" msprop:Generator_ColumnPropNameInRow="Guid_List" msprop:Generator_ColumnPropNameInTable="Guid_ListColumn" msprop:Generator_UserColumnName="Guid_List" type="xs:string" minOccurs="0" />
+              <xs:element name="Guid_Value" msprop:Generator_ColumnVarNameInTable="columnGuid_Value" msprop:Generator_ColumnPropNameInRow="Guid_Value" msprop:Generator_ColumnPropNameInTable="Guid_ValueColumn" msprop:Generator_UserColumnName="Guid_Value" type="xs:string" minOccurs="0" />
+              <xs:element name="bIsExtension" msprop:Generator_ColumnVarNameInTable="columnbIsExtension" msprop:Generator_ColumnPropNameInRow="bIsExtension" msprop:Generator_ColumnPropNameInTable="bIsExtensionColumn" msprop:Generator_UserColumnName="bIsExtension" type="xs:boolean" default="false" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Assigns_Lists" msprop:Generator_TableClassName="Assigns_ListsDataTable" msprop:Generator_TableVarName="tableAssigns_Lists" msprop:Generator_TablePropName="Assigns_Lists" msprop:Generator_RowDeletingName="Assigns_ListsRowDeleting" msprop:Generator_RowChangingName="Assigns_ListsRowChanging" msprop:Generator_RowEvHandlerName="Assigns_ListsRowChangeEventHandler" msprop:Generator_RowDeletedName="Assigns_ListsRowDeleted" msprop:Generator_UserTableName="Assigns_Lists" msprop:Generator_RowChangedName="Assigns_ListsRowChanged" msprop:Generator_RowEvArgName="Assigns_ListsRowChangeEvent" msprop:Generator_RowClassName="Assigns_ListsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Guid_Measure" msprop:Generator_ColumnVarNameInTable="columnGuid_Measure" msprop:Generator_ColumnPropNameInRow="Guid_Measure" msprop:Generator_ColumnPropNameInTable="Guid_MeasureColumn" msprop:Generator_UserColumnName="Guid_Measure" type="xs:string" minOccurs="0" />
+              <xs:element name="Guid_List" msprop:Generator_ColumnVarNameInTable="columnGuid_List" msprop:Generator_ColumnPropNameInRow="Guid_List" msprop:Generator_ColumnPropNameInTable="Guid_ListColumn" msprop:Generator_UserColumnName="Guid_List" type="xs:string" minOccurs="0" />
+              <xs:element name="bIsExtension" msprop:Generator_ColumnVarNameInTable="columnbIsExtension" msprop:Generator_ColumnPropNameInRow="bIsExtension" msprop:Generator_ColumnPropNameInTable="bIsExtensionColumn" msprop:Generator_UserColumnName="bIsExtension" type="xs:boolean" default="false" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTypes" msprop:Generator_TableClassName="DataTypesDataTable" msprop:Generator_TableVarName="tableDataTypes" msprop:Generator_TablePropName="DataTypes" msprop:Generator_RowDeletingName="DataTypesRowDeleting" msprop:Generator_RowChangingName="DataTypesRowChanging" msprop:Generator_RowEvHandlerName="DataTypesRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTypesRowDeleted" msprop:Generator_UserTableName="DataTypes" msprop:Generator_RowChangedName="DataTypesRowChanged" msprop:Generator_RowEvArgName="DataTypesRowChangeEvent" msprop:Generator_RowClassName="DataTypesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="freeBIM_Guid" msprop:Generator_ColumnVarNameInTable="columnfreeBIM_Guid" msprop:Generator_ColumnPropNameInRow="freeBIM_Guid" msprop:Generator_ColumnPropNameInTable="freeBIM_GuidColumn" msprop:Generator_UserColumnName="freeBIM_Guid" type="xs:string" />
+              <xs:element name="bsDD_Guid" msprop:Generator_ColumnVarNameInTable="columnbsDD_Guid" msprop:Generator_ColumnPropNameInRow="bsDD_Guid" msprop:Generator_ColumnPropNameInTable="bsDD_GuidColumn" msprop:Generator_UserColumnName="bsDD_Guid" type="xs:string" minOccurs="0" />
+              <xs:element name="Name_Int" msprop:Generator_ColumnVarNameInTable="columnName_Int" msprop:Generator_ColumnPropNameInRow="Name_Int" msprop:Generator_ColumnPropNameInTable="Name_IntColumn" msprop:Generator_UserColumnName="Name_Int" type="xs:string" minOccurs="0" />
+              <xs:element name="Name_Loc" msprop:Generator_ColumnVarNameInTable="columnName_Loc" msprop:Generator_ColumnPropNameInRow="Name_Loc" msprop:Generator_ColumnPropNameInTable="Name_LocColumn" msprop:Generator_UserColumnName="Name_Loc" type="xs:string" minOccurs="0" />
+              <xs:element name="Description_Int" msprop:Generator_ColumnVarNameInTable="columnDescription_Int" msprop:Generator_ColumnPropNameInRow="Description_Int" msprop:Generator_ColumnPropNameInTable="Description_IntColumn" msprop:Generator_UserColumnName="Description_Int" type="xs:string" minOccurs="0" />
+              <xs:element name="Description_Loc" msprop:Generator_ColumnVarNameInTable="columnDescription_Loc" msprop:Generator_ColumnPropNameInRow="Description_Loc" msprop:Generator_ColumnPropNameInTable="Description_LocColumn" msprop:Generator_UserColumnName="Description_Loc" type="xs:string" minOccurs="0" />
+              <xs:element name="RegExp" msprop:Generator_ColumnVarNameInTable="columnRegExp" msprop:Generator_ColumnPropNameInRow="RegExp" msprop:Generator_ColumnPropNameInTable="RegExpColumn" msprop:Generator_UserColumnName="RegExp" type="xs:string" minOccurs="0" />
+              <xs:element name="ShortName" msprop:Generator_ColumnVarNameInTable="columnShortName" msprop:Generator_ColumnPropNameInRow="ShortName" msprop:Generator_ColumnPropNameInTable="ShortNameColumn" msprop:Generator_UserColumnName="ShortName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Units" msprop:Generator_TableClassName="UnitsDataTable" msprop:Generator_TableVarName="tableUnits" msprop:Generator_TablePropName="Units" msprop:Generator_RowDeletingName="UnitsRowDeleting" msprop:Generator_RowChangingName="UnitsRowChanging" msprop:Generator_RowEvHandlerName="UnitsRowChangeEventHandler" msprop:Generator_RowDeletedName="UnitsRowDeleted" msprop:Generator_UserTableName="Units" msprop:Generator_RowChangedName="UnitsRowChanged" msprop:Generator_RowEvArgName="UnitsRowChangeEvent" msprop:Generator_RowClassName="UnitsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="freeBIM_Guid" msprop:Generator_ColumnVarNameInTable="columnfreeBIM_Guid" msprop:Generator_ColumnPropNameInRow="freeBIM_Guid" msprop:Generator_ColumnPropNameInTable="freeBIM_GuidColumn" msprop:Generator_UserColumnName="freeBIM_Guid" type="xs:string" />
+              <xs:element name="bsDD_Guid" msprop:Generator_ColumnVarNameInTable="columnbsDD_Guid" msprop:Generator_ColumnPropNameInRow="bsDD_Guid" msprop:Generator_ColumnPropNameInTable="bsDD_GuidColumn" msprop:Generator_UserColumnName="bsDD_Guid" type="xs:string" minOccurs="0" />
+              <xs:element name="Name_Int" msprop:Generator_ColumnVarNameInTable="columnName_Int" msprop:Generator_ColumnPropNameInRow="Name_Int" msprop:Generator_ColumnPropNameInTable="Name_IntColumn" msprop:Generator_UserColumnName="Name_Int" type="xs:string" minOccurs="0" />
+              <xs:element name="Name_Loc" msprop:Generator_ColumnVarNameInTable="columnName_Loc" msprop:Generator_ColumnPropNameInRow="Name_Loc" msprop:Generator_ColumnPropNameInTable="Name_LocColumn" msprop:Generator_UserColumnName="Name_Loc" type="xs:string" minOccurs="0" />
+              <xs:element name="Description_Int" msprop:Generator_ColumnVarNameInTable="columnDescription_Int" msprop:Generator_ColumnPropNameInRow="Description_Int" msprop:Generator_ColumnPropNameInTable="Description_IntColumn" msprop:Generator_UserColumnName="Description_Int" type="xs:string" minOccurs="0" />
+              <xs:element name="Description_Loc" msprop:Generator_ColumnVarNameInTable="columnDescription_Loc" msprop:Generator_ColumnPropNameInRow="Description_Loc" msprop:Generator_ColumnPropNameInTable="Description_LocColumn" msprop:Generator_UserColumnName="Description_Loc" type="xs:string" minOccurs="0" />
+              <xs:element name="Code" msprop:Generator_ColumnVarNameInTable="columnCode" msprop:Generator_ColumnPropNameInRow="Code" msprop:Generator_ColumnPropNameInTable="CodeColumn" msprop:Generator_UserColumnName="Code" type="xs:string" minOccurs="0" />
+              <xs:element name="ShortName" msprop:Generator_ColumnVarNameInTable="columnShortName" msprop:Generator_ColumnPropNameInRow="ShortName" msprop:Generator_ColumnPropNameInTable="ShortNameColumn" msprop:Generator_UserColumnName="ShortName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="SubjectsKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Subjects" />
+      <xs:field xpath="mstns:freeBIM_Guid" />
+    </xs:unique>
+    <xs:unique name="PropertiesKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Properties" />
+      <xs:field xpath="mstns:freeBIM_Guid" />
+    </xs:unique>
+    <xs:unique name="MeasuresKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Measures" />
+      <xs:field xpath="mstns:freeBIM_Guid" />
+    </xs:unique>
+    <xs:unique name="ValuesKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Values" />
+      <xs:field xpath="mstns:freeBIM_Guid" />
+    </xs:unique>
+    <xs:unique name="PhasesKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Phases" />
+      <xs:field xpath="mstns:freeBIM_Guid" />
+    </xs:unique>
+    <xs:unique name="Assigns_PropertiesKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Assigns_Properties" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Assigns_MeasuresKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Assigns_Measures" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:Project_Types" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Prop_Comp_Assignments_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:Prop_Comp_Assignments" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="PropertySets_ValuesKey1" msdata:ConstraintName="ValuesKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PropertySets" />
+      <xs:field xpath="mstns:freeBIM_Guid" />
+    </xs:unique>
+    <xs:unique name="Assigns_ValuesKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:AssignsPropertiesToSets" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Lists_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Lists" />
+      <xs:field xpath="mstns:freeBIM_Guid" />
+    </xs:unique>
+    <xs:unique name="Assigns_Values_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Assigns_Values" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Assigns_Lists_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Assigns_Lists" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="DataTypes_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTypes" />
+      <xs:field xpath="mstns:freeBIM_Guid" />
+    </xs:unique>
+    <xs:unique name="Units_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Units" />
+      <xs:field xpath="mstns:freeBIM_Guid" />
+    </xs:unique>
+    <xs:keyref name="FK_Measures_Assign_List" refer="MeasuresKey1" msprop:rel_Generator_UserChildTable="Assigns_Lists" msprop:rel_Generator_ChildPropName="GetAssigns_ListsRows" msprop:rel_Generator_UserRelationName="FK_Measures_Assign_List" msprop:rel_Generator_ParentPropName="MeasuresRow" msprop:rel_Generator_RelationVarName="relationFK_Measures_Assign_List" msprop:rel_Generator_UserParentTable="Measures">
+      <xs:selector xpath=".//mstns:Assigns_Lists" />
+      <xs:field xpath="mstns:Guid_Measure" />
+    </xs:keyref>
+    <xs:keyref name="FK_List_Assign_Values" refer="Lists_Constraint1" msprop:rel_Generator_UserChildTable="Assigns_Values" msprop:rel_Generator_ChildPropName="GetAssigns_ValuesRows" msprop:rel_Generator_UserRelationName="FK_List_Assign_Values" msprop:rel_Generator_ParentPropName="ListRow" msprop:rel_Generator_RelationVarName="relationFK_List_Assign_Values" msprop:rel_Generator_UserParentTable="Lists">
+      <xs:selector xpath=".//mstns:Assigns_Values" />
+      <xs:field xpath="mstns:Guid_List" />
+    </xs:keyref>
+    <xs:keyref name="FK_Values_Assign_Values" refer="ValuesKey1" msprop:rel_Generator_UserChildTable="Assigns_Values" msprop:rel_Generator_ChildPropName="GetAssigns_ValuesRows" msprop:rel_Generator_UserRelationName="FK_Values_Assign_Values" msprop:rel_Generator_ParentPropName="ValuesRow" msprop:rel_Generator_RelationVarName="relationFK_Values_Assign_Values" msprop:rel_Generator_UserParentTable="Values">
+      <xs:selector xpath=".//mstns:Assigns_Values" />
+      <xs:field xpath="mstns:Guid_Value" />
+    </xs:keyref>
+    <xs:keyref name="FK_Measures_Assigns_Measures" refer="MeasuresKey1" msprop:rel_Generator_UserChildTable="Assigns_Measures" msprop:rel_Generator_ChildPropName="GetAssigns_MeasuresRows" msprop:rel_Generator_UserRelationName="FK_Measures_Assigns_Measures" msprop:rel_Generator_ParentPropName="MeasuresRow" msprop:rel_Generator_RelationVarName="relationFK_Measures_Assigns_Measures" msprop:rel_Generator_UserParentTable="Measures">
+      <xs:selector xpath=".//mstns:Assigns_Measures" />
+      <xs:field xpath="mstns:Guid_Measure" />
+    </xs:keyref>
+    <xs:keyref name="FK_Properties_Assigns_Measures" refer="PropertiesKey1" msprop:rel_Generator_UserChildTable="Assigns_Measures" msprop:rel_Generator_ChildPropName="GetAssigns_MeasuresRows" msprop:rel_Generator_UserRelationName="FK_Properties_Assigns_Measures" msprop:rel_Generator_ParentPropName="PropertiesRow" msprop:rel_Generator_RelationVarName="relationFK_Properties_Assigns_Measures" msprop:rel_Generator_UserParentTable="Properties">
+      <xs:selector xpath=".//mstns:Assigns_Measures" />
+      <xs:field xpath="mstns:Guid_Property" />
+    </xs:keyref>
+    <xs:keyref name="FK_Phases_Assigns_Properties" refer="PhasesKey1" msprop:rel_Generator_UserChildTable="Assigns_Properties" msprop:rel_Generator_ChildPropName="GetAssigns_PropertiesRows" msprop:rel_Generator_UserRelationName="FK_Phases_Assigns_Properties" msprop:rel_Generator_ParentPropName="PhasesRow" msprop:rel_Generator_RelationVarName="relationFK_Phases_Assigns_Properties" msprop:rel_Generator_UserParentTable="Phases">
+      <xs:selector xpath=".//mstns:Assigns_Properties" />
+      <xs:field xpath="mstns:Guid_Phase" />
+    </xs:keyref>
+    <xs:keyref name="FK_Properties_Assigns_Properties" refer="PropertiesKey1" msprop:rel_Generator_UserChildTable="Assigns_Properties" msprop:rel_Generator_ChildPropName="GetAssigns_PropertiesRows" msprop:rel_Generator_UserRelationName="FK_Properties_Assigns_Properties" msprop:rel_Generator_ParentPropName="PropertiesRow" msprop:rel_Generator_RelationVarName="relationFK_Properties_Assigns_Properties" msprop:rel_Generator_UserParentTable="Properties">
+      <xs:selector xpath=".//mstns:Assigns_Properties" />
+      <xs:field xpath="mstns:Guid_Property" />
+    </xs:keyref>
+    <xs:keyref name="FK_Subjects_Assigns_Properties" refer="SubjectsKey1" msprop:rel_Generator_UserChildTable="Assigns_Properties" msprop:rel_Generator_ChildPropName="GetAssigns_PropertiesRows" msprop:rel_Generator_UserRelationName="FK_Subjects_Assigns_Properties" msprop:rel_Generator_ParentPropName="SubjectsRow" msprop:rel_Generator_RelationVarName="relationFK_Subjects_Assigns_Properties" msprop:rel_Generator_UserParentTable="Subjects">
+      <xs:selector xpath=".//mstns:Assigns_Properties" />
+      <xs:field xpath="mstns:Guid_Subject" />
+    </xs:keyref>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Prop_Comp_Assignments_Project_Types" msdata:parent="Prop_Comp_Assignments" msdata:child="Project_Types" msdata:parentkey="Project_Type_ID" msdata:childkey="ID" msprop:Generator_UserChildTable="Project_Types" msprop:Generator_ChildPropName="GetProject_TypesRows" msprop:Generator_UserRelationName="Prop_Comp_Assignments_Project_Types" msprop:Generator_RelationVarName="relationProp_Comp_Assignments_Project_Types" msprop:Generator_UserParentTable="Prop_Comp_Assignments" msprop:Generator_ParentPropName="Prop_Comp_AssignmentsRow" />
+      <msdata:Relationship name="List_Assign_List" msdata:parent="Lists" msdata:child="Assigns_Lists" msdata:parentkey="freeBIM_Guid" msdata:childkey="Guid_List" msprop:Generator_UserChildTable="Assigns_Lists" msprop:Generator_ChildPropName="GetAssigns_ListsRows" msprop:Generator_UserRelationName="List_Assign_List" msprop:Generator_ParentPropName="ListRow" msprop:Generator_RelationVarName="relationList_Assign_List" msprop:Generator_UserParentTable="Lists" />
+      <msdata:Relationship name="PropertySets_AssignsPropertiesToSets" msdata:parent="PropertySets" msdata:child="AssignsPropertiesToSets" msdata:parentkey="freeBIM_Guid" msdata:childkey="PropertySet_ID" msprop:Generator_UserChildTable="AssignsPropertiesToSets" msprop:Generator_ChildPropName="GetAssignsPropertiesToSetsRows" msprop:Generator_UserRelationName="PropertySets_AssignsPropertiesToSets" msprop:Generator_ParentPropName="PropertySetsRow" msprop:Generator_RelationVarName="relationPropertySets_AssignsPropertiesToSets" msprop:Generator_UserParentTable="PropertySets" />
+      <msdata:Relationship name="Properties_AssignsPropertiesToSets" msdata:parent="Properties" msdata:child="AssignsPropertiesToSets" msdata:parentkey="freeBIM_Guid" msdata:childkey="Property_ID" msprop:Generator_UserChildTable="AssignsPropertiesToSets" msprop:Generator_ChildPropName="GetAssignsPropertiesToSetsRows" msprop:Generator_UserRelationName="Properties_AssignsPropertiesToSets" msprop:Generator_ParentPropName="PropertiesRow" msprop:Generator_RelationVarName="relationProperties_AssignsPropertiesToSets" msprop:Generator_UserParentTable="Properties" />
+      <msdata:Relationship name="Project_Types_Prop_Comp_Assignments" msdata:parent="Project_Types" msdata:child="Prop_Comp_Assignments" msdata:parentkey="ID" msdata:childkey="Project_Type_ID" msprop:Generator_UserChildTable="Prop_Comp_Assignments" msprop:Generator_ChildPropName="GetProp_Comp_AssignmentsRows" msprop:Generator_UserRelationName="Project_Types_Prop_Comp_Assignments" msprop:Generator_ParentPropName="Project_TypesRow" msprop:Generator_RelationVarName="relationProject_Types_Prop_Comp_Assignments" msprop:Generator_UserParentTable="Project_Types" />
+      <msdata:Relationship name="Subjects_Prop_Comp_Assignments" msdata:parent="Subjects" msdata:child="Prop_Comp_Assignments" msdata:parentkey="freeBIM_Guid" msdata:childkey="Subject_ID" msprop:Generator_UserChildTable="Prop_Comp_Assignments" msprop:Generator_ChildPropName="GetProp_Comp_AssignmentsRows" msprop:Generator_UserRelationName="Subjects_Prop_Comp_Assignments" msprop:Generator_ParentPropName="SubjectsRow" msprop:Generator_RelationVarName="relationSubjects_Prop_Comp_Assignments" msprop:Generator_UserParentTable="Subjects" />
+      <msdata:Relationship name="Properties_Prop_Comp_Assignments" msdata:parent="Properties" msdata:child="Prop_Comp_Assignments" msdata:parentkey="freeBIM_Guid" msdata:childkey="Property_ID" msprop:Generator_UserChildTable="Prop_Comp_Assignments" msprop:Generator_ChildPropName="GetProp_Comp_AssignmentsRows" msprop:Generator_UserRelationName="Properties_Prop_Comp_Assignments" msprop:Generator_ParentPropName="PropertiesRow" msprop:Generator_RelationVarName="relationProperties_Prop_Comp_Assignments" msprop:Generator_UserParentTable="Properties" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

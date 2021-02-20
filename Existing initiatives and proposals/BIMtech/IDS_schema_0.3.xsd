@@ -1,0 +1,139 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="LOINSpecification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element type="xs:string" name="description"/>
+				<xs:element name="context">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute type="xs:string" name="purpose"/>
+								<xs:attribute type="xs:string" name="informationDeliveryMileStone"/>
+								<xs:attribute type="xs:string" name="sendingActor"/>
+								<xs:attribute type="xs:string" name="receivingActor"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="specificationPerObjectTypeList" maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="objectType">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute type="xs:string" name="name"/>
+											<xs:attribute type="xs:string" name="refToClassification"/>
+											<xs:attribute type="xs:string" name="refToDataModelType"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="documentationSpecification" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="requiredDocument">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute type="xs:string" name="type"/>
+														<xs:attribute type="xs:string" name="purpose"/>
+														<xs:attribute type="xs:string" name="content"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="alphanumericInformationSpecification" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="description"/>
+										<xs:element name="propertySets">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="properties" maxOccurs="unbounded" minOccurs="0">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute type="xs:string" name="name"/>
+																	<xs:attribute type="xs:string" name="unit"/>
+																	<xs:attribute type="xs:string" name="dataType"/>
+																	<xs:attribute type="xs:string" name="refToClassification"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute type="xs:string" name="name"/>
+												<xs:attribute type="xs:string" name="refToClassification"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="geometricSpecification" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="detail">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="L1" />
+													<xs:enumeration value="L2" />
+													<xs:enumeration value="L3" />
+													<xs:enumeration value="L4" />
+													<xs:enumeration value="L5" />
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="dimensionality">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="0D" />
+													<xs:enumeration value="1D" />
+													<xs:enumeration value="2D" />
+													<xs:enumeration value="3D" />
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="location">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="Absolute" />
+													<xs:enumeration value="Relative" />
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="appearance">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="NoColor" />
+													<xs:enumeration value="SingleColor" />
+													<xs:enumeration value="MaterialColor" />
+													<xs:enumeration value="Textures" />
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="parametricBehaviour">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="ExplicitGeometry" />
+													<xs:enumeration value="ConstructiveGeometry" />
+													<xs:enumeration value="ParametricGeometry" />
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute type="xs:string" name="globalId"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute type="xs:string" name="globalId"/>
+			<xs:attribute type="xs:string" name="name"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

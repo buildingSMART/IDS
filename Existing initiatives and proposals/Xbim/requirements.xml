@@ -1,0 +1,72 @@
+<IDS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 	xsi:noNamespaceSchemaLocation="requirements.xsd"
+	>
+    <!-- Selected types have a guid attribute, but it's always optional -->
+    <!-- All your metadata goes here... it's optional, but reassures that files are not misplaced -->
+    <Project guid="7806707e-b6e0-448d-aa4b-31161818a6e3">
+        <Name>IDS development tests</Name>
+        <Description>Part of buildingSmart's IDS project data</Description>
+    </Project>
+    <!--
+            Repositories provide a configurable mechanism for templating, updating and knowledge buildup.
+            It's optional, and not required in the schema.
+    -->
+    <Repositories>
+        <!-- This Repository allows to search needs from a shared library -->
+        <!-- guids of library objects allow the access of standard APIs to query for their status (e.g. current, superseeded, obsolete) -->
+        <Repository url="http://specs.xbim.it/ids/tests" type="Tests" />
+		<Repository url="http://knowledge.buildingsmart.com/ids/ModelSets" type="ModelSubsets" />
+    </Repositories>
+	<ModelSets>
+		<ModelSubset name="Walls">
+			<IfcTypeQuery ifcType="IfcWall" includeSubtypes="false" />
+		</ModelSubset>
+	</ModelSets>
+	<Tests>
+		<Test name="HaveId">
+			<HasProperty ifcType="IfcWall" propertySetName="Pset_WallCommon" propertyName="Reference" />
+			<HasProperty ifcType="IfcSpace" propertySetName="Pset_SpaceCommon" propertyName="Reference" />
+			<!-- Alternative approach: use HasStandardProperty feature pointing to Reference only -->
+		</Test>
+	</Tests>
+	<Requirements>
+		<Requirement>
+			<ModelSubset>
+				<IfcTypeQuery ifcType="IfcSpace"/>
+			</ModelSubset>
+			<Need ref="HaveId"/>
+		</Requirement>
+		<Requirement guid="4af43f18-0832-4a94-8dea-5498110fd911">
+			<ModelSubset ref="Walls" guid="a68414ab-d48d-469b-a9d1-83877e383b71" />
+			<Need ref="HaveId" guid="7ba99a16-b23f-4ed4-8baf-8162632e5260" />
+		</Requirement>
+		<Requirement>
+			<Stage>D</Stage> <!-- Case studies that need it: ILS O&E -->
+			<Provider Role="Architect" Member="" />
+			<Consumer Role="MEP" Member="" />
+			<Consumer Role="Struct" Member="" />
+			<ModelSubset ref="Walls"/>
+			<Need>
+				<HasProperty propertySetName="Pset_WallCommon" propertyName="IsExternal" propertyType="IfcBoolean" />
+			</Need>
+			<!-- 
+				The following properties are optional
+				Benefit: 
+				- The entire project IDS plan fits in an single file
+				- Responsabilities are defined for stakeholders
+				- Consumers can receive smaller models (stripped)
+				- More LOIN properties could fit here
+			 -->
+		</Requirement>
+		<Requirement>
+			<ModelSubset>
+				<IfcClassificationQuery classificationName="Uniclass" itemReference="D7181" />
+			</ModelSubset>
+			<Need>
+				<HasProperty propertyName="GSA BIM Area" ifcType="IfcQuantityArea" />
+				<!-- The pset is identified depending on the type at runtime -->
+				<HasProperty propertyName="PubliclyAccessible" />
+			</Need>
+		</Requirement>
+	</Requirements>
+</IDS>

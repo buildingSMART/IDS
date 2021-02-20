@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "if": {
+    "properties": {
+      "ifctype": {
+        "const": "IfcWall"
+      }
+    }
+  },
+  "then": {
+    "properties": {
+      "ifcproperties": {
+        "type": "object",
+        "properties": {
+          "Pset_WallCommon": {
+            "type": "object",
+            "properties": {
+              "IsExternal": {
+                "type": "boolean"
+              },
+              "IsTest": {
+                "type": "boolean"
+              }
+            },
+            "required": ["IsExternal", "IsTest"]
+          }
+        },
+        "required": ["Pset_WallCommon"]
+      }
+    }
+  }
+}
+
+Data:
+{
+  "ifctype": "IfcWall",
+  "ifcproperties": {
+    "Pset_WallCommon": {
+      "IsExternal": false,
+      "IsTest": false
+    }
+  }
+}

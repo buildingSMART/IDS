@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<LOINSpecification globalId="04f9e8c2-1e63-4244-8e93-0dd8f3165107" name="LOIN01">
+    <description>Level of Information Needs for visualization</description>
+    <context purpose="Visualization" informationDeliveryMileStone="Preliminary Design" sendingActor="Architect" receivingActor="Client"/>
+    <specificationPerObjectTypeList globalId="99b37edd-e108-4601-91d4-abfbfd069963">
+        <objectType name="Site" refToClassification="Classification101" refToDataModelType="IFC"/>
+        <documentationSpecification>
+            <requiredDocument type="Survey drawing" purpose="Evaluation" content="Survey Data"/>
+        </documentationSpecification>
+        <alphanumericInformationSpecification>
+            <description>Site object alphanumeric information</description>
+            <propertySets name="Identification" refToClassification="Classification03">
+                <properties name="Address" unit="" dataType="String" refToClassification="Classification02"/>
+                <properties name="GEO-Location" unit="Coordinates" dataType="String" refToClassification="Classification08"/>
+            </propertySets>
+        </alphanumericInformationSpecification>
+    </specificationPerObjectTypeList>
+    <specificationPerObjectTypeList globalId="8bae44fe-b9ab-462b-9112-2ee12d5381fb">
+        <objectType name="Wall" refToClassification="Classification16" refToDataModelType="IFC"/>
+        <geometricSpecification>
+            <detail>L3</detail>
+            <dimensionality>D3</dimensionality>
+            <location>Relative</location>
+            <appearance>Textures</appearance>
+            <parametricBehaviour>ParametricGeometry</parametricBehaviour>
+        </geometricSpecification>
+    </specificationPerObjectTypeList>
+</LOINSpecification>

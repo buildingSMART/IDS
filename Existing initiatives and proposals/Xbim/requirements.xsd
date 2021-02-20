@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="IDS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Project" type="Project" minOccurs="0" />
+				
+				<!-- Possibly for future extension -->
+				<xs:element name="Repositories" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence maxOccurs="unbounded">
+							<xs:element name="Repository" type="Repository" />	
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+
+				
+				<xs:element name="ModelSets" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ModelSubset" type="ModelSubset" maxOccurs="unbounded" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Tests" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Test" type="Test" maxOccurs="unbounded" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<!--
+
+				██████  ███████  ██████  ███████ 
+				██   ██ ██      ██    ██ ██      
+				██████  █████   ██    ██ ███████ 
+				██   ██ ██      ██ ▄▄ ██      ██ 
+				██   ██ ███████  ██████  ███████ 
+				                    ▀▀           
+				 -->
+				<xs:element name="Requirements" minOccurs="1" maxOccurs="unbounded" >
+					<xs:complexType>
+						<xs:sequence>
+							<!-- Stage, Provider and Consumer are inherited from requirements to requirement -->
+							<xs:element name="Stage" minOccurs="0" maxOccurs="unbounded" type="xs:string" />
+							<xs:element name="Provider" type="Stakeholder" minOccurs="0" maxOccurs="1" />
+							<xs:element name="Consumer" type="Stakeholder" minOccurs="0" maxOccurs="unbounded" />
+							<xs:element name="Requirement"  maxOccurs="unbounded" minOccurs="1" >
+								<xs:complexType>
+									<xs:sequence>
+										<!-- Stage, Provider and Consumer are inherited from requirements to requirement -->
+										<xs:element name="Stage" minOccurs="0" maxOccurs="unbounded" type="xs:string" />
+										<xs:element name="Provider" type="Stakeholder" minOccurs="0" maxOccurs="1" />
+										<xs:element name="Consumer" type="Stakeholder" minOccurs="0" maxOccurs="unbounded" />
+
+										<xs:element name="ModelSubset" type="ModelSubset" maxOccurs="1" />
+										<xs:element name="Need" type="Test" maxOccurs="1" />
+									</xs:sequence>
+									<xs:attribute name="guid" type="xs:string" use="optional" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Project">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string" />
+			<xs:element name="Description" type="xs:string" />
+		</xs:sequence>
+		<xs:attribute name="guid" type="xs:string" use="required" />
+	</xs:complexType>
+	<!-- Possibly for future extension -->
+	<xs:complexType name="Repository">
+		<xs:attribute name="url" type="xs:string" use="required" />
+		<xs:attribute name="type" use="required" >
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+				  <xs:enumeration value="All" />
+				  <xs:enumeration value="Tests" />
+				  <xs:enumeration value="ModelSubsets" />
+				</xs:restriction>
+			  </xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	
+	<xs:complexType name="Stakeholder">
+		<xs:attribute name="Role" type="xs:string" use="optional" />
+		<xs:attribute name="Member" type="xs:string" use="optional" />
+	</xs:complexType>
+
+	<!-- Model sets 
+
+		███    ███  ██████  ██████  ███████ ██      ███████ ███████ ████████ ███████ 
+		████  ████ ██    ██ ██   ██ ██      ██      ██      ██         ██    ██      
+		██ ████ ██ ██    ██ ██   ██ █████   ██      ███████ █████      ██    ███████ 
+		██  ██  ██ ██    ██ ██   ██ ██      ██           ██ ██         ██         ██ 
+		██      ██  ██████  ██████  ███████ ███████ ███████ ███████    ██    ███████ 
+  
+	-->
+
+	<xs:complexType name="ModelSubset">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="IfcTypeQuery" type="IfcTypeQuery"/>
+			<xs:element name="IfcClassificationQuery" type="IfcClassificationQuery"/>
+			<xs:element name="IfcPropertyQuery" type="IfcPropertyQuery"/>
+		</xs:choice>	
+		<!-- 
+			Attributes are shared by ModelSet and Test, do we prefer using xsd:extension for ease of implementation?
+			Name or ref are alternatively required 
+		 -->
+		<xs:attribute name="name" type="xs:string" />
+		<xs:attribute name="ref" type="xs:string" />
+		<xs:attribute name="guid" type="xs:string" use="optional" />
+		<xs:attribute name="description" type="xs:string" use="optional" />
+	</xs:complexType>
+
+	<xs:complexType name="IfcTypeQuery">
+		<xs:attribute name="ifcType" type="xs:string" use="required" />
+		<xs:attribute name="includeSubtypes" type="xs:boolean" use="optional" default="true" />
+	</xs:complexType>
+
+	<xs:complexType name="IfcClassificationQuery">
+		<xs:attribute name="classificationName" type="xs:string" use="required" />
+		<xs:attribute name="itemReference" type="xs:string" use="required" />		
+	</xs:complexType>
+
+	<xs:complexType name="IfcPropertyQuery">
+		<xs:attribute name="propertySetName" type="xs:string" use="required" />
+		<xs:attribute name="propertyName" type="xs:string" use="required" />		
+		<xs:attribute name="propertyValue" type="xs:string" use="required" />
+		<xs:attribute name="propertyFormat" use="optional" >
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+				  <xs:enumeration value="string" />
+				  <xs:enumeration value="integer" />
+				  <xs:enumeration value="double" />
+				  <xs:enumeration value="boolean" />
+				</xs:restriction>
+			  </xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+
+	<!-- Tests 
+	
+		
+		████████ ███████ ███████ ████████ ███████ 
+		   ██    ██      ██         ██    ██      
+		   ██    █████   ███████    ██    ███████ 
+		   ██    ██           ██    ██         ██ 
+		   ██    ███████ ███████    ██    ███████   
+
+	-->
+
+	<xs:complexType name="Test">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="HasProperty" type="HasProperty"/>
+			<xs:element name="HasQuantity" type="HasQuantity"/>
+			<xs:element name="IsClassified" type="IsClassified"/>
+			<xs:element name="HasMaterial" type="HasMaterial"/>
+			<xs:element name="HasDocumentReference" type="HasDocumentReference"/>
+		</xs:choice>	
+		<!-- 
+			Attributes are shared by ModelSet and Test, do we prefer using xsd:extension for ease of implementation?
+			Name or ref are alternatively required 
+		 -->
+		<xs:attribute name="name" type="xs:string" />
+		<xs:attribute name="ref" type="xs:string" />
+		<xs:attribute name="guid" type="xs:string" use="optional" />
+		<xs:attribute name="description" type="xs:string" use="optional" />
+	</xs:complexType>
+
+	<xs:complexType name="HasProperty">
+		<xs:attribute name="propertySetName" type="xs:string" use="optional" />
+		<xs:attribute name="propertyName" type="xs:string" use="required" />
+		<xs:attribute name="propertyType" type="xs:string" use="optional" />
+		<xs:attribute name="ifcType" type="xs:string" use="optional" />
+	</xs:complexType>
+
+	<xs:complexType name="HasQuantity">
+		<xs:attribute name="propertySetName" type="xs:string" use="optional" />
+		<xs:attribute name="quantityName" type="xs:string" use="required" />
+		<xs:attribute name="quantityType" type="xs:string" use="optional" />
+	</xs:complexType>
+
+	<xs:complexType name="HasMaterial">
+		<xs:attribute name="materialName" type="xs:string" use="optional" />
+	</xs:complexType>
+
+	<xs:complexType name="IsClassified">
+		<xs:attribute name="classificationName" type="xs:string" use="required" />
+		<xs:attribute name="classificationValue" type="xs:string" use="optional" />
+		<xs:attribute name="valueMode" use="optional">
+			<xs:simpleType>
+                <xs:restriction base="xs:string">
+					<xs:enumeration value="exact" />
+                    <xs:enumeration value="regex" />
+                </xs:restriction>
+            </xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+
+	<xs:complexType name="HasDocumentReference">
+		<xs:attribute name="documentName" type="xs:string" use="required" />
+		<xs:attribute name="documentStatus" type="xs:string" use="optional" />
+		<xs:attribute name="requiredAttributes" type="xs:string" use="required" />
+	</xs:complexType>
+
+</xs:schema>
