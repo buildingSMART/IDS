@@ -27,11 +27,12 @@ Selection and Requirement elemens are 'AND'.
 So in example 1, the selection is for IfcWalls that have a classifcationReference with a value of '21.22'. 
 Selections and values for Requirements with 'OR' will be in the second production version. 
 
+```
 <rule>
   <selection 'with user defined name'>
-    IF <IfcEntity> AND <IfcClassificationReference>
+    **IF** <IfcEntity> **AND** <IfcClassificationReference>
     </selection>
-   THEN  'Selection' has to have:
+   **THEN  'Selection' has to have**
     <requirements>
 	        <IfcProperty> 
 	            <PropertySet>
@@ -39,9 +40,11 @@ Selections and values for Requirements with 'OR' will be in the second productio
 	            <value>
     </requirements>
 </rule>
+```
 
 ## Example 1: AedesUVIP
 
+```
 <rule>
   <selection InformationUnitName="vaste wand, othername">
         <IfcEntity>IfcWall</IfcEntity>
@@ -63,6 +66,7 @@ Selections and values for Requirements with 'OR' will be in the second productio
 	        </IfcProperty>
     </requirements>
 </rule>
+```
 
 Explaining this example:
 Every 'rule' has a 'selection' part and a 'requirements' part. 
@@ -80,6 +84,7 @@ In other words, an IDS is defining requirements for an IFC dataset that is deliv
 
 ## Example 2: Anas
 
+```
 <rule>
   <selection InformationUnitName="binder">
         <IfcEntity>IfcCovering</IfcEntity>
@@ -94,6 +99,7 @@ In other words, an IDS is defining requirements for an IFC dataset that is deliv
 	        </IfcProperty>
     </requirements>
 </rule>
+```
 
 In this example every IfcCovering with PredefinedType 'CLADDING' should have a property called 'Codice WBS' that is in the PropertySet 'Anas'.
 Claddings with this property are called 'binder'. Users will be able to see how they should model a 'binder' and what properties need to be added to the object. 
