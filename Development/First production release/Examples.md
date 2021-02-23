@@ -30,9 +30,9 @@ Selections and values for Requirements with 'OR' will be in the second productio
 ```
 <rule>
   <selection 'with user defined name'>
-    **IF** <IfcEntity> **AND** <IfcClassificationReference>
+    IF <IfcEntity> AND <IfcClassificationReference>
     </selection>
-   **THEN  'Selection' has to have**
+   THEN  'Selection' has to have
     <requirements>
 	        <IfcProperty> 
 	            <PropertySet>
@@ -97,6 +97,15 @@ In other words, an IDS is defining requirements for an IFC dataset that is deliv
 	            <PropertySet>Anas</PropertySet>
 	            <Property>Codice WBS</Property>
 	        </IfcProperty>
+			<IfcMaterial optional="yes">
+				<value>
+	                <xs:restriction base="xs:string">
+	                    <xs:enumeration value="Concrete" />
+	                    <xs:enumeration value="Wood" />
+	                    <xs:enumeration value="Other" />
+	                </xs:restriction>
+		        </value>
+	        </IfcMaterial>
     </requirements>
 </rule>
 ```
