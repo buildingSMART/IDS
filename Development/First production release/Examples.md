@@ -103,7 +103,7 @@ In this example, more information about the property can be found on the provide
 
 Walls with this value for classification are called 'vaste wand' or 'othername'. End users will see 'vaste wand' and know that they need to model that as an IfcWall with classification value 21.22 and the listed property (with allowed values).
 
-Note: The values in 'entity' can only hold entity names of the IFC for which the IDS is defined. 
+Note: The values in 'entity' can only hold entity names of the IFC for which the IDS is defined. It can only hold specialisations of IfcObject.
 In other words, an IDS is defining requirements for an IFC dataset that is delivered in a specific IFC version. The version of IFC is also defined in the IDS (general section).
 
 ## Example 2: Anas
