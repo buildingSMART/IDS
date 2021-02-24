@@ -24,15 +24,15 @@ Feedback will be used to fine-tune and tweak the XSD Schema and examples.
 ## Structure
  
 Selection and Requirement elemens are 'AND'. 
-So in example 1, the selection is for IfcWalls that have a classifcationReference with a value of '21.22'. 
+So in example 1, the applicability is for IfcWalls that have a classifcationReference with a value of '21.22'. 
 Selections and values for Requirements with 'OR' will be in the second production version. 
 
 ```
-rule;  with user defined name
- selection
+specification;  with user defined name
+ applicability
     IF entity AND ClassificationReference
       THEN  'Selection' has to have:
-	        property, with propertysetName, propertyName, allowed value, etc.
+			entity, property, with propertysetName, propertyName, allowed value, etc.
 			AND
 			Another property, material, classifcationReference, etc.
 ```
@@ -42,42 +42,44 @@ This 'ifc lite' is not an offical serialisation but makes the IDS more consisten
  
 The IDS structure looks like this: 
 ```xml
-<rule id="">
-  <selection>
-        <entity><name></name><type></type></entity>
-	<classification><system><value></value></system></classification>
-	<property><propertyset><value></value></propertyset></property>
-	<material><value></value></material>
-    </selection>
+<specification name="">
+  <applicability>
+		<entity><name></name><type></type></entity>
+		<classification><system><value></value></system></classification>
+		<property><propertyset><value></value></propertyset></property>
+		<material><value></value></material>
+    </applicability>
     <requirements>
-	        <classification ref=""><system ref=""><value></value></system></classification>
-		<property ref=""><propertyset><value></value></propertyset></property>
-		<material ref=""><value></value></material>
+		<entity><name></name><type></type></entity>
+		<classification href=""><system href=""><value></value></system></classification>
+		<property href=""><propertyset><value></value></propertyset></property>
+		<material href=""><value></value></material>
     </requirements>
-</rule>
+</specification>
 ```
 
-The <selection> and <requirements> elements have the same content classification, property and material. Entity is only in the 'selection' part.
-All elements in selection and requirements should be treated as 'AND'. 
+The <applicability> and <requirements> elements have the same content classification, property and material. Entity is only in the 'applicability' part.
+All elements in applicability and requirements should be treated as 'AND'. 
+In <requirements> there can only be one entity node (it can have multiple IFC Entities listed using xsd patterns; see stage 3 of the roadmap).
 
 
 ## Example 1: AedesUVIP
 
 ```xml
-<rule id="vaste wand, othername">
-	<selection>
-        	<entity>
-			<name>IfcWall</name>
-		</entity>
-	        <classification>
-			<system>NL-Sfb</system>
-	        	<value>21.22</value>
-	        </classification>
-	</selection>
+<specification name="vaste wand, othername">
+	<applicability>
+			<entity>
+				<name>IfcWall</name>
+			</entity>
+			<classification>
+				<system>NL-Sfb</system>
+				<value>21.22</value>
+			</classification>
+	</applicability>
 	<requirements>
 		<property>
 			<propertyset>AedesUVIP</propertyset>
-			<property ref="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-4.3/prop/FireRating">Firerating</property>
+			<property href="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-4.3/prop/FireRating">Firerating</property>
 			<value>
 				<xs:restriction base="xs:string">
 					<xs:enumeration value="30" />
@@ -87,13 +89,13 @@ All elements in selection and requirements should be treated as 'AND'.
 			</value>
 		</property>
 	</requirements>
-</rule>
+</specification>
 ```
 
 Explaining this example:
-Every 'rule' has a 'selection' part and a 'requirements' part. 
-The selection is a list of selections that need to be applied to the IFC data. 
-All things need to be fullfilled in the selection. So in example 1, the selection is for IfcWalls that have a classifcationReference with a value of '21.22'. 
+Every 'specification' has a 'applicability' part and a 'requirements' part. 
+The applicability is a list of applicabilitys that need to be applied to the IFC data. 
+All things need to be fullfilled in the applicability. So in example 1, the applicability is for IfcWalls that have a classifcationReference with a value of '21.22'. 
  
 In this example every IfcWall object that has an classification with the value '21.22' needs to have a (user defined) property with the name 'Firerating', that Firerating property should be in the propertyset named 'AedesUVIP' and the values of that Firerating property can be 30, 60 or 90.
 There can be other properties in the propertyset, and there can be other properties in other property sets as well, but the property 'Firerating' needs to be there, and can only have one of the three values. 
@@ -107,13 +109,13 @@ In other words, an IDS is defining requirements for an IFC dataset that is deliv
 ## Example 2: Anas
 
 ```xml
-<rule id="binder">
-	<selection>
+<specification name="binder">
+	<applicability>
 		<entity>
 			<name>IfcCovering</name>
-	        	<type>CLADDING</type>
+				<type>CLADDING</type>
 		</entity>
-	</selection>
+	</applicability>
 	<requirements>
 		<property>
 			<propertyset>Anas</propertyset>
@@ -129,7 +131,7 @@ In other words, an IDS is defining requirements for an IFC dataset that is deliv
 			</value>
 		</material>
 	</requirements>
-</rule>
+</specification>
 ```
 
 In this example every IfcCovering with type 'CLADDING' should have a property called 'Codice WBS' that is in the propertyset 'Anas'.
