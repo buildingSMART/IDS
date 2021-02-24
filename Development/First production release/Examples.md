@@ -28,7 +28,8 @@ So in example 1, the selection is for IfcWalls that have a classifcationReferenc
 Selections and values for Requirements with 'OR' will be in the second production version. 
 
 ```
-selection 'with user defined name'
+rule;  with user defined name
+ selection
     IF entity AND ClassificationReference
       THEN  'Selection' has to have:
 	        property, with propertysetName, propertyName, allowed value, etc.
@@ -41,8 +42,8 @@ This 'ifc lite' is not an offical serialisation but makes the IDS more consisten
  
 The IDS structure looks like this: 
 ```xml
-<rule>
-  <selection id="">
+<rule id="">
+  <selection>
         <entity><name></name><type></type></entity>
 	<classification><system><value></value></system></classification>
 	<property><propertyset><value></value></propertyset></property>
@@ -63,8 +64,8 @@ All elements in selection and requirements should be treated as 'AND'.
 ## Example 1: AedesUVIP
 
 ```xml
-<rule>
-	<selection id="vaste wand, othername">
+<rule id="vaste wand, othername">
+	<selection>
         	<entity>
 			<name>IfcWall</name>
 		</entity>
@@ -106,8 +107,8 @@ In other words, an IDS is defining requirements for an IFC dataset that is deliv
 ## Example 2: Anas
 
 ```xml
-<rule>
-	<selection id="binder">
+<rule id="binder">
+	<selection>
 		<entity>
 			<name>IfcCovering</name>
 	        	<type>CLADDING</type>
