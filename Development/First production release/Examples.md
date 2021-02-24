@@ -40,18 +40,18 @@ The IDS structure follows a simplified version of IFC where IFC Attributes, Prop
 This 'ifc lite' is not an offical serialisation but makes the IDS more consistent when used with multiple IFC versions. 
  
 The IDS structure looks like this: 
-```
+```xml
 <rule>
   <selection id="">
         <entity><name></name><type></type></entity>
-	        <classification><system><value></value></system></classification>
-		    <property><propertyset><value></value></propertyset></property>
-			<material><value></value></material>
+	<classification><system><value></value></system></classification>
+	<property><propertyset><value></value></propertyset></property>
+	<material><value></value></material>
     </selection>
     <requirements>
 	        <classification ref=""><system ref=""><value></value></system></classification>
-		    <property ref=""><propertyset><value></value></propertyset></property>
-			<material ref=""><value></value></material>
+		<property ref=""><propertyset><value></value></propertyset></property>
+		<material ref=""><value></value></material>
     </requirements>
 </rule>
 ```
@@ -62,30 +62,30 @@ All elements in selection and requirements should be treated as 'AND'.
 
 ## Example 1: AedesUVIP
 
-```
+```xml
 <rule>
-  <selection id="vaste wand, othername">
-        <entity>
-		     <name>IfcWall</name>
+	<selection id="vaste wand, othername">
+        	<entity>
+			<name>IfcWall</name>
 		</entity>
-        <classification>
-		    <system>NL-Sfb</system>
-            <value>21.22</value>
-        </classification>
-    </selection>
-    <requirements>
-	        <property>
-	            <propertyset>AedesUVIP</propertyset>
-	            <property ref="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-4.3/prop/FireRating">Firerating</property>
-	            <value>
-	                <xs:restriction base="xs:string">
-	                    <xs:enumeration value="30" />
-	                    <xs:enumeration value="60" />
-	                    <xs:enumeration value="90" />
-	                </xs:restriction>
-	            </value>
-	        </property>
-    </requirements>
+	        <classification>
+			<system>NL-Sfb</system>
+	        	<value>21.22</value>
+	        </classification>
+	</selection>
+	<requirements>
+		<property>
+			<propertyset>AedesUVIP</propertyset>
+			<property ref="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-4.3/prop/FireRating">Firerating</property>
+			<value>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="30" />
+					<xs:enumeration value="60" />
+					<xs:enumeration value="90" />
+				</xs:restriction>
+			</value>
+		</property>
+	</requirements>
 </rule>
 ```
 
@@ -105,29 +105,29 @@ In other words, an IDS is defining requirements for an IFC dataset that is deliv
 
 ## Example 2: Anas
 
-```
+```xml
 <rule>
-  <selection id="binder">
-        <entity>
+	<selection id="binder">
+		<entity>
 			<name>IfcCovering</name>
-	        <type>CLADDING</type>
-        </entity>
-    </selection>
-    <requirements>
-	        <property>
-	            <propertyset>Anas</propertyset>
-	            <property>Codice WBS</property>
-	        </property>
-			<material optional="yes">
-				<value>
-	                <xs:restriction base="xs:string">
-	                    <xs:enumeration value="Concrete" />
-	                    <xs:enumeration value="Wood" />
-	                    <xs:enumeration value="Other" />
-	                </xs:restriction>
-		        </value>
-	        </material>
-    </requirements>
+	        	<type>CLADDING</type>
+		</entity>
+	</selection>
+	<requirements>
+		<property>
+			<propertyset>Anas</propertyset>
+			<property>Codice WBS</property>
+		</property>
+		<material optional="yes">
+			<value>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Concrete" />
+					<xs:enumeration value="Wood" />
+					<xs:enumeration value="Other" />
+				</xs:restriction>
+			</value>
+		</material>
+	</requirements>
 </rule>
 ```
 
