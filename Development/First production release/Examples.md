@@ -45,14 +45,14 @@ The IDS structure looks like this:
 <specification name="">
   <applicability>
 		<entity><name></name><type></type></entity>
-		<classification><system><value></value></system></classification>
-		<property><propertyset><value></value></propertyset></property>
+		<classification><system></system><value></value></classification>
+		<property><propertyset></propertyset><value></value></property>
 		<material><value></value></material>
     </applicability>
     <requirements>
 		<entity><name></name><type></type></entity>
-		<classification href=""><system href=""><value></value></system></classification>
-		<property href=""><propertyset><value></value></propertyset></property>
+		<classification href=""><system href=""></system><value></value></classification>
+		<property href=""></propertyset><propertyset><value></value></property>
 		<material href=""><value></value></material>
     </requirements>
 </specification>
@@ -108,8 +108,8 @@ In other words, an IDS is defining requirements for an IFC dataset that is deliv
 
 ## Example 2: Anas
 
-```xml
 <specification name="binder">
+```xml
 	<applicability>
 		<entity>
 			<name>IfcCovering</name>
