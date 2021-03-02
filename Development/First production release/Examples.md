@@ -108,8 +108,8 @@ In other words, an IDS is defining requirements for an IFC dataset that is deliv
 
 ## Example 2: Anas
 
-<specification name="binder">
 ```xml
+<specification name="binder">
 	<applicability>
 		<entity>
 			<name>IfcCovering</name>
