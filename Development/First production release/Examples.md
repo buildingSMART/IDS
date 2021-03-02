@@ -46,13 +46,13 @@ The IDS structure looks like this:
   <applicability>
 		<entity><name></name><type></type></entity>
 		<classification><system></system><value></value></classification>
-		<property><propertyset></propertyset><value></value></property>
+	  	<property><propertyset></propertyset><name></name><value></value></property>
 		<material><value></value></material>
     </applicability>
     <requirements>
 		<entity><name></name><type></type></entity>
 		<classification href=""><system href=""></system><value></value></classification>
-		<property href=""></propertyset><propertyset><value></value></property>
+	    	<property href=""><propertyset></propertyset><name></name><value></value></property>
 		<material href=""><value></value></material>
     </requirements>
 </specification>
@@ -77,9 +77,9 @@ In <requirements> there can only be one entity node (it can have multiple IFC En
 			</classification>
 	</applicability>
 	<requirements>
-		<property>
+		<property href="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-4.3/prop/FireRating">
 			<propertyset>AedesUVIP</propertyset>
-			<property href="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-4.3/prop/FireRating">Firerating</property>
+			<name>Firerating</name>
 			<value>
 				<xs:restriction base="xs:string">
 					<xs:enumeration value="30" />
@@ -113,13 +113,13 @@ In other words, an IDS is defining requirements for an IFC dataset that is deliv
 	<applicability>
 		<entity>
 			<name>IfcCovering</name>
-				<type>CLADDING</type>
+			<type>CLADDING</type>
 		</entity>
 	</applicability>
 	<requirements>
 		<property>
 			<propertyset>Anas</propertyset>
-			<property>Codice WBS</property>
+			<name>Codice WBS</name>
 		</property>
 		<material optional="yes">
 			<value>
