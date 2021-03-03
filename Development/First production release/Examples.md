@@ -44,13 +44,13 @@ The IDS structure looks like this:
 ```xml
 <specification name="">
   <applicability>
-		<entity><name></name><type></type></entity>
+		<entity><name></name><predefinedtype></predefinedtype></entity>
 		<classification><system></system><value></value></classification>
 	  	<property><propertyset></propertyset><name></name><value></value></property>
 		<material><value></value></material>
     </applicability>
     <requirements>
-		<entity><name></name><type></type></entity>
+		<entity><name></name><predefinedtype></predefinedtype></entity>
 		<classification href=""><system href=""></system><value></value></classification>
 	    	<property href=""><propertyset></propertyset><name></name><value></value></property>
 		<material href=""><value></value></material>
@@ -113,7 +113,7 @@ In other words, an IDS is defining requirements for an IFC dataset that is deliv
 	<applicability>
 		<entity>
 			<name>IfcCovering</name>
-			<type>CLADDING</type>
+			<predefinedtype>CLADDING</predefinedtype>
 		</entity>
 	</applicability>
 	<requirements>
@@ -121,7 +121,7 @@ In other words, an IDS is defining requirements for an IFC dataset that is deliv
 			<propertyset>Anas</propertyset>
 			<name>Codice WBS</name>
 		</property>
-		<material optional="yes">
+		<material use="optional">
 			<value>
 				<xs:restriction base="xs:string">
 					<xs:enumeration value="Concrete" />
@@ -134,9 +134,9 @@ In other words, an IDS is defining requirements for an IFC dataset that is deliv
 </specification>
 ```
 
-In this example every IfcCovering with type 'CLADDING' should have a property called 'Codice WBS' that is in the propertyset 'Anas'.
+In this example every IfcCovering with predefined type 'CLADDING' should have a property called 'Codice WBS' that is in the propertyset 'Anas'.
 Claddings with this property are called 'binder'. Users will be able to see how they should model a 'binder' and what properties need to be added to the object. 
 
-Note: The values in 'type' can only hold standardized IFC values.
+Note: The values in 'predefinedtype' can only hold standardized predefined type values from the IFC standard.
 
 
