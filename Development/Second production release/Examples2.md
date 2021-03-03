@@ -94,6 +94,12 @@ In <requirements> there can only be one entity node (it can have multiple IFC En
 		<property>
 			<propertyset>Anas</propertyset>
 			<name>Codice WBS</name>
+			<value>
+				<xs:restriction>
+				  <xs:minInclusive value="0"/>
+				  <xs:maxInclusive value="120"/>
+				</xs:restriction>
+			</value>
 		</property>
 		<material use="optional">
 			<value>
