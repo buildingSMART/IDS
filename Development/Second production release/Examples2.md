@@ -65,7 +65,7 @@ In <requirements> there can only be one entity node (it can have multiple IFC En
 	<requirements>
 		<property href="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-4.3/prop/FireRating">
 			<propertyset>AedesUVIP</propertyset>
-			<name>Firerating</name>
+			<name>FireRating</name>
 			<value>
 				<xs:restriction use="optional" base="xs:string">
 					<xs:enumeration label="Thirty minutes" value="30" />
