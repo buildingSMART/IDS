@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ids xmlns="http://standards.buildingsmart.org/IDS" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/ids.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<specification name="binder">
+		<applicability>
+			<entity>
+				<name>IfcCovering</name>
+				<predefinedtype>CLADDING</predefinedtype>
+			</entity>
+			<classification location="type">
+				<value>21.22</value>
+				<system>NL-Sfb</system>
+			</classification>
+		</applicability>
+		<requirements>
+			<entity>
+				<name>IfcCovering</name>
+				<predefinedtype>CLADDING</predefinedtype>
+			</entity>
+			<classification location="type">
+				<value>
+					<xs:restriction base="xs:string">
+						<xs:length value="2"/>
+					</xs:restriction>
+				</value>
+			<system href="http://identifier.buildingsmart.org/uri/owner/name">NL-Sfb</system>
+			</classification>
+			<property location="instance" href="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-4.3/prop/FireRating">
+				<propertyset>AedesUVIP</propertyset>
+				<name>Firerating</name>
+				<value>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="30"/>
+						<xs:enumeration value="60"/>
+						<xs:enumeration value="90"/>
+					</xs:restriction>
+				</value>
+				<instructions>Please add the desired fire rating</instructions>
+			</property>
+			<property location="type" href="https://identifier.buildingsmart.org/uri/something">
+				<propertyset>Anas</propertyset>
+				<name>Codice WBS</name>
+				<value>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="0"/>
+						<xs:maxInclusive value="120"/>
+					</xs:restriction>
+				</value>
+			</property>
+			<material location="type" href="https://identifier.buildingsmart.org/uri/something" use="optional">
+				<value>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="[a-z]"/>
+					</xs:restriction>
+				</value>
+				<instructions>The only acceptable value is one lowercase letter (from a to z)</instructions>
+			</material>
+		</requirements>
+	</specification>
+	<info/>
+</ids>
