@@ -8,7 +8,7 @@
 					<xs:sequence>
 						<xs:element name="info">
 							<xs:complexType>
-								<xs:choice>
+								<xs:sequence>
 									<xs:element name="ifcversion"/>
 									<xs:element name="description" minOccurs="0"/>
 									<xs:element name="author" minOccurs="0"/>
@@ -17,7 +17,7 @@
 									<xs:element name="date" type="xs:date"/>
 									<xs:element name="purpose" minOccurs="0"/>
 									<xs:element name="milestone" minOccurs="0"/>
-								</xs:choice>
+								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
 					</xs:sequence>
