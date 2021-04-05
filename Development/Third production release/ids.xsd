@@ -65,7 +65,7 @@
 	</xs:complexType>
 	<xs:complexType name="applicabilityType">
 		<xs:choice maxOccurs="unbounded">
-			<xs:element name="entity" type="ids:entityType"/>
+			<xs:element name="entity" type="ids:entityType" minOccurs="0"/>
 			<xs:element name="classification" type="ids:classificationType" minOccurs="0"/>
 			<xs:element name="property" minOccurs="0" maxOccurs="unbounded">
 				<xs:complexType>
