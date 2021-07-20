@@ -1,8 +1,8 @@
 
-# Examples 3nd production release
+# Examples 0.3
 
 
-## Features for third production version
+## Features for 0.3
  
  * Selection and requirements seperatly defined
  * IFC Entities

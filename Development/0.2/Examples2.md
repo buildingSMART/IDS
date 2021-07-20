@@ -1,8 +1,8 @@
 
-# Examples 2nd production release
+# Examples 0.2
 
 
-## Features for second production version
+## Features for 0.2
  
 Already in the first version
  * Selection and requirements seperatly defined
