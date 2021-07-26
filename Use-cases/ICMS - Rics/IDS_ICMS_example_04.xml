@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS  ids_04.xsd">
+	<ids:specification name="Site information" necessity="required">
+		<ids:applicability>
+			<ids:entity>
+				<ids:name>
+					<ids:simpleValue>IfcSite</ids:simpleValue>
+				</ids:name>
+			</ids:entity>
+		</ids:applicability>
+		<ids:requirements>
+			<ids:property location="any">
+				<ids:propertyset>
+					<ids:simpleValue>Pset_SiteCommon</ids:simpleValue>
+				</ids:propertyset>
+				<ids:name>
+				   <ids:simpleValue>TotalArea</ids:simpleValue>
+				</ids:name>
+				<ids:value>
+					<xs:restriction>
+						<xs:minLength value="1" />
+					</xs:restriction>
+				</ids:value>
+			</ids:property>
+		</ids:requirements>
+	</ids:specification>
+	<ids:specification name="project complexity" necessity="required">
+		<ids:applicability>
+			<ids:entity>
+				<ids:name>
+				  <ids:simpleValue>IfcBuilding</ids:simpleValue>
+				</ids:name>
+			</ids:entity>
+		</ids:applicability>
+		<ids:requirements>
+				<ids:property location="instance">
+				<ids:propertyset>
+					<ids:simpleValue>ICMS</ids:simpleValue> 
+				</ids:propertyset>
+				<ids:name>
+				   <ids:simpleValue>Shape (on plan)</ids:simpleValue>
+				</ids:name>
+				<ids:value>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="circular">
+							<xs:annotation>
+								<xs:documentation>
+									<Label>circular, elliptical or similar</Label>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="square">
+							<xs:annotation>
+								<xs:documentation>
+									<Label>square, rectangular, or similar</Label>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="complex">
+							<xs:annotation>
+								<xs:documentation>
+									<Label>complex</Label>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</ids:value>
+			</ids:property>
+		</ids:requirements>
+	</ids:specification>
+	<ids:info>
+		<ids:ifcversion>2.3.0.1</ids:ifcversion>
+		<ids:author>Andrew Knight; aknight@rics.org</ids:author>
+		<ids:copyright>ICMS</ids:copyright>
+		<ids:date>2021-07-21</ids:date>
+		<ids:purpose>experiment to test ICM representation in IFC with IDS</ids:purpose>
+	</ids:info>
+</ids:ids>

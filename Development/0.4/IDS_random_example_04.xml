@@ -87,14 +87,14 @@
 						<xs:enumeration value="60">
 							<xs:annotation>
 								<xs:documentation>
-									<Label>Thirty minutes</Label>
+									<Label>Sixty minutes</Label>
 								</xs:documentation>
 							</xs:annotation>
 						</xs:enumeration>
 						<xs:enumeration value="90">
 							<xs:annotation>
 								<xs:documentation>
-									<Label>Thirty minutes</Label>
+									<Label>Ninty minutes</Label>
 								</xs:documentation>
 							</xs:annotation>
 						</xs:enumeration>
