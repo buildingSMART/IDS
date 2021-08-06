@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS  ids_04.xsd">
+	<ids:specification name="Aachen test" necessity="required">
+		<ids:applicability>
+			<ids:entity>
+				<ids:name>
+					<ids:simpleValue>IfcOpeningElement</ids:simpleValue>
+				</ids:name>
+			</ids:entity>
+		</ids:applicability>
+		<ids:requirements>
+			<ids:property location="instance">
+				<ids:propertyset>
+					<ids:simpleValue>attribute</ids:simpleValue>
+				</ids:propertyset>
+				<ids:name>
+					<ids:simpleValue>name</ids:simpleValue>
+				</ids:name>
+				<ids:value>
+					<xs:restriction>
+							<xs:pattern value="^(Wanddurchbruch.*|Deckendurchbruch.*)" />
+					</xs:restriction>
+				</ids:value>
+			</ids:property>
+		</ids:requirements>
+	</ids:specification>
+	<ids:info/>
+</ids:ids>

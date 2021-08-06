@@ -1,5 +1,5 @@
 
-# Version 0.4.1
+# Version 0.4.2
 
 Final version before starting the implementation phase with vendors.
 
