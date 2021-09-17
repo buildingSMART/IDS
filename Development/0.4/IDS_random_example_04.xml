@@ -103,5 +103,10 @@
 			</ids:property>
 		</ids:requirements>
 	</ids:specification>
-	<ids:info/>
+	<ids:info>
+		<ids:title>random example to show technical capabilities and usage</ids:title>
+		<ids:copyright xmlns="http://standards.buildingsmart.org/IDS">buildingSMART International Ltd</ids:copyright>
+		<ids:ifcversion xmlns="http://standards.buildingsmart.org/IDS">IFC2x3</ids:ifcversion>
+		<ids:date>2021-09-17</ids:date>
+	</ids:info>
 </ids:ids>

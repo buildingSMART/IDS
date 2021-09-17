@@ -1,6 +1,6 @@
-<!-- edited with XMLSpy v2021 rel. 3 (x64)  -->
-<!-- August 5, 2021 - DRAFT  -->
-<xs:schema xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://standards.buildingsmart.org/IDS" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.4.2">
+<!-- edited with XMLSpy v2021 rel. 3 (x64) (http://www.altova.com) by Leon van Berlo (Overleaf Investments B.V.) -->
+<!-- September 17, 2021 - DRAFT  -->
+<xs:schema xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://standards.buildingsmart.org/IDS" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.4.3">
 	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
 	<xs:import namespace="http://www.w3.org/2001/XMLSchema" schemaLocation="https://www.w3.org/2001/XMLSchema.xsd"/>
 	<xs:import namespace="http://www.w3.org/2001/XMLSchema-instance" schemaLocation="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -11,13 +11,34 @@
 					<xs:sequence>
 						<xs:element name="info">
 							<xs:complexType>
-								<xs:choice maxOccurs="unbounded">
+								<xs:sequence maxOccurs="unbounded">
+									<xs:element name="title" type="xs:string"/>
+									<xs:element name="copyright" type="xs:string"/>
+									<xs:element name="version" type="xs:decimal" minOccurs="0"/>
 									<xs:element name="ifcversion">
 										<xs:simpleType>
 											<xs:restriction base="xs:string">
-												<xs:enumeration value="2.3.0.1"/>
-												<xs:enumeration value="4.0.2.1"/>
-												<xs:enumeration value="4.3.0.0"/>
+												<xs:enumeration value="IFC2x3">
+													<xs:annotation>
+														<xs:documentation>
+															<Label>IFC 2x3 - formal version numer 2.3.0.1</Label>
+														</xs:documentation>
+													</xs:annotation>
+												</xs:enumeration>
+												<xs:enumeration value="IFC4">
+													<xs:annotation>
+														<xs:documentation>
+															<Label>IFC 4 - formal version numer 4.0.2.1</Label>
+														</xs:documentation>
+													</xs:annotation>
+												</xs:enumeration>
+												<xs:enumeration value="IFC4_3">
+													<xs:annotation>
+														<xs:documentation>
+															<Label>IFC 4.3 - formal version numer 4.3.0</Label>
+														</xs:documentation>
+													</xs:annotation>
+												</xs:enumeration>
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:element>
@@ -29,12 +50,10 @@
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:element>
-									<xs:element name="copyright" type="xs:string"/>
-									<xs:element name="version" type="xs:decimal"/>
 									<xs:element name="date" type="xs:date"/>
 									<xs:element name="purpose" type="xs:string" minOccurs="0"/>
 									<xs:element name="milestone" type="xs:string" minOccurs="0"/>
-								</xs:choice>
+								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
 					</xs:sequence>
