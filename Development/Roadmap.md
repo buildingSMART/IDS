@@ -58,6 +58,5 @@ When vendors have implemented the third production release in a consistent way, 
  * Adding additonal logic (OR)
 
 When features are declared out of scope for the first final version, they will be put on the backlog.
-Other features that come up during the 
 
 Other features that have been mentioned in the IDS project, but have not been seen in actual use-cases could also be placed on the backlog.
