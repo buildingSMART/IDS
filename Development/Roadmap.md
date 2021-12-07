@@ -55,7 +55,7 @@ When vendors have implemented the third production release in a consistent way, 
 # Roadmap possible future versions
 
  * Defining structure of objects (Decomposition of objects) using bSDD
- * Adding additonal logic (OR)
+ * Adding additonal features
 
 When features are declared out of scope for the first final version, they will be put on the backlog.
 
