@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS  ids_04.xsd">
-	<ids:specification name="pipe fittings and pipes" necessity="required">								
+	<ids:specification name="pipe fittings and pipes" use="required">								
 		<ids:applicability>
 			<ids:entity>
 				<ids:name>

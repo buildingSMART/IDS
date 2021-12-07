@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS  ids_04.xsd">
-	<ids:specification name="mounting part" necessity="required">
+	<ids:specification name="mounting part" use="required">
 	<!-- what makes a mounting part a mounting part? -->
 		<ids:applicability>
 			<ids:entity>
@@ -92,7 +92,7 @@
 			<!-- This is where the LOD200 list stops in the PDF -->
 		</ids:requirements>
 	</ids:specification>
-	<ids:specification name="pipe fittings and pipes" necessity="required">
+	<ids:specification name="pipe fittings and pipes" use="required">
 	
 				<!-- these user defined properties for IfcFlowFitting are the same as for IfcFlowSegment. So we are combinging them into one set of requiremetns for the pattern (IfcFlowFitting|IfcFlowSegment).* --> 
 								

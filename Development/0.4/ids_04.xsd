@@ -1,5 +1,5 @@
-<!-- edited with XMLSpy v2021 rel. 3 (x64) (http://www.altova.com) by Leon van Berlo (Overleaf Investments B.V.) -->
-<!-- September 17, 2021 - DRAFT  -->
+<!-- edited with XMLSpy v2021 rel. 3 (x64) (http://www.altova.com) by buildingSMART International -->
+<!-- Decmber 07, 2021 - DRAFT  -->
 <xs:schema xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://standards.buildingsmart.org/IDS" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.4.3">
 	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
 	<xs:import namespace="http://www.w3.org/2001/XMLSchema" schemaLocation="https://www.w3.org/2001/XMLSchema.xsd"/>
@@ -91,7 +91,7 @@
 	</xs:complexType>
 	<xs:complexType name="applicabilityType">
 		<xs:sequence>
-			<xs:element name="entity" type="ids:entityType"/>
+			<xs:element name="entity" type="ids:entityType" minOccurs="0"/>
 			<xs:element name="classification" type="ids:classificationType" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="property" minOccurs="0" maxOccurs="unbounded">
 				<xs:complexType>
@@ -233,7 +233,7 @@
 			<xs:element name="requirements" type="ids:requirementsType"/>
 		</xs:sequence>
 		<xs:attribute name="name" type="xs:string" use="optional"/>
-		<xs:attribute name="necessity" use="required">
+		<xs:attribute name="use" use="required">
 			<xs:simpleType>
 				<xs:restriction base="xs:string">
 					<xs:enumeration value="required"/>
