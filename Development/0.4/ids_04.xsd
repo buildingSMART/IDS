@@ -1,6 +1,6 @@
 <!-- edited with XMLSpy v2021 rel. 3 (x64) (http://www.altova.com) by buildingSMART International -->
-<!-- Decmber 07, 2021 - DRAFT  -->
-<xs:schema xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://standards.buildingsmart.org/IDS" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.4.3">
+<!-- January 03, 2022 - DRAFT  -->
+<xs:schema xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://standards.buildingsmart.org/IDS" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.4.4">
 	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
 	<xs:import namespace="http://www.w3.org/2001/XMLSchema" schemaLocation="https://www.w3.org/2001/XMLSchema.xsd"/>
 	<xs:import namespace="http://www.w3.org/2001/XMLSchema-instance" schemaLocation="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -11,10 +11,10 @@
 					<xs:sequence>
 						<xs:element name="info">
 							<xs:complexType>
-								<xs:sequence maxOccurs="unbounded">
+								<xs:sequence>
 									<xs:element name="title" type="xs:string"/>
-									<xs:element name="copyright" type="xs:string"/>
-									<xs:element name="version" type="xs:decimal" minOccurs="0"/>
+									<xs:element name="copyright" type="xs:string" minOccurs="0"/>
+									<xs:element name="version" type="xs:string" minOccurs="0"/>
 									<xs:element name="ifcversion">
 										<xs:simpleType>
 											<xs:restriction base="xs:string">
@@ -50,7 +50,7 @@
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:element>
-									<xs:element name="date" type="xs:date"/>
+									<xs:element name="date" type="xs:date" minOccurs="0"/>
 									<xs:element name="purpose" type="xs:string" minOccurs="0"/>
 									<xs:element name="milestone" type="xs:string" minOccurs="0"/>
 								</xs:sequence>
