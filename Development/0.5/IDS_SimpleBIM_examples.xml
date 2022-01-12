@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS  ids_05.xsd">
+    <ids:info>
+        <ids:title>SimpleBIM use-case example</ids:title>
+        <ids:ifcversion>IFC2x3</ids:ifcversion>
+    </ids:info>
+    <ids:specifications>
+        <ids:specification name="the model must have rooms, every room must have a name from a list of allowed values, every room must have a (unique) room number" use="required">
+            <ids:applicability>
+                <ids:entity>
+                    <ids:name>
+                        <ids:simpleValue>IfcSpace</ids:simpleValue>
+                    </ids:name>
+                </ids:entity>
+                <ids:classification location="any">
+                    <ids:value>
+                        <ids:simpleValue>room</ids:simpleValue>
+                    </ids:value>
+                </ids:classification>
+            </ids:applicability>
+            <ids:requirements>
+                <ids:attribute location="instance">
+                    <ids:name>
+                        <ids:simpleValue>name</ids:simpleValue>
+                    </ids:name>
+                    <ids:value>
+                        <xs:restriction>
+                            <xs:enumeration value="first allowed value for room"/>
+                            <xs:enumeration value="second allowed value for room"/>
+                            <xs:enumeration value="third allowed value for room"/>
+                        </xs:restriction>
+                    </ids:value>
+                </ids:attribute>
+                <ids:property location="instance">
+                    <ids:propertyset>
+                        <ids:simpleValue>MyProject</ids:simpleValue>
+                    </ids:propertyset>
+                    <ids:name>
+                        <ids:simpleValue>Room number</ids:simpleValue>
+                    </ids:name>
+                    <ids:value>
+                        <xs:restriction>
+                            <xs:pattern value="(\w+\b)(?!.*\1)"/>
+                        </xs:restriction>
+                    </ids:value>
+                </ids:property>
+            </ids:requirements>
+        </ids:specification>
+        <ids:specification name="if the model has walls, each wall must have a wall type" use="optional">
+            <ids:applicability>
+                <ids:entity>
+                    <ids:name>
+                        <xs:restriction>
+                            <xs:pattern value="(IfcWall|IfcWallStandardCase)"/>
+                        </xs:restriction>
+                    </ids:name>
+                </ids:entity>
+            </ids:applicability>
+            <ids:requirements>
+                <ids:property location="type">
+                    <ids:propertyset>
+                        <ids:simpleValue>/^$|\s+/</ids:simpleValue>
+                    </ids:propertyset>
+                    <ids:name>
+                        <ids:simpleValue>/^$|\s+/</ids:simpleValue>
+                    </ids:name>
+                    <ids:value>
+                        <ids:simpleValue>/^$|\s+/</ids:simpleValue>
+                    </ids:value>
+                </ids:property>
+            </ids:requirements>
+        </ids:specification>
+        <ids:specification name="if the model has exterior walls, each exterior wall must have a u-value" use="optional">
+            <ids:applicability>
+                <ids:entity>
+                    <ids:name>
+                        <xs:restriction>
+                            <xs:pattern value="(IfcWall|IfcWallStandardCase)"/>
+                        </xs:restriction>
+                    </ids:name>
+                </ids:entity>
+                <ids:property location="any">
+                    <ids:propertyset>
+                        <ids:simpleValue>Pset_WallCommon</ids:simpleValue>
+                    </ids:propertyset>
+                    <ids:name>
+                        <ids:simpleValue>IsExternal</ids:simpleValue>
+                    </ids:name>
+                    <ids:value>
+                        <ids:simpleValue>TRUE</ids:simpleValue>
+                    </ids:value>
+                </ids:property>
+            </ids:applicability>
+            <ids:requirements>
+                <ids:property location="any">
+                    <ids:propertyset>
+                        <ids:simpleValue>Pset_WallCommon</ids:simpleValue>
+                    </ids:propertyset>
+                    <ids:name>
+                        <ids:simpleValue>ThermalTransmittance</ids:simpleValue>
+                    </ids:name>
+                    <ids:value>
+                        <ids:simpleValue>/^$|\s+/</ids:simpleValue>
+                    </ids:value>
+                </ids:property>
+            </ids:requirements>
+        </ids:specification>
+    </ids:specifications>
+</ids:ids>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS  ids_05.xsd">
+    <ids:info>
+        <ids:title>Prefabrication of pipes - LOD200</ids:title>
+        <ids:copyright>buildingSMART International Ltd</ids:copyright>
+        <ids:ifcversion>IFC2x3</ids:ifcversion>
+        <ids:description>This is an example implementation of the PDF exchange requirements for prefab pipes. Use-case can be found here: https://ucm.buildingsmart.org/use-case-details/1682/en and the PDF with requirements here: https://ucm.buildingsmart.org/uploads/use-cases/39fb5bd005525dbf048273aa7453557b0b84c4e99250e6ed8ce5c3370825725f/files/en/20210804094140_er-UC-Prefab-of-pipes-V1.2.0.0.pdf </ids:description>
+        <ids:date>2021-09-17</ids:date>
+        <ids:milestone>LOD200</ids:milestone>
+    </ids:info>
+    <ids:specifications>
+        <ids:specification name="mounting part" use="required">
+            <ids:applicability>
+                <ids:entity>
+                    <ids:name>
+                        <ids:simpleValue>IfcDiscreteAccessory</ids:simpleValue>
+                    </ids:name>
+                </ids:entity>
+            </ids:applicability>
+            <ids:requirements>
+                <ids:property location="any">
+                    <ids:propertyset>
+                        <ids:simpleValue>ePset_Pipe</ids:simpleValue>
+                    </ids:propertyset>
+                    <ids:name>
+                        <ids:simpleValue>medium</ids:simpleValue>
+                    </ids:name>
+                    <ids:value>
+                        <xs:restriction>
+                            <xs:enumeration value="cold water"/>
+                            <xs:enumeration value="something else"/>
+                        </xs:restriction>
+                    </ids:value>
+                </ids:property>
+                <ids:property location="any">
+                    <ids:propertyset>
+                        <ids:simpleValue>ePset_Pipe</ids:simpleValue>
+                    </ids:propertyset>
+                    <ids:name>
+                        <ids:simpleValue>material</ids:simpleValue>
+                    </ids:name>
+                    <ids:value>
+                        <xs:restriction>
+                            <xs:enumeration value="chrome steel 1.4401"/>
+                            <xs:enumeration value="something else"/>
+                        </xs:restriction>
+                    </ids:value>
+                </ids:property>
+                <ids:property location="any">
+                    <ids:propertyset>
+                        <ids:simpleValue>ePset_Pipe</ids:simpleValue>
+                    </ids:propertyset>
+                    <ids:name>
+                        <ids:simpleValue>pipe diameter</ids:simpleValue>
+                    </ids:name>
+                    <ids:value>
+                        <xs:restriction>
+                            <xs:minInclusive value="20"/>
+                            <xs:maxInclusive value="60"/>
+                        </xs:restriction>
+                    </ids:value>
+                </ids:property>
+                <ids:property location="any">
+                    <ids:propertyset>
+                        <ids:simpleValue>ePset_Pipe</ids:simpleValue>
+                    </ids:propertyset>
+                    <ids:name>
+                        <ids:simpleValue>component designation</ids:simpleValue>
+                    </ids:name>
+                    <ids:value>
+                        <xs:restriction>
+                            <xs:enumeration value="8000.18"/>
+                            <xs:enumeration value="something else"/>
+                        </xs:restriction>
+                    </ids:value>
+                </ids:property>
+                <ids:property uri="https://www.igh.hr/en/reference/" location="any">
+                    <ids:propertyset>
+                        <ids:simpleValue>ePset_Pipe</ids:simpleValue>
+                    </ids:propertyset>
+                    <ids:name>
+                        <ids:simpleValue>numbering system</ids:simpleValue>
+                    </ids:name>
+                    <ids:value>
+                        <xs:restriction>
+                            <xs:enumeration value="first option"/>
+                            <xs:enumeration value="something else"/>
+                        </xs:restriction>
+                    </ids:value>
+                </ids:property>
+                <ids:property location="any">
+                    <ids:propertyset>
+                        <ids:simpleValue>ePset_Pipe</ids:simpleValue>
+                    </ids:propertyset>
+                    <ids:name>
+                        <ids:simpleValue>Pipe system</ids:simpleValue>
+                    </ids:name>
+                    <ids:value>
+                        <xs:restriction>
+                            <xs:enumeration value="first option"/>
+                            <xs:enumeration value="something else"/>
+                        </xs:restriction>
+                    </ids:value>
+                </ids:property>
+            </ids:requirements>
+        </ids:specification>
+        <ids:specification name="pipe fittings and pipes" use="required">
+            <ids:applicability>
+                <ids:entity>
+                    <ids:name>
+                        <xs:restriction>
+                            <xs:pattern value="(IfcFlowFitting|IfcFlowSegment).*"/>
+                        </xs:restriction>
+                    </ids:name>
+                </ids:entity>
+            </ids:applicability>
+            <ids:requirements>
+                <ids:property uri="https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/psd/IfcSharedFacilitiesElements/Pset_ManufacturerTypeInformation.xml" location="any">
+                    <ids:propertyset>
+                        <ids:simpleValue>Pset_ManufacturerTypeInformation</ids:simpleValue>
+                    </ids:propertyset>
+                    <ids:name>
+                        <ids:simpleValue>Manufacturer</ids:simpleValue>
+                    </ids:name>
+                    <ids:value>
+                        <xs:restriction>
+                            <xs:enumeration value="Manufacturer 1"/>
+                            <xs:enumeration value="Manufacturer 2"/>
+                        </xs:restriction>
+                    </ids:value>
+                </ids:property>
+                <ids:property location="any">
+                    <ids:propertyset>
+                        <ids:simpleValue>ePset_Pipe</ids:simpleValue>
+                    </ids:propertyset>
+                    <ids:name>
+                        <ids:simpleValue>medium</ids:simpleValue>
+                    </ids:name>
+                    <ids:value>
+                        <xs:restriction>
+                            <xs:enumeration value="cold water"/>
+                            <xs:enumeration value="something else"/>
+                        </xs:restriction>
+                    </ids:value>
+                </ids:property>
+                <ids:property location="any">
+                    <ids:propertyset>
+                        <ids:simpleValue>ePset_Pipe</ids:simpleValue>
+                    </ids:propertyset>
+                    <ids:name>
+                        <ids:simpleValue>material</ids:simpleValue>
+                    </ids:name>
+                    <ids:value>
+                        <xs:restriction>
+                            <xs:enumeration value="chrome steel 1.4401"/>
+                            <xs:enumeration value="something else"/>
+                        </xs:restriction>
+                    </ids:value>
+                </ids:property>
+                <ids:property location="any">
+                    <ids:propertyset>
+                        <ids:simpleValue>ePset_Pipe</ids:simpleValue>
+                    </ids:propertyset>
+                    <ids:name>
+                        <ids:simpleValue>pipe diameter</ids:simpleValue>
+                    </ids:name>
+                    <ids:value>
+                        <xs:restriction>
+                            <xs:minInclusive value="20"/>
+                            <xs:maxInclusive value="60"/>
+                        </xs:restriction>
+                    </ids:value>
+                </ids:property>
+                <ids:property location="any">
+                    <ids:propertyset>
+                        <ids:simpleValue>ePset_Pipe</ids:simpleValue>
+                    </ids:propertyset>
+                    <ids:name>
+                        <ids:simpleValue>component designation</ids:simpleValue>
+                    </ids:name>
+                    <ids:value>
+                        <xs:restriction>
+                            <xs:enumeration value="arc 45°"/>
+                            <xs:enumeration value="something else"/>
+                        </xs:restriction>
+                    </ids:value>
+                </ids:property>
+                <ids:property uri="https://www.igh.hr/en/reference/" location="any">
+                    <ids:propertyset>
+                        <ids:simpleValue>ePset_Pipe</ids:simpleValue>
+                    </ids:propertyset>
+                    <ids:name>
+                        <ids:simpleValue>numbering system</ids:simpleValue>
+                    </ids:name>
+                    <ids:value>
+                        <xs:restriction>
+                            <xs:pattern value="[0-9][0-9][0-9][0-9].[0-9][0-9]"/>
+                        </xs:restriction>
+                    </ids:value>
+                </ids:property>
+                <ids:property location="any">
+                    <ids:propertyset>
+                        <ids:simpleValue>ePset_Pipe</ids:simpleValue>
+                    </ids:propertyset>
+                    <ids:name>
+                        <ids:simpleValue>Pipe system</ids:simpleValue>
+                    </ids:name>
+                    <ids:value>
+                        <xs:restriction>
+                            <xs:enumeration value="first option"/>
+                            <xs:enumeration value="something else"/>
+                        </xs:restriction>
+                    </ids:value>
+                </ids:property>
+                <ids:property location="any">
+                    <ids:propertyset>
+                        <ids:simpleValue>ePset_Pipe</ids:simpleValue>
+                    </ids:propertyset>
+                    <ids:name>
+                        <ids:simpleValue>outside diameter_general</ids:simpleValue>
+                    </ids:name>
+                    <ids:value>
+                        <xs:restriction>
+                            <xs:minInclusive value="20"/>
+                            <xs:maxInclusive value="60"/>
+                        </xs:restriction>
+                    </ids:value>
+                </ids:property>
+            </ids:requirements>
+        </ids:specification>
+    </ids:specifications>
+</ids:ids>
