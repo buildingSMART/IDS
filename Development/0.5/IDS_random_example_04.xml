@@ -3,7 +3,7 @@
     <ids:info>
         <ids:title>random example to show technical capabilities and usage</ids:title>
         <ids:copyright>buildingSMART International Ltd</ids:copyright>
-        <ids:ifcversion>IFC2x3</ids:ifcversion>
+        <ids:ifcversion>IFC2X3</ids:ifcversion>
         <ids:date>2021-09-17</ids:date>
     </ids:info>
     <ids:specifications>
