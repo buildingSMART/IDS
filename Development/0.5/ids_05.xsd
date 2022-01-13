@@ -13,7 +13,7 @@
 							<xs:element name="title" type="xs:string"/>
 							<xs:element name="copyright" type="xs:string" minOccurs="0"/>
 							<xs:element name="version" type="xs:string" minOccurs="0"/>
-							<xs:element name="ifcversion">
+							<xs:element name="ifcVersion">
 								<xs:simpleType>
 									<xs:restriction base="xs:string">
 										<xs:enumeration value="IFC2x3">
@@ -67,7 +67,7 @@
 	<xs:complexType name="entityType">
 		<xs:sequence>
 			<xs:element name="name" type="ids:idsValue"/>
-			<xs:element name="predefinedtype" type="ids:idsValue" minOccurs="0"/>
+			<xs:element name="predefinedType" type="ids:idsValue" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="idsValue">
@@ -127,7 +127,7 @@
 	</xs:complexType>
 	<xs:complexType name="propertyType">
 		<xs:sequence>
-			<xs:element name="propertyset" type="ids:idsValue"/>
+			<xs:element name="propertySet" type="ids:idsValue"/>
 			<xs:element name="name" type="ids:idsValue"/>
 			<xs:element name="value" type="ids:idsValue"/>
 			<xs:element name="instructions" type="xs:string" minOccurs="0">
