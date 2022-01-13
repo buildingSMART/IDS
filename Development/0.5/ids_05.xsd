@@ -16,7 +16,7 @@
 							<xs:element name="ifcVersion">
 								<xs:simpleType>
 									<xs:restriction base="xs:string">
-										<xs:enumeration value="IFC2x3">
+										<xs:enumeration value="IFC2X3">
 											<xs:annotation>
 												<xs:documentation>
 													<Label>IFC 2x3 - formal version numer 2.3.0.1</Label>
@@ -30,7 +30,7 @@
 												</xs:documentation>
 											</xs:annotation>
 										</xs:enumeration>
-										<xs:enumeration value="IFC4_3">
+										<xs:enumeration value="IFC4X3">
 											<xs:annotation>
 												<xs:documentation>
 													<Label>IFC 4.3 - formal version numer 4.3.0</Label>
