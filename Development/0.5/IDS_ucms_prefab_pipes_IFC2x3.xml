@@ -3,7 +3,7 @@
     <ids:info>
         <ids:title>Prefabrication of pipes - LOD200</ids:title>
         <ids:copyright>buildingSMART International Ltd</ids:copyright>
-        <ids:ifcversion>IFC2x3</ids:ifcversion>
+        <ids:ifcversion>IFC2X3</ids:ifcversion>
         <ids:description>This is an example implementation of the PDF exchange requirements for prefab pipes. Use-case can be found here: https://ucm.buildingsmart.org/use-case-details/1682/en and the PDF with requirements here: https://ucm.buildingsmart.org/uploads/use-cases/39fb5bd005525dbf048273aa7453557b0b84c4e99250e6ed8ce5c3370825725f/files/en/20210804094140_er-UC-Prefab-of-pipes-V1.2.0.0.pdf </ids:description>
         <ids:date>2021-09-17</ids:date>
         <ids:milestone>LOD200</ids:milestone>
