@@ -2,7 +2,7 @@
 <ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS  ids_05.xsd">
     <ids:info>
         <ids:title>SimpleBIM use-case example</ids:title>
-        <ids:ifcversion>IFC2x3</ids:ifcversion>
+        <ids:ifcversion>IFC2X3</ids:ifcversion>
     </ids:info>
     <ids:specifications>
         <ids:specification name="the model must have rooms, every room must have a name from a list of allowed values, every room must have a (unique) room number" use="required">
