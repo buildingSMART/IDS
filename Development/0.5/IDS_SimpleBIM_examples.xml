@@ -2,7 +2,7 @@
 <ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS  ids_05.xsd">
     <ids:info>
         <ids:title>SimpleBIM use-case example</ids:title>
-        <ids:ifcversion>IFC2X3</ids:ifcversion>
+        <ids:ifcVersion>IFC2X3</ids:ifcVersion>
     </ids:info>
     <ids:specifications>
         <ids:specification name="the model must have rooms, every room must have a name from a list of allowed values, every room must have a (unique) room number" use="required">
@@ -32,9 +32,9 @@
                     </ids:value>
                 </ids:attribute>
                 <ids:property location="instance">
-                    <ids:propertyset>
+                    <ids:propertySet>
                         <ids:simpleValue>MyProject</ids:simpleValue>
-                    </ids:propertyset>
+                    </ids:propertySet>
                     <ids:name>
                         <ids:simpleValue>Room number</ids:simpleValue>
                     </ids:name>
@@ -58,9 +58,9 @@
             </ids:applicability>
             <ids:requirements>
                 <ids:property location="type">
-                    <ids:propertyset>
+                    <ids:propertySet>
                         <ids:simpleValue>/^$|\s+/</ids:simpleValue>
-                    </ids:propertyset>
+                    </ids:propertySet>
                     <ids:name>
                         <ids:simpleValue>/^$|\s+/</ids:simpleValue>
                     </ids:name>
@@ -80,9 +80,9 @@
                     </ids:name>
                 </ids:entity>
                 <ids:property location="any">
-                    <ids:propertyset>
+                    <ids:propertySet>
                         <ids:simpleValue>Pset_WallCommon</ids:simpleValue>
-                    </ids:propertyset>
+                    </ids:propertySet>
                     <ids:name>
                         <ids:simpleValue>IsExternal</ids:simpleValue>
                     </ids:name>
@@ -93,9 +93,9 @@
             </ids:applicability>
             <ids:requirements>
                 <ids:property location="any">
-                    <ids:propertyset>
+                    <ids:propertySet>
                         <ids:simpleValue>Pset_WallCommon</ids:simpleValue>
-                    </ids:propertyset>
+                    </ids:propertySet>
                     <ids:name>
                         <ids:simpleValue>ThermalTransmittance</ids:simpleValue>
                     </ids:name>

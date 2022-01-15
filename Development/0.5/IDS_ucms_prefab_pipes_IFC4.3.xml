@@ -3,7 +3,7 @@
     <ids:info>
         <ids:title>Prefabrication of pipes - LOD200</ids:title>
         <ids:copyright>buildingSMART International Ltd</ids:copyright>
-        <ids:ifcversion>IFC4_3</ids:ifcversion>
+        <ids:ifcVersion>IFC4_3</ids:ifcVersion>
         <ids:description>This is an example implementation of the PDF exchange requirements for prefab pipes. Use-case can be found here: https://ucm.buildingsmart.org/use-case-details/1682/en/  This example is without the requirements for IfcDiscreteAccessory, simply to keep it a lightweight example.</ids:description>
         <ids:date>2021-09-21</ids:date>
         <ids:milestone>LOD200</ids:milestone>
@@ -21,9 +21,9 @@
             </ids:applicability>
             <ids:requirements>
                 <ids:property uri="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-4.3/prop/manufacturer" location="any">
-                    <ids:propertyset>
+                    <ids:propertySet>
                         <ids:simpleValue>Pset_ManufacturerTypeInformation</ids:simpleValue>
-                    </ids:propertyset>
+                    </ids:propertySet>
                     <ids:name>
                         <ids:simpleValue>Manufacturer</ids:simpleValue>
                     </ids:name>
@@ -35,9 +35,9 @@
                     </ids:value>
                 </ids:property>
                 <ids:property uri="http://identifier.buildingsmart.org/uri/buildingsmart-ch/UCM-CH-Demo-1.0/prop/PUCM001" location="any">
-                    <ids:propertyset>
+                    <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
-                    </ids:propertyset>
+                    </ids:propertySet>
                     <ids:name>
                         <ids:simpleValue>medium</ids:simpleValue>
                     </ids:name>
@@ -49,9 +49,9 @@
                     </ids:value>
                 </ids:property>
                 <ids:property uri="http://identifier.buildingsmart.org/uri/etim/etim-8.0/prop/EF002169" location="any">
-                    <ids:propertyset>
+                    <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
-                    </ids:propertyset>
+                    </ids:propertySet>
                     <ids:name>
                         <ids:simpleValue>material</ids:simpleValue>
                     </ids:name>
@@ -63,9 +63,9 @@
                     </ids:value>
                 </ids:property>
                 <ids:property uri="http://identifier.buildingsmart.org/uri/buildingsmart-ch/UCM-CH-Demo-1.0/prop/PUCM014" location="any">
-                    <ids:propertyset>
+                    <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
-                    </ids:propertyset>
+                    </ids:propertySet>
                     <ids:name>
                         <ids:simpleValue>pipe diameter</ids:simpleValue>
                     </ids:name>
@@ -77,9 +77,9 @@
                     </ids:value>
                 </ids:property>
                 <ids:property uri="http://identifier.buildingsmart.org/uri/buildingsmart-ch/UCM-CH-Demo-1.0/prop/PUCM002" location="any">
-                    <ids:propertyset>
+                    <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
-                    </ids:propertyset>
+                    </ids:propertySet>
                     <ids:name>
                         <ids:simpleValue>component designation</ids:simpleValue>
                     </ids:name>
@@ -91,9 +91,9 @@
                     </ids:value>
                 </ids:property>
                 <ids:property uri="https://www.igh.hr/en/reference/" location="any">
-                    <ids:propertyset>
+                    <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
-                    </ids:propertyset>
+                    </ids:propertySet>
                     <ids:name>
                         <ids:simpleValue>numbering system</ids:simpleValue>
                     </ids:name>
@@ -104,9 +104,9 @@
                     </ids:value>
                 </ids:property>
                 <ids:property location="any">
-                    <ids:propertyset>
+                    <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
-                    </ids:propertyset>
+                    </ids:propertySet>
                     <ids:name>
                         <ids:simpleValue>Pipe system</ids:simpleValue>
                     </ids:name>
@@ -118,9 +118,9 @@
                     </ids:value>
                 </ids:property>
                 <ids:property uri="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-4.3/prop/outsidediameter" location="any">
-                    <ids:propertyset>
+                    <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
-                    </ids:propertyset>
+                    </ids:propertySet>
                     <ids:name>
                         <ids:simpleValue>outside diameter_general</ids:simpleValue>
                     </ids:name>
