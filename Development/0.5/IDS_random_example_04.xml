@@ -11,9 +11,9 @@
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
-                        <xs:restriction>
+                        <xs:restriction base="xs:string">
                             <xs:pattern value="IfcCovering"/>
-                            <xs:minExclusive value="1"/>
+                            <xs:totalDigits value="11"/>
                         </xs:restriction>
                     </ids:name>
                     <ids:predefinedType>

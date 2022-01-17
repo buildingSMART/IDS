@@ -53,10 +53,11 @@
                     <ids:name>
                         <ids:simpleValue>pipe diameter</ids:simpleValue>
                     </ids:name>
+                    <ids:ifcMeasure>IfcAreaMeasure</ids:ifcMeasure>
                     <ids:value>
-                        <xs:restriction>
-                            <xs:minInclusive value="20"/>
-                            <xs:maxInclusive value="60"/>
+                        <xs:restriction base="xs:integer">
+                            <xs:minInclusive value="2"/>
+                            <xs:maxInclusive value="6"/>
                         </xs:restriction>
                     </ids:value>
                 </ids:property>

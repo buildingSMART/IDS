@@ -129,6 +129,15 @@
 		<xs:sequence>
 			<xs:element name="propertySet" type="ids:idsValue"/>
 			<xs:element name="name" type="ids:idsValue"/>
+			<xs:element name="ifcMeasure" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="IfcAreaDensityMeasure"/>
+						<xs:enumeration value="IfcAreaMeasure"/>
+						<xs:enumeration value="add more here..."/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
 			<xs:element name="value" type="ids:idsValue"/>
 			<xs:element name="instructions" type="xs:string" minOccurs="0">
 				<xs:annotation>
