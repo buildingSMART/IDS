@@ -3,7 +3,7 @@
     <ids:info>
         <ids:title>random example to show technical capabilities and usage</ids:title>
         <ids:copyright>buildingSMART International Ltd</ids:copyright>
-        <ids:ifcversion>IFC2X3</ids:ifcversion>
+        <ids:ifcVersion>IFC2X3</ids:ifcVersion>
         <ids:date>2021-09-17</ids:date>
     </ids:info>
     <ids:specifications>
@@ -16,18 +16,18 @@
                             <xs:minExclusive value="1"/>
                         </xs:restriction>
                     </ids:name>
-                    <ids:predefinedtype>
+                    <ids:predefinedType>
                         <ids:simpleValue>CLADDING</ids:simpleValue>
-                    </ids:predefinedtype>
+                    </ids:predefinedType>
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
                 <ids:property location="any">
-                    <ids:propertyset>
+                    <ids:propertySet>
                         <xs:restriction>
                             <xs:pattern value="anas"/>
                         </xs:restriction>
-                    </ids:propertyset>
+                    </ids:propertySet>
                     <ids:name>
                         <ids:simpleValue>Anax</ids:simpleValue>
                     </ids:name>
@@ -64,9 +64,9 @@
             </ids:applicability>
             <ids:requirements>
                 <ids:property location="any">
-                    <ids:propertyset>
+                    <ids:propertySet>
                         <ids:simpleValue>attribute</ids:simpleValue>
-                    </ids:propertyset>
+                    </ids:propertySet>
                     <ids:name>
                         <ids:simpleValue>OverallWidth</ids:simpleValue>
                     </ids:name>
@@ -78,9 +78,9 @@
                     </ids:value>
                 </ids:property>
                 <ids:property uri="http://identifier.buildingsmart.org/uri/dummy-example/FireRating" location="any">
-                    <ids:propertyset>
+                    <ids:propertySet>
                         <ids:simpleValue>AedesUVIP</ids:simpleValue>
-                    </ids:propertyset>
+                    </ids:propertySet>
                     <ids:name>
                         <ids:simpleValue>FireRating</ids:simpleValue>
                     </ids:name>
