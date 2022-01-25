@@ -53,7 +53,7 @@
                     <ids:name>
                         <ids:simpleValue>pipe diameter</ids:simpleValue>
                     </ids:name>
-                    <ids:ifcMeasure>IfcAreaMeasure</ids:ifcMeasure>
+                    <ids:ifcMeasure>IfcLengthMeasure</ids:ifcMeasure>
                     <ids:value>
                         <xs:restriction base="xs:integer">
                             <xs:minInclusive value="2"/>
