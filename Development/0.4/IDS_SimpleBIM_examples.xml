@@ -58,13 +58,13 @@
 		<ids:requirements>
 				<ids:property location="type"><!-- currently there is no real good way to say 'all walls need to have a type'. This solution is to state that all walls need to have a property on the 'type' level with any kind of value. Not nice, but currently no alternativel.  -->
 					<ids:propertyset>
-						<ids:simpleValue>/^$|\s+/</ids:simpleValue>
+						<ids:simpleValue>[*]</ids:simpleValue>
 					</ids:propertyset>
 					<ids:name>
-						<ids:simpleValue>/^$|\s+/</ids:simpleValue>
+						<ids:simpleValue>[*]</ids:simpleValue>
 					</ids:name>
 					<ids:value>
-						<ids:simpleValue>/^$|\s+/</ids:simpleValue>
+						<ids:simpleValue>[*]</ids:simpleValue>
 					</ids:value>
 				</ids:property>
 		</ids:requirements>
@@ -99,7 +99,7 @@
 						<ids:simpleValue>ThermalTransmittance</ids:simpleValue>
 					</ids:name>
 					<ids:value>
-						<ids:simpleValue>/^$|\s+/</ids:simpleValue>
+						<ids:simpleValue>[*]</ids:simpleValue>
 					</ids:value>
 				</ids:property>
 		</ids:requirements>

@@ -2,10 +2,9 @@
 <ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS  ids_05.xsd">
     <ids:info>
         <ids:title>SimpleBIM use-case example</ids:title>
-        <ids:ifcVersion>IFC2X3</ids:ifcVersion>
     </ids:info>
     <ids:specifications>
-        <ids:specification name="the model must have rooms, every room must have a name from a list of allowed values, every room must have a (unique) room number" use="required">
+        <ids:specification ifcVersion="IFC2X3" name="Room requirement 1" description="the model must have rooms, every room must have a name from a list of allowed values, every room must have a (unique) room number" use="required">
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
@@ -14,7 +13,7 @@
                 </ids:entity>
                 <ids:classification location="any">
                     <ids:value>
-                        <ids:simpleValue>room</ids:simpleValue>
+                        <ids:simpleValue>room</ids:simpleValue><!-- this could of course also be a list of things, a pattern, etc..  -->
                     </ids:value>
                 </ids:classification>
             </ids:applicability>
@@ -40,42 +39,42 @@
                     </ids:name>
                     <ids:value>
                         <xs:restriction>
-                            <xs:pattern value="(\w+\b)(?!.*\1)"/>
+                            <xs:pattern value="(A\s?)?(B\s?)?(C\s?)?"/> <!-- not sure we have a good way of describing 'room needs to have a unique room number'.  -->
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
             </ids:requirements>
         </ids:specification>
-        <ids:specification name="if the model has walls, each wall must have a wall type" use="optional">
+        <ids:specification ifcVersion="IFC2X3" name="Wall requirement" description="if the model has walls, each wall must have a wall type" use="optional">
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
                         <xs:restriction>
-                            <xs:pattern value="(IfcWall|IfcWallStandardCase)"/>
+                            <xs:pattern value="IfcWall|IfcWallStandardCase"/>
                         </xs:restriction>
                     </ids:name>
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
-                <ids:property location="type">
+                <ids:property location="type"> <!-- currently there is no real good way to say 'all walls need to have a type'. This solution is to state that all walls need to have a property on the 'type' level with any kind of value. Not nice, but currently no alternativel.  -->
                     <ids:propertySet>
-                        <ids:simpleValue>/^$|\s+/</ids:simpleValue>
+                        <ids:simpleValue>[*]</ids:simpleValue>
                     </ids:propertySet>
                     <ids:name>
-                        <ids:simpleValue>/^$|\s+/</ids:simpleValue>
+                        <ids:simpleValue>[*]</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <ids:simpleValue>/^$|\s+/</ids:simpleValue>
+                        <ids:simpleValue>[*]</ids:simpleValue>
                     </ids:value>
                 </ids:property>
             </ids:requirements>
         </ids:specification>
-        <ids:specification name="if the model has exterior walls, each exterior wall must have a u-value" use="optional">
+        <ids:specification name="exterial wall requirement" ifcVersion="IFC2X3" description="if the model has exterior walls, each exterior wall must have a u-value" use="optional">
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
                         <xs:restriction>
-                            <xs:pattern value="(IfcWall|IfcWallStandardCase)"/>
+                            <xs:pattern value="IfcWall|IfcWallStandardCase"/>
                         </xs:restriction>
                     </ids:name>
                 </ids:entity>
@@ -100,7 +99,7 @@
                         <ids:simpleValue>ThermalTransmittance</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <ids:simpleValue>/^$|\s+/</ids:simpleValue>
+                        <ids:simpleValue>[*]</ids:simpleValue>
                     </ids:value>
                 </ids:property>
             </ids:requirements>

@@ -3,13 +3,12 @@
     <ids:info>
         <ids:title>Prefabrication of pipes - LOD200</ids:title>
         <ids:copyright>buildingSMART International Ltd</ids:copyright>
-        <ids:ifcVersion>IFC4_3</ids:ifcVersion>
         <ids:description>This is an example implementation of the PDF exchange requirements for prefab pipes. Use-case can be found here: https://ucm.buildingsmart.org/use-case-details/1682/en/  This example is without the requirements for IfcDiscreteAccessory, simply to keep it a lightweight example.</ids:description>
         <ids:date>2021-09-21</ids:date>
         <ids:milestone>LOD200</ids:milestone>
     </ids:info>
     <ids:specifications>
-        <ids:specification name="pipe fittings and pipes" use="required">
+        <ids:specification ifcVersion="IFC4_3" name="pipe fittings and pipes" use="required">
             <ids:applicability>
                 <ids:entity>
                     <ids:name>

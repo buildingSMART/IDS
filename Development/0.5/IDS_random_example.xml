@@ -3,11 +3,10 @@
     <ids:info>
         <ids:title>random example to show technical capabilities and usage</ids:title>
         <ids:copyright>buildingSMART International Ltd</ids:copyright>
-        <ids:ifcVersion>IFC2X3</ids:ifcVersion>
         <ids:date>2021-09-17</ids:date>
     </ids:info>
     <ids:specifications>
-        <ids:specification name="binder" use="required">
+        <ids:specification ifcVersion="IFC2X3 IFC4" name="binder" use="required">
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
@@ -44,7 +43,7 @@
                 </ids:material>
             </ids:requirements>
         </ids:specification>
-        <ids:specification name="ramen" use="optional">
+        <ids:specification ifcVersion="IFC2X3 IFC4_3" name="ramen" use="optional">
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
