@@ -19,11 +19,6 @@
                     <ids:name>
                         <ids:simpleValue>name</ids:simpleValue>
                     </ids:name>
-                    <ids:value>
-                        <xs:restriction>
-                            <xs:pattern value="Wanddurchbruch|Deckendurchbruch"/>
-                        </xs:restriction>
-                    </ids:value>
                 </ids:attribute>
             </ids:requirements>
         </ids:specification>

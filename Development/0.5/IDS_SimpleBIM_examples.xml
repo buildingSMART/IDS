@@ -4,7 +4,7 @@
         <ids:title>SimpleBIM use-case example</ids:title>
     </ids:info>
     <ids:specifications>
-        <ids:specification ifcVersion="IFC2X3" name="Room requirement 1" description="the model must have rooms, every room must have a name from a list of allowed values, every room must have a (unique) room number" use="required">
+        <ids:specification ifcVersion="IFC2X3 IFC4" name="Room requirement 1" description="the model must have rooms, every room must have a name from a list of allowed values, every room must have a (unique) room number" use="required">
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
@@ -30,7 +30,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:attribute>
-                <ids:property location="instance">
+                <ids:property measure="string" location="instance">
                     <ids:propertySet>
                         <ids:simpleValue>MyProject</ids:simpleValue>
                     </ids:propertySet>
@@ -38,7 +38,7 @@
                         <ids:simpleValue>Room number</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction>
+                        <xs:restriction base="xs:string">
                             <xs:pattern value="(A\s?)?(B\s?)?(C\s?)?"/> <!-- not sure we have a good way of describing 'room needs to have a unique room number'.  -->
                         </xs:restriction>
                     </ids:value>
@@ -56,16 +56,17 @@
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
-                <ids:property location="type"> <!-- currently there is no real good way to say 'all walls need to have a type'. This solution is to state that all walls need to have a property on the 'type' level with any kind of value. Not nice, but currently no alternativel.  -->
+                <ids:property measure="string" location="type"> <!-- currently there is no real good way to say 'all walls need to have a type'. This solution is to state that all walls need to have a property on the 'type' level with any kind of value. Not nice, but currently no alternativel.  -->
                     <ids:propertySet>
-                        <ids:simpleValue>[*]</ids:simpleValue>
+                        <xs:restriction>
+                        <xs:pattern value="[*]"/>
+                        </xs:restriction>
                     </ids:propertySet>
                     <ids:name>
-                        <ids:simpleValue>[*]</ids:simpleValue>
+                        <xs:restriction>
+                        <xs:pattern value="[*]"/>
+                        </xs:restriction>
                     </ids:name>
-                    <ids:value>
-                        <ids:simpleValue>[*]</ids:simpleValue>
-                    </ids:value>
                 </ids:property>
             </ids:requirements>
         </ids:specification>
@@ -78,7 +79,7 @@
                         </xs:restriction>
                     </ids:name>
                 </ids:entity>
-                <ids:property location="any">
+                <ids:property measure="string" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>Pset_WallCommon</ids:simpleValue>
                     </ids:propertySet>
@@ -98,9 +99,6 @@
                     <ids:name>
                         <ids:simpleValue>ThermalTransmittance</ids:simpleValue>
                     </ids:name>
-                    <ids:value>
-                        <ids:simpleValue>[*]</ids:simpleValue>
-                    </ids:value>
                 </ids:property>
             </ids:requirements>
         </ids:specification>
