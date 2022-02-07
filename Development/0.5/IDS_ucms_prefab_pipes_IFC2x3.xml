@@ -17,7 +17,7 @@
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
-                <ids:property location="any">
+                <ids:property measure="string" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -31,7 +31,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property location="any">
+                <ids:property measure="string" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -45,22 +45,21 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property location="any">
+                <ids:property measure="Length" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
                     <ids:name>
                         <ids:simpleValue>pipe diameter</ids:simpleValue>
                     </ids:name>
-                    <ids:ifcMeasure>IfcLengthMeasure</ids:ifcMeasure>
                     <ids:value>
                         <xs:restriction base="xs:integer">
-                            <xs:minInclusive value="2"/>
-                            <xs:maxInclusive value="6"/>
+                            <xs:minInclusive value="0.02"/>
+                            <xs:maxInclusive value="0.06"/>
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property location="any">
+                <ids:property measure="string" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -74,7 +73,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property uri="https://www.igh.hr/en/reference/" location="any">
+                <ids:property measure="string" uri="https://www.igh.hr/en/reference/" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -88,7 +87,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property location="any">
+                <ids:property measure="string" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -115,7 +114,7 @@
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
-                <ids:property uri="https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/psd/IfcSharedFacilitiesElements/Pset_ManufacturerTypeInformation.xml" location="any">
+                <ids:property measure="string" uri="https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/psd/IfcSharedFacilitiesElements/Pset_ManufacturerTypeInformation.xml" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>Pset_ManufacturerTypeInformation</ids:simpleValue>
                     </ids:propertySet>
@@ -129,7 +128,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property location="any">
+                <ids:property measure="string" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -143,7 +142,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property location="any">
+                <ids:property measure="string" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -157,7 +156,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property location="any">
+                <ids:property measure="Length" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -166,12 +165,12 @@
                     </ids:name>
                     <ids:value>
                         <xs:restriction>
-                            <xs:minInclusive value="20"/>
-                            <xs:maxInclusive value="60"/>
+                            <xs:minInclusive value="0.02"/>
+                            <xs:maxInclusive value="0.06"/>
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property location="any">
+                <ids:property measure="string" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -185,7 +184,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property uri="https://www.igh.hr/en/reference/" location="any">
+                <ids:property measure="string" uri="https://www.igh.hr/en/reference/" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -193,12 +192,12 @@
                         <ids:simpleValue>numbering system</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction>
+                        <xs:restriction base="xs:string">
                             <xs:pattern value="[0-9][0-9][0-9][0-9].[0-9][0-9]"/>
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property location="any">
+                <ids:property  measure="string" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -206,13 +205,13 @@
                         <ids:simpleValue>Pipe system</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction>
+                        <xs:restriction base="xs:string">
                             <xs:enumeration value="first option"/>
                             <xs:enumeration value="something else"/>
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property location="any">
+                <ids:property measure="Length" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -221,8 +220,8 @@
                     </ids:name>
                     <ids:value>
                         <xs:restriction>
-                            <xs:minInclusive value="20"/>
-                            <xs:maxInclusive value="60"/>
+                            <xs:minInclusive value="0.02"/>
+                            <xs:maxInclusive value="0.06"/>
                         </xs:restriction>
                     </ids:value>
                 </ids:property>

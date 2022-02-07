@@ -21,7 +21,7 @@
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
-                <ids:property location="any">
+                <ids:property measure="string" location="any">
                     <ids:propertySet>
                         <xs:restriction>
                             <xs:pattern value="anas"/>
@@ -62,7 +62,7 @@
                 </ids:classification>
             </ids:applicability>
             <ids:requirements>
-                <ids:property location="any">
+                <ids:property measure="Length" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>attribute</ids:simpleValue>
                     </ids:propertySet>
@@ -70,13 +70,13 @@
                         <ids:simpleValue>OverallWidth</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction base="xs:integer">
+                        <xs:restriction>
                             <xs:minInclusive value="0"/>
                             <xs:maxInclusive value="120"/>
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property uri="http://identifier.buildingsmart.org/uri/dummy-example/FireRating" location="any">
+                <ids:property measure="string" uri="http://identifier.buildingsmart.org/uri/dummy-example/FireRating" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>AedesUVIP</ids:simpleValue>
                     </ids:propertySet>
@@ -88,7 +88,6 @@
                             <xs:enumeration value="30">
                                 <xs:annotation>
                                     <xs:documentation>
-									
                                         <Label xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Thirty minutes</Label>
 								</xs:documentation>
                                 </xs:annotation>
@@ -96,7 +95,6 @@
                             <xs:enumeration value="60">
                                 <xs:annotation>
                                     <xs:documentation>
-									
                                         <Label xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Sixty minutes</Label>
 								</xs:documentation>
                                 </xs:annotation>
@@ -104,7 +102,6 @@
                             <xs:enumeration value="90">
                                 <xs:annotation>
                                     <xs:documentation>
-									
                                         <Label xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Ninty minutes</Label>
 								</xs:documentation>
                                 </xs:annotation>
