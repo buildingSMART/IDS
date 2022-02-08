@@ -18,7 +18,7 @@
             </ids:applicability>
             <ids:requirements>
 				<ids:partOf entity="IfcElementAssembly"/>
-                <ids:property measure="string" location="instance">
+                <ids:property measure="String" location="instance">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -26,12 +26,12 @@
                         <ids:simpleValue>Kleurbinnenzijde</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction base="xs:string">
+                        <xs:restriction base="xs:String">
                             <xs:pattern value="(RAL)*"/>
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property measure="string" location="instance">
+                <ids:property measure="String" location="instance">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -39,7 +39,7 @@
                         <ids:simpleValue>Kleurbuitenzijde</ids:simpleValue>
                     </ids:name>
                 </ids:property>
-                <ids:property measure="string" location="instance">
+                <ids:property measure="String" location="instance">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -47,7 +47,7 @@
                         <ids:simpleValue>Onderdeel</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction base="xs:string">
+                        <xs:restriction base="xs:String">
                             <xs:enumeration value="Stijl"/>
                             <xs:enumeration value="Dorpel"/>
                         </xs:restriction>
@@ -74,7 +74,7 @@
             </ids:applicability>
             <ids:requirements>
 				<ids:partOf entity="IfcElementAssembly"/>
-                <ids:property measure="string" location="any">
+                <ids:property measure="String" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -88,7 +88,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                    <ids:property measure="string" location="instance">
+                    <ids:property measure="String" location="instance">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -96,12 +96,12 @@
                         <ids:simpleValue>Kleurbinnenzijde</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction base="xs:string">
+                        <xs:restriction base="xs:String">
                             <xs:pattern value="(RAL)*"/>
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property measure="string" location="instance">
+                <ids:property measure="String" location="instance">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -109,7 +109,7 @@
                         <ids:simpleValue>Kleurbuitenzijde</ids:simpleValue>
                     </ids:name>
                 </ids:property>
-                <ids:property measure="string" location="instance">
+                <ids:property measure="String" location="instance">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -139,7 +139,7 @@
 						<ids:simpleValue>Draairichting</ids:simpleValue>
 					</ids:name>
 				</ids:property>
-				<ids:property measure="string" location="instance">
+				<ids:property measure="String" location="instance">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -147,12 +147,12 @@
                         <ids:simpleValue>Kleurbinnenzijde</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction base="xs:string">
+                        <xs:restriction base="xs:String">
                             <xs:pattern value="(RAL)*"/>
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property measure="string" location="instance">
+                <ids:property measure="String" location="instance">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -160,7 +160,7 @@
                         <ids:simpleValue>Kleurbuitenzijde</ids:simpleValue>
                     </ids:name>
                 </ids:property>
-                <ids:property measure="string" location="instance">
+                <ids:property measure="String" location="instance">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -214,7 +214,7 @@
 			</ids:applicability>
 			<ids:requirements>
 				<ids:partOf entity="IfcElementAssembly"/>
-					<ids:property measure="string" location="instance">
+					<ids:property measure="String" location="instance">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -222,12 +222,12 @@
                         <ids:simpleValue>Kleurbinnenzijde</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction base="xs:string">
+                        <xs:restriction base="xs:String">
                             <xs:pattern value="(RAL)*"/>
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property measure="string" location="instance">
+                <ids:property measure="String" location="instance">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -235,7 +235,7 @@
                         <ids:simpleValue>Kleurbuitenzijde</ids:simpleValue>
                     </ids:name>
                 </ids:property>
-                <ids:property measure="string" location="instance">
+                <ids:property measure="String" location="instance">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -263,7 +263,7 @@
 						<ids:simpleValue>Reference</ids:simpleValue>
 					</ids:name>
 				</ids:property>
-				<ids:property measure="Thermal conductivity" location="type"> 
+				<ids:property measure="Number" location="type"> 
 					<ids:propertySet>
 						<ids:simpleValue>Pset_PlateCommon</ids:simpleValue>
 					</ids:propertySet>
@@ -271,13 +271,13 @@
 						<ids:simpleValue>ThermalTransmittance</ids:simpleValue>
 					</ids:name>
 					<ids:value>
-						<xs:restriction>
-						<xs:minExclusive value="1" />
-						<xs:maxExclusive value="2" />
+						<xs:restriction xml:base="xs:double">
+							<xs:minExclusive value="0.5" />
+							<xs:maxExclusive value="2.1" />
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property measure="Time" location="type"> 
+				<ids:property location="type"> 
 					<ids:propertySet>
 						<ids:simpleValue>Pset_PlateCommon</ids:simpleValue>
 					</ids:propertySet>
@@ -285,7 +285,7 @@
 						<ids:simpleValue>FireRating</ids:simpleValue>
 					</ids:name>
 					<ids:value>
-						<ids:simpleValue>1800</ids:simpleValue> <!-- 1800 in measure 'time' (seconds) is 30 minutes, is 0.5 hours -->
+						<ids:simpleValue>30</ids:simpleValue> <!-- 1800 in measure 'time' (seconds) is 30 minutes, is 0.5 hours -->
 					</ids:value>
 				</ids:property>
 			</ids:requirements>

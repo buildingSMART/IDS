@@ -19,7 +19,7 @@
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
-                <ids:property measure="string" uri="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-4.3/prop/manufacturer" location="any">
+                <ids:property measure="String" uri="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-4.3/prop/manufacturer" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>Pset_ManufacturerTypeInformation</ids:simpleValue>
                     </ids:propertySet>
@@ -41,13 +41,13 @@
                         <ids:simpleValue>medium</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction base="xs:string">
+                        <xs:restriction base="xs:String">
                             <xs:enumeration value="cold water"/>
                             <xs:enumeration value="something else"/>
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property  measure="string" uri="http://identifier.buildingsmart.org/uri/etim/etim-8.0/prop/EF002169" location="any">
+                <ids:property  measure="String" uri="http://identifier.buildingsmart.org/uri/etim/etim-8.0/prop/EF002169" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -55,7 +55,7 @@
                         <ids:simpleValue>material</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction base="xs:string">
+                        <xs:restriction base="xs:String">
                             <xs:enumeration value="chrome steel 1.4401"/>
                             <xs:enumeration value="something else"/>
                         </xs:restriction>
@@ -75,7 +75,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property measure="string" uri="http://identifier.buildingsmart.org/uri/buildingsmart-ch/UCM-CH-Demo-1.0/prop/PUCM002" location="any">
+                <ids:property measure="String" uri="http://identifier.buildingsmart.org/uri/buildingsmart-ch/UCM-CH-Demo-1.0/prop/PUCM002" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -83,13 +83,13 @@
                         <ids:simpleValue>component designation</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction base="xs:string">
+                        <xs:restriction base="xs:String">
                             <xs:enumeration value="arc 45°"/>
                             <xs:enumeration value="something else"/>
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property  measure="string" uri="https://www.igh.hr/en/reference/" location="any">
+                <ids:property  measure="String" uri="https://www.igh.hr/en/reference/" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -97,12 +97,12 @@
                         <ids:simpleValue>numbering system</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction base="xs:string">
+                        <xs:restriction base="xs:String">
                             <xs:pattern value="[0-9][0-9][0-9][0-9].[0-9][0-9]"/>
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property  measure="string" location="any">
+                <ids:property  measure="String" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -110,7 +110,7 @@
                         <ids:simpleValue>Pipe system</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction base="xs:string">
+                        <xs:restriction base="xs:String">
                             <xs:enumeration value="first option"/>
                             <xs:enumeration value="something else"/>
                         </xs:restriction>

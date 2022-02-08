@@ -17,7 +17,7 @@
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
-                <ids:property measure="string" location="any">
+                <ids:property measure="String" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -31,7 +31,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property measure="string" location="any">
+                <ids:property measure="String" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -59,7 +59,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property measure="string" location="any">
+                <ids:property measure="String" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -73,7 +73,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property measure="string" uri="https://www.igh.hr/en/reference/" location="any">
+                <ids:property measure="String" uri="https://www.igh.hr/en/reference/" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -87,7 +87,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property measure="string" location="any">
+                <ids:property measure="String" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -114,7 +114,7 @@
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
-                <ids:property measure="string" uri="https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/psd/IfcSharedFacilitiesElements/Pset_ManufacturerTypeInformation.xml" location="any">
+                <ids:property measure="String" uri="https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/psd/IfcSharedFacilitiesElements/Pset_ManufacturerTypeInformation.xml" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>Pset_ManufacturerTypeInformation</ids:simpleValue>
                     </ids:propertySet>
@@ -128,7 +128,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property measure="string" location="any">
+                <ids:property measure="String" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -142,7 +142,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property measure="string" location="any">
+                <ids:property measure="String" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -170,7 +170,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property measure="string" location="any">
+                <ids:property measure="String" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -184,7 +184,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property measure="string" uri="https://www.igh.hr/en/reference/" location="any">
+                <ids:property measure="String" uri="https://www.igh.hr/en/reference/" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -197,7 +197,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property  measure="string" location="any">
+                <ids:property  measure="String" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>

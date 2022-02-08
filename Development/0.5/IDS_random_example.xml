@@ -21,7 +21,7 @@
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
-                <ids:property measure="string" location="any">
+                <ids:property measure="String" location="any">
                     <ids:propertySet>
                         <xs:restriction>
                             <xs:pattern value="anas"/>
@@ -76,7 +76,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property measure="string" uri="http://identifier.buildingsmart.org/uri/dummy-example/FireRating" location="any">
+                <ids:property measure="String" uri="http://identifier.buildingsmart.org/uri/dummy-example/FireRating" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>AedesUVIP</ids:simpleValue>
                     </ids:propertySet>
