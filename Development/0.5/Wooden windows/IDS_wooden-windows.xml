@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS  ids_05.xsd">
+    <ids:info>
+        <ids:title>Wooden Windows</ids:title>
+        <ids:copyright>NBvT</ids:copyright>
+        <ids:description>An IDS of the Wooden Windows example.</ids:description>
+        <ids:date>2022-02-08</ids:date>
+        <ids:milestone>Design handover to manufactuer</ids:milestone>
+    </ids:info>
+    <ids:specifications>
+        <ids:specification ifcVersion="IFC2X3" name="Stijlen en Dorpels" use="required">
+            <ids:applicability>
+                <ids:entity>
+                    <ids:name>
+                        <ids:simpleValue>IfcMember</ids:simpleValue>
+                    </ids:name>
+                </ids:entity>
+            </ids:applicability>
+            <ids:requirements>
+				<ids:partOf entity="IfcElementAssembly"/>
+                <ids:property measure="String" location="instance">
+                    <ids:propertySet>
+                        <ids:simpleValue>CPset_31</ids:simpleValue>
+                    </ids:propertySet>
+                    <ids:name>
+                        <ids:simpleValue>Kleurbinnenzijde</ids:simpleValue>
+                    </ids:name>
+                    <ids:value>
+                        <xs:restriction base="xs:String">
+                            <xs:pattern value="(RAL)*"/>
+                        </xs:restriction>
+                    </ids:value>
+                </ids:property>
+                <ids:property measure="String" location="instance">
+                    <ids:propertySet>
+                        <ids:simpleValue>CPset_31</ids:simpleValue>
+                    </ids:propertySet>
+                    <ids:name>
+                        <ids:simpleValue>Kleurbuitenzijde</ids:simpleValue>
+                    </ids:name>
+                </ids:property>
+                <ids:property measure="String" location="instance">
+                    <ids:propertySet>
+                        <ids:simpleValue>CPset_31</ids:simpleValue>
+                    </ids:propertySet>
+                    <ids:name>
+                        <ids:simpleValue>Onderdeel</ids:simpleValue>
+                    </ids:name>
+                    <ids:value>
+                        <xs:restriction base="xs:String">
+                            <xs:enumeration value="Stijl"/>
+                            <xs:enumeration value="Dorpel"/>
+                        </xs:restriction>
+                    </ids:value>
+                </ids:property>
+                <ids:classification location="instance">
+					<ids:value>
+						<xs:restriction>
+						<xs:pattern value="3[1-2].[0-9][0-9]"/>
+						</xs:restriction>
+					</ids:value>
+                </ids:classification>
+                <ids:material location="instance">
+                </ids:material>
+            </ids:requirements>
+        </ids:specification>
+        <ids:specification ifcVersion="IFC2X3" name="Deur" use="optional">
+            <ids:applicability>
+                <ids:entity>
+                    <ids:name>
+                        <ids:simpleValue>IfcDoor</ids:simpleValue>
+                    </ids:name>
+                </ids:entity>
+            </ids:applicability>
+            <ids:requirements>
+				<ids:partOf entity="IfcElementAssembly"/>
+                <ids:property measure="String" location="any">
+                    <ids:propertySet>
+                        <ids:simpleValue>CPset_31</ids:simpleValue>
+                    </ids:propertySet>
+                    <ids:name>
+                        <ids:simpleValue>Draairichting</ids:simpleValue>
+                    </ids:name>
+                    <ids:value>
+                        <xs:restriction>
+                            <xs:enumeration value="DIN Links"/>
+                            <xs:enumeration value="DIN Rechts"/>
+                        </xs:restriction>
+                    </ids:value>
+                </ids:property>
+                    <ids:property measure="String" location="instance">
+                    <ids:propertySet>
+                        <ids:simpleValue>CPset_31</ids:simpleValue>
+                    </ids:propertySet>
+                    <ids:name>
+                        <ids:simpleValue>Kleurbinnenzijde</ids:simpleValue>
+                    </ids:name>
+                    <ids:value>
+                        <xs:restriction base="xs:String">
+                            <xs:pattern value="(RAL)*"/>
+                        </xs:restriction>
+                    </ids:value>
+                </ids:property>
+                <ids:property measure="String" location="instance">
+                    <ids:propertySet>
+                        <ids:simpleValue>CPset_31</ids:simpleValue>
+                    </ids:propertySet>
+                    <ids:name>
+                        <ids:simpleValue>Kleurbuitenzijde</ids:simpleValue>
+                    </ids:name>
+                </ids:property>
+                <ids:property measure="String" location="instance">
+                    <ids:propertySet>
+                        <ids:simpleValue>CPset_31</ids:simpleValue>
+                    </ids:propertySet>
+                    <ids:name>
+                        <ids:simpleValue>Onderdeel</ids:simpleValue>
+                    </ids:name>
+                </ids:property>
+                <ids:material location="instance"/>
+            </ids:requirements>
+        </ids:specification>
+        <ids:specification use="optional" name="Raam" ifcVersion="IFC2X3">
+			<ids:applicability>
+				<ids:entity>
+					<ids:name>
+						<ids:simpleValue>IfcWindow</ids:simpleValue> 
+						<!-- this will clash with the other window applicability. We know that. Keeping it here for the sake of the testing -->
+					</ids:name>
+				</ids:entity>
+			</ids:applicability>
+			<ids:requirements>
+				<ids:partOf entity="IfcElementAssembly"/>
+				<ids:property location="instance">
+					<ids:propertySet>
+						<ids:simpleValue>CPset_31</ids:simpleValue>
+					</ids:propertySet>
+					<ids:name>
+						<ids:simpleValue>Draairichting</ids:simpleValue>
+					</ids:name>
+				</ids:property>
+				<ids:property measure="String" location="instance">
+                    <ids:propertySet>
+                        <ids:simpleValue>CPset_31</ids:simpleValue>
+                    </ids:propertySet>
+                    <ids:name>
+                        <ids:simpleValue>Kleurbinnenzijde</ids:simpleValue>
+                    </ids:name>
+                    <ids:value>
+                        <xs:restriction base="xs:String">
+                            <xs:pattern value="(RAL)*"/>
+                        </xs:restriction>
+                    </ids:value>
+                </ids:property>
+                <ids:property measure="String" location="instance">
+                    <ids:propertySet>
+                        <ids:simpleValue>CPset_31</ids:simpleValue>
+                    </ids:propertySet>
+                    <ids:name>
+                        <ids:simpleValue>Kleurbuitenzijde</ids:simpleValue>
+                    </ids:name>
+                </ids:property>
+                <ids:property measure="String" location="instance">
+                    <ids:propertySet>
+                        <ids:simpleValue>CPset_31</ids:simpleValue>
+                    </ids:propertySet>
+                    <ids:name>
+                        <ids:simpleValue>Onderdeel</ids:simpleValue>
+                    </ids:name>
+                    <ids:value>
+                    <ids:simpleValue>Raam</ids:simpleValue>
+                    <!-- again, we know this will clash with beglazing, so good to see this happen -->
+                    </ids:value>
+                </ids:property>
+			</ids:requirements>
+		</ids:specification>
+		<ids:specification use="optional" ifcVersion="IFC2X3"> <!-- this one will 'clash' with the previous one. We need some kind of 'alle values except' pattern. For example the ^ used in most regex languages, but not in XSD patterns -->
+			<ids:applicability>
+			<ids:entity>
+				<ids:name>
+					<ids:simpleValue>IfcWindow</ids:simpleValue>
+				</ids:name>
+			</ids:entity>
+			<ids:material location="instance">
+				<ids:value>
+					<xs:restriction>
+						<xs:pattern value="*(glas)*"/>
+					</xs:restriction>
+				</ids:value>
+			</ids:material>
+			</ids:applicability>
+			<ids:requirements>
+				<ids:partOf entity="IfcElementAssembly"/>
+				<ids:property location="instance">
+					<ids:propertySet>
+						<ids:simpleValue>CPset_31</ids:simpleValue>
+					</ids:propertySet>
+					<ids:name>
+						<ids:simpleValue>Onderdeel</ids:simpleValue>
+					</ids:name>
+					<ids:value>
+						<ids:simpleValue>Ruit</ids:simpleValue> <!-- this should probably be in the applicability, or in the 'everything except' applicability of hte other IfcWindow  -->
+					</ids:value>
+				</ids:property>
+			</ids:requirements>
+		</ids:specification>
+		<ids:specification use="optional" name="Paneel" ifcVersion="IFC2X3">
+			<ids:applicability>
+				<ids:entity>
+					<ids:name>
+						<ids:simpleValue>IfcPlate</ids:simpleValue>
+					</ids:name>
+				</ids:entity>
+			</ids:applicability>
+			<ids:requirements>
+				<ids:partOf entity="IfcElementAssembly"/>
+					<ids:property measure="String" location="instance">
+                    <ids:propertySet>
+                        <ids:simpleValue>CPset_31</ids:simpleValue>
+                    </ids:propertySet>
+                    <ids:name>
+                        <ids:simpleValue>Kleurbinnenzijde</ids:simpleValue>
+                    </ids:name>
+                    <ids:value>
+                        <xs:restriction base="xs:String">
+                            <xs:pattern value="(RAL)*"/>
+                        </xs:restriction>
+                    </ids:value>
+                </ids:property>
+                <ids:property measure="String" location="instance">
+                    <ids:propertySet>
+                        <ids:simpleValue>CPset_31</ids:simpleValue>
+                    </ids:propertySet>
+                    <ids:name>
+                        <ids:simpleValue>Kleurbuitenzijde</ids:simpleValue>
+                    </ids:name>
+                </ids:property>
+                <ids:property measure="String" location="instance">
+                    <ids:propertySet>
+                        <ids:simpleValue>CPset_31</ids:simpleValue>
+                    </ids:propertySet>
+                    <ids:name>
+                        <ids:simpleValue>Onderdeel</ids:simpleValue>
+                    </ids:name>
+                </ids:property>
+                <ids:property uri="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-2x3/prop/acousticrating" location="instance"> 
+						<!-- uri not live yet -->
+						<!-- there is no measure giving, which is invalid becasue there is a value restriction set for this property --> 
+						<!-- in the example IFC file the PSet_PlateCommon is on Type level instead of instande. So this should turn up INvalid -->
+					<ids:propertySet>
+						<ids:simpleValue>Pset_PlateCommon</ids:simpleValue>
+					</ids:propertySet>
+					<ids:name>
+						<ids:simpleValue>AcousticRating</ids:simpleValue>
+					</ids:name>
+				</ids:property>
+				<ids:property location="any"> 
+					<!-- in the example IFC file the PSet_PlateCommon is on Type level instead of instande. So this should turn up VALID -->
+					<ids:propertySet>
+						<ids:simpleValue>Pset_PlateCommon</ids:simpleValue>
+					</ids:propertySet>
+					<ids:name>
+						<ids:simpleValue>Reference</ids:simpleValue>
+					</ids:name>
+				</ids:property>
+				<ids:property measure="Number" location="type"> 
+					<ids:propertySet>
+						<ids:simpleValue>Pset_PlateCommon</ids:simpleValue>
+					</ids:propertySet>
+					<ids:name>
+						<ids:simpleValue>ThermalTransmittance</ids:simpleValue>
+					</ids:name>
+					<ids:value>
+						<xs:restriction xml:base="xs:double">
+							<xs:minExclusive value="0.5" />
+							<xs:maxExclusive value="2.1" />
+						</xs:restriction>
+					</ids:value>
+				</ids:property>
+				<ids:property location="type"> 
+					<ids:propertySet>
+						<ids:simpleValue>Pset_PlateCommon</ids:simpleValue>
+					</ids:propertySet>
+					<ids:name>
+						<ids:simpleValue>FireRating</ids:simpleValue>
+					</ids:name>
+					<ids:value>
+						<ids:simpleValue>30</ids:simpleValue> <!-- 1800 in measure 'time' (seconds) is 30 minutes, is 0.5 hours -->
+					</ids:value>
+				</ids:property>
+			</ids:requirements>
+		</ids:specification>
+    </ids:specifications>
+</ids:ids>
