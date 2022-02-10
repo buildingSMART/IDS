@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS  ids_05.xsd">   
+    <ids:info>
+        <ids:title>Example for ArcDox </ids:title>
+        <ids:copyright>buildingSMART International Ltd</ids:copyright>
+        <ids:date>2022-02-08</ids:date>
+    </ids:info>
+    <ids:specifications>
+        <ids:specification instructions="Add some context here to help users understand what you are asking." ifcVersion="IFC2X3" name="Project requirements" use="required">
+            <ids:applicability>
+                <ids:entity>
+                    <ids:name>
+                        <ids:simpleValue>IfcProject</ids:simpleValue>
+                    </ids:name>
+                </ids:entity>
+            </ids:applicability>
+            <ids:requirements>
+                <ids:attribute instructions="Project ID" location="instance">
+                    <ids:name>
+                        <ids:simpleValue>GlobalId</ids:simpleValue>
+                    </ids:name>
+                </ids:attribute>
+                <ids:attribute instructions="Functional Unit (Overall Sq.Metres or Linear Meters etc)" location="instance">
+					<ids:name>
+						<ids:simpleValue>UnitsInContext</ids:simpleValue>
+					</ids:name>
+				</ids:attribute>
+				<ids:attribute instructions="Project Description" location="instance">
+					<ids:name>
+						<ids:simpleValue>Description</ids:simpleValue>
+					</ids:name>
+				</ids:attribute>
+                <ids:attribute instructions="Project name" location="instance">
+                    <ids:name>
+                        <ids:simpleValue>Name</ids:simpleValue>
+                    </ids:name>
+                </ids:attribute>
+            </ids:requirements>
+        </ids:specification>
+        <ids:specification use="required" ifcVersion="IFC2X3">
+			<ids:applicability>
+				<ids:entity>
+					<ids:name>
+						<ids:simpleValue>IfcBuilding</ids:simpleValue>
+					</ids:name>
+				</ids:entity>
+			</ids:applicability>
+			<ids:requirements>
+				<ids:property location="instance">
+					<ids:propertySet>
+						<ids:simpleValue>ArcDox</ids:simpleValue>
+					</ids:propertySet>
+					<ids:name>
+						<ids:simpleValue>Function</ids:simpleValue>
+					</ids:name>
+				</ids:property>
+				 <ids:property measure="String" location="instance">
+					<ids:propertySet>
+						<ids:simpleValue>ArcDox</ids:simpleValue>
+					</ids:propertySet>
+					<ids:name>
+						<ids:simpleValue>Type of Work</ids:simpleValue>
+					</ids:name>
+					<ids:value>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="New Build" />
+							<xs:enumeration value="Renovation" />
+							<xs:enumeration value="Etc" />
+						</xs:restriction>
+					</ids:value>
+				</ids:property>
+				 <ids:property measure="String" location="instance">
+					<ids:propertySet>
+						<ids:simpleValue>ArcDox</ids:simpleValue>
+					</ids:propertySet>
+					<ids:name>
+						<ids:simpleValue>Procurement Method</ids:simpleValue>
+					</ids:name>
+					<ids:value>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="Design-Bid-Build" />
+							<xs:enumeration value="Design-Build-Operate" />
+							<xs:enumeration value="Etc" />
+						</xs:restriction>
+					</ids:value>
+				</ids:property>
+				<ids:property location="instance">
+					<ids:propertySet>
+						<ids:simpleValue>ArcDox</ids:simpleValue>
+					</ids:propertySet>
+					<ids:name>
+						<ids:simpleValue>Expected Life</ids:simpleValue>
+					</ids:name>
+				</ids:property>
+			</ids:requirements>
+		</ids:specification>
+		<ids:specification use="required" ifcVersion="IFC2X3">
+			<ids:applicability>
+				<ids:entity>
+					<ids:name>
+						<ids:simpleValue>IfcUnitAssignment</ids:simpleValue>
+					</ids:name>
+				</ids:entity>
+			</ids:applicability>
+			<ids:requirements>
+				<ids:attribute instructions="Add this attribute twice: once for Area Units and once for Linear Units." location="instance"> <!-- this is actually not the best way to distinguish between types of units. -->
+					<ids:name>
+						<ids:simpleValue>Units</ids:simpleValue>
+					</ids:name>
+				</ids:attribute>
+			</ids:requirements>
+		</ids:specification>
+		<ids:specification use="required" ifcVersion="IFC2X3">
+			<ids:applicability>
+				<ids:entity>
+					<ids:name>
+						<ids:simpleValue>IfcPostalAddress</ids:simpleValue>
+					</ids:name>
+				</ids:entity>
+			</ids:applicability>
+			<ids:requirements>
+				<ids:attribute instructions="Address" location="instance">
+					<ids:name>
+						<ids:simpleValue>AddressLines</ids:simpleValue>
+					</ids:name>
+				</ids:attribute>
+				<ids:attribute instructions="Town" location="instance">
+					<ids:name>
+						<ids:simpleValue>Town</ids:simpleValue>
+					</ids:name>
+				</ids:attribute>
+				<ids:attribute instructions="Region" location="instance">
+					<ids:name>
+						<ids:simpleValue>Region</ids:simpleValue>
+					</ids:name>
+				</ids:attribute>
+				<ids:attribute instructions="Country" location="instance">
+					<ids:name>
+						<ids:simpleValue>Country</ids:simpleValue>
+					</ids:name>
+					<ids:value>
+						<ids:simpleValue>Ireland</ids:simpleValue>
+					</ids:value>
+				</ids:attribute>
+				<ids:attribute instructions="Postal Code" location="instance">
+					<ids:name>
+						<ids:simpleValue>PostalCode</ids:simpleValue>
+					</ids:name>
+				</ids:attribute>
+			</ids:requirements>
+		</ids:specification>
+		<ids:specification use="required" ifcVersion="IFC2X3">
+			<ids:applicability>
+				<ids:entity>
+					<ids:name>
+						<ids:simpleValue>IfcSite</ids:simpleValue>
+					</ids:name>
+				</ids:entity>
+			</ids:applicability>
+			<ids:requirements>
+				<ids:attribute instructions="Longitude" location="instance">
+					<ids:name>
+						<ids:simpleValue>RefLongitude</ids:simpleValue>
+					</ids:name>
+				</ids:attribute>
+				<ids:attribute instructions="Latitude" location="instance">
+					<ids:name>
+						<ids:simpleValue>RefLatitude</ids:simpleValue>
+					</ids:name>
+				</ids:attribute>
+			</ids:requirements>
+		</ids:specification>
+    </ids:specifications>
+</ids:ids>
