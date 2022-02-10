@@ -27,7 +27,7 @@
                     </ids:name>
                     <ids:value>
                         <xs:restriction base="xs:String">
-                            <xs:pattern value="(RAL)*"/>
+                            <xs:pattern value="RAL.*"/>
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
@@ -97,7 +97,7 @@
                     </ids:name>
                     <ids:value>
                         <xs:restriction base="xs:String">
-                            <xs:pattern value="(RAL)*"/>
+                            <xs:pattern value="RAL.*"/>
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
@@ -148,7 +148,7 @@
                     </ids:name>
                     <ids:value>
                         <xs:restriction base="xs:String">
-                            <xs:pattern value="(RAL)*"/>
+                            <xs:pattern value="RAL.*"/>
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
@@ -223,7 +223,7 @@
                     </ids:name>
                     <ids:value>
                         <xs:restriction base="xs:String">
-                            <xs:pattern value="(RAL)*"/>
+                            <xs:pattern value="RAL.*"/>
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
