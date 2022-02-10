@@ -184,7 +184,7 @@
 			<ids:material location="instance">
 				<ids:value>
 					<xs:restriction>
-						<xs:pattern value="*(glas)*"/>
+						<xs:pattern value=".*glass.*"/>
 					</xs:restriction>
 				</ids:value>
 			</ids:material>
