@@ -82,7 +82,7 @@
 									<xs:restriction base="xs:string">
 										<xs:enumeration value="String"/>
 										<xs:enumeration value="Number"/>
-										<xs:enumeration value="AreaDensity"/>
+										<xs:enumeration value="AmountOfSubstance"/>
 										<xs:enumeration value="AreaDensity"/>
 										<xs:enumeration value="Area"/>
 										<xs:enumeration value="DynamicViscosity"/>
@@ -300,7 +300,7 @@
 									<xs:restriction base="xs:string">
 										<xs:enumeration value="String"/>
 										<xs:enumeration value="Number"/>
-										<xs:enumeration value="AreaDensity"/>
+										<xs:enumeration value="AmountOfSubstance"/>
 										<xs:enumeration value="AreaDensity"/>
 										<xs:enumeration value="Area"/>
 										<xs:enumeration value="DynamicViscosity"/>
