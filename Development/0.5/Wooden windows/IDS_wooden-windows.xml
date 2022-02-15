@@ -271,7 +271,7 @@
 						<ids:simpleValue>ThermalTransmittance</ids:simpleValue>
 					</ids:name>
 					<ids:value>
-						<xs:restriction xml:base="xs:double">
+						<xs:restriction base="xs:double">
 							<xs:minExclusive value="0.5" />
 							<xs:maxExclusive value="2.1" />
 						</xs:restriction>
