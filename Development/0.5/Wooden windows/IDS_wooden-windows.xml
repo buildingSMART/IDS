@@ -12,7 +12,7 @@
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
-                        <ids:simpleValue>IfcMember</ids:simpleValue>
+                        <ids:simpleValue>IFCMEMBER</ids:simpleValue>
                     </ids:name>
                 </ids:entity>
             </ids:applicability>
@@ -26,7 +26,7 @@
                         <ids:simpleValue>Kleurbinnenzijde</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction base="xs:String">
+                        <xs:restriction base="xs:string">
                             <xs:pattern value="RAL.*"/>
                         </xs:restriction>
                     </ids:value>
@@ -47,7 +47,7 @@
                         <ids:simpleValue>Onderdeel</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction base="xs:String">
+                        <xs:restriction base="xs:string">
                             <xs:enumeration value="Stijl"/>
                             <xs:enumeration value="Dorpel"/>
                         </xs:restriction>
@@ -68,7 +68,7 @@
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
-                        <ids:simpleValue>IfcDoor</ids:simpleValue>
+                        <ids:simpleValue>IFCDOOR</ids:simpleValue>
                     </ids:name>
                 </ids:entity>
             </ids:applicability>
@@ -96,7 +96,7 @@
                         <ids:simpleValue>Kleurbinnenzijde</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction base="xs:String">
+                        <xs:restriction base="xs:string">
                             <xs:pattern value="RAL.*"/>
                         </xs:restriction>
                     </ids:value>
@@ -124,7 +124,7 @@
 			<ids:applicability>
 				<ids:entity>
 					<ids:name>
-						<ids:simpleValue>IfcWindow</ids:simpleValue> 
+						<ids:simpleValue>IFCWINDOW</ids:simpleValue> 
 						<!-- this will clash with the other window applicability. We know that. Keeping it here for the sake of the testing -->
 					</ids:name>
 				</ids:entity>
@@ -147,7 +147,7 @@
                         <ids:simpleValue>Kleurbinnenzijde</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction base="xs:String">
+                        <xs:restriction base="xs:string">
                             <xs:pattern value="RAL.*"/>
                         </xs:restriction>
                     </ids:value>
@@ -174,11 +174,11 @@
                 </ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification use="optional" ifcVersion="IFC2X3"> <!-- this one will 'clash' with the previous one. We need some kind of 'alle values except' pattern. For example the ^ used in most regex languages, but not in XSD patterns -->
+		<ids:specification name="Raam met glas" use="optional" ifcVersion="IFC2X3"> <!-- this one will 'clash' with the previous one. We need some kind of 'alle values except' pattern. For example the ^ used in most regex languages, but not in XSD patterns -->
 			<ids:applicability>
 			<ids:entity>
 				<ids:name>
-					<ids:simpleValue>IfcWindow</ids:simpleValue>
+					<ids:simpleValue>IFCWINDOW</ids:simpleValue>
 				</ids:name>
 			</ids:entity>
 			<ids:material location="instance">
@@ -199,7 +199,7 @@
 						<ids:simpleValue>Onderdeel</ids:simpleValue>
 					</ids:name>
 					<ids:value>
-						<ids:simpleValue>Ruit</ids:simpleValue> <!-- this should probably be in the applicability, or in the 'everything except' applicability of hte other IfcWindow  -->
+						<ids:simpleValue>Ruit</ids:simpleValue> <!-- this should probably be in the applicability, or in the 'everything except' applicability of the other IfcWindow  -->
 					</ids:value>
 				</ids:property>
 			</ids:requirements>
@@ -208,7 +208,7 @@
 			<ids:applicability>
 				<ids:entity>
 					<ids:name>
-						<ids:simpleValue>IfcPlate</ids:simpleValue>
+						<ids:simpleValue>IFCPLATE</ids:simpleValue>
 					</ids:name>
 				</ids:entity>
 			</ids:applicability>
@@ -222,7 +222,7 @@
                         <ids:simpleValue>Kleurbinnenzijde</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction base="xs:String">
+                        <xs:restriction base="xs:string">
                             <xs:pattern value="RAL.*"/>
                         </xs:restriction>
                     </ids:value>
@@ -271,7 +271,7 @@
 						<ids:simpleValue>ThermalTransmittance</ids:simpleValue>
 					</ids:name>
 					<ids:value>
-						<xs:restriction base="xs:double">
+						<xs:restriction base="xs:decimal">
 							<xs:minExclusive value="0.5" />
 							<xs:maxExclusive value="2.1" />
 						</xs:restriction>

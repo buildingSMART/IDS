@@ -10,7 +10,7 @@
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
-                        <ids:simpleValue>IfcProject</ids:simpleValue>
+                        <ids:simpleValue>IFCPROJECT</ids:simpleValue>
                     </ids:name>
                 </ids:entity>
             </ids:applicability>
@@ -37,11 +37,11 @@
                 </ids:attribute>
             </ids:requirements>
         </ids:specification>
-        <ids:specification use="required" ifcVersion="IFC2X3">
+        <ids:specification name="name1" use="required" ifcVersion="IFC2X3">
 			<ids:applicability>
 				<ids:entity>
 					<ids:name>
-						<ids:simpleValue>IfcBuilding</ids:simpleValue>
+						<ids:simpleValue>IFCBUILDING</ids:simpleValue>
 					</ids:name>
 				</ids:entity>
 			</ids:applicability>
@@ -94,11 +94,11 @@
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification use="required" ifcVersion="IFC2X3">
+		<ids:specification name="name2" use="required" ifcVersion="IFC2X3">
 			<ids:applicability>
 				<ids:entity>
 					<ids:name>
-						<ids:simpleValue>IfcUnitAssignment</ids:simpleValue>
+						<ids:simpleValue>IFCUNITASSIGNMENT</ids:simpleValue>
 					</ids:name>
 				</ids:entity>
 			</ids:applicability>
@@ -110,11 +110,11 @@
 				</ids:attribute>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification use="required" ifcVersion="IFC2X3">
+		<ids:specification name="name3" use="required" ifcVersion="IFC2X3">
 			<ids:applicability>
 				<ids:entity>
 					<ids:name>
-						<ids:simpleValue>IfcPostalAddress</ids:simpleValue>
+						<ids:simpleValue>IFCPOSTALADDRESS</ids:simpleValue>
 					</ids:name>
 				</ids:entity>
 			</ids:applicability>
@@ -149,11 +149,11 @@
 				</ids:attribute>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification use="required" ifcVersion="IFC2X3">
+		<ids:specification name="name4" use="required" ifcVersion="IFC2X3">
 			<ids:applicability>
 				<ids:entity>
 					<ids:name>
-						<ids:simpleValue>IfcSite</ids:simpleValue>
+						<ids:simpleValue>IFCSITE</ids:simpleValue>
 					</ids:name>
 				</ids:entity>
 			</ids:applicability>

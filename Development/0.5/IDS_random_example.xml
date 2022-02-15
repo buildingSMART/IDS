@@ -11,7 +11,7 @@
                 <ids:entity>
                     <ids:name>
                         <xs:restriction base="xs:string">
-                            <xs:pattern value="IfcCovering"/>
+                            <xs:pattern value="IFCCOVERING"/>
                             <xs:totalDigits value="11"/>
                         </xs:restriction>
                     </ids:name>
@@ -24,7 +24,7 @@
                 <ids:property measure="String" location="any">
                     <ids:propertySet>
                         <xs:restriction>
-                            <xs:pattern value="anas"/>
+                            <xs:pattern value="anas.*"/>
                         </xs:restriction>
                     </ids:propertySet>
                     <ids:name>
@@ -47,13 +47,13 @@
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
-                        <ids:simpleValue>IfcWindow</ids:simpleValue>
+                        <ids:simpleValue>IFCWINDOW</ids:simpleValue>
                     </ids:name>
                 </ids:entity>
                 <ids:classification location="any">
                     <ids:value>
                         <xs:restriction base="xs:string">
-                            <xs:pattern value="[0-9].[0-9]"/>
+                            <xs:pattern value="[0-9]\.[0-9]"/>
                         </xs:restriction>
                     </ids:value>
                     <ids:system>

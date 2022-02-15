@@ -12,7 +12,7 @@
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
-                        <ids:simpleValue>IfcDiscreteAccessory</ids:simpleValue>
+                        <ids:simpleValue>IFCDISCRETEACCESSORY</ids:simpleValue>
                     </ids:name>
                 </ids:entity>
             </ids:applicability>
@@ -53,7 +53,7 @@
                         <ids:simpleValue>pipe diameter</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction base="xs:integer">
+                        <xs:restriction base="xs:decimal">
                             <xs:minInclusive value="0.02"/>
                             <xs:maxInclusive value="0.06"/>
                         </xs:restriction>
@@ -108,7 +108,7 @@
                 <ids:entity>
                     <ids:name>
                         <xs:restriction>
-                            <xs:pattern value="(IfcFlowFitting|IfcFlowSegment).*"/>
+                            <xs:pattern value="IFCFLOWFITTING|IFCFLOWSEGMENT"/>
                         </xs:restriction>
                     </ids:name>
                 </ids:entity>
@@ -164,7 +164,7 @@
                         <ids:simpleValue>pipe diameter</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction>
+                        <xs:restriction base="xs:decimal">
                             <xs:minInclusive value="0.02"/>
                             <xs:maxInclusive value="0.06"/>
                         </xs:restriction>
@@ -193,7 +193,7 @@
                     </ids:name>
                     <ids:value>
                         <xs:restriction base="xs:string">
-                            <xs:pattern value="[0-9][0-9][0-9][0-9].[0-9][0-9]"/>
+                            <xs:pattern value="[0-9][0-9][0-9][0-9]\.[0-9][0-9]"/>
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
@@ -219,7 +219,7 @@
                         <ids:simpleValue>outside diameter_general</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction>
+                        <xs:restriction base="xs:decimal">
                             <xs:minInclusive value="0.02"/>
                             <xs:maxInclusive value="0.06"/>
                         </xs:restriction>

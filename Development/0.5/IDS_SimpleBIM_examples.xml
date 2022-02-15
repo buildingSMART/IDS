@@ -8,7 +8,7 @@
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
-                        <ids:simpleValue>IfcSpace</ids:simpleValue>
+                        <ids:simpleValue>IFCSPACE</ids:simpleValue>
                     </ids:name>
                 </ids:entity>
                 <ids:classification location="any">
@@ -20,7 +20,7 @@
             <ids:requirements>
                 <ids:attribute location="instance">
                     <ids:name>
-                        <ids:simpleValue>name</ids:simpleValue>
+                        <ids:simpleValue>Name</ids:simpleValue>
                     </ids:name>
                     <ids:value>
                         <xs:restriction>
@@ -50,7 +50,7 @@
                 <ids:entity>
                     <ids:name>
                         <xs:restriction>
-                            <xs:pattern value="IfcWall|IfcWallStandardCase"/>
+                            <xs:pattern value="IFCWALL|IFCWALLSTANDARDCASE"/>
                         </xs:restriction>
                     </ids:name>
                 </ids:entity>
@@ -59,12 +59,12 @@
                 <ids:property measure="String" location="type"> <!-- currently there is no real good way to say 'all walls need to have a type'. This solution is to state that all walls need to have a property on the 'type' level with any kind of value. Not nice, but currently no alternativel.  -->
                     <ids:propertySet>
                         <xs:restriction>
-                        <xs:pattern value="[*]"/>
+                        <xs:pattern value=".*"/>
                         </xs:restriction>
                     </ids:propertySet>
                     <ids:name>
                         <xs:restriction>
-                        <xs:pattern value="[*]"/>
+                        <xs:pattern value=".*"/>
                         </xs:restriction>
                     </ids:name>
                 </ids:property>
@@ -75,7 +75,7 @@
                 <ids:entity>
                     <ids:name>
                         <xs:restriction>
-                            <xs:pattern value="IfcWall|IfcWallStandardCase"/>
+                            <xs:pattern value="IFCWALL|IFCWALLSTANDARDCASE"/>
                         </xs:restriction>
                     </ids:name>
                 </ids:entity>

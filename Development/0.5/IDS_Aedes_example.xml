@@ -9,7 +9,7 @@
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
-                        <ids:simpleValue>IfcWindow</ids:simpleValue>
+                        <ids:simpleValue>IFCWINDOW</ids:simpleValue>
                     </ids:name>
                     <ids:predefinedType>
 						<ids:simpleValue>WINDOW</ids:simpleValue>
@@ -18,7 +18,7 @@
                 <ids:classification location="any">
 					<ids:value>
 						<xs:restriction>
-							<xs:pattern value="31.2[0-9]"/>
+							<xs:pattern value="31\.2[0-9]"/>
 						</xs:restriction>
 					</ids:value>
 				</ids:classification>
