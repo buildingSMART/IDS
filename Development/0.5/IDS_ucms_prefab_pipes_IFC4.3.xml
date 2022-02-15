@@ -13,7 +13,8 @@
                 <ids:entity>
                     <ids:name>
                         <xs:restriction>
-                            <xs:pattern value="IFCFLOWFITTING|IFCFLOWSEGMENT"/>
+                        <xs:annotation><xs:documentation>This applies to either 'IFCFLOWFITTING' ór 'IFCFLOWSEGMENT'</xs:documentation></xs:annotation>
+                            <xs:pattern value="IFCFLOWFITTING|IFCFLOWSEGMENT"/> 
                         </xs:restriction>
                     </ids:name>
                 </ids:entity>
@@ -98,7 +99,8 @@
                     </ids:name>
                     <ids:value>
                         <xs:restriction base="xs:String">
-                            <xs:pattern value="[0-9][0-9][0-9][0-9]\.[0-9][0-9]"/>
+                        <xs:annotation><xs:documentation>Allowed value should be 4 numbers, a dot, and two numbers again. For example '1111.11', '1232.23', etc. are valid. Invalid are '234.12', '2134.2', '23O2.34' (the O is an o not a 0).</xs:documentation></xs:annotation>
+                            <xs:pattern value="[0-9][0-9][0-9][0-9]\.[0-9][0-9]"/> 
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
