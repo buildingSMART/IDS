@@ -9,7 +9,7 @@
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
-                        <ids:simpleValue>IfcWindow</ids:simpleValue>
+                        <ids:simpleValue>IFCWINDOW</ids:simpleValue>
                     </ids:name>
                     <ids:predefinedType>
 						<ids:simpleValue>WINDOW</ids:simpleValue>
@@ -17,8 +17,11 @@
                 </ids:entity>
                 <ids:classification location="any">
 					<ids:value>
-						<xs:restriction>
-							<xs:pattern value="31.2[0-9]"/>
+						<xs:restriction base="xs:string">
+						<xs:annotation>
+						<xs:documentation>string should be two numbers, a dot, and again two numbers. The first part should be '31.2'. Example values that are correct are '31.21', '31.22', '31.23', '31.24', '31.25', '31.26', etc.</xs:documentation>
+						</xs:annotation>
+							<xs:pattern value="31\.2[0-9]"/> 
 						</xs:restriction>
 					</ids:value>
 				</ids:classification>

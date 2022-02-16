@@ -11,7 +11,7 @@
                 <ids:entity>
                     <ids:name>
                         <xs:restriction base="xs:string">
-                            <xs:pattern value="IfcCovering"/>
+                            <xs:pattern value="IFCCOVERING"/> <!-- only 'IFCCOVERING' is allowed -->
                             <xs:totalDigits value="11"/>
                         </xs:restriction>
                     </ids:name>
@@ -24,7 +24,9 @@
                 <ids:property measure="String" location="any">
                     <ids:propertySet>
                         <xs:restriction>
-                            <xs:pattern value="anas"/>
+                        <xs:annotation><xs:documentation>String should start with 'anas' but can have anything behind it (including nothing). For example 'anas example', 'anasabc', 'anas', 'anas demo', etc.</xs:documentation>
+                        </xs:annotation>
+                            <xs:pattern value="anas.*"/> 
                         </xs:restriction>
                     </ids:propertySet>
                     <ids:name>
@@ -37,7 +39,9 @@
                 <ids:material use="optional" location="any">
                     <ids:value>
                         <xs:restriction base="xs:string">
-                            <xs:pattern value="[A-Z][A-Z]"/>
+                        <xs:annotation><xs:documentation>The only acceptable value is TWO of the UPPERCASE letters from a to z. For example 'aa', 'ab', 'si', etc.</xs:documentation>
+                        </xs:annotation>
+                            <xs:pattern value="[A-Z][A-Z]"/>                  		
                         </xs:restriction>
                     </ids:value>
                 </ids:material>
@@ -47,13 +51,15 @@
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
-                        <ids:simpleValue>IfcWindow</ids:simpleValue>
+                        <ids:simpleValue>IFCWINDOW</ids:simpleValue>
                     </ids:name>
                 </ids:entity>
                 <ids:classification location="any">
                     <ids:value>
                         <xs:restriction base="xs:string">
-                            <xs:pattern value="[0-9].[0-9]"/>
+                        <xs:annotation><xs:documentation>The value should be a number; a dot; another number. For example '1.1', '2.4', etc.</xs:documentation>
+                        </xs:annotation>
+                            <xs:pattern value="[0-9]\.[0-9]"/>
                         </xs:restriction>
                     </ids:value>
                     <ids:system>

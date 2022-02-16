@@ -1,7 +1,7 @@
-# Information Delivery specification standard
-Machine readable standard to define Information Delivery Specifications.
-This work is done in collaboration with the CEN group 'Level of Information Needs' (LOIN).
+# Information Delivery Specification standard
+=============================================
 
+Computer interpretable XML based standard to define IFC based Information Delivery Specifications.
 The repo is collecting use-cases, developing and publishing the XSD including XML examples.
 
 ## Objectives

@@ -13,7 +13,8 @@
                 <ids:entity>
                     <ids:name>
                         <xs:restriction>
-                            <xs:pattern value="(IfcFlowFitting|IfcFlowSegment).*"/>
+                        <xs:annotation><xs:documentation>This applies to either 'IFCFLOWFITTING' ór 'IFCFLOWSEGMENT'</xs:documentation></xs:annotation>
+                            <xs:pattern value="IFCFLOWFITTING|IFCFLOWSEGMENT"/> 
                         </xs:restriction>
                     </ids:name>
                 </ids:entity>
@@ -41,7 +42,7 @@
                         <ids:simpleValue>medium</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction base="xs:String">
+                        <xs:restriction base="xs:string">
                             <xs:enumeration value="cold water"/>
                             <xs:enumeration value="something else"/>
                         </xs:restriction>
@@ -55,7 +56,7 @@
                         <ids:simpleValue>material</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction base="xs:String">
+                        <xs:restriction base="xs:string">
                             <xs:enumeration value="chrome steel 1.4401"/>
                             <xs:enumeration value="something else"/>
                         </xs:restriction>
@@ -69,7 +70,7 @@
                         <ids:simpleValue>pipe diameter</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction>
+                        <xs:restriction base="xs:decimal">
                             <xs:minInclusive value="0.02"/>
                             <xs:maxInclusive value="0.02"/>
                         </xs:restriction>
@@ -98,7 +99,8 @@
                     </ids:name>
                     <ids:value>
                         <xs:restriction base="xs:String">
-                            <xs:pattern value="[0-9][0-9][0-9][0-9].[0-9][0-9]"/>
+                        <xs:annotation><xs:documentation>Allowed value should be 4 numbers, a dot, and two numbers again. For example '1111.11', '1232.23', etc. are valid. Invalid are '234.12', '2134.2', '23O2.34' (the O is an o not a 0).</xs:documentation></xs:annotation>
+                            <xs:pattern value="[0-9][0-9][0-9][0-9]\.[0-9][0-9]"/> 
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
@@ -124,7 +126,7 @@
                         <ids:simpleValue>outside diameter_general</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction>
+                        <xs:restriction base="xs:decimal">
                             <xs:minInclusive value="0.02"/>
                             <xs:maxInclusive value="0.06"/>
                         </xs:restriction>

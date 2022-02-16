@@ -8,7 +8,7 @@
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
-                        <ids:simpleValue>IfcSpace</ids:simpleValue>
+                        <ids:simpleValue>IFCSPACE</ids:simpleValue>
                     </ids:name>
                 </ids:entity>
                 <ids:classification location="any">
@@ -20,7 +20,7 @@
             <ids:requirements>
                 <ids:attribute location="instance">
                     <ids:name>
-                        <ids:simpleValue>name</ids:simpleValue>
+                        <ids:simpleValue>Name</ids:simpleValue>
                     </ids:name>
                     <ids:value>
                         <xs:restriction>
@@ -39,7 +39,9 @@
                     </ids:name>
                     <ids:value>
                         <xs:restriction base="xs:string">
-                            <xs:pattern value="(A\s?)?(B\s?)?(C\s?)?"/> <!-- not sure we have a good way of describing 'room needs to have a unique room number'.  -->
+                        <xs:annotation><xs:documentation>not sure we have a good way of describing 'room needs to have a unique room number'.</xs:documentation>
+                        </xs:annotation>
+                            <xs:pattern value="(A\s?)?(B\s?)?(C\s?)?"/> 
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
@@ -50,7 +52,8 @@
                 <ids:entity>
                     <ids:name>
                         <xs:restriction>
-                            <xs:pattern value="IfcWall|IfcWallStandardCase"/>
+                        <xs:annotation><xs:documentation>This goed for either 'IFCWALL' ór 'IFCWALLSTANDARDCASE'</xs:documentation></xs:annotation>
+                            <xs:pattern value="IFCWALL|IFCWALLSTANDARDCASE"/>
                         </xs:restriction>
                     </ids:name>
                 </ids:entity>
@@ -59,23 +62,26 @@
                 <ids:property measure="String" location="type"> <!-- currently there is no real good way to say 'all walls need to have a type'. This solution is to state that all walls need to have a property on the 'type' level with any kind of value. Not nice, but currently no alternativel.  -->
                     <ids:propertySet>
                         <xs:restriction>
-                        <xs:pattern value="[*]"/>
+                        <xs:annotation><xs:documentation>Any value is allowed</xs:documentation></xs:annotation>
+                        <xs:pattern value=".*"/>
                         </xs:restriction>
                     </ids:propertySet>
                     <ids:name>
                         <xs:restriction>
-                        <xs:pattern value="[*]"/>
+                        <xs:annotation><xs:documentation>Any value is allowed</xs:documentation></xs:annotation>
+                        <xs:pattern value=".*"/> 
                         </xs:restriction>
                     </ids:name>
                 </ids:property>
             </ids:requirements>
         </ids:specification>
-        <ids:specification name="exterial wall requirement" ifcVersion="IFC2X3" description="if the model has exterior walls, each exterior wall must have a u-value" use="optional">
+        <ids:specification name="Exterial wall requirement" ifcVersion="IFC2X3" description="if the model has exterior walls, each exterior wall must have a u-value" use="optional">
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
                         <xs:restriction>
-                            <xs:pattern value="IfcWall|IfcWallStandardCase"/>
+                        <xs:annotation><xs:documentation>This goed for either 'IFCWALL' ór 'IFCWALLSTANDARDCASE'</xs:documentation></xs:annotation>
+                            <xs:pattern value="IFCWALL|IFCWALLSTANDARDCASE"/>
                         </xs:restriction>
                     </ids:name>
                 </ids:entity>

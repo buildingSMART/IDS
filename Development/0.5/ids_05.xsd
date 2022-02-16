@@ -1,6 +1,6 @@
 <!-- edited with XMLSpy v2022 (x64) (http://www.altova.com) by Leon van Berlo (Overleaf Investments B.V.) -->
-<!-- February 8, 2022 - DRAFT  -->
-<xs:schema xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://standards.buildingsmart.org/IDS" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.5.8">
+<!-- February 15, 2022 - DRAFT  -->
+<xs:schema xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://standards.buildingsmart.org/IDS" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.5.9">
 	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
 	<xs:import namespace="http://www.w3.org/2001/XMLSchema" schemaLocation="https://www.w3.org/2001/XMLSchema.xsd"/>
 	<xs:import namespace="http://www.w3.org/2001/XMLSchema-instance" schemaLocation="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -82,7 +82,7 @@
 									<xs:restriction base="xs:string">
 										<xs:enumeration value="String"/>
 										<xs:enumeration value="Number"/>
-										<xs:enumeration value="AreaDensity"/>
+										<xs:enumeration value="AmountOfSubstance"/>
 										<xs:enumeration value="AreaDensity"/>
 										<xs:enumeration value="Area"/>
 										<xs:enumeration value="DynamicViscosity"/>
@@ -300,7 +300,7 @@
 									<xs:restriction base="xs:string">
 										<xs:enumeration value="String"/>
 										<xs:enumeration value="Number"/>
-										<xs:enumeration value="AreaDensity"/>
+										<xs:enumeration value="AmountOfSubstance"/>
 										<xs:enumeration value="AreaDensity"/>
 										<xs:enumeration value="Area"/>
 										<xs:enumeration value="DynamicViscosity"/>
@@ -394,7 +394,7 @@
 			<xs:element name="applicability" type="ids:applicabilityType"/>
 			<xs:element name="requirements" type="ids:requirementsType"/>
 		</xs:sequence>
-		<xs:attribute name="name" type="xs:string" use="optional"/>
+		<xs:attribute name="name" type="xs:string" use="required"/>
 		<xs:attribute name="use" use="required">
 			<xs:simpleType>
 				<xs:restriction base="xs:string">

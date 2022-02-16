@@ -10,7 +10,7 @@
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
-                        <ids:simpleValue>IfcOpeningElement</ids:simpleValue>
+                        <ids:simpleValue>IFCOPENINGELEMENT</ids:simpleValue>
                     </ids:name>
                 </ids:entity>
             </ids:applicability>

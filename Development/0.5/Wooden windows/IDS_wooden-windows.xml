@@ -12,7 +12,7 @@
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
-                        <ids:simpleValue>IfcMember</ids:simpleValue>
+                        <ids:simpleValue>IFCMEMBER</ids:simpleValue>
                     </ids:name>
                 </ids:entity>
             </ids:applicability>
@@ -26,8 +26,10 @@
                         <ids:simpleValue>Kleurbinnenzijde</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction base="xs:String">
-                            <xs:pattern value="RAL.*"/>
+                        <xs:restriction base="xs:string">
+							<xs:annotation><xs:documentation>Value has to start with 'RAL'. Anything (even nothing) can be behind it. Valid examples are 'RAL7001', 'RAL blue', 'RAL', 'RALALALALA'.</xs:documentation>
+							</xs:annotation>
+                            <xs:pattern value="RAL.*"/> 
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
@@ -47,7 +49,7 @@
                         <ids:simpleValue>Onderdeel</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction base="xs:String">
+                        <xs:restriction base="xs:string">
                             <xs:enumeration value="Stijl"/>
                             <xs:enumeration value="Dorpel"/>
                         </xs:restriction>
@@ -56,7 +58,10 @@
                 <ids:classification location="instance">
 					<ids:value>
 						<xs:restriction>
-						<xs:pattern value="3[1-2].[0-9][0-9]"/>
+						<xs:annotation>
+						<xs:documentation>Value should be two numbers, a dot, and two numbers again. First number must be a 3, second number must be a one or a two. Valid examples are '31.00', '32.00', '31.23', '32.45'. Invalid examples are '33.32', '31.453', '32.3', '32.', etc.</xs:documentation>
+						</xs:annotation>
+						<xs:pattern value="3[1-2]\.[0-9][0-9]"/>
 						</xs:restriction>
 					</ids:value>
                 </ids:classification>
@@ -68,7 +73,7 @@
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
-                        <ids:simpleValue>IfcDoor</ids:simpleValue>
+                        <ids:simpleValue>IFCDOOR</ids:simpleValue>
                     </ids:name>
                 </ids:entity>
             </ids:applicability>
@@ -96,8 +101,10 @@
                         <ids:simpleValue>Kleurbinnenzijde</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction base="xs:String">
-                            <xs:pattern value="RAL.*"/>
+                        <xs:restriction base="xs:string">
+                        	<xs:annotation><xs:documentation>Value has to start with 'RAL'. Anything (even nothing) can be behind it. Valid examples are 'RAL7001', 'RAL blue', 'RAL', 'RALALALALA'.</xs:documentation>
+							</xs:annotation>
+                            <xs:pattern value="RAL.*"/> 
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
@@ -124,7 +131,7 @@
 			<ids:applicability>
 				<ids:entity>
 					<ids:name>
-						<ids:simpleValue>IfcWindow</ids:simpleValue> 
+						<ids:simpleValue>IFCWINDOW</ids:simpleValue> 
 						<!-- this will clash with the other window applicability. We know that. Keeping it here for the sake of the testing -->
 					</ids:name>
 				</ids:entity>
@@ -147,8 +154,10 @@
                         <ids:simpleValue>Kleurbinnenzijde</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction base="xs:String">
-                            <xs:pattern value="RAL.*"/>
+                        <xs:restriction base="xs:string">
+							<xs:annotation><xs:documentation>Value has to start with 'RAL'. Anything (even nothing) can be behind it. Valid examples are 'RAL7001', 'RAL blue', 'RAL', 'RALALALALA'.</xs:documentation>
+							</xs:annotation>
+                            <xs:pattern value="RAL.*"/> 
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
@@ -174,17 +183,19 @@
                 </ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification use="optional" ifcVersion="IFC2X3"> <!-- this one will 'clash' with the previous one. We need some kind of 'alle values except' pattern. For example the ^ used in most regex languages, but not in XSD patterns -->
+		<ids:specification name="Raam met glas" use="optional" ifcVersion="IFC2X3"> <!-- this one will 'clash' with the previous one. We need some kind of 'alle values except' pattern. For example the ^ used in most regex languages, but not in XSD patterns -->
 			<ids:applicability>
 			<ids:entity>
 				<ids:name>
-					<ids:simpleValue>IfcWindow</ids:simpleValue>
+					<ids:simpleValue>IFCWINDOW</ids:simpleValue>
 				</ids:name>
 			</ids:entity>
 			<ids:material location="instance">
 				<ids:value>
 					<xs:restriction>
-						<xs:pattern value=".*glass.*"/>
+						<xs:annotation><xs:documentation>The value should contain the word 'glas'. It doesnt't matter what is in front or behind 'glass'. Valid examples are 'xglass', 'x glass x', 'xglassccc', 'glas', 'glass', 'glas extra hard'.</xs:documentation>
+							</xs:annotation>
+						<xs:pattern value=".*glas.*"/>
 					</xs:restriction>
 				</ids:value>
 			</ids:material>
@@ -199,7 +210,7 @@
 						<ids:simpleValue>Onderdeel</ids:simpleValue>
 					</ids:name>
 					<ids:value>
-						<ids:simpleValue>Ruit</ids:simpleValue> <!-- this should probably be in the applicability, or in the 'everything except' applicability of hte other IfcWindow  -->
+						<ids:simpleValue>Ruit</ids:simpleValue> <!-- this should probably be in the applicability, or in the 'everything except' applicability of the other IfcWindow  -->
 					</ids:value>
 				</ids:property>
 			</ids:requirements>
@@ -208,7 +219,7 @@
 			<ids:applicability>
 				<ids:entity>
 					<ids:name>
-						<ids:simpleValue>IfcPlate</ids:simpleValue>
+						<ids:simpleValue>IFCPLATE</ids:simpleValue>
 					</ids:name>
 				</ids:entity>
 			</ids:applicability>
@@ -222,9 +233,11 @@
                         <ids:simpleValue>Kleurbinnenzijde</ids:simpleValue>
                     </ids:name>
                     <ids:value>
-                        <xs:restriction base="xs:String">
-                            <xs:pattern value="RAL.*"/>
-                        </xs:restriction>
+                        <xs:restriction base="xs:string">
+                        <xs:annotation><xs:documentation>value has to start with 'RAL'. Anything (even nothing) can be behind it. Valid examples are 'RAL7001', 'RAL blue', 'RAL', 'RALALALALA'.</xs:documentation>
+                        </xs:annotation>
+                            <xs:pattern value="RAL.*"/> 
+					   </xs:restriction>
                     </ids:value>
                 </ids:property>
                 <ids:property measure="String" location="instance">
@@ -255,7 +268,7 @@
 					</ids:name>
 				</ids:property>
 				<ids:property location="any"> 
-					<!-- in the example IFC file the PSet_PlateCommon is on Type level instead of instande. So this should turn up VALID -->
+					<!-- in the example IFC file the PSet_PlateCommon is on Type level instead of instance. So this should turn up VALID -->
 					<ids:propertySet>
 						<ids:simpleValue>Pset_PlateCommon</ids:simpleValue>
 					</ids:propertySet>
@@ -271,7 +284,7 @@
 						<ids:simpleValue>ThermalTransmittance</ids:simpleValue>
 					</ids:name>
 					<ids:value>
-						<xs:restriction xml:base="xs:double">
+						<xs:restriction base="xs:decimal">
 							<xs:minExclusive value="0.5" />
 							<xs:maxExclusive value="2.1" />
 						</xs:restriction>
@@ -285,7 +298,7 @@
 						<ids:simpleValue>FireRating</ids:simpleValue>
 					</ids:name>
 					<ids:value>
-						<ids:simpleValue>30</ids:simpleValue> <!-- 1800 in measure 'time' (seconds) is 30 minutes, is 0.5 hours -->
+						<ids:simpleValue>30</ids:simpleValue> 
 					</ids:value>
 				</ids:property>
 			</ids:requirements>
