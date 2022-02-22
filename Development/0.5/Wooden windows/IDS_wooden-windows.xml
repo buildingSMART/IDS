@@ -18,7 +18,7 @@
             </ids:applicability>
             <ids:requirements>
 				<ids:partOf entity="IfcElementAssembly"/>
-                <ids:property measure="String" location="instance">
+                <ids:property use="required" measure="String" location="instance">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -33,7 +33,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property measure="String" location="instance">
+                <ids:property use="required" measure="String" location="instance">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -41,7 +41,7 @@
                         <ids:simpleValue>Kleurbuitenzijde</ids:simpleValue>
                     </ids:name>
                 </ids:property>
-                <ids:property measure="String" location="instance">
+                <ids:property use="required" measure="String" location="instance">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -79,7 +79,7 @@
             </ids:applicability>
             <ids:requirements>
 				<ids:partOf entity="IfcElementAssembly"/>
-                <ids:property measure="String" location="any">
+                <ids:property use="required" measure="String" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -93,7 +93,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                    <ids:property measure="String" location="instance">
+                    <ids:property use="required" measure="String" location="instance">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -108,7 +108,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property measure="String" location="instance">
+                <ids:property use="required" measure="String" location="instance">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -116,7 +116,7 @@
                         <ids:simpleValue>Kleurbuitenzijde</ids:simpleValue>
                     </ids:name>
                 </ids:property>
-                <ids:property measure="String" location="instance">
+                <ids:property use="required" measure="String" location="instance">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -138,7 +138,7 @@
 			</ids:applicability>
 			<ids:requirements>
 				<ids:partOf entity="IfcElementAssembly"/>
-				<ids:property location="instance">
+				<ids:property use="required" location="instance">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
@@ -146,7 +146,7 @@
 						<ids:simpleValue>Draairichting</ids:simpleValue>
 					</ids:name>
 				</ids:property>
-				<ids:property measure="String" location="instance">
+				<ids:property use="required" measure="String" location="instance">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -161,7 +161,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property measure="String" location="instance">
+                <ids:property use="required" measure="String" location="instance">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -169,7 +169,7 @@
                         <ids:simpleValue>Kleurbuitenzijde</ids:simpleValue>
                     </ids:name>
                 </ids:property>
-                <ids:property measure="String" location="instance">
+                <ids:property use="required" measure="String" location="instance">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -202,7 +202,7 @@
 			</ids:applicability>
 			<ids:requirements>
 				<ids:partOf entity="IfcElementAssembly"/>
-				<ids:property location="instance">
+				<ids:property use="required" location="instance">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
@@ -225,7 +225,7 @@
 			</ids:applicability>
 			<ids:requirements>
 				<ids:partOf entity="IfcElementAssembly"/>
-					<ids:property measure="String" location="instance">
+					<ids:property  use="required"  measure="String" location="instance">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -240,7 +240,7 @@
 					   </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property measure="String" location="instance">
+                <ids:property  use="required" measure="String" location="instance">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -248,7 +248,7 @@
                         <ids:simpleValue>Kleurbuitenzijde</ids:simpleValue>
                     </ids:name>
                 </ids:property>
-                <ids:property measure="String" location="instance">
+                <ids:property use="required" measure="String" location="instance">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -256,7 +256,7 @@
                         <ids:simpleValue>Onderdeel</ids:simpleValue>
                     </ids:name>
                 </ids:property>
-                <ids:property uri="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-2x3/prop/acousticrating" location="instance"> 
+                <ids:property use="required" uri="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-2x3/prop/acousticrating" location="instance"> 
 						<!-- uri not live yet -->
 						<!-- there is no measure giving, which is invalid becasue there is a value restriction set for this property --> 
 						<!-- in the example IFC file the PSet_PlateCommon is on Type level instead of instande. So this should turn up INvalid -->
@@ -267,7 +267,7 @@
 						<ids:simpleValue>AcousticRating</ids:simpleValue>
 					</ids:name>
 				</ids:property>
-				<ids:property location="any"> 
+				<ids:property use="required" location="any"> 
 					<!-- in the example IFC file the PSet_PlateCommon is on Type level instead of instance. So this should turn up VALID -->
 					<ids:propertySet>
 						<ids:simpleValue>Pset_PlateCommon</ids:simpleValue>
@@ -276,7 +276,7 @@
 						<ids:simpleValue>Reference</ids:simpleValue>
 					</ids:name>
 				</ids:property>
-				<ids:property measure="Number" location="type"> 
+				<ids:property use="required" measure="Number" location="type"> 
 					<ids:propertySet>
 						<ids:simpleValue>Pset_PlateCommon</ids:simpleValue>
 					</ids:propertySet>
@@ -290,7 +290,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property location="type"> 
+				<ids:property use="required" location="type"> 
 					<ids:propertySet>
 						<ids:simpleValue>Pset_PlateCommon</ids:simpleValue>
 					</ids:propertySet>

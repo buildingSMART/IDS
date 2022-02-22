@@ -18,7 +18,7 @@
                 </ids:classification>
             </ids:applicability>
             <ids:requirements>
-                <ids:attribute location="instance">
+                <ids:attribute use="required" location="instance">
                     <ids:name>
                         <ids:simpleValue>Name</ids:simpleValue>
                     </ids:name>
@@ -30,7 +30,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:attribute>
-                <ids:property measure="String" location="instance">
+                <ids:property use="required" measure="String" location="instance">
                     <ids:propertySet>
                         <ids:simpleValue>MyProject</ids:simpleValue>
                     </ids:propertySet>
@@ -59,7 +59,7 @@
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
-                <ids:property measure="String" location="type"> <!-- currently there is no real good way to say 'all walls need to have a type'. This solution is to state that all walls need to have a property on the 'type' level with any kind of value. Not nice, but currently no alternativel.  -->
+                <ids:property use="required" measure="String" location="type"> <!-- currently there is no real good way to say 'all walls need to have a type'. This solution is to state that all walls need to have a property on the 'type' level with any kind of value. Not nice, but currently no alternativel.  -->
                     <ids:propertySet>
                         <xs:restriction>
                         <xs:annotation><xs:documentation>Any value is allowed</xs:documentation></xs:annotation>
@@ -98,7 +98,7 @@
                 </ids:property>
             </ids:applicability>
             <ids:requirements>
-                <ids:property location="any">
+                <ids:property use="required" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>Pset_WallCommon</ids:simpleValue>
                     </ids:propertySet>

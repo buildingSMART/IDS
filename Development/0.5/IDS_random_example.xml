@@ -21,7 +21,7 @@
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
-                <ids:property measure="String" location="any">
+                <ids:property use="required" measure="String" location="any">
                     <ids:propertySet>
                         <xs:restriction>
                         <xs:annotation><xs:documentation>String should start with 'anas' but can have anything behind it (including nothing). For example 'anas example', 'anasabc', 'anas', 'anas demo', etc.</xs:documentation>
@@ -36,7 +36,7 @@
                         <ids:simpleValue>yes</ids:simpleValue>
                     </ids:value>
                 </ids:property>
-                <ids:material use="optional" location="any">
+                <ids:material location="any">
                     <ids:value>
                         <xs:restriction base="xs:string">
                         <xs:annotation><xs:documentation>The only acceptable value is TWO of the UPPERCASE letters from a to z. For example 'aa', 'ab', 'si', etc.</xs:documentation>
@@ -68,7 +68,7 @@
                 </ids:classification>
             </ids:applicability>
             <ids:requirements>
-                <ids:property measure="Length" location="any">
+                <ids:property use="required" measure="Length" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>attribute</ids:simpleValue>
                     </ids:propertySet>
@@ -82,7 +82,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property measure="String" uri="http://identifier.buildingsmart.org/uri/dummy-example/FireRating" location="any">
+                <ids:property use="required" measure="String" uri="http://identifier.buildingsmart.org/uri/dummy-example/FireRating" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>AedesUVIP</ids:simpleValue>
                     </ids:propertySet>
