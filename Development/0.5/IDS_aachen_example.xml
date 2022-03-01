@@ -15,7 +15,7 @@
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
-                <ids:attribute location="instance">
+                <ids:attribute use="required" location="instance">
                     <ids:name>
                         <ids:simpleValue>name</ids:simpleValue>
                     </ids:name>
