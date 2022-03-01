@@ -1,6 +1,6 @@
 <!-- edited with XMLSpy v2022 (x64) (http://www.altova.com) by Leon van Berlo (Overleaf Investments B.V.) -->
-<!-- February 22, 2022 - DRAFT  -->
-<xs:schema xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://standards.buildingsmart.org/IDS" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.5.10">
+<!-- February 28, 2022 - DRAFT  -->
+<xs:schema xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://standards.buildingsmart.org/IDS" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.5.11">
 	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
 	<xs:import namespace="http://www.w3.org/2001/XMLSchema" schemaLocation="https://www.w3.org/2001/XMLSchema.xsd"/>
 	<xs:import namespace="http://www.w3.org/2001/XMLSchema-instance" schemaLocation="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -211,7 +211,7 @@
 				<xs:complexType>
 					<xs:complexContent>
 						<xs:extension base="ids:entityType">
-							<xs:attribute name="instructions">
+							<xs:attribute name="instructions" type="xs:string" use="optional">
 								<xs:annotation>
 									<xs:documentation>Author of the IDS can leave instructions for the authors of the IFC. This text could/should be displayed in the BIM/IFC authoring tool.</xs:documentation>
 								</xs:annotation>
@@ -238,7 +238,7 @@
 					<xs:complexContent>
 						<xs:extension base="ids:classificationType">
 							<xs:attribute name="uri" type="xs:anyURI" use="optional"/>
-							<xs:attribute name="instructions">
+							<xs:attribute name="instructions" type="xs:string" use="optional">
 								<xs:annotation>
 									<xs:documentation>Author of the IDS can leave instructions for the authors of the IFC. This text could/should be displayed in the BIM/IFC authoring tool.</xs:documentation>
 								</xs:annotation>
@@ -260,7 +260,7 @@
 									</xs:restriction>
 								</xs:simpleType>
 							</xs:attribute>
-							<xs:attribute name="instructions">
+							<xs:attribute name="instructions" type="xs:string" use="optional">
 								<xs:annotation>
 									<xs:documentation>Author of the IDS can leave instructions for the authors of the IFC. This text could/should be displayed in the BIM/IFC authoring tool.</xs:documentation>
 								</xs:annotation>
@@ -346,7 +346,7 @@
 									</xs:restriction>
 								</xs:simpleType>
 							</xs:attribute>
-							<xs:attribute name="instructions">
+							<xs:attribute name="instructions" type="xs:string" use="optional">
 								<xs:annotation>
 									<xs:documentation>Author of the IDS can leave instructions for the authors of the IFC. This text could/should be displayed in the BIM/IFC authoring tool.</xs:documentation>
 								</xs:annotation>
@@ -360,7 +360,7 @@
 					<xs:complexContent>
 						<xs:extension base="ids:materialType">
 							<xs:attribute name="uri" type="xs:anyURI" use="optional"/>
-							<xs:attribute name="instructions">
+							<xs:attribute name="instructions" type="xs:string" use="optional">
 								<xs:annotation>
 									<xs:documentation>Author of the IDS can leave instructions for the authors of the IFC. This text could/should be displayed in the BIM/IFC authoring tool.</xs:documentation>
 								</xs:annotation>
@@ -399,13 +399,13 @@
 				</xs:list>
 			</xs:simpleType>
 		</xs:attribute>
-		<xs:attribute name="identifier">
+		<xs:attribute name="identifier" type="xs:string">
 			<xs:annotation>
 				<xs:documentation>Author of the IDS can provide an identifier to the IDS. Beware: this cannot be enforced/assumed as (global) unique.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="description" type="xs:string" use="optional"/>
-		<xs:attribute name="instructions">
+		<xs:attribute name="instructions" type="xs:string" use="optional">
 			<xs:annotation>
 				<xs:documentation>Author of the IDS can leave instructions for the authors of the IFC. This text could/should be displayed in the BIM/IFC authoring tool.</xs:documentation>
 			</xs:annotation>
