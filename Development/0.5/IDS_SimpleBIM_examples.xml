@@ -4,7 +4,7 @@
         <ids:title>SimpleBIM use-case example</ids:title>
     </ids:info>
     <ids:specifications>
-        <ids:specification ifcVersion="IFC2X3 IFC4" name="Room requirement 1" description="the model must have rooms, every room must have a name from a list of allowed values, every room must have a (unique) room number" use="required">
+        <ids:specification ifcVersion="IFC2X3 IFC4" name="Room requirement 1" description="the model must have rooms, every room must have a name from a list of allowed values, every room must have a (unique) room number" minOccurs="1">
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
@@ -18,7 +18,7 @@
                 </ids:classification>
             </ids:applicability>
             <ids:requirements>
-                <ids:attribute use="required" location="instance">
+                <ids:attribute minOccurs="1" location="instance">
                     <ids:name>
                         <ids:simpleValue>Name</ids:simpleValue>
                     </ids:name>
@@ -30,7 +30,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:attribute>
-                <ids:property use="required" measure="String" location="instance">
+                <ids:property minOccurs="1" measure="String" location="instance">
                     <ids:propertySet>
                         <ids:simpleValue>MyProject</ids:simpleValue>
                     </ids:propertySet>
@@ -47,7 +47,7 @@
                 </ids:property>
             </ids:requirements>
         </ids:specification>
-        <ids:specification ifcVersion="IFC2X3" name="Wall requirement" description="if the model has walls, each wall must have a wall type" use="optional">
+        <ids:specification ifcVersion="IFC2X3" name="Wall requirement" description="if the model has walls, each wall must have a wall type" minOccurs="0">
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
@@ -59,7 +59,7 @@
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
-                <ids:property use="required" measure="String" location="type"> <!-- currently there is no real good way to say 'all walls need to have a type'. This solution is to state that all walls need to have a property on the 'type' level with any kind of value. Not nice, but currently no alternativel.  -->
+                <ids:property minOccurs="1" measure="String" location="type"> <!-- currently there is no real good way to say 'all walls need to have a type'. This solution is to state that all walls need to have a property on the 'type' level with any kind of value. Not nice, but currently no alternativel.  -->
                     <ids:propertySet>
                         <xs:restriction>
                         <xs:annotation><xs:documentation>Any value is allowed</xs:documentation></xs:annotation>
@@ -75,7 +75,7 @@
                 </ids:property>
             </ids:requirements>
         </ids:specification>
-        <ids:specification name="Exterial wall requirement" ifcVersion="IFC2X3" description="if the model has exterior walls, each exterior wall must have a u-value" use="optional">
+        <ids:specification name="Exterial wall requirement" ifcVersion="IFC2X3" description="if the model has exterior walls, each exterior wall must have a u-value" minOccurs="0">
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
@@ -98,7 +98,7 @@
                 </ids:property>
             </ids:applicability>
             <ids:requirements>
-                <ids:property use="required" location="any">
+                <ids:property minOccurs="1" location="any">
                     <ids:propertySet>
                         <ids:simpleValue>Pset_WallCommon</ids:simpleValue>
                     </ids:propertySet>

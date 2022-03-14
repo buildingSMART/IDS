@@ -6,7 +6,7 @@
         <ids:date>2022-02-08</ids:date>
     </ids:info>
     <ids:specifications>
-        <ids:specification instructions="Add some context here to help users understand what you are asking." ifcVersion="IFC2X3" name="Project requirements" use="required">
+        <ids:specification instructions="Add some context here to help users understand what you are asking." ifcVersion="IFC2X3" name="Project requirements" minOccurs="1">
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
@@ -15,29 +15,29 @@
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
-                <ids:attribute use="required" instructions="Project ID" location="instance">
+                <ids:attribute minOccurs="1" instructions="Project ID" location="instance">
                     <ids:name>
                         <ids:simpleValue>GlobalId</ids:simpleValue>
                     </ids:name>
                 </ids:attribute>
-                <ids:attribute use="required" instructions="Functional Unit (Overall Sq.Metres or Linear Meters etc)" location="instance">
+                <ids:attribute minOccurs="1" instructions="Functional Unit (Overall Sq.Metres or Linear Meters etc)" location="instance">
 					<ids:name>
 						<ids:simpleValue>UnitsInContext</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
-				<ids:attribute use="required" instructions="Project Description" location="instance">
+				<ids:attribute minOccurs="1" instructions="Project Description" location="instance">
 					<ids:name>
 						<ids:simpleValue>Description</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
-                <ids:attribute use="required" instructions="Project name" location="instance">
+                <ids:attribute minOccurs="1" instructions="Project name" location="instance">
                     <ids:name>
                         <ids:simpleValue>Name</ids:simpleValue>
                     </ids:name>
                 </ids:attribute>
             </ids:requirements>
         </ids:specification>
-        <ids:specification name="name1" use="required" ifcVersion="IFC2X3">
+        <ids:specification name="name1" minOccurs="1" ifcVersion="IFC2X3">
 			<ids:applicability>
 				<ids:entity>
 					<ids:name>
@@ -46,7 +46,7 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:property use="required" location="instance">
+				<ids:property minOccurs="1" location="instance">
 					<ids:propertySet>
 						<ids:simpleValue>ArcDox</ids:simpleValue>
 					</ids:propertySet>
@@ -54,7 +54,7 @@
 						<ids:simpleValue>Function</ids:simpleValue>
 					</ids:name>
 				</ids:property>
-				 <ids:property use="required" measure="String" location="instance">
+				 <ids:property minOccurs="1" measure="String" location="instance">
 					<ids:propertySet>
 						<ids:simpleValue>ArcDox</ids:simpleValue>
 					</ids:propertySet>
@@ -69,7 +69,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				 <ids:property use="required" measure="String" location="instance">
+				 <ids:property minOccurs="1" measure="String" location="instance">
 					<ids:propertySet>
 						<ids:simpleValue>ArcDox</ids:simpleValue>
 					</ids:propertySet>
@@ -84,7 +84,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property use="required" location="instance">
+				<ids:property minOccurs="1" location="instance">
 					<ids:propertySet>
 						<ids:simpleValue>ArcDox</ids:simpleValue>
 					</ids:propertySet>
@@ -94,7 +94,7 @@
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification name="name2" use="required" ifcVersion="IFC2X3">
+		<ids:specification name="name2" minOccurs="1" ifcVersion="IFC2X3">
 			<ids:applicability>
 				<ids:entity>
 					<ids:name>
@@ -103,14 +103,14 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:attribute use="required" instructions="Add this attribute twice: once for Area Units and once for Linear Units." location="instance"> <!-- this is actually not the best way to distinguish between types of units. -->
+				<ids:attribute minOccurs="1" instructions="Add this attribute twice: once for Area Units and once for Linear Units." location="instance"> <!-- this is actually not the best way to distinguish between types of units. -->
 					<ids:name>
 						<ids:simpleValue>Units</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification name="name3" use="required" ifcVersion="IFC2X3">
+		<ids:specification name="name3" minOccurs="1" ifcVersion="IFC2X3">
 			<ids:applicability>
 				<ids:entity>
 					<ids:name>
@@ -119,22 +119,22 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:attribute use="required" instructions="Address" location="instance">
+				<ids:attribute minOccurs="1" instructions="Address" location="instance">
 					<ids:name>
 						<ids:simpleValue>AddressLines</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
-				<ids:attribute use="required" instructions="Town" location="instance">
+				<ids:attribute minOccurs="1" instructions="Town" location="instance">
 					<ids:name>
 						<ids:simpleValue>Town</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
-				<ids:attribute use="required" instructions="Region" location="instance">
+				<ids:attribute minOccurs="1" instructions="Region" location="instance">
 					<ids:name>
 						<ids:simpleValue>Region</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
-				<ids:attribute use="required" instructions="Country" location="instance">
+				<ids:attribute minOccurs="1" instructions="Country" location="instance">
 					<ids:name>
 						<ids:simpleValue>Country</ids:simpleValue>
 					</ids:name>
@@ -142,14 +142,14 @@
 						<ids:simpleValue>Ireland</ids:simpleValue>
 					</ids:value>
 				</ids:attribute>
-				<ids:attribute use="required" instructions="Postal Code" location="instance">
+				<ids:attribute minOccurs="1" instructions="Postal Code" location="instance">
 					<ids:name>
 						<ids:simpleValue>PostalCode</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification name="name4" use="required" ifcVersion="IFC2X3">
+		<ids:specification name="name4" minOccurs="1" ifcVersion="IFC2X3">
 			<ids:applicability>
 				<ids:entity>
 					<ids:name>
@@ -158,12 +158,12 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:attribute use="required" instructions="Longitude" location="instance">
+				<ids:attribute minOccurs="1" instructions="Longitude" location="instance">
 					<ids:name>
 						<ids:simpleValue>RefLongitude</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
-				<ids:attribute use="required" instructions="Latitude" location="instance">
+				<ids:attribute minOccurs="1" instructions="Latitude" location="instance">
 					<ids:name>
 						<ids:simpleValue>RefLatitude</ids:simpleValue>
 					</ids:name>
