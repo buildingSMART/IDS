@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS  ids_05.xsd">
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS  ids_06.xsd">
     <ids:info>
         <ids:title>random example to show technical capabilities and usage</ids:title>
         <ids:copyright>buildingSMART International Ltd</ids:copyright>
@@ -21,7 +21,7 @@
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
-                <ids:property minOccurs="1" measure="String" location="any">
+                <ids:property minOccurs="1" measure="String">
                     <ids:propertySet>
                         <xs:restriction>
                         <xs:annotation><xs:documentation>String should start with 'anas' but can have anything behind it (including nothing). For example 'anas example', 'anasabc', 'anas', 'anas demo', etc.</xs:documentation>
@@ -36,7 +36,7 @@
                         <ids:simpleValue>yes</ids:simpleValue>
                     </ids:value>
                 </ids:property>
-                <ids:material location="any" minOccurs="1" maxOccurs="2">
+                <ids:material minOccurs="1" maxOccurs="2">
                     <ids:value>
                         <xs:restriction base="xs:string">
                         <xs:annotation><xs:documentation>The only acceptable value is TWO of the UPPERCASE letters from a to z. For example 'aa', 'ab', 'si', etc.</xs:documentation>
@@ -54,7 +54,7 @@
                         <ids:simpleValue>IFCWINDOW</ids:simpleValue>
                     </ids:name>
                 </ids:entity>
-                <ids:classification location="any">
+                <ids:classification>
                     <ids:value>
                         <xs:restriction base="xs:string">
                         <xs:annotation><xs:documentation>The value should be a number; a dot; another number. For example '1.1', '2.4', etc.</xs:documentation>
@@ -68,7 +68,7 @@
                 </ids:classification>
             </ids:applicability>
             <ids:requirements>
-                <ids:property minOccurs="1" measure="Length" location="any">
+                <ids:property minOccurs="1" measure="Length">
                     <ids:propertySet>
                         <ids:simpleValue>attribute</ids:simpleValue>
                     </ids:propertySet>
@@ -82,7 +82,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property minOccurs="1" measure="String" uri="http://identifier.buildingsmart.org/uri/dummy-example/FireRating" location="any">
+                <ids:property minOccurs="1" measure="String" uri="http://identifier.buildingsmart.org/uri/dummy-example/FireRating">
                     <ids:propertySet>
                         <ids:simpleValue>AedesUVIP</ids:simpleValue>
                     </ids:propertySet>

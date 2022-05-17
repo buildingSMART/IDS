@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS  ids_05.xsd">
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS  ids_06.xsd">
     <ids:info>
         <ids:title>SimpleBIM use-case example</ids:title>
     </ids:info>
@@ -11,14 +11,14 @@
                         <ids:simpleValue>IFCSPACE</ids:simpleValue>
                     </ids:name>
                 </ids:entity>
-                <ids:classification location="any">
+                <ids:classification>
                     <ids:value>
                         <ids:simpleValue>room</ids:simpleValue><!-- this could of course also be a list of things, a pattern, etc..  -->
                     </ids:value>
                 </ids:classification>
             </ids:applicability>
             <ids:requirements>
-                <ids:attribute minOccurs="1" location="instance">
+                <ids:attribute minOccurs="1">
                     <ids:name>
                         <ids:simpleValue>Name</ids:simpleValue>
                     </ids:name>
@@ -30,7 +30,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:attribute>
-                <ids:property minOccurs="1" measure="String" location="instance">
+                <ids:property minOccurs="1" measure="String">
                     <ids:propertySet>
                         <ids:simpleValue>MyProject</ids:simpleValue>
                     </ids:propertySet>
@@ -59,7 +59,7 @@
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
-                <ids:property minOccurs="1" measure="String" location="type"> <!-- currently there is no real good way to say 'all walls need to have a type'. This solution is to state that all walls need to have a property on the 'type' level with any kind of value. Not nice, but currently no alternativel.  -->
+                <ids:property minOccurs="1" measure="String"> <!-- currently there is no real good way to say 'all walls need to have a type'. This solution is to state that all walls need to have a property on the 'type' level with any kind of value. Not nice, but currently no alternativel.  -->
                     <ids:propertySet>
                         <xs:restriction>
                         <xs:annotation><xs:documentation>Any value is allowed</xs:documentation></xs:annotation>
@@ -85,7 +85,7 @@
                         </xs:restriction>
                     </ids:name>
                 </ids:entity>
-                <ids:property measure="String" location="any">
+                <ids:property measure="String">
                     <ids:propertySet>
                         <ids:simpleValue>Pset_WallCommon</ids:simpleValue>
                     </ids:propertySet>
@@ -98,7 +98,7 @@
                 </ids:property>
             </ids:applicability>
             <ids:requirements>
-                <ids:property minOccurs="1" location="any">
+                <ids:property minOccurs="1">
                     <ids:propertySet>
                         <ids:simpleValue>Pset_WallCommon</ids:simpleValue>
                     </ids:propertySet>

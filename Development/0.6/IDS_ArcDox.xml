@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS  ids_05.xsd">   
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS  ids_06.xsd">   
     <ids:info>
         <ids:title>Example for ArcDox </ids:title>
         <ids:copyright>buildingSMART International Ltd</ids:copyright>
@@ -15,22 +15,22 @@
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
-                <ids:attribute minOccurs="1" instructions="Project ID" location="instance">
+                <ids:attribute minOccurs="1" instructions="Project ID">
                     <ids:name>
                         <ids:simpleValue>GlobalId</ids:simpleValue>
                     </ids:name>
                 </ids:attribute>
-                <ids:attribute minOccurs="1" instructions="Functional Unit (Overall Sq.Metres or Linear Meters etc)" location="instance">
+                <ids:attribute minOccurs="1" instructions="Functional Unit (Overall Sq.Metres or Linear Meters etc)">
 					<ids:name>
 						<ids:simpleValue>UnitsInContext</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
-				<ids:attribute minOccurs="1" instructions="Project Description" location="instance">
+				<ids:attribute minOccurs="1" instructions="Project Description">
 					<ids:name>
 						<ids:simpleValue>Description</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
-                <ids:attribute minOccurs="1" instructions="Project name" location="instance">
+                <ids:attribute minOccurs="1" instructions="Project name">
                     <ids:name>
                         <ids:simpleValue>Name</ids:simpleValue>
                     </ids:name>
@@ -46,7 +46,7 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:property minOccurs="1" location="instance">
+				<ids:property minOccurs="1">
 					<ids:propertySet>
 						<ids:simpleValue>ArcDox</ids:simpleValue>
 					</ids:propertySet>
@@ -54,7 +54,7 @@
 						<ids:simpleValue>Function</ids:simpleValue>
 					</ids:name>
 				</ids:property>
-				 <ids:property minOccurs="1" measure="String" location="instance">
+				 <ids:property minOccurs="1" measure="String">
 					<ids:propertySet>
 						<ids:simpleValue>ArcDox</ids:simpleValue>
 					</ids:propertySet>
@@ -69,7 +69,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				 <ids:property minOccurs="1" measure="String" location="instance">
+				 <ids:property minOccurs="1" measure="String">
 					<ids:propertySet>
 						<ids:simpleValue>ArcDox</ids:simpleValue>
 					</ids:propertySet>
@@ -84,7 +84,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" location="instance">
+				<ids:property minOccurs="1">
 					<ids:propertySet>
 						<ids:simpleValue>ArcDox</ids:simpleValue>
 					</ids:propertySet>
@@ -103,7 +103,7 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:attribute minOccurs="1" instructions="Add this attribute twice: once for Area Units and once for Linear Units." location="instance"> <!-- this is actually not the best way to distinguish between types of units. -->
+				<ids:attribute minOccurs="1" instructions="Add this attribute twice: once for Area Units and once for Linear Units."> <!-- this is actually not the best way to distinguish between types of units. -->
 					<ids:name>
 						<ids:simpleValue>Units</ids:simpleValue>
 					</ids:name>
@@ -119,22 +119,22 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:attribute minOccurs="1" instructions="Address" location="instance">
+				<ids:attribute minOccurs="1" instructions="Address">
 					<ids:name>
 						<ids:simpleValue>AddressLines</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
-				<ids:attribute minOccurs="1" instructions="Town" location="instance">
+				<ids:attribute minOccurs="1" instructions="Town">
 					<ids:name>
 						<ids:simpleValue>Town</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
-				<ids:attribute minOccurs="1" instructions="Region" location="instance">
+				<ids:attribute minOccurs="1" instructions="Region">
 					<ids:name>
 						<ids:simpleValue>Region</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
-				<ids:attribute minOccurs="1" instructions="Country" location="instance">
+				<ids:attribute minOccurs="1" instructions="Country">
 					<ids:name>
 						<ids:simpleValue>Country</ids:simpleValue>
 					</ids:name>
@@ -142,7 +142,7 @@
 						<ids:simpleValue>Ireland</ids:simpleValue>
 					</ids:value>
 				</ids:attribute>
-				<ids:attribute minOccurs="1" instructions="Postal Code" location="instance">
+				<ids:attribute minOccurs="1" instructions="Postal Code">
 					<ids:name>
 						<ids:simpleValue>PostalCode</ids:simpleValue>
 					</ids:name>
@@ -158,12 +158,12 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:attribute minOccurs="1" instructions="Longitude" location="instance">
+				<ids:attribute minOccurs="1" instructions="Longitude">
 					<ids:name>
 						<ids:simpleValue>RefLongitude</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
-				<ids:attribute minOccurs="1" instructions="Latitude" location="instance">
+				<ids:attribute minOccurs="1" instructions="Latitude">
 					<ids:name>
 						<ids:simpleValue>RefLatitude</ids:simpleValue>
 					</ids:name>

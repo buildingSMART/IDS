@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS  ids_05.xsd">   
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS  ids_06.xsd">   
     <ids:info>
         <ids:title>Example on use of attributes (for student research)</ids:title>
         <ids:copyright>buildingSMART International Ltd</ids:copyright>
@@ -15,7 +15,7 @@
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
-                <ids:attribute minOccurs="1" location="instance">
+                <ids:attribute minOccurs="1">
                     <ids:name>
                         <ids:simpleValue>name</ids:simpleValue>
                     </ids:name>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS  ids_05.xsd">
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS  ids_06.xsd">
     <ids:info>
         <ids:title>Wooden Windows</ids:title>
         <ids:copyright>NBvT</ids:copyright>
@@ -18,7 +18,7 @@
             </ids:applicability>
             <ids:requirements>
 				<ids:partOf entity="IfcElementAssembly"/>
-                <ids:property minOccurs="1" measure="String" location="instance">
+                <ids:property minOccurs="1" measure="String">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -33,7 +33,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property minOccurs="1" measure="String" location="instance">
+                <ids:property minOccurs="1" measure="String">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -41,7 +41,7 @@
                         <ids:simpleValue>Kleurbuitenzijde</ids:simpleValue>
                     </ids:name>
                 </ids:property>
-                <ids:property minOccurs="1" measure="String" location="instance">
+                <ids:property minOccurs="1" measure="String">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -55,7 +55,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:classification minOccurs="1" maxOccurs="1" location="instance">
+                <ids:classification minOccurs="1" maxOccurs="1">
 					<ids:value>
 						<xs:restriction>
 						<xs:annotation>
@@ -65,7 +65,7 @@
 						</xs:restriction>
 					</ids:value>
                 </ids:classification>
-                <ids:material minOccurs="1" maxOccurs="1" location="instance">
+                <ids:material minOccurs="1" maxOccurs="1">
                 </ids:material>
             </ids:requirements>
         </ids:specification>
@@ -79,7 +79,7 @@
             </ids:applicability>
             <ids:requirements>
 				<ids:partOf entity="IfcElementAssembly"/>
-                <ids:property minOccurs="1" measure="String" location="any">
+                <ids:property minOccurs="1" measure="String">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -93,7 +93,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                    <ids:property minOccurs="1" measure="String" location="instance">
+                    <ids:property minOccurs="1" measure="String">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -108,7 +108,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property minOccurs="1" measure="String" location="instance">
+                <ids:property minOccurs="1" measure="String">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -116,7 +116,7 @@
                         <ids:simpleValue>Kleurbuitenzijde</ids:simpleValue>
                     </ids:name>
                 </ids:property>
-                <ids:property minOccurs="1" measure="String" location="instance">
+                <ids:property minOccurs="1" measure="String">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -124,7 +124,7 @@
                         <ids:simpleValue>Onderdeel</ids:simpleValue>
                     </ids:name>
                 </ids:property>
-                <ids:material minOccurs="1" maxOccurs="1" location="instance"/>
+                <ids:material minOccurs="1" maxOccurs="1"/>
             </ids:requirements>
         </ids:specification>
         <ids:specification minOccurs="0" name="Raam" ifcVersion="IFC2X3">
@@ -138,7 +138,7 @@
 			</ids:applicability>
 			<ids:requirements>
 				<ids:partOf entity="IfcElementAssembly"/>
-				<ids:property minOccurs="1" location="instance">
+				<ids:property minOccurs="1">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
@@ -146,7 +146,7 @@
 						<ids:simpleValue>Draairichting</ids:simpleValue>
 					</ids:name>
 				</ids:property>
-				<ids:property minOccurs="1" measure="String" location="instance">
+				<ids:property minOccurs="1" measure="String">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -161,7 +161,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property minOccurs="1" measure="String" location="instance">
+                <ids:property minOccurs="1" measure="String">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -169,7 +169,7 @@
                         <ids:simpleValue>Kleurbuitenzijde</ids:simpleValue>
                     </ids:name>
                 </ids:property>
-                <ids:property minOccurs="1" measure="String" location="instance">
+                <ids:property minOccurs="1" measure="String">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -190,7 +190,7 @@
 					<ids:simpleValue>IFCWINDOW</ids:simpleValue>
 				</ids:name>
 			</ids:entity>
-			<ids:material location="instance">
+			<ids:material>
 				<ids:value>
 					<xs:restriction>
 						<xs:annotation><xs:documentation>The value should contain the word 'glas'. It doesnt't matter what is in front or behind 'glass'. Valid examples are 'xglass', 'x glass x', 'xglassccc', 'glas', 'glass', 'glas extra hard'.</xs:documentation>
@@ -202,7 +202,7 @@
 			</ids:applicability>
 			<ids:requirements>
 				<ids:partOf entity="IfcElementAssembly"/>
-				<ids:property minOccurs="1" location="instance">
+				<ids:property minOccurs="1">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
@@ -225,7 +225,7 @@
 			</ids:applicability>
 			<ids:requirements>
 				<ids:partOf entity="IfcElementAssembly"/>
-					<ids:property  minOccurs="1"  measure="String" location="instance">
+					<ids:property  minOccurs="1"  measure="String">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -240,7 +240,7 @@
 					   </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property  minOccurs="1" measure="String" location="instance">
+                <ids:property  minOccurs="1" measure="String">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -248,7 +248,7 @@
                         <ids:simpleValue>Kleurbuitenzijde</ids:simpleValue>
                     </ids:name>
                 </ids:property>
-                <ids:property minOccurs="1" measure="String" location="instance">
+                <ids:property minOccurs="1" measure="String">
                     <ids:propertySet>
                         <ids:simpleValue>CPset_31</ids:simpleValue>
                     </ids:propertySet>
@@ -256,7 +256,7 @@
                         <ids:simpleValue>Onderdeel</ids:simpleValue>
                     </ids:name>
                 </ids:property>
-                <ids:property minOccurs="1" uri="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-2x3/prop/acousticrating" location="instance"> 
+                <ids:property minOccurs="1" uri="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-2x3/prop/acousticrating"> 
 						<!-- uri not live yet -->
 						<!-- there is no measure giving, which is invalid becasue there is a value restriction set for this property --> 
 						<!-- in the example IFC file the PSet_PlateCommon is on Type level instead of instande. So this should turn up INvalid -->
@@ -267,7 +267,7 @@
 						<ids:simpleValue>AcousticRating</ids:simpleValue>
 					</ids:name>
 				</ids:property>
-				<ids:property minOccurs="1" location="any"> 
+				<ids:property minOccurs="1"> 
 					<!-- in the example IFC file the PSet_PlateCommon is on Type level instead of instance. So this should turn up VALID -->
 					<ids:propertySet>
 						<ids:simpleValue>Pset_PlateCommon</ids:simpleValue>
@@ -276,7 +276,7 @@
 						<ids:simpleValue>Reference</ids:simpleValue>
 					</ids:name>
 				</ids:property>
-				<ids:property minOccurs="1" measure="Number" location="type"> 
+				<ids:property minOccurs="1" measure="Number"> 
 					<ids:propertySet>
 						<ids:simpleValue>Pset_PlateCommon</ids:simpleValue>
 					</ids:propertySet>
@@ -290,7 +290,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" location="type"> 
+				<ids:property minOccurs="1"> 
 					<ids:propertySet>
 						<ids:simpleValue>Pset_PlateCommon</ids:simpleValue>
 					</ids:propertySet>
