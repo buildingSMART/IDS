@@ -4,3 +4,4 @@ build/obj/
 .vscode/
 .tmp/
 /build/.vs/
+/.nuke/temp/
