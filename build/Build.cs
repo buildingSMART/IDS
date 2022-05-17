@@ -23,11 +23,11 @@ class Build : NukeBuild
         {
             var schemaFile = Path.Combine(
                 RootDirectory,
-                "Development/0.5/ids_05.xsd"
+                "Development/0.6/ids_06.xsd"
                 );
             var inputFolder = Path.Combine(
                 RootDirectory,
-                "Development/0.5"
+                "Development/0.6"
                 );
             var arguments = $"check \"{inputFolder}\" -x \"{schemaFile}\"";
             BcfTool(arguments, workingDirectory: BcfToolPath);
