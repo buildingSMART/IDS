@@ -1,2 +1,7 @@
-
 2021 Detailed Project Plan/2021 IDS detailed project plan.docx
+build/bin/
+build/obj/
+.vscode/
+.tmp/
+/build/.vs/
+/.nuke/temp/
