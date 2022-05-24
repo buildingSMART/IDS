@@ -1,6 +1,6 @@
-<!-- edited with XMLSpy v2022 (x64) (http://www.altova.com) by Leon van Berlo (buildingSMART International) -->
-<!-- May 12, 2022 - DRAFT  -->
-<xs:schema xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://standards.buildingsmart.org/IDS" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.6">
+<!-- edited with XMLSpy v2022 (x64) (http://www.altova.com) by Leon van Berlo (Overleaf Investments B.V.) -->
+<!-- May 24, 2022 - DRAFT  -->
+<xs:schema xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://standards.buildingsmart.org/IDS" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.6.1">
 	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
 	<xs:import namespace="http://www.w3.org/2001/XMLSchema" schemaLocation="https://www.w3.org/2001/XMLSchema.xsd"/>
 	<xs:import namespace="http://www.w3.org/2001/XMLSchema-instance" schemaLocation="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -193,16 +193,7 @@
 					<xs:complexContent>
 						<xs:extension base="ids:classificationType">
 							<xs:attribute name="uri" type="xs:anyURI" use="optional"/>
-							<xs:attribute name="minOccurs" use="required">
-								<xs:simpleType>
-									<xs:restriction base="xs:int"/>
-								</xs:simpleType>
-							</xs:attribute>
-							<xs:attribute name="maxOccurs" use="optional">
-								<xs:simpleType>
-									<xs:restriction base="xs:int"/>
-								</xs:simpleType>
-							</xs:attribute>
+							<xs:attributeGroup ref="xs:occurs"/>
 							<xs:attribute name="instructions" type="xs:string" use="optional">
 								<xs:annotation>
 									<xs:documentation>Author of the IDS can leave instructions for the authors of the IFC. This text could/should be displayed in the BIM/IFC authoring tool.</xs:documentation>
@@ -216,16 +207,7 @@
 				<xs:complexType>
 					<xs:complexContent>
 						<xs:extension base="ids:attributeType">
-							<xs:attribute name="minOccurs" use="required">
-								<xs:simpleType>
-									<xs:restriction base="xs:int"/>
-								</xs:simpleType>
-							</xs:attribute>
-							<xs:attribute name="maxOccurs" use="optional">
-								<xs:simpleType>
-									<xs:restriction base="xs:int"/>
-								</xs:simpleType>
-							</xs:attribute>
+							<xs:attributeGroup ref="xs:occurs"/>
 							<xs:attribute name="instructions" type="xs:string" use="optional">
 								<xs:annotation>
 									<xs:documentation>Author of the IDS can leave instructions for the authors of the IFC. This text could/should be displayed in the BIM/IFC authoring tool.</xs:documentation>
@@ -240,16 +222,7 @@
 					<xs:complexContent>
 						<xs:extension base="ids:propertyType">
 							<xs:attribute name="uri" type="xs:anyURI" use="optional"/>
-							<xs:attribute name="minOccurs" use="required">
-								<xs:simpleType>
-									<xs:restriction base="xs:int"/>
-								</xs:simpleType>
-							</xs:attribute>
-							<xs:attribute name="maxOccurs" use="optional">
-								<xs:simpleType>
-									<xs:restriction base="xs:int"/>
-								</xs:simpleType>
-							</xs:attribute>
+							<xs:attributeGroup ref="xs:occurs"/>
 							<xs:attribute name="instructions" type="xs:string" use="optional">
 								<xs:annotation>
 									<xs:documentation>Author of the IDS can leave instructions for the authors of the IFC. This text could/should be displayed in the BIM/IFC authoring tool.</xs:documentation>
@@ -264,16 +237,7 @@
 					<xs:complexContent>
 						<xs:extension base="ids:materialType">
 							<xs:attribute name="uri" type="xs:anyURI" use="optional"/>
-							<xs:attribute name="minOccurs" use="required">
-								<xs:simpleType>
-									<xs:restriction base="xs:int"/>
-								</xs:simpleType>
-							</xs:attribute>
-							<xs:attribute name="maxOccurs" use="optional">
-								<xs:simpleType>
-									<xs:restriction base="xs:int"/>
-								</xs:simpleType>
-							</xs:attribute>
+							<xs:attributeGroup ref="xs:occurs"/>
 							<xs:attribute name="instructions" type="xs:string" use="optional">
 								<xs:annotation>
 									<xs:documentation>Author of the IDS can leave instructions for the authors of the IFC. This text could/should be displayed in the BIM/IFC authoring tool.</xs:documentation>
@@ -291,16 +255,7 @@
 			<xs:element name="requirements" type="ids:requirementsType"/>
 		</xs:sequence>
 		<xs:attribute name="name" type="xs:string" use="required"/>
-		<xs:attribute name="minOccurs" use="required">
-			<xs:simpleType>
-				<xs:restriction base="xs:int"/>
-			</xs:simpleType>
-		</xs:attribute>
-		<xs:attribute name="maxOccurs" use="optional">
-			<xs:simpleType>
-				<xs:restriction base="xs:int"/>
-			</xs:simpleType>
-		</xs:attribute>
+		<xs:attributeGroup ref="xs:occurs"/>
 		<xs:attribute name="ifcVersion" use="required">
 			<xs:simpleType>
 				<xs:list>
