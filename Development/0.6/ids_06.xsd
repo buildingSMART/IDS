@@ -174,15 +174,22 @@
 					<xs:attribute name="entity" use="required">
 						<xs:simpleType>
 							<xs:restriction base="xs:string">
-								<xs:enumeration value="IfcElementAssembly"/>
-								<xs:enumeration value="IfcGroup"/>
-								<xs:enumeration value="IfcSystem"/>
+								<xs:enumeration value="IfcAsset"/>
 								<xs:enumeration value="IfcBuildingSystem"/>
 								<xs:enumeration value="IfcBuiltSystem"/>
+								<xs:enumeration value="IfcCondition"/>
+								<xs:enumeration value="IfcDistributionCircuit"/>
 								<xs:enumeration value="IfcDistributionSystem"/>
-								<xs:enumeration value="IfcZone"/>
-								<xs:enumeration value="IfcAsset"/>
+								<xs:enumeration value="IfcElectricalCircuit"/>
+								<xs:enumeration value="IfcElementAssembly"/>
+								<xs:enumeration value="IfcGroup"/>
 								<xs:enumeration value="IfcInventory"/>
+								<xs:enumeration value="IfcStructuralAnalysisModel"/>
+								<xs:enumeration value="IfcStructuralLoadCase"/>
+								<xs:enumeration value="IfcStructuralLoadGroup"/>
+								<xs:enumeration value="IfcStructuralResultGroup"/>
+								<xs:enumeration value="IfcSystem"/>
+								<xs:enumeration value="IfcZone"/>
 							</xs:restriction>
 						</xs:simpleType>
 					</xs:attribute>
