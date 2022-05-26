@@ -1,10 +1,20 @@
-# Valid PartOf Containers
+# PartOf facet
 
-The use of PartOf in different schema versions shoud be compatible with the relevant classes as follows.
+The `PartOf` facet is designed to check that an element is defined to be part of a predefined set of aggregators.
 
-## Groups inheritance tree
+The `PartOf.Entity` property identifies the type of the aggregator. 
 
-The following classes are used to defined grouping via `IfcRelAssignsToGroup`.
+The predefined aggregation types are:
+
+- `IfcGroup` and its descendant classes, and
+- `IfcElementAssembly`
+
+## IfcGroup
+
+When `PartOf.Entity`  is any of the descendant classes of 'IfcGroup', the facet is satisfied when an entity belongs 
+to the a group via one or more instances of `IfcRelAssignsToGroup`.
+
+The value of `PartOf.Entity` should depend on the schema version, as follows: 
 
 | IFC2x3                        | IFC4                            | IFC4x3                           |
 | ----------------------------- | ------------------------------- | -------------------------------- |
@@ -24,14 +34,16 @@ The following classes are used to defined grouping via `IfcRelAssignsToGroup`.
 | ~~ IfcStructuralAnalysisModel | ~~ IfcStructuralAnalysisModel   | ~~ IfcStructuralAnalysisModel    |
 | ~ IfcZone                     | ~~ IfcZone                      | ~~ IfcZone                       |
 
-## Other forms 
+## IfcElementAssembly
 
-It is also possible to define elements belonging to an `IfcElementAssembly` via `IfcRelAggregates`.
+When `PartOf.Entity` is `IfcElementAssembly`, the facet is satisfied when an entity belongs 
+to at least one IfcElementAssembly via instances of `IfcRelAggregates`.
 
 ## Enumeration
 
-The entire alphabetical list of valid strings is:
+The entire alphabetical list of valid strings for `PartOf.Entity` is:
 
+```
 IfcAsset
 IfcBuildingSystem
 IfcBuiltSystem
@@ -48,3 +60,4 @@ IfcStructuralLoadGroup
 IfcStructuralResultGroup
 IfcSystem
 IfcZone
+```
