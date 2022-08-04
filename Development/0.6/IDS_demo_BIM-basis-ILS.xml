@@ -2,16 +2,13 @@
 <ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS  ids_06.xsd">
     <ids:info>
         <ids:title>Demo - BIM basis ILS</ids:title>
-        <ids:version>2.0</ids:version>
         <ids:copyright>BIM loket</ids:copyright>
+        <ids:version>2.0</ids:version>
         <ids:description>Samenwerken gaat beter als de informatie waarop we bouwen uitwisselbaar, gestructureerd, eenduidig, correct, volledig en herbruikbaar is. De BIM basis informatieleveringsspecificatie (BIM basis ILS) is een goede eerste stap.</ids:description>
     </ids:info>
     <ids:specifications>
-        <ids:specification ifcVersion="IFC2X3" name="lokale positie" description="Coördineer onderling de lokale positie van het aspectmodel. Deze ligt vlakbij het nulpunt.">
+        <ids:specification ifcVersion="IFC2X3" name="lokale positie" description="Coördineer onderling de lokale positie van het aspectmodel. Deze ligt vlakbij het nulpunt. Er moet exact 1 nulpunt referentieobject in het model aanwezig zijn. Een nulpunt referentieobject is van het IFC type IfcBuildingElementProxy en heeft 'nulpunt' in de naam (in hoofdletters of kleine letters)" minOccurs="1" maxOccurs="1">
             <ids:applicability>
-                <xs:annotation>
-                    <xs:documentation>Een nulpunt referentieobject is van het IFC type IfcBuildingElementProxy en heeft "nulpunt" in de naam (in hoofdletters of kleine letters)</xs:documentation>
-                </xs:annotation>
                 <ids:entity>
                     <ids:name>
                         <ids:simpleValue>IfcBuildingElementProxy</ids:simpleValue>
@@ -29,10 +26,11 @@
                 </ids:attribute>
             </ids:applicability>
             <ids:requirements>
-                <xs:annotation>
-                    <xs:documentation>Er moet exact 1 nulpunt referentieobject in het model aanwezig zijn.</xs:documentation>
-                </xs:annotation>
-                <ids:entity minOccurs="1" maxOccurs="1" />
+                <ids:entity>
+                    <ids:name>
+                        <ids:simpleValue>IfcBuildingElementProxy</ids:simpleValue>
+                    </ids:name>
+                </ids:entity>
             </ids:requirements>
         </ids:specification>
         <ids:specification ifcVersion="IFC2X3" name="Bouwlaagindeling en -naamgeving" description="Elk aspectmodel hanteert een consistente naamgeving. Ken alle objecten aan de juiste bouwlaag toe. Benoem alleen bouwlagen als IfcBuildingStorey.">
@@ -255,6 +253,8 @@
                     <ids:system>
                         <ids:simpleValue>NL-SfB tabel 1</ids:simpleValue>
                     </ids:system>
+                </ids:classification>
+                <ids:classification>
                     <ids:value>
                         <xs:restriction>
                             <xs:enumeration value="11.10" />
