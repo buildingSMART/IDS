@@ -1,4 +1,6 @@
 Numerical values of physical quantities are represented using SI units. The following table lists the physical quantities and their units. 
+A full list of IFC Defined types can be found in the IFC documentation. For example for IFC 4ADD2TC1 it is here: https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/link/alphabeticalorder-defined-types.htm
+
 
 | Ifc Defined Type name                | Physical Quantity description | Unit         | Unit Symbol | Dimensional exponents   | QUDT                                  |
 | ------------------------------------ | ----------------------------- | ------------ | ----------- | ----------------------- | ------------------------------------- |
