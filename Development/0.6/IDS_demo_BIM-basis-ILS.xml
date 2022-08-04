@@ -2,7 +2,6 @@
 <ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS  ids_06.xsd">
     <ids:info>
         <ids:title>Demo - BIM basis ILS</ids:title>
-        <ids:copyright>BIM loket</ids:copyright>
         <ids:version>2.0</ids:version>
         <ids:description>Samenwerken gaat beter als de informatie waarop we bouwen uitwisselbaar, gestructureerd, eenduidig, correct, volledig en herbruikbaar is. De BIM basis informatieleveringsspecificatie (BIM basis ILS) is een goede eerste stap.</ids:description>
     </ids:info>
