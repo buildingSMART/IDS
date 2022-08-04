@@ -1,58 +1,60 @@
 Numerical values of physical quantities are represented using SI units. The following table lists the physical quantities and their units. 
+A full list of IFC Defined types can be found in the IFC documentation. For example for IFC 4ADD2TC1 it is here: https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/link/alphabeticalorder-defined-types.htm
 
-| Physical Quantity description | Name to be used in IDS     | Unit         | Unit Symbol | Ifc Measure                          | Dimensional exponents   | QUDT                                  |
-| ----------------------------- | -------------------------- | ------------ | ----------- | ------------------------------------ | ----------------------- | ------------------------------------- |
-| Amount of substance           | AmountOfSubstance                | mole         | mol         | IfcAmountOfSubstanceMeasure          | (0, 0, 0, 0, 0, 1, 0)   | quantitykind:MassPerArea              |
-| Area density                  | AreaDensity                |              | Kg/m2       | IfcAreaDensityMeasure                | (-2, 1, 0, 0, 0, 0, 0)  | quantitykind:MassPerArea              |
-| Area                          | Area                       | square meter | m2          | IfcAreaMeasure                       | (2, 0, 0, 0, 0, 0, 0)   | quantitykind:Area                     |
-| Dynamic viscosity             | DynamicViscosity           |              | Pa s        | IfcDynamicViscosityMeasure           | (-1, 1, -1, 0, 0, 0, 0) | quantitykind:DynamicViscosity         |
-| Electric capacitance          | ElectricCapacitance        | farad        | F           | IfcElectricCapacitanceMeasure        | (-2, 1, 4, 1, 0, 0, 0)  | quantitykind:Capacitance              |
-| Electric charge               | ElectricCharge             | coulomb      | C           | IfcElectricChargeMeasure             | (0, 0, 1, 1, 0, 0, 0)   | quantitykind:ElectricCharge           |
-| Electric conductance          | ElectricConductance        | siemens      | S           | IfcElectricConductanceMeasure        | (-2, -1, 3, 2, 0, 0, 0) | quantitykind:ElectricConductivity     |
-| Electric current              | ElectricCurrent            | ampere       | A           | IfcElectricCurrentMeasure            | (0, 0, 0, 1, 0, 0, 0)   | quantitykind:ElectricCurrent          |
-| Electric resistance           | ElectricResistance         | ohm          | Ω           | IfcElectricResistanceMeasure         | (2, 1, -3, -2, 0, 0, 0) | quantitykind:Resistance               |
-| Electric voltage              | ElectricVoltage            | volt         | V           | IfcElectricVoltageMeasure            | (2, 1, -3, -1, 0, 0, 0) | quantitykind:Voltage                  |
-| Energy                        | Energy                     | joule        | J           | IfcEnergyMeasure                     | (2, 1, -2, 0, 0, 0, 0)  | quantitykind:Energy                   |
-| Force                         | Force                      | newton       | N           | IfcForceMeasure                      | (1, 1, -2, 0, 0, 0, 0)  | quantitykind:Force                    |
-| Frequency                     | Frequency                  | hertz        | Hz          | IfcFrequencyMeasure                  | (0, 0, -1, 0, 0, 0, 0)  | quantitykind:Frequency                |
-| Heat flux density             | HeatFluxDensity            |              | W/m2        | IfcHeatFluxDensityMeasure            | (0, 1, -3, 0, 0, 0, 0)  | quantitykind:HeatFluxDensity          |
-| Heating                       | Heating                    |              | J/K         | IfcHeatingValueMeasure               | (2, 1, -2, 0, -1, 0, 0) | quantitykind:HeatCapacity             |
-| Illuminance                   | Illuminance                | lux          | lx          | IfcIlluminanceMeasure                | (-2, 0, 0, 0, 0, 0, 1)  | quantitykind:Illuminance              |
-| Ion concentration measure     | IonConcentration           |              | mol/m3      | IfcIonConcentrationMeasure           | (-3, 1, 0, 0, 0, 0, 0)  | quantitykind:IonDensity               |
-| Iso thermal moisture capacity | IsoThermalMoistureCapacity |              | m3/Kg       | IfcIsothermalMoistureCapacityMeasure | (3, -1, 0, 0, 0, 0, 0)  |                                       |
-| Length                        | Length                     | meter        | m           | IfcLengthMeasure                     | (1, 0, 0, 0, 0, 0, 0)   | quantitykind:Length                   |
-| Speed                         | Speed                      |              | m/s         | IfcLinearVelocityMeasure             | (1, 0, -1, 0, 0, 0, 0)  | quantitykind:Speed                    |
-| Luminous flux                 | LuminousFlux               | Lumen        | lm          | IfcLuminousFluxMeasure               | (0, 0, 0, 0, 0, 0, 1)   | quantitykind:LuminousFlux             |
-| Luminous intensity            | LuminousIntensity          | candela      | cd          | IfcLuminousIntensityMeasure          | (0, 0, 0, 0, 0, 0, 1)   | quantitykind:LuminousIntensity        |
-| Mass density                  | MassDensity                |              | Kg/m3       | IfcMassDensityMeasure                | (-3, 1, 0, 0, 0, 0, 0)  | quantitykind:MassDensity              |
-| Mass flow rate                | MassFlowRate               |              | Kg/s        | IfcMassFlowRateMeasure               | (0, 1, -1, 0, 0, 0, 0)  | quantitykind:MassFlowRate             |
-| Mass                          | Mass                       | kilogram     | Kg          | IfcMassMeasure                       | (0, 1, 0, 0, 0, 0, 0)   | quantitykind:Mass                     |
-| Mass per length               | MassPerLength              |              | Kg/m        | IfcMassPerLengthMeasure              | (-1, 1, 0, 0, 0, 0, 0)  | quantitykind:MassPerLength            |
-| Modulus of elasticity         | ModulusOfElasticity        |              | N/m2        | IfcModulusOfElasticityMeasure        | (-1, 1, -2, 0, 0, 0, 0) | quantitykind:ModulusOfElasticity      |
-| Moisture diffusivity          | MoistureDiffusivity        |              | m3/s        | IfcMoistureDiffusivityMeasure        | (3, 0, -1, 0, 0, 0, 0)  |                                       |
-| Molecular weight              | MolecularWeight            |              | Kg/mol      | IfcMolecularWeightMeasure            | (0, 1, 0, 0, 0, -1, 0)  | quantitykind:MolarMass                |
-| Moment of inertia             | MomentOfInertia            |              | m4          | IfcMomentOfInertiaMeasure            | (4, 0, 0, 0, 0, 0, 0)   | quantitykind:MomentOfInertia          |
-| PH                            | PH                         |              | PH          | IfcPHMeasure                         | (0, 0, 0, 0, 0, 0, 0)   |                                       |
-| Planar force                  | PlanarForce                |              | Pa          | IfcPlanarForceMeasure                | (-1, 1, -2, 0, 0, 0, 0) | quantitykind:ForcePerArea             |
-| Angle                         | Angle                      | radian       | rad         | IfcPlaneAngleMeasure                 | (0, 0, 0, 0, 0, 0, 0)   | quantitykind:Angle                    |
-| Plane angle                   | PlaneAngle                 | radian       | rad         | IfcPlaneAngleMeasure                 | (0, 0, 0, 0, 0, 0, 0)   | quantitykind:PlaneAngle               |
-| Power                         | Power                      | watt         | W           | IfcPowerMeasure                      | (2, 1, -3, 0, 0, 0, 0   | quantitykind:Power                    |
-| Pressure                      | Pressure                   | pascal       | Pa          | IfcPressureMeasure                   | (-1, 1, -2, 0, 0, 0, 0) | quantitykind:Pressure                 |
-| Radio activity                | RadioActivity              | Becqurel     | Bq          | IfcRadioActivityMeasure              | (0, 0, -1, 0, 0, 0, 0)  | quantitykind:Activity                 |
-| Ratio                         | Ratio                      | Percent      | %           | IfcRatioMeasure                      | (0, 0, 0, 0, 0, 0, 0)   | quantitykind:DimensionlessRatio       |
-| Rotational frequency          | RotationalFrequency        | hertz        | Hz          | IfcRotationalFrequencyMeasure        | (0, 0, -1, 0, 0, 0, 0)  |                                       |
-| Section modulus               | SectionModulus             |              | m3          | IfcSectionModulusMeasure             | (3, 0, 0, 0, 0, 0, 0)   | quantitykind:SectionModulus           |
-| Sound power                   | SoundPower                 | decibel      | db          | IfcSoundPowerMeasure                 | (0, 0, 0, 0, 0, 0, 0)   | quantitykind:SoundPowerLevel          |
-| Sound pressure                | SoundPressure              | decibel      | db          | IfcSoundPressureMeasure              | (0, 0, 0, 0, 0, 0, 0)   | quantitykind:SoundPressure            |
-| Specific heat capacity        | SpecificHeatCapacity       |              | J/Kg K      | IfcSpecificHeatCapacityMeasure       | (2, 0, -2, 0, -1, 0, 0) | quantitykind:SpecificHeatCapacity     |
-| Temperature rate of change    | TemperatureRateOfChange    |              | K/s         | IfcTemperatureRateOfChangeMeasure    | (0, 0, -1, 0, 1, 0, 0)  | quantitykind:TemperaturePerTime       |
-| Thermal conductivity          | ThermalConductivity        |              | W/m K       | IfcThermalConductivityMeasure        | (1, 1, -3, 0, -1, 0, 0) | quantitykind:ThermalConductivity      |
-| Temperature                   | Temperature                | kelvin       | K           | IfcThermodynamicTemperatureMeasure   | (0, 0, 0, 0, 1, 0, 0)   | quantitykind:ThermodynamicTemperature |
-| Time                          | Time                       | second       | s           | IfcTimeMeasure                       | (0, 0, 1, 0, 0, 0, 0)   | quantitykind:Time                     |
-| Torque                        | Torque                     |              | N m         | IfcTorqueMeasure                     | (2, 1, -2, 0, 0, 0, 0)  | quantitykind:Torque                   |
-| Vapor permeability            | VaporPermeability          |              | Kg / s m Pa | IfcVaporPermeabilityMeasure          | (0, 0, 1, 0, 0, 0, 0)   |                                       |
-| Volume                        | Volume                     | cubic meter  | m3          | IfcVolumeMeasure                     | (3, 0, 0, 0, 0, 0, 0)   | quantitykind:Volume                   |
-| Volumetric flow rate          | VolumetricFlowRate         |              | m3/s        | IfcVolumetricFlowRateMeasure         | (3, 0, -1, 0, 0, 0, 0)  | quantitykind:VolumeFlowRate           |
+
+| Ifc Defined Type name                | Physical Quantity description | Unit         | Unit Symbol | Dimensional exponents   | QUDT                                  |
+| ------------------------------------ | ----------------------------- | ------------ | ----------- | ----------------------- | ------------------------------------- |
+| IfcAmountOfSubstanceMeasure          | Amount of substance           | mole         | mol         | (0, 0, 0, 0, 0, 1, 0)   | quantitykind:MassPerArea              |
+| IfcAreaDensityMeasure                | Area density                  |              | Kg/m2       | (-2, 1, 0, 0, 0, 0, 0)  | quantitykind:MassPerArea              |
+| IfcAreaMeasure                       | Area                          | square meter | m2          | (2, 0, 0, 0, 0, 0, 0)   | quantitykind:Area                     |
+| IfcDynamicViscosityMeasure           | Dynamic viscosity             |              | Pa s        | (-1, 1, -1, 0, 0, 0, 0) | quantitykind:DynamicViscosity         |
+| IfcElectricCapacitanceMeasure        | Electric capacitance          | farad        | F           | (-2, 1, 4, 1, 0, 0, 0)  | quantitykind:Capacitance              |
+| IfcElectricChargeMeasure             | Electric charge               | coulomb      | C           | (0, 0, 1, 1, 0, 0, 0)   | quantitykind:ElectricCharge           |
+| IfcElectricConductanceMeasure        | Electric conductance          | siemens      | S           | (-2, -1, 3, 2, 0, 0, 0) | quantitykind:ElectricConductivity     |
+| IfcElectricCurrentMeasure            | Electric current              | ampere       | A           | (0, 0, 0, 1, 0, 0, 0)   | quantitykind:ElectricCurrent          |
+| IfcElectricResistanceMeasure         | Electric resistance           | ohm          | Ω           | (2, 1, -3, -2, 0, 0, 0) | quantitykind:Resistance               |
+| IfcElectricVoltageMeasure            | Electric voltage              | volt         | V           | (2, 1, -3, -1, 0, 0, 0) | quantitykind:Voltage                  |
+| IfcEnergyMeasure                     | Energy                        | joule        | J           | (2, 1, -2, 0, 0, 0, 0)  | quantitykind:Energy                   |
+| IfcForceMeasure                      | Force                         | newton       | N           | (1, 1, -2, 0, 0, 0, 0)  | quantitykind:Force                    |
+| IfcFrequencyMeasure                  | Frequency                     | hertz        | Hz          | (0, 0, -1, 0, 0, 0, 0)  | quantitykind:Frequency                |
+| IfcHeatFluxDensityMeasure            | Heat flux density             |              | W/m2        | (0, 1, -3, 0, 0, 0, 0)  | quantitykind:HeatFluxDensity          |
+| IfcHeatingValueMeasure               | Heating                       |              | J/K         | (2, 1, -2, 0, -1, 0, 0) | quantitykind:HeatCapacity             |
+| IfcIlluminanceMeasure                | Illuminance                   | lux          | lx          | (-2, 0, 0, 0, 0, 0, 1)  | quantitykind:Illuminance              |
+| IfcIonConcentrationMeasure           | Ion concentration measure     |              | mol/m3      | (-3, 1, 0, 0, 0, 0, 0)  | quantitykind:IonDensity               |
+| IfcIsothermalMoistureCapacityMeasure | Iso thermal moisture capacity |              | m3/Kg       | (3, -1, 0, 0, 0, 0, 0)  |                                       |
+| IfcLengthMeasure                     | Length                        | meter        | m           | (1, 0, 0, 0, 0, 0, 0)   | quantitykind:Length                   |
+| IfcLinearVelocityMeasure             | Speed                         |              | m/s         | (1, 0, -1, 0, 0, 0, 0)  | quantitykind:Speed                    |
+| IfcLuminousFluxMeasure               | Luminous flux                 | Lumen        | lm          | (0, 0, 0, 0, 0, 0, 1)   | quantitykind:LuminousFlux             |
+| IfcLuminousIntensityMeasure          | Luminous intensity            | candela      | cd          | (0, 0, 0, 0, 0, 0, 1)   | quantitykind:LuminousIntensity        |
+| IfcMassDensityMeasure                | Mass density                  |              | Kg/m3       | (-3, 1, 0, 0, 0, 0, 0)  | quantitykind:MassDensity              |
+| IfcMassFlowRateMeasure               | Mass flow rate                |              | Kg/s        | (0, 1, -1, 0, 0, 0, 0)  | quantitykind:MassFlowRate             |
+| IfcMassMeasure                       | Mass                          | kilogram     | Kg          | (0, 1, 0, 0, 0, 0, 0)   | quantitykind:Mass                     |
+| IfcMassPerLengthMeasure              | Mass per length               |              | Kg/m        | (-1, 1, 0, 0, 0, 0, 0)  | quantitykind:MassPerLength            |
+| IfcModulusOfElasticityMeasure        | Modulus of elasticity         |              | N/m2        | (-1, 1, -2, 0, 0, 0, 0) | quantitykind:ModulusOfElasticity      |
+| IfcMoistureDiffusivityMeasure        | Moisture diffusivity          |              | m3/s        | (3, 0, -1, 0, 0, 0, 0)  |                                       |
+| IfcMolecularWeightMeasure            | Molecular weight              |              | Kg/mol      | (0, 1, 0, 0, 0, -1, 0)  | quantitykind:MolarMass                |
+| IfcMomentOfInertiaMeasure            | Moment of inertia             |              | m4          | (4, 0, 0, 0, 0, 0, 0)   | quantitykind:MomentOfInertia          |
+| IfcPHMeasure                         | PH                            |              | PH          | (0, 0, 0, 0, 0, 0, 0)   |                                       |
+| IfcPlanarForceMeasure                | Planar force                  |              | Pa          | (-1, 1, -2, 0, 0, 0, 0) | quantitykind:ForcePerArea             |
+| IfcPlaneAngleMeasure                 | Angle                         | radian       | rad         | (0, 0, 0, 0, 0, 0, 0)   | quantitykind:Angle                    |
+| IfcPlaneAngleMeasure                 | Plane angle                   | radian       | rad         | (0, 0, 0, 0, 0, 0, 0)   | quantitykind:PlaneAngle               |
+| IfcPowerMeasure                      | Power                         | watt         | W           | (2, 1, -3, 0, 0, 0, 0   | quantitykind:Power                    |
+| IfcPressureMeasure                   | Pressure                      | pascal       | Pa          | (-1, 1, -2, 0, 0, 0, 0) | quantitykind:Pressure                 |
+| IfcRadioActivityMeasure              | Radio activity                | Becqurel     | Bq          | (0, 0, -1, 0, 0, 0, 0)  | quantitykind:Activity                 |
+| IfcRatioMeasure                      | Ratio                         | Percent      | %           | (0, 0, 0, 0, 0, 0, 0)   | quantitykind:DimensionlessRatio       |
+| IfcRotationalFrequencyMeasure        | Rotational frequency          | hertz        | Hz          | (0, 0, -1, 0, 0, 0, 0)  |                                       |
+| IfcSectionModulusMeasure             | Section modulus               |              | m3          | (3, 0, 0, 0, 0, 0, 0)   | quantitykind:SectionModulus           |
+| IfcSoundPowerMeasure                 | Sound power                   | decibel      | db          | (0, 0, 0, 0, 0, 0, 0)   | quantitykind:SoundPowerLevel          |
+| IfcSoundPressureMeasure              | Sound pressure                | decibel      | db          | (0, 0, 0, 0, 0, 0, 0)   | quantitykind:SoundPressure            |
+| IfcSpecificHeatCapacityMeasure       | Specific heat capacity        |              | J/Kg K      | (2, 0, -2, 0, -1, 0, 0) | quantitykind:SpecificHeatCapacity     |
+| IfcTemperatureRateOfChangeMeasure    | Temperature rate of change    |              | K/s         | (0, 0, -1, 0, 1, 0, 0)  | quantitykind:TemperaturePerTime       |
+| IfcThermalConductivityMeasure        | Thermal conductivity          |              | W/m K       | (1, 1, -3, 0, -1, 0, 0) | quantitykind:ThermalConductivity      |
+| IfcThermodynamicTemperatureMeasure   | Temperature                   | kelvin       | K           | (0, 0, 0, 0, 1, 0, 0)   | quantitykind:ThermodynamicTemperature |
+| IfcTimeMeasure                       | Time                          | second       | s           | (0, 0, 1, 0, 0, 0, 0)   | quantitykind:Time                     |
+| IfcTorqueMeasure                     | Torque                        |              | N m         | (2, 1, -2, 0, 0, 0, 0)  | quantitykind:Torque                   |
+| IfcVaporPermeabilityMeasure          | Vapor permeability            |              | Kg / s m Pa | (0, 0, 1, 0, 0, 0, 0)   |                                       |
+| IfcVolumeMeasure                     | Volume                        | cubic meter  | m3          | (3, 0, 0, 0, 0, 0, 0)   | quantitykind:Volume                   |
+| IfcVolumetricFlowRateMeasure         | Volumetric flow rate          |              | m3/s        | (3, 0, -1, 0, 0, 0, 0)  | quantitykind:VolumeFlowRate           |
 
 In software values are typically presented in local units. The following table lists some examples how things are represented to the user and how they are represented in IDS.
 
