@@ -249,11 +249,6 @@
             </ids:applicability>
             <ids:requirements>
                 <ids:classification>
-                    <ids:system>
-                        <ids:simpleValue>NL-SfB tabel 1</ids:simpleValue>
-                    </ids:system>
-                </ids:classification>
-                <ids:classification>
                     <ids:value>
                         <xs:restriction>
                             <xs:enumeration value="11.10" />
@@ -924,6 +919,9 @@
                             <xs:enumeration value="90.83" />
                         </xs:restriction>
                     </ids:value>
+                    <ids:system>
+                        <ids:simpleValue>NL-SfB tabel 1</ids:simpleValue>
+                    </ids:system>
                 </ids:classification>
             </ids:requirements>
         </ids:specification>
