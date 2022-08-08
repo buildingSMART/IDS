@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS  ids_09.xsd">
+    <ids:info>
+        <ids:title>AedesUVIP-ILS Window use-case example</ids:title>
+        <ids:version>1.0</ids:version>
+    </ids:info>
+    <ids:specifications>
+        <ids:specification ifcVersion="IFC2X3" name="Beglazing" description="Glazing in a window" minOccurs="0">
+            <ids:applicability>
+                <ids:entity>
+                    <ids:name>
+                        <ids:simpleValue>IFCWINDOW</ids:simpleValue>
+                    </ids:name>
+                    <ids:predefinedType>
+						<ids:simpleValue>WINDOW</ids:simpleValue>
+					</ids:predefinedType>
+                </ids:entity>
+                <ids:classification>
+					<ids:value>
+						<xs:restriction base="xs:string">
+						<xs:annotation>
+						<xs:documentation>string should be two numbers, a dot, and again two numbers. The first part should be '31.2'. Example values that are correct are '31.21', '31.22', '31.23', '31.24', '31.25', '31.26', etc.</xs:documentation>
+						</xs:annotation>
+							<xs:pattern value="31\.2[0-9]"/> 
+						</xs:restriction>
+					</ids:value>
+				</ids:classification>
+            </ids:applicability>
+            <ids:requirements>
+            </ids:requirements>
+        </ids:specification>
+    </ids:specifications>
+</ids:ids>
