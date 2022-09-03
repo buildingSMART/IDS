@@ -1,0 +1,25 @@
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS/ids_05.xsd">
+    <info>
+        <title>Restrictions can be used for systems 2/2</title>
+    </info>
+    <specifications>
+        <specification name="Restrictions can be used for systems 2/2" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+            <applicability>
+                <entity>
+                    <name>
+                        <simpleValue>IfcWall</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <classification minOccurs="1" maxOccurs="1">
+                    <system>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="Foo.*" />
+                        </xs:restriction>
+                    </system>
+                </classification>
+            </requirements>
+        </specification>
+    </specifications>
+</ids>

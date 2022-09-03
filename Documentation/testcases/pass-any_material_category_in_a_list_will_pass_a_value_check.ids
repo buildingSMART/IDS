@@ -1,0 +1,23 @@
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS/ids_05.xsd">
+    <info>
+        <title>Any material Category in a list will pass a value check</title>
+    </info>
+    <specifications>
+        <specification name="Any material Category in a list will pass a value check" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+            <applicability>
+                <entity>
+                    <name>
+                        <simpleValue>IfcWall</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <material minOccurs="1" maxOccurs="1">
+                    <value>
+                        <simpleValue>Foo</simpleValue>
+                    </value>
+                </material>
+            </requirements>
+        </specification>
+    </specifications>
+</ids>

@@ -1,0 +1,26 @@
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS/ids_05.xsd">
+    <info>
+        <title>Both system and value must match (all, not any) if specified 1/2</title>
+    </info>
+    <specifications>
+        <specification name="Both system and value must match (all, not any) if specified 1/2" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+            <applicability>
+                <entity>
+                    <name>
+                        <simpleValue>IfcWall</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <classification minOccurs="1" maxOccurs="1">
+                    <value>
+                        <simpleValue>1</simpleValue>
+                    </value>
+                    <system>
+                        <simpleValue>Foobar</simpleValue>
+                    </system>
+                </classification>
+            </requirements>
+        </specification>
+    </specifications>
+</ids>
