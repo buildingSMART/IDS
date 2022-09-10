@@ -7,19 +7,22 @@
             <applicability>
                 <entity>
                     <name>
-                        <simpleValue>IfcTask</simpleValue>
+                        <simpleValue>IfcWall</simpleValue>
                     </name>
                 </entity>
             </applicability>
             <requirements>
-                <attribute minOccurs="1" maxOccurs="1">
+                <property minOccurs="1" maxOccurs="1">
+                    <propertySet>
+                        <simpleValue>Foo_Bar</simpleValue>
+                    </propertySet>
                     <name>
-                        <simpleValue>IsMilestone</simpleValue>
+                        <simpleValue>Foo</simpleValue>
                     </name>
                     <value>
                         <simpleValue>TRUE</simpleValue>
                     </value>
-                </attribute>
+                </property>
             </requirements>
         </specification>
     </specifications>

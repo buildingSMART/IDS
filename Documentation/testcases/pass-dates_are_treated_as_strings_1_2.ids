@@ -7,19 +7,22 @@
             <applicability>
                 <entity>
                     <name>
-                        <simpleValue>IfcClassification</simpleValue>
+                        <simpleValue>IfcWall</simpleValue>
                     </name>
                 </entity>
             </applicability>
             <requirements>
-                <attribute minOccurs="1" maxOccurs="1">
+                <property minOccurs="1" maxOccurs="1">
+                    <propertySet>
+                        <simpleValue>Foo_Bar</simpleValue>
+                    </propertySet>
                     <name>
-                        <simpleValue>EditionDate</simpleValue>
+                        <simpleValue>Foo</simpleValue>
                     </name>
                     <value>
                         <simpleValue>2022-01-01</simpleValue>
                     </value>
-                </attribute>
+                </property>
             </requirements>
         </specification>
     </specifications>

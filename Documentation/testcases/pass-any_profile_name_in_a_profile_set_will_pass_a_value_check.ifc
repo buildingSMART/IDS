@@ -1,13 +1,13 @@
 ISO-10303-21;
 HEADER;
 FILE_DESCRIPTION(('ViewDefinition [CoordinationView]'),'2;1');
-FILE_NAME('','2022-09-03T10:32:03',(),(),'IfcOpenShell v0.7.0-dc67287d','IfcOpenShell v0.7.0-dc67287d','');
+FILE_NAME('','2022-09-10T23:30:24',(),(),'IfcOpenShell v0.7.0-dc67287d','IfcOpenShell v0.7.0-dc67287d','');
 FILE_SCHEMA(('IFC4'));
 ENDSEC;
 DATA;
-#1=IFCWALL('1CZWmiPG95i8AwlC2QL1ZA',$,$,$,$,$,$,$,$);
+#1=IFCWALL('0rArPQT2T8o81IbYpoVS4Z',$,$,$,$,$,$,$,$);
 #2=IFCMATERIALPROFILESET('Unnamed',$,(#5),$);
-#3=IFCRELASSOCIATESMATERIAL('3KD8$objHEmOWreIypgbxE',$,$,$,(#1),#2);
+#3=IFCRELASSOCIATESMATERIAL('0jaA3NjN1EIgTEpeuIUe4O',$,$,$,(#1),#2);
 #4=IFCMATERIAL('Unnamed',$,$);
 #5=IFCMATERIALPROFILE('Foo',$,#4,#6,$,$);
 #6=IFCCIRCLEPROFILEDEF(.AREA.,$,$,1.);

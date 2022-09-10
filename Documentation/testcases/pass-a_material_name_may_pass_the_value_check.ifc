@@ -1,12 +1,12 @@
 ISO-10303-21;
 HEADER;
 FILE_DESCRIPTION(('ViewDefinition [CoordinationView]'),'2;1');
-FILE_NAME('','2022-09-03T10:32:03',(),(),'IfcOpenShell v0.7.0-dc67287d','IfcOpenShell v0.7.0-dc67287d','');
+FILE_NAME('','2022-09-10T23:30:23',(),(),'IfcOpenShell v0.7.0-dc67287d','IfcOpenShell v0.7.0-dc67287d','');
 FILE_SCHEMA(('IFC4'));
 ENDSEC;
 DATA;
-#1=IFCWALL('1em2VWxjf4zxD7PPG$LyES',$,$,$,$,$,$,$,$);
+#1=IFCWALL('3dT2iwO310rwdSUSMeL2XE',$,$,$,$,$,$,$,$);
 #2=IFCMATERIAL('Foo',$,$);
-#3=IFCRELASSOCIATESMATERIAL('3lmYeYTFLCJwGVRHp8NAr9',$,$,$,(#1),#2);
+#3=IFCRELASSOCIATESMATERIAL('1upgOmOxb0CePB1AOXRVwL',$,$,$,(#1),#2);
 ENDSEC;
 END-ISO-10303-21;
