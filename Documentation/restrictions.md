@@ -43,6 +43,9 @@ Pattern | Description | Example values that meet the pattern criteria | Example 
 
  - [Beginners Regex tutorial](https://regexone.com/)
  - [Online Regex testing website](https://regex101.com/)
+ - [XML Regular expressions](https://www.regular-expressions.info/xml.html)
+
+Note that Regex has multiple "flavours" or "dialects", so although the first two links are useful learning resources, they may also include Regex features not available in IDS. The third link (XML Regular expressions) can be referenced as an authoritative source on what can be used in IDS. In general, Regex in IDS is simpler and does not include advanced Regex features.
 
 ## Bounds
 

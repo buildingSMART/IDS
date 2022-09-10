@@ -22,7 +22,7 @@ When a **Facet** is used in the **Requirements** section, the **Facet** describe
 
 ![IDS Structure](ids-structure.png)
 
-There are five different **Facets** of information:
+There are six different **Facets** of information:
 
 Facet Type | Facet Parameters | Example applicability | Example requirement
 --- | --- | --- | ---
