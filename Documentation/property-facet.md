@@ -2,7 +2,7 @@
 
 IFC comes with a way to define custom metadata attached to objects called **Properties**. **Properties** have a **Name** (such as "FireRating"), a **Value** provided by a user (such as "180/180/180" in Australia), and similar **Properties** are grouped into **Property Sets**.
 
-Some of these **Property Sets** and **Properties** are defined by buildingSMART to help standardise common properties that are common to projects around the world. For example, the "FireRating" **Property** that is part of the "PSet\_WallCommon" **Property Set** is defined by buildingSMART. Users can also define their own **Properties** and **Property Sets**, which may be unique to the project, or distributed using the **Property Set** templates feature of IFC. Naturally, it is encouraged to specify **Properties** that are standardised by buildingSMART before inventing custom ones. All standardised **Properties** will be part of a **Property Set** with a name prefixed with either "Pset_" or "Qto_".
+Some of these **Property Sets** and **Properties** are defined by buildingSMART to help standardise properties that are common to projects around the world. For example, the "FireRating" **Property** that is part of the "PSet\_WallCommon" **Property Set** is defined by buildingSMART. Users can also define their own **Properties** and **Property Sets**, which may be unique to the project, or distributed using the **Property Set** templates feature of IFC. Naturally, it is encouraged to specify **Properties** that are standardised by buildingSMART before inventing custom ones. All standardised **Properties** will be part of a **Property Set** with a name prefixed with either "Pset_" or "Qto_".
 
 **Properties** are applicable to different entities. For example, some properties such as **LoadBearing** can be applied to walls, columns, and beams, but not furniture, ducts, or cables. This is known as the **Applicable Entity**. When specifying **Properties** in an IDS, it is important to consider which objects they can apply to. All sorts of objects can have **Properties** applied, not only physical objects like doors, windows, and slabs, but also non-physical objects like tasks, materials, structural profile cross sections, or labour resources.
 
@@ -35,15 +35,14 @@ Parameter | Required | Restrictions Allowed | Allowed Values | Meaning
 --- | --- | --- | --- | ---
 **Property Set** | ✔️ | ✔️ | Any custom or buildingSMART standardised property set name. Standardised names must begin with "Pset_" or "Qto_" and can be found in the IFC documentation. | The object has the specified property set.
 **Name** | ✔️ | ✔️ | Any text property name. Standardised buildingSMART property names can be found in the buildingSMART documentation. | The property must exist in the specified property set and have a non-empty value.
-**Value** | ❌ | ✔️ | Any value appropriate to the data type of the property | The value of the attribute must match exactly. To specify numbers, you must use a dot as the decimal separator, and not use a thousands separator (e.g. `4.2` is valid, but `1.234,5` is invalid). Scientific notation is allowed (e.g. `1e3` to represent `1000`). To specify true or false, you must specify `TRUE` or `FALSE` as uppercase characters.
-**Measure** | ❌ | ❌ | A valid type name, taken from the [IDS Units Table](units.md) | The value must use the specified measure type. The units specified in the IDS use the [IDS Units Table](units.md), though the project may use any unit.
+**Value** | ❌ | ✔️ | Any value appropriate to the data type of the property. If not specified, any non-empty value is allowed. | The value of the attribute must match exactly. To specify numbers, you must use a dot as the decimal separator, and not use a thousands separator (e.g. `4.2` is valid, but `1.234,5` is invalid). Scientific notation is allowed (e.g. `1e3` to represent `1000`). To specify true or false, you must specify `TRUE` or `FALSE` as uppercase characters.
+**Measure** | ❌ | ❌ | A valid measure type name, taken from the [IDS Units Table](units.md). If not specified, the value may be unitless, such as a text, number, or boolean. | The value must use the specified measure type. The units specified in the IDS use the [IDS Units Table](units.md), though the project may use any unit.
 
 ## Examples
 
 Applicability Intention | Requirement Intention | Facet Definition
 --- | --- | ---
-Any wall entity with an acoustic rating | The entity (e.g. wall) must have an acoustic rating |
-Property Set="Pset\_WallCommon", Name="AcousticRating"
+Any wall entity with an acoustic rating | The entity (e.g. wall) must have an acoustic rating | Property Set="Pset\_WallCommon", Name="AcousticRating"
 Any column entity with a fire rating of of "2HR" | The entity (e.g. column) must have a fire rating of "2HR" | Property Set="Pset\_ColumnCommon", Name="FireRating", value="2HR"
 Any slab entity with a net volume between 20-100 cubic meters | The entity (e.g. slab) must have a net volume between 20-100 cubic meters | Property Set="Qto\_SlabBaseQuantities", Name="NetVolume", Value="[20<=Value<=100](restrictions.md)"
 Any in-situ or precast concrete element | The entity (e.g. slab) must have a casting method set either to in-situ or precast | Property Set="Pset\_ConcreteElementGeneral", Name="CastingMethod", value=["INSITU", "PRECAST"]
