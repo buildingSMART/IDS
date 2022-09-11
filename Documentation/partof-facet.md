@@ -14,7 +14,7 @@ The **IfcRelNests** relationship describes how a physical object may be connecte
 
 Parameter | Required | Restrictions Allowed | Allowed Values | Meaning
 --- | --- | --- | --- | ---
-**Relation** | ✔️ | ✔️ | One relationship chosen from the 4 supported relationships: IfcRelAggregates, IfcRelAssignsToGroup, IfcRelContainedInSpatialStructure, or IfcRelNests | The smaller subobject has the specified relationship with a larger object
+**Relation** | ✔️ | ❌ | One relationship chosen from the 4 supported relationships: IfcRelAggregates, IfcRelAssignsToGroup, IfcRelContainedInSpatialStructure, or IfcRelNests | The smaller subobject has the specified relationship with a larger object
 **Entity** | ❌ | ✔️ | Any valid IFC class name (e.g. "IFCSYSTEM") | The IFC class of the larger object must match exactly.
 
 ## Examples
