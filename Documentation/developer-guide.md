@@ -18,7 +18,6 @@ If you are writing software to read and author IDS files only, you **must** meet
  - All IDS software must read and write valid IDS files only.
  - No proprietary extensions are allowed. If auxiliary systems (e.g. additional loaded metadata) are used to augment IDS or the correlating IFC model, they should be made clear to the user that it is external to IDS.
  - No data loss shall occur. Loading an IDS and saving the IDS shall preserve all of its information. Minor syntax formatting changes are allowed, so long as the data remains unchanged.
- - Your software should pass all test cases in the [Authoring Testcases](todo) document.
 
 In addition, it is highly recommended to also provide the following features for users:
 
@@ -33,13 +32,13 @@ In addition, it is highly recommended to also provide the following features for
 
 Any software implementing IDS checking **must** comply with the following test suites.
 
- - Overall integration testscases (todo)
+ - [Overall integration testscases](testcases-validation.md)
  - [Entity testcases](testcases-entity.md)
  - [Attribute testcases](testcases-attribute.md)
  - [Classification testcases](testcases-classification.md)
  - [Property testcases](testcases-property.md)
  - [Material testcases](testcases-material.md)
- - [Part testcases](testcases-parts.md)
+ - [PartOf testcases](testcases-partof.md)
 
 ## Generating reports from IDS results
 

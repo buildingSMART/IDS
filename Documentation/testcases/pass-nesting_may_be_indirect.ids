@@ -1,0 +1,23 @@
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS/ids_05.xsd">
+    <info>
+        <title>Nesting may be indirect</title>
+    </info>
+    <specifications>
+        <specification name="Nesting may be indirect" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+            <applicability>
+                <entity>
+                    <name>
+                        <simpleValue>IfcMechanicalFastener</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <partOf relation="IfcRelNests" minOccurs="1" maxOccurs="1">
+                    <entity>
+                        <simpleValue>IFCFURNITURE</simpleValue>
+                    </entity>
+                </partOf>
+            </requirements>
+        </specification>
+    </specifications>
+</ids>
