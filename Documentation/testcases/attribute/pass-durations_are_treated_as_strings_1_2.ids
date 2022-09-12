@@ -7,7 +7,7 @@
             <applicability>
                 <entity>
                     <name>
-                        <simpleValue>IfcClassification</simpleValue>
+                        <simpleValue>IfcTaskTime</simpleValue>
                     </name>
                 </entity>
             </applicability>

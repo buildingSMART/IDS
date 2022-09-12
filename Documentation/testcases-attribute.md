@@ -872,7 +872,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 
 [Sample IDS](testcases/attribute/fail-dates_are_treated_as_strings_1_2.ids) - [Sample IFC: 1](testcases/attribute/fail-dates_are_treated_as_strings_1_2.ifc)
 
-## [FAIL] Durations are treated as strings 1/2
+## [PASS] Durations are treated as strings 1/2
 
 ~~~xml
 <attribute minOccurs="1" maxOccurs="1">
@@ -886,10 +886,10 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCCLASSIFICATION($,$,'PT16H','Name',$,$,$); /* Testcase */
+#1=IFCTASKTIME('Name',$,$,$,'PT16H',$,$,$,$,$,$,$,$,$,$,$,$,$,$,$); /* Testcase */
 ~~~
 
-[Sample IDS](testcases/attribute/fail-durations_are_treated_as_strings_1_2.ids) - [Sample IFC: 1](testcases/attribute/fail-durations_are_treated_as_strings_1_2.ifc)
+[Sample IDS](testcases/attribute/pass-durations_are_treated_as_strings_1_2.ids) - [Sample IFC: 1](testcases/attribute/pass-durations_are_treated_as_strings_1_2.ifc)
 
 ## [FAIL] Durations are treated as strings 2/2
 
@@ -905,7 +905,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCCLASSIFICATION($,$,'P2D','Name',$,$,$); /* Testcase */
+#1=IFCTASKTIME('Name',$,$,$,'P2D',$,$,$,$,$,$,$,$,$,$,$,$,$,$,$); /* Testcase */
 ~~~
 
 [Sample IDS](testcases/attribute/fail-durations_are_treated_as_strings_2_2.ids) - [Sample IFC: 1](testcases/attribute/fail-durations_are_treated_as_strings_2_2.ifc)
