@@ -11,8 +11,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ids-tool.CommandLine" Version="1.0.4" />
-    <PackageReference Include="Nuke.Common" Version="6.0.3" />
+    <PackageReference Include="ids-tool.CommandLine" Version="1.0.7" />
+    <PackageReference Include="Nuke.Common" Version="6.2.1" />
   </ItemGroup>
 
 </Project>
