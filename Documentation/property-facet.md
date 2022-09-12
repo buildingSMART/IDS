@@ -54,6 +54,7 @@ Parameter | Required | Restrictions Allowed | Allowed Values | Meaning
 **Name** | ✔️ | ✔️ | Any text property name. Standardised buildingSMART property names can be found in the buildingSMART documentation. | The property must exist in the specified property set and have a non-empty value.
 **Value** | ❌ | ✔️ | Any value appropriate to the data type of the property. If not specified, any non-empty value is allowed. | The value of the attribute must match exactly. To specify numbers, you must use a dot as the decimal separator, and not use a thousands separator (e.g. `4.2` is valid, but `1.234,5` is invalid). Scientific notation is allowed (e.g. `1e3` to represent `1000`). To specify true or false, you must specify `TRUE` or `FALSE` as uppercase characters.
 **Data Type** | ✔️ | ❌ | A valid data type name, taken from the [IDS units table](units.md). If not specified, the value may be unitless, such as a text, number, or boolean. | The value must use the specified data type. The units specified in the IDS use the [IDS units table](units.md), though the project may use any unit.
+**URI** | ❌ | ❌ | A URI identifying the property compliant with ISO 23386 | You may find valid URIs using the [buildingSMART Data Dictionary](https://search.bsdd.buildingsmart.org/), for example for a [Fire Rating](https://search.bsdd.buildingsmart.org/Property/Index/115666) property.
 
 ## Examples
 

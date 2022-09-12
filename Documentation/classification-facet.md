@@ -14,6 +14,7 @@ Parameter | Required | Restrictions Allowed | Allowed Values | Meaning
 --- | --- | --- | --- | ---
 **System** | ❌ | ✔️ | The name of the **Classification System** | The element must be classified with a reference that is part of a classification system with this name
 **Value** | ❌ | ✔️ | The value of a **Refeference** code in the **Classification System** | The element must be classified with a **Reference** which has a code that matches this value. The value is typically a short code with a separating character that denotes the level of classification
+**URI** | ❌ | ❌ | A URI identifying the classification compliant with ISO 23386 | You may find valid URIs using the [buildingSMART Data Dictionary](https://search.bsdd.buildingsmart.org/), for example for a [Uniclass-based aluminium window walls](https://identifier.buildingsmart.org/uri/nbs/uniclass2015-1/class/Pr_30_59_99_02 ) classification.
 
 If no parameters are specified, then it means that any **Classification** should be present, regardless of **System** name or **Reference** code.
 
