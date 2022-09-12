@@ -9,11 +9,11 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCELEMENTASSEMBLY('3q6Vcv2QX9pv9jn7w1Tkfy',$,$,$,$,$,$,$,$,$);
-#2=IFCWALL('1xzuRQJTbATh5HU$lje803',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCELEMENTASSEMBLY('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$,$);
+#2=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 ~~~
 
-[Sample IDS](testcases/fail-a_non_aggregated_element_fails_an_aggregate_relationship.ids) - [Sample IFC: 2](testcases/fail-a_non_aggregated_element_fails_an_aggregate_relationship.ifc)
+[Sample IDS](testcases/partof/fail-a_non_aggregated_element_fails_an_aggregate_relationship.ids) - [Sample IFC: 2](testcases/partof/fail-a_non_aggregated_element_fails_an_aggregate_relationship.ifc)
 
 ## [FAIL] The aggregated whole fails an aggregate relationship
 
@@ -22,12 +22,12 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCELEMENTASSEMBLY('3q6Vcv2QX9pv9jn7w1Tkfy',$,$,$,$,$,$,$,$,$); /* Testcase */
-#2=IFCWALL('1xzuRQJTbATh5HU$lje803',$,$,$,$,$,$,$,$);
-#3=IFCRELAGGREGATES('3WbNxN2WH6jPcntlmw1Y_g',$,$,$,#1,(#2));
+#1=IFCELEMENTASSEMBLY('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$,$); /* Testcase */
+#2=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#3=IFCRELAGGREGATES('0eA6m4fELI9QBIhP3wiLAp',$,$,$,#1,(#2));
 ~~~
 
-[Sample IDS](testcases/fail-the_aggregated_whole_fails_an_aggregate_relationship.ids) - [Sample IFC: 1](testcases/fail-the_aggregated_whole_fails_an_aggregate_relationship.ifc)
+[Sample IDS](testcases/partof/fail-the_aggregated_whole_fails_an_aggregate_relationship.ids) - [Sample IFC: 1](testcases/partof/fail-the_aggregated_whole_fails_an_aggregate_relationship.ifc)
 
 ## [PASS] The aggregated part passes an aggregate relationship
 
@@ -36,12 +36,68 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCELEMENTASSEMBLY('3q6Vcv2QX9pv9jn7w1Tkfy',$,$,$,$,$,$,$,$,$);
-#2=IFCWALL('1xzuRQJTbATh5HU$lje803',$,$,$,$,$,$,$,$); /* Testcase */
-#3=IFCRELAGGREGATES('3WbNxN2WH6jPcntlmw1Y_g',$,$,$,#1,(#2));
+#1=IFCELEMENTASSEMBLY('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$,$);
+#2=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
+#3=IFCRELAGGREGATES('0eA6m4fELI9QBIhP3wiLAp',$,$,$,#1,(#2));
 ~~~
 
-[Sample IDS](testcases/pass-the_aggregated_part_passes_an_aggregate_relationship.ids) - [Sample IFC: 2](testcases/pass-the_aggregated_part_passes_an_aggregate_relationship.ifc)
+[Sample IDS](testcases/partof/pass-the_aggregated_part_passes_an_aggregate_relationship.ids) - [Sample IFC: 2](testcases/partof/pass-the_aggregated_part_passes_an_aggregate_relationship.ifc)
+
+## [PASS] A required facet checks all parameters as normal
+
+~~~xml
+<partOf relation="IfcRelAggregates" minOccurs="1" maxOccurs="1"/>
+~~~
+
+~~~lua
+#1=IFCELEMENTASSEMBLY('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$,$);
+#2=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
+#3=IFCRELAGGREGATES('0eA6m4fELI9QBIhP3wiLAp',$,$,$,#1,(#2));
+~~~
+
+[Sample IDS](testcases/partof/pass-a_required_facet_checks_all_parameters_as_normal.ids) - [Sample IFC: 2](testcases/partof/pass-a_required_facet_checks_all_parameters_as_normal.ifc)
+
+## [FAIL] A prohibited facet returns the opposite of a required facet
+
+~~~xml
+<partOf relation="IfcRelAggregates" minOccurs="0" maxOccurs="0"/>
+~~~
+
+~~~lua
+#1=IFCELEMENTASSEMBLY('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$,$);
+#2=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
+#3=IFCRELAGGREGATES('0eA6m4fELI9QBIhP3wiLAp',$,$,$,#1,(#2));
+~~~
+
+[Sample IDS](testcases/partof/fail-a_prohibited_facet_returns_the_opposite_of_a_required_facet.ids) - [Sample IFC: 2](testcases/partof/fail-a_prohibited_facet_returns_the_opposite_of_a_required_facet.ifc)
+
+## [PASS] An optional facet always passes regardless of outcome 1/2
+
+~~~xml
+<partOf relation="IfcRelAggregates" minOccurs="0" maxOccurs="1"/>
+~~~
+
+~~~lua
+#1=IFCELEMENTASSEMBLY('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$,$); /* Testcase */
+#2=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#3=IFCRELAGGREGATES('0eA6m4fELI9QBIhP3wiLAp',$,$,$,#1,(#2));
+~~~
+
+[Sample IDS](testcases/partof/pass-an_optional_facet_always_passes_regardless_of_outcome_1_2.ids) - [Sample IFC: 1](testcases/partof/pass-an_optional_facet_always_passes_regardless_of_outcome_1_2.ifc)
+
+## [PASS] An optional facet always passes regardless of outcome 2/2
+
+~~~xml
+<partOf relation="IfcRelAggregates" minOccurs="0" maxOccurs="1"/>
+~~~
+
+~~~lua
+#1=IFCELEMENTASSEMBLY('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$,$);
+#2=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
+#3=IFCRELAGGREGATES('0eA6m4fELI9QBIhP3wiLAp',$,$,$,#1,(#2));
+~~~
+
+[Sample IDS](testcases/partof/pass-an_optional_facet_always_passes_regardless_of_outcome_2_2.ids) - [Sample IFC: 2](testcases/partof/pass-an_optional_facet_always_passes_regardless_of_outcome_2_2.ifc)
 
 ## [PASS] An aggregate may specify the entity of the whole 1/2
 
@@ -54,15 +110,15 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCELEMENTASSEMBLY('3q6Vcv2QX9pv9jn7w1Tkfy',$,$,$,$,$,$,$,$,$);
-#2=IFCWALL('1xzuRQJTbATh5HU$lje803',$,$,$,$,$,$,$,$);
-#3=IFCRELAGGREGATES('3WbNxN2WH6jPcntlmw1Y_g',$,$,$,#1,(#2));
-#4=IFCSLAB('2iKCmqMGjETeuISTotOcx6',$,$,$,$,$,$,$,$);
-#5=IFCBEAM('2YGdsKUi99Eu4wAe6IZM6_',$,$,$,$,$,$,$,$); /* Testcase */
-#6=IFCRELAGGREGATES('3aaOK736L0WOR3R$pdAKUx',$,$,$,#4,(#5));
+#1=IFCELEMENTASSEMBLY('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$,$);
+#2=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#3=IFCRELAGGREGATES('0eA6m4fELI9QBIhP3wiLAp',$,$,$,#1,(#2));
+#4=IFCSLAB('05rScmOVzMoQXOfbYdtLYj',$,$,$,$,$,$,$,$);
+#5=IFCBEAM('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$); /* Testcase */
+#6=IFCRELAGGREGATES('0BbkGoC6vPvRW13UT7D8zH',$,$,$,#4,(#5));
 ~~~
 
-[Sample IDS](testcases/pass-an_aggregate_may_specify_the_entity_of_the_whole_1_2.ids) - [Sample IFC: 5](testcases/pass-an_aggregate_may_specify_the_entity_of_the_whole_1_2.ifc)
+[Sample IDS](testcases/partof/pass-an_aggregate_may_specify_the_entity_of_the_whole_1_2.ids) - [Sample IFC: 5](testcases/partof/pass-an_aggregate_may_specify_the_entity_of_the_whole_1_2.ifc)
 
 ## [FAIL] An aggregate may specify the entity of the whole 2/2
 
@@ -75,15 +131,15 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCELEMENTASSEMBLY('3q6Vcv2QX9pv9jn7w1Tkfy',$,$,$,$,$,$,$,$,$);
-#2=IFCWALL('1xzuRQJTbATh5HU$lje803',$,$,$,$,$,$,$,$);
-#3=IFCRELAGGREGATES('3WbNxN2WH6jPcntlmw1Y_g',$,$,$,#1,(#2));
-#4=IFCSLAB('2iKCmqMGjETeuISTotOcx6',$,$,$,$,$,$,$,$);
-#5=IFCBEAM('2YGdsKUi99Eu4wAe6IZM6_',$,$,$,$,$,$,$,$); /* Testcase */
-#6=IFCRELAGGREGATES('3aaOK736L0WOR3R$pdAKUx',$,$,$,#4,(#5));
+#1=IFCELEMENTASSEMBLY('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$,$);
+#2=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#3=IFCRELAGGREGATES('0eA6m4fELI9QBIhP3wiLAp',$,$,$,#1,(#2));
+#4=IFCSLAB('05rScmOVzMoQXOfbYdtLYj',$,$,$,$,$,$,$,$);
+#5=IFCBEAM('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$); /* Testcase */
+#6=IFCRELAGGREGATES('0BbkGoC6vPvRW13UT7D8zH',$,$,$,#4,(#5));
 ~~~
 
-[Sample IDS](testcases/fail-an_aggregate_may_specify_the_entity_of_the_whole_2_2.ids) - [Sample IFC: 5](testcases/fail-an_aggregate_may_specify_the_entity_of_the_whole_2_2.ifc)
+[Sample IDS](testcases/partof/fail-an_aggregate_may_specify_the_entity_of_the_whole_2_2.ids) - [Sample IFC: 5](testcases/partof/fail-an_aggregate_may_specify_the_entity_of_the_whole_2_2.ifc)
 
 ## [PASS] An aggregate entity may pass any ancestral whole passes
 
@@ -96,20 +152,20 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCELEMENTASSEMBLY('3q6Vcv2QX9pv9jn7w1Tkfy',$,$,$,$,$,$,$,$,$);
-#2=IFCWALL('1xzuRQJTbATh5HU$lje803',$,$,$,$,$,$,$,$);
-#3=IFCRELAGGREGATES('3WbNxN2WH6jPcntlmw1Y_g',$,$,$,#1,(#2));
-#4=IFCSLAB('2iKCmqMGjETeuISTotOcx6',$,$,$,$,$,$,$,$);
-#5=IFCBEAM('2YGdsKUi99Eu4wAe6IZM6_',$,$,$,$,$,$,$,$);
-#6=IFCRELAGGREGATES('3aaOK736L0WOR3R$pdAKUx',$,$,$,#4,(#5));
-#7=IFCELEMENTASSEMBLY('12_vEf7ZT0auJQi6tnfI1z',$,$,$,$,$,$,$,$,$);
-#8=IFCSLAB('2tXathYg5Ca8bkTCdMneXf',$,$,$,$,$,$,$,$);
-#9=IFCBEAM('2p$vFGmN16ph28D3CBDkJE',$,$,$,$,$,$,$,$); /* Testcase */
-#10=IFCRELAGGREGATES('0upIhFj8L1gvWaZCoNZa31',$,$,$,#7,(#8));
-#11=IFCRELAGGREGATES('1Mc4apqh92CAAfd2zwVblr',$,$,$,#8,(#9));
+#1=IFCELEMENTASSEMBLY('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$,$);
+#2=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#3=IFCRELAGGREGATES('0eA6m4fELI9QBIhP3wiLAp',$,$,$,#1,(#2));
+#4=IFCSLAB('05rScmOVzMoQXOfbYdtLYj',$,$,$,$,$,$,$,$);
+#5=IFCBEAM('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#6=IFCRELAGGREGATES('0BbkGoC6vPvRW13UT7D8zH',$,$,$,#4,(#5));
+#7=IFCELEMENTASSEMBLY('3dn5FxJ$bKte8lL5dru6xn',$,$,$,$,$,$,$,$,$);
+#8=IFCSLAB('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#9=IFCBEAM('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$); /* Testcase */
+#10=IFCRELAGGREGATES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,#7,(#8));
+#11=IFCRELAGGREGATES('0WTUhjMwvT39YBFH2pryoM',$,$,$,#8,(#9));
 ~~~
 
-[Sample IDS](testcases/pass-an_aggregate_entity_may_pass_any_ancestral_whole_passes.ids) - [Sample IFC: 9](testcases/pass-an_aggregate_entity_may_pass_any_ancestral_whole_passes.ifc)
+[Sample IDS](testcases/partof/pass-an_aggregate_entity_may_pass_any_ancestral_whole_passes.ids) - [Sample IFC: 9](testcases/partof/pass-an_aggregate_entity_may_pass_any_ancestral_whole_passes.ifc)
 
 ## [FAIL] A non grouped element fails a group relationship
 
@@ -118,22 +174,22 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCELEMENTASSEMBLY('3q6Vcv2QX9pv9jn7w1Tkfy',$,$,$,$,$,$,$,$,$);
-#2=IFCWALL('1xzuRQJTbATh5HU$lje803',$,$,$,$,$,$,$,$);
-#3=IFCRELAGGREGATES('3WbNxN2WH6jPcntlmw1Y_g',$,$,$,#1,(#2));
-#4=IFCSLAB('2iKCmqMGjETeuISTotOcx6',$,$,$,$,$,$,$,$);
-#5=IFCBEAM('2YGdsKUi99Eu4wAe6IZM6_',$,$,$,$,$,$,$,$);
-#6=IFCRELAGGREGATES('3aaOK736L0WOR3R$pdAKUx',$,$,$,#4,(#5));
-#7=IFCELEMENTASSEMBLY('12_vEf7ZT0auJQi6tnfI1z',$,$,$,$,$,$,$,$,$);
-#8=IFCSLAB('2tXathYg5Ca8bkTCdMneXf',$,$,$,$,$,$,$,$);
-#9=IFCBEAM('2p$vFGmN16ph28D3CBDkJE',$,$,$,$,$,$,$,$);
-#10=IFCRELAGGREGATES('0upIhFj8L1gvWaZCoNZa31',$,$,$,#7,(#8));
-#11=IFCRELAGGREGATES('1Mc4apqh92CAAfd2zwVblr',$,$,$,#8,(#9));
-#12=IFCELEMENTASSEMBLY('0N5j0KIfv0WATOitVZt6Bf',$,$,$,$,$,$,$,$,$); /* Testcase */
-#13=IFCGROUP('0BvP02Pf17UAOxyvD0LmfW',$,'Unnamed','',$);
+#1=IFCELEMENTASSEMBLY('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$,$);
+#2=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#3=IFCRELAGGREGATES('0eA6m4fELI9QBIhP3wiLAp',$,$,$,#1,(#2));
+#4=IFCSLAB('05rScmOVzMoQXOfbYdtLYj',$,$,$,$,$,$,$,$);
+#5=IFCBEAM('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#6=IFCRELAGGREGATES('0BbkGoC6vPvRW13UT7D8zH',$,$,$,#4,(#5));
+#7=IFCELEMENTASSEMBLY('3dn5FxJ$bKte8lL5dru6xn',$,$,$,$,$,$,$,$,$);
+#8=IFCSLAB('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#9=IFCBEAM('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
+#10=IFCRELAGGREGATES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,#7,(#8));
+#11=IFCRELAGGREGATES('0WTUhjMwvT39YBFH2pryoM',$,$,$,#8,(#9));
+#12=IFCELEMENTASSEMBLY('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$,$); /* Testcase */
+#13=IFCGROUP('3b0AoFivPN6RDJO6UL_GfZ',$,'Unnamed','',$);
 ~~~
 
-[Sample IDS](testcases/fail-a_non_grouped_element_fails_a_group_relationship.ids) - [Sample IFC: 12](testcases/fail-a_non_grouped_element_fails_a_group_relationship.ifc)
+[Sample IDS](testcases/partof/fail-a_non_grouped_element_fails_a_group_relationship.ids) - [Sample IFC: 12](testcases/partof/fail-a_non_grouped_element_fails_a_group_relationship.ifc)
 
 ## [PASS] A grouped element passes a group relationship
 
@@ -142,23 +198,23 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCELEMENTASSEMBLY('3q6Vcv2QX9pv9jn7w1Tkfy',$,$,$,$,$,$,$,$,$);
-#2=IFCWALL('1xzuRQJTbATh5HU$lje803',$,$,$,$,$,$,$,$);
-#3=IFCRELAGGREGATES('3WbNxN2WH6jPcntlmw1Y_g',$,$,$,#1,(#2));
-#4=IFCSLAB('2iKCmqMGjETeuISTotOcx6',$,$,$,$,$,$,$,$);
-#5=IFCBEAM('2YGdsKUi99Eu4wAe6IZM6_',$,$,$,$,$,$,$,$);
-#6=IFCRELAGGREGATES('3aaOK736L0WOR3R$pdAKUx',$,$,$,#4,(#5));
-#7=IFCELEMENTASSEMBLY('12_vEf7ZT0auJQi6tnfI1z',$,$,$,$,$,$,$,$,$);
-#8=IFCSLAB('2tXathYg5Ca8bkTCdMneXf',$,$,$,$,$,$,$,$);
-#9=IFCBEAM('2p$vFGmN16ph28D3CBDkJE',$,$,$,$,$,$,$,$);
-#10=IFCRELAGGREGATES('0upIhFj8L1gvWaZCoNZa31',$,$,$,#7,(#8));
-#11=IFCRELAGGREGATES('1Mc4apqh92CAAfd2zwVblr',$,$,$,#8,(#9));
-#12=IFCELEMENTASSEMBLY('0N5j0KIfv0WATOitVZt6Bf',$,$,$,$,$,$,$,$,$); /* Testcase */
-#13=IFCGROUP('0BvP02Pf17UAOxyvD0LmfW',$,'Unnamed','',$);
-#14=IFCRELASSIGNSTOGROUP('261gu6Smz1vOWRZ0S3Ba2Y',$,$,$,(#12),$,#13);
+#1=IFCELEMENTASSEMBLY('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$,$);
+#2=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#3=IFCRELAGGREGATES('0eA6m4fELI9QBIhP3wiLAp',$,$,$,#1,(#2));
+#4=IFCSLAB('05rScmOVzMoQXOfbYdtLYj',$,$,$,$,$,$,$,$);
+#5=IFCBEAM('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#6=IFCRELAGGREGATES('0BbkGoC6vPvRW13UT7D8zH',$,$,$,#4,(#5));
+#7=IFCELEMENTASSEMBLY('3dn5FxJ$bKte8lL5dru6xn',$,$,$,$,$,$,$,$,$);
+#8=IFCSLAB('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#9=IFCBEAM('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
+#10=IFCRELAGGREGATES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,#7,(#8));
+#11=IFCRELAGGREGATES('0WTUhjMwvT39YBFH2pryoM',$,$,$,#8,(#9));
+#12=IFCELEMENTASSEMBLY('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$,$); /* Testcase */
+#13=IFCGROUP('3b0AoFivPN6RDJO6UL_GfZ',$,'Unnamed','',$);
+#14=IFCRELASSIGNSTOGROUP('1UJX0DW6PGVvNXUEmD0sBq',$,$,$,(#12),$,#13);
 ~~~
 
-[Sample IDS](testcases/pass-a_grouped_element_passes_a_group_relationship.ids) - [Sample IFC: 12](testcases/pass-a_grouped_element_passes_a_group_relationship.ifc)
+[Sample IDS](testcases/partof/pass-a_grouped_element_passes_a_group_relationship.ids) - [Sample IFC: 12](testcases/partof/pass-a_grouped_element_passes_a_group_relationship.ifc)
 
 ## [FAIL] A group entity must match exactly 1/2
 
@@ -171,26 +227,26 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCELEMENTASSEMBLY('3q6Vcv2QX9pv9jn7w1Tkfy',$,$,$,$,$,$,$,$,$);
-#2=IFCWALL('1xzuRQJTbATh5HU$lje803',$,$,$,$,$,$,$,$);
-#3=IFCRELAGGREGATES('3WbNxN2WH6jPcntlmw1Y_g',$,$,$,#1,(#2));
-#4=IFCSLAB('2iKCmqMGjETeuISTotOcx6',$,$,$,$,$,$,$,$);
-#5=IFCBEAM('2YGdsKUi99Eu4wAe6IZM6_',$,$,$,$,$,$,$,$);
-#6=IFCRELAGGREGATES('3aaOK736L0WOR3R$pdAKUx',$,$,$,#4,(#5));
-#7=IFCELEMENTASSEMBLY('12_vEf7ZT0auJQi6tnfI1z',$,$,$,$,$,$,$,$,$);
-#8=IFCSLAB('2tXathYg5Ca8bkTCdMneXf',$,$,$,$,$,$,$,$);
-#9=IFCBEAM('2p$vFGmN16ph28D3CBDkJE',$,$,$,$,$,$,$,$);
-#10=IFCRELAGGREGATES('0upIhFj8L1gvWaZCoNZa31',$,$,$,#7,(#8));
-#11=IFCRELAGGREGATES('1Mc4apqh92CAAfd2zwVblr',$,$,$,#8,(#9));
-#12=IFCELEMENTASSEMBLY('0N5j0KIfv0WATOitVZt6Bf',$,$,$,$,$,$,$,$,$);
-#13=IFCGROUP('0BvP02Pf17UAOxyvD0LmfW',$,'Unnamed','',$);
-#14=IFCRELASSIGNSTOGROUP('261gu6Smz1vOWRZ0S3Ba2Y',$,$,$,(#12),$,#13);
-#15=IFCELEMENTASSEMBLY('0gUz2msXPEiv3NLfIhImkC',$,$,$,$,$,$,$,$,$); /* Testcase */
-#16=IFCINVENTORY('21Ezrgpor4UgWptGTHouue',$,$,$,$,$,$,$,$,$,$);
-#17=IFCRELASSIGNSTOGROUP('0B30NYivz3rPOyv5uMxb9U',$,$,$,(#15),$,#16);
+#1=IFCELEMENTASSEMBLY('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$,$);
+#2=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#3=IFCRELAGGREGATES('0eA6m4fELI9QBIhP3wiLAp',$,$,$,#1,(#2));
+#4=IFCSLAB('05rScmOVzMoQXOfbYdtLYj',$,$,$,$,$,$,$,$);
+#5=IFCBEAM('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#6=IFCRELAGGREGATES('0BbkGoC6vPvRW13UT7D8zH',$,$,$,#4,(#5));
+#7=IFCELEMENTASSEMBLY('3dn5FxJ$bKte8lL5dru6xn',$,$,$,$,$,$,$,$,$);
+#8=IFCSLAB('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#9=IFCBEAM('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
+#10=IFCRELAGGREGATES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,#7,(#8));
+#11=IFCRELAGGREGATES('0WTUhjMwvT39YBFH2pryoM',$,$,$,#8,(#9));
+#12=IFCELEMENTASSEMBLY('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$,$);
+#13=IFCGROUP('3b0AoFivPN6RDJO6UL_GfZ',$,'Unnamed','',$);
+#14=IFCRELASSIGNSTOGROUP('1UJX0DW6PGVvNXUEmD0sBq',$,$,$,(#12),$,#13);
+#15=IFCELEMENTASSEMBLY('0zOgnThXbJ18CK0JKHikvt',$,$,$,$,$,$,$,$,$); /* Testcase */
+#16=IFCINVENTORY('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$,$,$);
+#17=IFCRELASSIGNSTOGROUP('1X7Mz0AZrMOPkukNM5XTEV',$,$,$,(#15),$,#16);
 ~~~
 
-[Sample IDS](testcases/fail-a_group_entity_must_match_exactly_1_2.ids) - [Sample IFC: 15](testcases/fail-a_group_entity_must_match_exactly_1_2.ifc)
+[Sample IDS](testcases/partof/fail-a_group_entity_must_match_exactly_1_2.ids) - [Sample IFC: 15](testcases/partof/fail-a_group_entity_must_match_exactly_1_2.ifc)
 
 ## [PASS] A group entity must match exactly 2/2
 
@@ -203,26 +259,26 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCELEMENTASSEMBLY('3q6Vcv2QX9pv9jn7w1Tkfy',$,$,$,$,$,$,$,$,$);
-#2=IFCWALL('1xzuRQJTbATh5HU$lje803',$,$,$,$,$,$,$,$);
-#3=IFCRELAGGREGATES('3WbNxN2WH6jPcntlmw1Y_g',$,$,$,#1,(#2));
-#4=IFCSLAB('2iKCmqMGjETeuISTotOcx6',$,$,$,$,$,$,$,$);
-#5=IFCBEAM('2YGdsKUi99Eu4wAe6IZM6_',$,$,$,$,$,$,$,$);
-#6=IFCRELAGGREGATES('3aaOK736L0WOR3R$pdAKUx',$,$,$,#4,(#5));
-#7=IFCELEMENTASSEMBLY('12_vEf7ZT0auJQi6tnfI1z',$,$,$,$,$,$,$,$,$);
-#8=IFCSLAB('2tXathYg5Ca8bkTCdMneXf',$,$,$,$,$,$,$,$);
-#9=IFCBEAM('2p$vFGmN16ph28D3CBDkJE',$,$,$,$,$,$,$,$);
-#10=IFCRELAGGREGATES('0upIhFj8L1gvWaZCoNZa31',$,$,$,#7,(#8));
-#11=IFCRELAGGREGATES('1Mc4apqh92CAAfd2zwVblr',$,$,$,#8,(#9));
-#12=IFCELEMENTASSEMBLY('0N5j0KIfv0WATOitVZt6Bf',$,$,$,$,$,$,$,$,$);
-#13=IFCGROUP('0BvP02Pf17UAOxyvD0LmfW',$,'Unnamed','',$);
-#14=IFCRELASSIGNSTOGROUP('261gu6Smz1vOWRZ0S3Ba2Y',$,$,$,(#12),$,#13);
-#15=IFCELEMENTASSEMBLY('0gUz2msXPEiv3NLfIhImkC',$,$,$,$,$,$,$,$,$); /* Testcase */
-#16=IFCINVENTORY('21Ezrgpor4UgWptGTHouue',$,$,$,$,$,$,$,$,$,$);
-#17=IFCRELASSIGNSTOGROUP('0B30NYivz3rPOyv5uMxb9U',$,$,$,(#15),$,#16);
+#1=IFCELEMENTASSEMBLY('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$,$);
+#2=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#3=IFCRELAGGREGATES('0eA6m4fELI9QBIhP3wiLAp',$,$,$,#1,(#2));
+#4=IFCSLAB('05rScmOVzMoQXOfbYdtLYj',$,$,$,$,$,$,$,$);
+#5=IFCBEAM('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#6=IFCRELAGGREGATES('0BbkGoC6vPvRW13UT7D8zH',$,$,$,#4,(#5));
+#7=IFCELEMENTASSEMBLY('3dn5FxJ$bKte8lL5dru6xn',$,$,$,$,$,$,$,$,$);
+#8=IFCSLAB('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#9=IFCBEAM('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
+#10=IFCRELAGGREGATES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,#7,(#8));
+#11=IFCRELAGGREGATES('0WTUhjMwvT39YBFH2pryoM',$,$,$,#8,(#9));
+#12=IFCELEMENTASSEMBLY('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$,$);
+#13=IFCGROUP('3b0AoFivPN6RDJO6UL_GfZ',$,'Unnamed','',$);
+#14=IFCRELASSIGNSTOGROUP('1UJX0DW6PGVvNXUEmD0sBq',$,$,$,(#12),$,#13);
+#15=IFCELEMENTASSEMBLY('0zOgnThXbJ18CK0JKHikvt',$,$,$,$,$,$,$,$,$); /* Testcase */
+#16=IFCINVENTORY('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$,$,$);
+#17=IFCRELASSIGNSTOGROUP('1X7Mz0AZrMOPkukNM5XTEV',$,$,$,(#15),$,#16);
 ~~~
 
-[Sample IDS](testcases/pass-a_group_entity_must_match_exactly_2_2.ids) - [Sample IFC: 15](testcases/pass-a_group_entity_must_match_exactly_2_2.ifc)
+[Sample IDS](testcases/partof/pass-a_group_entity_must_match_exactly_2_2.ids) - [Sample IFC: 15](testcases/partof/pass-a_group_entity_must_match_exactly_2_2.ifc)
 
 ## [FAIL] Any contained element passes a containment relationship 1/2
 
@@ -231,28 +287,28 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCELEMENTASSEMBLY('3q6Vcv2QX9pv9jn7w1Tkfy',$,$,$,$,$,$,$,$,$);
-#2=IFCWALL('1xzuRQJTbATh5HU$lje803',$,$,$,$,$,$,$,$);
-#3=IFCRELAGGREGATES('3WbNxN2WH6jPcntlmw1Y_g',$,$,$,#1,(#2));
-#4=IFCSLAB('2iKCmqMGjETeuISTotOcx6',$,$,$,$,$,$,$,$);
-#5=IFCBEAM('2YGdsKUi99Eu4wAe6IZM6_',$,$,$,$,$,$,$,$);
-#6=IFCRELAGGREGATES('3aaOK736L0WOR3R$pdAKUx',$,$,$,#4,(#5));
-#7=IFCELEMENTASSEMBLY('12_vEf7ZT0auJQi6tnfI1z',$,$,$,$,$,$,$,$,$);
-#8=IFCSLAB('2tXathYg5Ca8bkTCdMneXf',$,$,$,$,$,$,$,$);
-#9=IFCBEAM('2p$vFGmN16ph28D3CBDkJE',$,$,$,$,$,$,$,$);
-#10=IFCRELAGGREGATES('0upIhFj8L1gvWaZCoNZa31',$,$,$,#7,(#8));
-#11=IFCRELAGGREGATES('1Mc4apqh92CAAfd2zwVblr',$,$,$,#8,(#9));
-#12=IFCELEMENTASSEMBLY('0N5j0KIfv0WATOitVZt6Bf',$,$,$,$,$,$,$,$,$);
-#13=IFCGROUP('0BvP02Pf17UAOxyvD0LmfW',$,'Unnamed','',$);
-#14=IFCRELASSIGNSTOGROUP('261gu6Smz1vOWRZ0S3Ba2Y',$,$,$,(#12),$,#13);
-#15=IFCELEMENTASSEMBLY('0gUz2msXPEiv3NLfIhImkC',$,$,$,$,$,$,$,$,$);
-#16=IFCINVENTORY('21Ezrgpor4UgWptGTHouue',$,$,$,$,$,$,$,$,$,$);
-#17=IFCRELASSIGNSTOGROUP('0B30NYivz3rPOyv5uMxb9U',$,$,$,(#15),$,#16);
-#18=IFCELEMENTASSEMBLY('1dJMo3PRXFKOX_q4AEsvXA',$,$,$,$,$,$,$,$,$); /* Testcase */
-#19=IFCSPACE('15jGVMw2D5Rx5WgmIHw1CE',$,$,$,$,$,$,$,$,$,$);
+#1=IFCELEMENTASSEMBLY('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$,$);
+#2=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#3=IFCRELAGGREGATES('0eA6m4fELI9QBIhP3wiLAp',$,$,$,#1,(#2));
+#4=IFCSLAB('05rScmOVzMoQXOfbYdtLYj',$,$,$,$,$,$,$,$);
+#5=IFCBEAM('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#6=IFCRELAGGREGATES('0BbkGoC6vPvRW13UT7D8zH',$,$,$,#4,(#5));
+#7=IFCELEMENTASSEMBLY('3dn5FxJ$bKte8lL5dru6xn',$,$,$,$,$,$,$,$,$);
+#8=IFCSLAB('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#9=IFCBEAM('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
+#10=IFCRELAGGREGATES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,#7,(#8));
+#11=IFCRELAGGREGATES('0WTUhjMwvT39YBFH2pryoM',$,$,$,#8,(#9));
+#12=IFCELEMENTASSEMBLY('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$,$);
+#13=IFCGROUP('3b0AoFivPN6RDJO6UL_GfZ',$,'Unnamed','',$);
+#14=IFCRELASSIGNSTOGROUP('1UJX0DW6PGVvNXUEmD0sBq',$,$,$,(#12),$,#13);
+#15=IFCELEMENTASSEMBLY('0zOgnThXbJ18CK0JKHikvt',$,$,$,$,$,$,$,$,$);
+#16=IFCINVENTORY('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$,$,$);
+#17=IFCRELASSIGNSTOGROUP('1X7Mz0AZrMOPkukNM5XTEV',$,$,$,(#15),$,#16);
+#18=IFCELEMENTASSEMBLY('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$,$); /* Testcase */
+#19=IFCSPACE('3qs_CEYznSwfyPnfvmY$jn',$,$,$,$,$,$,$,$,$,$);
 ~~~
 
-[Sample IDS](testcases/fail-any_contained_element_passes_a_containment_relationship_1_2.ids) - [Sample IFC: 18](testcases/fail-any_contained_element_passes_a_containment_relationship_1_2.ifc)
+[Sample IDS](testcases/partof/fail-any_contained_element_passes_a_containment_relationship_1_2.ids) - [Sample IFC: 18](testcases/partof/fail-any_contained_element_passes_a_containment_relationship_1_2.ifc)
 
 ## [PASS] Any contained element passes a containment relationship 2/2
 
@@ -261,29 +317,29 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCELEMENTASSEMBLY('3q6Vcv2QX9pv9jn7w1Tkfy',$,$,$,$,$,$,$,$,$);
-#2=IFCWALL('1xzuRQJTbATh5HU$lje803',$,$,$,$,$,$,$,$);
-#3=IFCRELAGGREGATES('3WbNxN2WH6jPcntlmw1Y_g',$,$,$,#1,(#2));
-#4=IFCSLAB('2iKCmqMGjETeuISTotOcx6',$,$,$,$,$,$,$,$);
-#5=IFCBEAM('2YGdsKUi99Eu4wAe6IZM6_',$,$,$,$,$,$,$,$);
-#6=IFCRELAGGREGATES('3aaOK736L0WOR3R$pdAKUx',$,$,$,#4,(#5));
-#7=IFCELEMENTASSEMBLY('12_vEf7ZT0auJQi6tnfI1z',$,$,$,$,$,$,$,$,$);
-#8=IFCSLAB('2tXathYg5Ca8bkTCdMneXf',$,$,$,$,$,$,$,$);
-#9=IFCBEAM('2p$vFGmN16ph28D3CBDkJE',$,$,$,$,$,$,$,$);
-#10=IFCRELAGGREGATES('0upIhFj8L1gvWaZCoNZa31',$,$,$,#7,(#8));
-#11=IFCRELAGGREGATES('1Mc4apqh92CAAfd2zwVblr',$,$,$,#8,(#9));
-#12=IFCELEMENTASSEMBLY('0N5j0KIfv0WATOitVZt6Bf',$,$,$,$,$,$,$,$,$);
-#13=IFCGROUP('0BvP02Pf17UAOxyvD0LmfW',$,'Unnamed','',$);
-#14=IFCRELASSIGNSTOGROUP('261gu6Smz1vOWRZ0S3Ba2Y',$,$,$,(#12),$,#13);
-#15=IFCELEMENTASSEMBLY('0gUz2msXPEiv3NLfIhImkC',$,$,$,$,$,$,$,$,$);
-#16=IFCINVENTORY('21Ezrgpor4UgWptGTHouue',$,$,$,$,$,$,$,$,$,$);
-#17=IFCRELASSIGNSTOGROUP('0B30NYivz3rPOyv5uMxb9U',$,$,$,(#15),$,#16);
-#18=IFCELEMENTASSEMBLY('1dJMo3PRXFKOX_q4AEsvXA',$,$,$,$,$,$,$,$,$); /* Testcase */
-#19=IFCSPACE('15jGVMw2D5Rx5WgmIHw1CE',$,$,$,$,$,$,$,$,$,$);
-#20=IFCRELCONTAINEDINSPATIALSTRUCTURE('1JrlbVSNfAmg7bAe1B4H$e',$,$,$,(#18),#19);
+#1=IFCELEMENTASSEMBLY('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$,$);
+#2=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#3=IFCRELAGGREGATES('0eA6m4fELI9QBIhP3wiLAp',$,$,$,#1,(#2));
+#4=IFCSLAB('05rScmOVzMoQXOfbYdtLYj',$,$,$,$,$,$,$,$);
+#5=IFCBEAM('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#6=IFCRELAGGREGATES('0BbkGoC6vPvRW13UT7D8zH',$,$,$,#4,(#5));
+#7=IFCELEMENTASSEMBLY('3dn5FxJ$bKte8lL5dru6xn',$,$,$,$,$,$,$,$,$);
+#8=IFCSLAB('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#9=IFCBEAM('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
+#10=IFCRELAGGREGATES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,#7,(#8));
+#11=IFCRELAGGREGATES('0WTUhjMwvT39YBFH2pryoM',$,$,$,#8,(#9));
+#12=IFCELEMENTASSEMBLY('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$,$);
+#13=IFCGROUP('3b0AoFivPN6RDJO6UL_GfZ',$,'Unnamed','',$);
+#14=IFCRELASSIGNSTOGROUP('1UJX0DW6PGVvNXUEmD0sBq',$,$,$,(#12),$,#13);
+#15=IFCELEMENTASSEMBLY('0zOgnThXbJ18CK0JKHikvt',$,$,$,$,$,$,$,$,$);
+#16=IFCINVENTORY('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$,$,$);
+#17=IFCRELASSIGNSTOGROUP('1X7Mz0AZrMOPkukNM5XTEV',$,$,$,(#15),$,#16);
+#18=IFCELEMENTASSEMBLY('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$,$); /* Testcase */
+#19=IFCSPACE('3qs_CEYznSwfyPnfvmY$jn',$,$,$,$,$,$,$,$,$,$);
+#20=IFCRELCONTAINEDINSPATIALSTRUCTURE('2J464n_AnPNgUfYvzrChAh',$,$,$,(#18),#19);
 ~~~
 
-[Sample IDS](testcases/pass-any_contained_element_passes_a_containment_relationship_2_2.ids) - [Sample IFC: 18](testcases/pass-any_contained_element_passes_a_containment_relationship_2_2.ifc)
+[Sample IDS](testcases/partof/pass-any_contained_element_passes_a_containment_relationship_2_2.ids) - [Sample IFC: 18](testcases/partof/pass-any_contained_element_passes_a_containment_relationship_2_2.ifc)
 
 ## [FAIL] The container itself always fails
 
@@ -292,29 +348,29 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCELEMENTASSEMBLY('3q6Vcv2QX9pv9jn7w1Tkfy',$,$,$,$,$,$,$,$,$);
-#2=IFCWALL('1xzuRQJTbATh5HU$lje803',$,$,$,$,$,$,$,$);
-#3=IFCRELAGGREGATES('3WbNxN2WH6jPcntlmw1Y_g',$,$,$,#1,(#2));
-#4=IFCSLAB('2iKCmqMGjETeuISTotOcx6',$,$,$,$,$,$,$,$);
-#5=IFCBEAM('2YGdsKUi99Eu4wAe6IZM6_',$,$,$,$,$,$,$,$);
-#6=IFCRELAGGREGATES('3aaOK736L0WOR3R$pdAKUx',$,$,$,#4,(#5));
-#7=IFCELEMENTASSEMBLY('12_vEf7ZT0auJQi6tnfI1z',$,$,$,$,$,$,$,$,$);
-#8=IFCSLAB('2tXathYg5Ca8bkTCdMneXf',$,$,$,$,$,$,$,$);
-#9=IFCBEAM('2p$vFGmN16ph28D3CBDkJE',$,$,$,$,$,$,$,$);
-#10=IFCRELAGGREGATES('0upIhFj8L1gvWaZCoNZa31',$,$,$,#7,(#8));
-#11=IFCRELAGGREGATES('1Mc4apqh92CAAfd2zwVblr',$,$,$,#8,(#9));
-#12=IFCELEMENTASSEMBLY('0N5j0KIfv0WATOitVZt6Bf',$,$,$,$,$,$,$,$,$);
-#13=IFCGROUP('0BvP02Pf17UAOxyvD0LmfW',$,'Unnamed','',$);
-#14=IFCRELASSIGNSTOGROUP('261gu6Smz1vOWRZ0S3Ba2Y',$,$,$,(#12),$,#13);
-#15=IFCELEMENTASSEMBLY('0gUz2msXPEiv3NLfIhImkC',$,$,$,$,$,$,$,$,$);
-#16=IFCINVENTORY('21Ezrgpor4UgWptGTHouue',$,$,$,$,$,$,$,$,$,$);
-#17=IFCRELASSIGNSTOGROUP('0B30NYivz3rPOyv5uMxb9U',$,$,$,(#15),$,#16);
-#18=IFCELEMENTASSEMBLY('1dJMo3PRXFKOX_q4AEsvXA',$,$,$,$,$,$,$,$,$);
-#19=IFCSPACE('15jGVMw2D5Rx5WgmIHw1CE',$,$,$,$,$,$,$,$,$,$); /* Testcase */
-#20=IFCRELCONTAINEDINSPATIALSTRUCTURE('1JrlbVSNfAmg7bAe1B4H$e',$,$,$,(#18),#19);
+#1=IFCELEMENTASSEMBLY('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$,$);
+#2=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#3=IFCRELAGGREGATES('0eA6m4fELI9QBIhP3wiLAp',$,$,$,#1,(#2));
+#4=IFCSLAB('05rScmOVzMoQXOfbYdtLYj',$,$,$,$,$,$,$,$);
+#5=IFCBEAM('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#6=IFCRELAGGREGATES('0BbkGoC6vPvRW13UT7D8zH',$,$,$,#4,(#5));
+#7=IFCELEMENTASSEMBLY('3dn5FxJ$bKte8lL5dru6xn',$,$,$,$,$,$,$,$,$);
+#8=IFCSLAB('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#9=IFCBEAM('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
+#10=IFCRELAGGREGATES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,#7,(#8));
+#11=IFCRELAGGREGATES('0WTUhjMwvT39YBFH2pryoM',$,$,$,#8,(#9));
+#12=IFCELEMENTASSEMBLY('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$,$);
+#13=IFCGROUP('3b0AoFivPN6RDJO6UL_GfZ',$,'Unnamed','',$);
+#14=IFCRELASSIGNSTOGROUP('1UJX0DW6PGVvNXUEmD0sBq',$,$,$,(#12),$,#13);
+#15=IFCELEMENTASSEMBLY('0zOgnThXbJ18CK0JKHikvt',$,$,$,$,$,$,$,$,$);
+#16=IFCINVENTORY('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$,$,$);
+#17=IFCRELASSIGNSTOGROUP('1X7Mz0AZrMOPkukNM5XTEV',$,$,$,(#15),$,#16);
+#18=IFCELEMENTASSEMBLY('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$,$);
+#19=IFCSPACE('3qs_CEYznSwfyPnfvmY$jn',$,$,$,$,$,$,$,$,$,$); /* Testcase */
+#20=IFCRELCONTAINEDINSPATIALSTRUCTURE('2J464n_AnPNgUfYvzrChAh',$,$,$,(#18),#19);
 ~~~
 
-[Sample IDS](testcases/fail-the_container_itself_always_fails.ids) - [Sample IFC: 19](testcases/fail-the_container_itself_always_fails.ifc)
+[Sample IDS](testcases/partof/fail-the_container_itself_always_fails.ids) - [Sample IFC: 19](testcases/partof/fail-the_container_itself_always_fails.ifc)
 
 ## [FAIL] The container entity must match exactly 1/2
 
@@ -327,32 +383,32 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCELEMENTASSEMBLY('3q6Vcv2QX9pv9jn7w1Tkfy',$,$,$,$,$,$,$,$,$);
-#2=IFCWALL('1xzuRQJTbATh5HU$lje803',$,$,$,$,$,$,$,$);
-#3=IFCRELAGGREGATES('3WbNxN2WH6jPcntlmw1Y_g',$,$,$,#1,(#2));
-#4=IFCSLAB('2iKCmqMGjETeuISTotOcx6',$,$,$,$,$,$,$,$);
-#5=IFCBEAM('2YGdsKUi99Eu4wAe6IZM6_',$,$,$,$,$,$,$,$);
-#6=IFCRELAGGREGATES('3aaOK736L0WOR3R$pdAKUx',$,$,$,#4,(#5));
-#7=IFCELEMENTASSEMBLY('12_vEf7ZT0auJQi6tnfI1z',$,$,$,$,$,$,$,$,$);
-#8=IFCSLAB('2tXathYg5Ca8bkTCdMneXf',$,$,$,$,$,$,$,$);
-#9=IFCBEAM('2p$vFGmN16ph28D3CBDkJE',$,$,$,$,$,$,$,$);
-#10=IFCRELAGGREGATES('0upIhFj8L1gvWaZCoNZa31',$,$,$,#7,(#8));
-#11=IFCRELAGGREGATES('1Mc4apqh92CAAfd2zwVblr',$,$,$,#8,(#9));
-#12=IFCELEMENTASSEMBLY('0N5j0KIfv0WATOitVZt6Bf',$,$,$,$,$,$,$,$,$);
-#13=IFCGROUP('0BvP02Pf17UAOxyvD0LmfW',$,'Unnamed','',$);
-#14=IFCRELASSIGNSTOGROUP('261gu6Smz1vOWRZ0S3Ba2Y',$,$,$,(#12),$,#13);
-#15=IFCELEMENTASSEMBLY('0gUz2msXPEiv3NLfIhImkC',$,$,$,$,$,$,$,$,$);
-#16=IFCINVENTORY('21Ezrgpor4UgWptGTHouue',$,$,$,$,$,$,$,$,$,$);
-#17=IFCRELASSIGNSTOGROUP('0B30NYivz3rPOyv5uMxb9U',$,$,$,(#15),$,#16);
-#18=IFCELEMENTASSEMBLY('1dJMo3PRXFKOX_q4AEsvXA',$,$,$,$,$,$,$,$,$);
-#19=IFCSPACE('15jGVMw2D5Rx5WgmIHw1CE',$,$,$,$,$,$,$,$,$,$);
-#20=IFCRELCONTAINEDINSPATIALSTRUCTURE('1JrlbVSNfAmg7bAe1B4H$e',$,$,$,(#18),#19);
-#21=IFCELEMENTASSEMBLY('25WIZPWNf4WBt24spo0PkM',$,$,$,$,$,$,$,$,$); /* Testcase */
-#22=IFCSPACE('0ITiTI8ub12v8IJUucupNo',$,$,$,$,$,$,$,$,$,$);
-#23=IFCRELCONTAINEDINSPATIALSTRUCTURE('23nLQQQ0T2sR_$9OOJVm7A',$,$,$,(#21),#22);
+#1=IFCELEMENTASSEMBLY('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$,$);
+#2=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#3=IFCRELAGGREGATES('0eA6m4fELI9QBIhP3wiLAp',$,$,$,#1,(#2));
+#4=IFCSLAB('05rScmOVzMoQXOfbYdtLYj',$,$,$,$,$,$,$,$);
+#5=IFCBEAM('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#6=IFCRELAGGREGATES('0BbkGoC6vPvRW13UT7D8zH',$,$,$,#4,(#5));
+#7=IFCELEMENTASSEMBLY('3dn5FxJ$bKte8lL5dru6xn',$,$,$,$,$,$,$,$,$);
+#8=IFCSLAB('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#9=IFCBEAM('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
+#10=IFCRELAGGREGATES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,#7,(#8));
+#11=IFCRELAGGREGATES('0WTUhjMwvT39YBFH2pryoM',$,$,$,#8,(#9));
+#12=IFCELEMENTASSEMBLY('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$,$);
+#13=IFCGROUP('3b0AoFivPN6RDJO6UL_GfZ',$,'Unnamed','',$);
+#14=IFCRELASSIGNSTOGROUP('1UJX0DW6PGVvNXUEmD0sBq',$,$,$,(#12),$,#13);
+#15=IFCELEMENTASSEMBLY('0zOgnThXbJ18CK0JKHikvt',$,$,$,$,$,$,$,$,$);
+#16=IFCINVENTORY('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$,$,$);
+#17=IFCRELASSIGNSTOGROUP('1X7Mz0AZrMOPkukNM5XTEV',$,$,$,(#15),$,#16);
+#18=IFCELEMENTASSEMBLY('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$,$);
+#19=IFCSPACE('3qs_CEYznSwfyPnfvmY$jn',$,$,$,$,$,$,$,$,$,$);
+#20=IFCRELCONTAINEDINSPATIALSTRUCTURE('2J464n_AnPNgUfYvzrChAh',$,$,$,(#18),#19);
+#21=IFCELEMENTASSEMBLY('3NmyAazpzLq8cIG7JPLlM9',$,$,$,$,$,$,$,$,$); /* Testcase */
+#22=IFCSPACE('3Wzl48UnnIp8YxtLF4v8ZP',$,$,$,$,$,$,$,$,$,$);
+#23=IFCRELCONTAINEDINSPATIALSTRUCTURE('25g_sgGv1Ktw1yG4pu$Q5F',$,$,$,(#21),#22);
 ~~~
 
-[Sample IDS](testcases/fail-the_container_entity_must_match_exactly_1_2.ids) - [Sample IFC: 21](testcases/fail-the_container_entity_must_match_exactly_1_2.ifc)
+[Sample IDS](testcases/partof/fail-the_container_entity_must_match_exactly_1_2.ids) - [Sample IFC: 21](testcases/partof/fail-the_container_entity_must_match_exactly_1_2.ifc)
 
 ## [PASS] The container entity must match exactly 2/2
 
@@ -365,32 +421,32 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCELEMENTASSEMBLY('3q6Vcv2QX9pv9jn7w1Tkfy',$,$,$,$,$,$,$,$,$);
-#2=IFCWALL('1xzuRQJTbATh5HU$lje803',$,$,$,$,$,$,$,$);
-#3=IFCRELAGGREGATES('3WbNxN2WH6jPcntlmw1Y_g',$,$,$,#1,(#2));
-#4=IFCSLAB('2iKCmqMGjETeuISTotOcx6',$,$,$,$,$,$,$,$);
-#5=IFCBEAM('2YGdsKUi99Eu4wAe6IZM6_',$,$,$,$,$,$,$,$);
-#6=IFCRELAGGREGATES('3aaOK736L0WOR3R$pdAKUx',$,$,$,#4,(#5));
-#7=IFCELEMENTASSEMBLY('12_vEf7ZT0auJQi6tnfI1z',$,$,$,$,$,$,$,$,$);
-#8=IFCSLAB('2tXathYg5Ca8bkTCdMneXf',$,$,$,$,$,$,$,$);
-#9=IFCBEAM('2p$vFGmN16ph28D3CBDkJE',$,$,$,$,$,$,$,$);
-#10=IFCRELAGGREGATES('0upIhFj8L1gvWaZCoNZa31',$,$,$,#7,(#8));
-#11=IFCRELAGGREGATES('1Mc4apqh92CAAfd2zwVblr',$,$,$,#8,(#9));
-#12=IFCELEMENTASSEMBLY('0N5j0KIfv0WATOitVZt6Bf',$,$,$,$,$,$,$,$,$);
-#13=IFCGROUP('0BvP02Pf17UAOxyvD0LmfW',$,'Unnamed','',$);
-#14=IFCRELASSIGNSTOGROUP('261gu6Smz1vOWRZ0S3Ba2Y',$,$,$,(#12),$,#13);
-#15=IFCELEMENTASSEMBLY('0gUz2msXPEiv3NLfIhImkC',$,$,$,$,$,$,$,$,$);
-#16=IFCINVENTORY('21Ezrgpor4UgWptGTHouue',$,$,$,$,$,$,$,$,$,$);
-#17=IFCRELASSIGNSTOGROUP('0B30NYivz3rPOyv5uMxb9U',$,$,$,(#15),$,#16);
-#18=IFCELEMENTASSEMBLY('1dJMo3PRXFKOX_q4AEsvXA',$,$,$,$,$,$,$,$,$);
-#19=IFCSPACE('15jGVMw2D5Rx5WgmIHw1CE',$,$,$,$,$,$,$,$,$,$);
-#20=IFCRELCONTAINEDINSPATIALSTRUCTURE('1JrlbVSNfAmg7bAe1B4H$e',$,$,$,(#18),#19);
-#21=IFCELEMENTASSEMBLY('25WIZPWNf4WBt24spo0PkM',$,$,$,$,$,$,$,$,$); /* Testcase */
-#22=IFCSPACE('0ITiTI8ub12v8IJUucupNo',$,$,$,$,$,$,$,$,$,$);
-#23=IFCRELCONTAINEDINSPATIALSTRUCTURE('23nLQQQ0T2sR_$9OOJVm7A',$,$,$,(#21),#22);
+#1=IFCELEMENTASSEMBLY('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$,$);
+#2=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#3=IFCRELAGGREGATES('0eA6m4fELI9QBIhP3wiLAp',$,$,$,#1,(#2));
+#4=IFCSLAB('05rScmOVzMoQXOfbYdtLYj',$,$,$,$,$,$,$,$);
+#5=IFCBEAM('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#6=IFCRELAGGREGATES('0BbkGoC6vPvRW13UT7D8zH',$,$,$,#4,(#5));
+#7=IFCELEMENTASSEMBLY('3dn5FxJ$bKte8lL5dru6xn',$,$,$,$,$,$,$,$,$);
+#8=IFCSLAB('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#9=IFCBEAM('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
+#10=IFCRELAGGREGATES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,#7,(#8));
+#11=IFCRELAGGREGATES('0WTUhjMwvT39YBFH2pryoM',$,$,$,#8,(#9));
+#12=IFCELEMENTASSEMBLY('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$,$);
+#13=IFCGROUP('3b0AoFivPN6RDJO6UL_GfZ',$,'Unnamed','',$);
+#14=IFCRELASSIGNSTOGROUP('1UJX0DW6PGVvNXUEmD0sBq',$,$,$,(#12),$,#13);
+#15=IFCELEMENTASSEMBLY('0zOgnThXbJ18CK0JKHikvt',$,$,$,$,$,$,$,$,$);
+#16=IFCINVENTORY('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$,$,$);
+#17=IFCRELASSIGNSTOGROUP('1X7Mz0AZrMOPkukNM5XTEV',$,$,$,(#15),$,#16);
+#18=IFCELEMENTASSEMBLY('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$,$);
+#19=IFCSPACE('3qs_CEYznSwfyPnfvmY$jn',$,$,$,$,$,$,$,$,$,$);
+#20=IFCRELCONTAINEDINSPATIALSTRUCTURE('2J464n_AnPNgUfYvzrChAh',$,$,$,(#18),#19);
+#21=IFCELEMENTASSEMBLY('3NmyAazpzLq8cIG7JPLlM9',$,$,$,$,$,$,$,$,$); /* Testcase */
+#22=IFCSPACE('3Wzl48UnnIp8YxtLF4v8ZP',$,$,$,$,$,$,$,$,$,$);
+#23=IFCRELCONTAINEDINSPATIALSTRUCTURE('25g_sgGv1Ktw1yG4pu$Q5F',$,$,$,(#21),#22);
 ~~~
 
-[Sample IDS](testcases/pass-the_container_entity_must_match_exactly_2_2.ids) - [Sample IFC: 21](testcases/pass-the_container_entity_must_match_exactly_2_2.ifc)
+[Sample IDS](testcases/partof/pass-the_container_entity_must_match_exactly_2_2.ids) - [Sample IFC: 21](testcases/partof/pass-the_container_entity_must_match_exactly_2_2.ifc)
 
 ## [PASS] The container may be indirect
 
@@ -403,37 +459,37 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCELEMENTASSEMBLY('3q6Vcv2QX9pv9jn7w1Tkfy',$,$,$,$,$,$,$,$,$);
-#2=IFCWALL('1xzuRQJTbATh5HU$lje803',$,$,$,$,$,$,$,$);
-#3=IFCRELAGGREGATES('3WbNxN2WH6jPcntlmw1Y_g',$,$,$,#1,(#2));
-#4=IFCSLAB('2iKCmqMGjETeuISTotOcx6',$,$,$,$,$,$,$,$);
-#5=IFCBEAM('2YGdsKUi99Eu4wAe6IZM6_',$,$,$,$,$,$,$,$);
-#6=IFCRELAGGREGATES('3aaOK736L0WOR3R$pdAKUx',$,$,$,#4,(#5));
-#7=IFCELEMENTASSEMBLY('12_vEf7ZT0auJQi6tnfI1z',$,$,$,$,$,$,$,$,$);
-#8=IFCSLAB('2tXathYg5Ca8bkTCdMneXf',$,$,$,$,$,$,$,$);
-#9=IFCBEAM('2p$vFGmN16ph28D3CBDkJE',$,$,$,$,$,$,$,$);
-#10=IFCRELAGGREGATES('0upIhFj8L1gvWaZCoNZa31',$,$,$,#7,(#8));
-#11=IFCRELAGGREGATES('1Mc4apqh92CAAfd2zwVblr',$,$,$,#8,(#9));
-#12=IFCELEMENTASSEMBLY('0N5j0KIfv0WATOitVZt6Bf',$,$,$,$,$,$,$,$,$);
-#13=IFCGROUP('0BvP02Pf17UAOxyvD0LmfW',$,'Unnamed','',$);
-#14=IFCRELASSIGNSTOGROUP('261gu6Smz1vOWRZ0S3Ba2Y',$,$,$,(#12),$,#13);
-#15=IFCELEMENTASSEMBLY('0gUz2msXPEiv3NLfIhImkC',$,$,$,$,$,$,$,$,$);
-#16=IFCINVENTORY('21Ezrgpor4UgWptGTHouue',$,$,$,$,$,$,$,$,$,$);
-#17=IFCRELASSIGNSTOGROUP('0B30NYivz3rPOyv5uMxb9U',$,$,$,(#15),$,#16);
-#18=IFCELEMENTASSEMBLY('1dJMo3PRXFKOX_q4AEsvXA',$,$,$,$,$,$,$,$,$);
-#19=IFCSPACE('15jGVMw2D5Rx5WgmIHw1CE',$,$,$,$,$,$,$,$,$,$);
-#20=IFCRELCONTAINEDINSPATIALSTRUCTURE('1JrlbVSNfAmg7bAe1B4H$e',$,$,$,(#18),#19);
-#21=IFCELEMENTASSEMBLY('25WIZPWNf4WBt24spo0PkM',$,$,$,$,$,$,$,$,$);
-#22=IFCSPACE('0ITiTI8ub12v8IJUucupNo',$,$,$,$,$,$,$,$,$,$);
-#23=IFCRELCONTAINEDINSPATIALSTRUCTURE('23nLQQQ0T2sR_$9OOJVm7A',$,$,$,(#21),#22);
-#24=IFCSLAB('0_5t08fajCCQczmmyB2aCj',$,$,$,$,$,$,$,$);
-#25=IFCBEAM('3yiC_yWOP3qeHgY5ujrm7F',$,$,$,$,$,$,$,$); /* Testcase */
-#26=IFCRELAGGREGATES('3P8JEaJOHCyvombwP650HS',$,$,$,#24,(#25));
-#27=IFCSPACE('1Ld8Y34895tgbpIfHIwdoP',$,$,$,$,$,$,$,$,$,$);
-#28=IFCRELCONTAINEDINSPATIALSTRUCTURE('1gYkvL73fE6xFLCFVynsqy',$,$,$,(#24),#27);
+#1=IFCELEMENTASSEMBLY('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$,$);
+#2=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#3=IFCRELAGGREGATES('0eA6m4fELI9QBIhP3wiLAp',$,$,$,#1,(#2));
+#4=IFCSLAB('05rScmOVzMoQXOfbYdtLYj',$,$,$,$,$,$,$,$);
+#5=IFCBEAM('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#6=IFCRELAGGREGATES('0BbkGoC6vPvRW13UT7D8zH',$,$,$,#4,(#5));
+#7=IFCELEMENTASSEMBLY('3dn5FxJ$bKte8lL5dru6xn',$,$,$,$,$,$,$,$,$);
+#8=IFCSLAB('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#9=IFCBEAM('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
+#10=IFCRELAGGREGATES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,#7,(#8));
+#11=IFCRELAGGREGATES('0WTUhjMwvT39YBFH2pryoM',$,$,$,#8,(#9));
+#12=IFCELEMENTASSEMBLY('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$,$);
+#13=IFCGROUP('3b0AoFivPN6RDJO6UL_GfZ',$,'Unnamed','',$);
+#14=IFCRELASSIGNSTOGROUP('1UJX0DW6PGVvNXUEmD0sBq',$,$,$,(#12),$,#13);
+#15=IFCELEMENTASSEMBLY('0zOgnThXbJ18CK0JKHikvt',$,$,$,$,$,$,$,$,$);
+#16=IFCINVENTORY('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$,$,$);
+#17=IFCRELASSIGNSTOGROUP('1X7Mz0AZrMOPkukNM5XTEV',$,$,$,(#15),$,#16);
+#18=IFCELEMENTASSEMBLY('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$,$);
+#19=IFCSPACE('3qs_CEYznSwfyPnfvmY$jn',$,$,$,$,$,$,$,$,$,$);
+#20=IFCRELCONTAINEDINSPATIALSTRUCTURE('2J464n_AnPNgUfYvzrChAh',$,$,$,(#18),#19);
+#21=IFCELEMENTASSEMBLY('3NmyAazpzLq8cIG7JPLlM9',$,$,$,$,$,$,$,$,$);
+#22=IFCSPACE('3Wzl48UnnIp8YxtLF4v8ZP',$,$,$,$,$,$,$,$,$,$);
+#23=IFCRELCONTAINEDINSPATIALSTRUCTURE('25g_sgGv1Ktw1yG4pu$Q5F',$,$,$,(#21),#22);
+#24=IFCSLAB('0RSL8wCT5PN9gJFcsABneg',$,$,$,$,$,$,$,$);
+#25=IFCBEAM('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$); /* Testcase */
+#26=IFCRELAGGREGATES('3uvq$MvJ1G9Bh_81VP1e9A',$,$,$,#24,(#25));
+#27=IFCSPACE('1$n1_2RkXPbfXO7oow3KlU',$,$,$,$,$,$,$,$,$,$);
+#28=IFCRELCONTAINEDINSPATIALSTRUCTURE('0aEFdeguTItxk11mFwy_RG',$,$,$,(#24),#27);
 ~~~
 
-[Sample IDS](testcases/pass-the_container_may_be_indirect.ids) - [Sample IFC: 25](testcases/pass-the_container_may_be_indirect.ifc)
+[Sample IDS](testcases/partof/pass-the_container_may_be_indirect.ids) - [Sample IFC: 25](testcases/partof/pass-the_container_may_be_indirect.ifc)
 
 ## [PASS] Any nested part passes a nest relationship
 
@@ -442,40 +498,40 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCELEMENTASSEMBLY('3q6Vcv2QX9pv9jn7w1Tkfy',$,$,$,$,$,$,$,$,$);
-#2=IFCWALL('1xzuRQJTbATh5HU$lje803',$,$,$,$,$,$,$,$);
-#3=IFCRELAGGREGATES('3WbNxN2WH6jPcntlmw1Y_g',$,$,$,#1,(#2));
-#4=IFCSLAB('2iKCmqMGjETeuISTotOcx6',$,$,$,$,$,$,$,$);
-#5=IFCBEAM('2YGdsKUi99Eu4wAe6IZM6_',$,$,$,$,$,$,$,$);
-#6=IFCRELAGGREGATES('3aaOK736L0WOR3R$pdAKUx',$,$,$,#4,(#5));
-#7=IFCELEMENTASSEMBLY('12_vEf7ZT0auJQi6tnfI1z',$,$,$,$,$,$,$,$,$);
-#8=IFCSLAB('2tXathYg5Ca8bkTCdMneXf',$,$,$,$,$,$,$,$);
-#9=IFCBEAM('2p$vFGmN16ph28D3CBDkJE',$,$,$,$,$,$,$,$);
-#10=IFCRELAGGREGATES('0upIhFj8L1gvWaZCoNZa31',$,$,$,#7,(#8));
-#11=IFCRELAGGREGATES('1Mc4apqh92CAAfd2zwVblr',$,$,$,#8,(#9));
-#12=IFCELEMENTASSEMBLY('0N5j0KIfv0WATOitVZt6Bf',$,$,$,$,$,$,$,$,$);
-#13=IFCGROUP('0BvP02Pf17UAOxyvD0LmfW',$,'Unnamed','',$);
-#14=IFCRELASSIGNSTOGROUP('261gu6Smz1vOWRZ0S3Ba2Y',$,$,$,(#12),$,#13);
-#15=IFCELEMENTASSEMBLY('0gUz2msXPEiv3NLfIhImkC',$,$,$,$,$,$,$,$,$);
-#16=IFCINVENTORY('21Ezrgpor4UgWptGTHouue',$,$,$,$,$,$,$,$,$,$);
-#17=IFCRELASSIGNSTOGROUP('0B30NYivz3rPOyv5uMxb9U',$,$,$,(#15),$,#16);
-#18=IFCELEMENTASSEMBLY('1dJMo3PRXFKOX_q4AEsvXA',$,$,$,$,$,$,$,$,$);
-#19=IFCSPACE('15jGVMw2D5Rx5WgmIHw1CE',$,$,$,$,$,$,$,$,$,$);
-#20=IFCRELCONTAINEDINSPATIALSTRUCTURE('1JrlbVSNfAmg7bAe1B4H$e',$,$,$,(#18),#19);
-#21=IFCELEMENTASSEMBLY('25WIZPWNf4WBt24spo0PkM',$,$,$,$,$,$,$,$,$);
-#22=IFCSPACE('0ITiTI8ub12v8IJUucupNo',$,$,$,$,$,$,$,$,$,$);
-#23=IFCRELCONTAINEDINSPATIALSTRUCTURE('23nLQQQ0T2sR_$9OOJVm7A',$,$,$,(#21),#22);
-#24=IFCSLAB('0_5t08fajCCQczmmyB2aCj',$,$,$,$,$,$,$,$);
-#25=IFCBEAM('3yiC_yWOP3qeHgY5ujrm7F',$,$,$,$,$,$,$,$);
-#26=IFCRELAGGREGATES('3P8JEaJOHCyvombwP650HS',$,$,$,#24,(#25));
-#27=IFCSPACE('1Ld8Y34895tgbpIfHIwdoP',$,$,$,$,$,$,$,$,$,$);
-#28=IFCRELCONTAINEDINSPATIALSTRUCTURE('1gYkvL73fE6xFLCFVynsqy',$,$,$,(#24),#27);
-#29=IFCFURNITURE('2$pez7nKHD2f7zeA15Z2ol',$,$,$,$,$,$,$,$);
-#30=IFCDISCRETEACCESSORY('2Ux4P2qkv0yvjSloAOOjlf',$,$,$,$,$,$,$,$); /* Testcase */
-#31=IFCRELNESTS('2dxZvZ5YX3TAavu_cvIkmQ',$,$,$,#29,(#30));
+#1=IFCELEMENTASSEMBLY('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$,$);
+#2=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#3=IFCRELAGGREGATES('0eA6m4fELI9QBIhP3wiLAp',$,$,$,#1,(#2));
+#4=IFCSLAB('05rScmOVzMoQXOfbYdtLYj',$,$,$,$,$,$,$,$);
+#5=IFCBEAM('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#6=IFCRELAGGREGATES('0BbkGoC6vPvRW13UT7D8zH',$,$,$,#4,(#5));
+#7=IFCELEMENTASSEMBLY('3dn5FxJ$bKte8lL5dru6xn',$,$,$,$,$,$,$,$,$);
+#8=IFCSLAB('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#9=IFCBEAM('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
+#10=IFCRELAGGREGATES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,#7,(#8));
+#11=IFCRELAGGREGATES('0WTUhjMwvT39YBFH2pryoM',$,$,$,#8,(#9));
+#12=IFCELEMENTASSEMBLY('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$,$);
+#13=IFCGROUP('3b0AoFivPN6RDJO6UL_GfZ',$,'Unnamed','',$);
+#14=IFCRELASSIGNSTOGROUP('1UJX0DW6PGVvNXUEmD0sBq',$,$,$,(#12),$,#13);
+#15=IFCELEMENTASSEMBLY('0zOgnThXbJ18CK0JKHikvt',$,$,$,$,$,$,$,$,$);
+#16=IFCINVENTORY('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$,$,$);
+#17=IFCRELASSIGNSTOGROUP('1X7Mz0AZrMOPkukNM5XTEV',$,$,$,(#15),$,#16);
+#18=IFCELEMENTASSEMBLY('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$,$);
+#19=IFCSPACE('3qs_CEYznSwfyPnfvmY$jn',$,$,$,$,$,$,$,$,$,$);
+#20=IFCRELCONTAINEDINSPATIALSTRUCTURE('2J464n_AnPNgUfYvzrChAh',$,$,$,(#18),#19);
+#21=IFCELEMENTASSEMBLY('3NmyAazpzLq8cIG7JPLlM9',$,$,$,$,$,$,$,$,$);
+#22=IFCSPACE('3Wzl48UnnIp8YxtLF4v8ZP',$,$,$,$,$,$,$,$,$,$);
+#23=IFCRELCONTAINEDINSPATIALSTRUCTURE('25g_sgGv1Ktw1yG4pu$Q5F',$,$,$,(#21),#22);
+#24=IFCSLAB('0RSL8wCT5PN9gJFcsABneg',$,$,$,$,$,$,$,$);
+#25=IFCBEAM('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
+#26=IFCRELAGGREGATES('3uvq$MvJ1G9Bh_81VP1e9A',$,$,$,#24,(#25));
+#27=IFCSPACE('1$n1_2RkXPbfXO7oow3KlU',$,$,$,$,$,$,$,$,$,$);
+#28=IFCRELCONTAINEDINSPATIALSTRUCTURE('0aEFdeguTItxk11mFwy_RG',$,$,$,(#24),#27);
+#29=IFCFURNITURE('2de$MNI$LGLOjZiSngF_vG',$,$,$,$,$,$,$,$);
+#30=IFCDISCRETEACCESSORY('2wP8lRhDTKrxIPJKeaifuL',$,$,$,$,$,$,$,$); /* Testcase */
+#31=IFCRELNESTS('1KlbEiNjDIJAGwnYBZ2B87',$,$,$,#29,(#30));
 ~~~
 
-[Sample IDS](testcases/pass-any_nested_part_passes_a_nest_relationship.ids) - [Sample IFC: 30](testcases/pass-any_nested_part_passes_a_nest_relationship.ifc)
+[Sample IDS](testcases/partof/pass-any_nested_part_passes_a_nest_relationship.ids) - [Sample IFC: 30](testcases/partof/pass-any_nested_part_passes_a_nest_relationship.ifc)
 
 ## [FAIL] Any nested whole fails a nest relationship
 
@@ -484,40 +540,40 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCELEMENTASSEMBLY('3q6Vcv2QX9pv9jn7w1Tkfy',$,$,$,$,$,$,$,$,$);
-#2=IFCWALL('1xzuRQJTbATh5HU$lje803',$,$,$,$,$,$,$,$);
-#3=IFCRELAGGREGATES('3WbNxN2WH6jPcntlmw1Y_g',$,$,$,#1,(#2));
-#4=IFCSLAB('2iKCmqMGjETeuISTotOcx6',$,$,$,$,$,$,$,$);
-#5=IFCBEAM('2YGdsKUi99Eu4wAe6IZM6_',$,$,$,$,$,$,$,$);
-#6=IFCRELAGGREGATES('3aaOK736L0WOR3R$pdAKUx',$,$,$,#4,(#5));
-#7=IFCELEMENTASSEMBLY('12_vEf7ZT0auJQi6tnfI1z',$,$,$,$,$,$,$,$,$);
-#8=IFCSLAB('2tXathYg5Ca8bkTCdMneXf',$,$,$,$,$,$,$,$);
-#9=IFCBEAM('2p$vFGmN16ph28D3CBDkJE',$,$,$,$,$,$,$,$);
-#10=IFCRELAGGREGATES('0upIhFj8L1gvWaZCoNZa31',$,$,$,#7,(#8));
-#11=IFCRELAGGREGATES('1Mc4apqh92CAAfd2zwVblr',$,$,$,#8,(#9));
-#12=IFCELEMENTASSEMBLY('0N5j0KIfv0WATOitVZt6Bf',$,$,$,$,$,$,$,$,$);
-#13=IFCGROUP('0BvP02Pf17UAOxyvD0LmfW',$,'Unnamed','',$);
-#14=IFCRELASSIGNSTOGROUP('261gu6Smz1vOWRZ0S3Ba2Y',$,$,$,(#12),$,#13);
-#15=IFCELEMENTASSEMBLY('0gUz2msXPEiv3NLfIhImkC',$,$,$,$,$,$,$,$,$);
-#16=IFCINVENTORY('21Ezrgpor4UgWptGTHouue',$,$,$,$,$,$,$,$,$,$);
-#17=IFCRELASSIGNSTOGROUP('0B30NYivz3rPOyv5uMxb9U',$,$,$,(#15),$,#16);
-#18=IFCELEMENTASSEMBLY('1dJMo3PRXFKOX_q4AEsvXA',$,$,$,$,$,$,$,$,$);
-#19=IFCSPACE('15jGVMw2D5Rx5WgmIHw1CE',$,$,$,$,$,$,$,$,$,$);
-#20=IFCRELCONTAINEDINSPATIALSTRUCTURE('1JrlbVSNfAmg7bAe1B4H$e',$,$,$,(#18),#19);
-#21=IFCELEMENTASSEMBLY('25WIZPWNf4WBt24spo0PkM',$,$,$,$,$,$,$,$,$);
-#22=IFCSPACE('0ITiTI8ub12v8IJUucupNo',$,$,$,$,$,$,$,$,$,$);
-#23=IFCRELCONTAINEDINSPATIALSTRUCTURE('23nLQQQ0T2sR_$9OOJVm7A',$,$,$,(#21),#22);
-#24=IFCSLAB('0_5t08fajCCQczmmyB2aCj',$,$,$,$,$,$,$,$);
-#25=IFCBEAM('3yiC_yWOP3qeHgY5ujrm7F',$,$,$,$,$,$,$,$);
-#26=IFCRELAGGREGATES('3P8JEaJOHCyvombwP650HS',$,$,$,#24,(#25));
-#27=IFCSPACE('1Ld8Y34895tgbpIfHIwdoP',$,$,$,$,$,$,$,$,$,$);
-#28=IFCRELCONTAINEDINSPATIALSTRUCTURE('1gYkvL73fE6xFLCFVynsqy',$,$,$,(#24),#27);
-#29=IFCFURNITURE('2$pez7nKHD2f7zeA15Z2ol',$,$,$,$,$,$,$,$); /* Testcase */
-#30=IFCDISCRETEACCESSORY('2Ux4P2qkv0yvjSloAOOjlf',$,$,$,$,$,$,$,$);
-#31=IFCRELNESTS('2dxZvZ5YX3TAavu_cvIkmQ',$,$,$,#29,(#30));
+#1=IFCELEMENTASSEMBLY('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$,$);
+#2=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#3=IFCRELAGGREGATES('0eA6m4fELI9QBIhP3wiLAp',$,$,$,#1,(#2));
+#4=IFCSLAB('05rScmOVzMoQXOfbYdtLYj',$,$,$,$,$,$,$,$);
+#5=IFCBEAM('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#6=IFCRELAGGREGATES('0BbkGoC6vPvRW13UT7D8zH',$,$,$,#4,(#5));
+#7=IFCELEMENTASSEMBLY('3dn5FxJ$bKte8lL5dru6xn',$,$,$,$,$,$,$,$,$);
+#8=IFCSLAB('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#9=IFCBEAM('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
+#10=IFCRELAGGREGATES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,#7,(#8));
+#11=IFCRELAGGREGATES('0WTUhjMwvT39YBFH2pryoM',$,$,$,#8,(#9));
+#12=IFCELEMENTASSEMBLY('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$,$);
+#13=IFCGROUP('3b0AoFivPN6RDJO6UL_GfZ',$,'Unnamed','',$);
+#14=IFCRELASSIGNSTOGROUP('1UJX0DW6PGVvNXUEmD0sBq',$,$,$,(#12),$,#13);
+#15=IFCELEMENTASSEMBLY('0zOgnThXbJ18CK0JKHikvt',$,$,$,$,$,$,$,$,$);
+#16=IFCINVENTORY('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$,$,$);
+#17=IFCRELASSIGNSTOGROUP('1X7Mz0AZrMOPkukNM5XTEV',$,$,$,(#15),$,#16);
+#18=IFCELEMENTASSEMBLY('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$,$);
+#19=IFCSPACE('3qs_CEYznSwfyPnfvmY$jn',$,$,$,$,$,$,$,$,$,$);
+#20=IFCRELCONTAINEDINSPATIALSTRUCTURE('2J464n_AnPNgUfYvzrChAh',$,$,$,(#18),#19);
+#21=IFCELEMENTASSEMBLY('3NmyAazpzLq8cIG7JPLlM9',$,$,$,$,$,$,$,$,$);
+#22=IFCSPACE('3Wzl48UnnIp8YxtLF4v8ZP',$,$,$,$,$,$,$,$,$,$);
+#23=IFCRELCONTAINEDINSPATIALSTRUCTURE('25g_sgGv1Ktw1yG4pu$Q5F',$,$,$,(#21),#22);
+#24=IFCSLAB('0RSL8wCT5PN9gJFcsABneg',$,$,$,$,$,$,$,$);
+#25=IFCBEAM('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
+#26=IFCRELAGGREGATES('3uvq$MvJ1G9Bh_81VP1e9A',$,$,$,#24,(#25));
+#27=IFCSPACE('1$n1_2RkXPbfXO7oow3KlU',$,$,$,$,$,$,$,$,$,$);
+#28=IFCRELCONTAINEDINSPATIALSTRUCTURE('0aEFdeguTItxk11mFwy_RG',$,$,$,(#24),#27);
+#29=IFCFURNITURE('2de$MNI$LGLOjZiSngF_vG',$,$,$,$,$,$,$,$); /* Testcase */
+#30=IFCDISCRETEACCESSORY('2wP8lRhDTKrxIPJKeaifuL',$,$,$,$,$,$,$,$);
+#31=IFCRELNESTS('1KlbEiNjDIJAGwnYBZ2B87',$,$,$,#29,(#30));
 ~~~
 
-[Sample IDS](testcases/fail-any_nested_whole_fails_a_nest_relationship.ids) - [Sample IFC: 29](testcases/fail-any_nested_whole_fails_a_nest_relationship.ifc)
+[Sample IDS](testcases/partof/fail-any_nested_whole_fails_a_nest_relationship.ids) - [Sample IFC: 29](testcases/partof/fail-any_nested_whole_fails_a_nest_relationship.ifc)
 
 ## [FAIL] The nest entity must match exactly 1/2
 
@@ -530,43 +586,43 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCELEMENTASSEMBLY('3q6Vcv2QX9pv9jn7w1Tkfy',$,$,$,$,$,$,$,$,$);
-#2=IFCWALL('1xzuRQJTbATh5HU$lje803',$,$,$,$,$,$,$,$);
-#3=IFCRELAGGREGATES('3WbNxN2WH6jPcntlmw1Y_g',$,$,$,#1,(#2));
-#4=IFCSLAB('2iKCmqMGjETeuISTotOcx6',$,$,$,$,$,$,$,$);
-#5=IFCBEAM('2YGdsKUi99Eu4wAe6IZM6_',$,$,$,$,$,$,$,$);
-#6=IFCRELAGGREGATES('3aaOK736L0WOR3R$pdAKUx',$,$,$,#4,(#5));
-#7=IFCELEMENTASSEMBLY('12_vEf7ZT0auJQi6tnfI1z',$,$,$,$,$,$,$,$,$);
-#8=IFCSLAB('2tXathYg5Ca8bkTCdMneXf',$,$,$,$,$,$,$,$);
-#9=IFCBEAM('2p$vFGmN16ph28D3CBDkJE',$,$,$,$,$,$,$,$);
-#10=IFCRELAGGREGATES('0upIhFj8L1gvWaZCoNZa31',$,$,$,#7,(#8));
-#11=IFCRELAGGREGATES('1Mc4apqh92CAAfd2zwVblr',$,$,$,#8,(#9));
-#12=IFCELEMENTASSEMBLY('0N5j0KIfv0WATOitVZt6Bf',$,$,$,$,$,$,$,$,$);
-#13=IFCGROUP('0BvP02Pf17UAOxyvD0LmfW',$,'Unnamed','',$);
-#14=IFCRELASSIGNSTOGROUP('261gu6Smz1vOWRZ0S3Ba2Y',$,$,$,(#12),$,#13);
-#15=IFCELEMENTASSEMBLY('0gUz2msXPEiv3NLfIhImkC',$,$,$,$,$,$,$,$,$);
-#16=IFCINVENTORY('21Ezrgpor4UgWptGTHouue',$,$,$,$,$,$,$,$,$,$);
-#17=IFCRELASSIGNSTOGROUP('0B30NYivz3rPOyv5uMxb9U',$,$,$,(#15),$,#16);
-#18=IFCELEMENTASSEMBLY('1dJMo3PRXFKOX_q4AEsvXA',$,$,$,$,$,$,$,$,$);
-#19=IFCSPACE('15jGVMw2D5Rx5WgmIHw1CE',$,$,$,$,$,$,$,$,$,$);
-#20=IFCRELCONTAINEDINSPATIALSTRUCTURE('1JrlbVSNfAmg7bAe1B4H$e',$,$,$,(#18),#19);
-#21=IFCELEMENTASSEMBLY('25WIZPWNf4WBt24spo0PkM',$,$,$,$,$,$,$,$,$);
-#22=IFCSPACE('0ITiTI8ub12v8IJUucupNo',$,$,$,$,$,$,$,$,$,$);
-#23=IFCRELCONTAINEDINSPATIALSTRUCTURE('23nLQQQ0T2sR_$9OOJVm7A',$,$,$,(#21),#22);
-#24=IFCSLAB('0_5t08fajCCQczmmyB2aCj',$,$,$,$,$,$,$,$);
-#25=IFCBEAM('3yiC_yWOP3qeHgY5ujrm7F',$,$,$,$,$,$,$,$);
-#26=IFCRELAGGREGATES('3P8JEaJOHCyvombwP650HS',$,$,$,#24,(#25));
-#27=IFCSPACE('1Ld8Y34895tgbpIfHIwdoP',$,$,$,$,$,$,$,$,$,$);
-#28=IFCRELCONTAINEDINSPATIALSTRUCTURE('1gYkvL73fE6xFLCFVynsqy',$,$,$,(#24),#27);
-#29=IFCFURNITURE('2$pez7nKHD2f7zeA15Z2ol',$,$,$,$,$,$,$,$);
-#30=IFCDISCRETEACCESSORY('2Ux4P2qkv0yvjSloAOOjlf',$,$,$,$,$,$,$,$);
-#31=IFCRELNESTS('2dxZvZ5YX3TAavu_cvIkmQ',$,$,$,#29,(#30));
-#32=IFCFURNITURE('15G$s4EIjEPuly7GP10UVL',$,$,$,$,$,$,$,$);
-#33=IFCDISCRETEACCESSORY('2G_v87JE53JRMTfzL5EVKF',$,$,$,$,$,$,$,$); /* Testcase */
-#34=IFCRELNESTS('3CAXK8djj0xhGX8CGijScX',$,$,$,#32,(#33));
+#1=IFCELEMENTASSEMBLY('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$,$);
+#2=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#3=IFCRELAGGREGATES('0eA6m4fELI9QBIhP3wiLAp',$,$,$,#1,(#2));
+#4=IFCSLAB('05rScmOVzMoQXOfbYdtLYj',$,$,$,$,$,$,$,$);
+#5=IFCBEAM('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#6=IFCRELAGGREGATES('0BbkGoC6vPvRW13UT7D8zH',$,$,$,#4,(#5));
+#7=IFCELEMENTASSEMBLY('3dn5FxJ$bKte8lL5dru6xn',$,$,$,$,$,$,$,$,$);
+#8=IFCSLAB('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#9=IFCBEAM('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
+#10=IFCRELAGGREGATES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,#7,(#8));
+#11=IFCRELAGGREGATES('0WTUhjMwvT39YBFH2pryoM',$,$,$,#8,(#9));
+#12=IFCELEMENTASSEMBLY('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$,$);
+#13=IFCGROUP('3b0AoFivPN6RDJO6UL_GfZ',$,'Unnamed','',$);
+#14=IFCRELASSIGNSTOGROUP('1UJX0DW6PGVvNXUEmD0sBq',$,$,$,(#12),$,#13);
+#15=IFCELEMENTASSEMBLY('0zOgnThXbJ18CK0JKHikvt',$,$,$,$,$,$,$,$,$);
+#16=IFCINVENTORY('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$,$,$);
+#17=IFCRELASSIGNSTOGROUP('1X7Mz0AZrMOPkukNM5XTEV',$,$,$,(#15),$,#16);
+#18=IFCELEMENTASSEMBLY('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$,$);
+#19=IFCSPACE('3qs_CEYznSwfyPnfvmY$jn',$,$,$,$,$,$,$,$,$,$);
+#20=IFCRELCONTAINEDINSPATIALSTRUCTURE('2J464n_AnPNgUfYvzrChAh',$,$,$,(#18),#19);
+#21=IFCELEMENTASSEMBLY('3NmyAazpzLq8cIG7JPLlM9',$,$,$,$,$,$,$,$,$);
+#22=IFCSPACE('3Wzl48UnnIp8YxtLF4v8ZP',$,$,$,$,$,$,$,$,$,$);
+#23=IFCRELCONTAINEDINSPATIALSTRUCTURE('25g_sgGv1Ktw1yG4pu$Q5F',$,$,$,(#21),#22);
+#24=IFCSLAB('0RSL8wCT5PN9gJFcsABneg',$,$,$,$,$,$,$,$);
+#25=IFCBEAM('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
+#26=IFCRELAGGREGATES('3uvq$MvJ1G9Bh_81VP1e9A',$,$,$,#24,(#25));
+#27=IFCSPACE('1$n1_2RkXPbfXO7oow3KlU',$,$,$,$,$,$,$,$,$,$);
+#28=IFCRELCONTAINEDINSPATIALSTRUCTURE('0aEFdeguTItxk11mFwy_RG',$,$,$,(#24),#27);
+#29=IFCFURNITURE('2de$MNI$LGLOjZiSngF_vG',$,$,$,$,$,$,$,$);
+#30=IFCDISCRETEACCESSORY('2wP8lRhDTKrxIPJKeaifuL',$,$,$,$,$,$,$,$);
+#31=IFCRELNESTS('1KlbEiNjDIJAGwnYBZ2B87',$,$,$,#29,(#30));
+#32=IFCFURNITURE('0nB_kaOvDG6eluiK84kq9M',$,$,$,$,$,$,$,$);
+#33=IFCDISCRETEACCESSORY('0YwTGeJUPSxgVHD3te0HY$',$,$,$,$,$,$,$,$); /* Testcase */
+#34=IFCRELNESTS('2cohnZTsfUgQK$4UvlhCtt',$,$,$,#32,(#33));
 ~~~
 
-[Sample IDS](testcases/fail-the_nest_entity_must_match_exactly_1_2.ids) - [Sample IFC: 33](testcases/fail-the_nest_entity_must_match_exactly_1_2.ifc)
+[Sample IDS](testcases/partof/fail-the_nest_entity_must_match_exactly_1_2.ids) - [Sample IFC: 33](testcases/partof/fail-the_nest_entity_must_match_exactly_1_2.ifc)
 
 ## [PASS] The nest entity must match exactly 2/2
 
@@ -579,43 +635,43 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCELEMENTASSEMBLY('3q6Vcv2QX9pv9jn7w1Tkfy',$,$,$,$,$,$,$,$,$);
-#2=IFCWALL('1xzuRQJTbATh5HU$lje803',$,$,$,$,$,$,$,$);
-#3=IFCRELAGGREGATES('3WbNxN2WH6jPcntlmw1Y_g',$,$,$,#1,(#2));
-#4=IFCSLAB('2iKCmqMGjETeuISTotOcx6',$,$,$,$,$,$,$,$);
-#5=IFCBEAM('2YGdsKUi99Eu4wAe6IZM6_',$,$,$,$,$,$,$,$);
-#6=IFCRELAGGREGATES('3aaOK736L0WOR3R$pdAKUx',$,$,$,#4,(#5));
-#7=IFCELEMENTASSEMBLY('12_vEf7ZT0auJQi6tnfI1z',$,$,$,$,$,$,$,$,$);
-#8=IFCSLAB('2tXathYg5Ca8bkTCdMneXf',$,$,$,$,$,$,$,$);
-#9=IFCBEAM('2p$vFGmN16ph28D3CBDkJE',$,$,$,$,$,$,$,$);
-#10=IFCRELAGGREGATES('0upIhFj8L1gvWaZCoNZa31',$,$,$,#7,(#8));
-#11=IFCRELAGGREGATES('1Mc4apqh92CAAfd2zwVblr',$,$,$,#8,(#9));
-#12=IFCELEMENTASSEMBLY('0N5j0KIfv0WATOitVZt6Bf',$,$,$,$,$,$,$,$,$);
-#13=IFCGROUP('0BvP02Pf17UAOxyvD0LmfW',$,'Unnamed','',$);
-#14=IFCRELASSIGNSTOGROUP('261gu6Smz1vOWRZ0S3Ba2Y',$,$,$,(#12),$,#13);
-#15=IFCELEMENTASSEMBLY('0gUz2msXPEiv3NLfIhImkC',$,$,$,$,$,$,$,$,$);
-#16=IFCINVENTORY('21Ezrgpor4UgWptGTHouue',$,$,$,$,$,$,$,$,$,$);
-#17=IFCRELASSIGNSTOGROUP('0B30NYivz3rPOyv5uMxb9U',$,$,$,(#15),$,#16);
-#18=IFCELEMENTASSEMBLY('1dJMo3PRXFKOX_q4AEsvXA',$,$,$,$,$,$,$,$,$);
-#19=IFCSPACE('15jGVMw2D5Rx5WgmIHw1CE',$,$,$,$,$,$,$,$,$,$);
-#20=IFCRELCONTAINEDINSPATIALSTRUCTURE('1JrlbVSNfAmg7bAe1B4H$e',$,$,$,(#18),#19);
-#21=IFCELEMENTASSEMBLY('25WIZPWNf4WBt24spo0PkM',$,$,$,$,$,$,$,$,$);
-#22=IFCSPACE('0ITiTI8ub12v8IJUucupNo',$,$,$,$,$,$,$,$,$,$);
-#23=IFCRELCONTAINEDINSPATIALSTRUCTURE('23nLQQQ0T2sR_$9OOJVm7A',$,$,$,(#21),#22);
-#24=IFCSLAB('0_5t08fajCCQczmmyB2aCj',$,$,$,$,$,$,$,$);
-#25=IFCBEAM('3yiC_yWOP3qeHgY5ujrm7F',$,$,$,$,$,$,$,$);
-#26=IFCRELAGGREGATES('3P8JEaJOHCyvombwP650HS',$,$,$,#24,(#25));
-#27=IFCSPACE('1Ld8Y34895tgbpIfHIwdoP',$,$,$,$,$,$,$,$,$,$);
-#28=IFCRELCONTAINEDINSPATIALSTRUCTURE('1gYkvL73fE6xFLCFVynsqy',$,$,$,(#24),#27);
-#29=IFCFURNITURE('2$pez7nKHD2f7zeA15Z2ol',$,$,$,$,$,$,$,$);
-#30=IFCDISCRETEACCESSORY('2Ux4P2qkv0yvjSloAOOjlf',$,$,$,$,$,$,$,$);
-#31=IFCRELNESTS('2dxZvZ5YX3TAavu_cvIkmQ',$,$,$,#29,(#30));
-#32=IFCFURNITURE('15G$s4EIjEPuly7GP10UVL',$,$,$,$,$,$,$,$);
-#33=IFCDISCRETEACCESSORY('2G_v87JE53JRMTfzL5EVKF',$,$,$,$,$,$,$,$); /* Testcase */
-#34=IFCRELNESTS('3CAXK8djj0xhGX8CGijScX',$,$,$,#32,(#33));
+#1=IFCELEMENTASSEMBLY('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$,$);
+#2=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#3=IFCRELAGGREGATES('0eA6m4fELI9QBIhP3wiLAp',$,$,$,#1,(#2));
+#4=IFCSLAB('05rScmOVzMoQXOfbYdtLYj',$,$,$,$,$,$,$,$);
+#5=IFCBEAM('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#6=IFCRELAGGREGATES('0BbkGoC6vPvRW13UT7D8zH',$,$,$,#4,(#5));
+#7=IFCELEMENTASSEMBLY('3dn5FxJ$bKte8lL5dru6xn',$,$,$,$,$,$,$,$,$);
+#8=IFCSLAB('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#9=IFCBEAM('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
+#10=IFCRELAGGREGATES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,#7,(#8));
+#11=IFCRELAGGREGATES('0WTUhjMwvT39YBFH2pryoM',$,$,$,#8,(#9));
+#12=IFCELEMENTASSEMBLY('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$,$);
+#13=IFCGROUP('3b0AoFivPN6RDJO6UL_GfZ',$,'Unnamed','',$);
+#14=IFCRELASSIGNSTOGROUP('1UJX0DW6PGVvNXUEmD0sBq',$,$,$,(#12),$,#13);
+#15=IFCELEMENTASSEMBLY('0zOgnThXbJ18CK0JKHikvt',$,$,$,$,$,$,$,$,$);
+#16=IFCINVENTORY('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$,$,$);
+#17=IFCRELASSIGNSTOGROUP('1X7Mz0AZrMOPkukNM5XTEV',$,$,$,(#15),$,#16);
+#18=IFCELEMENTASSEMBLY('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$,$);
+#19=IFCSPACE('3qs_CEYznSwfyPnfvmY$jn',$,$,$,$,$,$,$,$,$,$);
+#20=IFCRELCONTAINEDINSPATIALSTRUCTURE('2J464n_AnPNgUfYvzrChAh',$,$,$,(#18),#19);
+#21=IFCELEMENTASSEMBLY('3NmyAazpzLq8cIG7JPLlM9',$,$,$,$,$,$,$,$,$);
+#22=IFCSPACE('3Wzl48UnnIp8YxtLF4v8ZP',$,$,$,$,$,$,$,$,$,$);
+#23=IFCRELCONTAINEDINSPATIALSTRUCTURE('25g_sgGv1Ktw1yG4pu$Q5F',$,$,$,(#21),#22);
+#24=IFCSLAB('0RSL8wCT5PN9gJFcsABneg',$,$,$,$,$,$,$,$);
+#25=IFCBEAM('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
+#26=IFCRELAGGREGATES('3uvq$MvJ1G9Bh_81VP1e9A',$,$,$,#24,(#25));
+#27=IFCSPACE('1$n1_2RkXPbfXO7oow3KlU',$,$,$,$,$,$,$,$,$,$);
+#28=IFCRELCONTAINEDINSPATIALSTRUCTURE('0aEFdeguTItxk11mFwy_RG',$,$,$,(#24),#27);
+#29=IFCFURNITURE('2de$MNI$LGLOjZiSngF_vG',$,$,$,$,$,$,$,$);
+#30=IFCDISCRETEACCESSORY('2wP8lRhDTKrxIPJKeaifuL',$,$,$,$,$,$,$,$);
+#31=IFCRELNESTS('1KlbEiNjDIJAGwnYBZ2B87',$,$,$,#29,(#30));
+#32=IFCFURNITURE('0nB_kaOvDG6eluiK84kq9M',$,$,$,$,$,$,$,$);
+#33=IFCDISCRETEACCESSORY('0YwTGeJUPSxgVHD3te0HY$',$,$,$,$,$,$,$,$); /* Testcase */
+#34=IFCRELNESTS('2cohnZTsfUgQK$4UvlhCtt',$,$,$,#32,(#33));
 ~~~
 
-[Sample IDS](testcases/pass-the_nest_entity_must_match_exactly_2_2.ids) - [Sample IFC: 33](testcases/pass-the_nest_entity_must_match_exactly_2_2.ifc)
+[Sample IDS](testcases/partof/pass-the_nest_entity_must_match_exactly_2_2.ids) - [Sample IFC: 33](testcases/partof/pass-the_nest_entity_must_match_exactly_2_2.ifc)
 
 ## [PASS] Nesting may be indirect
 
@@ -628,46 +684,46 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCELEMENTASSEMBLY('3q6Vcv2QX9pv9jn7w1Tkfy',$,$,$,$,$,$,$,$,$);
-#2=IFCWALL('1xzuRQJTbATh5HU$lje803',$,$,$,$,$,$,$,$);
-#3=IFCRELAGGREGATES('3WbNxN2WH6jPcntlmw1Y_g',$,$,$,#1,(#2));
-#4=IFCSLAB('2iKCmqMGjETeuISTotOcx6',$,$,$,$,$,$,$,$);
-#5=IFCBEAM('2YGdsKUi99Eu4wAe6IZM6_',$,$,$,$,$,$,$,$);
-#6=IFCRELAGGREGATES('3aaOK736L0WOR3R$pdAKUx',$,$,$,#4,(#5));
-#7=IFCELEMENTASSEMBLY('12_vEf7ZT0auJQi6tnfI1z',$,$,$,$,$,$,$,$,$);
-#8=IFCSLAB('2tXathYg5Ca8bkTCdMneXf',$,$,$,$,$,$,$,$);
-#9=IFCBEAM('2p$vFGmN16ph28D3CBDkJE',$,$,$,$,$,$,$,$);
-#10=IFCRELAGGREGATES('0upIhFj8L1gvWaZCoNZa31',$,$,$,#7,(#8));
-#11=IFCRELAGGREGATES('1Mc4apqh92CAAfd2zwVblr',$,$,$,#8,(#9));
-#12=IFCELEMENTASSEMBLY('0N5j0KIfv0WATOitVZt6Bf',$,$,$,$,$,$,$,$,$);
-#13=IFCGROUP('0BvP02Pf17UAOxyvD0LmfW',$,'Unnamed','',$);
-#14=IFCRELASSIGNSTOGROUP('261gu6Smz1vOWRZ0S3Ba2Y',$,$,$,(#12),$,#13);
-#15=IFCELEMENTASSEMBLY('0gUz2msXPEiv3NLfIhImkC',$,$,$,$,$,$,$,$,$);
-#16=IFCINVENTORY('21Ezrgpor4UgWptGTHouue',$,$,$,$,$,$,$,$,$,$);
-#17=IFCRELASSIGNSTOGROUP('0B30NYivz3rPOyv5uMxb9U',$,$,$,(#15),$,#16);
-#18=IFCELEMENTASSEMBLY('1dJMo3PRXFKOX_q4AEsvXA',$,$,$,$,$,$,$,$,$);
-#19=IFCSPACE('15jGVMw2D5Rx5WgmIHw1CE',$,$,$,$,$,$,$,$,$,$);
-#20=IFCRELCONTAINEDINSPATIALSTRUCTURE('1JrlbVSNfAmg7bAe1B4H$e',$,$,$,(#18),#19);
-#21=IFCELEMENTASSEMBLY('25WIZPWNf4WBt24spo0PkM',$,$,$,$,$,$,$,$,$);
-#22=IFCSPACE('0ITiTI8ub12v8IJUucupNo',$,$,$,$,$,$,$,$,$,$);
-#23=IFCRELCONTAINEDINSPATIALSTRUCTURE('23nLQQQ0T2sR_$9OOJVm7A',$,$,$,(#21),#22);
-#24=IFCSLAB('0_5t08fajCCQczmmyB2aCj',$,$,$,$,$,$,$,$);
-#25=IFCBEAM('3yiC_yWOP3qeHgY5ujrm7F',$,$,$,$,$,$,$,$);
-#26=IFCRELAGGREGATES('3P8JEaJOHCyvombwP650HS',$,$,$,#24,(#25));
-#27=IFCSPACE('1Ld8Y34895tgbpIfHIwdoP',$,$,$,$,$,$,$,$,$,$);
-#28=IFCRELCONTAINEDINSPATIALSTRUCTURE('1gYkvL73fE6xFLCFVynsqy',$,$,$,(#24),#27);
-#29=IFCFURNITURE('2$pez7nKHD2f7zeA15Z2ol',$,$,$,$,$,$,$,$);
-#30=IFCDISCRETEACCESSORY('2Ux4P2qkv0yvjSloAOOjlf',$,$,$,$,$,$,$,$);
-#31=IFCRELNESTS('2dxZvZ5YX3TAavu_cvIkmQ',$,$,$,#29,(#30));
-#32=IFCFURNITURE('15G$s4EIjEPuly7GP10UVL',$,$,$,$,$,$,$,$);
-#33=IFCDISCRETEACCESSORY('2G_v87JE53JRMTfzL5EVKF',$,$,$,$,$,$,$,$);
-#34=IFCRELNESTS('3CAXK8djj0xhGX8CGijScX',$,$,$,#32,(#33));
-#35=IFCFURNITURE('14gmTF4IrDwwnOhRjb4DfH',$,$,$,$,$,$,$,$);
-#36=IFCDISCRETEACCESSORY('3uvI$dxED7W82lNArVoYBz',$,$,$,$,$,$,$,$);
-#37=IFCMECHANICALFASTENER('1ISDnlnd951fTUaPLgo6QT',$,$,$,$,$,$,$,$,$,$); /* Testcase */
-#38=IFCRELNESTS('2fCS1g9rzF3O_xjbSkHidH',$,$,$,#35,(#36));
-#39=IFCRELNESTS('1VuQp1srD6IROUtvSU4Azv',$,$,$,#36,(#37));
+#1=IFCELEMENTASSEMBLY('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$,$);
+#2=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#3=IFCRELAGGREGATES('0eA6m4fELI9QBIhP3wiLAp',$,$,$,#1,(#2));
+#4=IFCSLAB('05rScmOVzMoQXOfbYdtLYj',$,$,$,$,$,$,$,$);
+#5=IFCBEAM('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#6=IFCRELAGGREGATES('0BbkGoC6vPvRW13UT7D8zH',$,$,$,#4,(#5));
+#7=IFCELEMENTASSEMBLY('3dn5FxJ$bKte8lL5dru6xn',$,$,$,$,$,$,$,$,$);
+#8=IFCSLAB('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
+#9=IFCBEAM('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
+#10=IFCRELAGGREGATES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,#7,(#8));
+#11=IFCRELAGGREGATES('0WTUhjMwvT39YBFH2pryoM',$,$,$,#8,(#9));
+#12=IFCELEMENTASSEMBLY('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$,$);
+#13=IFCGROUP('3b0AoFivPN6RDJO6UL_GfZ',$,'Unnamed','',$);
+#14=IFCRELASSIGNSTOGROUP('1UJX0DW6PGVvNXUEmD0sBq',$,$,$,(#12),$,#13);
+#15=IFCELEMENTASSEMBLY('0zOgnThXbJ18CK0JKHikvt',$,$,$,$,$,$,$,$,$);
+#16=IFCINVENTORY('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$,$,$);
+#17=IFCRELASSIGNSTOGROUP('1X7Mz0AZrMOPkukNM5XTEV',$,$,$,(#15),$,#16);
+#18=IFCELEMENTASSEMBLY('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$,$);
+#19=IFCSPACE('3qs_CEYznSwfyPnfvmY$jn',$,$,$,$,$,$,$,$,$,$);
+#20=IFCRELCONTAINEDINSPATIALSTRUCTURE('2J464n_AnPNgUfYvzrChAh',$,$,$,(#18),#19);
+#21=IFCELEMENTASSEMBLY('3NmyAazpzLq8cIG7JPLlM9',$,$,$,$,$,$,$,$,$);
+#22=IFCSPACE('3Wzl48UnnIp8YxtLF4v8ZP',$,$,$,$,$,$,$,$,$,$);
+#23=IFCRELCONTAINEDINSPATIALSTRUCTURE('25g_sgGv1Ktw1yG4pu$Q5F',$,$,$,(#21),#22);
+#24=IFCSLAB('0RSL8wCT5PN9gJFcsABneg',$,$,$,$,$,$,$,$);
+#25=IFCBEAM('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
+#26=IFCRELAGGREGATES('3uvq$MvJ1G9Bh_81VP1e9A',$,$,$,#24,(#25));
+#27=IFCSPACE('1$n1_2RkXPbfXO7oow3KlU',$,$,$,$,$,$,$,$,$,$);
+#28=IFCRELCONTAINEDINSPATIALSTRUCTURE('0aEFdeguTItxk11mFwy_RG',$,$,$,(#24),#27);
+#29=IFCFURNITURE('2de$MNI$LGLOjZiSngF_vG',$,$,$,$,$,$,$,$);
+#30=IFCDISCRETEACCESSORY('2wP8lRhDTKrxIPJKeaifuL',$,$,$,$,$,$,$,$);
+#31=IFCRELNESTS('1KlbEiNjDIJAGwnYBZ2B87',$,$,$,#29,(#30));
+#32=IFCFURNITURE('0nB_kaOvDG6eluiK84kq9M',$,$,$,$,$,$,$,$);
+#33=IFCDISCRETEACCESSORY('0YwTGeJUPSxgVHD3te0HY$',$,$,$,$,$,$,$,$);
+#34=IFCRELNESTS('2cohnZTsfUgQK$4UvlhCtt',$,$,$,#32,(#33));
+#35=IFCFURNITURE('0SvF7iJ0nUFuDA0RAthkuL',$,$,$,$,$,$,$,$);
+#36=IFCDISCRETEACCESSORY('3Qnav3G3LH0xD2qsHtUARy',$,$,$,$,$,$,$,$);
+#37=IFCMECHANICALFASTENER('0twQuvOmHLbQhwOoFZW2Qc',$,$,$,$,$,$,$,$,$,$); /* Testcase */
+#38=IFCRELNESTS('3yZ83FbJHHSPECOji2VuR7',$,$,$,#35,(#36));
+#39=IFCRELNESTS('1zuFxqs7jRvBmbYESXTcGe',$,$,$,#36,(#37));
 ~~~
 
-[Sample IDS](testcases/pass-nesting_may_be_indirect.ids) - [Sample IFC: 37](testcases/pass-nesting_may_be_indirect.ifc)
+[Sample IDS](testcases/partof/pass-nesting_may_be_indirect.ids) - [Sample IFC: 37](testcases/partof/pass-nesting_may_be_indirect.ifc)
 

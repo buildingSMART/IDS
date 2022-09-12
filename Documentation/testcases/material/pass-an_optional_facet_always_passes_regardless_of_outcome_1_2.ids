@@ -1,0 +1,23 @@
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS/ids_05.xsd">
+    <info>
+        <title>An optional facet always passes regardless of outcome 1/2</title>
+    </info>
+    <specifications>
+        <specification name="An optional facet always passes regardless of outcome 1/2" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+            <applicability>
+                <entity>
+                    <name>
+                        <simpleValue>IfcWall</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <material minOccurs="0" maxOccurs="1">
+                    <value>
+                        <simpleValue>Foo</simpleValue>
+                    </value>
+                </material>
+            </requirements>
+        </specification>
+    </specifications>
+</ids>

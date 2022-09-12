@@ -1,0 +1,29 @@
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS/ids_05.xsd">
+    <info>
+        <title>Predefined properties are supported but discouraged 2/2</title>
+    </info>
+    <specifications>
+        <specification name="Predefined properties are supported but discouraged 2/2" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+            <applicability>
+                <entity>
+                    <name>
+                        <simpleValue>IfcDoor</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <property measure="IfcDoorPanelOperationEnum" minOccurs="1" maxOccurs="1">
+                    <propertySet>
+                        <simpleValue>Foo_Bar</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>PanelOperation</simpleValue>
+                    </name>
+                    <value>
+                        <simpleValue>SWONGING</simpleValue>
+                    </value>
+                </property>
+            </requirements>
+        </specification>
+    </specifications>
+</ids>

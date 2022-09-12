@@ -1,0 +1,26 @@
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS/ids_05.xsd">
+    <info>
+        <title>Only specifically formatted numbers are allowed 1/4</title>
+    </info>
+    <specifications>
+        <specification name="Only specifically formatted numbers are allowed 1/4" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+            <applicability>
+                <entity>
+                    <name>
+                        <simpleValue>IfcSurfaceStyleRefraction</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <attribute minOccurs="1" maxOccurs="1">
+                    <name>
+                        <simpleValue>RefractionIndex</simpleValue>
+                    </name>
+                    <value>
+                        <simpleValue>42,3</simpleValue>
+                    </value>
+                </attribute>
+            </requirements>
+        </specification>
+    </specifications>
+</ids>

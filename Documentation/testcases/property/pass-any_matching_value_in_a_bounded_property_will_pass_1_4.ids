@@ -1,0 +1,29 @@
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS/ids_05.xsd">
+    <info>
+        <title>Any matching value in a bounded property will pass 1/4</title>
+    </info>
+    <specifications>
+        <specification name="Any matching value in a bounded property will pass 1/4" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+            <applicability>
+                <entity>
+                    <name>
+                        <simpleValue>IfcWall</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <property measure="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
+                    <propertySet>
+                        <simpleValue>Foo_Bar</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>Foo</simpleValue>
+                    </name>
+                    <value>
+                        <simpleValue>1</simpleValue>
+                    </value>
+                </property>
+            </requirements>
+        </specification>
+    </specifications>
+</ids>
