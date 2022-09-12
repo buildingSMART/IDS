@@ -25,6 +25,10 @@ In addition, it is highly recommended to also provide the following features for
  - When users write a predefined type in an **Entity Facet**, your interface should recommend allowable values based on the nominated IFC class. However, it should still allow users to write a custom predefined type. Autocompletion is recommended.
  - When users have already specified an **Entity Facet** and are creating an **Attribute Facet**, your interface should restrict allowable values based on the nominated IFC class. Your interface should also guide the user to use the right data type based on the nominated attribute name.
  - When users have already specified an **Entity Facet** and are creating a **Property Facet**, your interface should recommend allowable property sets based on the nominated IFC class and predefined type. However, it should also allow users to write a custom property set name. If a standardised (e.g. `Pset_` or `Qto_`) property set is nominated, your interface should restrict the allowable property names and recommend the appropriate data type to be used.
+ - When a string is specified for a custom property in a **Property Facet**, it is preferred for IfcLabel to be the default data type
+ - When an integer is specified for a custom property in a **Property Facet**, it is preferred for IfcInteger to be the default data type
+ - When a float is specified for a custom property in a **Property Facet**, it is preferred for IfcReal to be the default data type
+ - When a user is specifying a value with a unit, you should provide conversion tools so that the user can write the IDS in their preferred unit
  - You may also choose to preload standardised classification names for commonly known systems, as well as the classification references to prevent spelling errors. You may choose to use this [IFC directory for classification systems](https://github.com/Moult/ifcclassification).
  - When users are nominating a **Material Facet**, your interface should recommend the IFC recommended material categories (one of 'concrete', 'steel', 'aluminium', 'block', 'brick', 'stone', 'wood', 'glass', 'gypsum', 'plastic', or 'earth')
 
