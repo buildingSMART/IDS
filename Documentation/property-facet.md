@@ -10,16 +10,12 @@ A special type of **Property** is known as a **Quantity**. Whereas **Properties*
 
 To see what **Properties** are standardised by buildingSMART, check the following lists below. You will see a list of **Property Sets**. Clicking on a **Property Set** will bring you to its page, which will show the **Applicable Entity** just below the page title, as well as a table of **Property Names** and expected data types for the **Values**, and have an **Applicable Entity**.
 
- - [IFC4X3 Property Sets](http://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/annex-b3.html)
+ - [IFC4X3 Property and Quantity Sets](http://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/annex-b3.html)
  - [IFC4 Property Sets](https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/link/alphabeticalorder-property-sets.htm)
  - [IFC4 Quantity Sets](https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/link/alphabeticalorder-quantity-sets.htm)
  - [IFC2X3 Property Sets](https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/psd/psd_index.htm)
 
-To see what **Quantities** are available for an IFC class, you will need to check the IFC documentation. Here is how you might find a list of valid **Quantities** for the IFC4X3 schema. Note that IFC2X3 only has properties, not quantities.
-
- 1. Browse to the documentation page for the IFC class you are specifying. For example, [this is the IfcWall documentation page](http://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWall.htm).
- 2. Scroll down to the **Property Sets** section of the documentation. If you are viewing the IFC4 documentation, you will also need to scroll down to the **Quantity Sets** section of the documentation.
- 4. Click on any **Property Set** or **Quantity Set** name to see a list of valid **Property Names** you can use, and a description and indication of data type.
+Note that IFC2X3 only has buildingSMART standardised properties, not quantities.
 
 Instead of checking the documentation, your IDS authoring software may help you to shortlist valid **Property Sets**.
 
@@ -46,7 +42,7 @@ IfcVolumeMeasure | A number used to measure the physical volume of something
 IfcDate | The date when something will or has happened, such as 2020-01-01
 IfcDuration | A time duration, such as 3 months, 1 week, 4 days, or 1 hour.
 
-If the data type has a unit, IDS currently specifies all unit-based values based on SI units. You can see a full list of which units are specified for each data type in the [IDS units table](units.md).
+If the data type has a unit, IDS currently specifies all unit-based values based on SI units. You can see a full list of which units are specified for each data type in the [IDS units table](units.md). Note that although you can use a data type to request a particular measurement (e.g. an IfcLengthMeasure), you cannot use IDS to request that the length is measured with a particular unit (e.g. meters, inches, millimeters). This capability may be introduced in a future version of IDS.
 
 Specify properties are critical providing supplementary information to objects in a model. It is also important to follow buildingSMART standardised **Properties** where possible to ensure that data is highly structured and can be predictably retrieved. The **Property Facet** is considered to be one of the most commonly used facets in IDS.
 
