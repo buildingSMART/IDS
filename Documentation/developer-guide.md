@@ -43,6 +43,7 @@ Any software implementing IDS checking **must** comply with the following test s
  - [Property testcases](testcases-property.md)
  - [Material testcases](testcases-material.md)
  - [PartOf testcases](testcases-partof.md)
+ - [Restriction testcases](testcases-restriction.md)
 
 ## Generating reports from IDS results
 
