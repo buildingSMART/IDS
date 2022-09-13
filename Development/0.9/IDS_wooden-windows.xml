@@ -17,8 +17,8 @@
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
-				<ids:partOf>
-					<ids:entity relation="IfcRelAggregates">
+				<ids:partOf relation="IfcRelAggregates">
+					<ids:entity >
 						<ids:simpleValue>IFCDOOR</ids:simpleValue>
 					</ids:entity>
 				</ids:partOf>
@@ -82,8 +82,8 @@
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
-				<ids:partOf>
-					<ids:entity relation="IfcRelAggregates">
+				<ids:partOf relation="IfcRelAggregates">
+					<ids:entity >
 						<ids:simpleValue>IFCDOOR</ids:simpleValue>
 					</ids:entity>
 				</ids:partOf>
@@ -145,8 +145,8 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:partOf>
-					<ids:entity relation="IfcRelAggregates">
+				<ids:partOf relation="IfcRelAggregates">
+					<ids:entity>
 						<ids:simpleValue>IFCDOOR</ids:simpleValue>
 					</ids:entity>
 				</ids:partOf>
@@ -213,8 +213,8 @@
 			</ids:material>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:partOf>
-					<ids:entity relation="IfcRelAggregates">
+				<ids:partOf relation="IfcRelAggregates">
+					<ids:entity>
 						<ids:simpleValue>IFCDOOR</ids:simpleValue>
 					</ids:entity>
 				</ids:partOf>
@@ -240,8 +240,8 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:partOf>
-					<ids:entity relation="IfcRelAggregates">
+				<ids:partOf relation="IfcRelAggregates">
+					<ids:entity>
 						<ids:simpleValue>IFCDOOR</ids:simpleValue>
 					</ids:entity>
 				</ids:partOf>
