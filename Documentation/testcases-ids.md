@@ -34,7 +34,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ```
-# Specification (optional)
+# ❌ Specification (optional)
 Applies to:
  - All IFCWALL data
 Requirements:
@@ -75,7 +75,7 @@ Requirements:
 ~~~
 
 ```
-# Specification (optional)
+# ✔️ Specification (optional)
 Applies to:
  - All IFCWALL data
 Requirements:
@@ -116,7 +116,7 @@ Requirements:
 ~~~
 
 ```
-# Specification (optional)
+# ✔️ Specification (optional)
 Applies to:
  - All IFCWALL data
 Requirements:
@@ -156,7 +156,7 @@ Requirements:
 ~~~
 
 ```
-# Specification (required)
+# ✔️ Specification (required)
 Applies to:
  - All IFCWALL data
 Requirements:
@@ -196,7 +196,7 @@ Requirements:
 ~~~
 
 ```
-# Specification (required)
+# ❌ Specification (required)
 Applies to:
  - All IFCWALL data
 Requirements:
@@ -236,7 +236,7 @@ Requirements:
 ~~~
 
 ```
-# Specification (optional)
+# ✔️ Specification (optional)
 Applies to:
  - All IFCWALL data
 Requirements:
@@ -276,7 +276,7 @@ Requirements:
 ~~~
 
 ```
-# Specification (prohibited)
+# ✔️ Specification (prohibited)
 Applies to:
  - All IFCWALL data
 Requirements:
@@ -316,7 +316,7 @@ Requirements:
 ~~~
 
 ```
-# Specification (prohibited)
+# ✔️ Specification (prohibited)
 Applies to:
  - All IFCWALL data
 Requirements:
@@ -356,7 +356,7 @@ Requirements:
 ~~~
 
 ```
-# Specification (prohibited)
+# ❌ Specification (prohibited)
 Applies to:
  - All IFCWALL data
 Requirements:
@@ -404,7 +404,7 @@ Requirements:
 ~~~
 
 ```
-# Specification (optional)
+# ❌ Specification (optional)
 Applies to:
  - All IFCWALL data
 Requirements:
@@ -453,7 +453,7 @@ Requirements:
 ~~~
 
 ```
-# Specification (optional)
+# ✔️ Specification (optional)
 Applies to:
  - All IFCWALL data
 Requirements:
@@ -502,7 +502,7 @@ Requirements:
 ~~~
 
 ```
-# Specification (optional)
+# ✔️ Specification (optional)
 Applies to:
  - All IFCWALL data
 Requirements:
@@ -551,7 +551,7 @@ Requirements:
 ~~~
 
 ```
-# Specification (prohibited)
+# ✔️ Specification (prohibited)
 Applies to:
  - All IFCWALL data
 Requirements:
@@ -620,7 +620,7 @@ Requirements:
 ~~~
 
 ```
-# Specification (prohibited)
+# ✔️ Specification (prohibited)
 Applies to:
  - All IFCWALL data
 Requirements:
@@ -629,7 +629,7 @@ Requirements:
 ```
 
 ```
-# Specification (optional)
+# ✔️ Specification (optional)
 Applies to:
  - All IFCWALL data
 Requirements:
