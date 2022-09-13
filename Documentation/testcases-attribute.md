@@ -1056,13 +1056,10 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~xml
 <attribute minOccurs="1" maxOccurs="1">
   <name>
-    <simpleValue>Name</simpleValue>
+    <simpleValue>Description</simpleValue>
   </name>
   <value>
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="Foo"/>
-      <xs:enumeration value="Bar"/>
-    </xs:restriction>
+    <simpleValue>Foobar</simpleValue>
   </value>
 </attribute>
 ~~~

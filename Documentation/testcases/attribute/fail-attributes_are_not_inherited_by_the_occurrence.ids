@@ -1,4 +1,4 @@
-<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS/ids_05.xsd">
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS/ids_05.xsd">
     <info>
         <title>Attributes are not inherited by the occurrence</title>
     </info>
@@ -14,13 +14,10 @@
             <requirements>
                 <attribute minOccurs="1" maxOccurs="1">
                     <name>
-                        <simpleValue>Name</simpleValue>
+                        <simpleValue>Description</simpleValue>
                     </name>
                     <value>
-                        <xs:restriction base="xs:string">
-                            <xs:enumeration value="Foo" />
-                            <xs:enumeration value="Bar" />
-                        </xs:restriction>
+                        <simpleValue>Foobar</simpleValue>
                     </value>
                 </attribute>
             </requirements>
