@@ -45,6 +45,28 @@ Any software implementing IDS checking **must** comply with the following test s
  - [PartOf testcases](testcases-partof.md)
  - [Restriction testcases](testcases-restriction.md)
 
+### Precision
+
+A float value is considered to be equivalent to a number `x`, if it lies between (exclusive) the range of `x * (1. - 1.e-6) - 1.e-6` and `x * (1. + 1.e-6) + 1.e-6`.
+
+This is a compromise and simplification that allows precision to scale from small to large units.
+
+### Restrictions
+
+XSD also includes a **Total Digits** and a **Fraction Digits** restriction. These will not be supported in IDS as they have limited utility.
+
+### Optionality
+
+Specifications and facets can have an optionality set to **Required**, **Optional**, or **Prohibited**. This is represented using XSD's `minOccurs` and `maxOccurs` functionality. They are represented by the following states:
+
+Optionality | minOccurs | maxOccurs
+--- | --- | ---
+Required | 1 | unbounded
+Optional | 0 | unbounded
+Prohibited | 0 | 0
+
+Although other permutations of `minOccurs` and `maxOccurs` may exist, they do not have any meaning.
+
 ## Generating reports from IDS results
 
 It is intended that IDS auditing results may be saved as BCF-XML format, or connect to an OpenCDE via the BCF-API. However, the formatting and overall structuring of these results in BCF are not specified right now.
