@@ -6,8 +6,6 @@ When specifying a **Facet Parameter**, you may either specify a **Simple Value**
  - Pattern
  - Bounds
  - Length
- - Total digits
- - Fraction digits
 
 ## Enumeration
 
@@ -54,5 +52,7 @@ A **Bounds** restriction allows you to specify that the value is a number and ha
 ## Length
 
 A **Length** restriction specifies the exact number of characters allowed in a value. For example, if you specify a length of 3, then values that are three characters long, like "`ABC`" or "`123`", will meet your requirement. Other values, like "`AB`" or "`ABC123`" will not meet your requirement.
+
+Similarly, you can specify a **Max Length** and / or a **Min Length**. A **Max Lenght** of 5 will allow a value of "`ABCDE`" but will not allow values like "`ABCDEF`". A **Min Length** of 3 will allow a value of "`ABC`" but not allow a value of "`AB`".
 
 Note that it is also possible to achieve the same effect by specifying a **Pattern**, such as "`.{3}`", however, the **Length** restriction is simpler and quicker to compute.
