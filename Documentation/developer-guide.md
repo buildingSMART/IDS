@@ -46,7 +46,7 @@ Any software implementing IDS checking **must** comply with the following test s
 
 ## Generating reports from IDS results
 
-TODO: specify rules about BCF
+It is intended that IDS auditing results may be saved as BCF-XML format, or connect to an OpenCDE via the BCF-API. However, the formatting and overall structuring of these results in BCF are not specified right now.
 
 ## Handling IFC compatibility
 
