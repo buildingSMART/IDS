@@ -15,19 +15,19 @@ class Build : NukeBuild
     [Parameter("Configuration to build - Default is 'Debug' (local) or 'Release' (server)")]
     readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;
 
-    [PackageExecutable("ids-tool.CommandLine", "tools/net5.0/ids-tool.dll")] Tool BcfTool;
-    private string BcfToolPath => System.IO.Path.GetDirectoryName(ToolPathResolver.GetPackageExecutable("ids-tool.CommandLine", "tools/net5.0/ids-tool.dll"));
+    [PackageExecutable("ids-tool.CommandLine", "tools/net6.0/ids-tool.dll")] Tool BcfTool;
+    private string BcfToolPath => System.IO.Path.GetDirectoryName(ToolPathResolver.GetPackageExecutable("ids-tool.CommandLine", "tools/net6.0/ids-tool.dll"));
 
     Target CheckTestCases => _ => _
         .Executes(() =>
         {
             var schemaFile = Path.Combine(
                 RootDirectory,
-                "Development/0.6/ids_06.xsd"
+                "Development/0.9/ids_09.xsd"
                 );
             var inputFolder = Path.Combine(
                 RootDirectory,
-                "Development/0.6"
+                "Development/0.9"
                 );
             var arguments = $"check \"{inputFolder}\" -x \"{schemaFile}\"";
             BcfTool(arguments, workingDirectory: BcfToolPath);
