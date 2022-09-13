@@ -45,6 +45,11 @@ Any software implementing IDS checking **must** comply with the following test s
  - [PartOf testcases](testcases-partof.md)
  - [Restriction testcases](testcases-restriction.md)
 
+In addition, it is highly recommended to also provide the following features for users:
+
+ - It is intended that IDS auditing results may be saved as BCF-XML format, or connect to an OpenCDE via the BCF-API. However, the formatting and overall structuring of these results in BCF are not specified right now.
+ - If the software is not capable of parsing the specified IFC version nominated by the IDS specification, then the user should be made aware of the limitation.
+
 ### Precision
 
 A float value is considered to be equivalent to a number `x`, if it lies between (exclusive) the range of `x * (1. - 1.e-6) - 1.e-6` and `x * (1. + 1.e-6) + 1.e-6`.
@@ -61,23 +66,11 @@ Specifications and facets can have an optionality set to **Required**, **Optiona
 
 Optionality | minOccurs | maxOccurs
 --- | --- | ---
-Required | 1 | unbounded
-Optional | 0 | unbounded
+Required | 1 | >=1 or unbounded
+Optional | 0 | >=1 or unbounded
 Prohibited | 0 | 0
 
 Although other permutations of `minOccurs` and `maxOccurs` may exist, they do not have any meaning.
-
-## Generating reports from IDS results
-
-It is intended that IDS auditing results may be saved as BCF-XML format, or connect to an OpenCDE via the BCF-API. However, the formatting and overall structuring of these results in BCF are not specified right now.
-
-## Handling IFC compatibility
-
-If the software is not capable of parsing the specified IFC version nominated by the IDS specification, then the user should be made aware of the limitation.
-
-## Handling different IDS versions
-
-IDS is not yet formally released and so there is no guarantee of vendor support for any IDS version.
 
 ## Available developer libraries
 
