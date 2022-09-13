@@ -13,10 +13,10 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('0bziUpHHb538fov9u7Lsl9',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 ~~~
 
-[Sample IDS](testcases/fail-invalid_entities_always_fail.ids) - [Sample IFC: 1](testcases/fail-invalid_entities_always_fail.ifc)
+[Sample IDS](testcases/entity/fail-invalid_entities_always_fail.ids) - [Sample IFC: 1](testcases/entity/fail-invalid_entities_always_fail.ifc)
 
 ## [PASS] A matching entity should pass
 
@@ -29,10 +29,10 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('1yTM9eiGX5jx7gpHqwcmKe',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 ~~~
 
-[Sample IDS](testcases/pass-a_matching_entity_should_pass.ids) - [Sample IFC: 1](testcases/pass-a_matching_entity_should_pass.ifc)
+[Sample IDS](testcases/entity/pass-a_matching_entity_should_pass.ids) - [Sample IFC: 1](testcases/entity/pass-a_matching_entity_should_pass.ifc)
 
 ## [PASS] An matching entity should pass regardless of predefined type
 
@@ -45,10 +45,10 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('0DPnCjnmD6_AfI6sLoNhus',$,$,$,$,$,$,$,.SOLIDWALL.); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,.SOLIDWALL.); /* Testcase */
 ~~~
 
-[Sample IDS](testcases/pass-an_matching_entity_should_pass_regardless_of_predefined_type.ids) - [Sample IFC: 1](testcases/pass-an_matching_entity_should_pass_regardless_of_predefined_type.ifc)
+[Sample IDS](testcases/entity/pass-an_matching_entity_should_pass_regardless_of_predefined_type.ids) - [Sample IFC: 1](testcases/entity/pass-an_matching_entity_should_pass_regardless_of_predefined_type.ifc)
 
 ## [FAIL] An entity not matching the specified class should fail
 
@@ -61,10 +61,10 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCSLAB('0lyDsfhm15IfI0WHEUDFhp',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCSLAB('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 ~~~
 
-[Sample IDS](testcases/fail-an_entity_not_matching_the_specified_class_should_fail.ids) - [Sample IFC: 1](testcases/fail-an_entity_not_matching_the_specified_class_should_fail.ifc)
+[Sample IDS](testcases/entity/fail-an_entity_not_matching_the_specified_class_should_fail.ids) - [Sample IFC: 1](testcases/entity/fail-an_entity_not_matching_the_specified_class_should_fail.ifc)
 
 ## [FAIL] Subclasses are not considered as matching
 
@@ -77,10 +77,10 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALLSTANDARDCASE('1lg8oDVpf0KuarRewjGUIv',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALLSTANDARDCASE('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 ~~~
 
-[Sample IDS](testcases/fail-subclasses_are_not_considered_as_matching.ids) - [Sample IFC: 1](testcases/fail-subclasses_are_not_considered_as_matching.ifc)
+[Sample IDS](testcases/entity/fail-subclasses_are_not_considered_as_matching.ids) - [Sample IFC: 1](testcases/entity/fail-subclasses_are_not_considered_as_matching.ifc)
 
 ## [FAIL] Entities must be specified as uppercase strings
 
@@ -93,10 +93,10 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('0gnz5aO8rBXOI8Da3mwJ9Z',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 ~~~
 
-[Sample IDS](testcases/fail-entities_must_be_specified_as_uppercase_strings.ids) - [Sample IFC: 1](testcases/fail-entities_must_be_specified_as_uppercase_strings.ifc)
+[Sample IDS](testcases/entity/fail-entities_must_be_specified_as_uppercase_strings.ids) - [Sample IFC: 1](testcases/entity/fail-entities_must_be_specified_as_uppercase_strings.ifc)
 
 ## [PASS] A matching predefined type should pass
 
@@ -112,10 +112,10 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('3QxiEep1970RjLzhHenAlw',$,$,$,$,$,$,$,.SOLIDWALL.); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,.SOLIDWALL.); /* Testcase */
 ~~~
 
-[Sample IDS](testcases/pass-a_matching_predefined_type_should_pass.ids) - [Sample IFC: 1](testcases/pass-a_matching_predefined_type_should_pass.ifc)
+[Sample IDS](testcases/entity/pass-a_matching_predefined_type_should_pass.ids) - [Sample IFC: 1](testcases/entity/pass-a_matching_predefined_type_should_pass.ifc)
 
 ## [FAIL] A null predefined type should always fail a specified predefined types
 
@@ -131,10 +131,10 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('3hX7Q2CMrA89UgAc0HAauJ',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 ~~~
 
-[Sample IDS](testcases/fail-a_null_predefined_type_should_always_fail_a_specified_predefined_types.ids) - [Sample IFC: 1](testcases/fail-a_null_predefined_type_should_always_fail_a_specified_predefined_types.ifc)
+[Sample IDS](testcases/entity/fail-a_null_predefined_type_should_always_fail_a_specified_predefined_types.ids) - [Sample IFC: 1](testcases/entity/fail-a_null_predefined_type_should_always_fail_a_specified_predefined_types.ifc)
 
 ## [FAIL] An entity not matching a specified predefined type will fail
 
@@ -150,10 +150,10 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('3lMFFm9kP03PH$35Barisc',$,$,$,$,$,$,$,.PARTITIONING.); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,.PARTITIONING.); /* Testcase */
 ~~~
 
-[Sample IDS](testcases/fail-an_entity_not_matching_a_specified_predefined_type_will_fail.ids) - [Sample IFC: 1](testcases/fail-an_entity_not_matching_a_specified_predefined_type_will_fail.ifc)
+[Sample IDS](testcases/entity/fail-an_entity_not_matching_a_specified_predefined_type_will_fail.ids) - [Sample IFC: 1](testcases/entity/fail-an_entity_not_matching_a_specified_predefined_type_will_fail.ifc)
 
 ## [FAIL] A predefined type from an enumeration must be uppercase
 
@@ -169,10 +169,10 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('2lFXfmA6z508OXyTOybtpc',$,$,$,$,$,$,$,.SOLIDWALL.); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,.SOLIDWALL.); /* Testcase */
 ~~~
 
-[Sample IDS](testcases/fail-a_predefined_type_from_an_enumeration_must_be_uppercase.ids) - [Sample IFC: 1](testcases/fail-a_predefined_type_from_an_enumeration_must_be_uppercase.ifc)
+[Sample IDS](testcases/entity/fail-a_predefined_type_from_an_enumeration_must_be_uppercase.ids) - [Sample IFC: 1](testcases/entity/fail-a_predefined_type_from_an_enumeration_must_be_uppercase.ifc)
 
 ## [PASS] A predefined type may specify a user-defined object type
 
@@ -188,10 +188,10 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('1IayCfZI12fvRCC4G1j36c',$,$,$,'WALDO',$,$,$,.USERDEFINED.); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,'WALDO',$,$,$,.USERDEFINED.); /* Testcase */
 ~~~
 
-[Sample IDS](testcases/pass-a_predefined_type_may_specify_a_user_defined_object_type.ids) - [Sample IFC: 1](testcases/pass-a_predefined_type_may_specify_a_user_defined_object_type.ifc)
+[Sample IDS](testcases/entity/pass-a_predefined_type_may_specify_a_user_defined_object_type.ids) - [Sample IFC: 1](testcases/entity/pass-a_predefined_type_may_specify_a_user_defined_object_type.ifc)
 
 ## [FAIL] User-defined types are checked case sensitively
 
@@ -207,10 +207,10 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('2ecfUPMe1BN87v6P0rBzjT',$,$,$,'waldo',$,$,$,.USERDEFINED.); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,'waldo',$,$,$,.USERDEFINED.); /* Testcase */
 ~~~
 
-[Sample IDS](testcases/fail-user_defined_types_are_checked_case_sensitively.ids) - [Sample IFC: 1](testcases/fail-user_defined_types_are_checked_case_sensitively.ifc)
+[Sample IDS](testcases/entity/fail-user_defined_types_are_checked_case_sensitively.ids) - [Sample IFC: 1](testcases/entity/fail-user_defined_types_are_checked_case_sensitively.ifc)
 
 ## [PASS] A predefined type may specify a user-defined element type
 
@@ -226,10 +226,10 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALLTYPE('3FSPLBZF93nAHg4xE3mSNS',$,$,$,$,$,$,$,'WALDO',.USERDEFINED.); /* Testcase */
+#1=IFCWALLTYPE('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,'WALDO',.USERDEFINED.); /* Testcase */
 ~~~
 
-[Sample IDS](testcases/pass-a_predefined_type_may_specify_a_user_defined_element_type.ids) - [Sample IFC: 1](testcases/pass-a_predefined_type_may_specify_a_user_defined_element_type.ifc)
+[Sample IDS](testcases/entity/pass-a_predefined_type_may_specify_a_user_defined_element_type.ids) - [Sample IFC: 1](testcases/entity/pass-a_predefined_type_may_specify_a_user_defined_element_type.ifc)
 
 ## [PASS] A predefined type may specify a user-defined process type
 
@@ -245,10 +245,10 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCTASKTYPE('180B8D4KbFXfFN35aUwF0v',$,$,$,$,$,$,$,'TASKY',.USERDEFINED.,$); /* Testcase */
+#1=IFCTASKTYPE('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,'TASKY',.USERDEFINED.,$); /* Testcase */
 ~~~
 
-[Sample IDS](testcases/pass-a_predefined_type_may_specify_a_user_defined_process_type.ids) - [Sample IFC: 1](testcases/pass-a_predefined_type_may_specify_a_user_defined_process_type.ifc)
+[Sample IDS](testcases/entity/pass-a_predefined_type_may_specify_a_user_defined_process_type.ids) - [Sample IFC: 1](testcases/entity/pass-a_predefined_type_may_specify_a_user_defined_process_type.ifc)
 
 ## [FAIL] A predefined type must always specify a meaningful type, not USERDEFINED itself
 
@@ -264,10 +264,10 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('2emAGFrs5DGu$vYROns4EL',$,$,$,'WALDO',$,$,$,.USERDEFINED.); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,'WALDO',$,$,$,.USERDEFINED.); /* Testcase */
 ~~~
 
-[Sample IDS](testcases/fail-a_predefined_type_must_always_specify_a_meaningful_type__not_userdefined_itself.ids) - [Sample IFC: 1](testcases/fail-a_predefined_type_must_always_specify_a_meaningful_type__not_userdefined_itself.ifc)
+[Sample IDS](testcases/entity/fail-a_predefined_type_must_always_specify_a_meaningful_type__not_userdefined_itself.ids) - [Sample IFC: 1](testcases/entity/fail-a_predefined_type_must_always_specify_a_meaningful_type__not_userdefined_itself.ifc)
 
 ## [PASS] Inherited predefined types should pass
 
@@ -283,12 +283,12 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('3uBNXcbZfEER4V5ISZHxa4',$,$,$,$,$,$,$,$); /* Testcase */
-#2=IFCWALLTYPE('1b4wJS_5XEuOEm$Fy$d05j',$,$,$,$,$,$,$,'X',.USERDEFINED.);
-#3=IFCRELDEFINESBYTYPE('2PevMQbNn6IQrnTn6mr9mY',$,$,$,(#1),#2);
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
+#2=IFCWALLTYPE('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,'X',.USERDEFINED.);
+#3=IFCRELDEFINESBYTYPE('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#1),#2);
 ~~~
 
-[Sample IDS](testcases/pass-inherited_predefined_types_should_pass.ids) - [Sample IFC: 1](testcases/pass-inherited_predefined_types_should_pass.ifc)
+[Sample IDS](testcases/entity/pass-inherited_predefined_types_should_pass.ids) - [Sample IFC: 1](testcases/entity/pass-inherited_predefined_types_should_pass.ifc)
 
 ## [PASS] Overridden predefined types should pass
 
@@ -304,12 +304,12 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('1OMDXrLg52tvgkWQWnN9Kk',$,$,$,'X',$,$,$,.USERDEFINED.); /* Testcase */
-#2=IFCWALLTYPE('24kVNldTr5fvFVXxP6ljxr',$,$,$,$,$,$,$,$,.NOTDEFINED.);
-#3=IFCRELDEFINESBYTYPE('3nCzJtVmj68Op7z5jlRk8h',$,$,$,(#1),#2);
+#1=IFCWALL('05rScmOVzMoQXOfbYdtLYj',$,$,$,'X',$,$,$,.USERDEFINED.); /* Testcase */
+#2=IFCWALLTYPE('05rScmOVzMoQXOfbYdtLYj',$,$,$,$,$,$,$,$,.NOTDEFINED.);
+#3=IFCRELDEFINESBYTYPE('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 ~~~
 
-[Sample IDS](testcases/pass-overridden_predefined_types_should_pass.ids) - [Sample IFC: 1](testcases/pass-overridden_predefined_types_should_pass.ifc)
+[Sample IDS](testcases/entity/pass-overridden_predefined_types_should_pass.ids) - [Sample IFC: 1](testcases/entity/pass-overridden_predefined_types_should_pass.ifc)
 
 ## [PASS] Entities can be specified as an enumeration 1/3
 
@@ -325,10 +325,10 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('1Qay_22En1le9QrVmHaBQl',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 ~~~
 
-[Sample IDS](testcases/pass-entities_can_be_specified_as_an_enumeration_1_3.ids) - [Sample IFC: 1](testcases/pass-entities_can_be_specified_as_an_enumeration_1_3.ifc)
+[Sample IDS](testcases/entity/pass-entities_can_be_specified_as_an_enumeration_1_3.ids) - [Sample IFC: 1](testcases/entity/pass-entities_can_be_specified_as_an_enumeration_1_3.ifc)
 
 ## [PASS] Entities can be specified as an enumeration 2/3
 
@@ -344,10 +344,10 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCSLAB('2lzg5zcdb8DvONp3SyU6uf',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCSLAB('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 ~~~
 
-[Sample IDS](testcases/pass-entities_can_be_specified_as_an_enumeration_2_3.ids) - [Sample IFC: 1](testcases/pass-entities_can_be_specified_as_an_enumeration_2_3.ifc)
+[Sample IDS](testcases/entity/pass-entities_can_be_specified_as_an_enumeration_2_3.ids) - [Sample IFC: 1](testcases/entity/pass-entities_can_be_specified_as_an_enumeration_2_3.ifc)
 
 ## [FAIL] Entities can be specified as an enumeration 3/3
 
@@ -363,10 +363,10 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCBEAM('3VC5ta4az6afdtXVldU1Ur',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCBEAM('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 ~~~
 
-[Sample IDS](testcases/fail-entities_can_be_specified_as_an_enumeration_3_3.ids) - [Sample IFC: 1](testcases/fail-entities_can_be_specified_as_an_enumeration_3_3.ifc)
+[Sample IDS](testcases/entity/fail-entities_can_be_specified_as_an_enumeration_3_3.ids) - [Sample IFC: 1](testcases/entity/fail-entities_can_be_specified_as_an_enumeration_3_3.ifc)
 
 ## [FAIL] Entities can be specified as a XSD regex pattern 1/2
 
@@ -381,10 +381,10 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('1mRO0SerX5Yh1Fyt53ZEG$',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 ~~~
 
-[Sample IDS](testcases/fail-entities_can_be_specified_as_a_xsd_regex_pattern_1_2.ids) - [Sample IFC: 1](testcases/fail-entities_can_be_specified_as_a_xsd_regex_pattern_1_2.ifc)
+[Sample IDS](testcases/entity/fail-entities_can_be_specified_as_a_xsd_regex_pattern_1_2.ids) - [Sample IFC: 1](testcases/entity/fail-entities_can_be_specified_as_a_xsd_regex_pattern_1_2.ifc)
 
 ## [PASS] Entities can be specified as a XSD regex pattern 2/2
 
@@ -399,10 +399,10 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALLTYPE('1os_WLhsPCnxUxc$pshDKq',$,$,$,$,$,$,$,$,.ELEMENTEDWALL.); /* Testcase */
+#1=IFCWALLTYPE('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$,.ELEMENTEDWALL.); /* Testcase */
 ~~~
 
-[Sample IDS](testcases/pass-entities_can_be_specified_as_a_xsd_regex_pattern_2_2.ids) - [Sample IFC: 1](testcases/pass-entities_can_be_specified_as_a_xsd_regex_pattern_2_2.ifc)
+[Sample IDS](testcases/entity/pass-entities_can_be_specified_as_a_xsd_regex_pattern_2_2.ids) - [Sample IFC: 1](testcases/entity/pass-entities_can_be_specified_as_a_xsd_regex_pattern_2_2.ifc)
 
 ## [PASS] Restrictions an be specified for the predefined type 1/3
 
@@ -420,10 +420,10 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('1z1B8SO$LAovq6YP4X_x9n',$,$,$,'FOOBAR',$,$,$,.USERDEFINED.); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,'FOOBAR',$,$,$,.USERDEFINED.); /* Testcase */
 ~~~
 
-[Sample IDS](testcases/pass-restrictions_an_be_specified_for_the_predefined_type_1_3.ids) - [Sample IFC: 1](testcases/pass-restrictions_an_be_specified_for_the_predefined_type_1_3.ifc)
+[Sample IDS](testcases/entity/pass-restrictions_an_be_specified_for_the_predefined_type_1_3.ids) - [Sample IFC: 1](testcases/entity/pass-restrictions_an_be_specified_for_the_predefined_type_1_3.ifc)
 
 ## [PASS] Restrictions an be specified for the predefined type 2/3
 
@@ -441,10 +441,10 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('3vCKrTy4b71P$m1jP1z6Vv',$,$,$,'FOOBAZ',$,$,$,.USERDEFINED.); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,'FOOBAZ',$,$,$,.USERDEFINED.); /* Testcase */
 ~~~
 
-[Sample IDS](testcases/pass-restrictions_an_be_specified_for_the_predefined_type_2_3.ids) - [Sample IFC: 1](testcases/pass-restrictions_an_be_specified_for_the_predefined_type_2_3.ifc)
+[Sample IDS](testcases/entity/pass-restrictions_an_be_specified_for_the_predefined_type_2_3.ids) - [Sample IFC: 1](testcases/entity/pass-restrictions_an_be_specified_for_the_predefined_type_2_3.ifc)
 
 ## [FAIL] Restrictions an be specified for the predefined type 3/3
 
@@ -462,8 +462,8 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('0hsNJQacT3iwFeJmHBH_XL',$,$,$,'BAZFOO',$,$,$,.USERDEFINED.); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,'BAZFOO',$,$,$,.USERDEFINED.); /* Testcase */
 ~~~
 
-[Sample IDS](testcases/fail-restrictions_an_be_specified_for_the_predefined_type_3_3.ids) - [Sample IFC: 1](testcases/fail-restrictions_an_be_specified_for_the_predefined_type_3_3.ifc)
+[Sample IDS](testcases/entity/fail-restrictions_an_be_specified_for_the_predefined_type_3_3.ids) - [Sample IFC: 1](testcases/entity/fail-restrictions_an_be_specified_for_the_predefined_type_3_3.ifc)
 

@@ -1,0 +1,23 @@
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS/ids_05.xsd">
+    <info>
+        <title>An aggregate entity may pass any ancestral whole passes</title>
+    </info>
+    <specifications>
+        <specification name="An aggregate entity may pass any ancestral whole passes" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+            <applicability>
+                <entity>
+                    <name>
+                        <simpleValue>IfcBeam</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <partOf relation="IfcRelAggregates" minOccurs="1" maxOccurs="1">
+                    <entity>
+                        <simpleValue>IFCELEMENTASSEMBLY</simpleValue>
+                    </entity>
+                </partOf>
+            </requirements>
+        </specification>
+    </specifications>
+</ids>

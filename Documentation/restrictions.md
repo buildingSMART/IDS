@@ -43,6 +43,9 @@ Pattern | Description | Example values that meet the pattern criteria | Example 
 
  - [Beginners Regex tutorial](https://regexone.com/)
  - [Online Regex testing website](https://regex101.com/)
+ - [XML Regular expressions](https://www.regular-expressions.info/xml.html)
+
+Note that Regex has multiple "flavours" or "dialects", so although the first two links are useful learning resources, they may also include Regex features not available in IDS. The third link (XML Regular expressions) can be referenced as an authoritative source on what can be used in IDS. In general, Regex in IDS is simpler and does not include advanced Regex features.
 
 ## Bounds
 
@@ -53,11 +56,3 @@ A **Bounds** restriction allows you to specify that the value is a number and ha
 A **Length** restriction specifies the exact number of characters allowed in a value. For example, if you specify a length of 3, then values that are three characters long, like "`ABC`" or "`123`", will meet your requirement. Other values, like "`AB`" or "`ABC123`" will not meet your requirement.
 
 Note that it is also possible to achieve the same effect by specifying a **Pattern**, such as "`.{3}`", however, the **Length** restriction is simpler and quicker to compute.
-
-## Total digits
-
-A **Total Digits** restriction specifies the total number of digits allowed in a value, regardless of negative signs or decimal points. For example, a **Total Digits** of 3 mean that "`123`", "`-123`", and "`1.23`" all meet the requirement.
-
-## Fraction digits
-
-A **Fraction Digits** restriction specifies the precision of the digits allowed after the decimal point. For example, a value of 3 means that "`12`", "`12.3`", "`12.34`", and "`12.345`" are all allowed, since they have three or less digits after the decimal point. However, "`12.3456`" is not allowed. Note that "`12.3450`", "`12.34500`", etc are all equivalent to "`12.345`", so they are also allowed. However, "`12.3450001`" is not equivalent so it is not allowed.

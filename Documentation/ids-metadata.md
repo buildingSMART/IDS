@@ -13,8 +13,8 @@ Copyright | The copyright owner of the IDS | "Example Company Pty Ltd" or "Gover
 Version | The version of the IDS, to keep track of changes that have been made. Semantic versioning is recommended where versioning follows the naming scheme of X.Y, where Y represents a minor change, such as changes in metadata, description, or spelling errors, and X represents a major change, where models that used to pass or fail in a previous version may yield a different result. | "1.0" or "2.1"
 Author | The author of the IDS, provided as an email contact address | "john@doe.com"
 Date | The date the IDS was published | "2022-01-01"
-Description | A short one or two sentence description of what the IDS achieves | "Minimum requirements for all OpenBIM projects to ensure basic coordination and data scheduling can be done by all stakeholders" or "Specifies required properties that have a large impact on the accuracy of cost estimation and quantities that are necessary for automated model-based quantity take-off".
-Purpose | ? | ?
+Description | One or more sentences that further elaborate on a description who the IDS might be for, why it is created, what projects it might apply to, and so on. | "Minimum requirements for all OpenBIM projects to ensure basic coordination and data scheduling can be done by all stakeholders. Expected to be run prior to model sharing and is a requirement for all project milestones." or "Specifies required properties that have a large impact on the accuracy of cost estimation and quantities that are necessary for automated model-based quantity take-off. To be read in conjunction with the cost planning geometry guideline and reinforcing modeling practices guide".
+Purpose | A short one sentence summary of what the IDS achieves | "Minimum requirements for all OpenBIM projects for basic coordination" or "Property requirements for accurate model-based cost planning".
 Milestone | Which project milestone the IDS should be satisfied in | "Design", "Construction", or "Comissioning"
 
 ## Specification metadata

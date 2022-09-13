@@ -1,6 +1,6 @@
 # Attribute facet
 
-Every entity in an IFC model has a list of standardised **Atributes**. **Attributes** are a limited set of fundamental data (usually less than 10) associated with all IFC entities. These are fixed by the IFC standard and cannot be customised.
+Every entity in an IFC model has a list of standardised **Attributes**. **Attributes** are a limited set of fundamental data (usually less than 10) associated with all IFC entities. These are fixed by the IFC standard and cannot be customised.
 
 Here are some common attributes and what they mean:
 
@@ -34,9 +34,9 @@ Parameter | Required | Restrictions Allowed | Allowed Values | Meaning
 
 Applicability Intention | Requirement Intention | Facet Definition
 --- | --- | ---
-Any entity with a Name of "ABC123" | The entity (e.g. Project) must be named "ABC123" | Name="Name", value="ABC123"
-Any entity (but typically IfcMapConversion) with an Easting of 312345 | The entity (e.g. IfcMapConversion) must be geolocated such that the origin is at the Easting of 312345 | Name="Easting", value="312345"
-Any entity with a name starting with "WT" followed by 2 digits, such as WT01, WT02, etc. | The element must have the naming scheme of WT01, WT02, etc | Name="Name", Value="WT[0-9]{2}"
+Any entity with a Name of "ABC123" | The entity (e.g. Project) must be named "ABC123" | Name="Name", Value="ABC123"
+Any entity (but typically IfcMapConversion) with an Easting of 312345 | The entity (e.g. IfcMapConversion) must be geolocated such that the origin is at the Easting of 312345 | Name="Easting", Value="312345"
+Any entity with a name starting with "WT" followed by 2 digits, such as WT01, WT02, etc. | The element must have the naming scheme of WT01, WT02, etc | Name="Name", value="WT[0-9]{2}"
 Any entity with a non-empty Description | The entity must have a description | Name="Description"
 Any entity (typically an IfcTask) with a Status set to either "NOTSTARTED", "STARTED", or "COMPLETED" | The entity Status (e.g. for an IfcTask) must be filled out with either "NOTSTARTED", "STARTED", or "COMPLETED" | Name="Status", Value=["NOTSTARTED", "STARTED", "COMPLETED"]
 Any entity (typically an IfcTaskTime) with a DurationType set to WORKTIME (i.e. based on a calendar) | The duration type (e.g. for an IfcTaskTime) must be based on a calendar, not elapsed time | Name="DurationType", Value="WORKTIME"
