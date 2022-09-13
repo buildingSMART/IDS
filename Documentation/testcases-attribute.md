@@ -910,7 +910,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 
 [Sample IDS](testcases/attribute/fail-durations_are_treated_as_strings_2_2.ids) - [Sample IFC: 1](testcases/attribute/fail-durations_are_treated_as_strings_2_2.ifc)
 
-## [PASS] Name restrictions may be used 1/4
+## [PASS] Name restrictions will match any result 1/3
 
 ~~~xml
 <attribute minOccurs="1" maxOccurs="1">
@@ -927,27 +927,9 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #2=IFCMATERIALLAYERSET((#1),'Foo',$); /* Testcase */
 ~~~
 
-[Sample IDS](testcases/attribute/pass-name_restrictions_may_be_used_1_4.ids) - [Sample IFC: 2](testcases/attribute/pass-name_restrictions_may_be_used_1_4.ifc)
+[Sample IDS](testcases/attribute/pass-name_restrictions_will_match_any_result_1_3.ids) - [Sample IFC: 2](testcases/attribute/pass-name_restrictions_will_match_any_result_1_3.ifc)
 
-## [PASS] Name restrictions may be used 2/4
-
-~~~xml
-<attribute minOccurs="1" maxOccurs="1">
-  <name>
-    <xs:restriction base="xs:string">
-      <xs:pattern value=".*Name.*"/>
-    </xs:restriction>
-  </name>
-</attribute>
-~~~
-
-~~~lua
-#1=IFCMATERIALCONSTITUENTSET('Foo',$,$); /* Testcase */
-~~~
-
-[Sample IDS](testcases/attribute/pass-name_restrictions_may_be_used_2_4.ids) - [Sample IFC: 1](testcases/attribute/pass-name_restrictions_may_be_used_2_4.ifc)
-
-## [FAIL] Name restrictions may be used 3/4
+## [PASS] Name restrictions will match any result 2/3
 
 ~~~xml
 <attribute minOccurs="1" maxOccurs="1">
@@ -964,9 +946,9 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,'Foo',$,$,$,$,$,$); /* Testcase */
 ~~~
 
-[Sample IDS](testcases/attribute/fail-name_restrictions_may_be_used_3_4.ids) - [Sample IFC: 1](testcases/attribute/fail-name_restrictions_may_be_used_3_4.ifc)
+[Sample IDS](testcases/attribute/pass-name_restrictions_will_match_any_result_2_3.ids) - [Sample IFC: 1](testcases/attribute/pass-name_restrictions_will_match_any_result_2_3.ifc)
 
-## [PASS] Name restrictions may be used 4/4
+## [PASS] Name restrictions will match any result 3/3
 
 ~~~xml
 <attribute minOccurs="1" maxOccurs="1">
@@ -980,10 +962,10 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,'Foo','Bar',$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,'Bar',$,$,$,$,$); /* Testcase */
 ~~~
 
-[Sample IDS](testcases/attribute/pass-name_restrictions_may_be_used_4_4.ids) - [Sample IFC: 1](testcases/attribute/pass-name_restrictions_may_be_used_4_4.ifc)
+[Sample IDS](testcases/attribute/pass-name_restrictions_will_match_any_result_3_3.ids) - [Sample IFC: 1](testcases/attribute/pass-name_restrictions_will_match_any_result_3_3.ifc)
 
 ## [PASS] Value restrictions may be used 1/3
 
