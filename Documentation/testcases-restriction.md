@@ -285,6 +285,27 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 
 [Sample IDS](testcases/restriction/fail-regex_patterns_can_be_used_3_3.ids) - [Sample IFC: 1](testcases/restriction/fail-regex_patterns_can_be_used_3_3.ifc)
 
+## [FAIL] Patterns only work on strings and nothing else
+
+~~~xml
+<attribute minOccurs="1" maxOccurs="1">
+  <name>
+    <simpleValue>RefractionIndex</simpleValue>
+  </name>
+  <value>
+    <xs:restriction base="xs:string">
+      <xs:pattern value=".*"/>
+    </xs:restriction>
+  </value>
+</attribute>
+~~~
+
+~~~lua
+#1=IFCSURFACESTYLEREFRACTION(42.,$); /* Testcase */
+~~~
+
+[Sample IDS](testcases/restriction/fail-patterns_only_work_on_strings_and_nothing_else.ids) - [Sample IFC: 1](testcases/restriction/fail-patterns_only_work_on_strings_and_nothing_else.ifc)
+
 ## [PASS] Length checks can be used 1/2
 
 ~~~xml
