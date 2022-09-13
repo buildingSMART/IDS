@@ -1,0 +1,34 @@
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS/ids_05.xsd">
+    <info>
+        <title>Title</title>
+    </info>
+    <specifications>
+        <specification name="Name" ifcVersion="" minOccurs="0" maxOccurs="0">
+            <applicability>
+                <entity>
+                    <name>
+                        <simpleValue>IFCWALL</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <attribute minOccurs="0" maxOccurs="0">
+                    <name>
+                        <simpleValue>Name</simpleValue>
+                    </name>
+                    <value>
+                        <simpleValue>Waldo</simpleValue>
+                    </value>
+                </attribute>
+                <attribute minOccurs="0" maxOccurs="0">
+                    <name>
+                        <simpleValue>Description</simpleValue>
+                    </name>
+                    <value>
+                        <simpleValue>Foobar</simpleValue>
+                    </value>
+                </attribute>
+            </requirements>
+        </specification>
+    </specifications>
+</ids>

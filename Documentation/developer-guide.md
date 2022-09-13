@@ -36,7 +36,7 @@ In addition, it is highly recommended to also provide the following features for
 
 Any software implementing IDS checking **must** comply with the following test suites.
 
- - [Overall integration testscases](testcases-validation.md)
+ - [Overall integration testscases](testcases-ids.md)
  - [Entity testcases](testcases-entity.md)
  - [Attribute testcases](testcases-attribute.md)
  - [Classification testcases](testcases-classification.md)

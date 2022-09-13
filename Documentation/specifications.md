@@ -54,7 +54,7 @@ Each **Specification** may also specify whether it is **Required**, **Optional**
 Type | Meaning | Example
 --- | --- | ---
 **Required** | The specified information _must_ be found in the IFC model | The model must have walls, and they must all have a fire rating property
-**Optional** | If there are elements in the IFC model that are applicable to the **Specification**, then the **Requirements** must be satisfied | The model may or may not have walls. If they do, then they must have a fire rating property
+**Optional** | If there are elements in the IFC model that are applicable to the **Specification**, then the **Requirements** must be satisfied | The model may or may not have walls. If walls exist, then they must have a fire rating property
 **Prohibited** | The specified information _must not_ be found in the IFC model | The model should not have any walls that have a fire rating property. Walls without a fire rating property are allowed. Other non-wall elements with a fire rating property are also allowed.
 
 Individual requirements may also specify whether a requirement is **Required**, **Optional**, or **Prohibited**. Given the example of "_Must have a fire rating property_", this is the interpretation:
@@ -69,7 +69,7 @@ As a complete example, you might have a **Required** specification that applies 
 
 ## IFC schema support
 
-Each **Specification** may specify the IFC schema(s) that it applies to. If a model does not match the schema(s), the **Specification** will not apply and will not be audited. The supported IFC schemas are:
+Each **Specification** may specify the IFC schema(s) that it applies to. This is purely for information purposes and a user may choose to audit the model with the specification and get a pass or fail result. The supported IFC schemas are:
 
  - IFC4X3
  - IFC4
