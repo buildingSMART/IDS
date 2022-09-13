@@ -78,7 +78,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 ~~~
 
 [Sample IDS](testcases/property/fail-properties_with_a_null_value_fail.ids) - [Sample IFC: 7](testcases/property/fail-properties_with_a_null_value_fail.ifc)
@@ -106,7 +106,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 ~~~
 
@@ -135,7 +135,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$); /* Testcase */
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -168,7 +168,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$); /* Testcase */
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -201,7 +201,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$); /* Testcase */
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -234,7 +234,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$); /* Testcase */
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -267,7 +267,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$); /* Testcase */
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -300,7 +300,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$); /* Testcase */
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -333,7 +333,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$); /* Testcase */
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -366,7 +366,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$); /* Testcase */
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -399,7 +399,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$); /* Testcase */
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -435,7 +435,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -475,7 +475,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -515,7 +515,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -555,7 +555,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -595,7 +595,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -635,7 +635,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -679,7 +679,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -723,7 +723,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -767,7 +767,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -811,7 +811,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -855,7 +855,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -899,7 +899,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -943,7 +943,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -987,7 +987,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -1031,7 +1031,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -1075,7 +1075,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -1119,7 +1119,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -1163,7 +1163,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -1207,7 +1207,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -1251,7 +1251,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -1295,7 +1295,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -1339,7 +1339,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -1383,7 +1383,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -1427,7 +1427,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -1471,7 +1471,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -1515,7 +1515,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -1559,7 +1559,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -1603,7 +1603,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -1647,7 +1647,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -1696,7 +1696,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -1745,7 +1745,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -1794,7 +1794,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -1847,7 +1847,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -1900,7 +1900,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -1953,7 +1953,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -2010,7 +2010,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -2067,7 +2067,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -2124,7 +2124,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -2181,7 +2181,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -2242,7 +2242,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -2303,7 +2303,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -2361,7 +2361,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -2426,7 +2426,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -2494,7 +2494,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -2559,7 +2559,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -2628,7 +2628,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -2697,7 +2697,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -2771,7 +2771,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -2845,7 +2845,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -2924,7 +2924,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -3005,7 +3005,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -3090,7 +3090,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -3178,7 +3178,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -3270,7 +3270,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -3366,7 +3366,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -3463,7 +3463,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -3563,7 +3563,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -3668,7 +3668,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -3768,7 +3768,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -3872,7 +3872,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -3976,7 +3976,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -4084,7 +4084,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -4189,7 +4189,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -4299,7 +4299,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -4412,7 +4412,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
@@ -4533,7 +4533,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('21nBfU8VHIqvcR36t_P1iE',$,$,$,$,$,$,$,$);
 #8=IFCPROPERTYSET('2nJrDaLQfJ1QPhdJR0o97J',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,IFCLABEL('AnotherValue'),$);
+#10=IFCPROPERTYSINGLEVALUE('AnotherProperty',$,$,$);
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 #12=IFCWALL('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #13=IFCPROPERTYSET('3b0AoFivPN6RDJO6UL_GfZ',$,'Foo_Bar',$,(#15));
