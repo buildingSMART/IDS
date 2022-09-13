@@ -1,7 +1,7 @@
 ISO-10303-21;
 HEADER;
 FILE_DESCRIPTION(('ViewDefinition [CoordinationView]'),'2;1');
-FILE_NAME('','2022-09-13T19:27:09',(),(),'IfcOpenShell v0.7.0-dc67287d','IfcOpenShell v0.7.0-dc67287d','');
+FILE_NAME('','2022-09-13T22:07:18',(),(),'IfcOpenShell v0.7.0-dc67287d','IfcOpenShell v0.7.0-dc67287d','');
 FILE_SCHEMA(('IFC4'));
 ENDSEC;
 DATA;
