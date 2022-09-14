@@ -3,7 +3,7 @@
         <title>Non-ascii characters are treated without encoding</title>
     </info>
     <specifications>
-        <specification name="Non-ascii characters are treated without encoding" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+        <specification name="Non-ascii characters are treated without encoding" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
@@ -20,7 +20,7 @@
                         <simpleValue>Foo</simpleValue>
                     </name>
                     <value>
-                        <simpleValue>♫</simpleValue>
+                        <simpleValue>♫Don'tÄrgerhôtelЊет</simpleValue>
                     </value>
                 </property>
             </requirements>

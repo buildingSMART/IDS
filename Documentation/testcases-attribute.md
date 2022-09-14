@@ -378,7 +378,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
     <simpleValue>Name</simpleValue>
   </name>
   <value>
-    <simpleValue>♫</simpleValue>
+    <simpleValue>♫Don'tÄrgerhôtelЊет</simpleValue>
   </value>
 </attribute>
 ~~~
@@ -1064,6 +1064,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
   <value>
     <xs:restriction base="xs:string">
       <xs:enumeration value="42"/>
+      <xs:enumeration value="43"/>
     </xs:restriction>
   </value>
 </attribute>
