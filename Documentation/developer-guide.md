@@ -66,8 +66,8 @@ Specifications and facets can have an optionality set to **Required**, **Optiona
 
 Optionality | minOccurs | maxOccurs
 --- | --- | ---
-Required | 1 | >=1 or unbounded
-Optional | 0 | >=1 or unbounded
+Required | 1 | unbounded
+Optional | 0 | unbounded
 Prohibited | 0 | 0
 
 Although other permutations of `minOccurs` and `maxOccurs` may exist, they do not have any meaning.
