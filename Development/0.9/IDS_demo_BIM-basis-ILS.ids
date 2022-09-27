@@ -6,11 +6,11 @@
         <ids:description>Samenwerken gaat beter als de informatie waarop we bouwen uitwisselbaar, gestructureerd, eenduidig, correct, volledig en herbruikbaar is. De BIM basis informatieleveringsspecificatie (BIM basis ILS) is een goede eerste stap.</ids:description>
     </ids:info>
     <ids:specifications>
-        <ids:specification ifcVersion="IFC2X3" name="lokale positie" description="Coördineer onderling de lokale positie van het aspectmodel. Deze ligt vlakbij het nulpunt. Er moet exact 1 nulpunt referentieobject in het model aanwezig zijn. Een nulpunt referentieobject is van het IFC type IfcBuildingElementProxy en heeft 'nulpunt' in de naam (in hoofdletters of kleine letters)" minOccurs="1" maxOccurs="1">
+        <ids:specification ifcVersion="IFC2X3" name="lokale positie" description="Coördineer onderling de lokale positie van het aspectmodel. Deze ligt vlakbij het nulpunt. Er moet exact 1 nulpunt referentieobject in het model aanwezig zijn. Een nulpunt referentieobject is van het IFC type IFCBUILDINGELEMENTPROXY en heeft 'nulpunt' in de naam (in hoofdletters of kleine letters)" minOccurs="1" maxOccurs="1">
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
-                        <ids:simpleValue>IfcBuildingElementProxy</ids:simpleValue>
+                        <ids:simpleValue>IFCBUILDINGELEMENTPROXY</ids:simpleValue>
                     </ids:name>
                 </ids:entity>
                 <ids:attribute>
@@ -27,7 +27,7 @@
             <ids:requirements description="Geen echte requirement hier. De proxy met 'nulpunt' in de naam moet een proxy zijn. Een IDS heeft een requirement nodig, dus vandaar dat deze er staat.">
                 <ids:entity>
                     <ids:name>
-                        <ids:simpleValue>IfcBuildingElementProxy</ids:simpleValue>
+                        <ids:simpleValue>IFCBUILDINGELEMENTPROXY</ids:simpleValue>
                     </ids:name>
                 </ids:entity>
             </ids:requirements>
@@ -124,7 +124,7 @@
                             <xs:enumeration value="IfcBoiler" />
                             <xs:enumeration value="IfcBuildingElement" />
                             <xs:enumeration value="IfcBuildingElementPart" />
-                            <xs:enumeration value="IfcBuildingElementProxy" />
+                            <xs:enumeration value="IFCBUILDINGELEMENTPROXY" />
                             <xs:enumeration value="IfcBurner" />
                             <xs:enumeration value="IfcCableCarrierFitting" />
                             <xs:enumeration value="IfcCableCarrierSegment" />

@@ -18,8 +18,10 @@
             </ids:applicability>
             <ids:requirements>
 				<ids:partOf relation="IfcRelAggregates">
-					<ids:entity >
-						<ids:simpleValue>IFCDOOR</ids:simpleValue>
+					<ids:entity>
+						<ids:name>
+							<ids:simpleValue>IFCDOOR</ids:simpleValue>
+						</ids:name>
 					</ids:entity>
 				</ids:partOf>
                 <ids:property minOccurs="1" measure="IfcText">
@@ -84,7 +86,9 @@
             <ids:requirements>
 				<ids:partOf relation="IfcRelAggregates">
 					<ids:entity >
+					<ids:name>
 						<ids:simpleValue>IFCDOOR</ids:simpleValue>
+					</ids:name>
 					</ids:entity>
 				</ids:partOf>
                 <ids:property minOccurs="1" measure="IfcText">
@@ -147,7 +151,9 @@
 			<ids:requirements>
 				<ids:partOf relation="IfcRelAggregates">
 					<ids:entity>
-						<ids:simpleValue>IFCDOOR</ids:simpleValue>
+					<ids:name>
+					    <ids:simpleValue>IFCDOOR</ids:simpleValue>
+					</ids:name>
 					</ids:entity>
 				</ids:partOf>
 				<ids:property minOccurs="1">
@@ -215,7 +221,9 @@
 			<ids:requirements>
 				<ids:partOf relation="IfcRelAggregates">
 					<ids:entity>
-						<ids:simpleValue>IFCDOOR</ids:simpleValue>
+					<ids:name>
+					    <ids:simpleValue>IFCDOOR</ids:simpleValue>
+					</ids:name>
 					</ids:entity>
 				</ids:partOf>
 				<ids:property minOccurs="1">
@@ -242,7 +250,9 @@
 			<ids:requirements>
 				<ids:partOf relation="IfcRelAggregates">
 					<ids:entity>
-						<ids:simpleValue>IFCDOOR</ids:simpleValue>
+					<ids:name>
+					    <ids:simpleValue>IFCDOOR</ids:simpleValue>
+					</ids:name>
 					</ids:entity>
 				</ids:partOf>
 					<ids:property  minOccurs="1"  measure="IfcText">
