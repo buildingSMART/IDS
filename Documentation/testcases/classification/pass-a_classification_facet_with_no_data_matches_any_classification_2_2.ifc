@@ -8,7 +8,6 @@ DATA;
 #1=IFCPROJECT('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$);
 #2=IFCCLASSIFICATION($,$,$,'Foobar',$,$,$);
 #3=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#1),#2);
-#4=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
 #5=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
 #6=IFCCLASSIFICATIONREFERENCE($,'1',$,#2,$,$);
 #7=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#5),#6);
