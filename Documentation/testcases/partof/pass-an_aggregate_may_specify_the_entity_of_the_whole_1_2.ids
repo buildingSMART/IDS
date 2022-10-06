@@ -14,7 +14,9 @@
             <requirements>
                 <partOf relation="IfcRelAggregates" minOccurs="1" maxOccurs="1">
                     <entity>
-                        <simpleValue>IFCSLAB</simpleValue>
+                        <name>
+                            <simpleValue>IFCSLAB</simpleValue>
+                        </name>
                     </entity>
                 </partOf>
             </requirements>

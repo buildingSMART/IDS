@@ -14,7 +14,9 @@
             <requirements>
                 <partOf relation="IfcRelAssignsToGroup" minOccurs="1" maxOccurs="1">
                     <entity>
-                        <simpleValue>IFCGROUP</simpleValue>
+                        <name>
+                            <simpleValue>IFCGROUP</simpleValue>
+                        </name>
                     </entity>
                 </partOf>
             </requirements>

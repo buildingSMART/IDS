@@ -14,7 +14,9 @@
             <requirements>
                 <partOf relation="IfcRelNests" minOccurs="1" maxOccurs="1">
                     <entity>
-                        <simpleValue>IFCFURNITURE</simpleValue>
+                        <name>
+                            <simpleValue>IFCFURNITURE</simpleValue>
+                        </name>
                     </entity>
                 </partOf>
             </requirements>
