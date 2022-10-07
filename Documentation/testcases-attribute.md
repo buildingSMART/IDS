@@ -456,13 +456,13 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
     <simpleValue>GlobalId</simpleValue>
   </name>
   <value>
-    <simpleValue>2s0kheqvf6gQ8k6wjM8732</simpleValue>
+    <simpleValue>1hqIFTRjfV6AWq_bMtnZwI</simpleValue>
   </value>
 </attribute>
 ~~~
 
 ~~~lua
-#1=IFCWALL('2s0kheqvf6gQ8k6wjM8732',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 ~~~
 
 [Sample IDS](testcases/attribute/pass-globalids_are_treated_as_strings_and_not_expanded.ids) - [Sample IFC: 1](testcases/attribute/pass-globalids_are_treated_as_strings_and_not_expanded.ifc)
