@@ -3,11 +3,11 @@
         <title>Attributes referencing an object should pass</title>
     </info>
     <specifications>
-        <specification name="Attributes referencing an object should pass" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+        <specification name="Attributes referencing an object should pass" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
-                        <simpleValue>IfcTask</simpleValue>
+                        <simpleValue>IFCTASK</simpleValue>
                     </name>
                 </entity>
             </applicability>

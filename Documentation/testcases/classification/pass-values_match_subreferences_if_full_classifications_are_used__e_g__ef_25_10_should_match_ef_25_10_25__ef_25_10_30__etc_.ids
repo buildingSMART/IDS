@@ -3,11 +3,11 @@
         <title>Values match subreferences if full classifications are used (e.g. EF_25_10 should match EF_25_10_25, EF_25_10_30, etc)</title>
     </info>
     <specifications>
-        <specification name="Values match subreferences if full classifications are used (e.g. EF_25_10 should match EF_25_10_25, EF_25_10_30, etc)" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+        <specification name="Values match subreferences if full classifications are used (e.g. EF_25_10 should match EF_25_10_25, EF_25_10_30, etc)" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
-                        <simpleValue>IfcWall</simpleValue>
+                        <simpleValue>IFCBEAM</simpleValue>
                     </name>
                 </entity>
             </applicability>

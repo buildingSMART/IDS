@@ -3,11 +3,11 @@
         <title>The aggregated whole fails an aggregate relationship</title>
     </info>
     <specifications>
-        <specification name="The aggregated whole fails an aggregate relationship" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+        <specification name="The aggregated whole fails an aggregate relationship" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
-                        <simpleValue>IfcElementAssembly</simpleValue>
+                        <simpleValue>IFCELEMENTASSEMBLY</simpleValue>
                     </name>
                 </entity>
             </applicability>

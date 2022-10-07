@@ -3,11 +3,11 @@
         <title>Any contained element passes a containment relationship 1/2</title>
     </info>
     <specifications>
-        <specification name="Any contained element passes a containment relationship 1/2" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+        <specification name="Any contained element passes a containment relationship 1/2" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
-                        <simpleValue>IfcElementAssembly</simpleValue>
+                        <simpleValue>IFCELEMENTASSEMBLY</simpleValue>
                     </name>
                 </entity>
             </applicability>

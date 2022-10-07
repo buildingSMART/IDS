@@ -88,7 +88,7 @@ Requirements:
 
 ~~~xml
 <specifications>
-    <specification name="Name" ifcVersion="" minOccurs="0" maxOccurs="unbounded">
+    <specification name="Name" ifcVersion="IFC2X3" minOccurs="0" maxOccurs="unbounded">
         <applicability>
             <entity>
                 <name>

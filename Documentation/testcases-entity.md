@@ -284,8 +284,8 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 
 ~~~lua
 #1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
-#2=IFCWALLTYPE('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,'X',.USERDEFINED.);
-#3=IFCRELDEFINESBYTYPE('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#1),#2);
+#2=IFCWALLTYPE('0eA6m4fELI9QBIhP3wiLAp',$,$,$,$,$,$,$,'X',.USERDEFINED.);
+#3=IFCRELDEFINESBYTYPE('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 ~~~
 
 [Sample IDS](testcases/entity/pass-inherited_predefined_types_should_pass.ids) - [Sample IFC: 1](testcases/entity/pass-inherited_predefined_types_should_pass.ifc)
@@ -304,8 +304,8 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('05rScmOVzMoQXOfbYdtLYj',$,$,$,'X',$,$,$,.USERDEFINED.); /* Testcase */
-#2=IFCWALLTYPE('05rScmOVzMoQXOfbYdtLYj',$,$,$,$,$,$,$,$,.NOTDEFINED.);
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,'X',$,$,$,.USERDEFINED.); /* Testcase */
+#2=IFCWALLTYPE('0eA6m4fELI9QBIhP3wiLAp',$,$,$,$,$,$,$,$,.NOTDEFINED.);
 #3=IFCRELDEFINESBYTYPE('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 ~~~
 

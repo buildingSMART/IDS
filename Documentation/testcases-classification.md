@@ -9,20 +9,20 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCPROJECT('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$);
+#1=IFCPROJECT('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
 #2=IFCCLASSIFICATION($,$,$,'Foobar',$,$,$);
-#3=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#1),#2);
-#4=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
-#5=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#3=IFCRELASSOCIATESCLASSIFICATION('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
+#4=IFCWALL('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$); /* Testcase */
+#5=IFCSLAB('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$);
 #6=IFCCLASSIFICATIONREFERENCE($,'1',$,#2,$,$);
-#7=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#5),#6);
-#8=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#7=IFCRELASSOCIATESCLASSIFICATION('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,(#5),#6);
+#8=IFCCOLUMN('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
 #9=IFCCLASSIFICATIONREFERENCE($,'11',$,#2,$,$);
-#10=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#8),#9);
-#11=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#10=IFCRELASSOCIATESCLASSIFICATION('0WTUhjMwvT39YBFH2pryoM',$,$,$,(#8),#9);
+#11=IFCBEAM('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #12=IFCCLASSIFICATIONREFERENCE($,'22',$,#13,$,$);
 #13=IFCCLASSIFICATIONREFERENCE($,'2',$,#2,$,$);
-#15=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#11),#12);
+#15=IFCRELASSOCIATESCLASSIFICATION('2jG7cjHsrIUfgKVktNgbzi',$,$,$,(#11),#12);
 #16=IFCMATERIAL('Material',$,$);
 #17=IFCEXTERNALREFERENCERELATIONSHIP($,$,#6,(#16));
 ~~~
@@ -36,20 +36,20 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCPROJECT('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$);
+#1=IFCPROJECT('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
 #2=IFCCLASSIFICATION($,$,$,'Foobar',$,$,$);
-#3=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#1),#2);
-#4=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
-#5=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
+#3=IFCRELASSOCIATESCLASSIFICATION('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
+#4=IFCWALL('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#5=IFCSLAB('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$); /* Testcase */
 #6=IFCCLASSIFICATIONREFERENCE($,'1',$,#2,$,$);
-#7=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#5),#6);
-#8=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#7=IFCRELASSOCIATESCLASSIFICATION('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,(#5),#6);
+#8=IFCCOLUMN('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
 #9=IFCCLASSIFICATIONREFERENCE($,'11',$,#2,$,$);
-#10=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#8),#9);
-#11=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#10=IFCRELASSOCIATESCLASSIFICATION('0WTUhjMwvT39YBFH2pryoM',$,$,$,(#8),#9);
+#11=IFCBEAM('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #12=IFCCLASSIFICATIONREFERENCE($,'22',$,#13,$,$);
 #13=IFCCLASSIFICATIONREFERENCE($,'2',$,#2,$,$);
-#15=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#11),#12);
+#15=IFCRELASSOCIATESCLASSIFICATION('2jG7cjHsrIUfgKVktNgbzi',$,$,$,(#11),#12);
 #16=IFCMATERIAL('Material',$,$);
 #17=IFCEXTERNALREFERENCERELATIONSHIP($,$,#6,(#16));
 ~~~
@@ -63,20 +63,20 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCPROJECT('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$);
+#1=IFCPROJECT('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
 #2=IFCCLASSIFICATION($,$,$,'Foobar',$,$,$);
-#3=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#1),#2);
-#4=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
-#5=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
+#3=IFCRELASSOCIATESCLASSIFICATION('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
+#4=IFCWALL('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#5=IFCSLAB('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$); /* Testcase */
 #6=IFCCLASSIFICATIONREFERENCE($,'1',$,#2,$,$);
-#7=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#5),#6);
-#8=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#7=IFCRELASSOCIATESCLASSIFICATION('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,(#5),#6);
+#8=IFCCOLUMN('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
 #9=IFCCLASSIFICATIONREFERENCE($,'11',$,#2,$,$);
-#10=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#8),#9);
-#11=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#10=IFCRELASSOCIATESCLASSIFICATION('0WTUhjMwvT39YBFH2pryoM',$,$,$,(#8),#9);
+#11=IFCBEAM('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #12=IFCCLASSIFICATIONREFERENCE($,'22',$,#13,$,$);
 #13=IFCCLASSIFICATIONREFERENCE($,'2',$,#2,$,$);
-#15=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#11),#12);
+#15=IFCRELASSOCIATESCLASSIFICATION('2jG7cjHsrIUfgKVktNgbzi',$,$,$,(#11),#12);
 #16=IFCMATERIAL('Material',$,$);
 #17=IFCEXTERNALREFERENCERELATIONSHIP($,$,#6,(#16));
 ~~~
@@ -90,20 +90,20 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCPROJECT('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$);
+#1=IFCPROJECT('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
 #2=IFCCLASSIFICATION($,$,$,'Foobar',$,$,$);
-#3=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#1),#2);
-#4=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
-#5=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
+#3=IFCRELASSOCIATESCLASSIFICATION('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
+#4=IFCWALL('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#5=IFCSLAB('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$); /* Testcase */
 #6=IFCCLASSIFICATIONREFERENCE($,'1',$,#2,$,$);
-#7=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#5),#6);
-#8=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#7=IFCRELASSOCIATESCLASSIFICATION('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,(#5),#6);
+#8=IFCCOLUMN('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
 #9=IFCCLASSIFICATIONREFERENCE($,'11',$,#2,$,$);
-#10=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#8),#9);
-#11=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#10=IFCRELASSOCIATESCLASSIFICATION('0WTUhjMwvT39YBFH2pryoM',$,$,$,(#8),#9);
+#11=IFCBEAM('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #12=IFCCLASSIFICATIONREFERENCE($,'22',$,#13,$,$);
 #13=IFCCLASSIFICATIONREFERENCE($,'2',$,#2,$,$);
-#15=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#11),#12);
+#15=IFCRELASSOCIATESCLASSIFICATION('2jG7cjHsrIUfgKVktNgbzi',$,$,$,(#11),#12);
 #16=IFCMATERIAL('Material',$,$);
 #17=IFCEXTERNALREFERENCERELATIONSHIP($,$,#6,(#16));
 ~~~
@@ -113,28 +113,24 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] An optional facet always passes regardless of outcome 1/2
 
 ~~~xml
-<attribute minOccurs="0" maxOccurs="1">
-  <name>
-    <simpleValue>Name</simpleValue>
-  </name>
-</attribute>
+<classification minOccurs="0" maxOccurs="1"/>
 ~~~
 
 ~~~lua
-#1=IFCPROJECT('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$);
+#1=IFCPROJECT('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
 #2=IFCCLASSIFICATION($,$,$,'Foobar',$,$,$);
-#3=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#1),#2);
-#4=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
-#5=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#3=IFCRELASSOCIATESCLASSIFICATION('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
+#4=IFCWALL('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$); /* Testcase */
+#5=IFCSLAB('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$);
 #6=IFCCLASSIFICATIONREFERENCE($,'1',$,#2,$,$);
-#7=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#5),#6);
-#8=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#7=IFCRELASSOCIATESCLASSIFICATION('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,(#5),#6);
+#8=IFCCOLUMN('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
 #9=IFCCLASSIFICATIONREFERENCE($,'11',$,#2,$,$);
-#10=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#8),#9);
-#11=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#10=IFCRELASSOCIATESCLASSIFICATION('0WTUhjMwvT39YBFH2pryoM',$,$,$,(#8),#9);
+#11=IFCBEAM('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #12=IFCCLASSIFICATIONREFERENCE($,'22',$,#13,$,$);
 #13=IFCCLASSIFICATIONREFERENCE($,'2',$,#2,$,$);
-#15=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#11),#12);
+#15=IFCRELASSOCIATESCLASSIFICATION('2jG7cjHsrIUfgKVktNgbzi',$,$,$,(#11),#12);
 #16=IFCMATERIAL('Material',$,$);
 #17=IFCEXTERNALREFERENCERELATIONSHIP($,$,#6,(#16));
 ~~~
@@ -144,28 +140,24 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] An optional facet always passes regardless of outcome 2/2
 
 ~~~xml
-<attribute minOccurs="0" maxOccurs="1">
-  <name>
-    <simpleValue>Rabbit</simpleValue>
-  </name>
-</attribute>
+<classification minOccurs="0" maxOccurs="1"/>
 ~~~
 
 ~~~lua
-#1=IFCPROJECT('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$);
+#1=IFCPROJECT('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
 #2=IFCCLASSIFICATION($,$,$,'Foobar',$,$,$);
-#3=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#1),#2);
-#4=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
-#5=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
+#3=IFCRELASSOCIATESCLASSIFICATION('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
+#4=IFCWALL('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#5=IFCSLAB('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$); /* Testcase */
 #6=IFCCLASSIFICATIONREFERENCE($,'1',$,#2,$,$);
-#7=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#5),#6);
-#8=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#7=IFCRELASSOCIATESCLASSIFICATION('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,(#5),#6);
+#8=IFCCOLUMN('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
 #9=IFCCLASSIFICATIONREFERENCE($,'11',$,#2,$,$);
-#10=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#8),#9);
-#11=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#10=IFCRELASSOCIATESCLASSIFICATION('0WTUhjMwvT39YBFH2pryoM',$,$,$,(#8),#9);
+#11=IFCBEAM('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #12=IFCCLASSIFICATIONREFERENCE($,'22',$,#13,$,$);
 #13=IFCCLASSIFICATIONREFERENCE($,'2',$,#2,$,$);
-#15=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#11),#12);
+#15=IFCRELASSOCIATESCLASSIFICATION('2jG7cjHsrIUfgKVktNgbzi',$,$,$,(#11),#12);
 #16=IFCMATERIAL('Material',$,$);
 #17=IFCEXTERNALREFERENCERELATIONSHIP($,$,#6,(#16));
 ~~~
@@ -183,20 +175,20 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCPROJECT('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$);
+#1=IFCPROJECT('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
 #2=IFCCLASSIFICATION($,$,$,'Foobar',$,$,$);
-#3=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#1),#2);
-#4=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
-#5=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
+#3=IFCRELASSOCIATESCLASSIFICATION('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
+#4=IFCWALL('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#5=IFCSLAB('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$); /* Testcase */
 #6=IFCCLASSIFICATIONREFERENCE($,'1',$,#2,$,$);
-#7=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#5),#6);
-#8=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#7=IFCRELASSOCIATESCLASSIFICATION('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,(#5),#6);
+#8=IFCCOLUMN('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
 #9=IFCCLASSIFICATIONREFERENCE($,'11',$,#2,$,$);
-#10=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#8),#9);
-#11=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#10=IFCRELASSOCIATESCLASSIFICATION('0WTUhjMwvT39YBFH2pryoM',$,$,$,(#8),#9);
+#11=IFCBEAM('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #12=IFCCLASSIFICATIONREFERENCE($,'22',$,#13,$,$);
 #13=IFCCLASSIFICATIONREFERENCE($,'2',$,#2,$,$);
-#15=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#11),#12);
+#15=IFCRELASSOCIATESCLASSIFICATION('2jG7cjHsrIUfgKVktNgbzi',$,$,$,(#11),#12);
 #16=IFCMATERIAL('Material',$,$);
 #17=IFCEXTERNALREFERENCERELATIONSHIP($,$,#6,(#16));
 ~~~
@@ -214,20 +206,20 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCPROJECT('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$);
+#1=IFCPROJECT('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
 #2=IFCCLASSIFICATION($,$,$,'Foobar',$,$,$);
-#3=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#1),#2);
-#4=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
-#5=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#3=IFCRELASSOCIATESCLASSIFICATION('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
+#4=IFCWALL('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#5=IFCSLAB('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$);
 #6=IFCCLASSIFICATIONREFERENCE($,'1',$,#2,$,$);
-#7=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#5),#6);
-#8=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#7=IFCRELASSOCIATESCLASSIFICATION('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,(#5),#6);
+#8=IFCCOLUMN('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
 #9=IFCCLASSIFICATIONREFERENCE($,'11',$,#2,$,$);
-#10=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#8),#9);
-#11=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
+#10=IFCRELASSOCIATESCLASSIFICATION('0WTUhjMwvT39YBFH2pryoM',$,$,$,(#8),#9);
+#11=IFCBEAM('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$); /* Testcase */
 #12=IFCCLASSIFICATIONREFERENCE($,'22',$,#13,$,$);
 #13=IFCCLASSIFICATIONREFERENCE($,'2',$,#2,$,$);
-#15=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#11),#12);
+#15=IFCRELASSOCIATESCLASSIFICATION('2jG7cjHsrIUfgKVktNgbzi',$,$,$,(#11),#12);
 #16=IFCMATERIAL('Material',$,$);
 #17=IFCEXTERNALREFERENCERELATIONSHIP($,$,#6,(#16));
 ~~~
@@ -245,20 +237,20 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCPROJECT('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$);
+#1=IFCPROJECT('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
 #2=IFCCLASSIFICATION($,$,$,'Foobar',$,$,$);
-#3=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#1),#2);
-#4=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
-#5=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#3=IFCRELASSOCIATESCLASSIFICATION('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
+#4=IFCWALL('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#5=IFCSLAB('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$);
 #6=IFCCLASSIFICATIONREFERENCE($,'1',$,#2,$,$);
-#7=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#5),#6);
-#8=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#7=IFCRELASSOCIATESCLASSIFICATION('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,(#5),#6);
+#8=IFCCOLUMN('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
 #9=IFCCLASSIFICATIONREFERENCE($,'11',$,#2,$,$);
-#10=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#8),#9);
-#11=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#10=IFCRELASSOCIATESCLASSIFICATION('0WTUhjMwvT39YBFH2pryoM',$,$,$,(#8),#9);
+#11=IFCBEAM('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #12=IFCCLASSIFICATIONREFERENCE($,'22',$,#13,$,$);
 #13=IFCCLASSIFICATIONREFERENCE($,'2',$,#2,$,$);
-#15=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#11),#12);
+#15=IFCRELASSOCIATESCLASSIFICATION('2jG7cjHsrIUfgKVktNgbzi',$,$,$,(#11),#12);
 #16=IFCMATERIAL('Material',$,$); /* Testcase */
 #17=IFCEXTERNALREFERENCERELATIONSHIP($,$,#6,(#16));
 ~~~
@@ -276,20 +268,20 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCPROJECT('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCPROJECT('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 #2=IFCCLASSIFICATION($,$,$,'Foobar',$,$,$);
-#3=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#1),#2);
-#4=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
-#5=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#3=IFCRELASSOCIATESCLASSIFICATION('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
+#4=IFCWALL('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#5=IFCSLAB('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$);
 #6=IFCCLASSIFICATIONREFERENCE($,'1',$,#2,$,$);
-#7=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#5),#6);
-#8=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#7=IFCRELASSOCIATESCLASSIFICATION('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,(#5),#6);
+#8=IFCCOLUMN('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
 #9=IFCCLASSIFICATIONREFERENCE($,'11',$,#2,$,$);
-#10=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#8),#9);
-#11=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#10=IFCRELASSOCIATESCLASSIFICATION('0WTUhjMwvT39YBFH2pryoM',$,$,$,(#8),#9);
+#11=IFCBEAM('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #12=IFCCLASSIFICATIONREFERENCE($,'22',$,#13,$,$);
 #13=IFCCLASSIFICATIONREFERENCE($,'2',$,#2,$,$);
-#15=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#11),#12);
+#15=IFCRELASSOCIATESCLASSIFICATION('2jG7cjHsrIUfgKVktNgbzi',$,$,$,(#11),#12);
 #16=IFCMATERIAL('Material',$,$);
 #17=IFCEXTERNALREFERENCERELATIONSHIP($,$,#6,(#16));
 ~~~
@@ -307,20 +299,20 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCPROJECT('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$);
+#1=IFCPROJECT('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
 #2=IFCCLASSIFICATION($,$,$,'Foobar',$,$,$);
-#3=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#1),#2);
-#4=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
-#5=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#3=IFCRELASSOCIATESCLASSIFICATION('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
+#4=IFCWALL('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$); /* Testcase */
+#5=IFCSLAB('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$);
 #6=IFCCLASSIFICATIONREFERENCE($,'1',$,#2,$,$);
-#7=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#5),#6);
-#8=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#7=IFCRELASSOCIATESCLASSIFICATION('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,(#5),#6);
+#8=IFCCOLUMN('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
 #9=IFCCLASSIFICATIONREFERENCE($,'11',$,#2,$,$);
-#10=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#8),#9);
-#11=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#10=IFCRELASSOCIATESCLASSIFICATION('0WTUhjMwvT39YBFH2pryoM',$,$,$,(#8),#9);
+#11=IFCBEAM('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #12=IFCCLASSIFICATIONREFERENCE($,'22',$,#13,$,$);
 #13=IFCCLASSIFICATIONREFERENCE($,'2',$,#2,$,$);
-#15=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#11),#12);
+#15=IFCRELASSOCIATESCLASSIFICATION('2jG7cjHsrIUfgKVktNgbzi',$,$,$,(#11),#12);
 #16=IFCMATERIAL('Material',$,$);
 #17=IFCEXTERNALREFERENCERELATIONSHIP($,$,#6,(#16));
 ~~~
@@ -338,20 +330,20 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCPROJECT('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$);
+#1=IFCPROJECT('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
 #2=IFCCLASSIFICATION($,$,$,'Foobar',$,$,$);
-#3=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#1),#2);
-#4=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
-#5=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
+#3=IFCRELASSOCIATESCLASSIFICATION('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
+#4=IFCWALL('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#5=IFCSLAB('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$); /* Testcase */
 #6=IFCCLASSIFICATIONREFERENCE($,'1',$,#2,$,$);
-#7=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#5),#6);
-#8=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#7=IFCRELASSOCIATESCLASSIFICATION('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,(#5),#6);
+#8=IFCCOLUMN('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
 #9=IFCCLASSIFICATIONREFERENCE($,'11',$,#2,$,$);
-#10=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#8),#9);
-#11=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#10=IFCRELASSOCIATESCLASSIFICATION('0WTUhjMwvT39YBFH2pryoM',$,$,$,(#8),#9);
+#11=IFCBEAM('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #12=IFCCLASSIFICATIONREFERENCE($,'22',$,#13,$,$);
 #13=IFCCLASSIFICATIONREFERENCE($,'2',$,#2,$,$);
-#15=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#11),#12);
+#15=IFCRELASSOCIATESCLASSIFICATION('2jG7cjHsrIUfgKVktNgbzi',$,$,$,(#11),#12);
 #16=IFCMATERIAL('Material',$,$);
 #17=IFCEXTERNALREFERENCERELATIONSHIP($,$,#6,(#16));
 ~~~
@@ -369,20 +361,20 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCPROJECT('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$);
+#1=IFCPROJECT('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
 #2=IFCCLASSIFICATION($,$,$,'Foobar',$,$,$);
-#3=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#1),#2);
-#4=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
-#5=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#3=IFCRELASSOCIATESCLASSIFICATION('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
+#4=IFCWALL('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#5=IFCSLAB('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$);
 #6=IFCCLASSIFICATIONREFERENCE($,'1',$,#2,$,$);
-#7=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#5),#6);
-#8=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
+#7=IFCRELASSOCIATESCLASSIFICATION('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,(#5),#6);
+#8=IFCCOLUMN('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$); /* Testcase */
 #9=IFCCLASSIFICATIONREFERENCE($,'11',$,#2,$,$);
-#10=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#8),#9);
-#11=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#10=IFCRELASSOCIATESCLASSIFICATION('0WTUhjMwvT39YBFH2pryoM',$,$,$,(#8),#9);
+#11=IFCBEAM('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #12=IFCCLASSIFICATIONREFERENCE($,'22',$,#13,$,$);
 #13=IFCCLASSIFICATIONREFERENCE($,'2',$,#2,$,$);
-#15=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#11),#12);
+#15=IFCRELASSOCIATESCLASSIFICATION('2jG7cjHsrIUfgKVktNgbzi',$,$,$,(#11),#12);
 #16=IFCMATERIAL('Material',$,$);
 #17=IFCEXTERNALREFERENCERELATIONSHIP($,$,#6,(#16));
 ~~~
@@ -400,20 +392,20 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCPROJECT('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$);
+#1=IFCPROJECT('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
 #2=IFCCLASSIFICATION($,$,$,'Foobar',$,$,$);
-#3=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#1),#2);
-#4=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
-#5=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#3=IFCRELASSOCIATESCLASSIFICATION('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
+#4=IFCWALL('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#5=IFCSLAB('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$);
 #6=IFCCLASSIFICATIONREFERENCE($,'1',$,#2,$,$);
-#7=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#5),#6);
-#8=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#7=IFCRELASSOCIATESCLASSIFICATION('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,(#5),#6);
+#8=IFCCOLUMN('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
 #9=IFCCLASSIFICATIONREFERENCE($,'11',$,#2,$,$);
-#10=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#8),#9);
-#11=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
+#10=IFCRELASSOCIATESCLASSIFICATION('0WTUhjMwvT39YBFH2pryoM',$,$,$,(#8),#9);
+#11=IFCBEAM('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$); /* Testcase */
 #12=IFCCLASSIFICATIONREFERENCE($,'22',$,#13,$,$);
 #13=IFCCLASSIFICATIONREFERENCE($,'2',$,#2,$,$);
-#15=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#11),#12);
+#15=IFCRELASSOCIATESCLASSIFICATION('2jG7cjHsrIUfgKVktNgbzi',$,$,$,(#11),#12);
 #16=IFCMATERIAL('Material',$,$);
 #17=IFCEXTERNALREFERENCERELATIONSHIP($,$,#6,(#16));
 ~~~
@@ -433,20 +425,20 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCPROJECT('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$);
+#1=IFCPROJECT('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
 #2=IFCCLASSIFICATION($,$,$,'Foobar',$,$,$);
-#3=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#1),#2);
-#4=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
-#5=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
+#3=IFCRELASSOCIATESCLASSIFICATION('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
+#4=IFCWALL('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#5=IFCSLAB('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$); /* Testcase */
 #6=IFCCLASSIFICATIONREFERENCE($,'1',$,#2,$,$);
-#7=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#5),#6);
-#8=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#7=IFCRELASSOCIATESCLASSIFICATION('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,(#5),#6);
+#8=IFCCOLUMN('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
 #9=IFCCLASSIFICATIONREFERENCE($,'11',$,#2,$,$);
-#10=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#8),#9);
-#11=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#10=IFCRELASSOCIATESCLASSIFICATION('0WTUhjMwvT39YBFH2pryoM',$,$,$,(#8),#9);
+#11=IFCBEAM('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #12=IFCCLASSIFICATIONREFERENCE($,'22',$,#13,$,$);
 #13=IFCCLASSIFICATIONREFERENCE($,'2',$,#2,$,$);
-#15=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#11),#12);
+#15=IFCRELASSOCIATESCLASSIFICATION('2jG7cjHsrIUfgKVktNgbzi',$,$,$,(#11),#12);
 #16=IFCMATERIAL('Material',$,$);
 #17=IFCEXTERNALREFERENCERELATIONSHIP($,$,#6,(#16));
 ~~~
@@ -466,20 +458,20 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCPROJECT('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$);
+#1=IFCPROJECT('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
 #2=IFCCLASSIFICATION($,$,$,'Foobar',$,$,$);
-#3=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#1),#2);
-#4=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
-#5=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#3=IFCRELASSOCIATESCLASSIFICATION('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
+#4=IFCWALL('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#5=IFCSLAB('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$);
 #6=IFCCLASSIFICATIONREFERENCE($,'1',$,#2,$,$);
-#7=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#5),#6);
-#8=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
+#7=IFCRELASSOCIATESCLASSIFICATION('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,(#5),#6);
+#8=IFCCOLUMN('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$); /* Testcase */
 #9=IFCCLASSIFICATIONREFERENCE($,'11',$,#2,$,$);
-#10=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#8),#9);
-#11=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#10=IFCRELASSOCIATESCLASSIFICATION('0WTUhjMwvT39YBFH2pryoM',$,$,$,(#8),#9);
+#11=IFCBEAM('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #12=IFCCLASSIFICATIONREFERENCE($,'22',$,#13,$,$);
 #13=IFCCLASSIFICATIONREFERENCE($,'2',$,#2,$,$);
-#15=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#11),#12);
+#15=IFCRELASSOCIATESCLASSIFICATION('2jG7cjHsrIUfgKVktNgbzi',$,$,$,(#11),#12);
 #16=IFCMATERIAL('Material',$,$);
 #17=IFCEXTERNALREFERENCERELATIONSHIP($,$,#6,(#16));
 ~~~
@@ -499,20 +491,20 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCPROJECT('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$);
+#1=IFCPROJECT('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
 #2=IFCCLASSIFICATION($,$,$,'Foobar',$,$,$);
-#3=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#1),#2);
-#4=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
-#5=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#3=IFCRELASSOCIATESCLASSIFICATION('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
+#4=IFCWALL('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#5=IFCSLAB('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$);
 #6=IFCCLASSIFICATIONREFERENCE($,'1',$,#2,$,$);
-#7=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#5),#6);
-#8=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#7=IFCRELASSOCIATESCLASSIFICATION('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,(#5),#6);
+#8=IFCCOLUMN('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
 #9=IFCCLASSIFICATIONREFERENCE($,'11',$,#2,$,$);
-#10=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#8),#9);
-#11=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
+#10=IFCRELASSOCIATESCLASSIFICATION('0WTUhjMwvT39YBFH2pryoM',$,$,$,(#8),#9);
+#11=IFCBEAM('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$); /* Testcase */
 #12=IFCCLASSIFICATIONREFERENCE($,'22',$,#13,$,$);
 #13=IFCCLASSIFICATIONREFERENCE($,'2',$,#2,$,$);
-#15=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#11),#12);
+#15=IFCRELASSOCIATESCLASSIFICATION('2jG7cjHsrIUfgKVktNgbzi',$,$,$,(#11),#12);
 #16=IFCMATERIAL('Material',$,$);
 #17=IFCEXTERNALREFERENCERELATIONSHIP($,$,#6,(#16));
 ~~~
@@ -532,20 +524,20 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCPROJECT('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$);
+#1=IFCPROJECT('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
 #2=IFCCLASSIFICATION($,$,$,'Foobar',$,$,$);
-#3=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#1),#2);
-#4=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
-#5=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#3=IFCRELASSOCIATESCLASSIFICATION('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
+#4=IFCWALL('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$); /* Testcase */
+#5=IFCSLAB('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$);
 #6=IFCCLASSIFICATIONREFERENCE($,'1',$,#2,$,$);
-#7=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#5),#6);
-#8=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#7=IFCRELASSOCIATESCLASSIFICATION('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,(#5),#6);
+#8=IFCCOLUMN('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
 #9=IFCCLASSIFICATIONREFERENCE($,'11',$,#2,$,$);
-#10=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#8),#9);
-#11=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#10=IFCRELASSOCIATESCLASSIFICATION('0WTUhjMwvT39YBFH2pryoM',$,$,$,(#8),#9);
+#11=IFCBEAM('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #12=IFCCLASSIFICATIONREFERENCE($,'22',$,#13,$,$);
 #13=IFCCLASSIFICATIONREFERENCE($,'2',$,#2,$,$);
-#15=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#11),#12);
+#15=IFCRELASSOCIATESCLASSIFICATION('2jG7cjHsrIUfgKVktNgbzi',$,$,$,(#11),#12);
 #16=IFCMATERIAL('Material',$,$);
 #17=IFCEXTERNALREFERENCERELATIONSHIP($,$,#6,(#16));
 ~~~
@@ -565,20 +557,20 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCPROJECT('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$);
+#1=IFCPROJECT('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
 #2=IFCCLASSIFICATION($,$,$,'Foobar',$,$,$);
-#3=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#1),#2);
-#4=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
-#5=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
+#3=IFCRELASSOCIATESCLASSIFICATION('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
+#4=IFCWALL('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#5=IFCSLAB('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$); /* Testcase */
 #6=IFCCLASSIFICATIONREFERENCE($,'1',$,#2,$,$);
-#7=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#5),#6);
-#8=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#7=IFCRELASSOCIATESCLASSIFICATION('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,(#5),#6);
+#8=IFCCOLUMN('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
 #9=IFCCLASSIFICATIONREFERENCE($,'11',$,#2,$,$);
-#10=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#8),#9);
-#11=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#10=IFCRELASSOCIATESCLASSIFICATION('0WTUhjMwvT39YBFH2pryoM',$,$,$,(#8),#9);
+#11=IFCBEAM('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #12=IFCCLASSIFICATIONREFERENCE($,'22',$,#13,$,$);
 #13=IFCCLASSIFICATIONREFERENCE($,'2',$,#2,$,$);
-#15=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#11),#12);
+#15=IFCRELASSOCIATESCLASSIFICATION('2jG7cjHsrIUfgKVktNgbzi',$,$,$,(#11),#12);
 #16=IFCMATERIAL('Material',$,$);
 #17=IFCEXTERNALREFERENCERELATIONSHIP($,$,#6,(#16));
 ~~~
@@ -599,20 +591,20 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCPROJECT('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$);
+#1=IFCPROJECT('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
 #2=IFCCLASSIFICATION($,$,$,'Foobar',$,$,$);
-#3=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#1),#2);
-#4=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
-#5=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
+#3=IFCRELASSOCIATESCLASSIFICATION('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
+#4=IFCWALL('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#5=IFCSLAB('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$); /* Testcase */
 #6=IFCCLASSIFICATIONREFERENCE($,'1',$,#2,$,$);
-#7=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#5),#6);
-#8=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#7=IFCRELASSOCIATESCLASSIFICATION('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,(#5),#6);
+#8=IFCCOLUMN('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
 #9=IFCCLASSIFICATIONREFERENCE($,'11',$,#2,$,$);
-#10=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#8),#9);
-#11=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#10=IFCRELASSOCIATESCLASSIFICATION('0WTUhjMwvT39YBFH2pryoM',$,$,$,(#8),#9);
+#11=IFCBEAM('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #12=IFCCLASSIFICATIONREFERENCE($,'22',$,#13,$,$);
 #13=IFCCLASSIFICATIONREFERENCE($,'2',$,#2,$,$);
-#15=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#11),#12);
+#15=IFCRELASSOCIATESCLASSIFICATION('2jG7cjHsrIUfgKVktNgbzi',$,$,$,(#11),#12);
 #16=IFCMATERIAL('Material',$,$);
 #17=IFCEXTERNALREFERENCERELATIONSHIP($,$,#6,(#16));
 ~~~
@@ -633,20 +625,20 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCPROJECT('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$);
+#1=IFCPROJECT('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
 #2=IFCCLASSIFICATION($,$,$,'Foobar',$,$,$);
-#3=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#1),#2);
-#4=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
-#5=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#3=IFCRELASSOCIATESCLASSIFICATION('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
+#4=IFCWALL('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#5=IFCSLAB('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$);
 #6=IFCCLASSIFICATIONREFERENCE($,'1',$,#2,$,$);
-#7=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#5),#6);
-#8=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
+#7=IFCRELASSOCIATESCLASSIFICATION('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,(#5),#6);
+#8=IFCCOLUMN('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$); /* Testcase */
 #9=IFCCLASSIFICATIONREFERENCE($,'11',$,#2,$,$);
-#10=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#8),#9);
-#11=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#10=IFCRELASSOCIATESCLASSIFICATION('0WTUhjMwvT39YBFH2pryoM',$,$,$,(#8),#9);
+#11=IFCBEAM('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #12=IFCCLASSIFICATIONREFERENCE($,'22',$,#13,$,$);
 #13=IFCCLASSIFICATIONREFERENCE($,'2',$,#2,$,$);
-#15=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#11),#12);
+#15=IFCRELASSOCIATESCLASSIFICATION('2jG7cjHsrIUfgKVktNgbzi',$,$,$,(#11),#12);
 #16=IFCMATERIAL('Material',$,$);
 #17=IFCEXTERNALREFERENCERELATIONSHIP($,$,#6,(#16));
 ~~~
@@ -664,29 +656,29 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCPROJECT('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$);
+#1=IFCPROJECT('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
 #2=IFCCLASSIFICATION($,$,$,'Foobar',$,$,$);
-#3=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#1),#2);
-#4=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
-#5=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#3=IFCRELASSOCIATESCLASSIFICATION('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
+#4=IFCWALL('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#5=IFCSLAB('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$);
 #6=IFCCLASSIFICATIONREFERENCE($,'1',$,#2,$,$);
-#7=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#5),#6);
-#8=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#7=IFCRELASSOCIATESCLASSIFICATION('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,(#5),#6);
+#8=IFCCOLUMN('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
 #9=IFCCLASSIFICATIONREFERENCE($,'11',$,#2,$,$);
-#10=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#8,#18),#9);
-#11=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#10=IFCRELASSOCIATESCLASSIFICATION('0WTUhjMwvT39YBFH2pryoM',$,$,$,(#18,#8),#9);
+#11=IFCBEAM('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #12=IFCCLASSIFICATIONREFERENCE($,'22',$,#13,$,$);
 #13=IFCCLASSIFICATIONREFERENCE($,'2',$,#2,$,$);
-#15=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#19,#11),#12);
+#15=IFCRELASSOCIATESCLASSIFICATION('2jG7cjHsrIUfgKVktNgbzi',$,$,$,(#19,#11),#12);
 #16=IFCMATERIAL('Material',$,$);
 #17=IFCEXTERNALREFERENCERELATIONSHIP($,$,#6,(#16));
-#18=IFCWALL('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$); /* Testcase */
-#19=IFCWALLTYPE('3qs_CEYznSwfyPnfvmY$jn',$,$,$,$,$,$,$,$,.ELEMENTEDWALL.);
-#20=IFCRELDEFINESBYTYPE('2J464n_AnPNgUfYvzrChAh',$,$,$,(#18),#19);
+#18=IFCWALL('3qs_CEYznSwfyPnfvmY$jn',$,$,$,$,$,$,$,$); /* Testcase */
+#19=IFCWALLTYPE('2J464n_AnPNgUfYvzrChAh',$,$,$,$,$,$,$,$,.ELEMENTEDWALL.);
+#20=IFCRELDEFINESBYTYPE('3NmyAazpzLq8cIG7JPLlM9',$,$,$,(#18),#19);
 #21=IFCCLASSIFICATION($,$,$,'Foobaz',$,$,$);
-#22=IFCRELASSOCIATESCLASSIFICATION('3Wzl48UnnIp8YxtLF4v8ZP',$,$,$,(#1),#21);
+#22=IFCRELASSOCIATESCLASSIFICATION('25g_sgGv1Ktw1yG4pu$Q5F',$,$,$,(#1),#21);
 #23=IFCCLASSIFICATIONREFERENCE($,'X',$,#21,$,$);
-#24=IFCRELASSOCIATESCLASSIFICATION('0RSL8wCT5PN9gJFcsABneg',$,$,$,(#19),#23);
+#24=IFCRELASSOCIATESCLASSIFICATION('21nBfU8VHIqvcR36t_P1iE',$,$,$,(#19),#23);
 ~~~
 
 [Sample IDS](testcases/classification/pass-occurrences_override_the_type_classification_per_system_1_3.ids) - [Sample IFC: 18](testcases/classification/pass-occurrences_override_the_type_classification_per_system_1_3.ifc)
@@ -702,29 +694,29 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCPROJECT('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$);
+#1=IFCPROJECT('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
 #2=IFCCLASSIFICATION($,$,$,'Foobar',$,$,$);
-#3=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#1),#2);
-#4=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
-#5=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#3=IFCRELASSOCIATESCLASSIFICATION('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
+#4=IFCWALL('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#5=IFCSLAB('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$);
 #6=IFCCLASSIFICATIONREFERENCE($,'1',$,#2,$,$);
-#7=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#5),#6);
-#8=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#7=IFCRELASSOCIATESCLASSIFICATION('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,(#5),#6);
+#8=IFCCOLUMN('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
 #9=IFCCLASSIFICATIONREFERENCE($,'11',$,#2,$,$);
-#10=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#8,#18),#9);
-#11=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#10=IFCRELASSOCIATESCLASSIFICATION('0WTUhjMwvT39YBFH2pryoM',$,$,$,(#18,#8),#9);
+#11=IFCBEAM('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #12=IFCCLASSIFICATIONREFERENCE($,'22',$,#13,$,$);
 #13=IFCCLASSIFICATIONREFERENCE($,'2',$,#2,$,$);
-#15=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#19,#11),#12);
+#15=IFCRELASSOCIATESCLASSIFICATION('2jG7cjHsrIUfgKVktNgbzi',$,$,$,(#19,#11),#12);
 #16=IFCMATERIAL('Material',$,$);
 #17=IFCEXTERNALREFERENCERELATIONSHIP($,$,#6,(#16));
-#18=IFCWALL('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$); /* Testcase */
-#19=IFCWALLTYPE('3qs_CEYznSwfyPnfvmY$jn',$,$,$,$,$,$,$,$,.ELEMENTEDWALL.);
-#20=IFCRELDEFINESBYTYPE('2J464n_AnPNgUfYvzrChAh',$,$,$,(#18),#19);
+#18=IFCWALL('3qs_CEYznSwfyPnfvmY$jn',$,$,$,$,$,$,$,$); /* Testcase */
+#19=IFCWALLTYPE('2J464n_AnPNgUfYvzrChAh',$,$,$,$,$,$,$,$,.ELEMENTEDWALL.);
+#20=IFCRELDEFINESBYTYPE('3NmyAazpzLq8cIG7JPLlM9',$,$,$,(#18),#19);
 #21=IFCCLASSIFICATION($,$,$,'Foobaz',$,$,$);
-#22=IFCRELASSOCIATESCLASSIFICATION('3Wzl48UnnIp8YxtLF4v8ZP',$,$,$,(#1),#21);
+#22=IFCRELASSOCIATESCLASSIFICATION('25g_sgGv1Ktw1yG4pu$Q5F',$,$,$,(#1),#21);
 #23=IFCCLASSIFICATIONREFERENCE($,'X',$,#21,$,$);
-#24=IFCRELASSOCIATESCLASSIFICATION('0RSL8wCT5PN9gJFcsABneg',$,$,$,(#19),#23);
+#24=IFCRELASSOCIATESCLASSIFICATION('21nBfU8VHIqvcR36t_P1iE',$,$,$,(#19),#23);
 ~~~
 
 [Sample IDS](testcases/classification/fail-occurrences_override_the_type_classification_per_system_2_3.ids) - [Sample IFC: 18](testcases/classification/fail-occurrences_override_the_type_classification_per_system_2_3.ifc)
@@ -740,29 +732,29 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCPROJECT('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$);
+#1=IFCPROJECT('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
 #2=IFCCLASSIFICATION($,$,$,'Foobar',$,$,$);
-#3=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#1),#2);
-#4=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
-#5=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#3=IFCRELASSOCIATESCLASSIFICATION('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
+#4=IFCWALL('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$);
+#5=IFCSLAB('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$);
 #6=IFCCLASSIFICATIONREFERENCE($,'1',$,#2,$,$);
-#7=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#5),#6);
-#8=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#7=IFCRELASSOCIATESCLASSIFICATION('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,(#5),#6);
+#8=IFCCOLUMN('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,$,$,$,$);
 #9=IFCCLASSIFICATIONREFERENCE($,'11',$,#2,$,$);
-#10=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#8,#18),#9);
-#11=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#10=IFCRELASSOCIATESCLASSIFICATION('0WTUhjMwvT39YBFH2pryoM',$,$,$,(#18,#8),#9);
+#11=IFCBEAM('1n81bO_6nGjgypJwWUVavJ',$,$,$,$,$,$,$,$);
 #12=IFCCLASSIFICATIONREFERENCE($,'22',$,#13,$,$);
 #13=IFCCLASSIFICATIONREFERENCE($,'2',$,#2,$,$);
-#15=IFCRELASSOCIATESCLASSIFICATION('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#19,#11),#12);
+#15=IFCRELASSOCIATESCLASSIFICATION('2jG7cjHsrIUfgKVktNgbzi',$,$,$,(#19,#11),#12);
 #16=IFCMATERIAL('Material',$,$);
 #17=IFCEXTERNALREFERENCERELATIONSHIP($,$,#6,(#16));
-#18=IFCWALL('3CEylLjX9L0huf3t4LJMIA',$,$,$,$,$,$,$,$); /* Testcase */
-#19=IFCWALLTYPE('3qs_CEYznSwfyPnfvmY$jn',$,$,$,$,$,$,$,$,.ELEMENTEDWALL.);
-#20=IFCRELDEFINESBYTYPE('2J464n_AnPNgUfYvzrChAh',$,$,$,(#18),#19);
+#18=IFCWALL('3qs_CEYznSwfyPnfvmY$jn',$,$,$,$,$,$,$,$); /* Testcase */
+#19=IFCWALLTYPE('2J464n_AnPNgUfYvzrChAh',$,$,$,$,$,$,$,$,.ELEMENTEDWALL.);
+#20=IFCRELDEFINESBYTYPE('3NmyAazpzLq8cIG7JPLlM9',$,$,$,(#18),#19);
 #21=IFCCLASSIFICATION($,$,$,'Foobaz',$,$,$);
-#22=IFCRELASSOCIATESCLASSIFICATION('3Wzl48UnnIp8YxtLF4v8ZP',$,$,$,(#1),#21);
+#22=IFCRELASSOCIATESCLASSIFICATION('25g_sgGv1Ktw1yG4pu$Q5F',$,$,$,(#1),#21);
 #23=IFCCLASSIFICATIONREFERENCE($,'X',$,#21,$,$);
-#24=IFCRELASSOCIATESCLASSIFICATION('0RSL8wCT5PN9gJFcsABneg',$,$,$,(#19),#23);
+#24=IFCRELASSOCIATESCLASSIFICATION('21nBfU8VHIqvcR36t_P1iE',$,$,$,(#19),#23);
 ~~~
 
 [Sample IDS](testcases/classification/pass-occurrences_override_the_type_classification_per_system_3_3.ids) - [Sample IFC: 18](testcases/classification/pass-occurrences_override_the_type_classification_per_system_3_3.ifc)

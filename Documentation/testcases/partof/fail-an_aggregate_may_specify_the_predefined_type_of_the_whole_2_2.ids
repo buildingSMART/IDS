@@ -1,0 +1,28 @@
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS/ids_05.xsd">
+    <info>
+        <title>An aggregate may specify the predefined type of the whole 2/2</title>
+    </info>
+    <specifications>
+        <specification name="An aggregate may specify the predefined type of the whole 2/2" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
+            <applicability>
+                <entity>
+                    <name>
+                        <simpleValue>IFCBEAM</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <partOf relation="IfcRelAggregates" minOccurs="1" maxOccurs="1">
+                    <entity>
+                        <name>
+                            <simpleValue>IFCSLAB</simpleValue>
+                        </name>
+                        <predefinedType>
+                            <simpleValue>SLABRADOR</simpleValue>
+                        </predefinedType>
+                    </entity>
+                </partOf>
+            </requirements>
+        </specification>
+    </specifications>
+</ids>

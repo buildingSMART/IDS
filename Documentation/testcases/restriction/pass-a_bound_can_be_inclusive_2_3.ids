@@ -7,7 +7,7 @@
             <applicability>
                 <entity>
                     <name>
-                        <simpleValue>IfcSurfaceStyleRefraction</simpleValue>
+                        <simpleValue>IFCSURFACESTYLEREFRACTION</simpleValue>
                     </name>
                 </entity>
             </applicability>

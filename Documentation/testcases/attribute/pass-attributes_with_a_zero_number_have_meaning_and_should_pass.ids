@@ -3,11 +3,11 @@
         <title>Attributes with a zero number have meaning and should pass</title>
     </info>
     <specifications>
-        <specification name="Attributes with a zero number have meaning and should pass" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+        <specification name="Attributes with a zero number have meaning and should pass" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
-                        <simpleValue>IfcQuantityCount</simpleValue>
+                        <simpleValue>IFCQUANTITYCOUNT</simpleValue>
                     </name>
                 </entity>
             </applicability>

@@ -3,11 +3,11 @@
         <title>Non-rooted resources that have external classification references should also pass</title>
     </info>
     <specifications>
-        <specification name="Non-rooted resources that have external classification references should also pass" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+        <specification name="Non-rooted resources that have external classification references should also pass" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
-                        <simpleValue>IfcMaterial</simpleValue>
+                        <simpleValue>IFCMATERIAL</simpleValue>
                     </name>
                 </entity>
             </applicability>

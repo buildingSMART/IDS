@@ -1,0 +1,28 @@
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS/ids_05.xsd">
+    <info>
+        <title>The nest predefined type must match exactly 1/2</title>
+    </info>
+    <specifications>
+        <specification name="The nest predefined type must match exactly 1/2" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
+            <applicability>
+                <entity>
+                    <name>
+                        <simpleValue>IFCDISCRETEACCESSORY</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <partOf relation="IfcRelNests" minOccurs="1" maxOccurs="1">
+                    <entity>
+                        <name>
+                            <simpleValue>IFCFURNITURE</simpleValue>
+                        </name>
+                        <predefinedType>
+                            <simpleValue>LITTERBOX</simpleValue>
+                        </predefinedType>
+                    </entity>
+                </partOf>
+            </requirements>
+        </specification>
+    </specifications>
+</ids>

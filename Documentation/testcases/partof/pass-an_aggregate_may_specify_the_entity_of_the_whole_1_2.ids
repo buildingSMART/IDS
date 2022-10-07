@@ -3,11 +3,11 @@
         <title>An aggregate may specify the entity of the whole 1/2</title>
     </info>
     <specifications>
-        <specification name="An aggregate may specify the entity of the whole 1/2" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+        <specification name="An aggregate may specify the entity of the whole 1/2" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
-                        <simpleValue>IfcBeam</simpleValue>
+                        <simpleValue>IFCBEAM</simpleValue>
                     </name>
                 </entity>
             </applicability>

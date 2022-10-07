@@ -3,11 +3,11 @@
         <title>Properties can be overriden by an occurrence 2/2</title>
     </info>
     <specifications>
-        <specification name="Properties can be overriden by an occurrence 2/2" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+        <specification name="Properties can be overriden by an occurrence 2/2" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
-                        <simpleValue>IfcWallType</simpleValue>
+                        <simpleValue>IFCWALLTYPE</simpleValue>
                     </name>
                 </entity>
             </applicability>

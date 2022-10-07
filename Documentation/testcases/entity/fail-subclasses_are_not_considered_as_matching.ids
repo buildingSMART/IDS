@@ -3,11 +3,11 @@
         <title>Subclasses are not considered as matching</title>
     </info>
     <specifications>
-        <specification name="Subclasses are not considered as matching" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+        <specification name="Subclasses are not considered as matching" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
-                        <simpleValue>IfcWallStandardCase</simpleValue>
+                        <simpleValue>IFCWALLSTANDARDCASE</simpleValue>
                     </name>
                 </entity>
             </applicability>

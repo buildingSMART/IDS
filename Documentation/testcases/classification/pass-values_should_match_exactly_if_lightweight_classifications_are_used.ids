@@ -3,11 +3,11 @@
         <title>Values should match exactly if lightweight classifications are used</title>
     </info>
     <specifications>
-        <specification name="Values should match exactly if lightweight classifications are used" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+        <specification name="Values should match exactly if lightweight classifications are used" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
-                        <simpleValue>IfcWall</simpleValue>
+                        <simpleValue>IFCSLAB</simpleValue>
                     </name>
                 </entity>
             </applicability>

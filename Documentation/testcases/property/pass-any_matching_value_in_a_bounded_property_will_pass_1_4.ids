@@ -3,11 +3,11 @@
         <title>Any matching value in a bounded property will pass 1/4</title>
     </info>
     <specifications>
-        <specification name="Any matching value in a bounded property will pass 1/4" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+        <specification name="Any matching value in a bounded property will pass 1/4" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
-                        <simpleValue>IfcWall</simpleValue>
+                        <simpleValue>IFCWALL</simpleValue>
                     </name>
                 </entity>
             </applicability>

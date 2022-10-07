@@ -3,11 +3,11 @@
         <title>Dates are treated as strings 1/2</title>
     </info>
     <specifications>
-        <specification name="Dates are treated as strings 1/2" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+        <specification name="Dates are treated as strings 1/2" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
-                        <simpleValue>IfcClassification</simpleValue>
+                        <simpleValue>IFCCLASSIFICATION</simpleValue>
                     </name>
                 </entity>
             </applicability>

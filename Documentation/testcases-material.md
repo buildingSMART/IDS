@@ -9,7 +9,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('3Ace$$2PrP6REEjrRr9bOI',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 ~~~
 
 [Sample IDS](testcases/material/fail-elements_without_a_material_always_fail.ids) - [Sample IFC: 1](testcases/material/fail-elements_without_a_material_always_fail.ifc)
@@ -21,9 +21,9 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('3Ace$$2PrP6REEjrRr9bOI',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 #2=IFCMATERIAL('Unnamed',$,$);
-#3=IFCRELASSOCIATESMATERIAL('0eA6m4fELI9QBIhP3wiLAp',$,$,$,(#1),#2);
+#3=IFCRELASSOCIATESMATERIAL('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 ~~~
 
 [Sample IDS](testcases/material/pass-elements_with_any_material_will_pass_an_empty_material_facet.ids) - [Sample IFC: 1](testcases/material/pass-elements_with_any_material_will_pass_an_empty_material_facet.ifc)
@@ -35,9 +35,9 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('3Ace$$2PrP6REEjrRr9bOI',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 #2=IFCMATERIAL('Unnamed',$,$);
-#3=IFCRELASSOCIATESMATERIAL('0eA6m4fELI9QBIhP3wiLAp',$,$,$,(#1),#2);
+#3=IFCRELASSOCIATESMATERIAL('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 ~~~
 
 [Sample IDS](testcases/material/pass-a_required_facet_checks_all_parameters_as_normal.ids) - [Sample IFC: 1](testcases/material/pass-a_required_facet_checks_all_parameters_as_normal.ifc)
@@ -49,9 +49,9 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('3Ace$$2PrP6REEjrRr9bOI',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 #2=IFCMATERIAL('Unnamed',$,$);
-#3=IFCRELASSOCIATESMATERIAL('0eA6m4fELI9QBIhP3wiLAp',$,$,$,(#1),#2);
+#3=IFCRELASSOCIATESMATERIAL('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 ~~~
 
 [Sample IDS](testcases/material/fail-a_prohibited_facet_returns_the_opposite_of_a_required_facet.ids) - [Sample IFC: 1](testcases/material/fail-a_prohibited_facet_returns_the_opposite_of_a_required_facet.ifc)
@@ -63,9 +63,9 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('3Ace$$2PrP6REEjrRr9bOI',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 #2=IFCMATERIAL('Unnamed',$,$);
-#3=IFCRELASSOCIATESMATERIAL('0eA6m4fELI9QBIhP3wiLAp',$,$,$,(#1),#2);
+#3=IFCRELASSOCIATESMATERIAL('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 ~~~
 
 [Sample IDS](testcases/material/pass-an_optional_facet_always_passes_regardless_of_outcome_1_2.ids) - [Sample IFC: 1](testcases/material/pass-an_optional_facet_always_passes_regardless_of_outcome_1_2.ifc)
@@ -81,9 +81,9 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('3Ace$$2PrP6REEjrRr9bOI',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 #2=IFCMATERIAL('Unnamed',$,$);
-#3=IFCRELASSOCIATESMATERIAL('0eA6m4fELI9QBIhP3wiLAp',$,$,$,(#1),#2);
+#3=IFCRELASSOCIATESMATERIAL('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 ~~~
 
 [Sample IDS](testcases/material/pass-an_optional_facet_always_passes_regardless_of_outcome_1_2.ids) - [Sample IFC: 1](testcases/material/pass-an_optional_facet_always_passes_regardless_of_outcome_1_2.ifc)
@@ -99,7 +99,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('05rScmOVzMoQXOfbYdtLYj',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 #2=IFCMATERIAL('Foo',$,$);
 #3=IFCRELASSOCIATESMATERIAL('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 ~~~
@@ -117,7 +117,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('05rScmOVzMoQXOfbYdtLYj',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 #2=IFCMATERIAL('Bar',$,'Foo');
 #3=IFCRELASSOCIATESMATERIAL('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 ~~~
@@ -135,7 +135,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('05rScmOVzMoQXOfbYdtLYj',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 #2=IFCMATERIALLIST((#4));
 #3=IFCRELASSOCIATESMATERIAL('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 #4=IFCMATERIAL('Foo',$,$);
@@ -154,7 +154,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('05rScmOVzMoQXOfbYdtLYj',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 #2=IFCMATERIALLIST((#4));
 #3=IFCRELASSOCIATESMATERIAL('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 #4=IFCMATERIAL('Bar',$,'Foo');
@@ -173,9 +173,9 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 #2=IFCMATERIALLAYERSET((#5),'Unnamed',$);
-#3=IFCRELASSOCIATESMATERIAL('3Agm079vPIYBL4JExVrhD5',$,$,$,(#1),#2);
+#3=IFCRELASSOCIATESMATERIAL('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 #4=IFCMATERIAL('Unnamed',$,$);
 #5=IFCMATERIALLAYER(#4,1.,$,'Foo',$,$,$);
 ~~~
@@ -193,9 +193,9 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 #2=IFCMATERIALLAYERSET((#5),'Unnamed',$);
-#3=IFCRELASSOCIATESMATERIAL('3Agm079vPIYBL4JExVrhD5',$,$,$,(#1),#2);
+#3=IFCRELASSOCIATESMATERIAL('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 #4=IFCMATERIAL('Unnamed',$,$);
 #5=IFCMATERIALLAYER(#4,1.,$,'Bar',$,'Foo',$);
 ~~~
@@ -213,9 +213,9 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 #2=IFCMATERIALLAYERSET((#5),'Unnamed',$);
-#3=IFCRELASSOCIATESMATERIAL('3Agm079vPIYBL4JExVrhD5',$,$,$,(#1),#2);
+#3=IFCRELASSOCIATESMATERIAL('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 #4=IFCMATERIAL('Foo',$,$);
 #5=IFCMATERIALLAYER(#4,1.,$,'Bar',$,'Bar',$);
 ~~~
@@ -233,9 +233,9 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('3Agm079vPIYBL4JExVrhD5',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 #2=IFCMATERIALLAYERSET((#5),'Unnamed',$);
-#3=IFCRELASSOCIATESMATERIAL('3Agm079vPIYBL4JExVrhD5',$,$,$,(#1),#2);
+#3=IFCRELASSOCIATESMATERIAL('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 #4=IFCMATERIAL('Bar',$,'Foo');
 #5=IFCMATERIALLAYER(#4,1.,$,'Bar',$,'Bar',$);
 ~~~
@@ -253,9 +253,9 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 #2=IFCMATERIALPROFILESET('Unnamed',$,(#5),$);
-#3=IFCRELASSOCIATESMATERIAL('0BbkGoC6vPvRW13UT7D8zH',$,$,$,(#1),#2);
+#3=IFCRELASSOCIATESMATERIAL('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 #4=IFCMATERIAL('Unnamed',$,$);
 #5=IFCMATERIALPROFILE('Foo',$,#4,#6,$,$);
 #6=IFCCIRCLEPROFILEDEF(.AREA.,$,$,1.);
@@ -274,9 +274,9 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 #2=IFCMATERIALPROFILESET('Unnamed',$,(#5),$);
-#3=IFCRELASSOCIATESMATERIAL('0BbkGoC6vPvRW13UT7D8zH',$,$,$,(#1),#2);
+#3=IFCRELASSOCIATESMATERIAL('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 #4=IFCMATERIAL('Unnamed',$,$);
 #5=IFCMATERIALPROFILE('Bar',$,#4,#6,$,'Foo');
 #6=IFCCIRCLEPROFILEDEF(.AREA.,$,$,1.);
@@ -295,9 +295,9 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 #2=IFCMATERIALPROFILESET('Unnamed',$,(#5),$);
-#3=IFCRELASSOCIATESMATERIAL('0BbkGoC6vPvRW13UT7D8zH',$,$,$,(#1),#2);
+#3=IFCRELASSOCIATESMATERIAL('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 #4=IFCMATERIAL('Foo',$,$);
 #5=IFCMATERIALPROFILE('Bar',$,#4,#6,$,'Bar');
 #6=IFCCIRCLEPROFILEDEF(.AREA.,$,$,1.);
@@ -316,9 +316,9 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 #2=IFCMATERIALPROFILESET('Unnamed',$,(#5),$);
-#3=IFCRELASSOCIATESMATERIAL('0BbkGoC6vPvRW13UT7D8zH',$,$,$,(#1),#2);
+#3=IFCRELASSOCIATESMATERIAL('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 #4=IFCMATERIAL('Bar',$,'Foo');
 #5=IFCMATERIALPROFILE('Bar',$,#4,#6,$,'Bar');
 #6=IFCCIRCLEPROFILEDEF(.AREA.,$,$,1.);
@@ -337,9 +337,9 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('3dn5FxJ$bKte8lL5dru6xn',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 #2=IFCMATERIALCONSTITUENTSET('Unnamed',$,$);
-#3=IFCRELASSOCIATESMATERIAL('3dn5FxJ$bKte8lL5dru6xn',$,$,$,(#1),#2);
+#3=IFCRELASSOCIATESMATERIAL('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 ~~~
 
 [Sample IDS](testcases/material/fail-a_constituent_set_with_no_data_will_fail_a_value_check.ids) - [Sample IFC: 1](testcases/material/fail-a_constituent_set_with_no_data_will_fail_a_value_check.ifc)
@@ -355,9 +355,9 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('3dn5FxJ$bKte8lL5dru6xn',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 #2=IFCMATERIALCONSTITUENTSET('Unnamed',$,(#5));
-#3=IFCRELASSOCIATESMATERIAL('3dn5FxJ$bKte8lL5dru6xn',$,$,$,(#1),#2);
+#3=IFCRELASSOCIATESMATERIAL('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 #4=IFCMATERIAL('Unnamed',$,$);
 #5=IFCMATERIALCONSTITUENT('Foo',$,#4,$,$);
 ~~~
@@ -375,9 +375,9 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('3dn5FxJ$bKte8lL5dru6xn',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 #2=IFCMATERIALCONSTITUENTSET('Unnamed',$,(#5));
-#3=IFCRELASSOCIATESMATERIAL('3dn5FxJ$bKte8lL5dru6xn',$,$,$,(#1),#2);
+#3=IFCRELASSOCIATESMATERIAL('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 #4=IFCMATERIAL('Unnamed',$,$);
 #5=IFCMATERIALCONSTITUENT('Bar',$,#4,$,'Foo');
 ~~~
@@ -395,9 +395,9 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('3dn5FxJ$bKte8lL5dru6xn',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 #2=IFCMATERIALCONSTITUENTSET('Unnamed',$,(#5));
-#3=IFCRELASSOCIATESMATERIAL('3dn5FxJ$bKte8lL5dru6xn',$,$,$,(#1),#2);
+#3=IFCRELASSOCIATESMATERIAL('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 #4=IFCMATERIAL('Foo',$,$);
 #5=IFCMATERIALCONSTITUENT('Bar',$,#4,$,'Bar');
 ~~~
@@ -415,9 +415,9 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('3dn5FxJ$bKte8lL5dru6xn',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
 #2=IFCMATERIALCONSTITUENTSET('Unnamed',$,(#5));
-#3=IFCRELASSOCIATESMATERIAL('3dn5FxJ$bKte8lL5dru6xn',$,$,$,(#1),#2);
+#3=IFCRELASSOCIATESMATERIAL('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 #4=IFCMATERIAL('Bar',$,'Foo');
 #5=IFCMATERIALCONSTITUENT('Bar',$,#4,$,'Bar');
 ~~~
@@ -435,9 +435,9 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$); /* Testcase */
-#2=IFCWALLTYPE('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$,.ELEMENTEDWALL.);
-#3=IFCRELDEFINESBYTYPE('0BbkGoC6vPvRW13UT7D8zH',$,$,$,(#1),#2);
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
+#2=IFCWALLTYPE('0eA6m4fELI9QBIhP3wiLAp',$,$,$,$,$,$,$,$,.ELEMENTEDWALL.);
+#3=IFCRELDEFINESBYTYPE('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 #4=IFCMATERIAL('Foo',$,$);
 #5=IFCRELASSOCIATESMATERIAL('0BbkGoC6vPvRW13UT7D8zH',$,$,$,(#2),#4);
 ~~~
@@ -455,13 +455,13 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$); /* Testcase */
-#2=IFCWALLTYPE('0BbkGoC6vPvRW13UT7D8zH',$,$,$,$,$,$,$,$,.ELEMENTEDWALL.);
-#3=IFCRELDEFINESBYTYPE('0BbkGoC6vPvRW13UT7D8zH',$,$,$,(#1),#2);
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
+#2=IFCWALLTYPE('0eA6m4fELI9QBIhP3wiLAp',$,$,$,$,$,$,$,$,.ELEMENTEDWALL.);
+#3=IFCRELDEFINESBYTYPE('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 #4=IFCMATERIAL('Bar',$,$);
 #5=IFCRELASSOCIATESMATERIAL('0BbkGoC6vPvRW13UT7D8zH',$,$,$,(#2),#4);
 #6=IFCMATERIAL('Foo',$,$);
-#7=IFCRELASSOCIATESMATERIAL('0BbkGoC6vPvRW13UT7D8zH',$,$,$,(#1),#6);
+#7=IFCRELASSOCIATESMATERIAL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,(#1),#6);
 ~~~
 
 [Sample IDS](testcases/material/pass-occurrences_can_override_materials_from_their_types.ids) - [Sample IFC: 1](testcases/material/pass-occurrences_can_override_materials_from_their_types.ifc)

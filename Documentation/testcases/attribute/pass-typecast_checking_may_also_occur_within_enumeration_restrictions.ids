@@ -3,11 +3,11 @@
         <title>Typecast checking may also occur within enumeration restrictions</title>
     </info>
     <specifications>
-        <specification name="Typecast checking may also occur within enumeration restrictions" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+        <specification name="Typecast checking may also occur within enumeration restrictions" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
-                        <simpleValue>IfcSurfaceStyleRefraction</simpleValue>
+                        <simpleValue>IFCSURFACESTYLEREFRACTION</simpleValue>
                     </name>
                 </entity>
             </applicability>
@@ -19,6 +19,7 @@
                     <value>
                         <xs:restriction base="xs:string">
                             <xs:enumeration value="42" />
+                            <xs:enumeration value="43" />
                         </xs:restriction>
                     </value>
                 </attribute>

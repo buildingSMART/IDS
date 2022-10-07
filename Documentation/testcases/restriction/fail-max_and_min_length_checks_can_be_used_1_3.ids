@@ -7,7 +7,7 @@
             <applicability>
                 <entity>
                     <name>
-                        <simpleValue>IfcWall</simpleValue>
+                        <simpleValue>IFCWALL</simpleValue>
                     </name>
                 </entity>
             </applicability>

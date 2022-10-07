@@ -3,11 +3,11 @@
         <title>Value checks always fail for objects</title>
     </info>
     <specifications>
-        <specification name="Value checks always fail for objects" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+        <specification name="Value checks always fail for objects" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
-                        <simpleValue>IfcTask</simpleValue>
+                        <simpleValue>IFCTASK</simpleValue>
                     </name>
                 </entity>
             </applicability>

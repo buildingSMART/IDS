@@ -3,11 +3,11 @@
         <title>An empty string is considered falsey and will not pass</title>
     </info>
     <specifications>
-        <specification name="An empty string is considered falsey and will not pass" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+        <specification name="An empty string is considered falsey and will not pass" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
-                        <simpleValue>IfcWall</simpleValue>
+                        <simpleValue>IFCWALL</simpleValue>
                     </name>
                 </entity>
             </applicability>

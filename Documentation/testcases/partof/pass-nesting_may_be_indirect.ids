@@ -3,11 +3,11 @@
         <title>Nesting may be indirect</title>
     </info>
     <specifications>
-        <specification name="Nesting may be indirect" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+        <specification name="Nesting may be indirect" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
-                        <simpleValue>IfcMechanicalFastener</simpleValue>
+                        <simpleValue>IFCMECHANICALFASTENER</simpleValue>
                     </name>
                 </entity>
             </applicability>

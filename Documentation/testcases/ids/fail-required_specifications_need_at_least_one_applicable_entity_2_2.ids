@@ -3,7 +3,7 @@
         <title>Title</title>
     </info>
     <specifications>
-        <specification name="Name" ifcVersion="IFC4" minOccurs="1" maxOccurs="unbounded">
+        <specification name="Name" ifcVersion="" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>

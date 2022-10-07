@@ -3,11 +3,11 @@
         <title>Quantities must also match the appropriate measure</title>
     </info>
     <specifications>
-        <specification name="Quantities must also match the appropriate measure" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+        <specification name="Quantities must also match the appropriate measure" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
-                        <simpleValue>IfcWall</simpleValue>
+                        <simpleValue>IFCWALL</simpleValue>
                     </name>
                 </entity>
             </applicability>

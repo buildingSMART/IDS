@@ -189,8 +189,8 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('05rScmOVzMoQXOfbYdtLYj',$,$,$,$,$,$,$,$);
-#2=IFCWALL('05rScmOVzMoQXOfbYdtLYj',$,$,$,$,$,$,$,$);
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+#2=IFCWALL('0eA6m4fELI9QBIhP3wiLAp',$,$,$,$,$,$,$,$);
 #3=IFCRELCONNECTSPATHELEMENTS('05rScmOVzMoQXOfbYdtLYj',$,$,$,$,#1,#2,(),(),.ATSTART.,.ATEND.); /* Testcase */
 ~~~
 
@@ -384,7 +384,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,'\X2\266B\X0\',$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,'\X2\266B\X0\Don''t\X2\00C4\X0\rgerh\X2\00F4\X0\tel\X2\040A04350442\X0\',$,$,$,$,$,$); /* Testcase */
 ~~~
 
 [Sample IDS](testcases/attribute/pass-non_ascii_characters_are_treated_without_encoding.ids) - [Sample IFC: 1](testcases/attribute/pass-non_ascii_characters_are_treated_without_encoding.ifc)
@@ -456,13 +456,13 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
     <simpleValue>GlobalId</simpleValue>
   </name>
   <value>
-    <simpleValue>1hqIFTRjfV6AWq_bMtnZwI</simpleValue>
+    <simpleValue>2s0kheqvf6gQ8k6wjM8732</simpleValue>
   </value>
 </attribute>
 ~~~
 
 ~~~lua
-#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
+#1=IFCWALL('2s0kheqvf6gQ8k6wjM8732',$,$,$,$,$,$,$,$); /* Testcase */
 ~~~
 
 [Sample IDS](testcases/attribute/pass-globalids_are_treated_as_strings_and_not_expanded.ids) - [Sample IFC: 1](testcases/attribute/pass-globalids_are_treated_as_strings_and_not_expanded.ifc)
@@ -1048,8 +1048,8 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 
 ~~~lua
 #1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
-#2=IFCWALLTYPE('1hqIFTRjfV6AWq_bMtnZwI',$,$,'Foobar',$,$,$,$,$,.ELEMENTEDWALL.);
-#3=IFCRELDEFINESBYTYPE('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,(#1),#2);
+#2=IFCWALLTYPE('0eA6m4fELI9QBIhP3wiLAp',$,$,'Foobar',$,$,$,$,$,.ELEMENTEDWALL.);
+#3=IFCRELDEFINESBYTYPE('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 ~~~
 
 [Sample IDS](testcases/attribute/fail-attributes_are_not_inherited_by_the_occurrence.ids) - [Sample IFC: 1](testcases/attribute/fail-attributes_are_not_inherited_by_the_occurrence.ifc)

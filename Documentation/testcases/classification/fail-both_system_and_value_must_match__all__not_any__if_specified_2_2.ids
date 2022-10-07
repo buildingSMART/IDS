@@ -3,11 +3,11 @@
         <title>Both system and value must match (all, not any) if specified 2/2</title>
     </info>
     <specifications>
-        <specification name="Both system and value must match (all, not any) if specified 2/2" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+        <specification name="Both system and value must match (all, not any) if specified 2/2" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
-                        <simpleValue>IfcWall</simpleValue>
+                        <simpleValue>IFCCOLUMN</simpleValue>
                     </name>
                 </entity>
             </applicability>

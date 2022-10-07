@@ -3,11 +3,11 @@
         <title>Floating point numbers are compared with a 1e-6 tolerance 1/4</title>
     </info>
     <specifications>
-        <specification name="Floating point numbers are compared with a 1e-6 tolerance 1/4" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="1">
+        <specification name="Floating point numbers are compared with a 1e-6 tolerance 1/4" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
-                        <simpleValue>IfcSurfaceStyleRefraction</simpleValue>
+                        <simpleValue>IFCSURFACESTYLEREFRACTION</simpleValue>
                     </name>
                 </entity>
             </applicability>
