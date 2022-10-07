@@ -3,7 +3,7 @@
         <title>GlobalIds are treated as strings and not expanded</title>
     </info>
     <specifications>
-        <specification name="GlobalIds are treated as strings and not expanded" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
+        <specification name="GlobalIds are treated as strings and not expanded" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
@@ -17,7 +17,7 @@
                         <simpleValue>GlobalId</simpleValue>
                     </name>
                     <value>
-                        <simpleValue>2s0kheqvf6gQ8k6wjM8732</simpleValue>
+                        <simpleValue>2LTRvKhYX2B9N7Fjt2pR32</simpleValue>
                     </value>
                 </attribute>
             </requirements>

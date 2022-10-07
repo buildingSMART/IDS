@@ -3,7 +3,7 @@
         <title>Numeric values are checked using type casting 1/4</title>
     </info>
     <specifications>
-        <specification name="Numeric values are checked using type casting 1/4" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
+        <specification name="Numeric values are checked using type casting 1/4" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>

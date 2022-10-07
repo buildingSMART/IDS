@@ -3,7 +3,7 @@
         <title>Reference properties are treated as objects and not supported</title>
     </info>
     <specifications>
-        <specification name="Reference properties are treated as objects and not supported" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
+        <specification name="Reference properties are treated as objects and not supported" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>

@@ -3,7 +3,7 @@
         <title>A non aggregated element fails an aggregate relationship</title>
     </info>
     <specifications>
-        <specification name="A non aggregated element fails an aggregate relationship" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
+        <specification name="A non aggregated element fails an aggregate relationship" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>

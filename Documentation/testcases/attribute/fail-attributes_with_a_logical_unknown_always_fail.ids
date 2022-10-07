@@ -3,7 +3,7 @@
         <title>Attributes with a logical unknown always fail</title>
     </info>
     <specifications>
-        <specification name="Attributes with a logical unknown always fail" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
+        <specification name="Attributes with a logical unknown always fail" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>

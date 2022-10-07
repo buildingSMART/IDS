@@ -3,7 +3,7 @@
         <title>Specifying a value fails against different values</title>
     </info>
     <specifications>
-        <specification name="Specifying a value fails against different values" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
+        <specification name="Specifying a value fails against different values" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>

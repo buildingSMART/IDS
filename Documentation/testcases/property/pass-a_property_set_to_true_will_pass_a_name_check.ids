@@ -3,7 +3,7 @@
         <title>A property set to true will pass a name check</title>
     </info>
     <specifications>
-        <specification name="A property set to true will pass a name check" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
+        <specification name="A property set to true will pass a name check" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>

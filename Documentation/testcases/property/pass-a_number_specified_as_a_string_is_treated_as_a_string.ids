@@ -3,7 +3,7 @@
         <title>A number specified as a string is treated as a string</title>
     </info>
     <specifications>
-        <specification name="A number specified as a string is treated as a string" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
+        <specification name="A number specified as a string is treated as a string" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
