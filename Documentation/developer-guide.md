@@ -49,6 +49,7 @@ In addition, it is highly recommended to also provide the following features for
 
  - It is intended that IDS auditing results may be saved as BCF-XML format, or connect to an OpenCDE via the BCF-API. However, the formatting and overall structuring of these results in BCF are not specified right now.
  - If the software is not capable of parsing the specified IFC version nominated by the IDS specification, then the user should be made aware of the limitation.
+ - If the requirement is optional but would fail if it were required instead, the checker tool must not log an error, but may offer auxiliary warnings or recommendations
 
 ### Precision
 
