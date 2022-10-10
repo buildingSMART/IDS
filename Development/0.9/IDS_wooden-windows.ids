@@ -20,7 +20,7 @@
 				<ids:partOf relation="IfcRelAggregates">
 					<ids:entity>
 						<ids:name>
-							<ids:simpleValue>IFCDOOR</ids:simpleValue>
+							<ids:simpleValue>IFCELEMENTASSEMBLY</ids:simpleValue>
 						</ids:name>
 					</ids:entity>
 				</ids:partOf>
@@ -87,7 +87,7 @@
 				<ids:partOf relation="IfcRelAggregates">
 					<ids:entity >
 					<ids:name>
-						<ids:simpleValue>IFCDOOR</ids:simpleValue>
+						<ids:simpleValue>IFCELEMENTASSEMBLY</ids:simpleValue>
 					</ids:name>
 					</ids:entity>
 				</ids:partOf>
@@ -152,7 +152,7 @@
 				<ids:partOf relation="IfcRelAggregates">
 					<ids:entity>
 					<ids:name>
-					    <ids:simpleValue>IFCDOOR</ids:simpleValue>
+					    <ids:simpleValue>IFCELEMENTASSEMBLY</ids:simpleValue>
 					</ids:name>
 					</ids:entity>
 				</ids:partOf>
@@ -222,7 +222,7 @@
 				<ids:partOf relation="IfcRelAggregates">
 					<ids:entity>
 					<ids:name>
-					    <ids:simpleValue>IFCDOOR</ids:simpleValue>
+					    <ids:simpleValue>IFCELEMENTASSEMBLY</ids:simpleValue>
 					</ids:name>
 					</ids:entity>
 				</ids:partOf>
@@ -251,7 +251,7 @@
 				<ids:partOf relation="IfcRelAggregates">
 					<ids:entity>
 					<ids:name>
-					    <ids:simpleValue>IFCDOOR</ids:simpleValue>
+					    <ids:simpleValue>IFCELEMENTASSEMBLY</ids:simpleValue>
 					</ids:name>
 					</ids:entity>
 				</ids:partOf>
