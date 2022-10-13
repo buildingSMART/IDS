@@ -1,8 +1,8 @@
-# Information Delivery Specifications
+# Information Delivery Specification
 
 ![IDS Logo](ids-logo.png)
 
-**Information Delivery Specifications (IDS)** is a buildingSMART standard for specifying and checking simple information requirements from IFC models. It is designed as a free, lightweight, standardised approach to model checking.
+**Information Delivery Specification (IDS)** is a buildingSMART standard for specifying and checking simple information requirements from IFC models. It is designed as a free, lightweight, standardised approach to model checking.
 
 ## Introduction
 
