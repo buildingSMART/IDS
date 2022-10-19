@@ -10,7 +10,7 @@
         <purpose>Contractual requirements</purpose>
     </info>
     <specifications>
-        <specification name="Project naming" ifcVersion="IFC4" description="Projects shall be named correctly for the purposes of identification, project archival, and model federation." instructions="Each discipline is responsible for naming their own project." minOccurs="1" maxOccurs="1">
+        <specification name="Project naming" ifcVersion="IFC4" description="Projects shall be named correctly for the purposes of identification, project archival, and model federation." instructions="Each discipline is responsible for naming their own project." minOccurs="0" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
@@ -29,7 +29,7 @@
                 </attribute>
             </requirements>
         </specification>
-        <specification name="Fire rating" ifcVersion="IFC4" description="All objects must have a fire rating for building compliance checks and to know the protection strategies needed for any penetrations." instructions="The architect is responsible for including this data." minOccurs="1" maxOccurs="1">
+        <specification name="Fire rating" ifcVersion="IFC4" description="All objects must have a fire rating for building compliance checks and to know the protection strategies needed for any penetrations." instructions="The architect is responsible for including this data." minOccurs="0" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
@@ -38,7 +38,7 @@
                 </entity>
             </applicability>
             <requirements>
-                <property instructions="Fire rating is specified using the Fire Resistance Level as defined in the Australian National Construction Code (NCC) 2019. Valid examples include -/-/-, -/120/120, and 60/60/60" minOccurs="1" maxOccurs="1">
+                <property measure="IfcLabel" instructions="Fire rating is specified using the Fire Resistance Level as defined in the Australian National Construction Code (NCC) 2019. Valid examples include -/-/-, -/120/120, and 60/60/60" minOccurs="1" maxOccurs="1">
                     <propertySet>
                         <simpleValue>Pset_WallCommon</simpleValue>
                     </propertySet>
