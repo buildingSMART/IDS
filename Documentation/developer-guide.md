@@ -6,7 +6,7 @@ An IDS file is simply an XML file, with its schema defined in XSD. You may open 
 
 An IDS is considered valid if it passes the XSD-based validation check. All sample IDS files available in the buildingSMART directory of public IDS templates are guaranteed to be valid.
 
- - [Download the latest IDS v0.6 XSD schema](https://github.com/buildingSMART/IDS/blob/master/Development/0.6/ids_06.xsd)
+ - [Download the latest IDS XSD schema](https://github.com/buildingSMART/IDS/blob/master/Development/ids.xsd)
  - [Download sample IDS files from the directory of public IDS templates](todo)
 
 There are many freely available online tools and programming libraries that can perform XSD validation. Here is [one such XSD validation tool](https://www.liquid-technologies.com/online-xsd-validator) to save you an online search.
