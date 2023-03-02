@@ -13,23 +13,39 @@ class Build : NukeBuild
     public static int Main() => Execute<Build>(x => x.CheckTestCases);
 
     [Parameter("Configuration to build - Default is 'Debug' (local) or 'Release' (server)")]
-    readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;
+    private readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;
 
-    [PackageExecutable("ids-tool.CommandLine", "tools/net6.0/ids-tool.dll")] Tool BcfTool;
-    private string BcfToolPath => System.IO.Path.GetDirectoryName(ToolPathResolver.GetPackageExecutable("ids-tool.CommandLine", "tools/net6.0/ids-tool.dll"));
+    [PackageExecutable("ids-tool.CommandLine", "tools/net6.0/ids-tool.dll")] 
+    private Tool IdsTool;
 
+    private string IdsToolPath => System.IO.Path.GetDirectoryName(ToolPathResolver.GetPackageExecutable("ids-tool.CommandLine", "tools/net6.0/ids-tool.dll"));
+
+    /// <summary>
+    /// Checks the validity of IDS files in the repository, using ids-tool.
+    /// The tool is deployed by the annotated <see cref="IdsTool"/>.
+    /// </summary>
     Target CheckTestCases => _ => _
         .Executes(() =>
         {
+            // development samples
             var schemaFile = Path.Combine(
                 RootDirectory,
-                "Development/0.9/ids_09.xsd"
+                "Development/ids.xsd"
                 );
             var inputFolder = Path.Combine(
                 RootDirectory,
-                "Development/0.9"
+                "Development"
                 );
             var arguments = $"check \"{inputFolder}\" -x \"{schemaFile}\"";
-            BcfTool(arguments, workingDirectory: BcfToolPath);
+            IdsTool(arguments, workingDirectory: IdsToolPath);
+
+            // test cases
+            inputFolder = Path.Combine(
+                RootDirectory,
+                "Documentation/testcases"
+                );
+            arguments = $"check \"{inputFolder}\" -x \"{schemaFile}\"";
+            IdsTool(arguments, workingDirectory: IdsToolPath);
+
         });
 }
