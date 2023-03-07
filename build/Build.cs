@@ -1,6 +1,5 @@
 using Nuke.Common;
 using Nuke.Common.Tooling;
-using System.IO;
 
 class Build : NukeBuild
 {
@@ -28,24 +27,14 @@ class Build : NukeBuild
         .Executes(() =>
         {
             // development samples
-            var schemaFile = Path.Combine(
-                RootDirectory,
-                "Development/ids.xsd"
-                );
-            var inputFolder = Path.Combine(
-                RootDirectory,
-                "Development"
-                );
+            var schemaFile = RootDirectory / "Development" / "ids.xsd";
+            var inputFolder = RootDirectory / "Development";
             var arguments = $"check \"{inputFolder}\" -x \"{schemaFile}\"";
             IdsTool(arguments, workingDirectory: IdsToolPath);
 
             // test cases
-            inputFolder = Path.Combine(
-                RootDirectory,
-                "Documentation/testcases"
-                );
+            inputFolder = RootDirectory / "Documentation" / "testcases";
             arguments = $"check \"{inputFolder}\" -x \"{schemaFile}\"";
             IdsTool(arguments, workingDirectory: IdsToolPath);
-
         });
 }
