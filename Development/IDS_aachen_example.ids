@@ -17,7 +17,7 @@
             <ids:requirements>
                 <ids:attribute minOccurs="1">
                     <ids:name>
-                        <ids:simpleValue>name</ids:simpleValue>
+                        <ids:simpleValue>Name</ids:simpleValue>
                     </ids:name>
                 </ids:attribute>
             </ids:requirements>
