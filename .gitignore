@@ -5,3 +5,4 @@ build/obj/
 .tmp/
 /build/.vs/
 /.nuke/temp/
+/.vs/

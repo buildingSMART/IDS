@@ -1,5 +1,6 @@
 using Nuke.Common;
 using Nuke.Common.Tooling;
+using System;
 using System.IO;
 
 class Build : NukeBuild
@@ -21,31 +22,42 @@ class Build : NukeBuild
     private string IdsToolPath => System.IO.Path.GetDirectoryName(ToolPathResolver.GetPackageExecutable("ids-tool.CommandLine", "tools/net6.0/ids-tool.dll"));
 
     /// <summary>
-    /// Checks the validity of IDS files in the repository, using ids-tool.
+    /// Checks the validity of development folder in the repository, using ids-tool.
     /// The tool is deployed by the annotated <see cref="IdsTool"/>.
     /// </summary>
-    Target CheckTestCases => _ => _
+    Target AuditDevelopment => _ => _
+        .AssuredAfterFailure()
         .Executes(() =>
         {
             // development samples
-            var schemaFile = Path.Combine(
-                RootDirectory,
-                "Development/ids.xsd"
-                );
-            var inputFolder = Path.Combine(
-                RootDirectory,
-                "Development"
-                );
-            var arguments = $"check \"{inputFolder}\" -x \"{schemaFile}\"";
+            var schemaFile = RootDirectory / "Development" / "ids.xsd";
+            var inputFolder = RootDirectory / "Development";
+            var arguments = $"audit \"{inputFolder}\" -x \"{schemaFile}\"";
             IdsTool(arguments, workingDirectory: IdsToolPath);
+        });
 
-            // test cases
-            inputFolder = Path.Combine(
-                RootDirectory,
-                "Documentation/testcases"
-                );
-            arguments = $"check \"{inputFolder}\" -x \"{schemaFile}\"";
+    Target AuditDocTestCases => _ => _
+        .AssuredAfterFailure()
+        .Executes(() =>
+        {
+            // we are omitting tests on the content of the Documentation/testcases folder, 
+            // because they include IDSs that intentionally contain errors
+            //
+            var schemaFile = RootDirectory / "Development" / "ids.xsd";
+            var inputFolder = RootDirectory / "Documentation" / "testcases";
+            var arguments = $"audit \"{inputFolder}\" --omitContent -x \"{schemaFile}\"";
             IdsTool(arguments, workingDirectory: IdsToolPath);
+        });
 
+    /// <summary>
+    /// Perform all tests via DependsOn, this is the one invoked by default
+    /// </summary>
+    Target CheckTestCases => _ => _
+        .AssuredAfterFailure()
+        .DependsOn(AuditDocTestCases)
+        .DependsOn(AuditDevelopment)
+        .Executes(() =>
+        {
+            Console.WriteLine("Empty target, to launch all available checking targets.");
         });
 }
