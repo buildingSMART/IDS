@@ -72,6 +72,8 @@
           "items": {
             "type": "string",
             "enum": [
+              "AuditDevelopment",
+              "AuditDocTestCases",
               "CheckTestCases"
             ]
           }
@@ -82,6 +84,8 @@
           "items": {
             "type": "string",
             "enum": [
+              "AuditDevelopment",
+              "AuditDocTestCases",
               "CheckTestCases"
             ]
           }

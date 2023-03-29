@@ -1,6 +1,6 @@
 # Complex restrictions
 
-When specifying a **Facet Parameter**, you may either specify a **Simple Value** or a **Complex Restriction**. A **Simple Value** may be text, a number, or a boolean (TRUE / FALSE). In contrast, a **Complex Restriction** may represent pick lists of valid values, naming schemes and conventions, numeric ranges, or more. A restriction may be specified in six different ways:
+When specifying a **Facet Parameter**, you may either specify a **Simple Value** or a **Complex Restriction**. A **Simple Value** may be text, a number, or a boolean (TRUE / FALSE). In contrast, a **Complex Restriction** may represent pick lists of valid values, naming schemes and conventions, numeric ranges, or more. A restriction may be specified in four different ways:
 
  - Enumeration
  - Pattern
