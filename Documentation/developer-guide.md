@@ -71,7 +71,7 @@ Required | 1 | unbounded
 Optional | 0 | unbounded
 Prohibited | 0 | 0
 
-Although other permutations of `minOccurs` and `maxOccurs` may exist, they do not have any meaning.
+Other configurations of `minOccurs` and `maxOccurs` are currently not allowed.
 
 ## Available developer libraries
 
