@@ -12,7 +12,7 @@
                     <ids:name>
                         <xs:restriction base="xs:string">
                             <xs:pattern value="IFCCOVERING"/> <!-- only 'IFCCOVERING' is allowed -->
-                            <xs:totalDigits value="11"/>
+                            <!-- <xs:length value="11"/> --> <!-- removed for clarity, is the rule in and/or with the other? Because of Enums it should be in `or` -->
                         </xs:restriction>
                     </ids:name>
                     <ids:predefinedType>

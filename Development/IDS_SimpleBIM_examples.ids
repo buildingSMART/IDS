@@ -52,7 +52,9 @@
                 <ids:entity>
                     <ids:name>
                         <xs:restriction>
-                        <xs:annotation><xs:documentation>This goed for either 'IFCWALL' ór 'IFCWALLSTANDARDCASE'</xs:documentation></xs:annotation>
+							<xs:annotation>
+								<xs:documentation>This goed for either 'IFCWALL' ór 'IFCWALLSTANDARDCASE'</xs:documentation>
+							</xs:annotation>
                             <xs:pattern value="IFCWALL|IFCWALLSTANDARDCASE"/>
                         </xs:restriction>
                     </ids:name>
