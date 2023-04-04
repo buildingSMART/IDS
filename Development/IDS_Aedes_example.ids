@@ -5,7 +5,7 @@
         <ids:version>1.0</ids:version>
     </ids:info>
     <ids:specifications>
-        <ids:specification ifcVersion="IFC2X3" name="Beglazing" description="Glazing in a window" minOccurs="0" maxOccurs="unbounded">
+        <ids:specification ifcVersion="IFC4" name="Beglazing" description="Glazing in a window" minOccurs="0" maxOccurs="unbounded">
             <ids:applicability>
                 <ids:entity>
                     <ids:name>

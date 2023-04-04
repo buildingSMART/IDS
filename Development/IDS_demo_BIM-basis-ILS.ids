@@ -13,7 +13,7 @@
                         <ids:simpleValue>IFCBUILDINGELEMENTPROXY</ids:simpleValue>
                     </ids:name>
                 </ids:entity>
-                <ids:attribute maxOccurs="unbounded">
+                <ids:attribute>
                     <ids:name>
                         <ids:simpleValue>Name</ids:simpleValue>
                     </ids:name>
