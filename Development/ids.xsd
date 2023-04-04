@@ -153,7 +153,6 @@
 				<xs:complexType>
 					<xs:complexContent>
 						<xs:extension base="ids:attributeType">
-							<xs:attributeGroup ref="xs:occurs"/>
 							<xs:attribute name="instructions" type="xs:string" use="optional">
 								<xs:annotation>
 									<xs:documentation>Author of the IDS can leave instructions for the authors of the IFC. This text could/should be displayed in the BIM/IFC authoring tool.</xs:documentation>
