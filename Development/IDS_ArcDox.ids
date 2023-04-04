@@ -6,7 +6,7 @@
         <ids:date>2022-02-08</ids:date>
     </ids:info>
     <ids:specifications>
-        <ids:specification instructions="Add some context here to help users understand what you are asking." ifcVersion="IFC2X3" name="Project requirements" minOccurs="1">
+        <ids:specification instructions="Add some context here to help users understand what you are asking." ifcVersion="IFC2X3" name="Project requirements" maxOccurs="unbounded">
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
@@ -15,29 +15,29 @@
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
-                <ids:attribute minOccurs="1" instructions="Project ID">
+                <ids:attribute minOccurs="1" maxOccurs="unbounded" instructions="Project ID">
                     <ids:name>
                         <ids:simpleValue>GlobalId</ids:simpleValue>
                     </ids:name>
                 </ids:attribute>
-                <ids:attribute minOccurs="1" instructions="Functional Unit (Overall Sq.Metres or Linear Meters etc)">
+                <ids:attribute minOccurs="1" maxOccurs="unbounded" instructions="Functional Unit (Overall Sq.Metres or Linear Meters etc)">
 					<ids:name>
 						<ids:simpleValue>UnitsInContext</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
-				<ids:attribute minOccurs="1" instructions="Project Description">
+				<ids:attribute minOccurs="1" maxOccurs="unbounded" instructions="Project Description">
 					<ids:name>
 						<ids:simpleValue>Description</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
-                <ids:attribute minOccurs="1" instructions="Project name">
+                <ids:attribute minOccurs="1" maxOccurs="unbounded" instructions="Project name">
                     <ids:name>
                         <ids:simpleValue>Name</ids:simpleValue>
                     </ids:name>
                 </ids:attribute>
             </ids:requirements>
         </ids:specification>
-        <ids:specification name="name1" minOccurs="1" ifcVersion="IFC2X3">
+        <ids:specification name="name1" minOccurs="1" maxOccurs="unbounded" ifcVersion="IFC2X3">
 			<ids:applicability>
 				<ids:entity>
 					<ids:name>
@@ -46,7 +46,7 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:property minOccurs="1">
+				<ids:property maxOccurs="unbounded">
 					<ids:propertySet>
 						<ids:simpleValue>ArcDox</ids:simpleValue>
 					</ids:propertySet>
@@ -54,7 +54,7 @@
 						<ids:simpleValue>Function</ids:simpleValue>
 					</ids:name>
 				</ids:property>
-				 <ids:property minOccurs="1" measure="IfcLabel">
+				 <ids:property minOccurs="1" maxOccurs="unbounded" measure="IfcLabel">
 					<ids:propertySet>
 						<ids:simpleValue>ArcDox</ids:simpleValue>
 					</ids:propertySet>
@@ -69,7 +69,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				 <ids:property minOccurs="1" measure="IfcText">
+				 <ids:property minOccurs="1" maxOccurs="unbounded" measure="IfcText">
 					<ids:propertySet>
 						<ids:simpleValue>ArcDox</ids:simpleValue>
 					</ids:propertySet>
@@ -84,7 +84,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1">
+				<ids:property maxOccurs="unbounded">
 					<ids:propertySet>
 						<ids:simpleValue>ArcDox</ids:simpleValue>
 					</ids:propertySet>
@@ -94,7 +94,7 @@
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification name="name2" minOccurs="1" ifcVersion="IFC2X3">
+		<ids:specification name="name2" minOccurs="1" maxOccurs="unbounded" ifcVersion="IFC2X3">
 			<ids:applicability>
 				<ids:entity>
 					<ids:name>
@@ -103,14 +103,14 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:attribute minOccurs="1" instructions="Add this attribute twice: once for Area Units and once for Linear Units."> <!-- this is actually not the best way to distinguish between types of units. -->
+				<ids:attribute minOccurs="1" maxOccurs="unbounded" instructions="Add this attribute twice: once for Area Units and once for Linear Units."> <!-- this is actually not the best way to distinguish between types of units. -->
 					<ids:name>
 						<ids:simpleValue>Units</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification name="name3" minOccurs="1" ifcVersion="IFC2X3">
+		<ids:specification name="name3" minOccurs="1" maxOccurs="unbounded" ifcVersion="IFC2X3">
 			<ids:applicability>
 				<ids:entity>
 					<ids:name>
@@ -119,22 +119,22 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:attribute minOccurs="1" instructions="Address">
+				<ids:attribute minOccurs="1" maxOccurs="unbounded" instructions="Address">
 					<ids:name>
 						<ids:simpleValue>AddressLines</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
-				<ids:attribute minOccurs="1" instructions="Town">
+				<ids:attribute minOccurs="1" maxOccurs="unbounded" instructions="Town">
 					<ids:name>
 						<ids:simpleValue>Town</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
-				<ids:attribute minOccurs="1" instructions="Region">
+				<ids:attribute minOccurs="1" maxOccurs="unbounded" instructions="Region">
 					<ids:name>
 						<ids:simpleValue>Region</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
-				<ids:attribute minOccurs="1" instructions="Country">
+				<ids:attribute minOccurs="1" maxOccurs="unbounded" instructions="Country">
 					<ids:name>
 						<ids:simpleValue>Country</ids:simpleValue>
 					</ids:name>
@@ -142,14 +142,14 @@
 						<ids:simpleValue>Ireland</ids:simpleValue>
 					</ids:value>
 				</ids:attribute>
-				<ids:attribute minOccurs="1" instructions="Postal Code">
+				<ids:attribute minOccurs="1" maxOccurs="unbounded" instructions="Postal Code">
 					<ids:name>
 						<ids:simpleValue>PostalCode</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification name="name4" minOccurs="1" ifcVersion="IFC2X3">
+		<ids:specification name="name4" minOccurs="1" maxOccurs="unbounded" ifcVersion="IFC2X3">
 			<ids:applicability>
 				<ids:entity>
 					<ids:name>
@@ -158,12 +158,12 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:attribute minOccurs="1" instructions="Longitude">
+				<ids:attribute minOccurs="1" maxOccurs="unbounded" instructions="Longitude">
 					<ids:name>
 						<ids:simpleValue>RefLongitude</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
-				<ids:attribute minOccurs="1" instructions="Latitude">
+				<ids:attribute minOccurs="1" maxOccurs="unbounded" instructions="Latitude">
 					<ids:name>
 						<ids:simpleValue>RefLatitude</ids:simpleValue>
 					</ids:name>
