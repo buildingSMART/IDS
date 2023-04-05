@@ -15,22 +15,22 @@
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
-                <ids:attribute minOccurs="1" maxOccurs="unbounded" instructions="Project ID">
+                <ids:attribute instructions="Project ID">
                     <ids:name>
                         <ids:simpleValue>GlobalId</ids:simpleValue>
                     </ids:name>
                 </ids:attribute>
-                <ids:attribute minOccurs="1" maxOccurs="unbounded" instructions="Functional Unit (Overall Sq.Metres or Linear Meters etc)">
+                <ids:attribute instructions="Functional Unit (Overall Sq.Metres or Linear Meters etc)">
 					<ids:name>
 						<ids:simpleValue>UnitsInContext</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
-				<ids:attribute minOccurs="1" maxOccurs="unbounded" instructions="Project Description">
+				<ids:attribute instructions="Project Description">
 					<ids:name>
 						<ids:simpleValue>Description</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
-                <ids:attribute minOccurs="1" maxOccurs="unbounded" instructions="Project name">
+                <ids:attribute instructions="Project name">
                     <ids:name>
                         <ids:simpleValue>Name</ids:simpleValue>
                     </ids:name>
@@ -103,7 +103,7 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:attribute minOccurs="1" maxOccurs="unbounded" instructions="Add this attribute twice: once for Area Units and once for Linear Units."> <!-- this is actually not the best way to distinguish between types of units. -->
+				<ids:attribute instructions="Add this attribute twice: once for Area Units and once for Linear Units."> <!-- this is actually not the best way to distinguish between types of units. -->
 					<ids:name>
 						<ids:simpleValue>Units</ids:simpleValue>
 					</ids:name>
@@ -119,22 +119,22 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:attribute minOccurs="1" maxOccurs="unbounded" instructions="Address">
+				<ids:attribute instructions="Address">
 					<ids:name>
 						<ids:simpleValue>AddressLines</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
-				<ids:attribute minOccurs="1" maxOccurs="unbounded" instructions="Town">
+				<ids:attribute instructions="Town">
 					<ids:name>
 						<ids:simpleValue>Town</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
-				<ids:attribute minOccurs="1" maxOccurs="unbounded" instructions="Region">
+				<ids:attribute instructions="Region">
 					<ids:name>
 						<ids:simpleValue>Region</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
-				<ids:attribute minOccurs="1" maxOccurs="unbounded" instructions="Country">
+				<ids:attribute instructions="Country">
 					<ids:name>
 						<ids:simpleValue>Country</ids:simpleValue>
 					</ids:name>
@@ -142,7 +142,7 @@
 						<ids:simpleValue>Ireland</ids:simpleValue>
 					</ids:value>
 				</ids:attribute>
-				<ids:attribute minOccurs="1" maxOccurs="unbounded" instructions="Postal Code">
+				<ids:attribute instructions="Postal Code">
 					<ids:name>
 						<ids:simpleValue>PostalCode</ids:simpleValue>
 					</ids:name>
@@ -158,12 +158,12 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:attribute minOccurs="1" maxOccurs="unbounded" instructions="Longitude">
+				<ids:attribute instructions="Longitude">
 					<ids:name>
 						<ids:simpleValue>RefLongitude</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
-				<ids:attribute minOccurs="1" maxOccurs="unbounded" instructions="Latitude">
+				<ids:attribute instructions="Latitude">
 					<ids:name>
 						<ids:simpleValue>RefLatitude</ids:simpleValue>
 					</ids:name>

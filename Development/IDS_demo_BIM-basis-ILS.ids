@@ -41,12 +41,12 @@
                 </ids:entity>
             </ids:applicability>
             <ids:requirements description="Hier kan een beschrijving van de requirements komen om dingen wat toe te lichten.">
-                <ids:attribute maxOccurs="unbounded">
+                <ids:attribute>
                     <ids:name>
                         <ids:simpleValue>Elevation</ids:simpleValue>
                     </ids:name>
                 </ids:attribute>
-                <ids:attribute maxOccurs="unbounded">
+                <ids:attribute>
                     <ids:name>
                         <ids:simpleValue>Name</ids:simpleValue>
                     </ids:name>
