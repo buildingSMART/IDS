@@ -8,7 +8,7 @@
         <ids:milestone>LOD200</ids:milestone>
     </ids:info>
     <ids:specifications>
-        <ids:specification ifcVersion="IFC2X3" name="mounting part" minOccurs="1">
+        <ids:specification ifcVersion="IFC2X3" name="mounting part" maxOccurs="unbounded">
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
@@ -17,7 +17,7 @@
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
-                <ids:property minOccurs="1" measure="IfcText">
+                <ids:property minOccurs="1" maxOccurs="unbounded" measure="IfcText">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -31,7 +31,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property minOccurs="1" measure="IfcText">
+                <ids:property minOccurs="1" maxOccurs="unbounded" measure="IfcText">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -45,7 +45,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property minOccurs="1" measure="IfcLengthMeasure">
+                <ids:property minOccurs="1" maxOccurs="unbounded" measure="IfcLengthMeasure">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -59,7 +59,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property minOccurs="1" measure="IfcText">
+                <ids:property minOccurs="1" maxOccurs="unbounded" measure="IfcText">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -73,7 +73,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property minOccurs="1" measure="IfcText" uri="https://www.igh.hr/en/reference/">
+                <ids:property minOccurs="1" maxOccurs="unbounded" measure="IfcText" uri="https://www.igh.hr/en/reference/">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -87,7 +87,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property minOccurs="1" measure="IfcText">
+                <ids:property minOccurs="1" maxOccurs="unbounded" measure="IfcText">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -103,7 +103,7 @@
                 </ids:property>
             </ids:requirements>
         </ids:specification>
-        <ids:specification ifcVersion="IFC2X3" name="pipe fittings and pipes" minOccurs="1">
+        <ids:specification ifcVersion="IFC2X3" name="pipe fittings and pipes" maxOccurs="unbounded">
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
@@ -115,7 +115,7 @@
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
-                <ids:property minOccurs="1" measure="IfcText" uri="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-4.3/prop/Manufacturer">
+                <ids:property minOccurs="1" maxOccurs="unbounded" measure="IfcText" uri="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-4.3/prop/Manufacturer">
                     <ids:propertySet>
                         <ids:simpleValue>Pset_ManufacturerTypeInformation</ids:simpleValue>
                     </ids:propertySet>
@@ -129,7 +129,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property minOccurs="1" measure="IfcText">
+                <ids:property minOccurs="1" maxOccurs="unbounded" measure="IfcText">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -143,7 +143,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property minOccurs="1" measure="IfcText">
+                <ids:property minOccurs="1" maxOccurs="unbounded" measure="IfcText">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -157,7 +157,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property minOccurs="1" measure="IfcLengthMeasure">
+                <ids:property minOccurs="1" maxOccurs="unbounded" measure="IfcLengthMeasure">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -171,7 +171,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property minOccurs="1" measure="IfcText">
+                <ids:property minOccurs="1" maxOccurs="unbounded" measure="IfcText">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -185,7 +185,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property minOccurs="1" measure="IfcText" uri="https://www.igh.hr/en/reference/">
+                <ids:property minOccurs="1" maxOccurs="unbounded" measure="IfcText" uri="https://www.igh.hr/en/reference/">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -199,7 +199,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property minOccurs="1" measure="IfcText">
+                <ids:property minOccurs="1" maxOccurs="unbounded" measure="IfcText">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>
@@ -213,7 +213,7 @@
                         </xs:restriction>
                     </ids:value>
                 </ids:property>
-                <ids:property minOccurs="1" measure="IfcLengthMeasure">
+                <ids:property minOccurs="1" maxOccurs="unbounded" measure="IfcLengthMeasure">
                     <ids:propertySet>
                         <ids:simpleValue>ePset_Pipe</ids:simpleValue>
                     </ids:propertySet>

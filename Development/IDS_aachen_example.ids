@@ -6,7 +6,7 @@
         <ids:date>2022-01-12</ids:date>
     </ids:info>
     <ids:specifications>
-        <ids:specification ifcVersion="IFC2X3" name="Aachen test" minOccurs="1">
+        <ids:specification ifcVersion="IFC2X3" name="Aachen test" maxOccurs="unbounded">
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
@@ -15,9 +15,9 @@
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
-                <ids:attribute minOccurs="1">
+                <ids:attribute maxOccurs="unbounded">
                     <ids:name>
-                        <ids:simpleValue>name</ids:simpleValue>
+                        <ids:simpleValue>Name</ids:simpleValue>
                     </ids:name>
                 </ids:attribute>
             </ids:requirements>
