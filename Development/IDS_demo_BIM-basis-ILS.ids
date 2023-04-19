@@ -122,7 +122,7 @@
                             <xs:enumeration value="IFCBEAM" />
                             <xs:enumeration value="IFCBEAMSTANDARDCASE" />
                             <xs:enumeration value="IFCBOILER" />
-                            <xs:enumeration value="IFCBUILDINGELEMENT" />
+                            <!-- <xs:enumeration value="IFCBUILDINGELEMENT" /> this is invalid because abstract -->
                             <xs:enumeration value="IFCBUILDINGELEMENTPART" />
                             <xs:enumeration value="IFCBUILDINGELEMENTPROXY" />
                             <xs:enumeration value="IFCBURNER" />
@@ -162,7 +162,7 @@
                             <xs:enumeration value="IFCELECTRICMOTOR" />
                             <xs:enumeration value="IFCELECTRICTIMECONTROL" />
                             <xs:enumeration value="IFCELEMENTASSEMBLY" />
-                            <xs:enumeration value="IFCELEMENTCOMPONENT" />
+                            <!-- <xs:enumeration value="IFCELEMENTCOMPONENT" /> this is invalid because abstract -->
                             <xs:enumeration value="IFCENERGYCONVERSIONDEVICE" />
                             <xs:enumeration value="IFCENGINE" />
                             <xs:enumeration value="IFCEVAPORATIVECOOLER" />
@@ -210,7 +210,7 @@
                             <xs:enumeration value="IFCRAMP" />
                             <xs:enumeration value="IFCRAMPFLIGHT" />
                             <xs:enumeration value="IFCREINFORCINGBAR" />
-                            <xs:enumeration value="IFCREINFORCINGELEMENT" />
+                            <!-- <xs:enumeration value="IFCREINFORCINGELEMENT" /> this is invalid because abstract -->
                             <xs:enumeration value="IFCREINFORCINGMESH" />
                             <xs:enumeration value="IFCROOF" />
                             <xs:enumeration value="IFCSANITARYTERMINAL" />
