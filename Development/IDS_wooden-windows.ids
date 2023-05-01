@@ -8,6 +8,28 @@
         <ids:milestone>Design handover to manufactuer</ids:milestone>
     </ids:info>
     <ids:specifications>
+		<!-- specification added to have at least one case of predefinedType in the documenetation -->
+		<ids:specification ifcVersion="IFC2X3" name="PredefinedTypeExample" minOccurs="1" maxOccurs="unbounded">
+            <ids:applicability>
+                <ids:entity>
+                    <ids:name>
+                        <ids:simpleValue>IFCMEMBER</ids:simpleValue>
+                    </ids:name>
+                </ids:entity>
+            </ids:applicability>
+            <ids:requirements>
+				<ids:partOf maxOccurs="unbounded" relation="IfcRelAggregates">
+					<ids:entity>
+						<ids:name>
+							<ids:simpleValue>IFCELEMENTASSEMBLY</ids:simpleValue>
+						</ids:name>
+						<ids:predefinedType>
+							<ids:simpleValue>GIRDER</ids:simpleValue>
+						</ids:predefinedType>
+					</ids:entity>
+				</ids:partOf>
+            </ids:requirements>
+        </ids:specification>
         <ids:specification ifcVersion="IFC2X3" name="Stijlen en Dorpels" minOccurs="1" maxOccurs="unbounded">
             <ids:applicability>
                 <ids:entity>
