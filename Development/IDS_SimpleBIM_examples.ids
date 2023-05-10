@@ -61,7 +61,7 @@
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
-                <ids:property minOccurs="1" maxOccurs="unbounded" measure="IfcText"> <!-- currently there is no real good way to say 'all walls need to have a type'. This solution is to state that all walls need to have a property on the 'type' level with any kind of value. Not nice, but currently no alternativel.  -->
+                <ids:property minOccurs="1" maxOccurs="unbounded"> <!-- currently there is no real good way to say 'all walls need to have a type'. This solution is to state that all walls need to have a property on the 'type' level with any kind of value. Not nice, but currently no alternativel.  -->
                     <ids:propertySet>
                         <xs:restriction>
                         <xs:annotation><xs:documentation>Any value is allowed</xs:documentation></xs:annotation>
@@ -77,7 +77,7 @@
                 </ids:property>
             </ids:requirements>
         </ids:specification>
-        <ids:specification name="Exterial wall requirement" ifcVersion="IFC2X3" description="if the model has exterior walls, each exterior wall must have a u-value" minOccurs="0" maxOccurs="unbounded">
+        <ids:specification name="External wall requirement" ifcVersion="IFC2X3" description="if the model has exterior walls, each exterior wall must have a u-value" minOccurs="0" maxOccurs="unbounded">
             <ids:applicability>
                 <ids:entity>
                     <ids:name>
@@ -87,7 +87,7 @@
                         </xs:restriction>
                     </ids:name>
                 </ids:entity>
-                <ids:property measure="IfcText">
+                <ids:property>
                     <ids:propertySet>
                         <ids:simpleValue>Pset_WallCommon</ids:simpleValue>
                     </ids:propertySet>

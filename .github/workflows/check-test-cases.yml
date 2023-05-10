@@ -1,11 +1,13 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
 name: check-test-cases
 
 on:
+  workflow_dispatch: # Allow running the workflow manually from the GitHub UI
   push:
-    paths:
-      - "Development/**"
-      - "build/**"
-      - "Documentation/**"
+    branches: [ "master" ] # Run the workflow when pushing to the main branch
+  pull_request:
+    branches: [ "*" ] # Run the workflow for all pull requests
 
 jobs:
   check-test-cases:
