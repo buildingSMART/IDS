@@ -19,7 +19,7 @@ IDS file creation tools and model checking tools are provided by many [software 
  3. [Download a sample IFC model to check](library/sample.ifc). This IFC model has "TEST" as the project name, which satisfies the first **Specification**. However, some walls have a fire rating property, and others do not.
  4. Load both the IDS and the IFC in your software, and begin the checking process.
 
-That's it! You may also find more sample IDS templates in the [buildingSMART IDS Template Directory](todo) and more sample IFC models in the [buildingSMART IFC model directory](todo).
+That's it! You may also find more sample IDS templates in the [buildingSMART IDS Template Directory](https://github.com/buildingSMART/IDS/tree/master/Development) and more sample IFC models in the [buildingSMART IFC model directory](https://github.com/buildingSMART/Sample-Test-Files).
 
 If you need help, please feel free to ask for help on the [buildingSMART Forums](https://forums.buildingsmart.org/).
 
