@@ -27,13 +27,7 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="specifications">
-					<xs:complexType>
-						<xs:complexContent>
-							<xs:extension base="ids:specificationsType"/>
-						</xs:complexContent>
-					</xs:complexType>
-				</xs:element>
+				<xs:element name="specifications" type="ids:specificationsType"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -68,20 +62,8 @@
 			<xs:element name="partOf" type="ids:partOfType" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="classification" type="ids:classificationType" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="attribute" type="ids:attributeType" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="property" minOccurs="0" maxOccurs="unbounded">
-				<xs:complexType>
-					<xs:complexContent>
-						<xs:extension base="ids:propertyType"/>
-					</xs:complexContent>
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="material" minOccurs="0">
-				<xs:complexType>
-					<xs:complexContent>
-						<xs:extension base="ids:materialType"/>
-					</xs:complexContent>
-				</xs:complexType>
-			</xs:element>
+			<xs:element name="property" type="ids:propertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="material" type="ids:materialType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="propertyType">
@@ -193,19 +175,12 @@
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
+		<xs:attribute name="description" type="xs:string" use="optional"/> 
 	</xs:complexType>
 	<xs:complexType name="specificationType">
 		<xs:sequence>
 			<xs:element name="applicability" type="ids:applicabilityType"/>
-			<xs:element name="requirements" minOccurs="0">
-				<xs:complexType>
-					<xs:complexContent>
-						<xs:extension base="ids:requirementsType">
-							<xs:attribute name="description" type="xs:string" use="optional"/>
-						</xs:extension>
-					</xs:complexContent>
-				</xs:complexType>
-			</xs:element>
+			<xs:element name="requirements" type="ids:requirementsType" minOccurs="0"/>
 		</xs:sequence>
 		<xs:attribute name="name" type="xs:string" use="required"/>
 		<xs:attributeGroup ref="xs:occurs"/>
