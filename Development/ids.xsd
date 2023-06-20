@@ -1,8 +1,7 @@
-<!-- edited with XMLSpy v2022 (x64) (http://www.altova.com)  -->
-<!-- April 5, 2023 - DRAFT  -->
-<xs:schema xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://standards.buildingsmart.org/IDS" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.9.4">
+<!-- June 16, 2023 - DRAFT  -->
+<xs:schema xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:altova="http://www.altova.com/xml-schema-extensions" targetNamespace="http://standards.buildingsmart.org/IDS" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.9.5">
 	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
-	<xs:import namespace="http://www.w3.org/2001/XMLSchema" schemaLocation="https://www.w3.org/2001/XMLSchema.xsd"/>
+	<xs:import namespace="http://www.w3.org/2001/XMLSchema" schemaLocation="http://www.w3.org/2001/XMLSchema.xsd"/>
 	<xs:import namespace="http://www.w3.org/2001/XMLSchema-instance" schemaLocation="http://www.w3.org/2001/XMLSchema-instance"/>
 	<xs:element name="ids">
 		<xs:complexType>
@@ -90,11 +89,11 @@
 			<xs:element name="name" type="ids:idsValue"/>
 			<xs:element name="value" type="ids:idsValue" minOccurs="0"/>
 		</xs:sequence>
-		<xs:attribute name="measure" type="xs:string">
-			<xs:annotation>
-				<xs:documentation>This is the name of an IFC Defined Types. See the documentation and default units on https://github.com/buildingSMART/IDS/blob/master/Documentation/units.md</xs:documentation>
-			</xs:annotation>
-			<!-- there is a request to make this an ids:value -->
+		<xs:attribute name="datatype" use="required">
+					<xs:annotation>
+						<xs:documentation>This is the name of an IFC Defined Type. See the full list for IFC 4 on https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/link/alphabeticalorder-defined-types.htm  Documentation and default units on https://github.com/buildingSMART/IDS/blob/master/Documentation/units.md</xs:documentation>
+					</xs:annotation>
+					<!-- renamed 'measure' to data type to better represent reality -->
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="attributeType">
@@ -116,7 +115,13 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:complexContent>
-						<xs:extension base="ids:entityType"/>
+						<xs:extension base="ids:entityType">
+							<xs:attribute name="instructions" type="xs:string" use="optional">
+								<xs:annotation>
+									<xs:documentation>Author of the IDS can leave instructions for the authors of the IFC. This text could/should be displayed in the BIM/IFC authoring tool.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
 					</xs:complexContent>
 				</xs:complexType>
 			</xs:element>
@@ -217,6 +222,7 @@
 							<xs:enumeration value="IFC2X3"/>
 							<xs:enumeration value="IFC4"/>
 							<xs:enumeration value="IFC4X3"/>
+							<xs:minLength value="1"/>
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:list>
@@ -224,7 +230,7 @@
 		</xs:attribute>
 		<xs:attribute name="identifier" type="xs:string">
 			<xs:annotation>
-				<xs:documentation>Author of the IDS can provide an identifier to the IDS. Beware: this cannot be enforced/assumed as (global) unique.</xs:documentation>
+				<xs:documentation>Author of the IDS can provide an identifier to the specification. This is intended to be a machine readable identifier. Beware: because of the possibility to combine different 'requirement' elements from several ids files this cannot be enforced/assumed as (global) unique.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="description" type="xs:string" use="optional"/>
@@ -241,10 +247,12 @@
 	</xs:complexType>
 	<xs:simpleType name="relations">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="IfcRelAggregates"/>
-			<xs:enumeration value="IfcRelAssignsToGroup"/>
-			<xs:enumeration value="IfcRelContainedInSpatialStructure"/>
-			<xs:enumeration value="IfcRelNests"/>
+			<xs:enumeration value="IFCRELAGGREGATES"/>
+			<xs:enumeration value="IFCRELASSIGNSTOGROUP"/>
+			<xs:enumeration value="IFCRELCONTAINEDINSPATIALSTRUCTURE"/>
+			<xs:enumeration value="IFCRELNESTS"/>
+			<xs:enumeration value="IFCRELVOIDSELEMENT"/>
+			<xs:enumeration value="IFCRELFILLSELEMENT"/>
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>
