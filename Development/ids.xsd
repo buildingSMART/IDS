@@ -51,9 +51,9 @@
 	</xs:complexType>
 	<xs:complexType name="partOfType">
 		<xs:sequence>
-			<xs:element name="entity" type="ids:entityType" minOccurs="0"/>
+			<xs:element name="entity" type="ids:entityType" minOccurs="1" />
 		</xs:sequence>
-		<xs:attribute name="relation" type="ids:relations" use="required"/>
+		<xs:attribute name="relation" type="ids:relations" />
 	</xs:complexType>
 	<xs:complexType name="applicabilityType">
 		<xs:sequence>
