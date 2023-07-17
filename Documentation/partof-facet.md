@@ -1,6 +1,6 @@
 # PartOf facet
 
-Objects in IFC can have relationships to other objects. IDS supports specifying four types of relationships.
+Objects in IFC can have relationships to other objects. IDS supports specifying six types of relationships.
 
 The **IFCRELAGGREGATES** relationship describes how multiple smaller sub-objects can be aggregated into a single bigger object. For example, many building storeys make up a building. Alternatively, many beams, floor boards, and joints make up a slab. Or perhaps many brackets, mullions, and steel plates make up an assembly.
 
