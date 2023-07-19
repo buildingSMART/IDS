@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS/ids_05.xsd">
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS ids.xsd">   
     <info>
         <title>buildingSMART Sample IDS</title>
         <copyright>buildingSMART</copyright>
@@ -19,7 +19,7 @@
                 </entity>
             </applicability>
             <requirements>
-                <attribute instructions="The project manager shall confirm the short project code with the client based on their real estate portfolio naming scheme." minOccurs="1" maxOccurs="1">
+                <attribute instructions="The project manager shall confirm the short project code with the client based on their real estate portfolio naming scheme.">
                     <name>
                         <simpleValue>Name</simpleValue>
                     </name>
@@ -38,7 +38,7 @@
                 </entity>
             </applicability>
             <requirements>
-                <property measure="IfcLabel" instructions="Fire rating is specified using the Fire Resistance Level as defined in the Australian National Construction Code (NCC) 2019. Valid examples include -/-/-, -/120/120, and 60/60/60" minOccurs="1" maxOccurs="1">
+                <property datatype="IfcLabel" instructions="Fire rating is specified using the Fire Resistance Level as defined in the Australian National Construction Code (NCC) 2019. Valid examples include -/-/-, -/120/120, and 60/60/60" minOccurs="1" maxOccurs="1">
                     <propertySet>
                         <simpleValue>Pset_WallCommon</simpleValue>
                     </propertySet>
