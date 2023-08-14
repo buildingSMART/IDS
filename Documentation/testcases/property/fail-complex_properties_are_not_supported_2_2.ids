@@ -12,7 +12,7 @@
                 </entity>
             </applicability>
             <requirements>
-                <property measure="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
+                <property datatype="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
                     <propertySet>
                         <simpleValue>Foo</simpleValue>
                     </propertySet>

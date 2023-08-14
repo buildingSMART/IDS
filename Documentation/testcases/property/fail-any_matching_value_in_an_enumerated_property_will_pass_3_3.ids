@@ -12,7 +12,7 @@
                 </entity>
             </applicability>
             <requirements>
-                <property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+                <property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
                     <propertySet>
                         <simpleValue>Pset_WallCommon</simpleValue>
                     </propertySet>

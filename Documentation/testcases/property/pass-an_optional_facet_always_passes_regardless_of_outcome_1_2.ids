@@ -12,7 +12,7 @@
                 </entity>
             </applicability>
             <requirements>
-                <property measure="IfcLabel" minOccurs="0" maxOccurs="1">
+                <property datatype="IfcLabel" minOccurs="0" maxOccurs="1">
                     <propertySet>
                         <simpleValue>Foo_Bar</simpleValue>
                     </propertySet>
