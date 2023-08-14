@@ -5,7 +5,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Elements with no properties always fail
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -30,7 +30,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Elements with a matching pset but no property also fail
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -58,7 +58,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Properties with a null value fail
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -86,7 +86,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] A name check will match any property with any string value
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -115,7 +115,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] A required facet checks all parameters as normal
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -143,7 +143,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] A prohibited facet returns the opposite of a required facet
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="0" maxOccurs="0">
+<property datatype="IfcLabel" minOccurs="0" maxOccurs="0">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -171,7 +171,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] An optional facet always passes regardless of outcome 1/2
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="0" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="0" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -199,7 +199,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] An optional facet always passes regardless of outcome 2/2
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="0" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="0" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -227,7 +227,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] An empty string is considered falsey and will not pass
 
 ~~~xml
-<property measure="IfcLogical" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLogical" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -255,7 +255,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] A logical unknown is considered falsey and will not pass
 
 ~~~xml
-<property measure="IfcDuration" minOccurs="1" maxOccurs="1">
+<property datatype="IfcDuration" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -283,7 +283,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] A zero duration will pass
 
 ~~~xml
-<property measure="IfcDuration" minOccurs="1" maxOccurs="1">
+<property datatype="IfcDuration" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -311,7 +311,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] A property set to true will pass a name check
 
 ~~~xml
-<property measure="IfcBoolean" minOccurs="1" maxOccurs="1">
+<property datatype="IfcBoolean" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -339,7 +339,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] A property set to false is still considered a value and will pass a name check
 
 ~~~xml
-<property measure="IfcBoolean" minOccurs="1" maxOccurs="1">
+<property datatype="IfcBoolean" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -367,7 +367,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Specifying a value performs a case-sensitive match 1/2
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -398,7 +398,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Specifying a value performs a case-sensitive match 2/2
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -429,7 +429,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Specifying a value fails against different values
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -460,7 +460,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Non-ascii characters are treated without encoding
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -491,7 +491,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] IDS does not handle string truncation such as for identifiers
 
 ~~~xml
-<property measure="IfcIdentifier" minOccurs="1" maxOccurs="1">
+<property datatype="IfcIdentifier" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -522,7 +522,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] A number specified as a string is treated as a string
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -553,7 +553,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Integer values are checked using type casting 1/4
 
 ~~~xml
-<property measure="IfcInteger" minOccurs="1" maxOccurs="1">
+<property datatype="IfcInteger" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -584,7 +584,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Integer values are checked using type casting 2/4
 
 ~~~xml
-<property measure="IfcInteger" minOccurs="1" maxOccurs="1">
+<property datatype="IfcInteger" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -615,7 +615,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Integer values are checked using type casting 3/4
 
 ~~~xml
-<property measure="IfcInteger" minOccurs="1" maxOccurs="1">
+<property datatype="IfcInteger" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -646,7 +646,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Integer values are checked using type casting 4/4
 
 ~~~xml
-<property measure="IfcInteger" minOccurs="1" maxOccurs="1">
+<property datatype="IfcInteger" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -677,7 +677,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Real values are checked using type casting 1/3
 
 ~~~xml
-<property measure="IfcReal" minOccurs="1" maxOccurs="1">
+<property datatype="IfcReal" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -708,7 +708,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Real values are checked using type casting 2/3
 
 ~~~xml
-<property measure="IfcReal" minOccurs="1" maxOccurs="1">
+<property datatype="IfcReal" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -739,7 +739,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Real values are checked using type casting 3/3
 
 ~~~xml
-<property measure="IfcReal" minOccurs="1" maxOccurs="1">
+<property datatype="IfcReal" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -770,7 +770,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Only specifically formatted numbers are allowed 1/4
 
 ~~~xml
-<property measure="IfcReal" minOccurs="1" maxOccurs="1">
+<property datatype="IfcReal" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -801,7 +801,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Only specifically formatted numbers are allowed 2/4
 
 ~~~xml
-<property measure="IfcReal" minOccurs="1" maxOccurs="1">
+<property datatype="IfcReal" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -832,7 +832,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Only specifically formatted numbers are allowed 3/4
 
 ~~~xml
-<property measure="IfcReal" minOccurs="1" maxOccurs="1">
+<property datatype="IfcReal" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -863,7 +863,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Only specifically formatted numbers are allowed 4/4
 
 ~~~xml
-<property measure="IfcReal" minOccurs="1" maxOccurs="1">
+<property datatype="IfcReal" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -894,7 +894,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Floating point numbers are compared with a 1e-6 tolerance 1/4
 
 ~~~xml
-<property measure="IfcReal" minOccurs="1" maxOccurs="1">
+<property datatype="IfcReal" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -925,7 +925,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Floating point numbers are compared with a 1e-6 tolerance 2/4
 
 ~~~xml
-<property measure="IfcReal" minOccurs="1" maxOccurs="1">
+<property datatype="IfcReal" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -956,7 +956,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Floating point numbers are compared with a 1e-6 tolerance 3/4
 
 ~~~xml
-<property measure="IfcReal" minOccurs="1" maxOccurs="1">
+<property datatype="IfcReal" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -987,7 +987,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Floating point numbers are compared with a 1e-6 tolerance 4/4
 
 ~~~xml
-<property measure="IfcReal" minOccurs="1" maxOccurs="1">
+<property datatype="IfcReal" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1018,7 +1018,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Booleans must be specified as uppercase strings 1/3
 
 ~~~xml
-<property measure="IfcBoolean" minOccurs="1" maxOccurs="1">
+<property datatype="IfcBoolean" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1049,7 +1049,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Booleans must be specified as uppercase strings 2/3
 
 ~~~xml
-<property measure="IfcBoolean" minOccurs="1" maxOccurs="1">
+<property datatype="IfcBoolean" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1080,7 +1080,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Booleans must be specified as uppercase strings 3/3
 
 ~~~xml
-<property measure="IfcBoolean" minOccurs="1" maxOccurs="1">
+<property datatype="IfcBoolean" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1111,7 +1111,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Dates are treated as strings 1/2
 
 ~~~xml
-<property measure="IfcDate" minOccurs="1" maxOccurs="1">
+<property datatype="IfcDate" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1142,7 +1142,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Dates are treated as strings 2/2
 
 ~~~xml
-<property measure="IfcDate" minOccurs="1" maxOccurs="1">
+<property datatype="IfcDate" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1173,7 +1173,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Durations are treated as strings 1/2
 
 ~~~xml
-<property measure="IfcDuration" minOccurs="1" maxOccurs="1">
+<property datatype="IfcDuration" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1204,7 +1204,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Durations are treated as strings 1/2
 
 ~~~xml
-<property measure="IfcDuration" minOccurs="1" maxOccurs="1">
+<property datatype="IfcDuration" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1235,7 +1235,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any matching value in an enumerated property will pass 1/3
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Pset_WallCommon</simpleValue>
   </propertySet>
@@ -1267,7 +1267,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any matching value in an enumerated property will pass 2/3
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Pset_WallCommon</simpleValue>
   </propertySet>
@@ -1299,7 +1299,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Any matching value in an enumerated property will pass 3/3
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Pset_WallCommon</simpleValue>
   </propertySet>
@@ -1331,7 +1331,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any matching value in a list property will pass 1/3
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1362,7 +1362,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any matching value in a list property will pass 2/3
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1393,7 +1393,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Any matching value in a list property will pass 3/3
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1424,7 +1424,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any matching value in a bounded property will pass 1/4
 
 ~~~xml
-<property measure="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1455,7 +1455,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any matching value in a bounded property will pass 2/4
 
 ~~~xml
-<property measure="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1486,7 +1486,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any matching value in a bounded property will pass 3/4
 
 ~~~xml
-<property measure="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1517,7 +1517,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Any matching value in a bounded property will pass 4/4
 
 ~~~xml
-<property measure="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1548,7 +1548,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any matching value in a table property will pass 1/3
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1579,7 +1579,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any matching value in a table property will pass 2/3
 
 ~~~xml
-<property measure="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1610,7 +1610,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Any matching value in a table property will pass 3/3
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1641,7 +1641,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Reference properties are treated as objects and not supported
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1669,7 +1669,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Predefined properties are supported but discouraged 1/2
 
 ~~~xml
-<property measure="IfcDoorPanelOperationEnum" minOccurs="1" maxOccurs="1">
+<property datatype="IfcDoorPanelOperationEnum" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1699,7 +1699,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Predefined properties are supported but discouraged 2/2
 
 ~~~xml
-<property measure="IfcDoorPanelOperationEnum" minOccurs="1" maxOccurs="1">
+<property datatype="IfcDoorPanelOperationEnum" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1729,7 +1729,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] A name check will match any quantity with any value
 
 ~~~xml
-<property measure="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1757,7 +1757,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Quantities must also match the appropriate measure
 
 ~~~xml
-<property measure="IfcAreaMeasure" minOccurs="1" maxOccurs="1">
+<property datatype="IfcAreaMeasure" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1785,7 +1785,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Complex properties are not supported 1/2
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1814,7 +1814,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Complex properties are not supported 2/2
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo</simpleValue>
   </propertySet>
@@ -1843,7 +1843,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Complex properties are not supported 1/2
 
 ~~~xml
-<property measure="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1872,7 +1872,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Complex properties are not supported 2/2
 
 ~~~xml
-<property measure="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo</simpleValue>
   </propertySet>
@@ -1901,7 +1901,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] All matching property sets must satisfy requirements 1/3
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <xs:restriction base="xs:string">
       <xs:pattern value="Foo_.*"/>
@@ -1931,7 +1931,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] All matching property sets must satisfy requirements 2/3
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <xs:restriction base="xs:string">
       <xs:pattern value="Foo_.*"/>
@@ -1964,7 +1964,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] All matching property sets must satisfy requirements 3/3
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <xs:restriction base="xs:string">
       <xs:pattern value="Foo_.*"/>
@@ -1998,7 +1998,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] All matching properties must satisfy requirements 1/3
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -2031,7 +2031,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] All matching properties must satisfy requirements 2/3
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -2065,7 +2065,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] All matching properties must satisfy requirements 3/3
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -2099,7 +2099,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] If multiple properties are matched, all values must satisfy requirements 1/2
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -2136,7 +2136,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] If multiple properties are matched, all values must satisfy requirements 2/2
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -2173,7 +2173,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Measures are used to specify an IFC data type 1/2
 
 ~~~xml
-<property measure="IfcTimeMeasure" minOccurs="1" maxOccurs="1">
+<property datatype="IfcTimeMeasure" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -2204,7 +2204,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Measures are used to specify an IFC data type 2/2
 
 ~~~xml
-<property measure="IfcTimeMeasure" minOccurs="1" maxOccurs="1">
+<property datatype="IfcTimeMeasure" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -2235,7 +2235,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Unit conversions shall take place to IDS-nominated standard units 1/2
 
 ~~~xml
-<property measure="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -2266,7 +2266,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Unit conversions shall take place to IDS-nominated standard units 2/2
 
 ~~~xml
-<property measure="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -2297,7 +2297,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Properties can be inherited from the type 1/2
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -2326,7 +2326,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Properties can be inherited from the type 2/2
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -2355,7 +2355,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Properties can be overriden by an occurrence 1/2
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -2390,7 +2390,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Properties can be overriden by an occurrence 2/2
 
 ~~~xml
-<property measure="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
