@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS ids.xsd">   
-    <ids:info>
-        <ids:title>Example for ArcDox </ids:title>
-        <ids:copyright>buildingSMART International Ltd</ids:copyright>
-        <ids:date>2022-02-08</ids:date>
-    </ids:info>
-    <ids:specifications>
-        <ids:specification instructions="Add some context here to help users understand what you are asking." ifcVersion="IFC2X3" name="Project requirements" maxOccurs="unbounded">
-            <ids:applicability>
-                <ids:entity>
-                    <ids:name>
-                        <ids:simpleValue>IFCPROJECT</ids:simpleValue>
-                    </ids:name>
-                </ids:entity>
-            </ids:applicability>
-            <ids:requirements>
-                <ids:attribute instructions="Project ID">
-                    <ids:name>
-                        <ids:simpleValue>GlobalId</ids:simpleValue>
-                    </ids:name>
-                </ids:attribute>
-                <ids:attribute instructions="Functional Unit (Overall Sq.Metres or Linear Meters etc)">
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS ids.xsd">
+	<ids:info>
+		<ids:title>Example for ArcDox </ids:title>
+		<ids:copyright>buildingSMART International Ltd</ids:copyright>
+		<ids:date>2022-02-08</ids:date>
+	</ids:info>
+	<ids:specifications>
+		<ids:specification instructions="Add some context here to help users understand what you are asking." ifcVersion="IFC2X3" name="Project requirements" maxOccurs="unbounded">
+			<ids:applicability>
+				<ids:entity>
+					<ids:name>
+						<ids:simpleValue>IFCPROJECT</ids:simpleValue>
+					</ids:name>
+				</ids:entity>
+			</ids:applicability>
+			<ids:requirements>
+				<ids:attribute instructions="Project ID">
+					<ids:name>
+						<ids:simpleValue>GlobalId</ids:simpleValue>
+					</ids:name>
+				</ids:attribute>
+				<ids:attribute instructions="Functional Unit (Overall Sq.Metres or Linear Meters etc)">
 					<ids:name>
 						<ids:simpleValue>UnitsInContext</ids:simpleValue>
 					</ids:name>
@@ -30,14 +30,14 @@
 						<ids:simpleValue>Description</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
-                <ids:attribute instructions="Project name">
-                    <ids:name>
-                        <ids:simpleValue>Name</ids:simpleValue>
-                    </ids:name>
-                </ids:attribute>
-            </ids:requirements>
-        </ids:specification>
-        <ids:specification name="name1" minOccurs="1" maxOccurs="unbounded" ifcVersion="IFC2X3">
+				<ids:attribute instructions="Project name">
+					<ids:name>
+						<ids:simpleValue>Name</ids:simpleValue>
+					</ids:name>
+				</ids:attribute>
+			</ids:requirements>
+		</ids:specification>
+		<ids:specification name="name1" minOccurs="1" maxOccurs="unbounded" ifcVersion="IFC2X3">
 			<ids:applicability>
 				<ids:entity>
 					<ids:name>
@@ -46,7 +46,7 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:property maxOccurs="unbounded" datatype="IfcText">
+				<ids:property maxOccurs="unbounded" datatype="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>ArcDox</ids:simpleValue>
 					</ids:propertySet>
@@ -54,7 +54,7 @@
 						<ids:simpleValue>Function</ids:simpleValue>
 					</ids:name>
 				</ids:property>
-				 <ids:property minOccurs="1" maxOccurs="unbounded" datatype="IfcLabel">
+				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLABEL">
 					<ids:propertySet>
 						<ids:simpleValue>ArcDox</ids:simpleValue>
 					</ids:propertySet>
@@ -63,13 +63,13 @@
 					</ids:name>
 					<ids:value>
 						<xs:restriction base="xs:string">
-							<xs:enumeration value="New Build" />
-							<xs:enumeration value="Renovation" />
-							<xs:enumeration value="Etc" />
+							<xs:enumeration value="New Build"/>
+							<xs:enumeration value="Renovation"/>
+							<xs:enumeration value="Etc"/>
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				 <ids:property minOccurs="1" maxOccurs="unbounded" datatype="IfcText">
+				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>ArcDox</ids:simpleValue>
 					</ids:propertySet>
@@ -78,13 +78,13 @@
 					</ids:name>
 					<ids:value>
 						<xs:restriction base="xs:string">
-							<xs:enumeration value="Design-Bid-Build" />
-							<xs:enumeration value="Design-Build-Operate" />
-							<xs:enumeration value="Etc" />
+							<xs:enumeration value="Design-Bid-Build"/>
+							<xs:enumeration value="Design-Build-Operate"/>
+							<xs:enumeration value="Etc"/>
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property maxOccurs="unbounded" datatype="IfcText">
+				<ids:property maxOccurs="unbounded" datatype="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>ArcDox</ids:simpleValue>
 					</ids:propertySet>
@@ -103,7 +103,8 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:attribute instructions="Add this attribute twice: once for Area Units and once for Linear Units."> <!-- this is actually not the best way to distinguish between types of units. -->
+				<ids:attribute instructions="Add this attribute twice: once for Area Units and once for Linear Units.">
+					<!-- this is actually not the best way to distinguish between types of units. -->
 					<ids:name>
 						<ids:simpleValue>Units</ids:simpleValue>
 					</ids:name>
@@ -170,5 +171,5 @@
 				</ids:attribute>
 			</ids:requirements>
 		</ids:specification>
-    </ids:specifications>
+	</ids:specifications>
 </ids:ids>
