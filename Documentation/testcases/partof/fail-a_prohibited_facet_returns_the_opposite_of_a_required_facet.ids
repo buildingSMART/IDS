@@ -12,7 +12,7 @@
                 </entity>
             </applicability>
             <requirements>
-                <partOf relation="IfcRelAggregates" minOccurs="0" maxOccurs="0" />
+                <partOf relation="IFCRELAGGREGATES" minOccurs="0" maxOccurs="0" />
             </requirements>
         </specification>
     </specifications>
