@@ -1,4 +1,4 @@
-<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS/ids_05.xsd">
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS/0.9.6/ids.xsd">
     <info>
         <title>A prohibited facet returns the opposite of a required facet</title>
     </info>
@@ -12,7 +12,13 @@
                 </entity>
             </applicability>
             <requirements>
-                <partOf relation="IfcRelAggregates" minOccurs="0" maxOccurs="0" />
+                <partOf relation="IFCRELAGGREGATES" minOccurs="0" maxOccurs="0">
+                    <entity>
+                        <name>
+                            <simpleValue>IFCELEMENTASSEMBLY</simpleValue>
+                        </name>
+                    </entity>
+                </partOf>
             </requirements>
         </specification>
     </specifications>
