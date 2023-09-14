@@ -45,7 +45,7 @@ class Build : NukeBuild
             //
             var schemaFile = RootDirectory / "Development" / "ids.xsd";
             var inputFolder = RootDirectory / "Documentation" / "testcases";
-            var arguments = $"audit \"{inputFolder}\" --omitContent -x \"{schemaFile}\"";
+            var arguments = $"audit \"{inputFolder}\" -p \"\\\\fail-\" -x \"{schemaFile}\"";
             IdsTool(arguments, workingDirectory: IdsToolPath);
         });
 
