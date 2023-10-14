@@ -72,9 +72,10 @@
           "items": {
             "type": "string",
             "enum": [
+              "AuditAllIdsFiles",
               "AuditDevelopment",
               "AuditDocTestCases",
-              "CheckTestCases"
+              "MakeClasses"
             ]
           }
         },
@@ -84,9 +85,10 @@
           "items": {
             "type": "string",
             "enum": [
+              "AuditAllIdsFiles",
               "AuditDevelopment",
               "AuditDocTestCases",
-              "CheckTestCases"
+              "MakeClasses"
             ]
           }
         },

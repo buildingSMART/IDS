@@ -11,8 +11,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ids-tool.CommandLine" Version="1.0.43" />
+    <PackageReference Include="ids-tool.CommandLine" Version="1.0.45" />
     <PackageReference Include="Nuke.Common" Version="6.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageDownload Include="dotnet-xscgen" Version="[2.1.915]" />
   </ItemGroup>
 
 </Project>
