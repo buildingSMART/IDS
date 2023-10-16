@@ -3,7 +3,7 @@
         <title>Quantities must also match the appropriate measure</title>
     </info>
     <specifications>
-        <specification name="Quantities must also match the appropriate measure" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <specification name="Quantities must also match the appropriate measure" ifcVersion="IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
@@ -12,7 +12,7 @@
                 </entity>
             </applicability>
             <requirements>
-                <property datatype="IfcAreaMeasure" minOccurs="1" maxOccurs="1">
+                <property datatype="IFCAREAMEASURE" maxOccurs="unbounded" minOccurs="1">
                     <propertySet>
                         <simpleValue>Foo_Bar</simpleValue>
                     </propertySet>

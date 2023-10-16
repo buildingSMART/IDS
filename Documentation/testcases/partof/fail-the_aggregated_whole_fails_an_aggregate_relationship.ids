@@ -3,7 +3,7 @@
         <title>The aggregated whole fails an aggregate relationship</title>
     </info>
     <specifications>
-        <specification name="The aggregated whole fails an aggregate relationship" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <specification name="The aggregated whole fails an aggregate relationship" ifcVersion="IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
@@ -12,7 +12,7 @@
                 </entity>
             </applicability>
             <requirements>
-                <partOf relation="IFCRELAGGREGATES" minOccurs="1" maxOccurs="1">
+                <partOf relation="IFCRELAGGREGATES" maxOccurs="unbounded" minOccurs="1">
                     <entity>
                         <name>
                             <simpleValue>IFCELEMENTASSEMBLY</simpleValue>

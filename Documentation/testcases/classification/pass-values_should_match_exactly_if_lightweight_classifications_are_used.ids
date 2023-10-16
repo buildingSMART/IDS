@@ -3,7 +3,7 @@
         <title>Values should match exactly if lightweight classifications are used</title>
     </info>
     <specifications>
-        <specification name="Values should match exactly if lightweight classifications are used" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <specification name="Values should match exactly if lightweight classifications are used" ifcVersion="IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
@@ -12,7 +12,7 @@
                 </entity>
             </applicability>
             <requirements>
-                <classification minOccurs="1" maxOccurs="1">
+                <classification maxOccurs="unbounded" minOccurs="1">
                     <value>
                         <simpleValue>1</simpleValue>
                     </value>

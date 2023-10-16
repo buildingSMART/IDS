@@ -5,7 +5,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Invalid attribute names always fail
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>Rabbit</simpleValue>
   </name>
@@ -21,7 +21,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Attributes with a string value should pass
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>Name</simpleValue>
   </name>
@@ -37,7 +37,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] A required facet checks all parameters as normal
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>Name</simpleValue>
   </name>
@@ -50,58 +50,10 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 
 [Sample IDS](testcases/attribute/pass-a_required_facet_checks_all_parameters_as_normal.ids) - [Sample IFC: 1](testcases/attribute/pass-a_required_facet_checks_all_parameters_as_normal.ifc)
 
-## [FAIL] A prohibited facet returns the opposite of a required facet
-
-~~~xml
-<attribute minOccurs="0" maxOccurs="0">
-  <name>
-    <simpleValue>Name</simpleValue>
-  </name>
-</attribute>
-~~~
-
-~~~lua
-#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,'Foobar',$,$,$,$,$,$); /* Testcase */
-~~~
-
-[Sample IDS](testcases/attribute/fail-a_prohibited_facet_returns_the_opposite_of_a_required_facet.ids) - [Sample IFC: 1](testcases/attribute/fail-a_prohibited_facet_returns_the_opposite_of_a_required_facet.ifc)
-
-## [PASS] An optional facet always passes regardless of outcome 1/2
-
-~~~xml
-<attribute minOccurs="0" maxOccurs="1">
-  <name>
-    <simpleValue>Name</simpleValue>
-  </name>
-</attribute>
-~~~
-
-~~~lua
-#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,'Foobar',$,$,$,$,$,$); /* Testcase */
-~~~
-
-[Sample IDS](testcases/attribute/pass-an_optional_facet_always_passes_regardless_of_outcome_1_2.ids) - [Sample IFC: 1](testcases/attribute/pass-an_optional_facet_always_passes_regardless_of_outcome_1_2.ifc)
-
-## [PASS] An optional facet always passes regardless of outcome 2/2
-
-~~~xml
-<attribute minOccurs="0" maxOccurs="1">
-  <name>
-    <simpleValue>Rabbit</simpleValue>
-  </name>
-</attribute>
-~~~
-
-~~~lua
-#1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,'Foobar',$,$,$,$,$,$); /* Testcase */
-~~~
-
-[Sample IDS](testcases/attribute/pass-an_optional_facet_always_passes_regardless_of_outcome_2_2.ids) - [Sample IFC: 1](testcases/attribute/pass-an_optional_facet_always_passes_regardless_of_outcome_2_2.ifc)
-
 ## [FAIL] Attributes with null values always fail
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>Name</simpleValue>
   </name>
@@ -117,7 +69,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Attributes with empty strings always fail
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>Name</simpleValue>
   </name>
@@ -133,7 +85,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Attributes with a zero number have meaning and should pass
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>CountValue</simpleValue>
   </name>
@@ -149,7 +101,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Attributes with a boolean true should pass
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>IsCritical</simpleValue>
   </name>
@@ -165,7 +117,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Attributes with a boolean false should pass
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>IsCritical</simpleValue>
   </name>
@@ -181,7 +133,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Attributes with an empty list always fail
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>RelatingPriorities</simpleValue>
   </name>
@@ -199,7 +151,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Attributes with an empty set always fail
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>LayerStyles</simpleValue>
   </name>
@@ -216,7 +168,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Attributes with a logical unknown always fail
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>LayerOn</simpleValue>
   </name>
@@ -233,7 +185,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Attributes with a zero duration should pass
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>ScheduleDuration</simpleValue>
   </name>
@@ -249,7 +201,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Attributes referencing an object should pass
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>TaskTime</simpleValue>
   </name>
@@ -266,7 +218,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Attributes with a select referencing an object should pass
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>DiffuseColour</simpleValue>
   </name>
@@ -284,7 +236,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Attributes with a select referencing a primitive should pass
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>DiffuseColour</simpleValue>
   </name>
@@ -301,7 +253,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Inverse attributes cannot be checked and always fail
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>EngagedIn</simpleValue>
   </name>
@@ -319,7 +271,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Derived attributes cannot be checked and always fail
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>Dim</simpleValue>
   </name>
@@ -335,7 +287,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Attributes should check strings case sensitively 1/2
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>Name</simpleValue>
   </name>
@@ -354,7 +306,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Attributes should check strings case sensitively 2/2
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>Name</simpleValue>
   </name>
@@ -373,7 +325,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Non-ascii characters are treated without encoding
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>Name</simpleValue>
   </name>
@@ -392,7 +344,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Value checks always fail for objects
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>TaskTime</simpleValue>
   </name>
@@ -412,7 +364,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Value checks always fail for selects
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>DiffuseColour</simpleValue>
   </name>
@@ -432,7 +384,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Value checks always fail for lists
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>Coordinates</simpleValue>
   </name>
@@ -451,7 +403,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] GlobalIds are treated as strings and not expanded
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>GlobalId</simpleValue>
   </name>
@@ -470,7 +422,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] IDS does not handle string truncation such as for identifiers
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>Identification</simpleValue>
   </name>
@@ -489,7 +441,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Numeric values are checked using type casting 1/4
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>RefractionIndex</simpleValue>
   </name>
@@ -508,7 +460,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Numeric values are checked using type casting 2/4
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>RefractionIndex</simpleValue>
   </name>
@@ -527,7 +479,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Numeric values are checked using type casting 3/4
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>RefractionIndex</simpleValue>
   </name>
@@ -546,7 +498,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Numeric values are checked using type casting 4/4
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>RefractionIndex</simpleValue>
   </name>
@@ -565,7 +517,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Only specifically formatted numbers are allowed 1/4
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>RefractionIndex</simpleValue>
   </name>
@@ -584,7 +536,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Only specifically formatted numbers are allowed 2/4
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>RefractionIndex</simpleValue>
   </name>
@@ -603,7 +555,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Only specifically formatted numbers are allowed 3/4
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>RefractionIndex</simpleValue>
   </name>
@@ -622,7 +574,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Only specifically formatted numbers are allowed 4/4
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>RefractionIndex</simpleValue>
   </name>
@@ -641,7 +593,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Floating point numbers are compared with a 1e-6 tolerance 1/4
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>RefractionIndex</simpleValue>
   </name>
@@ -660,7 +612,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Floating point numbers are compared with a 1e-6 tolerance 2/4
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>RefractionIndex</simpleValue>
   </name>
@@ -680,7 +632,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Floating point numbers are compared with a 1e-6 tolerance 3/4
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>RefractionIndex</simpleValue>
   </name>
@@ -701,7 +653,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Floating point numbers are compared with a 1e-6 tolerance 4/4
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>RefractionIndex</simpleValue>
   </name>
@@ -723,7 +675,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Integers follow the same rules as numbers
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>NumberOfRisers</simpleValue>
   </name>
@@ -742,7 +694,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Integers follow the same rules as numbers 2/2
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>NumberOfRisers</simpleValue>
   </name>
@@ -761,7 +713,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Specifying a float when the value is an integer will fail
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>NumberOfRisers</simpleValue>
   </name>
@@ -780,7 +732,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Booleans must be specified as uppercase strings 1/3
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>IsMilestone</simpleValue>
   </name>
@@ -799,7 +751,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Booleans must be specified as uppercase strings 2/3
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>IsMilestone</simpleValue>
   </name>
@@ -818,7 +770,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Booleans must be specified as uppercase strings 2/3
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>IsMilestone</simpleValue>
   </name>
@@ -837,7 +789,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Dates are treated as strings 1/2
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>EditionDate</simpleValue>
   </name>
@@ -856,7 +808,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Dates are treated as strings 1/2
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>EditionDate</simpleValue>
   </name>
@@ -875,7 +827,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Durations are treated as strings 1/2
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>ScheduleDuration</simpleValue>
   </name>
@@ -894,7 +846,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Durations are treated as strings 2/2
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>ScheduleDuration</simpleValue>
   </name>
@@ -913,7 +865,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Name restrictions will match any result 1/3
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <xs:restriction base="xs:string">
       <xs:pattern value=".*Name.*"/>
@@ -932,7 +884,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Name restrictions will match any result 2/3
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <xs:restriction base="xs:string">
       <xs:enumeration value="Name"/>
@@ -951,7 +903,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Name restrictions will match any result 3/3
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <xs:restriction base="xs:string">
       <xs:enumeration value="Name"/>
@@ -970,7 +922,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Value restrictions may be used 1/3
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>Name</simpleValue>
   </name>
@@ -992,7 +944,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Value restrictions may be used 2/3
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>Name</simpleValue>
   </name>
@@ -1014,7 +966,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Value restrictions may be used 3/3
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>Name</simpleValue>
   </name>
@@ -1036,7 +988,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Attributes are not inherited by the occurrence
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>Description</simpleValue>
   </name>
@@ -1048,7 +1000,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 
 ~~~lua
 #1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
-#2=IFCWALLTYPE('0eA6m4fELI9QBIhP3wiLAp',$,$,'Foobar',$,$,$,$,$,.ELEMENTEDWALL.);
+#2=IFCWALLTYPE('0eA6m4fELI9QBIhP3wiLAp',$,$,'Foobar',$,$,$,$,$,.NOTDEFINED.);
 #3=IFCRELDEFINESBYTYPE('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 ~~~
 
@@ -1057,7 +1009,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Typecast checking may also occur within enumeration restrictions
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>RefractionIndex</simpleValue>
   </name>
@@ -1079,7 +1031,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Strict numeric checking may be done with a bounds restriction
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>RefractionIndex</simpleValue>
   </name>

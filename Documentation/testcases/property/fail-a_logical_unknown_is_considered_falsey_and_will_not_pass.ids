@@ -3,7 +3,7 @@
         <title>A logical unknown is considered falsey and will not pass</title>
     </info>
     <specifications>
-        <specification name="A logical unknown is considered falsey and will not pass" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <specification name="A logical unknown is considered falsey and will not pass" ifcVersion="IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
@@ -12,7 +12,7 @@
                 </entity>
             </applicability>
             <requirements>
-                <property datatype="IfcDuration" minOccurs="1" maxOccurs="1">
+                <property datatype="IFCDURATION" maxOccurs="unbounded" minOccurs="1">
                     <propertySet>
                         <simpleValue>Foo_Bar</simpleValue>
                     </propertySet>

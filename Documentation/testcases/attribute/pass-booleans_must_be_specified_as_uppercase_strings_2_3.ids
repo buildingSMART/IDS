@@ -3,7 +3,7 @@
         <title>Booleans must be specified as uppercase strings 2/3</title>
     </info>
     <specifications>
-        <specification name="Booleans must be specified as uppercase strings 2/3" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <specification name="Booleans must be specified as uppercase strings 2/3" ifcVersion="IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>

@@ -3,7 +3,7 @@
         <title>IDS does not handle string truncation such as for identifiers</title>
     </info>
     <specifications>
-        <specification name="IDS does not handle string truncation such as for identifiers" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <specification name="IDS does not handle string truncation such as for identifiers" ifcVersion="IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>

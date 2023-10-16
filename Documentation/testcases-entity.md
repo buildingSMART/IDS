@@ -399,7 +399,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCWALLTYPE('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$,.ELEMENTEDWALL.); /* Testcase */
+#1=IFCWALLTYPE('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$,.USERDEFINED.); /* Testcase */
 ~~~
 
 [Sample IDS](testcases/entity/pass-entities_can_be_specified_as_a_xsd_regex_pattern_2_2.ids) - [Sample IFC: 1](testcases/entity/pass-entities_can_be_specified_as_a_xsd_regex_pattern_2_2.ifc)

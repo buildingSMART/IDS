@@ -15,7 +15,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
             </entity>
         </applicability>
         <requirements>
-            <attribute minOccurs="1" maxOccurs="1">
+            <attribute>
                 <name>
                     <simpleValue>Name</simpleValue>
                 </name>
@@ -56,7 +56,7 @@ Requirements:
             </entity>
         </applicability>
         <requirements>
-            <attribute minOccurs="1" maxOccurs="1">
+            <attribute>
                 <name>
                     <simpleValue>Name</simpleValue>
                 </name>
@@ -97,7 +97,7 @@ Requirements:
             </entity>
         </applicability>
         <requirements>
-            <attribute minOccurs="1" maxOccurs="1">
+            <attribute>
                 <name>
                     <simpleValue>Name</simpleValue>
                 </name>
@@ -138,7 +138,7 @@ Requirements:
             </entity>
         </applicability>
         <requirements>
-            <attribute minOccurs="1" maxOccurs="1">
+            <attribute>
                 <name>
                     <simpleValue>Name</simpleValue>
                 </name>
@@ -178,7 +178,7 @@ Requirements:
             </entity>
         </applicability>
         <requirements>
-            <attribute minOccurs="1" maxOccurs="1">
+            <attribute>
                 <name>
                     <simpleValue>Name</simpleValue>
                 </name>
@@ -218,7 +218,7 @@ Requirements:
             </entity>
         </applicability>
         <requirements>
-            <attribute minOccurs="1" maxOccurs="1">
+            <attribute>
                 <name>
                     <simpleValue>Name</simpleValue>
                 </name>
@@ -258,7 +258,7 @@ Requirements:
             </entity>
         </applicability>
         <requirements>
-            <attribute minOccurs="1" maxOccurs="1">
+            <attribute>
                 <name>
                     <simpleValue>Name</simpleValue>
                 </name>
@@ -285,7 +285,7 @@ Requirements:
 
 [Sample IDS](testcases/ids/pass-prohibited_specifications_fail_if_at_least_one_entity_passes_all_requirements_1_3.ids) - [Sample IFC](testcases/ids/pass-prohibited_specifications_fail_if_at_least_one_entity_passes_all_requirements_1_3.ifc)
 
-## [PASS] Prohibited specifications fail if at least one entity passes all requirements 2/3
+## [FAIL] Prohibited specifications fail if at least one entity passes all requirements 2/3
 
 ~~~xml
 <specifications>
@@ -298,7 +298,7 @@ Requirements:
             </entity>
         </applicability>
         <requirements>
-            <attribute minOccurs="1" maxOccurs="1">
+            <attribute>
                 <name>
                     <simpleValue>Name</simpleValue>
                 </name>
@@ -316,14 +316,14 @@ Requirements:
 ~~~
 
 ```
-# ✔️ Specification (prohibited)
+# ❌ Specification (prohibited)
 Applies to:
  - All IFCWALL data
 Requirements:
  - ❌ The Name shall be Waldo (required)
 ```
 
-[Sample IDS](testcases/ids/pass-prohibited_specifications_fail_if_at_least_one_entity_passes_all_requirements_2_3.ids) - [Sample IFC](testcases/ids/pass-prohibited_specifications_fail_if_at_least_one_entity_passes_all_requirements_2_3.ifc)
+[Sample IDS](testcases/ids/fail-prohibited_specifications_fail_if_at_least_one_entity_passes_all_requirements_2_3.ids) - [Sample IFC](testcases/ids/fail-prohibited_specifications_fail_if_at_least_one_entity_passes_all_requirements_2_3.ifc)
 
 ## [FAIL] Prohibited specifications fail if at least one entity passes all requirements 3/3
 
@@ -338,7 +338,7 @@ Requirements:
             </entity>
         </applicability>
         <requirements>
-            <attribute minOccurs="1" maxOccurs="1">
+            <attribute>
                 <name>
                     <simpleValue>Name</simpleValue>
                 </name>
@@ -378,7 +378,7 @@ Requirements:
             </entity>
         </applicability>
         <requirements>
-            <attribute minOccurs="1" maxOccurs="1">
+            <attribute>
                 <name>
                     <simpleValue>Name</simpleValue>
                 </name>
@@ -386,7 +386,7 @@ Requirements:
                     <simpleValue>Waldo</simpleValue>
                 </value>
             </attribute>
-            <attribute minOccurs="1" maxOccurs="1">
+            <attribute>
                 <name>
                     <simpleValue>Description</simpleValue>
                 </name>
@@ -427,7 +427,7 @@ Requirements:
             </entity>
         </applicability>
         <requirements>
-            <attribute minOccurs="1" maxOccurs="1">
+            <attribute>
                 <name>
                     <simpleValue>Name</simpleValue>
                 </name>
@@ -435,7 +435,7 @@ Requirements:
                     <simpleValue>Waldo</simpleValue>
                 </value>
             </attribute>
-            <attribute minOccurs="1" maxOccurs="1">
+            <attribute>
                 <name>
                     <simpleValue>Description</simpleValue>
                 </name>
@@ -463,109 +463,11 @@ Requirements:
 
 [Sample IDS](testcases/ids/pass-a_specification_passes_only_if_all_requirements_pass_2_2.ids) - [Sample IFC](testcases/ids/pass-a_specification_passes_only_if_all_requirements_pass_2_2.ifc)
 
-## [PASS] Specification optionality and facet optionality can be combined
-
-~~~xml
-<specifications>
-    <specification name="Name" ifcVersion="" minOccurs="0" maxOccurs="unbounded">
-        <applicability>
-            <entity>
-                <name>
-                    <simpleValue>IFCWALL</simpleValue>
-                </name>
-            </entity>
-        </applicability>
-        <requirements>
-            <attribute minOccurs="1" maxOccurs="1">
-                <name>
-                    <simpleValue>Name</simpleValue>
-                </name>
-                <value>
-                    <simpleValue>Waldo</simpleValue>
-                </value>
-            </attribute>
-            <attribute minOccurs="0" maxOccurs="1">
-                <name>
-                    <simpleValue>Description</simpleValue>
-                </name>
-                <value>
-                    <simpleValue>Foobar</simpleValue>
-                </value>
-            </attribute>
-        </requirements>
-    </specification>
-</specifications>
-~~~
-
-~~~lua
-[PASS] #1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,'Waldo',$,$,$,$,$,$);
-~~~
-
-```
-# ✔️ Specification (optional)
-Applies to:
- - All IFCWALL data
-Requirements:
- - ✔️ The Name shall be Waldo (required)
- - ✔️ The Description shall be Foobar (optional)
-```
-
-[Sample IDS](testcases/ids/pass-specification_optionality_and_facet_optionality_can_be_combined.ids) - [Sample IFC](testcases/ids/pass-specification_optionality_and_facet_optionality_can_be_combined.ifc)
-
-## [PASS] A prohibited specification and a prohibited facet results in a double negative
-
-~~~xml
-<specifications>
-    <specification name="Name" ifcVersion="" minOccurs="0" maxOccurs="0">
-        <applicability>
-            <entity>
-                <name>
-                    <simpleValue>IFCWALL</simpleValue>
-                </name>
-            </entity>
-        </applicability>
-        <requirements>
-            <attribute minOccurs="0" maxOccurs="0">
-                <name>
-                    <simpleValue>Name</simpleValue>
-                </name>
-                <value>
-                    <simpleValue>Waldo</simpleValue>
-                </value>
-            </attribute>
-            <attribute minOccurs="0" maxOccurs="0">
-                <name>
-                    <simpleValue>Description</simpleValue>
-                </name>
-                <value>
-                    <simpleValue>Foobar</simpleValue>
-                </value>
-            </attribute>
-        </requirements>
-    </specification>
-</specifications>
-~~~
-
-~~~lua
-[PASS] #1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,'Waldo','Foobar',$,$,$,$,$);
-~~~
-
-```
-# ✔️ Specification (prohibited)
-Applies to:
- - All IFCWALL data
-Requirements:
- - ✔️ The Name shall be Waldo (prohibited)
- - ✔️ The Description shall be Foobar (prohibited)
-```
-
-[Sample IDS](testcases/ids/pass-a_prohibited_specification_and_a_prohibited_facet_results_in_a_double_negative.ids) - [Sample IFC](testcases/ids/pass-a_prohibited_specification_and_a_prohibited_facet_results_in_a_double_negative.ifc)
-
 ## [PASS] Multiple specifications are independent of one another
 
 ~~~xml
 <specifications>
-    <specification name="Name" ifcVersion="" minOccurs="0" maxOccurs="0">
+    <specification name="Name" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
         <applicability>
             <entity>
                 <name>
@@ -574,15 +476,7 @@ Requirements:
             </entity>
         </applicability>
         <requirements>
-            <attribute minOccurs="0" maxOccurs="0">
-                <name>
-                    <simpleValue>Name</simpleValue>
-                </name>
-                <value>
-                    <simpleValue>Waldo</simpleValue>
-                </value>
-            </attribute>
-            <attribute minOccurs="0" maxOccurs="0">
+            <attribute>
                 <name>
                     <simpleValue>Description</simpleValue>
                 </name>
@@ -601,7 +495,7 @@ Requirements:
             </entity>
         </applicability>
         <requirements>
-            <attribute minOccurs="1" maxOccurs="1">
+            <attribute>
                 <name>
                     <simpleValue>Name</simpleValue>
                 </name>
@@ -616,16 +510,15 @@ Requirements:
 
 ~~~lua
 [PASS] #1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,'Waldo','Foobar',$,$,$,$,$);
-[PASS] #2=IFCWALL('0eA6m4fELI9QBIhP3wiLAp',$,'Waldo',$,$,$,$,$,$);
+[PASS] #2=IFCWALL('0eA6m4fELI9QBIhP3wiLAp',$,'Waldo','Foobar',$,$,$,$,$);
 ~~~
 
 ```
-# ✔️ Specification (prohibited)
+# ✔️ Specification (optional)
 Applies to:
  - All IFCWALL data
 Requirements:
- - ✔️ The Name shall be Waldo (prohibited)
- - ✔️ The Description shall be Foobar (prohibited)
+ - ✔️ The Description shall be Foobar (required)
 ```
 
 ```
@@ -637,4 +530,145 @@ Requirements:
 ```
 
 [Sample IDS](testcases/ids/pass-multiple_specifications_are_independent_of_one_another.ids) - [Sample IFC](testcases/ids/pass-multiple_specifications_are_independent_of_one_another.ifc)
+
+## [PASS] A specification that is required and has at least one applicable entity but no requirements shall pass
+
+~~~xml
+<specifications>
+    <specification name="Name" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <applicability>
+            <entity>
+                <name>
+                    <simpleValue>IFCWALL</simpleValue>
+                </name>
+            </entity>
+        </applicability>
+        <requirements />
+    </specification>
+</specifications>
+~~~
+
+~~~lua
+[PASS] #1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+[PASS] #2=IFCWALL('0eA6m4fELI9QBIhP3wiLAp',$,'Waldo',$,$,$,$,$,$);
+~~~
+
+```
+# ✔️ Specification (required)
+Applies to:
+ - All IFCWALL data
+Requirements:
+```
+
+[Sample IDS](testcases/ids/pass-a_specification_that_is_required_and_has_at_least_one_applicable_entity_but_no_requirements_shall_pass.ids) - [Sample IFC](testcases/ids/pass-a_specification_that_is_required_and_has_at_least_one_applicable_entity_but_no_requirements_shall_pass.ifc)
+
+## [FAIL] A specification that is required but has no applicable entities or requirements shall fail
+
+~~~xml
+<specifications>
+    <specification name="Name" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <applicability />
+        <requirements />
+    </specification>
+</specifications>
+~~~
+
+~~~lua
+       #1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+       #2=IFCWALL('0eA6m4fELI9QBIhP3wiLAp',$,'Waldo',$,$,$,$,$,$);
+~~~
+
+```
+# ❌ Specification (required)
+Applies to:
+Requirements:
+```
+
+[Sample IDS](testcases/ids/fail-a_specification_that_is_required_but_has_no_applicable_entities_or_requirements_shall_fail.ids) - [Sample IFC](testcases/ids/fail-a_specification_that_is_required_but_has_no_applicable_entities_or_requirements_shall_fail.ifc)
+
+## [PASS] A specification that is optional and has at least one applicable entity but no requirements shall pass
+
+~~~xml
+<specifications>
+    <specification name="Name" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="unbounded">
+        <applicability>
+            <entity>
+                <name>
+                    <simpleValue>IFCWALL</simpleValue>
+                </name>
+            </entity>
+        </applicability>
+        <requirements />
+    </specification>
+</specifications>
+~~~
+
+~~~lua
+[PASS] #1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+[PASS] #2=IFCWALL('0eA6m4fELI9QBIhP3wiLAp',$,'Waldo',$,$,$,$,$,$);
+~~~
+
+```
+# ✔️ Specification (optional)
+Applies to:
+ - All IFCWALL data
+Requirements:
+```
+
+[Sample IDS](testcases/ids/pass-a_specification_that_is_optional_and_has_at_least_one_applicable_entity_but_no_requirements_shall_pass.ids) - [Sample IFC](testcases/ids/pass-a_specification_that_is_optional_and_has_at_least_one_applicable_entity_but_no_requirements_shall_pass.ifc)
+
+## [FAIL] A specification that is prohibited and has at least one applicable entity but no requirements shall fail
+
+~~~xml
+<specifications>
+    <specification name="Name" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="0">
+        <applicability>
+            <entity>
+                <name>
+                    <simpleValue>IFCWALL</simpleValue>
+                </name>
+            </entity>
+        </applicability>
+        <requirements />
+    </specification>
+</specifications>
+~~~
+
+~~~lua
+[PASS] #1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+[PASS] #2=IFCWALL('0eA6m4fELI9QBIhP3wiLAp',$,'Waldo',$,$,$,$,$,$);
+~~~
+
+```
+# ❌ Specification (prohibited)
+Applies to:
+ - All IFCWALL data
+Requirements:
+```
+
+[Sample IDS](testcases/ids/fail-a_specification_that_is_prohibited_and_has_at_least_one_applicable_entity_but_no_requirements_shall_fail.ids) - [Sample IFC](testcases/ids/fail-a_specification_that_is_prohibited_and_has_at_least_one_applicable_entity_but_no_requirements_shall_fail.ifc)
+
+## [PASS] A specification that is prohibited but has no applicable entities or requirements shall pass
+
+~~~xml
+<specifications>
+    <specification name="Name" ifcVersion="IFC2X3 IFC4" minOccurs="0" maxOccurs="0">
+        <applicability />
+        <requirements />
+    </specification>
+</specifications>
+~~~
+
+~~~lua
+       #1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
+       #2=IFCWALL('0eA6m4fELI9QBIhP3wiLAp',$,'Waldo',$,$,$,$,$,$);
+~~~
+
+```
+# ✔️ Specification (prohibited)
+Applies to:
+Requirements:
+```
+
+[Sample IDS](testcases/ids/pass-a_specification_that_is_prohibited_but_has_no_applicable_entities_or_requirements_shall_pass.ids) - [Sample IFC](testcases/ids/pass-a_specification_that_is_prohibited_but_has_no_applicable_entities_or_requirements_shall_pass.ifc)
 

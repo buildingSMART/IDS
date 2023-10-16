@@ -5,7 +5,13 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] A non aggregated element fails an aggregate relationship
 
 ~~~xml
-<partOf relation="IfcRelAggregates" minOccurs="1" maxOccurs="1"/>
+<partOf relation="IFCRELAGGREGATES" maxOccurs="unbounded" minOccurs="1">
+  <entity>
+    <name>
+      <simpleValue>IFCELEMENTASSEMBLY</simpleValue>
+    </name>
+  </entity>
+</partOf>
 ~~~
 
 ~~~lua
@@ -18,7 +24,13 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] The aggregated whole fails an aggregate relationship
 
 ~~~xml
-<partOf relation="IfcRelAggregates" minOccurs="1" maxOccurs="1"/>
+<partOf relation="IFCRELAGGREGATES" maxOccurs="unbounded" minOccurs="1">
+  <entity>
+    <name>
+      <simpleValue>IFCELEMENTASSEMBLY</simpleValue>
+    </name>
+  </entity>
+</partOf>
 ~~~
 
 ~~~lua
@@ -32,7 +44,13 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] The aggregated part passes an aggregate relationship
 
 ~~~xml
-<partOf relation="IfcRelAggregates" minOccurs="1" maxOccurs="1"/>
+<partOf relation="IFCRELAGGREGATES" maxOccurs="unbounded" minOccurs="1">
+  <entity>
+    <name>
+      <simpleValue>IFCELEMENTASSEMBLY</simpleValue>
+    </name>
+  </entity>
+</partOf>
 ~~~
 
 ~~~lua
@@ -46,7 +64,13 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] A required facet checks all parameters as normal
 
 ~~~xml
-<partOf relation="IfcRelAggregates" minOccurs="1" maxOccurs="1"/>
+<partOf relation="IFCRELAGGREGATES" maxOccurs="unbounded" minOccurs="1">
+  <entity>
+    <name>
+      <simpleValue>IFCELEMENTASSEMBLY</simpleValue>
+    </name>
+  </entity>
+</partOf>
 ~~~
 
 ~~~lua
@@ -60,7 +84,13 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] A prohibited facet returns the opposite of a required facet
 
 ~~~xml
-<partOf relation="IfcRelAggregates" minOccurs="0" maxOccurs="0"/>
+<partOf relation="IFCRELAGGREGATES" minOccurs="0" maxOccurs="0">
+  <entity>
+    <name>
+      <simpleValue>IFCELEMENTASSEMBLY</simpleValue>
+    </name>
+  </entity>
+</partOf>
 ~~~
 
 ~~~lua
@@ -74,7 +104,13 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] An optional facet always passes regardless of outcome 1/2
 
 ~~~xml
-<partOf relation="IfcRelAggregates" minOccurs="0" maxOccurs="1"/>
+<partOf relation="IFCRELAGGREGATES" minOccurs="0" maxOccurs="unbounded">
+  <entity>
+    <name>
+      <simpleValue>IFCELEMENTASSEMBLY</simpleValue>
+    </name>
+  </entity>
+</partOf>
 ~~~
 
 ~~~lua
@@ -88,7 +124,13 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] An optional facet always passes regardless of outcome 2/2
 
 ~~~xml
-<partOf relation="IfcRelAggregates" minOccurs="0" maxOccurs="1"/>
+<partOf relation="IFCRELAGGREGATES" minOccurs="0" maxOccurs="unbounded">
+  <entity>
+    <name>
+      <simpleValue>IFCELEMENTASSEMBLY</simpleValue>
+    </name>
+  </entity>
+</partOf>
 ~~~
 
 ~~~lua
@@ -102,7 +144,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] An aggregate may specify the entity of the whole 1/2
 
 ~~~xml
-<partOf relation="IfcRelAggregates" minOccurs="1" maxOccurs="1">
+<partOf relation="IFCRELAGGREGATES" maxOccurs="unbounded" minOccurs="1">
   <entity>
     <name>
       <simpleValue>IFCSLAB</simpleValue>
@@ -122,7 +164,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] An aggregate may specify the entity of the whole 2/2
 
 ~~~xml
-<partOf relation="IfcRelAggregates" minOccurs="1" maxOccurs="1">
+<partOf relation="IFCRELAGGREGATES" maxOccurs="unbounded" minOccurs="1">
   <entity>
     <name>
       <simpleValue>IFCWALL</simpleValue>
@@ -142,7 +184,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] An aggregate may specify the predefined type of the whole 1/2
 
 ~~~xml
-<partOf relation="IfcRelAggregates" minOccurs="1" maxOccurs="1">
+<partOf relation="IFCRELAGGREGATES" maxOccurs="unbounded" minOccurs="1">
   <entity>
     <name>
       <simpleValue>IFCSLAB</simpleValue>
@@ -165,7 +207,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] An aggregate may specify the predefined type of the whole 2/2
 
 ~~~xml
-<partOf relation="IfcRelAggregates" minOccurs="1" maxOccurs="1">
+<partOf relation="IFCRELAGGREGATES" maxOccurs="unbounded" minOccurs="1">
   <entity>
     <name>
       <simpleValue>IFCSLAB</simpleValue>
@@ -188,7 +230,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] An aggregate entity may pass any ancestral whole passes
 
 ~~~xml
-<partOf relation="IfcRelAggregates" minOccurs="1" maxOccurs="1">
+<partOf relation="IFCRELAGGREGATES" maxOccurs="unbounded" minOccurs="1">
   <entity>
     <name>
       <simpleValue>IFCELEMENTASSEMBLY</simpleValue>
@@ -210,12 +252,18 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] A non grouped element fails a group relationship
 
 ~~~xml
-<partOf relation="IfcRelAssignsToGroup" minOccurs="1" maxOccurs="1"/>
+<partOf relation="IFCRELASSIGNSTOGROUP" maxOccurs="unbounded" minOccurs="1">
+  <entity>
+    <name>
+      <simpleValue>IFCGROUP</simpleValue>
+    </name>
+  </entity>
+</partOf>
 ~~~
 
 ~~~lua
 #1=IFCELEMENTASSEMBLY('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$,$); /* Testcase */
-#2=IFCGROUP('0eA6m4fELI9QBIhP3wiLAp',$,'Unnamed','',$);
+#2=IFCGROUP('0eA6m4fELI9QBIhP3wiLAp',$,'Unnamed',$,$);
 ~~~
 
 [Sample IDS](testcases/partof/fail-a_non_grouped_element_fails_a_group_relationship.ids) - [Sample IFC: 1](testcases/partof/fail-a_non_grouped_element_fails_a_group_relationship.ifc)
@@ -223,12 +271,18 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] A grouped element passes a group relationship
 
 ~~~xml
-<partOf relation="IfcRelAssignsToGroup" minOccurs="1" maxOccurs="1"/>
+<partOf relation="IFCRELASSIGNSTOGROUP" maxOccurs="unbounded" minOccurs="1">
+  <entity>
+    <name>
+      <simpleValue>IFCGROUP</simpleValue>
+    </name>
+  </entity>
+</partOf>
 ~~~
 
 ~~~lua
 #1=IFCELEMENTASSEMBLY('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$,$); /* Testcase */
-#2=IFCGROUP('0eA6m4fELI9QBIhP3wiLAp',$,'Unnamed','',$);
+#2=IFCGROUP('0eA6m4fELI9QBIhP3wiLAp',$,'Unnamed',$,$);
 #3=IFCRELASSIGNSTOGROUP('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),$,#2);
 ~~~
 
@@ -237,7 +291,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] A group entity must match exactly 1/2
 
 ~~~xml
-<partOf relation="IfcRelAssignsToGroup" minOccurs="1" maxOccurs="1">
+<partOf relation="IFCRELASSIGNSTOGROUP" maxOccurs="unbounded" minOccurs="1">
   <entity>
     <name>
       <simpleValue>IFCGROUP</simpleValue>
@@ -257,7 +311,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] A group entity must match exactly 2/2
 
 ~~~xml
-<partOf relation="IfcRelAssignsToGroup" minOccurs="1" maxOccurs="1">
+<partOf relation="IFCRELASSIGNSTOGROUP" maxOccurs="unbounded" minOccurs="1">
   <entity>
     <name>
       <simpleValue>IFCINVENTORY</simpleValue>
@@ -277,7 +331,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] A group predefined type must match exactly 2/2
 
 ~~~xml
-<partOf relation="IfcRelAssignsToGroup" minOccurs="1" maxOccurs="1">
+<partOf relation="IFCRELASSIGNSTOGROUP" maxOccurs="unbounded" minOccurs="1">
   <entity>
     <name>
       <simpleValue>IFCINVENTORY</simpleValue>
@@ -300,7 +354,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] A group predefined type must match exactly 2/2
 
 ~~~xml
-<partOf relation="IfcRelAssignsToGroup" minOccurs="1" maxOccurs="1">
+<partOf relation="IFCRELASSIGNSTOGROUP" maxOccurs="unbounded" minOccurs="1">
   <entity>
     <name>
       <simpleValue>IFCINVENTORY</simpleValue>
@@ -323,7 +377,13 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Any contained element passes a containment relationship 1/2
 
 ~~~xml
-<partOf relation="IfcRelContainedInSpatialStructure" minOccurs="1" maxOccurs="1"/>
+<partOf relation="IFCRELCONTAINEDINSPATIALSTRUCTURE" maxOccurs="unbounded" minOccurs="1">
+  <entity>
+    <name>
+      <simpleValue>IFCSPACE</simpleValue>
+    </name>
+  </entity>
+</partOf>
 ~~~
 
 ~~~lua
@@ -336,7 +396,13 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any contained element passes a containment relationship 2/2
 
 ~~~xml
-<partOf relation="IfcRelContainedInSpatialStructure" minOccurs="1" maxOccurs="1"/>
+<partOf relation="IFCRELCONTAINEDINSPATIALSTRUCTURE" maxOccurs="unbounded" minOccurs="1">
+  <entity>
+    <name>
+      <simpleValue>IFCSPACE</simpleValue>
+    </name>
+  </entity>
+</partOf>
 ~~~
 
 ~~~lua
@@ -350,7 +416,13 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] The container itself always fails
 
 ~~~xml
-<partOf relation="IfcRelContainedInSpatialStructure" minOccurs="1" maxOccurs="1"/>
+<partOf relation="IFCRELCONTAINEDINSPATIALSTRUCTURE" maxOccurs="unbounded" minOccurs="1">
+  <entity>
+    <name>
+      <simpleValue>IFCSPACE</simpleValue>
+    </name>
+  </entity>
+</partOf>
 ~~~
 
 ~~~lua
@@ -364,7 +436,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] The container entity must match exactly 1/2
 
 ~~~xml
-<partOf relation="IfcRelContainedInSpatialStructure" minOccurs="1" maxOccurs="1">
+<partOf relation="IFCRELCONTAINEDINSPATIALSTRUCTURE" maxOccurs="unbounded" minOccurs="1">
   <entity>
     <name>
       <simpleValue>IFCSITE</simpleValue>
@@ -384,7 +456,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] The container entity must match exactly 2/2
 
 ~~~xml
-<partOf relation="IfcRelContainedInSpatialStructure" minOccurs="1" maxOccurs="1">
+<partOf relation="IFCRELCONTAINEDINSPATIALSTRUCTURE" maxOccurs="unbounded" minOccurs="1">
   <entity>
     <name>
       <simpleValue>IFCSPACE</simpleValue>
@@ -404,7 +476,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] The container predefined type must match exactly 1/2
 
 ~~~xml
-<partOf relation="IfcRelContainedInSpatialStructure" minOccurs="1" maxOccurs="1">
+<partOf relation="IFCRELCONTAINEDINSPATIALSTRUCTURE" maxOccurs="unbounded" minOccurs="1">
   <entity>
     <name>
       <simpleValue>IFCSPACE</simpleValue>
@@ -427,7 +499,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] The container predefined type must match exactly 2/2
 
 ~~~xml
-<partOf relation="IfcRelContainedInSpatialStructure" minOccurs="1" maxOccurs="1">
+<partOf relation="IFCRELCONTAINEDINSPATIALSTRUCTURE" maxOccurs="unbounded" minOccurs="1">
   <entity>
     <name>
       <simpleValue>IFCSPACE</simpleValue>
@@ -450,7 +522,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] The container may be indirect
 
 ~~~xml
-<partOf relation="IfcRelContainedInSpatialStructure" minOccurs="1" maxOccurs="1">
+<partOf relation="IFCRELCONTAINEDINSPATIALSTRUCTURE" maxOccurs="unbounded" minOccurs="1">
   <entity>
     <name>
       <simpleValue>IFCSPACE</simpleValue>
@@ -472,7 +544,13 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any nested part passes a nest relationship
 
 ~~~xml
-<partOf relation="IfcRelNests" minOccurs="1" maxOccurs="1"/>
+<partOf relation="IFCRELNESTS" maxOccurs="unbounded" minOccurs="1">
+  <entity>
+    <name>
+      <simpleValue>IFCFURNITURE</simpleValue>
+    </name>
+  </entity>
+</partOf>
 ~~~
 
 ~~~lua
@@ -486,7 +564,13 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Any nested whole fails a nest relationship
 
 ~~~xml
-<partOf relation="IfcRelNests" minOccurs="1" maxOccurs="1"/>
+<partOf relation="IFCRELNESTS" maxOccurs="unbounded" minOccurs="1">
+  <entity>
+    <name>
+      <simpleValue>IFCFURNITURE</simpleValue>
+    </name>
+  </entity>
+</partOf>
 ~~~
 
 ~~~lua
@@ -500,7 +584,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] The nest entity must match exactly 1/2
 
 ~~~xml
-<partOf relation="IfcRelNests" minOccurs="1" maxOccurs="1">
+<partOf relation="IFCRELNESTS" maxOccurs="unbounded" minOccurs="1">
   <entity>
     <name>
       <simpleValue>IFCBEAM</simpleValue>
@@ -520,7 +604,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] The nest entity must match exactly 2/2
 
 ~~~xml
-<partOf relation="IfcRelNests" minOccurs="1" maxOccurs="1">
+<partOf relation="IFCRELNESTS" maxOccurs="unbounded" minOccurs="1">
   <entity>
     <name>
       <simpleValue>IFCFURNITURE</simpleValue>
@@ -540,7 +624,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] The nest predefined type must match exactly 1/2
 
 ~~~xml
-<partOf relation="IfcRelNests" minOccurs="1" maxOccurs="1">
+<partOf relation="IFCRELNESTS" maxOccurs="unbounded" minOccurs="1">
   <entity>
     <name>
       <simpleValue>IFCFURNITURE</simpleValue>
@@ -553,7 +637,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCFURNITURE('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,'WATERBOTTLE',$,$,$,$);
+#1=IFCFURNITURE('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,'WATERBOTTLE',$,$,$,.USERDEFINED.);
 #2=IFCDISCRETEACCESSORY('0eA6m4fELI9QBIhP3wiLAp',$,$,$,$,$,$,$,$); /* Testcase */
 #3=IFCRELNESTS('05rScmOVzMoQXOfbYdtLYj',$,$,$,#1,(#2));
 ~~~
@@ -563,7 +647,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] The nest predefined type must match exactly 2/2
 
 ~~~xml
-<partOf relation="IfcRelNests" minOccurs="1" maxOccurs="1">
+<partOf relation="IFCRELNESTS" maxOccurs="unbounded" minOccurs="1">
   <entity>
     <name>
       <simpleValue>IFCFURNITURE</simpleValue>
@@ -576,7 +660,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ~~~
 
 ~~~lua
-#1=IFCFURNITURE('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,'WATERBOTTLE',$,$,$,$);
+#1=IFCFURNITURE('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,'WATERBOTTLE',$,$,$,.USERDEFINED.);
 #2=IFCDISCRETEACCESSORY('0eA6m4fELI9QBIhP3wiLAp',$,$,$,$,$,$,$,$); /* Testcase */
 #3=IFCRELNESTS('05rScmOVzMoQXOfbYdtLYj',$,$,$,#1,(#2));
 ~~~
@@ -586,7 +670,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Nesting may be indirect
 
 ~~~xml
-<partOf relation="IfcRelNests" minOccurs="1" maxOccurs="1">
+<partOf relation="IFCRELNESTS" maxOccurs="unbounded" minOccurs="1">
   <entity>
     <name>
       <simpleValue>IFCFURNITURE</simpleValue>

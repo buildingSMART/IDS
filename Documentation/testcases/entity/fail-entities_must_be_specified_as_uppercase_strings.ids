@@ -3,7 +3,7 @@
         <title>Entities must be specified as uppercase strings</title>
     </info>
     <specifications>
-        <specification name="Entities must be specified as uppercase strings" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <specification name="Entities must be specified as uppercase strings" ifcVersion="IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>

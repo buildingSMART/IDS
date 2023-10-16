@@ -3,7 +3,7 @@
         <title>Only specifically formatted numbers are allowed 2/4</title>
     </info>
     <specifications>
-        <specification name="Only specifically formatted numbers are allowed 2/4" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <specification name="Only specifically formatted numbers are allowed 2/4" ifcVersion="IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>

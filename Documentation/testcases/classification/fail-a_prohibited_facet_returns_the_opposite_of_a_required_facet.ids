@@ -3,7 +3,7 @@
         <title>A prohibited facet returns the opposite of a required facet</title>
     </info>
     <specifications>
-        <specification name="A prohibited facet returns the opposite of a required facet" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <specification name="A prohibited facet returns the opposite of a required facet" ifcVersion="IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>

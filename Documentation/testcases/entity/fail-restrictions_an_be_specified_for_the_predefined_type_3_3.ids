@@ -3,7 +3,7 @@
         <title>Restrictions an be specified for the predefined type 3/3</title>
     </info>
     <specifications>
-        <specification name="Restrictions an be specified for the predefined type 3/3" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <specification name="Restrictions an be specified for the predefined type 3/3" ifcVersion="IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>

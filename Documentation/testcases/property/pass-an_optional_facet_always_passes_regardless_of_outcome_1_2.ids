@@ -3,7 +3,7 @@
         <title>An optional facet always passes regardless of outcome 1/2</title>
     </info>
     <specifications>
-        <specification name="An optional facet always passes regardless of outcome 1/2" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <specification name="An optional facet always passes regardless of outcome 1/2" ifcVersion="IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
@@ -12,7 +12,7 @@
                 </entity>
             </applicability>
             <requirements>
-                <property datatype="IfcLabel" minOccurs="0" maxOccurs="1">
+                <property datatype="IFCLABEL" minOccurs="0" maxOccurs="unbounded">
                     <propertySet>
                         <simpleValue>Foo_Bar</simpleValue>
                     </propertySet>

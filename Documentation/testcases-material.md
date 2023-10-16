@@ -5,7 +5,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Elements without a material always fail
 
 ~~~xml
-<material minOccurs="1" maxOccurs="1"/>
+<material maxOccurs="unbounded" minOccurs="1"/>
 ~~~
 
 ~~~lua
@@ -17,7 +17,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Elements with any material will pass an empty material facet
 
 ~~~xml
-<material minOccurs="1" maxOccurs="1"/>
+<material maxOccurs="unbounded" minOccurs="1"/>
 ~~~
 
 ~~~lua
@@ -31,7 +31,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] A required facet checks all parameters as normal
 
 ~~~xml
-<material minOccurs="1" maxOccurs="1"/>
+<material maxOccurs="unbounded" minOccurs="1"/>
 ~~~
 
 ~~~lua
@@ -59,7 +59,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] An optional facet always passes regardless of outcome 1/2
 
 ~~~xml
-<material minOccurs="0" maxOccurs="1"/>
+<material minOccurs="0" maxOccurs="unbounded"/>
 ~~~
 
 ~~~lua
@@ -73,7 +73,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] An optional facet always passes regardless of outcome 1/2
 
 ~~~xml
-<material minOccurs="0" maxOccurs="1">
+<material minOccurs="0" maxOccurs="unbounded">
   <value>
     <simpleValue>Foo</simpleValue>
   </value>
@@ -91,7 +91,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] A material name may pass the value check
 
 ~~~xml
-<material minOccurs="1" maxOccurs="1">
+<material maxOccurs="unbounded" minOccurs="1">
   <value>
     <simpleValue>Foo</simpleValue>
   </value>
@@ -109,7 +109,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] A material category may pass the value check
 
 ~~~xml
-<material minOccurs="1" maxOccurs="1">
+<material maxOccurs="unbounded" minOccurs="1">
   <value>
     <simpleValue>Foo</simpleValue>
   </value>
@@ -127,7 +127,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any material Name in a list will pass a value check
 
 ~~~xml
-<material minOccurs="1" maxOccurs="1">
+<material maxOccurs="unbounded" minOccurs="1">
   <value>
     <simpleValue>Foo</simpleValue>
   </value>
@@ -146,7 +146,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any material Category in a list will pass a value check
 
 ~~~xml
-<material minOccurs="1" maxOccurs="1">
+<material maxOccurs="unbounded" minOccurs="1">
   <value>
     <simpleValue>Foo</simpleValue>
   </value>
@@ -165,7 +165,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any layer Name in a layer set will pass a value check
 
 ~~~xml
-<material minOccurs="1" maxOccurs="1">
+<material maxOccurs="unbounded" minOccurs="1">
   <value>
     <simpleValue>Foo</simpleValue>
   </value>
@@ -185,7 +185,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any layer Category in a layer set will pass a value check
 
 ~~~xml
-<material minOccurs="1" maxOccurs="1">
+<material maxOccurs="unbounded" minOccurs="1">
   <value>
     <simpleValue>Foo</simpleValue>
   </value>
@@ -205,7 +205,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any material Name in a layer set will pass a value check
 
 ~~~xml
-<material minOccurs="1" maxOccurs="1">
+<material maxOccurs="unbounded" minOccurs="1">
   <value>
     <simpleValue>Foo</simpleValue>
   </value>
@@ -225,7 +225,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any material Category in a layer set will pass a value check
 
 ~~~xml
-<material minOccurs="1" maxOccurs="1">
+<material maxOccurs="unbounded" minOccurs="1">
   <value>
     <simpleValue>Foo</simpleValue>
   </value>
@@ -245,7 +245,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any profile Name in a profile set will pass a value check
 
 ~~~xml
-<material minOccurs="1" maxOccurs="1">
+<material maxOccurs="unbounded" minOccurs="1">
   <value>
     <simpleValue>Foo</simpleValue>
   </value>
@@ -266,7 +266,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any profile Category in a profile set will pass a value check
 
 ~~~xml
-<material minOccurs="1" maxOccurs="1">
+<material maxOccurs="unbounded" minOccurs="1">
   <value>
     <simpleValue>Foo</simpleValue>
   </value>
@@ -287,7 +287,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any material Name in a profile set will pass a value check
 
 ~~~xml
-<material minOccurs="1" maxOccurs="1">
+<material maxOccurs="unbounded" minOccurs="1">
   <value>
     <simpleValue>Foo</simpleValue>
   </value>
@@ -308,7 +308,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any material category in a profile set will pass a value check
 
 ~~~xml
-<material minOccurs="1" maxOccurs="1">
+<material maxOccurs="unbounded" minOccurs="1">
   <value>
     <simpleValue>Foo</simpleValue>
   </value>
@@ -329,7 +329,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] A constituent set with no data will fail a value check
 
 ~~~xml
-<material minOccurs="1" maxOccurs="1">
+<material maxOccurs="unbounded" minOccurs="1">
   <value>
     <simpleValue>Foo</simpleValue>
   </value>
@@ -347,7 +347,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any constituent Name in a constituent set will pass a value check
 
 ~~~xml
-<material minOccurs="1" maxOccurs="1">
+<material maxOccurs="unbounded" minOccurs="1">
   <value>
     <simpleValue>Foo</simpleValue>
   </value>
@@ -367,7 +367,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any constituent Category in a constituent set will pass a value check
 
 ~~~xml
-<material minOccurs="1" maxOccurs="1">
+<material maxOccurs="unbounded" minOccurs="1">
   <value>
     <simpleValue>Foo</simpleValue>
   </value>
@@ -387,7 +387,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any material Name in a constituent set will pass a value check
 
 ~~~xml
-<material minOccurs="1" maxOccurs="1">
+<material maxOccurs="unbounded" minOccurs="1">
   <value>
     <simpleValue>Foo</simpleValue>
   </value>
@@ -407,7 +407,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any material Category in a constituent set will pass a value check
 
 ~~~xml
-<material minOccurs="1" maxOccurs="1">
+<material maxOccurs="unbounded" minOccurs="1">
   <value>
     <simpleValue>Foo</simpleValue>
   </value>
@@ -427,7 +427,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Occurrences can inherit materials from their types
 
 ~~~xml
-<material minOccurs="1" maxOccurs="1">
+<material maxOccurs="unbounded" minOccurs="1">
   <value>
     <simpleValue>Foo</simpleValue>
   </value>
@@ -436,7 +436,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 
 ~~~lua
 #1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
-#2=IFCWALLTYPE('0eA6m4fELI9QBIhP3wiLAp',$,$,$,$,$,$,$,$,.ELEMENTEDWALL.);
+#2=IFCWALLTYPE('0eA6m4fELI9QBIhP3wiLAp',$,$,$,$,$,$,$,$,.NOTDEFINED.);
 #3=IFCRELDEFINESBYTYPE('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 #4=IFCMATERIAL('Foo',$,$);
 #5=IFCRELASSOCIATESMATERIAL('0BbkGoC6vPvRW13UT7D8zH',$,$,$,(#2),#4);
@@ -447,7 +447,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Occurrences can override materials from their types
 
 ~~~xml
-<material minOccurs="1" maxOccurs="1">
+<material maxOccurs="unbounded" minOccurs="1">
   <value>
     <simpleValue>Foo</simpleValue>
   </value>
@@ -456,7 +456,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 
 ~~~lua
 #1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$); /* Testcase */
-#2=IFCWALLTYPE('0eA6m4fELI9QBIhP3wiLAp',$,$,$,$,$,$,$,$,.ELEMENTEDWALL.);
+#2=IFCWALLTYPE('0eA6m4fELI9QBIhP3wiLAp',$,$,$,$,$,$,$,$,.NOTDEFINED.);
 #3=IFCRELDEFINESBYTYPE('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 #4=IFCMATERIAL('Bar',$,$);
 #5=IFCRELASSOCIATESMATERIAL('0BbkGoC6vPvRW13UT7D8zH',$,$,$,(#2),#4);

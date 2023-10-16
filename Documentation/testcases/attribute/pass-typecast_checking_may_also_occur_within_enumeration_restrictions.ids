@@ -3,7 +3,7 @@
         <title>Typecast checking may also occur within enumeration restrictions</title>
     </info>
     <specifications>
-        <specification name="Typecast checking may also occur within enumeration restrictions" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <specification name="Typecast checking may also occur within enumeration restrictions" ifcVersion="IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>

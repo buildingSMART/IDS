@@ -3,7 +3,7 @@
         <title>A constituent set with no data will fail a value check</title>
     </info>
     <specifications>
-        <specification name="A constituent set with no data will fail a value check" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <specification name="A constituent set with no data will fail a value check" ifcVersion="IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
@@ -12,7 +12,7 @@
                 </entity>
             </applicability>
             <requirements>
-                <material minOccurs="1" maxOccurs="1">
+                <material maxOccurs="unbounded" minOccurs="1">
                     <value>
                         <simpleValue>Foo</simpleValue>
                     </value>

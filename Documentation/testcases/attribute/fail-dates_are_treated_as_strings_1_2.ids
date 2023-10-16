@@ -3,7 +3,7 @@
         <title>Dates are treated as strings 1/2</title>
     </info>
     <specifications>
-        <specification name="Dates are treated as strings 1/2" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <specification name="Dates are treated as strings 1/2" ifcVersion="IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>

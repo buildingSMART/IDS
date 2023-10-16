@@ -5,7 +5,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] A classification facet with no data matches any classification 1/2
 
 ~~~xml
-<classification minOccurs="1" maxOccurs="1"/>
+<classification maxOccurs="unbounded" minOccurs="1"/>
 ~~~
 
 ~~~lua
@@ -32,7 +32,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] A classification facet with no data matches any classification 2/2
 
 ~~~xml
-<classification minOccurs="1" maxOccurs="1"/>
+<classification maxOccurs="unbounded" minOccurs="1"/>
 ~~~
 
 ~~~lua
@@ -59,7 +59,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] A required facet checks all parameters as normal
 
 ~~~xml
-<classification minOccurs="1" maxOccurs="1"/>
+<classification maxOccurs="unbounded" minOccurs="1"/>
 ~~~
 
 ~~~lua
@@ -113,7 +113,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] An optional facet always passes regardless of outcome 1/2
 
 ~~~xml
-<classification minOccurs="0" maxOccurs="1"/>
+<classification minOccurs="0" maxOccurs="unbounded"/>
 ~~~
 
 ~~~lua
@@ -140,7 +140,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] An optional facet always passes regardless of outcome 2/2
 
 ~~~xml
-<classification minOccurs="0" maxOccurs="1"/>
+<classification minOccurs="0" maxOccurs="unbounded"/>
 ~~~
 
 ~~~lua
@@ -167,7 +167,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Values should match exactly if lightweight classifications are used
 
 ~~~xml
-<classification minOccurs="1" maxOccurs="1">
+<classification maxOccurs="unbounded" minOccurs="1">
   <value>
     <simpleValue>1</simpleValue>
   </value>
@@ -198,7 +198,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Values match subreferences if full classifications are used (e.g. EF_25_10 should match EF_25_10_25, EF_25_10_30, etc)
 
 ~~~xml
-<classification minOccurs="1" maxOccurs="1">
+<classification maxOccurs="unbounded" minOccurs="1">
   <value>
     <simpleValue>2</simpleValue>
   </value>
@@ -229,7 +229,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Non-rooted resources that have external classification references should also pass
 
 ~~~xml
-<classification minOccurs="1" maxOccurs="1">
+<classification maxOccurs="unbounded" minOccurs="1">
   <value>
     <simpleValue>1</simpleValue>
   </value>
@@ -260,7 +260,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Systems should match exactly 1/5
 
 ~~~xml
-<classification minOccurs="1" maxOccurs="1">
+<classification maxOccurs="unbounded" minOccurs="1">
   <system>
     <simpleValue>Foobar</simpleValue>
   </system>
@@ -291,7 +291,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Systems should match exactly 2/5
 
 ~~~xml
-<classification minOccurs="1" maxOccurs="1">
+<classification maxOccurs="unbounded" minOccurs="1">
   <system>
     <simpleValue>Foobar</simpleValue>
   </system>
@@ -322,7 +322,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Systems should match exactly 3/5
 
 ~~~xml
-<classification minOccurs="1" maxOccurs="1">
+<classification maxOccurs="unbounded" minOccurs="1">
   <system>
     <simpleValue>Foobar</simpleValue>
   </system>
@@ -353,7 +353,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Systems should match exactly 4/5
 
 ~~~xml
-<classification minOccurs="1" maxOccurs="1">
+<classification maxOccurs="unbounded" minOccurs="1">
   <system>
     <simpleValue>Foobar</simpleValue>
   </system>
@@ -384,7 +384,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Systems should match exactly 5/5
 
 ~~~xml
-<classification minOccurs="1" maxOccurs="1">
+<classification maxOccurs="unbounded" minOccurs="1">
   <system>
     <simpleValue>Foobar</simpleValue>
   </system>
@@ -415,7 +415,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Restrictions can be used for values 1/3
 
 ~~~xml
-<classification minOccurs="1" maxOccurs="1">
+<classification maxOccurs="unbounded" minOccurs="1">
   <value>
     <xs:restriction base="xs:string">
       <xs:pattern value="1.*"/>
@@ -448,7 +448,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Restrictions can be used for values 2/3
 
 ~~~xml
-<classification minOccurs="1" maxOccurs="1">
+<classification maxOccurs="unbounded" minOccurs="1">
   <value>
     <xs:restriction base="xs:string">
       <xs:pattern value="1.*"/>
@@ -481,7 +481,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Restrictions can be used for values 3/3
 
 ~~~xml
-<classification minOccurs="1" maxOccurs="1">
+<classification maxOccurs="unbounded" minOccurs="1">
   <value>
     <xs:restriction base="xs:string">
       <xs:pattern value="1.*"/>
@@ -514,7 +514,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Restrictions can be used for systems 1/2
 
 ~~~xml
-<classification minOccurs="1" maxOccurs="1">
+<classification maxOccurs="unbounded" minOccurs="1">
   <system>
     <xs:restriction base="xs:string">
       <xs:pattern value="Foo.*"/>
@@ -547,7 +547,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Restrictions can be used for systems 2/2
 
 ~~~xml
-<classification minOccurs="1" maxOccurs="1">
+<classification maxOccurs="unbounded" minOccurs="1">
   <system>
     <xs:restriction base="xs:string">
       <xs:pattern value="Foo.*"/>
@@ -580,7 +580,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Both system and value must match (all, not any) if specified 1/2
 
 ~~~xml
-<classification minOccurs="1" maxOccurs="1">
+<classification maxOccurs="unbounded" minOccurs="1">
   <value>
     <simpleValue>1</simpleValue>
   </value>
@@ -614,7 +614,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Both system and value must match (all, not any) if specified 2/2
 
 ~~~xml
-<classification minOccurs="1" maxOccurs="1">
+<classification maxOccurs="unbounded" minOccurs="1">
   <value>
     <simpleValue>1</simpleValue>
   </value>
@@ -648,7 +648,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Occurrences override the type classification per system 1/3
 
 ~~~xml
-<classification minOccurs="1" maxOccurs="1">
+<classification maxOccurs="unbounded" minOccurs="1">
   <value>
     <simpleValue>11</simpleValue>
   </value>
@@ -673,7 +673,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #16=IFCMATERIAL('Material',$,$);
 #17=IFCEXTERNALREFERENCERELATIONSHIP($,$,#6,(#16));
 #18=IFCWALL('3qs_CEYznSwfyPnfvmY$jn',$,$,$,$,$,$,$,$); /* Testcase */
-#19=IFCWALLTYPE('2J464n_AnPNgUfYvzrChAh',$,$,$,$,$,$,$,$,.ELEMENTEDWALL.);
+#19=IFCWALLTYPE('2J464n_AnPNgUfYvzrChAh',$,$,$,$,$,$,$,$,.NOTDEFINED.);
 #20=IFCRELDEFINESBYTYPE('3NmyAazpzLq8cIG7JPLlM9',$,$,$,(#18),#19);
 #21=IFCCLASSIFICATION($,$,$,'Foobaz',$,$,$);
 #22=IFCRELASSOCIATESCLASSIFICATION('25g_sgGv1Ktw1yG4pu$Q5F',$,$,$,(#1),#21);
@@ -686,7 +686,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Occurrences override the type classification per system 2/3
 
 ~~~xml
-<classification minOccurs="1" maxOccurs="1">
+<classification maxOccurs="unbounded" minOccurs="1">
   <value>
     <simpleValue>22</simpleValue>
   </value>
@@ -711,7 +711,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #16=IFCMATERIAL('Material',$,$);
 #17=IFCEXTERNALREFERENCERELATIONSHIP($,$,#6,(#16));
 #18=IFCWALL('3qs_CEYznSwfyPnfvmY$jn',$,$,$,$,$,$,$,$); /* Testcase */
-#19=IFCWALLTYPE('2J464n_AnPNgUfYvzrChAh',$,$,$,$,$,$,$,$,.ELEMENTEDWALL.);
+#19=IFCWALLTYPE('2J464n_AnPNgUfYvzrChAh',$,$,$,$,$,$,$,$,.NOTDEFINED.);
 #20=IFCRELDEFINESBYTYPE('3NmyAazpzLq8cIG7JPLlM9',$,$,$,(#18),#19);
 #21=IFCCLASSIFICATION($,$,$,'Foobaz',$,$,$);
 #22=IFCRELASSOCIATESCLASSIFICATION('25g_sgGv1Ktw1yG4pu$Q5F',$,$,$,(#1),#21);
@@ -724,7 +724,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Occurrences override the type classification per system 3/3
 
 ~~~xml
-<classification minOccurs="1" maxOccurs="1">
+<classification maxOccurs="unbounded" minOccurs="1">
   <value>
     <simpleValue>X</simpleValue>
   </value>
@@ -749,7 +749,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #16=IFCMATERIAL('Material',$,$);
 #17=IFCEXTERNALREFERENCERELATIONSHIP($,$,#6,(#16));
 #18=IFCWALL('3qs_CEYznSwfyPnfvmY$jn',$,$,$,$,$,$,$,$); /* Testcase */
-#19=IFCWALLTYPE('2J464n_AnPNgUfYvzrChAh',$,$,$,$,$,$,$,$,.ELEMENTEDWALL.);
+#19=IFCWALLTYPE('2J464n_AnPNgUfYvzrChAh',$,$,$,$,$,$,$,$,.NOTDEFINED.);
 #20=IFCRELDEFINESBYTYPE('3NmyAazpzLq8cIG7JPLlM9',$,$,$,(#18),#19);
 #21=IFCCLASSIFICATION($,$,$,'Foobaz',$,$,$);
 #22=IFCRELASSOCIATESCLASSIFICATION('25g_sgGv1Ktw1yG4pu$Q5F',$,$,$,(#1),#21);

@@ -3,7 +3,7 @@
         <title>Entities can be specified as an enumeration 2/3</title>
     </info>
     <specifications>
-        <specification name="Entities can be specified as an enumeration 2/3" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <specification name="Entities can be specified as an enumeration 2/3" ifcVersion="IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>

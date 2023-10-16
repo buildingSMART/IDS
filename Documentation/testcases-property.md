@@ -5,7 +5,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Elements with no properties always fail
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -30,7 +30,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Elements with a matching pset but no property also fail
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -58,7 +58,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Properties with a null value fail
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -86,7 +86,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] A name check will match any property with any string value
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -115,7 +115,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] A required facet checks all parameters as normal
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -131,7 +131,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -143,7 +143,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] A prohibited facet returns the opposite of a required facet
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="0" maxOccurs="0">
+<property datatype="IFCLABEL" minOccurs="0" maxOccurs="0">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -159,7 +159,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -171,7 +171,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] An optional facet always passes regardless of outcome 1/2
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="0" maxOccurs="1">
+<property datatype="IFCLABEL" minOccurs="0" maxOccurs="unbounded">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -187,7 +187,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -199,7 +199,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] An optional facet always passes regardless of outcome 2/2
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="0" maxOccurs="1">
+<property datatype="IFCLABEL" minOccurs="0" maxOccurs="unbounded">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -215,7 +215,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -227,7 +227,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] An empty string is considered falsey and will not pass
 
 ~~~xml
-<property datatype="IfcLogical" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLOGICAL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -243,7 +243,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -255,7 +255,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] A logical unknown is considered falsey and will not pass
 
 ~~~xml
-<property datatype="IfcDuration" minOccurs="1" maxOccurs="1">
+<property datatype="IFCDURATION" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -271,7 +271,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -283,7 +283,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] A zero duration will pass
 
 ~~~xml
-<property datatype="IfcDuration" minOccurs="1" maxOccurs="1">
+<property datatype="IFCDURATION" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -299,7 +299,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -311,7 +311,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] A property set to true will pass a name check
 
 ~~~xml
-<property datatype="IfcBoolean" minOccurs="1" maxOccurs="1">
+<property datatype="IFCBOOLEAN" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -327,7 +327,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -339,13 +339,44 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] A property set to false is still considered a value and will pass a name check
 
 ~~~xml
-<property datatype="IfcBoolean" minOccurs="1" maxOccurs="1">
+<property datatype="IFCBOOLEAN" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
   <name>
     <simpleValue>Foo</simpleValue>
   </name>
+</property>
+~~~
+
+~~~lua
+#1=IFCPROJECT('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,#6);
+#2=IFCSIUNIT(*,.LENGTHUNIT.,.MILLI.,.METRE.);
+#3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
+#4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
+#5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
+#7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
+#8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
+#9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
+#10=IFCPROPERTYSINGLEVALUE('Foo',$,IFCBOOLEAN(.F.),$);
+~~~
+
+[Sample IDS](testcases/property/pass-a_property_set_to_false_is_still_considered_a_value_and_will_pass_a_name_check.ids) - [Sample IFC: 7](testcases/property/pass-a_property_set_to_false_is_still_considered_a_value_and_will_pass_a_name_check.ifc)
+
+## [PASS] Specifying a value performs a case-sensitive match 1/2
+
+~~~xml
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
+  <propertySet>
+    <simpleValue>Foo_Bar</simpleValue>
+  </propertySet>
+  <name>
+    <simpleValue>Foo</simpleValue>
+  </name>
+  <value>
+    <simpleValue>Bar</simpleValue>
+  </value>
 </property>
 ~~~
 
@@ -359,37 +390,6 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
-#10=IFCPROPERTYSINGLEVALUE('Foo',$,IFCBOOLEAN(.F.),$);
-~~~
-
-[Sample IDS](testcases/property/pass-a_property_set_to_false_is_still_considered_a_value_and_will_pass_a_name_check.ids) - [Sample IFC: 7](testcases/property/pass-a_property_set_to_false_is_still_considered_a_value_and_will_pass_a_name_check.ifc)
-
-## [PASS] Specifying a value performs a case-sensitive match 1/2
-
-~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
-  <propertySet>
-    <simpleValue>Foo_Bar</simpleValue>
-  </propertySet>
-  <name>
-    <simpleValue>Foo</simpleValue>
-  </name>
-  <value>
-    <simpleValue>Bar</simpleValue>
-  </value>
-</property>
-~~~
-
-~~~lua
-#1=IFCPROJECT('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,#6);
-#2=IFCSIUNIT(*,.LENGTHUNIT.,.MILLI.,.METRE.);
-#3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
-#4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
-#5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#5,#4,#2,#3));
-#7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
-#8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
-#9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
 #10=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
 ~~~
 
@@ -398,7 +398,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Specifying a value performs a case-sensitive match 2/2
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -417,7 +417,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#5,#4,#2,#3));
+#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -429,7 +429,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Specifying a value fails against different values
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -448,7 +448,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#5,#4,#2,#3));
+#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -460,7 +460,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Non-ascii characters are treated without encoding
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -479,7 +479,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#5,#4,#2,#3));
+#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -491,7 +491,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] IDS does not handle string truncation such as for identifiers
 
 ~~~xml
-<property datatype="IfcIdentifier" minOccurs="1" maxOccurs="1">
+<property datatype="IFCIDENTIFIER" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -510,7 +510,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#5,#4,#2,#3));
+#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -522,7 +522,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] A number specified as a string is treated as a string
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -541,7 +541,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -553,7 +553,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Integer values are checked using type casting 1/4
 
 ~~~xml
-<property datatype="IfcInteger" minOccurs="1" maxOccurs="1">
+<property datatype="IFCINTEGER" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -572,7 +572,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -584,7 +584,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Integer values are checked using type casting 2/4
 
 ~~~xml
-<property datatype="IfcInteger" minOccurs="1" maxOccurs="1">
+<property datatype="IFCINTEGER" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -603,7 +603,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -615,7 +615,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Integer values are checked using type casting 3/4
 
 ~~~xml
-<property datatype="IfcInteger" minOccurs="1" maxOccurs="1">
+<property datatype="IFCINTEGER" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -634,7 +634,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -646,7 +646,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Integer values are checked using type casting 4/4
 
 ~~~xml
-<property datatype="IfcInteger" minOccurs="1" maxOccurs="1">
+<property datatype="IFCINTEGER" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -665,7 +665,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -677,7 +677,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Real values are checked using type casting 1/3
 
 ~~~xml
-<property datatype="IfcReal" minOccurs="1" maxOccurs="1">
+<property datatype="IFCREAL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -696,7 +696,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -708,7 +708,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Real values are checked using type casting 2/3
 
 ~~~xml
-<property datatype="IfcReal" minOccurs="1" maxOccurs="1">
+<property datatype="IFCREAL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -727,7 +727,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -739,7 +739,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Real values are checked using type casting 3/3
 
 ~~~xml
-<property datatype="IfcReal" minOccurs="1" maxOccurs="1">
+<property datatype="IFCREAL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -758,7 +758,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -770,7 +770,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Only specifically formatted numbers are allowed 1/4
 
 ~~~xml
-<property datatype="IfcReal" minOccurs="1" maxOccurs="1">
+<property datatype="IFCREAL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -789,7 +789,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -801,7 +801,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Only specifically formatted numbers are allowed 2/4
 
 ~~~xml
-<property datatype="IfcReal" minOccurs="1" maxOccurs="1">
+<property datatype="IFCREAL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -820,7 +820,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -832,7 +832,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Only specifically formatted numbers are allowed 3/4
 
 ~~~xml
-<property datatype="IfcReal" minOccurs="1" maxOccurs="1">
+<property datatype="IFCREAL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -851,7 +851,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -863,7 +863,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Only specifically formatted numbers are allowed 4/4
 
 ~~~xml
-<property datatype="IfcReal" minOccurs="1" maxOccurs="1">
+<property datatype="IFCREAL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -882,7 +882,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -894,7 +894,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Floating point numbers are compared with a 1e-6 tolerance 1/4
 
 ~~~xml
-<property datatype="IfcReal" minOccurs="1" maxOccurs="1">
+<property datatype="IFCREAL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -913,7 +913,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -925,7 +925,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Floating point numbers are compared with a 1e-6 tolerance 2/4
 
 ~~~xml
-<property datatype="IfcReal" minOccurs="1" maxOccurs="1">
+<property datatype="IFCREAL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -944,7 +944,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -956,7 +956,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Floating point numbers are compared with a 1e-6 tolerance 3/4
 
 ~~~xml
-<property datatype="IfcReal" minOccurs="1" maxOccurs="1">
+<property datatype="IFCREAL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -975,7 +975,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -987,7 +987,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Floating point numbers are compared with a 1e-6 tolerance 4/4
 
 ~~~xml
-<property datatype="IfcReal" minOccurs="1" maxOccurs="1">
+<property datatype="IFCREAL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1006,7 +1006,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -1018,7 +1018,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Booleans must be specified as uppercase strings 1/3
 
 ~~~xml
-<property datatype="IfcBoolean" minOccurs="1" maxOccurs="1">
+<property datatype="IFCBOOLEAN" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1037,7 +1037,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -1049,7 +1049,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Booleans must be specified as uppercase strings 2/3
 
 ~~~xml
-<property datatype="IfcBoolean" minOccurs="1" maxOccurs="1">
+<property datatype="IFCBOOLEAN" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1068,7 +1068,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -1080,7 +1080,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Booleans must be specified as uppercase strings 3/3
 
 ~~~xml
-<property datatype="IfcBoolean" minOccurs="1" maxOccurs="1">
+<property datatype="IFCBOOLEAN" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1099,7 +1099,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -1111,7 +1111,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Dates are treated as strings 1/2
 
 ~~~xml
-<property datatype="IfcDate" minOccurs="1" maxOccurs="1">
+<property datatype="IFCDATE" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1130,7 +1130,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -1142,7 +1142,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Dates are treated as strings 2/2
 
 ~~~xml
-<property datatype="IfcDate" minOccurs="1" maxOccurs="1">
+<property datatype="IFCDATE" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1161,7 +1161,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -1173,7 +1173,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Durations are treated as strings 1/2
 
 ~~~xml
-<property datatype="IfcDuration" minOccurs="1" maxOccurs="1">
+<property datatype="IFCDURATION" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1192,7 +1192,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -1204,7 +1204,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Durations are treated as strings 1/2
 
 ~~~xml
-<property datatype="IfcDuration" minOccurs="1" maxOccurs="1">
+<property datatype="IFCDURATION" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1223,7 +1223,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -1235,7 +1235,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any matching value in an enumerated property will pass 1/3
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Pset_WallCommon</simpleValue>
   </propertySet>
@@ -1254,7 +1254,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#5,#4,#2,#3));
+#6=IFCUNITASSIGNMENT((#3,#4,#2,#5));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Pset_WallCommon',$,(#11));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -1267,7 +1267,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any matching value in an enumerated property will pass 2/3
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Pset_WallCommon</simpleValue>
   </propertySet>
@@ -1286,7 +1286,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#5,#4,#2,#3));
+#6=IFCUNITASSIGNMENT((#3,#4,#2,#5));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Pset_WallCommon',$,(#11));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -1299,7 +1299,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Any matching value in an enumerated property will pass 3/3
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Pset_WallCommon</simpleValue>
   </propertySet>
@@ -1318,7 +1318,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#5,#4,#2,#3));
+#6=IFCUNITASSIGNMENT((#3,#4,#2,#5));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Pset_WallCommon',$,(#11));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -1331,7 +1331,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any matching value in a list property will pass 1/3
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1350,7 +1350,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#3,#4,#5,#2));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -1362,7 +1362,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any matching value in a list property will pass 2/3
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1381,7 +1381,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#3,#4,#5,#2));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -1393,7 +1393,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Any matching value in a list property will pass 3/3
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1412,7 +1412,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#3,#4,#5,#2));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -1424,7 +1424,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any matching value in a bounded property will pass 1/4
 
 ~~~xml
-<property datatype="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLENGTHMEASURE" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1443,7 +1443,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#5,#4,#2,#3));
+#6=IFCUNITASSIGNMENT((#2,#3,#5,#4));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -1455,7 +1455,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any matching value in a bounded property will pass 2/4
 
 ~~~xml
-<property datatype="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLENGTHMEASURE" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1474,7 +1474,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#5,#4,#2,#3));
+#6=IFCUNITASSIGNMENT((#2,#3,#5,#4));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -1486,7 +1486,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any matching value in a bounded property will pass 3/4
 
 ~~~xml
-<property datatype="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLENGTHMEASURE" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1505,7 +1505,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#5,#4,#2,#3));
+#6=IFCUNITASSIGNMENT((#2,#3,#5,#4));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -1517,7 +1517,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Any matching value in a bounded property will pass 4/4
 
 ~~~xml
-<property datatype="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLENGTHMEASURE" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1536,7 +1536,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#5,#4,#2,#3));
+#6=IFCUNITASSIGNMENT((#2,#3,#5,#4));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -1548,7 +1548,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any matching value in a table property will pass 1/3
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1567,7 +1567,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
+#6=IFCUNITASSIGNMENT((#3,#4,#2,#5));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -1579,7 +1579,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Any matching value in a table property will pass 2/3
 
 ~~~xml
-<property datatype="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLENGTHMEASURE" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1598,7 +1598,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
+#6=IFCUNITASSIGNMENT((#3,#4,#2,#5));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -1610,7 +1610,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Any matching value in a table property will pass 3/3
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1629,7 +1629,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
+#6=IFCUNITASSIGNMENT((#3,#4,#2,#5));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -1641,7 +1641,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Reference properties are treated as objects and not supported
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1669,7 +1669,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Predefined properties are supported but discouraged 1/2
 
 ~~~xml
-<property datatype="IfcDoorPanelOperationEnum" minOccurs="1" maxOccurs="1">
+<property datatype="IFCDOORPANELOPERATIONENUM" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1688,7 +1688,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCDOOR('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCDOORPANELPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,$,.SWINGING.,$,.LEFT.,$);
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -1699,7 +1699,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Predefined properties are supported but discouraged 2/2
 
 ~~~xml
-<property datatype="IfcDoorPanelOperationEnum" minOccurs="1" maxOccurs="1">
+<property datatype="IFCDOORPANELOPERATIONENUM" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1718,7 +1718,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCDOOR('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCDOORPANELPROPERTIES('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,$,.SWINGING.,$,.LEFT.,$);
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -1729,7 +1729,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] A name check will match any quantity with any value
 
 ~~~xml
-<property datatype="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLENGTHMEASURE" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1757,7 +1757,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Quantities must also match the appropriate measure
 
 ~~~xml
-<property datatype="IfcAreaMeasure" minOccurs="1" maxOccurs="1">
+<property datatype="IFCAREAMEASURE" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1785,7 +1785,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Complex properties are not supported 1/2
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1801,7 +1801,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#2,#5,#3,#4));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -1814,7 +1814,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Complex properties are not supported 2/2
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo</simpleValue>
   </propertySet>
@@ -1830,7 +1830,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#2,#5,#3,#4));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -1843,7 +1843,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Complex properties are not supported 1/2
 
 ~~~xml
-<property datatype="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLENGTHMEASURE" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -1859,7 +1859,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCELEMENTQUANTITY('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -1872,7 +1872,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Complex properties are not supported 2/2
 
 ~~~xml
-<property datatype="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLENGTHMEASURE" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo</simpleValue>
   </propertySet>
@@ -1888,7 +1888,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
+#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCELEMENTQUANTITY('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -1901,7 +1901,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] All matching property sets must satisfy requirements 1/3
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <xs:restriction base="xs:string">
       <xs:pattern value="Foo_.*"/>
@@ -1931,7 +1931,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] All matching property sets must satisfy requirements 2/3
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <xs:restriction base="xs:string">
       <xs:pattern value="Foo_.*"/>
@@ -1964,7 +1964,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] All matching property sets must satisfy requirements 3/3
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <xs:restriction base="xs:string">
       <xs:pattern value="Foo_.*"/>
@@ -1998,7 +1998,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] All matching properties must satisfy requirements 1/3
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -2019,7 +2019,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
+#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -2031,7 +2031,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] All matching properties must satisfy requirements 2/3
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -2052,7 +2052,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
+#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -2065,7 +2065,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] All matching properties must satisfy requirements 3/3
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -2086,7 +2086,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
+#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10,#11));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -2099,7 +2099,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] If multiple properties are matched, all values must satisfy requirements 1/2
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -2136,7 +2136,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] If multiple properties are matched, all values must satisfy requirements 2/2
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -2173,7 +2173,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Measures are used to specify an IFC data type 1/2
 
 ~~~xml
-<property datatype="IfcTimeMeasure" minOccurs="1" maxOccurs="1">
+<property datatype="IFCTIMEMEASURE" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -2192,7 +2192,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
+#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -2204,7 +2204,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Measures are used to specify an IFC data type 2/2
 
 ~~~xml
-<property datatype="IfcTimeMeasure" minOccurs="1" maxOccurs="1">
+<property datatype="IFCTIMEMEASURE" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -2223,7 +2223,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
+#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
 #8=IFCPROPERTYSET('16MocU_IDOF8_x3Iqllz0d',$,'Foo_Bar',$,(#10));
 #9=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
@@ -2235,7 +2235,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Unit conversions shall take place to IDS-nominated standard units 1/2
 
 ~~~xml
-<property datatype="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLENGTHMEASURE" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -2266,7 +2266,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Unit conversions shall take place to IDS-nominated standard units 2/2
 
 ~~~xml
-<property datatype="IfcLengthMeasure" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLENGTHMEASURE" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -2297,7 +2297,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Properties can be inherited from the type 1/2
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -2313,9 +2313,9 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
+#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
-#8=IFCWALLTYPE('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,(#10),$,$,$,.ELEMENTEDWALL.);
+#8=IFCWALLTYPE('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,(#10),$,$,$,.NOTDEFINED.);
 #9=IFCRELDEFINESBYTYPE('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
 #10=IFCPROPERTYSET('0WTUhjMwvT39YBFH2pryoM',$,'Foo_Bar',$,(#11));
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
@@ -2326,7 +2326,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Properties can be inherited from the type 2/2
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -2342,9 +2342,9 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#4,#2,#5,#3));
+#6=IFCUNITASSIGNMENT((#3,#5,#4,#2));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
-#8=IFCWALLTYPE('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,(#10),$,$,$,.ELEMENTEDWALL.); /* Testcase */
+#8=IFCWALLTYPE('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,(#10),$,$,$,.NOTDEFINED.); /* Testcase */
 #9=IFCRELDEFINESBYTYPE('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
 #10=IFCPROPERTYSET('0WTUhjMwvT39YBFH2pryoM',$,'Foo_Bar',$,(#11));
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
@@ -2355,7 +2355,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Properties can be overriden by an occurrence 1/2
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -2374,9 +2374,9 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#2,#5,#3,#4));
+#6=IFCUNITASSIGNMENT((#4,#2,#3,#5));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$); /* Testcase */
-#8=IFCWALLTYPE('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,(#10),$,$,$,.ELEMENTEDWALL.);
+#8=IFCWALLTYPE('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,(#10),$,$,$,.NOTDEFINED.);
 #9=IFCRELDEFINESBYTYPE('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
 #10=IFCPROPERTYSET('0WTUhjMwvT39YBFH2pryoM',$,'Foo_Bar',$,(#11));
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Baz'),$);
@@ -2390,7 +2390,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Properties can be overriden by an occurrence 2/2
 
 ~~~xml
-<property datatype="IfcLabel" minOccurs="1" maxOccurs="1">
+<property datatype="IFCLABEL" maxOccurs="unbounded" minOccurs="1">
   <propertySet>
     <simpleValue>Foo_Bar</simpleValue>
   </propertySet>
@@ -2409,9 +2409,9 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 #3=IFCSIUNIT(*,.AREAUNIT.,.MILLI.,.SQUARE_METRE.);
 #4=IFCSIUNIT(*,.VOLUMEUNIT.,.MILLI.,.CUBIC_METRE.);
 #5=IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#6=IFCUNITASSIGNMENT((#2,#5,#3,#4));
+#6=IFCUNITASSIGNMENT((#4,#2,#3,#5));
 #7=IFCWALL('2nJrDaLQfJ1QPhdJR0o97J',$,$,$,$,$,$,$,$);
-#8=IFCWALLTYPE('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,(#10),$,$,$,.ELEMENTEDWALL.); /* Testcase */
+#8=IFCWALLTYPE('16MocU_IDOF8_x3Iqllz0d',$,$,$,$,(#10),$,$,$,.NOTDEFINED.); /* Testcase */
 #9=IFCRELDEFINESBYTYPE('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#7),#8);
 #10=IFCPROPERTYSET('0WTUhjMwvT39YBFH2pryoM',$,'Foo_Bar',$,(#11));
 #11=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Baz'),$);

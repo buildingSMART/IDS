@@ -3,7 +3,7 @@
         <title>Systems should match exactly 5/5</title>
     </info>
     <specifications>
-        <specification name="Systems should match exactly 5/5" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <specification name="Systems should match exactly 5/5" ifcVersion="IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
@@ -12,7 +12,7 @@
                 </entity>
             </applicability>
             <requirements>
-                <classification minOccurs="1" maxOccurs="1">
+                <classification maxOccurs="unbounded" minOccurs="1">
                     <system>
                         <simpleValue>Foobar</simpleValue>
                     </system>

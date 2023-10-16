@@ -3,7 +3,7 @@
         <title>Regex patterns can be used 1/3</title>
     </info>
     <specifications>
-        <specification name="Regex patterns can be used 1/3" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <specification name="Regex patterns can be used 1/3" ifcVersion="IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>

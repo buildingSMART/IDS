@@ -5,7 +5,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] An enumeration matches case sensitively 1/3
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>Name</simpleValue>
   </name>
@@ -27,7 +27,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] An enumeration matches case sensitively 2/3
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>Name</simpleValue>
   </name>
@@ -49,7 +49,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] An enumeration matches case sensitively 3/3
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>Name</simpleValue>
   </name>
@@ -71,7 +71,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] A bound can be inclusive 1/4
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>RefractionIndex</simpleValue>
   </name>
@@ -93,7 +93,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] A bound can be inclusive 2/4
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>RefractionIndex</simpleValue>
   </name>
@@ -115,7 +115,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] A bound can be inclusive 3/4
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>RefractionIndex</simpleValue>
   </name>
@@ -137,7 +137,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] A bound can be inclusive 4/4
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>RefractionIndex</simpleValue>
   </name>
@@ -159,7 +159,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] A bound can be inclusive 1/3
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>RefractionIndex</simpleValue>
   </name>
@@ -181,7 +181,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] A bound can be inclusive 2/3
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>RefractionIndex</simpleValue>
   </name>
@@ -203,7 +203,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] A bound can be inclusive 3/3
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>RefractionIndex</simpleValue>
   </name>
@@ -225,7 +225,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Regex patterns can be used 1/3
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>Name</simpleValue>
   </name>
@@ -246,7 +246,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Regex patterns can be used 2/3
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>Name</simpleValue>
   </name>
@@ -267,7 +267,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Regex patterns can be used 3/3
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>Name</simpleValue>
   </name>
@@ -288,7 +288,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Patterns only work on strings and nothing else
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>RefractionIndex</simpleValue>
   </name>
@@ -309,7 +309,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Length checks can be used 1/2
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>Name</simpleValue>
   </name>
@@ -330,7 +330,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Length checks can be used 1/2
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>Name</simpleValue>
   </name>
@@ -351,7 +351,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Max and min length checks can be used 1/3
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>Name</simpleValue>
   </name>
@@ -373,7 +373,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Max and min length checks can be used 2/3
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>Name</simpleValue>
   </name>
@@ -395,7 +395,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [PASS] Max and min length checks can be used 3/3
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>Name</simpleValue>
   </name>
@@ -417,7 +417,7 @@ These testcases are designed to help describe behaviour in edge cases and ambigu
 ## [FAIL] Max and min length checks can be used 4/3
 
 ~~~xml
-<attribute minOccurs="1" maxOccurs="1">
+<attribute>
   <name>
     <simpleValue>Name</simpleValue>
   </name>

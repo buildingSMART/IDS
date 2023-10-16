@@ -3,7 +3,7 @@
         <title>An aggregate entity may pass any ancestral whole passes</title>
     </info>
     <specifications>
-        <specification name="An aggregate entity may pass any ancestral whole passes" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <specification name="An aggregate entity may pass any ancestral whole passes" ifcVersion="IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
@@ -12,7 +12,7 @@
                 </entity>
             </applicability>
             <requirements>
-                <partOf relation="IFCRELAGGREGATES" minOccurs="1" maxOccurs="1">
+                <partOf relation="IFCRELAGGREGATES" maxOccurs="unbounded" minOccurs="1">
                     <entity>
                         <name>
                             <simpleValue>IFCELEMENTASSEMBLY</simpleValue>

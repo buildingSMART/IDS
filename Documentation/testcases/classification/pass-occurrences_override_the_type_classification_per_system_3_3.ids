@@ -3,7 +3,7 @@
         <title>Occurrences override the type classification per system 3/3</title>
     </info>
     <specifications>
-        <specification name="Occurrences override the type classification per system 3/3" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <specification name="Occurrences override the type classification per system 3/3" ifcVersion="IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
@@ -12,7 +12,7 @@
                 </entity>
             </applicability>
             <requirements>
-                <classification minOccurs="1" maxOccurs="1">
+                <classification maxOccurs="unbounded" minOccurs="1">
                     <value>
                         <simpleValue>X</simpleValue>
                     </value>

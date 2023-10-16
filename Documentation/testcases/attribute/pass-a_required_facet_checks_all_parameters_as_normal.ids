@@ -3,7 +3,7 @@
         <title>A required facet checks all parameters as normal</title>
     </info>
     <specifications>
-        <specification name="A required facet checks all parameters as normal" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <specification name="A required facet checks all parameters as normal" ifcVersion="IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>

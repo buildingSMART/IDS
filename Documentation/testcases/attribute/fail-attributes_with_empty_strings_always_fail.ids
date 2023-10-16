@@ -3,7 +3,7 @@
         <title>Attributes with empty strings always fail</title>
     </info>
     <specifications>
-        <specification name="Attributes with empty strings always fail" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <specification name="Attributes with empty strings always fail" ifcVersion="IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>

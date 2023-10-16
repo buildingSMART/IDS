@@ -3,7 +3,7 @@
         <title>Patterns only work on strings and nothing else</title>
     </info>
     <specifications>
-        <specification name="Patterns only work on strings and nothing else" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <specification name="Patterns only work on strings and nothing else" ifcVersion="IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>

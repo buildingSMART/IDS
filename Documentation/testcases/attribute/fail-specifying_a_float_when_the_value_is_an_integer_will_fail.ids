@@ -3,7 +3,7 @@
         <title>Specifying a float when the value is an integer will fail</title>
     </info>
     <specifications>
-        <specification name="Specifying a float when the value is an integer will fail" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <specification name="Specifying a float when the value is an integer will fail" ifcVersion="IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>

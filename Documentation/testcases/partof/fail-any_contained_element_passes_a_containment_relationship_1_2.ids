@@ -3,7 +3,7 @@
         <title>Any contained element passes a containment relationship 1/2</title>
     </info>
     <specifications>
-        <specification name="Any contained element passes a containment relationship 1/2" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <specification name="Any contained element passes a containment relationship 1/2" ifcVersion="IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
@@ -12,7 +12,7 @@
                 </entity>
             </applicability>
             <requirements>
-                <partOf relation="IFCRELCONTAINEDINSPATIALSTRUCTURE" minOccurs="1" maxOccurs="1">
+                <partOf relation="IFCRELCONTAINEDINSPATIALSTRUCTURE" maxOccurs="unbounded" minOccurs="1">
                     <entity>
                         <name>
                             <simpleValue>IFCSPACE</simpleValue>

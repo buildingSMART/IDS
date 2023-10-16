@@ -3,7 +3,7 @@
         <title>An aggregate may specify the predefined type of the whole 2/2</title>
     </info>
     <specifications>
-        <specification name="An aggregate may specify the predefined type of the whole 2/2" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <specification name="An aggregate may specify the predefined type of the whole 2/2" ifcVersion="IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
@@ -12,7 +12,7 @@
                 </entity>
             </applicability>
             <requirements>
-                <partOf relation="IFCRELAGGREGATES" minOccurs="1" maxOccurs="1">
+                <partOf relation="IFCRELAGGREGATES" maxOccurs="unbounded" minOccurs="1">
                     <entity>
                         <name>
                             <simpleValue>IFCSLAB</simpleValue>

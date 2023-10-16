@@ -3,7 +3,7 @@
         <title>Inverse attributes cannot be checked and always fail</title>
     </info>
     <specifications>
-        <specification name="Inverse attributes cannot be checked and always fail" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <specification name="Inverse attributes cannot be checked and always fail" ifcVersion="IFC4" minOccurs="1" maxOccurs="unbounded">
             <applicability>
                 <entity>
                     <name>
