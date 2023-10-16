@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 
-name: check-test-cases
+name: audit-all-ids-files
 
 on:
   workflow_dispatch: # Allow running the workflow manually from the GitHub UI
@@ -11,9 +11,9 @@ on:
 
 jobs:
   check-test-cases:
-    name: check-test-cases
+    name: audit-all-ids-files
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Run './build.cmd CheckTestCases'
-        run: ./build.cmd CheckTestCases
+      - name: Run './build.cmd AuditAllIdsFiles'
+        run: ./build.cmd AuditAllIdsFiles

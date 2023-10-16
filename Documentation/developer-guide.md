@@ -80,7 +80,7 @@ To help you get started with development, here is a directory of IDS libraries t
 Language | License | Library
 --- | --- | ---
 C# | ? | [XBim](todo)
-Python | LGPL-3.0-or-later | [IfcOpenShell](todo)
+Python | LGPL-3.0-or-later | [IfcOpenShell](https://ifcopenshell.org/)
 ? | ? | ODA?
 Javascript | ? | Something or other
 
