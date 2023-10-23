@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/0.9.6/ids.xsd">
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/0.9.7/ids.xsd">
     <ids:info>
         <ids:title>Demo - BIM basis ILS</ids:title>
         <ids:version>2.0</ids:version>
         <ids:description>Samenwerken gaat beter als de informatie waarop we bouwen uitwisselbaar, gestructureerd, eenduidig, correct, volledig en herbruikbaar is. De BIM basis informatieleveringsspecificatie (BIM basis ILS) is een goede eerste stap.</ids:description>
     </ids:info>
     <ids:specifications>
-        <ids:specification ifcVersion="IFC2X3" name="lokale positie" description="Coördineer onderling de lokale positie van het aspectmodel. Deze ligt vlakbij het nulpunt. Er moet exact 1 nulpunt referentieobject in het model aanwezig zijn. Een nulpunt referentieobject is van het IFC type IFCBUILDINGELEMENTPROXY en heeft 'nulpunt' in de naam (in hoofdletters of kleine letters)" minOccurs="1" maxOccurs="unbounded">
-            <ids:applicability>
+        <ids:specification ifcVersion="IFC2X3" name="lokale positie" description="Coördineer onderling de lokale positie van het aspectmodel. Deze ligt vlakbij het nulpunt. Er moet exact 1 nulpunt referentieobject in het model aanwezig zijn. Een nulpunt referentieobject is van het IFC type IFCBUILDINGELEMENTPROXY en heeft 'nulpunt' in de naam (in hoofdletters of kleine letters)">
+            <ids:applicability minOccurs="1" maxOccurs="unbounded">
                 <ids:entity>
                     <ids:name>
                         <ids:simpleValue>IFCBUILDINGELEMENTPROXY</ids:simpleValue>
@@ -32,8 +32,8 @@
                 </ids:entity>
             </ids:requirements>
         </ids:specification>
-        <ids:specification ifcVersion="IFC2X3" maxOccurs="unbounded" name="Bouwlaagindeling en -naamgeving" description="Elk aspectmodel hanteert een consistente naamgeving. Ken alle objecten aan de juiste bouwlaag toe. Benoem alleen bouwlagen als IfcBuildingStorey.">
-            <ids:applicability>
+        <ids:specification ifcVersion="IFC2X3" name="Bouwlaagindeling en -naamgeving" description="Elk aspectmodel hanteert een consistente naamgeving. Ken alle objecten aan de juiste bouwlaag toe. Benoem alleen bouwlagen als IfcBuildingStorey.">
+            <ids:applicability maxOccurs="unbounded">
                 <ids:entity>
                     <ids:name>
                         <ids:simpleValue>IFCBUILDINGSTOREY</ids:simpleValue>
@@ -108,8 +108,8 @@
                 </ids:attribute>
             </ids:requirements>
         </ids:specification>
-        <ids:specification ifcVersion="IFC4" maxOccurs="unbounded" name="Classificatiesystematiek" description="Voorzie objecten altijd van een viercijferige NL-SfB code volgens de laatst gepubliceerde versie.">
-            <ids:applicability>
+        <ids:specification ifcVersion="IFC4" name="Classificatiesystematiek" description="Voorzie objecten altijd van een viercijferige NL-SfB code volgens de laatst gepubliceerde versie.">
+            <ids:applicability maxOccurs="unbounded">
                 <ids:entity>
                     <ids:name>
                         <xs:restriction base="xs:string">

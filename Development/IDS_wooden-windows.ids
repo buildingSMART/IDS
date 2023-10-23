@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/0.9.6/ids.xsd">
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/0.9.7/ids.xsd">
 	<ids:info>
 		<ids:title>Wooden Windows</ids:title>
 		<ids:copyright>NBvT</ids:copyright>
@@ -9,8 +9,8 @@
 	</ids:info>
 	<ids:specifications>
 		<!-- specification added to have at least one case of predefinedType in the documenetation -->
-		<ids:specification ifcVersion="IFC2X3" name="PredefinedTypeExample" minOccurs="1" maxOccurs="unbounded">
-			<ids:applicability>
+		<ids:specification ifcVersion="IFC2X3" name="PredefinedTypeExample">
+			<ids:applicability minOccurs="1" maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<ids:simpleValue>IFCMEMBER</ids:simpleValue>
@@ -30,8 +30,8 @@
 				</ids:partOf>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC2X3" name="Stijlen en Dorpels" minOccurs="1" maxOccurs="unbounded">
-			<ids:applicability>
+		<ids:specification ifcVersion="IFC2X3" name="Stijlen en Dorpels">
+			<ids:applicability minOccurs="1" maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<ids:simpleValue>IFCMEMBER</ids:simpleValue>
@@ -98,8 +98,8 @@
                 </ids:material>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC2X3" name="Deur" minOccurs="0" maxOccurs="unbounded">
-			<ids:applicability>
+		<ids:specification ifcVersion="IFC2X3" name="Deur">
+			<ids:applicability minOccurs="0" maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<ids:simpleValue>IFCDOOR</ids:simpleValue>
@@ -163,8 +163,8 @@
 				<ids:material minOccurs="1" maxOccurs="unbounded"/>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification minOccurs="0" maxOccurs="unbounded" name="Raam" ifcVersion="IFC2X3">
-			<ids:applicability>
+		<ids:specification name="Raam" ifcVersion="IFC2X3">
+			<ids:applicability minOccurs="0" maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<ids:simpleValue>IFCWINDOW</ids:simpleValue>
@@ -226,9 +226,9 @@
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification name="Raam met glas" minOccurs="0" maxOccurs="unbounded" ifcVersion="IFC2X3">
+		<ids:specification name="Raam met glas" ifcVersion="IFC2X3">
 			<!-- this one will 'clash' with the previous one. We need some kind of 'alle values except' pattern. For example the ^ used in most regex languages, but not in XSD patterns -->
-			<ids:applicability>
+			<ids:applicability minOccurs="0" maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<ids:simpleValue>IFCWINDOW</ids:simpleValue>
@@ -267,8 +267,8 @@
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification minOccurs="0" maxOccurs="unbounded" name="Paneel" ifcVersion="IFC2X3">
-			<ids:applicability>
+		<ids:specification name="Paneel" ifcVersion="IFC2X3">
+			<ids:applicability minOccurs="0" maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<ids:simpleValue>IFCPLATE</ids:simpleValue>

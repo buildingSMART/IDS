@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/0.9.6/ids.xsd">
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/0.9.7/ids.xsd">
 	<ids:info>
 		<ids:title>Example for ArcDox </ids:title>
 		<ids:copyright>buildingSMART International Ltd</ids:copyright>
 		<ids:date>2022-02-08</ids:date>
 	</ids:info>
 	<ids:specifications>
-		<ids:specification instructions="Add some context here to help users understand what you are asking." ifcVersion="IFC2X3" name="Project requirements" maxOccurs="unbounded">
-			<ids:applicability>
+		<ids:specification instructions="Add some context here to help users understand what you are asking." ifcVersion="IFC2X3" name="Project requirements">
+			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<ids:simpleValue>IFCPROJECT</ids:simpleValue>
@@ -37,8 +37,8 @@
 				</ids:attribute>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification name="name1" minOccurs="1" maxOccurs="unbounded" ifcVersion="IFC2X3">
-			<ids:applicability>
+		<ids:specification name="name1" ifcVersion="IFC2X3">
+			<ids:applicability minOccurs="1" maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<ids:simpleValue>IFCBUILDING</ids:simpleValue>
@@ -94,8 +94,8 @@
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification name="name2" minOccurs="1" maxOccurs="unbounded" ifcVersion="IFC2X3">
-			<ids:applicability>
+		<ids:specification name="name2" ifcVersion="IFC2X3">
+			<ids:applicability minOccurs="1" maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<ids:simpleValue>IFCUNITASSIGNMENT</ids:simpleValue>
@@ -111,8 +111,8 @@
 				</ids:attribute>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification name="name3" minOccurs="1" maxOccurs="unbounded" ifcVersion="IFC2X3">
-			<ids:applicability>
+		<ids:specification name="name3" ifcVersion="IFC2X3">
+			<ids:applicability minOccurs="1" maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<ids:simpleValue>IFCPOSTALADDRESS</ids:simpleValue>
@@ -150,8 +150,8 @@
 				</ids:attribute>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification name="name4" minOccurs="1" maxOccurs="unbounded" ifcVersion="IFC2X3">
-			<ids:applicability>
+		<ids:specification name="name4" ifcVersion="IFC2X3">
+			<ids:applicability minOccurs="1" maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<ids:simpleValue>IFCSITE</ids:simpleValue>
