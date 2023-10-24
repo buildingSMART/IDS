@@ -132,7 +132,7 @@
 				</ids:property>
 				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLABEL" instructions="Primary travel direction of people in a given area. For example, the flow direction of people in a one-way corridor.">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_SpaceCommon</ids:simpleValue>
+						<ids:simpleValue>ePset_SpaceOMA</ids:simpleValue>
 					</ids:propertySet>
 					<ids:name>
 						<ids:simpleValue>TravelDirection</ids:simpleValue>
@@ -203,10 +203,13 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:attribute>
-				<ids:attribute instructions="Describes the general type of occupant movement that we intend this zone to be used for (shuffling past seats, an ultimate destination etc.)">
-					<ids:name>
+				<ids:property datatype="" instructions="Describes the general type of occupant movement that we intend this zone to be used for (shuffling past seats, an ultimate destination etc.)" minOccurs="1">
+<ids:propertySet>
+	<ids:simpleValue>ePset_OMA</ids:simpleValue>
+</ids:propertySet>
+<ids:name>
 						<ids:simpleValue>MovementType</ids:simpleValue>
-					</ids:name>
+</ids:name>
 					<ids:value>
 						<xs:restriction>
 							<xs:enumeration value="COUNTER"/>
@@ -227,7 +230,7 @@
 							<xs:enumeration value="WAYPOINT"/>
 						</xs:restriction>
 					</ids:value>
-				</ids:attribute>
+				</ids:property>
 			</ids:requirements>
 		</ids:specification>
 		<ids:specification ifcVersion="IFC4X3" name="Door" description="Occupant Movement Analysis - data properties list for Door" maxOccurs="unbounded">
@@ -301,7 +304,7 @@
 				</ids:attribute>
 				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCIDENTIFIER" instructions="The direction the door opens. For example 'towards room1', 'from room1'">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_OMA_Door</ids:simpleValue>
+						<ids:simpleValue>ePset_OMA_Door</ids:simpleValue>
 					</ids:propertySet>
 					<ids:name>
 						<ids:simpleValue>DirectionOfTravel</ids:simpleValue>
@@ -333,7 +336,7 @@
 				</ids:property>
 				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCREAL" instructions="The desired or capping flow rate for the door. Unit Flow Rate (in people/unit width/sec)/Flow rate">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_DoorCommon</ids:simpleValue>
+						<ids:simpleValue>ePset_DoorOMA</ids:simpleValue>
 					</ids:propertySet>
 					<ids:name>
 						<ids:simpleValue>RequiredDoorFlowrate</ids:simpleValue>
@@ -341,7 +344,7 @@
 				</ids:property>
 				<ids:property minOccurs="0" maxOccurs="unbounded" datatype="IFCREAL" instructions="Relative attractiveness between exit, related to how likely they will be used (optional)">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_DoorCommon</ids:simpleValue>
+						<ids:simpleValue>ePset_DoorOMA</ids:simpleValue>
 					</ids:propertySet>
 					<ids:name>
 						<ids:simpleValue>UsagePreferenceFactor</ids:simpleValue>
@@ -420,8 +423,8 @@
 				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLENGTHMEASURE" instructions="Vertical height of each step">
 					<ids:propertySet>
 						<xs:restriction base="xs:string">
-							<xs:enumeration value="Pset_StairCommon"/>
-							<xs:enumeration value="Pset_StairFlightCommon"/>
+							<xs:enumeration value="ePset_StairOMA"/>
+							<xs:enumeration value="ePset_StairFlightOMA"/>
 						</xs:restriction>
 					</ids:propertySet>
 					<ids:name>
@@ -452,8 +455,8 @@
 				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLABEL" instructions="Up, down, bidirectional">
 					<ids:propertySet>
 						<xs:restriction base="xs:string">
-							<xs:enumeration value="Pset_StairCommon"/>
-							<xs:enumeration value="Pset_StairFlightCommon"/>
+							<xs:enumeration value="ePset_StairOMA"/>
+							<xs:enumeration value="ePset_StairFlightOMA"/>
 						</xs:restriction>
 					</ids:propertySet>
 					<ids:name>
@@ -530,7 +533,7 @@
 				</ids:property>
 				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCREAL" instructions="Basic lift acceleration rate">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
+						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
 					<ids:name>
 						<ids:simpleValue>AccelerationRate</ids:simpleValue>
@@ -538,7 +541,7 @@
 				</ids:property>
 				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCREAL" instructions="Basic lift braking rate">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
+						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
 					<ids:name>
 						<ids:simpleValue>DecelerationRate</ids:simpleValue>
@@ -546,7 +549,7 @@
 				</ids:property>
 				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCTIMEMEASURE" instructions="Total time duration for doors to open">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
+						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
 					<ids:name>
 						<ids:simpleValue>DoorOpeningTime</ids:simpleValue>
@@ -554,7 +557,7 @@
 				</ids:property>
 				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCTIMEMEASURE" instructions="Total time duration for doors to close">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
+						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
 					<ids:name>
 						<ids:simpleValue>DoorClosingTime</ids:simpleValue>
@@ -562,7 +565,7 @@
 				</ids:property>
 				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCTIMEMEASURE" instructions="The time the lift doors remain open after fully opening once no person has passed">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_TransportElementElevator</ids:simpleValue>
+						<ids:simpleValue>ePset_TransportElementElevatorOMA</ids:simpleValue>
 					</ids:propertySet>
 					<ids:name>
 						<ids:simpleValue>DoorDwellTime</ids:simpleValue>
@@ -570,7 +573,7 @@
 				</ids:property>
 				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCTIMEMEASURE" instructions="The time it takes a lift motor to start moving the lift after the doors have fully closed">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_TransportElementElevator</ids:simpleValue>
+						<ids:simpleValue>ePset_TransportElementElevatorOMA</ids:simpleValue>
 					</ids:propertySet>
 					<ids:name>
 						<ids:simpleValue>MotorDelayTime</ids:simpleValue>
@@ -578,7 +581,7 @@
 				</ids:property>
 				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCCOUNTMEASURE" instructions="The floors which are serviced by the lift, but not necessarily stop at">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_TransportElementElevator</ids:simpleValue>
+						<ids:simpleValue>ePset_TransportElementElevatorOMA</ids:simpleValue>
 					</ids:propertySet>
 					<ids:name>
 						<ids:simpleValue>StoriesServed</ids:simpleValue>
@@ -586,7 +589,7 @@
 				</ids:property>
 				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCIDENTIFIER" instructions="which group of lifts this lift belongs to.">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
+						<ids:simpleValue>ePset_TransportElementElevatorOMA</ids:simpleValue>
 					</ids:propertySet>
 					<ids:name>
 						<ids:simpleValue>Group</ids:simpleValue>
@@ -594,7 +597,7 @@
 				</ids:property>
 				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCAREAMEASURE" instructions="The area where people wait to board ">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
+						<ids:simpleValue>ePset_TransportElementElevatorOMA</ids:simpleValue>
 					</ids:propertySet>
 					<ids:name>
 						<ids:simpleValue>LoadingArea</ids:simpleValue>
@@ -629,7 +632,7 @@
 				</ids:property>
 				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCBOOLEAN" instructions="Indicates if available during the simulation">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
+						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
 					<ids:name>
 						<ids:simpleValue>IsActive</ids:simpleValue>
@@ -637,7 +640,7 @@
 				</ids:property>
 				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCCOUNTMEASURE" instructions="effective number of lanes of the escalator">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_TransportEscalator</ids:simpleValue>
+						<ids:simpleValue>ePset_TransportEscalatorOMA</ids:simpleValue>
 					</ids:propertySet>
 					<ids:name>
 						<ids:simpleValue>NumberOfLanes</ids:simpleValue>
@@ -645,7 +648,7 @@
 				</ids:property>
 				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLENGTHMEASURE" instructions="The depth of any step tread in the direction of travel">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_TransportEscalator</ids:simpleValue>
+						<ids:simpleValue>ePset_TransportEscalatorOMA</ids:simpleValue>
 					</ids:propertySet>
 					<ids:name>
 						<ids:simpleValue>DepthOfTread</ids:simpleValue>
@@ -653,7 +656,7 @@
 				</ids:property>
 				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCREAL" instructions="The direction of the escalator when operational">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_TransportEscalator</ids:simpleValue>
+						<ids:simpleValue>ePset_TransportEscalatorOMA</ids:simpleValue>
 					</ids:propertySet>
 					<ids:name>
 						<ids:simpleValue>DirectionOfTravel</ids:simpleValue>
@@ -661,7 +664,7 @@
 				</ids:property>
 				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLENGTHMEASURE" instructions="Internal width (inside net platform)">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
+						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
 					<ids:name>
 						<ids:simpleValue>ClearWidth</ids:simpleValue>
@@ -674,7 +677,7 @@
 				</ids:property>
 				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCAREAMEASURE" instructions="The area where people decide to use the device">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
+						<ids:simpleValue>ePset_ElementKinematicsOIMA</ids:simpleValue>
 					</ids:propertySet>
 					<ids:name>
 						<ids:simpleValue>LoadingArea</ids:simpleValue>
@@ -717,7 +720,7 @@
 				</ids:property>
 				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCBOOLEAN" instructions="Indicates if available during the simulation">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
+						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
 					<ids:name>
 						<ids:simpleValue>IsActive</ids:simpleValue>
@@ -725,7 +728,7 @@
 				</ids:property>
 				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCCOUNTMEASURE" instructions="effective number of lanes of the walkway">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_TransportMovingWalkway</ids:simpleValue>
+						<ids:simpleValue>ePset_TransportMovingWalkwayOMA</ids:simpleValue>
 					</ids:propertySet>
 					<ids:name>
 						<ids:simpleValue>NumberOfLanes</ids:simpleValue>
@@ -733,7 +736,7 @@
 				</ids:property>
 				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCREAL" instructions="The direction of travel for the walkway">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_TransportMovingWalkway</ids:simpleValue>
+						<ids:simpleValue>ePset_TransportMovingWalkwayOMA</ids:simpleValue>
 					</ids:propertySet>
 					<ids:name>
 						<ids:simpleValue>DirectionOfTravel</ids:simpleValue>
@@ -741,7 +744,7 @@
 				</ids:property>
 				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCREAL" instructions="The maximum number of people who can occupy it">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_TransportMovingWalkway</ids:simpleValue>
+						<ids:simpleValue>ePset_TransportMovingWalkwayOMA</ids:simpleValue>
 					</ids:propertySet>
 					<ids:name>
 						<ids:simpleValue>DesignCapacity</ids:simpleValue>
@@ -749,7 +752,7 @@
 				</ids:property>
 				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLENGTHMEASURE" instructions="Internal width (inside net platform)">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
+						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
 					<ids:name>
 						<ids:simpleValue>ClearWidth</ids:simpleValue>
@@ -762,7 +765,7 @@
 				</ids:property>
 				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCAREAMEASURE" instructions="The area where people decide to use the device">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
+						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
 					<ids:name>
 						<ids:simpleValue>LoadingArea</ids:simpleValue>
@@ -840,7 +843,7 @@
 				</ids:property>
 				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCREAL" instructions="Angle">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_RampCommon</ids:simpleValue>
+						<ids:simpleValue>ePset_RampOMA</ids:simpleValue>
 					</ids:propertySet>
 					<ids:name>
 						<ids:simpleValue>DirectionOfTravel</ids:simpleValue>
@@ -899,7 +902,7 @@
 				</ids:property>
 				<ids:property minOccurs="0" maxOccurs="unbounded" datatype="IFCAREAMEASURE" instructions="The area where people decide to use the device">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
+						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
 					<ids:name>
 						<ids:simpleValue>LoadingArea</ids:simpleValue>
