@@ -49,8 +49,16 @@ To see the full capabilities of what each information each **Facet** can specify
 
 ## Required and optional specifications and facets
 
-Each **Specification** specifies whether a subset of the matching the applicability criteria is **Required**, **Optional**, or **Prohibited**.
-Given an example **applicability** of "_walls with Is External property_", and a requirement "_fire rating property_" the following interpretation applies
+Each **Specification** defines whether a subset of the model matching the applicability criteria is **Required**, **Optional**, or **Prohibited**.
+Given an example like the following:
+
+```txt
+applicability =  Type = walls 
+                 Property = IsExternal
+requirement   =  Property = FireRating
+```
+
+the following interpretation applies
 
 | Type           | Meaning                                                                                                                |
 | -------------- | ---------------------------------------------------------------------------------------------------------------------- |
