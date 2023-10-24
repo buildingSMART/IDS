@@ -20,7 +20,7 @@
                         <simpleValue>Foo</simpleValue>
                     </name>
                     <value>
-                        <simpleValue>42.3</simpleValue>
+                        <simpleValue>43</simpleValue>
                     </value>
                 </property>
             </requirements>
