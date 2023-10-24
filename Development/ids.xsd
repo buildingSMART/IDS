@@ -99,6 +99,11 @@
 				<xs:complexType>
 					<xs:complexContent>
 						<xs:extension base="ids:entityType">
+							<!-- 
+								Cardinality is not available in the entity facet.
+								Its maxOccurs is 1, and the preferred form of constraining is by specifying the acceptable values rather than the exclusions.
+								This is acceptable because the list of possible options is finite and mandated by the schema, so excluding unexpected values comes for free.
+							-->
 							<xs:attribute name="instructions" type="xs:string" use="optional">
 								<xs:annotation>
 									<xs:documentation>Author of the IDS can leave instructions for the authors of the IFC. This text could/should be displayed in the BIM/IFC authoring tool.</xs:documentation>
@@ -112,7 +117,7 @@
 				<xs:complexType>
 					<xs:complexContent>
 						<xs:extension base="ids:partOfType">
-							<xs:attributeGroup ref="xs:occurs"/>
+							<xs:attribute name="cardinality" type="ids:requirementCardinality" use="optional" default="Required"/>
 							<xs:attribute name="instructions" type="xs:string" use="optional">
 								<xs:annotation>
 									<xs:documentation>Author of the IDS can leave instructions for the authors of the IFC. This text could/should be displayed in the BIM/IFC authoring tool.</xs:documentation>
@@ -127,7 +132,7 @@
 					<xs:complexContent>
 						<xs:extension base="ids:classificationType">
 							<xs:attribute name="uri" type="xs:anyURI" use="optional"/>
-							<xs:attributeGroup ref="xs:occurs"/>
+							<xs:attribute name="cardinality" type="ids:requirementCardinality" use="optional" default="Required"/>
 							<xs:attribute name="instructions" type="xs:string" use="optional">
 								<xs:annotation>
 									<xs:documentation>Author of the IDS can leave instructions for the authors of the IFC. This text could/should be displayed in the BIM/IFC authoring tool.</xs:documentation>
@@ -155,7 +160,7 @@
 					<xs:complexContent>
 						<xs:extension base="ids:propertyType">
 							<xs:attribute name="uri" type="xs:anyURI" use="optional"/>
-							<xs:attributeGroup ref="xs:occurs"/>
+							<xs:attribute name="cardinality" type="ids:requirementCardinality" use="optional" default="Required"/>
 							<xs:attribute name="instructions" type="xs:string" use="optional">
 								<xs:annotation>
 									<xs:documentation>Author of the IDS can leave instructions for the authors of the IFC. This text could/should be displayed in the BIM/IFC authoring tool.</xs:documentation>
@@ -170,7 +175,7 @@
 					<xs:complexContent>
 						<xs:extension base="ids:materialType">
 							<xs:attribute name="uri" type="xs:anyURI" use="optional"/>
-							<xs:attributeGroup ref="xs:occurs"/>
+							<xs:attribute name="cardinality" type="ids:requirementCardinality" use="optional" default="Required"/>
 							<xs:attribute name="instructions" type="xs:string" use="optional">
 								<xs:annotation>
 									<xs:documentation>Author of the IDS can leave instructions for the authors of the IFC. This text could/should be displayed in the BIM/IFC authoring tool.</xs:documentation>
@@ -237,4 +242,11 @@
 			<xs:enumeration value="IFCRELFILLSELEMENT"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="requirementCardinality">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Required"/>
+			<xs:enumeration value="Prohibited"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
 </xs:schema>

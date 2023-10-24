@@ -60,19 +60,18 @@ requirement   =  Property = FireRating
 
 the following interpretation applies
 
-| Type           | Meaning                                                                                                                |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| **Required**   | At least one wall with the Is External property _must_ be found in the IFC model, each such wall must have fire rating |
-| **Optional**   | Walls with Is External property _are optional_ in the model, if any such wall is present, they must have fire rating   |
-| **Prohibited** | No wall with Is External property should be found  in the model, requirements should not be specified                  |
+| Type           | Meaning                                                                                                                            |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| **Required**   | At least one wall with the IsExternal property _must_ be found in the IFC model, each such wall must have the fire rating property |
+| **Optional**   | Walls with IsExternal property _are optional_ in the model, if any such wall is present, they must all have fire rating property   |
+| **Prohibited** | No wall with IsExternal property should be found in the model, requirements are ignored in the verification of models              |
 
 Individual requirements facets may also specify whether they are **Required**, **Optional**, or **Prohibited**. Given the example of "_Must have a fire rating property_", this is the interpretation:
 
-| Type           | Applies to     | Meaning                                                                                                                              | Example                                                                                                      |
-| -------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| **Required**   | All facets     | The requirement must be met, this is the most common default for most facets                                                         | The entity must have a fire rating property                                                                  |
-| **Optional**   | Property facet | The property set and name are optional, but if found, they must comply with the value constraint. Usage of "optional" is not common. | The entity may or may not have a fire rating property, but if it exists, it will match the value requirement |
-| **Prohibited** | All facets     | The requirement must _not_ be met                                                                                                    | The entity must _not_ have a fire rating property                                                            |
+| Type           | Meaning                                                                      | Example                                           |
+| -------------- | ---------------------------------------------------------------------------- | ------------------------------------------------- |
+| **Required**   | The requirement must be met, this is the most common default for most facets | The entity must have a fire rating property       |
+| **Prohibited** | The requirement must _not_ be met                                            | The entity must _not_ have a fire rating property |
 
 As a complete example, you might have a **Required** specification that applies to wall entities, that are **Prohibited** from being load-bearing, if you wanted your model to not contain any load-bearing walls.
 
