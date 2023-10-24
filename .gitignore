@@ -6,3 +6,4 @@ build/obj/
 /build/.vs/
 /.nuke/temp/
 /.vs/
+.DS_Store
