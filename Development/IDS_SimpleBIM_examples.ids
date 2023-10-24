@@ -31,7 +31,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:attribute>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCTEXT">
+				<ids:property datatype="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>MyProject</ids:simpleValue>
 					</ids:propertySet>
@@ -75,7 +75,7 @@
 				</ids:property>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:property maxOccurs="unbounded" datatype="">
+				<ids:property datatype="">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_WallCommon</ids:simpleValue>
 					</ids:propertySet>

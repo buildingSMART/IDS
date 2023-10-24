@@ -248,7 +248,7 @@
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
-                <ids:classification maxOccurs="unbounded">
+                <ids:classification>
                     <ids:value>
                         <xs:restriction>
                             <xs:enumeration value="11.10" />

@@ -23,7 +23,7 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="">
+				<ids:property datatype="">
 					<ids:propertySet>
 						<xs:restriction>
 							<xs:annotation>
@@ -39,7 +39,7 @@
 						<ids:simpleValue>yes</ids:simpleValue>
 					</ids:value>
 				</ids:property>
-				<ids:material minOccurs="1" maxOccurs="unbounded">
+				<ids:material>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:annotation>
@@ -73,7 +73,7 @@
 				</ids:classification>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLENGTHMEASURE">
+				<ids:property datatype="IFCLENGTHMEASURE">
 					<ids:propertySet>
 						<ids:simpleValue>attribute</ids:simpleValue>
 					</ids:propertySet>
@@ -87,7 +87,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCTEXT" uri="http://identifier.buildingsmart.org/uri/dummy-example/FireRating">
+				<ids:property datatype="IFCTEXT" uri="http://identifier.buildingsmart.org/uri/dummy-example/FireRating">
 					<ids:propertySet>
 						<ids:simpleValue>AedesUVIP</ids:simpleValue>
 					</ids:propertySet>

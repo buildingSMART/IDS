@@ -15,6 +15,8 @@
 						<ids:simpleValue>WINDOW</ids:simpleValue>
 					</ids:predefinedType>
                 </ids:entity>
+            </ids:applicability>
+            <ids:requirements>
                 <ids:classification>
 					<ids:value>
 						<xs:restriction base="xs:string">
@@ -25,8 +27,6 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:classification>
-            </ids:applicability>
-            <ids:requirements>
             </ids:requirements>
         </ids:specification>
     </ids:specifications>

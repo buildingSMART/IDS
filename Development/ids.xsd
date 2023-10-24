@@ -132,7 +132,7 @@
 					<xs:complexContent>
 						<xs:extension base="ids:classificationType">
 							<xs:attribute name="uri" type="xs:anyURI" use="optional"/>
-							<xs:attribute name="cardinality" type="ids:requirementCardinality" use="optional" default="Required"/>
+							<xs:attribute name="cardinality" type="ids:optionalRequirementCardinality" use="optional" default="Required"/>
 							<xs:attribute name="instructions" type="xs:string" use="optional">
 								<xs:annotation>
 									<xs:documentation>Author of the IDS can leave instructions for the authors of the IFC. This text could/should be displayed in the BIM/IFC authoring tool.</xs:documentation>
@@ -160,7 +160,7 @@
 					<xs:complexContent>
 						<xs:extension base="ids:propertyType">
 							<xs:attribute name="uri" type="xs:anyURI" use="optional"/>
-							<xs:attribute name="cardinality" type="ids:requirementCardinality" use="optional" default="Required"/>
+							<xs:attribute name="cardinality" type="ids:optionalRequirementCardinality" use="optional" default="Required"/>
 							<xs:attribute name="instructions" type="xs:string" use="optional">
 								<xs:annotation>
 									<xs:documentation>Author of the IDS can leave instructions for the authors of the IFC. This text could/should be displayed in the BIM/IFC authoring tool.</xs:documentation>
@@ -246,6 +246,13 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="Required"/>
 			<xs:enumeration value="Prohibited"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="optionalRequirementCardinality">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Required"/>
+			<xs:enumeration value="Prohibited"/>
+			<xs:enumeration value="Optional"/>
 		</xs:restriction>
 	</xs:simpleType>
 	
