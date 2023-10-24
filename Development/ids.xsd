@@ -62,7 +62,7 @@
 			<xs:element name="classification" type="ids:classificationType" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="attribute" type="ids:attributeType" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="property" type="ids:propertyType" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="material" type="ids:materialType" minOccurs="0"/>
+			<xs:element name="material" type="ids:materialType" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="propertyType">
@@ -164,7 +164,7 @@
 					</xs:complexContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="material" minOccurs="0">
+			<xs:element name="material" minOccurs="0" maxOccurs="unbounded">
 				<xs:complexType>
 					<xs:complexContent>
 						<xs:extension base="ids:materialType">
