@@ -12,7 +12,7 @@
                 </entity>
             </applicability>
             <requirements>
-                <partOf relation="IfcRelContainedInSpatialStructure" minOccurs="1" maxOccurs="1">
+                <partOf relation="IFCRELCONTAINEDINSPATIALSTRUCTURE" minOccurs="1" maxOccurs="1">
                     <entity>
                         <name>
                             <simpleValue>IFCSITE</simpleValue>

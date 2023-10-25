@@ -12,7 +12,7 @@
                 </entity>
             </applicability>
             <requirements>
-                <partOf relation="IfcRelAssignsToGroup" minOccurs="1" maxOccurs="1" />
+                <partOf relation="IFCRELASSIGNSTOGROUP" minOccurs="1" maxOccurs="1" />
             </requirements>
         </specification>
     </specifications>
