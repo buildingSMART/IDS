@@ -40,7 +40,7 @@
 		<xs:choice minOccurs="1">
 			<!-- place for potential additional rules for idsValue -->
 			<xs:element name="simpleValue" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<xs:element ref="xs:restriction" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element ref="xs:restriction" minOccurs="1" maxOccurs="1"/>
 		</xs:choice>
 	</xs:complexType>
 	<xs:complexType name="classificationType">
