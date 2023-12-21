@@ -81,6 +81,7 @@ Language | License | Library
 --- | --- | ---
 C# | ? | [XBim](todo)
 Python | LGPL-3.0-or-later | [IfcOpenShell](https://ifcopenshell.org/)
+C++| ? | [RDF](https://rdf.bg)
 ? | ? | ODA?
 Javascript | ? | Something or other
 
