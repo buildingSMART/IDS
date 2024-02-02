@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/0.9.6/ids.xsd">
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/0.9.7/ids.xsd">
     <ids:info>
         <ids:title>AedesUVIP-ILS Window use-case example</ids:title>
         <ids:version>1.0</ids:version>
     </ids:info>
     <ids:specifications>
-        <ids:specification ifcVersion="IFC4" name="Beglazing" description="Glazing in a window" minOccurs="0" maxOccurs="unbounded">
-            <ids:applicability>
+        <ids:specification ifcVersion="IFC4" name="Beglazing" description="Glazing in a window" >
+            <ids:applicability minOccurs="0" maxOccurs="unbounded">
                 <ids:entity>
                     <ids:name>
                         <ids:simpleValue>IFCWINDOW</ids:simpleValue>
@@ -15,6 +15,8 @@
 						<ids:simpleValue>WINDOW</ids:simpleValue>
 					</ids:predefinedType>
                 </ids:entity>
+            </ids:applicability>
+            <ids:requirements>
                 <ids:classification>
 					<ids:value>
 						<xs:restriction base="xs:string">
@@ -25,8 +27,6 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:classification>
-            </ids:applicability>
-            <ids:requirements>
             </ids:requirements>
         </ids:specification>
     </ids:specifications>
