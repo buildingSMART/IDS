@@ -71,7 +71,7 @@
 			<xs:element name="name" type="ids:idsValue"/>
 			<xs:element name="value" type="ids:idsValue" minOccurs="0"/>
 		</xs:sequence>
-		<xs:attribute name="datatype" type="ids:upperCaseName" use="optional">
+		<xs:attribute name="dataType" type="ids:upperCaseName" use="optional">
 			<xs:annotation>
 				<xs:documentation>This is the name of an IFC Defined Type. See the full list for IFC 4 on https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/link/alphabeticalorder-defined-types.htm  Documentation and default units on https://github.com/buildingSMART/IDS/blob/master/Documentation/units.md</xs:documentation>
 			</xs:annotation>
@@ -230,12 +230,11 @@
 	</xs:complexType>
 	<xs:simpleType name="relations">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="IFCRELAGGREGATES"/>
-			<xs:enumeration value="IFCRELASSIGNSTOGROUP"/>
-			<xs:enumeration value="IFCRELCONTAINEDINSPATIALSTRUCTURE"/>
-			<xs:enumeration value="IFCRELNESTS"/>
-			<xs:enumeration value="IFCRELVOIDSELEMENT"/>
-			<xs:enumeration value="IFCRELFILLSELEMENT"/>
+			<xs:enumeration value="IFCRELAGGREGATES"/>  
+			<xs:enumeration value="IFCRELASSIGNSTOGROUP"/> 
+			<xs:enumeration value="IFCRELCONTAINEDINSPATIALSTRUCTURE"/> 
+			<xs:enumeration value="IFCRELNESTS"/> 
+			<xs:enumeration value="IFCRELVOIDSELEMENT IFCRELFILLSELEMENT"/> 
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="upperCaseName">
