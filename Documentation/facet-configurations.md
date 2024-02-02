@@ -136,7 +136,7 @@ We want to change the specs so that SYSTEM is mandatory (schema change!!!)
 
 | Fields Entered   | Required | Optional | Prohibited | Applicability | Notes                   |
 | ---------------- | -------- | -------- | ---------- | ------------- | ----------------------- |
-|                  | ❌       | ❌       | ❌         | ❌            | this is a schema change |
+|                  | ❌       | ❌       | ❌         | ❌            |                         |
 | [VALUE]          | ❌       | ❌       | ❌         | ❌            | this is a schema change |
 | SYSTEM           | ✅       | ❌       | ✅         | ✅            |                         |
 | SYSTEM / [VALUE] | ✅       | ✅       | ✅         | ✅            |                         |
@@ -177,10 +177,8 @@ APPLICABILITY
 
 ## Material
 
-Schema change:
-
-- in the requirements we have to allow multiple materials to enable prohibited/optional
-- in the applicability we have to allow multiple materials to target elements with multiple materials
+- in the requirements we have to allow multiple materials to enable prohibited/optional (already possible)
+- in the applicability we have to allow multiple materials to target elements with multiple materials in AND (already possible)
 
 | Fields Entered | Required | Optional | Prohibited | Applicability |
 | -------------- | -------- | -------- | ---------- | ------------- |
@@ -223,7 +221,7 @@ APPLICABILITY
 
 ### Implementation
 
-⚠️TODO: in the documentation we will be explicit that traversing IfcRelDecomposition will not be implemented in 1.0.
+⚠️TODO: in the documentation we will be explicit that traversing IfcRelDecomposition for the purpose of material evaluation will not be implemented in 1.0.
 
 We need to define what is the behaviour when it comes to the IfcRelDecomposition and the propagation of materials.
 The relevant issue is https://github.com/buildingSMART/IDS/issues/198
@@ -266,7 +264,7 @@ APPLICABILITY:
 
 Spinning our own `xs:restriction` alternative, would remove some issues with basetype and embedded xml entities
 
-A special case of the restriction for values would give us the opportunity to explicity allow/disallow a few scenarios, such as
+A special case of the restriction for values would give us the opportunity to explicitly allow/disallow a few scenarios, such as
 
 - Null
   - Must be null

@@ -33,7 +33,7 @@
 	<xs:complexType name="entityType">
 		<xs:sequence>
 			<xs:element name="name" type="ids:idsValue"/>
-			<xs:element name="predefinedType" type="ids:idsValue" minOccurs="0"/>
+			<xs:element name="subType" type="ids:idsValue" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="idsValue">
@@ -46,14 +46,14 @@
 	<xs:complexType name="classificationType">
 		<xs:sequence>
 			<xs:element name="value" type="ids:idsValue" minOccurs="0"/>
-			<xs:element name="system" type="ids:idsValue" minOccurs="0"/>
+			<xs:element name="system" type="ids:idsValue" minOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="partOfType">
 		<xs:sequence>
 			<xs:element name="entity" type="ids:entityType" minOccurs="1"/>
 		</xs:sequence>
-		<xs:attribute name="relation" type="ids:relations"/>
+		<xs:attribute name="relation" type="ids:relations" use="optional" />
 	</xs:complexType>
 	<xs:complexType name="applicabilityType">
 		<xs:sequence>
@@ -71,7 +71,7 @@
 			<xs:element name="name" type="ids:idsValue"/>
 			<xs:element name="value" type="ids:idsValue" minOccurs="0"/>
 		</xs:sequence>
-		<xs:attribute name="datatype" use="required">
+		<xs:attribute name="datatype" type="ids:upperCaseName" use="optional">
 			<xs:annotation>
 				<xs:documentation>This is the name of an IFC Defined Type. See the full list for IFC 4 on https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/link/alphabeticalorder-defined-types.htm  Documentation and default units on https://github.com/buildingSMART/IDS/blob/master/Documentation/units.md</xs:documentation>
 			</xs:annotation>
@@ -140,6 +140,7 @@
 				<xs:complexType>
 					<xs:complexContent>
 						<xs:extension base="ids:attributeType">
+							<xs:attributeGroup ref="xs:occurs"/>
 							<xs:attribute name="instructions" type="xs:string" use="optional">
 								<xs:annotation>
 									<xs:documentation>Author of the IDS can leave instructions for the authors of the IFC. This text could/should be displayed in the BIM/IFC authoring tool.</xs:documentation>
@@ -235,6 +236,11 @@
 			<xs:enumeration value="IFCRELNESTS"/>
 			<xs:enumeration value="IFCRELVOIDSELEMENT"/>
 			<xs:enumeration value="IFCRELFILLSELEMENT"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="upperCaseName">
+		<xs:restriction base="xs:normalizedString">
+			<xs:pattern value="[A-Z]+"/>
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>
