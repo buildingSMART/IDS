@@ -113,7 +113,7 @@
 							<xs:enumeration value="90">
 								<xs:annotation>
 									<xs:documentation>
-										<xs:Label xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Ninty minutes</xs:Label>
+										<xs:Label xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Ninety minutes</xs:Label>
 									</xs:documentation>
 								</xs:annotation>
 							</xs:enumeration>
