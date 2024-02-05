@@ -17,7 +17,7 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:property datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
@@ -31,7 +31,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
@@ -45,7 +45,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property datatype="IFCLENGTHMEASURE">
+				<ids:property dataType="IFCLENGTHMEASURE">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
@@ -59,7 +59,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
@@ -73,7 +73,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property datatype="IFCTEXT" uri="https://www.igh.hr/en/reference/">
+				<ids:property dataType="IFCTEXT" uri="https://www.igh.hr/en/reference/">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
@@ -87,7 +87,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
@@ -117,7 +117,7 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:property datatype="IFCLABEL" uri="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-4.3/prop/Manufacturer">
+				<ids:property dataType="IFCLABEL" uri="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-4.3/prop/Manufacturer">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_ManufacturerTypeInformation</ids:simpleValue>
 					</ids:propertySet>
@@ -131,7 +131,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
@@ -145,7 +145,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
@@ -159,7 +159,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property datatype="IFCLENGTHMEASURE">
+				<ids:property dataType="IFCLENGTHMEASURE">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
@@ -173,7 +173,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
@@ -187,7 +187,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property datatype="" uri="https://www.igh.hr/en/reference/">
+				<ids:property uri="https://www.igh.hr/en/reference/">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
@@ -203,7 +203,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
@@ -217,7 +217,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property datatype="IFCLENGTHMEASURE">
+				<ids:property dataType="IFCLENGTHMEASURE">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>

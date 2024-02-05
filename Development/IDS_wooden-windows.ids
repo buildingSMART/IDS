@@ -8,8 +8,8 @@
 		<ids:milestone>Design handover to manufactuer</ids:milestone>
 	</ids:info>
 	<ids:specifications>
-		<!-- specification added to have at least one case of predefinedType in the documenetation -->
-		<ids:specification ifcVersion="IFC2X3" name="PredefinedTypeExample">
+		<!-- specification added to have at least one case of subType in the documenetation -->
+		<ids:specification ifcVersion="IFC2X3" name="subTypeExample">
 			<ids:applicability minOccurs="1" maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
@@ -23,9 +23,9 @@
 						<ids:name>
 							<ids:simpleValue>IFCELEMENTASSEMBLY</ids:simpleValue>
 						</ids:name>
-						<ids:predefinedType>
+						<ids:subType>
 							<ids:simpleValue>GIRDER</ids:simpleValue>
-						</ids:predefinedType>
+						</ids:subType>
 					</ids:entity>
 				</ids:partOf>
 			</ids:requirements>
@@ -46,7 +46,7 @@
 						</ids:name>
 					</ids:entity>
 				</ids:partOf>
-				<ids:property datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
@@ -62,7 +62,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
@@ -70,7 +70,7 @@
 						<ids:simpleValue>Kleurbuitenzijde</ids:simpleValue>
 					</ids:name>
 				</ids:property>
-				<ids:property datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
@@ -93,6 +93,9 @@
 							<xs:pattern value="3[1-2]\.[0-9][0-9]"/>
 						</xs:restriction>
 					</ids:value>
+					<ids:system>
+						<ids:simpleValue>Custom</ids:simpleValue>
+					</ids:system>
 				</ids:classification>
 				<ids:material />
 			</ids:requirements>
@@ -113,7 +116,7 @@
 						</ids:name>
 					</ids:entity>
 				</ids:partOf>
-				<ids:property datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
@@ -127,7 +130,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
@@ -143,7 +146,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
@@ -151,7 +154,7 @@
 						<ids:simpleValue>Kleurbuitenzijde</ids:simpleValue>
 					</ids:name>
 				</ids:property>
-				<ids:property datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
@@ -179,7 +182,7 @@
 						</ids:name>
 					</ids:entity>
 				</ids:partOf>
-				<ids:property datatype="">
+				<ids:property>
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
@@ -187,7 +190,7 @@
 						<ids:simpleValue>Draairichting</ids:simpleValue>
 					</ids:name>
 				</ids:property>
-				<ids:property datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
@@ -203,7 +206,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
@@ -211,7 +214,7 @@
 						<ids:simpleValue>Kleurbuitenzijde</ids:simpleValue>
 					</ids:name>
 				</ids:property>
-				<ids:property datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
@@ -252,7 +255,7 @@
 						</ids:name>
 					</ids:entity>
 				</ids:partOf>
-				<ids:property datatype="">
+				<ids:property>
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
@@ -282,7 +285,7 @@
 						</ids:name>
 					</ids:entity>
 				</ids:partOf>
-				<ids:property datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
@@ -298,7 +301,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
@@ -306,7 +309,7 @@
 						<ids:simpleValue>Kleurbuitenzijde</ids:simpleValue>
 					</ids:name>
 				</ids:property>
-				<ids:property datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
@@ -314,7 +317,7 @@
 						<ids:simpleValue>Onderdeel</ids:simpleValue>
 					</ids:name>
 				</ids:property>
-				<ids:property datatype="" uri="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-2x3/prop/acousticrating">
+				<ids:property uri="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-2x3/prop/acousticrating">
 					<!-- uri not live yet -->
 					<!-- there is no datatype giving, which is invalid becasue there is a value restriction set for this property -->
 					<!-- in the example IFC file the PSet_PlateCommon is on Type level instead of instande. So this should turn up INvalid -->
@@ -325,7 +328,7 @@
 						<ids:simpleValue>AcousticRating</ids:simpleValue>
 					</ids:name>
 				</ids:property>
-				<ids:property datatype="">
+				<ids:property>
 					<!-- in the example IFC file the PSet_PlateCommon is on Type level instead of instance. So this should turn up VALID -->
 					<ids:propertySet>
 						<ids:simpleValue>Pset_PlateCommon</ids:simpleValue>
@@ -334,7 +337,7 @@
 						<ids:simpleValue>Reference</ids:simpleValue>
 					</ids:name>
 				</ids:property>
-				<ids:property datatype="IFCTHERMALTRANSMITTANCEMEASURE">
+				<ids:property dataType="IFCTHERMALTRANSMITTANCEMEASURE">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_PlateCommon</ids:simpleValue>
 					</ids:propertySet>
@@ -348,7 +351,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property datatype="">
+				<ids:property>
 					<ids:propertySet>
 						<ids:simpleValue>Pset_PlateCommon</ids:simpleValue>
 					</ids:propertySet>

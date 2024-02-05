@@ -13,9 +13,12 @@
 				</ids:entity>
 				<ids:classification>
 					<ids:value>
-						<ids:simpleValue>room</ids:simpleValue>
+						<ids:simpleValue>SL_45_10_09</ids:simpleValue>
 						<!-- this could of course also be a list of things, a pattern, etc..  -->
 					</ids:value>
+					<ids:system>
+						<ids:simpleValue>Uniclass</ids:simpleValue>
+					</ids:system>
 				</ids:classification>
 			</ids:applicability>
 			<ids:requirements>
@@ -31,7 +34,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:attribute>
-				<ids:property datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>MyProject</ids:simpleValue>
 					</ids:propertySet>
@@ -62,7 +65,7 @@
 						</xs:restriction>
 					</ids:name>
 				</ids:entity>
-				<ids:property datatype="IFCBOOLEAN">
+				<ids:property dataType="IFCBOOLEAN">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_WallCommon</ids:simpleValue>
 					</ids:propertySet>
@@ -75,7 +78,7 @@
 				</ids:property>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:property datatype="">
+				<ids:property>
 					<ids:propertySet>
 						<ids:simpleValue>Pset_WallCommon</ids:simpleValue>
 					</ids:propertySet>

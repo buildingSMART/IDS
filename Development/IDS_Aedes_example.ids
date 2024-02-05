@@ -11,9 +11,9 @@
                     <ids:name>
                         <ids:simpleValue>IFCWINDOW</ids:simpleValue>
                     </ids:name>
-                    <ids:predefinedType>
+                    <ids:subType>
 						<ids:simpleValue>WINDOW</ids:simpleValue>
-					</ids:predefinedType>
+					</ids:subType>
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>
@@ -26,6 +26,9 @@
 							<xs:pattern value="31\.2[0-9]"/> 
 						</xs:restriction>
 					</ids:value>
+                    <ids:system>
+						<ids:simpleValue>Custom</ids:simpleValue>
+					</ids:system>
 				</ids:classification>
             </ids:requirements>
         </ids:specification>

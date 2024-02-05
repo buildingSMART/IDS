@@ -17,13 +17,13 @@
 							<!-- removed for clarity, is the rule in and/or with the other? Because of Enums it should be in `or` -->
 						</xs:restriction>
 					</ids:name>
-					<ids:predefinedType>
+					<ids:subType>
 						<ids:simpleValue>CLADDING</ids:simpleValue>
-					</ids:predefinedType>
+					</ids:subType>
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:property datatype="">
+				<ids:property>
 					<ids:propertySet>
 						<xs:restriction>
 							<xs:annotation>
@@ -73,7 +73,7 @@
 				</ids:classification>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:property datatype="IFCLENGTHMEASURE">
+				<ids:property dataType="IFCLENGTHMEASURE">
 					<ids:propertySet>
 						<ids:simpleValue>attribute</ids:simpleValue>
 					</ids:propertySet>
@@ -87,7 +87,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property datatype="IFCTEXT" uri="http://identifier.buildingsmart.org/uri/dummy-example/FireRating">
+				<ids:property dataType="IFCTEXT" uri="http://identifier.buildingsmart.org/uri/dummy-example/FireRating">
 					<ids:propertySet>
 						<ids:simpleValue>AedesUVIP</ids:simpleValue>
 					</ids:propertySet>
@@ -99,21 +99,21 @@
 							<xs:enumeration value="30">
 								<xs:annotation>
 									<xs:documentation>
-										<Label xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Thirty minutes</Label>
+										<xs:Label xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Thirty minutes</xs:Label>
 									</xs:documentation>
 								</xs:annotation>
 							</xs:enumeration>
 							<xs:enumeration value="60">
 								<xs:annotation>
 									<xs:documentation>
-										<Label xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Sixty minutes</Label>
+										<xs:Label xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Sixty minutes</xs:Label>
 									</xs:documentation>
 								</xs:annotation>
 							</xs:enumeration>
 							<xs:enumeration value="90">
 								<xs:annotation>
 									<xs:documentation>
-										<Label xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Ninty minutes</Label>
+										<xs:Label xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Ninty minutes</xs:Label>
 									</xs:documentation>
 								</xs:annotation>
 							</xs:enumeration>

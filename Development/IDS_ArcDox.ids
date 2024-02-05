@@ -46,7 +46,7 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:property datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>ArcDox</ids:simpleValue>
 					</ids:propertySet>
@@ -54,7 +54,7 @@
 						<ids:simpleValue>Function</ids:simpleValue>
 					</ids:name>
 				</ids:property>
-				<ids:property datatype="IFCLABEL">
+				<ids:property dataType="IFCLABEL">
 					<ids:propertySet>
 						<ids:simpleValue>ArcDox</ids:simpleValue>
 					</ids:propertySet>
@@ -69,7 +69,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>ArcDox</ids:simpleValue>
 					</ids:propertySet>
@@ -84,7 +84,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>ArcDox</ids:simpleValue>
 					</ids:propertySet>

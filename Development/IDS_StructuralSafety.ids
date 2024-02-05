@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ids:ids xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/0.9.6/ids.xsd" xmlns:ids="http://standards.buildingsmart.org/IDS">
+<ids:ids xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/0.9.7/ids.xsd" xmlns:ids="http://standards.buildingsmart.org/IDS">
 	<ids:info>
 		<ids:title />
 	</ids:info>
 	<ids:specifications>
-		<ids:specification ifcVersion="IFC4X3" name="Structural safety" instructions="Beams must be assessed for security concerns" minOccurs="1" maxOccurs="unbounded">
-			<ids:applicability>
+		<ids:specification ifcVersion="IFC4X3" name="Structural safety" instructions="Beams must be assessed for security concerns">
+			<ids:applicability minOccurs="1" maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<ids:simpleValue>IFCBEAM</ids:simpleValue>
@@ -23,7 +23,7 @@
 				</ids:material>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:property maxOccurs="unbounded" datatype="IFCLABEL">
+				<ids:property dataType="IFCLABEL">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_ConcreteElementGeneral</ids:simpleValue>
 					</ids:propertySet>
