@@ -1,6 +1,9 @@
 # Units in IDS
 
-Numerical measure values are represented using SI units. The following table lists the physical quantities and their units.
+Numerical measure values are represented in IDS files using SI units. When IFC models are verified, their values
+
+
+The following table lists the physical quantities and their units.
 A full list of IFC Defined types can be found in the IFC documentation.
 
 | Ifc Defined Type name                | Physical Quantity description | Unit         | Unit Symbol | Dimensional exponents   | Unit enumeration                                  |
@@ -41,7 +44,7 @@ A full list of IFC Defined types can be found in the IFC documentation.
 | IFCPOWERMEASURE                      | Power                         | watt         | W           | (2, 1, -3, 0, 0, 0, 0   | IfcUnitEnum.POWERUNIT                             |
 | IFCPRESSUREMEASURE                   | Pressure                      | pascal       | Pa          | (-1, 1, -2, 0, 0, 0, 0) | IfcUnitEnum.PRESSUREUNIT                          |
 | IFCRADIOACTIVITYMEASURE              | Radio activity                | Becqurel     | Bq          | (0, 0, -1, 0, 0, 0, 0)  | IfcUnitEnum.RADIOACTIVITYUNIT                     |
-| IFCRATIOMEASURE                      | Ratio                         | Percent      | %           | (0, 0, 0, 0, 0, 0, 0)   |                                                   |
+| IFCRATIOMEASURE                      | Ratio                         |              |             | (0, 0, 0, 0, 0, 0, 0)   |                                                   |
 | IFCROTATIONALFREQUENCYMEASURE        | Rotational frequency          | hertz        | Hz          | (0, 0, -1, 0, 0, 0, 0)  | IfcDerivedUnitEnum.ROTATIONALFREQUENCYUNIT        |
 | IFCSECTIONMODULUSMEASURE             | Section modulus               |              | m3          | (3, 0, 0, 0, 0, 0, 0)   | IfcDerivedUnitEnum.SECTIONMODULUSUNIT             |
 | IFCSOUNDPOWERMEASURE                 | Sound power                   | decibel      | db          | (0, 0, 0, 0, 0, 0, 0)   | IfcDerivedUnitEnum.SOUNDPOWERUNIT                 |
@@ -55,6 +58,22 @@ A full list of IFC Defined types can be found in the IFC documentation.
 | IFCVAPORPERMEABILITYMEASURE          | Vapor permeability            |              | Kg / s m Pa | (0, 0, 1, 0, 0, 0, 0)   | IfcDerivedUnitEnum.VAPORPERMEABILITYUNIT          |
 | IFCVOLUMEMEASURE                     | Volume                        | cubic meter  | m3          | (3, 0, 0, 0, 0, 0, 0)   | IfcUnitEnum.VOLUMEUNIT                            |
 | IFCVOLUMETRICFLOWRATEMEASURE         | Volumetric flow rate          |              | m3/s        | (3, 0, -1, 0, 0, 0, 0)  | IfcDerivedUnitEnum.VOLUMETRICFLOWRATEUNIT         |
+
+## Dimensional units
+
+Each of the dimensional exponents references the default SI unit
+
+| Position in the dimensional exponents list | Physical Quantity | SI Unit                   |
+| ------------------------------------------ | ----------------- | ------------------------- |
+| 1                                          | length            | metre                     |
+| 2                                          | mass              | kilogram                  |
+| 3                                          | time              | second                    |
+| 4                                          | ampere            | electric current          |
+| 5                                          | kelvin            | thermodynamic temperature |
+| 6                                          | mole              | amount of substance       |
+| 7                                          | candela           | luminous intensity        |
+
+## Examples
 
 In software values are typically presented in local units. The following table lists some examples how things are represented to the user and how they are represented in IDS.
 

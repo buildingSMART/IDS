@@ -71,11 +71,11 @@ requirement   =  Property = FireRating
 
 the following interpretation applies:
 
-| Case           | Meaning                                                                                                                            |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| **Required**   | At least one wall with the IsExternal property _must_ be found in the IFC model, each such wall must have the fire rating property |
-| **Optional**   | Walls with IsExternal property _are optional_ in the model, if any such wall is present, they must all have fire rating property   |
-| **Prohibited** | No wall with IsExternal property should be found in the model, requirements are ignored in the verification of models              |
+| minOccurs | maxOccurs | Interpretation | Meaning                                                                                                                            |
+| --------- | --------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| 1         | unbounded | **required**   | At least one wall with the IsExternal property _must_ be found in the IFC model, each such wall must have the fire rating property |
+| 0         | unbounded | **optional**   | Walls with IsExternal property _are optional_ in the model, if any such wall is present, they must all have fire rating property   |
+| 0         | 0         | **prohibited** | No wall with IsExternal property should be found in the model, requirements are ignored in the verification of models              |
 
 ### Cardinality of requirements
 
