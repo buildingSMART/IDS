@@ -1,19 +1,29 @@
-<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS/ids_05.xsd">
-    <info>
-        <title>Any nested whole fails a nest relationship</title>
-    </info>
-    <specifications>
-        <specification name="Any nested whole fails a nest relationship" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
-            <applicability>
-                <entity>
-                    <name>
-                        <simpleValue>IFCFURNITURE</simpleValue>
-                    </name>
-                </entity>
-            </applicability>
-            <requirements>
-                <partOf relation="IfcRelNests" minOccurs="1" maxOccurs="1" />
-            </requirements>
-        </specification>
-    </specifications>
+<?xml version="1.0" encoding="utf-8"?>
+<ids xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/0.9.7/ids.xsd" xmlns="http://standards.buildingsmart.org/IDS">
+  <info>
+    <title>Any nested whole fails a nest relationship</title>
+    <description>Generated via code automation in the Ids Repository on github.</description>
+  </info>
+  <specifications>
+    <specification name="Any nested whole fails a nest relationship" ifcVersion="IFC2X3 IFC4">
+      <applicability maxOccurs="unbounded">
+        <entity>
+          <name>
+            <simpleValue>IFCFURNITURE</simpleValue>
+          </name>
+        </entity>
+      </applicability>
+      <requirements>
+        <partOf relation="IFCRELNESTS">
+          <entity>
+            <name>
+              <xs:restriction base="xs:string">
+                <xs:pattern value=".*" />
+              </xs:restriction>
+            </name>
+          </entity>
+        </partOf>
+      </requirements>
+    </specification>
+  </specifications>
 </ids>

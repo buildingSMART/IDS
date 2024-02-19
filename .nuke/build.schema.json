@@ -75,7 +75,8 @@
               "AuditAllIdsFiles",
               "AuditDevelopment",
               "AuditDocTestCases",
-              "MakeClasses"
+              "CleanSchemaProject",
+              "CompileSchemaProject"
             ]
           }
         },
@@ -88,7 +89,8 @@
               "AuditAllIdsFiles",
               "AuditDevelopment",
               "AuditDocTestCases",
-              "MakeClasses"
+              "CleanSchemaProject",
+              "CompileSchemaProject"
             ]
           }
         },

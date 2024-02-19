@@ -6,6 +6,9 @@ Every **Specification** has three main parts:
 
 1. **Description**: a description of the rationale for the **Specification** and instructions of how to achieve it.
   This part is designed for humans to read and understand why information is being requested.
+
+  This field is also used to describe the rationale for the various applicability facets, and how they serve to identify the relevant data contracts on an asset as a whole, rather than individually. Conversely, the `description` data on each requirement facet should help the user understand the purpose of the individual piece of information required.
+
 2. **Applicability**: Identifies the subset of the model that we are intending to specify.
   There are many different types of objects in IFC models, but each **Specification** only applies to a subset.
   The subset can be identified via the available facets like entity (e.g. walls, windows), classification (e.g. Uniclass EF_25_10_25  External walls), and others.

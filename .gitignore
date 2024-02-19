@@ -6,3 +6,7 @@ build/obj/
 /build/.vs/
 /.nuke/temp/
 /.vs/
+/SchemaProject/.vs/
+/SchemaProject/bin/
+/SchemaProject/obj/
+/SchemaProject/Ids.cs
