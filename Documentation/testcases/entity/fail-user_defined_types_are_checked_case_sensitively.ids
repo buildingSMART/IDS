@@ -5,7 +5,7 @@
     <description>Generated via code automation in the Ids Repository on github.</description>
   </info>
   <specifications>
-    <specification name="User-defined types are checked case sensitively" ifcVersion="IFC2X3 IFC4">
+    <specification name="User-defined types are checked case sensitively" ifcVersion="IFC4">
       <applicability maxOccurs="unbounded">
         <entity>
           <name>

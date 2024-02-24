@@ -203,7 +203,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:attribute>
-				<ids:property instructions="Describes the general type of occupant movement that we intend this zone to be used for (shuffling past seats, an ultimate destination etc.)">
+				<ids:property dataType="IFCLABEL" instructions="Describes the general type of occupant movement that we intend this zone to be used for (shuffling past seats, an ultimate destination etc.)">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_OMA</ids:simpleValue>
 					</ids:propertySet>

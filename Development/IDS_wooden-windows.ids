@@ -255,7 +255,7 @@
 						</ids:name>
 					</ids:entity>
 				</ids:partOf>
-				<ids:property>
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
@@ -351,7 +351,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property>
+				<ids:property dataType="IFCLABEL">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_PlateCommon</ids:simpleValue>
 					</ids:propertySet>

@@ -20,7 +20,7 @@
           </value>
           <system>
             <xs:restriction base="xs:string">
-              <xs:pattern value=".*" />
+              <xs:pattern value="\w+" />
             </xs:restriction>
           </system>
         </classification>

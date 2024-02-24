@@ -36,7 +36,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property uri="http://identifier.buildingsmart.org/uri/buildingsmart-ch/UCM-CH-Demo-1.0/prop/PUCM001">
+				<ids:property dataType="IFCLABEL" uri="http://identifier.buildingsmart.org/uri/buildingsmart-ch/UCM-CH-Demo-1.0/prop/PUCM001">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>

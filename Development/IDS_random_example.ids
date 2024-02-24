@@ -23,7 +23,7 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:property>
+				<ids:property dataType="IFCLABEL">
 					<ids:propertySet>
 						<xs:restriction>
 							<xs:annotation>

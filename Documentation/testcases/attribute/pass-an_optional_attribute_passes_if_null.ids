@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ids xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/0.9.7/ids.xsd" xmlns="http://standards.buildingsmart.org/IDS">
   <info>
-    <title>An optional facet always passes regardless of outcome 2/2</title>
+    <title>An optional attribute passes if null</title>
     <description>Generated via code automation in the Ids Repository on github.</description>
   </info>
   <specifications>
-    <specification name="An optional facet always passes regardless of outcome 2/2" ifcVersion="IFC2X3 IFC4">
+    <specification name="An optional attribute passes if null" ifcVersion="IFC2X3 IFC4">
       <applicability maxOccurs="unbounded">
         <entity>
           <name>
-            <simpleValue>IFCSLAB</simpleValue>
+            <simpleValue>IFCWALL</simpleValue>
           </name>
         </entity>
       </applicability>
       <requirements>
-        <classification cardinality="optional">
-          <system>
-            <xs:restriction base="xs:string">
-              <xs:pattern value=".*" />
-            </xs:restriction>
-          </system>
-        </classification>
+        <attribute cardinality="optional">
+          <name>
+            <simpleValue>Name</simpleValue>
+          </name>
+          <value>
+            <simpleValue>Foobar</simpleValue>
+          </value>
+        </attribute>
       </requirements>
     </specification>
   </specifications>

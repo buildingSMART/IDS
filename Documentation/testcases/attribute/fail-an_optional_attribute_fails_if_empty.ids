@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ids xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/0.9.7/ids.xsd" xmlns="http://standards.buildingsmart.org/IDS">
   <info>
-    <title>Restrictions an be specified for the predefined type 1/3</title>
+    <title>An optional attribute fails if empty</title>
     <description>Generated via code automation in the Ids Repository on github.</description>
   </info>
   <specifications>
-    <specification name="Restrictions an be specified for the predefined type 1/3" ifcVersion="IFC2X3 IFC4">
+    <specification name="An optional attribute fails if empty" ifcVersion="IFC2X3 IFC4">
       <applicability maxOccurs="unbounded">
         <entity>
           <name>
@@ -14,16 +14,14 @@
         </entity>
       </applicability>
       <requirements>
-        <entity>
+        <attribute cardinality="optional">
           <name>
-            <simpleValue>IFCWALL</simpleValue>
+            <simpleValue>Name</simpleValue>
           </name>
-          <subType>
-            <xs:restriction base="xs:string">
-              <xs:pattern value="FOO.*" />
-            </xs:restriction>
-          </subType>
-        </entity>
+          <value>
+            <simpleValue>Foobar</simpleValue>
+          </value>
+        </attribute>
       </requirements>
     </specification>
   </specifications>

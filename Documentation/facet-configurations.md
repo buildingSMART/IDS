@@ -16,7 +16,7 @@ NAME is mandatory.
 | Fields Entered   | Required | Optional | Prohibited | Applicability |
 | ---------------- | -------- | -------- | ---------- | ------------- |
 | NAME             | ✅       | ❌       | ❌         | ✅            |
-| NAME / [SUBTYPE] | ✅       | ❌       | ❌         | ✅            | SCHEMA CHANGE!!! (NAME)
+| NAME / [SUBTYPE] | ✅       | ❌       | ❌         | ✅            |
 
 Optional Entity requirements have no meaning? An Applicable Element is a IFCDOOR or it is not.
 
@@ -134,12 +134,12 @@ IDS HAS PSET/PNAME/DATATYPE/VALUE: Like the previous, PLUS: the IFC value needs 
 
 We want to change the specs so that SYSTEM is mandatory (schema change!!!)
 
-| Fields Entered   | Required | Optional | Prohibited | Applicability | Notes                   |
-| ---------------- | -------- | -------- | ---------- | ------------- | ----------------------- |
-|                  | ❌       | ❌       | ❌         | ❌            |                         |
-| [VALUE]          | ❌       | ❌       | ❌         | ❌            | this is a schema change |
-| SYSTEM           | ✅       | ❌       | ✅         | ✅            |                         |
-| SYSTEM / [VALUE] | ✅       | ✅       | ✅         | ✅            |                         |
+| Fields Entered   | Required | Optional | Prohibited | Applicability | Notes                                                |
+| ---------------- | -------- | -------- | ---------- | ------------- | ---------------------------------------------------- |
+|                  | ❌       | ❌       | ❌         | ❌            | prohibited in schema, audit to exclude empty strings |
+| [VALUE]          | ❌       | ❌       | ❌         | ❌            | prohibited in schema, audit to exclude empty strings |
+| SYSTEM           | ✅       | ❌       | ✅         | ✅            |                                                      |
+| SYSTEM / [VALUE] | ✅       | ✅       | ✅         | ✅            |                                                      |
 
 Optional = If the applicable element has classifications at least one should match the value/system.
 

@@ -6,7 +6,5 @@ FILE_SCHEMA(('IFC4'));
 ENDSEC;
 DATA;
 #1=IFCWALL('1hqIFTRjfV6AWq_bMtnZwI',$,$,$,$,$,$,$,$);
-#2=IFCMATERIAL('Unnamed',$,$);
-#3=IFCRELASSOCIATESMATERIAL('05rScmOVzMoQXOfbYdtLYj',$,$,$,(#1),#2);
 ENDSEC;
 END-ISO-10303-21;

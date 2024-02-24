@@ -21,22 +21,31 @@ Requirements:
 Attribute: ''Name''
 ```
 
-### An optional facet always passes regardless of outcome 1/2
+### An optional attribute passes if specified
 
-``` ids attribute/pass-an_optional_facet_always_passes_regardless_of_outcome_1_2.ids
-An optional facet always passes regardless of outcome 1/2
+``` ids attribute/pass-an_optional_attribute_passes_if_specified.ids
+An optional attribute passes if specified
 Entity: ''IFCWALL''
 Requirements:
-Attribute: Optional,''Name''
+Attribute: Optional,''Name'', ''Foobar''
 ```
 
-### An optional facet always passes regardless of outcome 2/2
+### An optional attribute passes if null
 
-``` ids attribute/pass-an_optional_facet_always_passes_regardless_of_outcome_2_2.ids
-An optional facet always passes regardless of outcome 2/2
+``` ids attribute/pass-an_optional_attribute_passes_if_null.ids
+An optional attribute passes if null
 Entity: ''IFCWALL''
 Requirements:
-Attribute: Optional,''ActingRole''
+Attribute: Optional,''Name'', ''Foobar''
+```
+
+### An optional attribute fails if empty
+
+``` ids attribute/fail-an_optional_attribute_fails_if_empty.ids
+An optional attribute fails if empty
+Entity: ''IFCWALL''
+Requirements:
+Attribute: Optional,''Name'', ''Foobar''
 ```
 
 ### Attributes are not inherited by the occurrence
@@ -549,7 +558,7 @@ Attribute: ''Name'',Enumeration(''Foo'',''Bar'')
 A classification facet with no data matches any classification 1/2
 Entity: ''IFCWALL''
 Requirements:
-Classification: Pattern(''.*'')
+Classification: Pattern(''\w+'')
 ```
 
 ### A classification facet with no data matches any classification 2/2
@@ -558,7 +567,7 @@ Classification: Pattern(''.*'')
 A classification facet with no data matches any classification 2/2
 Entity: ''IFCSLAB''
 Requirements:
-Classification: Pattern(''.*'')
+Classification: Pattern(''\w+'')
 ```
 
 ### A prohibited facet returns the opposite of a required facet
@@ -576,25 +585,34 @@ Classification: Prohibited,Pattern(''.*'')
 A required facet checks all parameters as normal
 Entity: ''IFCSLAB''
 Requirements:
-Classification: Pattern(''.*'')
+Classification: Pattern(''\w+'')
 ```
 
-### An optional facet always passes regardless of outcome 1/2
+### An optional classification value passes if specified
 
-``` ids classification/pass-an_optional_facet_always_passes_regardless_of_outcome_1_2.ids
+``` ids classification/pass-an_optional_classification_value_passes_if_specified.ids
 An optional facet always passes regardless of outcome 1/2
 Entity: ''IFCWALL''
 Requirements:
-Classification: Optional,Pattern(''.*'')
+Classification: Optional,Pattern(''\w+''),''ExpectedValue''
 ```
 
-### An optional facet always passes regardless of outcome 2/2
+### An optional classification value passes if null
 
-``` ids classification/pass-an_optional_facet_always_passes_regardless_of_outcome_2_2.ids
-An optional facet always passes regardless of outcome 2/2
-Entity: ''IFCSLAB''
+``` ids classification/pass-an_optional_classification_value_passes_if_null.ids
+An optional facet always passes regardless of outcome 1/2
+Entity: ''IFCWALL''
 Requirements:
-Classification: Optional,Pattern(''.*'')
+Classification: Optional,Pattern(''\w+''),''ExpectedValue''
+```
+
+### An optional classification value fails if no match
+
+``` ids classification/fail-an_optional_classification_value_fails_if_no_match.ids
+An optional facet always passes regardless of outcome 1/2
+Entity: ''IFCWALL''
+Requirements:
+Classification: Optional,Pattern(''\w+''),''ExpectedValue''
 ```
 
 ### Both system and value must match (all, not any) if specified 1/2
@@ -617,13 +635,11 @@ Classification: ''Foobar'',''1''
 
 ### Non-rooted resources that have external classification references should also pass
 
-TODO: This is suspended until the auditing tool is completed.
-
-``` suspended ids classification/pass-non_rooted_resources_that_have_external_classification_references_should_also_pass.ids
+``` ids classification/pass-non_rooted_resources_that_have_external_classification_references_should_also_pass.ids
 Non-rooted resources that have external classification references should also pass
 Entity: ''IFCMATERIAL''
 Requirements:
-Classification: Pattern(''.*''),''1''
+Classification: Pattern(''\w+''),''1''
 ```
 
 ### Occurrences override the type classification per system 1/3
@@ -632,7 +648,7 @@ Classification: Pattern(''.*''),''1''
 Occurrences override the type classification per system 1/3
 Entity: ''IFCWALL''
 Requirements:
-Classification: Pattern(''.*''),''11''
+Classification: Pattern(''\w+''),''11''
 ```
 
 ### Occurrences override the type classification per system 2/3
@@ -641,7 +657,7 @@ Classification: Pattern(''.*''),''11''
 Occurrences override the type classification per system 2/3
 Entity: ''IFCWALL''
 Requirements:
-Classification: Pattern(''.*''),''22''
+Classification: Pattern(''\w+''),''22''
 ```
 
 ### Occurrences override the type classification per system 3/3
@@ -650,7 +666,7 @@ Classification: Pattern(''.*''),''22''
 Occurrences override the type classification per system 3/3
 Entity: ''IFCWALL''
 Requirements:
-Classification: Pattern(''.*''),''X''
+Classification: Pattern(''\w+''),''X''
 ```
 
 ### Restrictions can be used for systems 1/2
@@ -677,7 +693,7 @@ Classification: Pattern(''Foo.*'')
 Restrictions can be used for values 1/3
 Entity: ''IFCSLAB''
 Requirements:
-Classification: Pattern(''.*''),Pattern(''1.*'')
+Classification: Pattern(''\w+''),Pattern(''1.*'')
 ```
 
 ### Restrictions can be used for values 2/3
@@ -686,7 +702,7 @@ Classification: Pattern(''.*''),Pattern(''1.*'')
 Restrictions can be used for values 2/3
 Entity: ''IFCCOLUMN''
 Requirements:
-Classification: Pattern(''.*''),Pattern(''1.*'')
+Classification: Pattern(''\w+''),Pattern(''1.*'')
 ```
 
 ### Restrictions can be used for values 3/3
@@ -695,7 +711,7 @@ Classification: Pattern(''.*''),Pattern(''1.*'')
 Restrictions can be used for values 3/3
 Entity: ''IFCBEAM''
 Requirements:
-Classification: Pattern(''.*''),Pattern(''1.*'')
+Classification: Pattern(''\w+''),Pattern(''1.*'')
 ```
 
 ### Systems should match exactly 1/5
@@ -749,7 +765,7 @@ Classification: ''Foobar''
 Values match subreferences if full classifications are used (e.g. EF_25_10 should match EF_25_10_25, EF_25_10_30, etc)
 Entity: ''IFCBEAM''
 Requirements:
-Classification: Pattern(''.*''),''2''
+Classification: Pattern(''\w+''),''2''
 ```
 
 ### Values should match exactly if lightweight classifications are used
@@ -758,7 +774,7 @@ Classification: Pattern(''.*''),''2''
 Values should match exactly if lightweight classifications are used
 Entity: ''IFCSLAB''
 Requirements:
-Classification: Pattern(''.*''),''1''
+Classification: Pattern(''\w+''),''1''
 ```
 
 ## entity
@@ -811,18 +827,18 @@ Entity: ''IFCWALLTYPE'',''WALDO''
 
 ### A predefined type may specify a user-defined object type
 
-This custom subType should be allowed, if custom. 
+This custom subType should be allowed, if custom is allowed in the enumeration.
+IfcWall does not have predefinedType in 2X3, so the test case is constrained to IFC4
 
-``` suspended ids entity/pass-a_predefined_type_may_specify_a_user_defined_object_type.ids
+``` ids entity/pass-a_predefined_type_may_specify_a_user_defined_object_type.ids
 A predefined type may specify a user-defined object type
+IFC4
 Entity: ''IFCWALL''
 Requirements:
 Entity: ''IFCWALL'',''WALDO''
 ```
 
 ### A predefined type may specify a user-defined process type
-
-TODO: Suspended
 
 ``` ids entity/pass-a_predefined_type_may_specify_a_user_defined_process_type.ids
 A predefined type may specify a user-defined process type
@@ -834,9 +850,9 @@ Entity: ''IFCTASKTYPE'',''TASKY''
 
 ### A predefined type must always specify a meaningful type, not USERDEFINED itself
 
-Suspended TODO: the group agreed to allow userdefined as an option too.
+TODO: the group agreed to allow userdefined as a valid option too.
 
-``` Suspended ids entity/fail-a_predefined_type_must_always_specify_a_meaningful_type__not_userdefined_itself.ids
+``` ids entity/fail-a_predefined_type_must_always_specify_a_meaningful_type__not_userdefined_itself.ids
 A predefined type must always specify a meaningful type, not USERDEFINED itself
 Entity: ''IFCWALL''
 Requirements:
@@ -928,6 +944,7 @@ Entity: ''IfcWall''
 
 ``` ids entity/pass-inherited_predefined_types_should_pass.ids
 Inherited predefined types should pass
+IFC4
 Entity: ''IFCWALL''
 Requirements:
 Entity: ''IFCWALL'',''X''
@@ -946,33 +963,37 @@ Entity: ''IFCRABBIT''
 
 ``` ids entity/pass-overridden_predefined_types_should_pass.ids
 Overridden predefined types should pass
+IFC4
 Entity: ''IFCWALL''
 Requirements:
 Entity: ''IFCWALL'',''X''
 ```
 
-### Restrictions an be specified for the predefined type 1/3
+### Restrictions can be specified for the predefined type 1/3
 
-``` ids entity/pass-restrictions_an_be_specified_for_the_predefined_type_1_3.ids
+``` ids entity/pass-restrictions_can_be_specified_for_the_predefined_type_1_3.ids
 Restrictions an be specified for the predefined type 1/3
+IFC4
 Entity: ''IFCWALL''
 Requirements:
 Entity: ''IFCWALL'',Pattern(''FOO.*'')
 ```
 
-### Restrictions an be specified for the predefined type 2/3
+### Restrictions can be specified for the predefined type 2/3
 
-``` ids entity/pass-restrictions_an_be_specified_for_the_predefined_type_2_3.ids
+``` ids entity/pass-restrictions_can_be_specified_for_the_predefined_type_2_3.ids
 Restrictions an be specified for the predefined type 2/3
+IFC4
 Entity: ''IFCWALL''
 Requirements:
 Entity: ''IFCWALL'',Pattern(''FOO.*'')
 ```
 
-### Restrictions an be specified for the predefined type 3/3
+### Restrictions can be specified for the predefined type 3/3
 
-``` ids entity/fail-restrictions_an_be_specified_for_the_predefined_type_3_3.ids
+``` ids entity/fail-restrictions_can_be_specified_for_the_predefined_type_3_3.ids
 Restrictions an be specified for the predefined type 3/3
+IFC4
 Entity: ''IFCWALL''
 Requirements:
 Entity: ''IFCWALL'',Pattern(''FOO.*'')
@@ -991,6 +1012,7 @@ Entity: ''IFCWALL''
 
 ``` ids entity/fail-user_defined_types_are_checked_case_sensitively.ids
 User-defined types are checked case sensitively
+IFC4
 Entity: ''IFCWALL''
 Requirements:
 Entity: ''IFCWALL'',''WALDO''
@@ -1002,6 +1024,7 @@ Entity: ''IFCWALL'',''WALDO''
 
 ``` ids ids/fail-a_minimal_ids_can_check_a_minimal_ifc_1_2.ids
 A minimal ids can check a minimal ifc (1/2)
+IFC4
 Optional
 Entity: ''IFCWALL''
 Requirements:
@@ -1012,6 +1035,7 @@ Attribute: ''Name'',''Waldo''
 
 ``` ids ids/pass-a_minimal_ids_can_check_a_minimal_ifc_2_2.ids
 A minimal ids can check a minimal ifc (2/2)
+IFC4
 Optional
 Entity: ''IFCWALL''
 Requirements:
@@ -1209,9 +1233,27 @@ Requirements:
 Material: 
 ```
 
-### An optional facet always passes regardless of outcome 1/2
+### An optional material passes if specified
 
-``` ids material/pass-an_optional_facet_always_passes_regardless_of_outcome_1_2.ids
+``` ids material/pass-an_optional_material_passes_if_specified.ids
+An optional facet always passes regardless of outcome 1/2
+Entity: ''IFCWALL''
+Requirements:
+Material: Optional,''Foo''
+```
+
+### An optional material passes if null
+
+``` ids material/pass-an_optional_material_passes_if_null.ids
+An optional facet always passes regardless of outcome 1/2
+Entity: ''IFCWALL''
+Requirements:
+Material: Optional,''Foo''
+```
+
+### An optional material fails if no value matches
+
+``` ids material/fail-an_optional_material_fails_if_no_value_matches.ids
 An optional facet always passes regardless of outcome 1/2
 Entity: ''IFCWALL''
 Requirements:
@@ -1422,6 +1464,7 @@ PartOf: ''IFCINVENTORY'',''BUNNARY'',IFCRELASSIGNSTOGROUP
 
 ``` ids partof/pass-a_group_predefined_type_must_match_exactly_2_2.ids
 A group predefined type must match exactly 2/2
+IFC4
 Entity: ''IFCELEMENTASSEMBLY''
 Requirements:
 PartOf: ''IFCINVENTORY'',''BUNNY'',IFCRELASSIGNSTOGROUP
@@ -1566,6 +1609,7 @@ PartOf: Pattern(''.*''),IFCRELNESTS
 
 ``` ids partof/fail-any_nested_whole_fails_a_nest_relationship.ids
 Any nested whole fails a nest relationship
+IFC4
 Entity: ''IFCFURNITURE''
 Requirements:
 PartOf: Pattern(''.*''),IFCRELNESTS
@@ -1575,6 +1619,7 @@ PartOf: Pattern(''.*''),IFCRELNESTS
 
 ``` ids partof/pass-nesting_may_be_indirect.ids
 Nesting may be indirect
+IFC4
 Entity: ''IFCMECHANICALFASTENER''
 Requirements:
 PartOf: ''IFCFURNITURE'',IFCRELNESTS
@@ -1647,6 +1692,7 @@ PartOf: ''IFCSPACE'',''WARREN'',IFCRELCONTAINEDINSPATIALSTRUCTURE
 
 ``` ids partof/pass-the_container_predefined_type_must_match_exactly_2_2.ids
 The container predefined type must match exactly 2/2
+IFC4
 Entity: ''IFCELEMENTASSEMBLY''
 Requirements:
 PartOf: ''IFCSPACE'',''BURROW'',IFCRELCONTAINEDINSPATIALSTRUCTURE
@@ -1665,6 +1711,7 @@ PartOf: ''IFCBEAM'',IFCRELNESTS
 
 ``` ids partof/pass-the_nest_entity_must_match_exactly_2_2.ids
 The nest entity must match exactly 2/2
+IFC4
 Entity: ''IFCDISCRETEACCESSORY''
 Requirements:
 PartOf: ''IFCFURNITURE'',IFCRELNESTS
@@ -1674,6 +1721,7 @@ PartOf: ''IFCFURNITURE'',IFCRELNESTS
 
 ``` ids partof/fail-the_nest_predefined_type_must_match_exactly_1_2.ids
 The nest predefined type must match exactly 1/2
+IFC4
 Entity: ''IFCDISCRETEACCESSORY''
 Requirements:
 PartOf: ''IFCFURNITURE'',''LITTERBOX'',IFCRELNESTS
@@ -1683,6 +1731,7 @@ PartOf: ''IFCFURNITURE'',''LITTERBOX'',IFCRELNESTS
 
 ``` ids partof/pass-the_nest_predefined_type_must_match_exactly_2_2.ids
 The nest predefined type must match exactly 2/2
+IFC4
 Entity: ''IFCDISCRETEACCESSORY''
 Requirements:
 PartOf: ''IFCFURNITURE'',''WATERBOTTLE'',IFCRELNESTS
@@ -1955,6 +2004,7 @@ Property: ''Pset_WallCommon'',''Status'',IFCLABEL,''EXISTING''
 
 ``` ids property/pass-any_matching_value_in_an_enumerated_property_will_pass_2_3.ids
 Any matching value in an enumerated property will pass 2/3
+IFC4
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Pset_WallCommon'',''Status'',IFCLABEL,''DEMOLISH''

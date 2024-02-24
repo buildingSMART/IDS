@@ -187,7 +187,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property uri="https://www.igh.hr/en/reference/">
+				<ids:property uri="https://www.igh.hr/en/reference/" dataType="IFCLABEL">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
