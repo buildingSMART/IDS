@@ -5,7 +5,7 @@
     <description>Generated via code automation in the Ids Repository on github.</description>
   </info>
   <specifications>
-    <specification name="A zero duration will pass" ifcVersion="IFC2X3 IFC4">
+    <specification name="A zero duration will pass" ifcVersion="IFC4">
       <applicability maxOccurs="unbounded">
         <entity>
           <name>

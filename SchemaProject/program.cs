@@ -35,6 +35,7 @@ class Program
         // 
         var allIfcFound = true;
         var expectedIfcFileNames = new List<string>();
+        var missingIfcFileNames = new List<string>();
         foreach (var line in allLines)
         {
             if (line.StartsWith("``` ids "))
@@ -57,7 +58,7 @@ class Program
                 expectedIfcFileNames.Add(ifcName);
                 if (!File.Exists(ifcName))
                 {
-                    
+                    missingIfcFileNames.Add(ifcName);
                     Console.WriteLine($"Missing ifc: - {ifcName}");
                     allIfcFound = false;
                 }
@@ -75,7 +76,12 @@ class Program
             if (!expectedIfcFileNames.Contains(item.FullName))
             {
                 Console.WriteLine($"Extra IFC: - {item.FullName}");
-                if (allIfcFound)
+                var invalid = item.FullName.Replace("fail-", "invalid-");
+                if (missingIfcFileNames.Contains (invalid) )
+                {
+                    File.Move(item.FullName, invalid);
+                }
+                else if (allIfcFound)
                 {
                     // item.Delete();
                 }

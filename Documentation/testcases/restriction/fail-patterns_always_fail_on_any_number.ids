@@ -9,7 +9,7 @@
       <applicability minOccurs="0" maxOccurs="unbounded">
         <entity>
           <name>
-            <simpleValue>IfcSurfaceStyleRefraction</simpleValue>
+            <simpleValue>IFCSURFACESTYLEREFRACTION</simpleValue>
           </name>
         </entity>
       </applicability>

@@ -9,7 +9,7 @@
       <applicability maxOccurs="unbounded">
         <entity>
           <name>
-            <simpleValue>IfcWall</simpleValue>
+            <simpleValue>IFCWALL</simpleValue>
           </name>
         </entity>
       </applicability>

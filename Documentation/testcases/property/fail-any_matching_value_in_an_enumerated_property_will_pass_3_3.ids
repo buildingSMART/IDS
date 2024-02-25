@@ -5,7 +5,7 @@
     <description>Generated via code automation in the Ids Repository on github.</description>
   </info>
   <specifications>
-    <specification name="Any matching value in an enumerated property will pass 3/3" ifcVersion="IFC2X3 IFC4">
+    <specification name="Any matching value in an enumerated property will pass 3/3" ifcVersion="IFC4">
       <applicability maxOccurs="unbounded">
         <entity>
           <name>

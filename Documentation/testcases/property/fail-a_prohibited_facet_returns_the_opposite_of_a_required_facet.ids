@@ -14,7 +14,7 @@
         </entity>
       </applicability>
       <requirements>
-        <property dataType="IFCLABEL" cardinality="prohibited">
+        <property cardinality="prohibited">
           <propertySet>
             <simpleValue>Foo_Bar</simpleValue>
           </propertySet>

@@ -1,5 +1,11 @@
 # Documentation test cases
 
+Test cases are arranged by theme (e.g. attribute, entity, etc) and arranged in 3 groups (i.e. pass, fail, and invalid), depending on the expected of the verification outcome of the matching IFC/IDS couple.
+
+- pass: all requirements are satisfied
+- fail: at least one requirement fails
+- invalid: just like fail, but since the IDS specifications do not comply with the Audit tool, they could never be satisfied, regardless of the content of the IFC file.
+
 ## attribute
 
 ### A prohibited facet returns the opposite of a required facet
@@ -236,6 +242,7 @@ Attribute: ''EditionDate'',''2022-01-01''
 
 ``` ids attribute/pass-dates_are_treated_as_strings_1_2.ids
 Dates are treated as strings 1/2
+IFC4
 Entity: ''IFCCLASSIFICATION''
 Requirements:
 Attribute: ''EditionDate'',''2022-01-01''
@@ -243,7 +250,7 @@ Attribute: ''EditionDate'',''2022-01-01''
 
 ### Derived attributes cannot be checked and always fail
 
-``` ids attribute/fail-derived_attributes_cannot_be_checked_and_always_fail.ids
+``` ids attribute/invalid-derived_attributes_cannot_be_checked_and_always_fail.ids
 Derived attributes cannot be checked and always fail
 Entity: ''IFCCARTESIANPOINT''
 Requirements:
@@ -264,6 +271,7 @@ Attribute: ''ScheduleDuration'',''PT16H''
 
 ``` ids attribute/fail-durations_are_treated_as_strings_2_2.ids
 Durations are treated as strings 2/2
+IFC4
 Entity: ''IFCTASKTIME''
 Requirements:
 Attribute: ''ScheduleDuration'',''PT16H''
@@ -318,6 +326,7 @@ Attribute: ''GlobalId'',''1hqIFTRjfV6AWq_bMtnZwI''
 
 ``` ids attribute/fail-ids_does_not_handle_string_truncation_such_as_for_identifiers.ids
 IDS does not handle string truncation such as for identifiers
+IFC4
 Entity: ''IFCPERSON''
 Requirements:
 Attribute: ''Identification'',''123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345_extra_characters''
@@ -345,7 +354,9 @@ Attribute: ''NumberOfRisers'',''42.0''
 
 ### Invalid attribute names always fail
 
-``` ids attribute/fail-invalid_attribute_names_always_fail.ids
+Entities of type IFCWALL do not have the ActingRole attribute.
+
+``` ids attribute/invalid-invalid_attribute_names_always_fail.ids
 Invalid attribute names always fail
 Entity: ''IFCWALL''
 Requirements:
@@ -354,7 +365,7 @@ Attribute: ''ActingRole''
 
 ### Inverse attributes cannot be checked and always fail
 
-``` ids attribute/fail-inverse_attributes_cannot_be_checked_and_always_fail.ids
+``` ids attribute/invalid-inverse_attributes_cannot_be_checked_and_always_fail.ids
 Inverse attributes cannot be checked and always fail
 Entity: ''IFCPERSON''
 Requirements:
@@ -471,11 +482,14 @@ Attribute: ''RefractionIndex'',''1.2345E3''
 
 ### Specifying a float when the value is an integer will fail
 
+Note that the attribute name `NumberOfRiser` has been renamed to `NumberOfRisers` in IFC4
+
 ``` ids attribute/fail-specifying_a_float_when_the_value_is_an_integer_will_fail.ids
 Specifying a float when the value is an integer will fail
+IFC4
 Entity: ''IFCSTAIRFLIGHT''
 Requirements:
-Attribute: ''NumberOfRisers'',''42.3''
+Attribute: Pattern(''NumberOfRiser(s)?''),''42.3''
 ```
 
 ### Strict numeric checking may be done with a bounds restriction
@@ -509,6 +523,7 @@ Attribute: ''Coordinates'',''Foobar''
 
 ``` ids attribute/fail-value_checks_always_fail_for_objects.ids
 Value checks always fail for objects
+IFC4
 Entity: ''IFCTASK''
 Requirements:
 Attribute: ''TaskTime'',''Foobar''
@@ -576,7 +591,7 @@ Classification: Pattern(''\w+'')
 A prohibited facet returns the opposite of a required facet
 Entity: ''IFCSLAB''
 Requirements:
-Classification: Prohibited,Pattern(''.*'')
+Classification: Prohibited,Pattern(''\w+'')
 ```
 
 ### A required facet checks all parameters as normal
@@ -635,8 +650,12 @@ Classification: ''Foobar'',''1''
 
 ### Non-rooted resources that have external classification references should also pass
 
+Since ifc4, IFCEXTERNALREFERENCERELATIONSHIP can relate an IFCEXTERNALREFERENCE to any IFCRESOURCEOBJECTSELECT.
+
+
 ``` ids classification/pass-non_rooted_resources_that_have_external_classification_references_should_also_pass.ids
 Non-rooted resources that have external classification references should also pass
+IFC4
 Entity: ''IFCMATERIAL''
 Requirements:
 Classification: Pattern(''\w+''),''1''
@@ -802,6 +821,7 @@ Entity: ''IFCWALL'',''SOLIDWALL''
 
 ``` ids entity/fail-a_null_predefined_type_should_always_fail_a_specified_predefined_types.ids
 A null predefined type should always fail a specified predefined types
+IFC4
 Entity: ''IFCWALL''
 Requirements:
 Entity: ''IFCWALL'',''SOLIDWALL''
@@ -811,6 +831,7 @@ Entity: ''IFCWALL'',''SOLIDWALL''
 
 ``` ids entity/fail-a_predefined_type_from_an_enumeration_must_be_uppercase.ids
 A predefined type from an enumeration must be uppercase
+IFC4
 Entity: ''IFCWALL''
 Requirements:
 Entity: ''IFCWALL'',''solidwall''
@@ -852,7 +873,7 @@ Entity: ''IFCTASKTYPE'',''TASKY''
 
 TODO: the group agreed to allow userdefined as a valid option too.
 
-``` ids entity/fail-a_predefined_type_must_always_specify_a_meaningful_type__not_userdefined_itself.ids
+``` suspended ids entity/fail-a_predefined_type_must_always_specify_a_meaningful_type__not_userdefined_itself.ids
 A predefined type must always specify a meaningful type, not USERDEFINED itself
 Entity: ''IFCWALL''
 Requirements:
@@ -863,6 +884,7 @@ Entity: ''IFCWALL'',''USERDEFINED''
 
 ``` ids entity/fail-an_entity_not_matching_a_specified_predefined_type_will_fail.ids
 An entity not matching a specified predefined type will fail
+IFC4
 Entity: ''IFCWALL''
 Requirements:
 Entity: ''IFCWALL'',''SOLIDWALL''
@@ -870,7 +892,7 @@ Entity: ''IFCWALL'',''SOLIDWALL''
 
 ### An entity not matching the specified class should fail
 
-``` ids entity/fail-an_entity_not_matching_the_specified_class_should_fail.ids
+``` ids entity/invalid-an_entity_not_matching_the_specified_class_should_fail.ids
 An entity not matching the specified class should fail
 Entity: ''IFCSLAB''
 Requirements:
@@ -888,7 +910,7 @@ Entity: ''IFCWALL''
 
 ### Entities can be specified as a XSD regex pattern 1/2
 
-``` ids entity/fail-entities_can_be_specified_as_a_xsd_regex_pattern_1_2.ids
+``` ids entity/invalid-entities_can_be_specified_as_a_xsd_regex_pattern_1_2.ids
 Entities can be specified as a XSD regex pattern 1/2
 Entity: ''IFCWALL''
 Requirements:
@@ -924,7 +946,7 @@ Entity: Enumeration(''IFCWALL'',''IFCSLAB'')
 
 ### Entities can be specified as an enumeration 3/3
 
-``` ids entity/fail-entities_can_be_specified_as_an_enumeration_3_3.ids
+``` ids entity/invalid-entities_can_be_specified_as_an_enumeration_3_3.ids
 Entities can be specified as an enumeration 3/3
 Entity: ''IFCBEAM''
 Requirements:
@@ -933,7 +955,7 @@ Entity: Enumeration(''IFCWALL'',''IFCSLAB'')
 
 ### Entities must be specified as uppercase strings
 
-``` ids entity/fail-entities_must_be_specified_as_uppercase_strings.ids
+``` ids entity/invalid-entities_must_be_specified_as_uppercase_strings.ids
 Entities must be specified as uppercase strings
 Entity: ''IFCWALL''
 Requirements:
@@ -952,7 +974,7 @@ Entity: ''IFCWALL'',''X''
 
 ### Invalid entities always fail
 
-``` ids entity/fail-invalid_entities_always_fail.ids
+``` ids entity/invalid-invalid_entities_always_fail.ids
 Invalid entities always fail
 Entity: ''IFCWALL''
 Requirements:
@@ -1001,7 +1023,7 @@ Entity: ''IFCWALL'',Pattern(''FOO.*'')
 
 ### Subclasses are not considered as matching
 
-``` ids entity/fail-subclasses_are_not_considered_as_matching.ids
+``` ids entity/invalid-subclasses_are_not_considered_as_matching.ids
 Subclasses are not considered as matching
 Entity: ''IFCWALLSTANDARDCASE''
 Requirements:
@@ -1201,7 +1223,7 @@ Material: ''Foo''
 
 ``` ids material/fail-a_material_list_with_no_data_will_fail_a_value_check.ids
 A material list with no data will fail a value check
-Entity: ''IfcWall''
+Entity: ''IFCWALL''
 Requirements:
 Material: ''Foo''
 ```
@@ -1408,7 +1430,7 @@ Material:
 
 ``` ids material/fail-material_with_no_data_will_fail_a_value_check.ids
 Material with no data will fail a value check
-Entity: ''IfcWall''
+Entity: ''IFCWALL''
 Requirements:
 Material: ''Foo''
 ```
@@ -1453,7 +1475,7 @@ PartOf: ''IFCINVENTORY'',IFCRELASSIGNSTOGROUP
 
 ### A group predefined type must match exactly 2/2
 
-``` ids partof/fail-a_group_predefined_type_must_match_exactly_2_2.ids
+``` ids partof/invalid-a_group_predefined_type_must_match_exactly_2_2.ids
 A group predefined type must match exactly 2/2
 Entity: ''IFCELEMENTASSEMBLY''
 Requirements:
@@ -1683,6 +1705,7 @@ PartOf: ''IFCSPACE'',IFCRELCONTAINEDINSPATIALSTRUCTURE
 
 ``` ids partof/fail-the_container_predefined_type_must_match_exactly_1_2.ids
 The container predefined type must match exactly 1/2
+IFC4
 Entity: ''IFCELEMENTASSEMBLY''
 Requirements:
 PartOf: ''IFCSPACE'',''WARREN'',IFCRELCONTAINEDINSPATIALSTRUCTURE
@@ -1739,10 +1762,13 @@ PartOf: ''IFCFURNITURE'',''WATERBOTTLE'',IFCRELNESTS
 
 ## property
 
-### A logical unknown is considered falsey and will not pass
+### A logical unknown is considered false and will not pass
 
-``` ids property/fail-a_logical_unknown_is_considered_falsey_and_will_not_pass.ids
-A logical unknown is considered falsey and will not pass
+IFCDURATION is not available in IFC2x3
+
+``` ids property/fail-a_logical_unknown_is_considered_false_and_will_not_pass.ids
+A logical unknown is considered false and will not pass
+IFC4
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCDURATION
@@ -1781,7 +1807,7 @@ Property: ''Foo_Bar'',''Foo'',IFCLABEL,''1''
 A prohibited facet returns the opposite of a required facet
 Entity: ''IFCWALL''
 Requirements:
-Property: Prohibited,''Foo_Bar'',''Foo'',IFCLABEL
+Property: Prohibited,''Foo_Bar'',''Foo''
 ```
 
 ### A property set to false is still considered a value and will pass a name check
@@ -1813,8 +1839,11 @@ Property: ''Foo_Bar'',''Foo'',IFCLABEL
 
 ### A zero duration will pass
 
+IFCDURATION is not available in IFC2x3
+
 ``` ids property/pass-a_zero_duration_will_pass.ids
 A zero duration will pass
+IFC4
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCDURATION
@@ -1874,10 +1903,10 @@ Requirements:
 Property: Pattern(''Foo_.*''),''Foo'',IFCLABEL
 ```
 
-### An empty string is considered falsey and will not pass
+### An empty string is considered false and will not pass
 
-``` ids property/fail-an_empty_string_is_considered_falsey_and_will_not_pass.ids
-An empty string is considered falsey and will not pass
+``` ids property/fail-an_empty_string_is_considered_false_and_will_not_pass.ids
+An empty string is considered false and will not pass
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCLOGICAL
@@ -1995,6 +2024,7 @@ Property: ''Foo_Bar'',''Foo'',IFCLABEL,''Y''
 
 ``` ids property/pass-any_matching_value_in_an_enumerated_property_will_pass_1_3.ids
 Any matching value in an enumerated property will pass 1/3
+IFC4
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Pset_WallCommon'',''Status'',IFCLABEL,''EXISTING''
@@ -2014,6 +2044,7 @@ Property: ''Pset_WallCommon'',''Status'',IFCLABEL,''DEMOLISH''
 
 ``` ids property/fail-any_matching_value_in_an_enumerated_property_will_pass_3_3.ids
 Any matching value in an enumerated property will pass 3/3
+IFC4
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Pset_WallCommon'',''Status'',IFCLABEL,''NEW''
@@ -2068,6 +2099,7 @@ Property: ''Foo'',''MyLength'',IFCLENGTHMEASURE
 
 ``` ids property/pass-dates_are_treated_as_strings_1_2.ids
 Dates are treated as strings 1/2
+IFC4
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCDATE,''2022-01-01''
@@ -2077,6 +2109,7 @@ Property: ''Foo_Bar'',''Foo'',IFCDATE,''2022-01-01''
 
 ``` ids property/fail-dates_are_treated_as_strings_2_2.ids
 Dates are treated as strings 2/2
+IFC4
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCDATE,''2022-01-01''
@@ -2084,8 +2117,11 @@ Property: ''Foo_Bar'',''Foo'',IFCDATE,''2022-01-01''
 
 ### Durations are treated as strings 1/2
 
+IFCDURATION is not available in IFC2x3
+
 ``` ids property/fail-durations_are_treated_as_strings_1_2.ids
 Durations are treated as strings 1/2
+IFC4
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCDURATION,''PT16H''
@@ -2093,8 +2129,11 @@ Property: ''Foo_Bar'',''Foo'',IFCDURATION,''PT16H''
 
 ### Durations are treated as strings 1/2
 
+IFCDURATION is not available in IFC2x3
+
 ``` ids property/pass-durations_are_treated_as_strings_1_2.ids
 Durations are treated as strings 1/2
+IFC4
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCDURATION,''PT16H''
@@ -2158,6 +2197,7 @@ Property: ''Foo_Bar'',''Foo'',IFCREAL,''42.''
 
 ``` ids property/fail-ids_does_not_handle_string_truncation_such_as_for_identifiers.ids
 IDS does not handle string truncation such as for identifiers
+IFC4
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCIDENTIFIER,''123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345_extra_characters''
@@ -2500,16 +2540,6 @@ Attribute: ''RefractionIndex'',xs:integer MinInclusive(''0'') MaxInclusive(''10'
 
 ### An enumeration matches case sensitively 1/3
 
-``` ids restriction/fail-an_enumeration_matches_case_sensitively_1_3.ids
-An enumeration matches case sensitively 1/3
-Optional
-Entity: ''IfcWall''
-Requirements:
-Attribute: ''Name'',Enumeration(''Foo'',''Bar'')
-```
-
-### An enumeration matches case sensitively 1/3
-
 ``` ids restriction/pass-an_enumeration_matches_case_sensitively_1_3.ids
 An enumeration matches case sensitively 1/3
 Entity: ''IFCWALL''
@@ -2530,6 +2560,15 @@ Attribute: ''Name'',Enumeration(''Foo'',''Bar'')
 
 ``` ids restriction/fail-an_enumeration_matches_case_sensitively_3_3.ids
 An enumeration matches case sensitively 3/3
+Entity: ''IFCWALL''
+Requirements:
+Attribute: ''Name'',Enumeration(''Foo'',''Bar'')
+```
+
+### An enumeration matches case sensitively 4/3
+
+``` ids restriction/fail-an_enumeration_matches_case_sensitively_4_3.ids
+An enumeration matches case sensitively 4/3
 Entity: ''IFCWALL''
 Requirements:
 Attribute: ''Name'',Enumeration(''Foo'',''Bar'')
@@ -2594,7 +2633,7 @@ Attribute: ''Name'',MinLength(''2'') MaxLength(''3'')
 ``` ids restriction/fail-patterns_always_fail_on_any_number.ids
 Patterns always fail on any number
 Optional
-Entity: ''IfcSurfaceStyleRefraction''
+Entity: ''IFCSURFACESTYLEREFRACTION''
 Requirements:
 Attribute: ''RefractionIndex'',Pattern(''.*'')
 ```

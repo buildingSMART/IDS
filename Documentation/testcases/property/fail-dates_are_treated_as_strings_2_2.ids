@@ -5,7 +5,7 @@
     <description>Generated via code automation in the Ids Repository on github.</description>
   </info>
   <specifications>
-    <specification name="Dates are treated as strings 2/2" ifcVersion="IFC2X3 IFC4">
+    <specification name="Dates are treated as strings 2/2" ifcVersion="IFC4">
       <applicability maxOccurs="unbounded">
         <entity>
           <name>

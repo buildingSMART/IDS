@@ -5,7 +5,7 @@
     <description>Generated via code automation in the Ids Repository on github.</description>
   </info>
   <specifications>
-    <specification name="Specifying a float when the value is an integer will fail" ifcVersion="IFC2X3 IFC4">
+    <specification name="Specifying a float when the value is an integer will fail" ifcVersion="IFC4">
       <applicability maxOccurs="unbounded">
         <entity>
           <name>
@@ -16,7 +16,9 @@
       <requirements>
         <attribute>
           <name>
-            <simpleValue>NumberOfRisers</simpleValue>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="NumberOfRiser(s)?" />
+            </xs:restriction>
           </name>
           <value>
             <simpleValue>42.3</simpleValue>
