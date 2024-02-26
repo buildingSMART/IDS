@@ -618,7 +618,7 @@ Classification: Pattern(''\w+'')
 ### An optional classification value passes if specified
 
 ``` ids classification/pass-an_optional_classification_value_passes_if_specified.ids
-An optional facet always passes regardless of outcome 1/2
+An optional classification value passes if specified
 Entity: ''IFCWALL''
 Requirements:
 Classification: Optional,Pattern(''\w+''),''ExpectedValue''
@@ -627,7 +627,7 @@ Classification: Optional,Pattern(''\w+''),''ExpectedValue''
 ### An optional classification value passes if null
 
 ``` ids classification/pass-an_optional_classification_value_passes_if_null.ids
-An optional facet always passes regardless of outcome 1/2
+An optional classification value passes if null
 Entity: ''IFCWALL''
 Requirements:
 Classification: Optional,Pattern(''\w+''),''ExpectedValue''
@@ -636,7 +636,7 @@ Classification: Optional,Pattern(''\w+''),''ExpectedValue''
 ### An optional classification value fails if no match
 
 ``` ids classification/fail-an_optional_classification_value_fails_if_no_match.ids
-An optional facet always passes regardless of outcome 1/2
+An optional classification value fails if no match
 Entity: ''IFCWALL''
 Requirements:
 Classification: Optional,Pattern(''\w+''),''ExpectedValue''
@@ -1006,7 +1006,7 @@ Entity: ''IFCWALL'',''X''
 ### Restrictions can be specified for the predefined type 1/3
 
 ``` ids entity/pass-restrictions_can_be_specified_for_the_predefined_type_1_3.ids
-Restrictions an be specified for the predefined type 1/3
+Restrictions can be specified for the predefined type 1/3
 IFC4
 Entity: ''IFCWALL''
 Requirements:
@@ -1016,7 +1016,7 @@ Entity: ''IFCWALL'',Pattern(''FOO.*'')
 ### Restrictions can be specified for the predefined type 2/3
 
 ``` ids entity/pass-restrictions_can_be_specified_for_the_predefined_type_2_3.ids
-Restrictions an be specified for the predefined type 2/3
+Restrictions can be specified for the predefined type 2/3
 IFC4
 Entity: ''IFCWALL''
 Requirements:
@@ -1026,7 +1026,7 @@ Entity: ''IFCWALL'',Pattern(''FOO.*'')
 ### Restrictions can be specified for the predefined type 3/3
 
 ``` ids entity/fail-restrictions_can_be_specified_for_the_predefined_type_3_3.ids
-Restrictions an be specified for the predefined type 3/3
+Restrictions can be specified for the predefined type 3/3
 IFC4
 Entity: ''IFCWALL''
 Requirements:
@@ -1270,7 +1270,7 @@ Material:
 ### An optional material passes if specified
 
 ``` ids material/pass-an_optional_material_passes_if_specified.ids
-An optional facet always passes regardless of outcome 1/2
+An optional material passes if specified
 Entity: ''IFCWALL''
 Requirements:
 Material: Optional,''Foo''
@@ -1279,7 +1279,7 @@ Material: Optional,''Foo''
 ### An optional material passes if null
 
 ``` ids material/pass-an_optional_material_passes_if_null.ids
-An optional facet always passes regardless of outcome 1/2
+An optional material passes if null
 Entity: ''IFCWALL''
 Requirements:
 Material: Optional,''Foo''
@@ -1288,7 +1288,7 @@ Material: Optional,''Foo''
 ### An optional material fails if no value matches
 
 ``` ids material/fail-an_optional_material_fails_if_no_value_matches.ids
-An optional facet always passes regardless of outcome 1/2
+An optional material fails if no value matches
 Entity: ''IFCWALL''
 Requirements:
 Material: Optional,''Foo''

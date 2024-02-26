@@ -62,6 +62,8 @@ class Program
         var allIfcFound = true;
         var expectedIfcFileNames = new List<string>();
         var missingIfcFileNames = new List<string>();
+        var title = "";
+        var firstLine = true;
         foreach (var line in allLines)
         {
             if (line.StartsWith("``` ids "))
@@ -69,6 +71,7 @@ class Program
                 file = line.Substring(8);
                 inScript = true;
                 buffer = new StringBuilder();
+                firstLine = true;
             }
             else if (line.StartsWith("```") && inScript)
             {
@@ -89,8 +92,20 @@ class Program
                     allIfcFound = false;
                 }
             }
+            else if (line.StartsWith("### "))
+            {
+                title = line.Substring(4);
+            }
             else if (inScript)
             {
+                if (firstLine) // we check that the title matches the section
+                {
+                    if (line.Trim() != title.Trim())
+                    {
+                        Console.WriteLine($"- script title mismatch: `{line}` vs `{title}`");
+                    }
+                    firstLine = false;
+                }
                 buffer.AppendLine(line);
             }
         }
