@@ -17,9 +17,9 @@
 							<!-- removed for clarity, is the rule in and/or with the other? Because of Enums it should be in `or` -->
 						</xs:restriction>
 					</ids:name>
-					<ids:subType>
+					<ids:predefinedType>
 						<ids:simpleValue>CLADDING</ids:simpleValue>
-					</ids:subType>
+					</ids:predefinedType>
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
@@ -32,9 +32,9 @@
 							<xs:pattern value="anas.*"/>
 						</xs:restriction>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Anax</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<ids:simpleValue>yes</ids:simpleValue>
 					</ids:value>
@@ -77,9 +77,9 @@
 					<ids:propertySet>
 						<ids:simpleValue>attribute</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>OverallWidth</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction>
 							<xs:minInclusive value="0"/>
@@ -91,9 +91,9 @@
 					<ids:propertySet>
 						<ids:simpleValue>AedesUVIP</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>FireRating</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:enumeration value="30">

@@ -27,9 +27,9 @@
 					<ids:propertySet>
 						<ids:simpleValue>Pset_ConcreteElementGeneral</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>ExposureClass</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>

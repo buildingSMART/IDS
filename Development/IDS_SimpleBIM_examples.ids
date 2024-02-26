@@ -38,9 +38,9 @@
 					<ids:propertySet>
 						<ids:simpleValue>MyProject</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Room number</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:annotation>
@@ -69,9 +69,9 @@
 					<ids:propertySet>
 						<ids:simpleValue>Pset_WallCommon</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>IsExternal</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<ids:simpleValue>TRUE</ids:simpleValue>
 					</ids:value>
@@ -82,9 +82,9 @@
 					<ids:propertySet>
 						<ids:simpleValue>Pset_WallCommon</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>ThermalTransmittance</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>

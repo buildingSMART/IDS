@@ -18,9 +18,9 @@
           <propertySet>
             <simpleValue>Pset_WallCommon</simpleValue>
           </propertySet>
-          <name>
+          <baseName>
             <simpleValue>Status</simpleValue>
-          </name>
+          </baseName>
           <value>
             <simpleValue>NEW</simpleValue>
           </value>

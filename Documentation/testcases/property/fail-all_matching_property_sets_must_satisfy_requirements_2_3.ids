@@ -20,9 +20,9 @@
               <xs:pattern value="Foo_.*" />
             </xs:restriction>
           </propertySet>
-          <name>
+          <baseName>
             <simpleValue>Foo</simpleValue>
-          </name>
+          </baseName>
         </property>
       </requirements>
     </specification>

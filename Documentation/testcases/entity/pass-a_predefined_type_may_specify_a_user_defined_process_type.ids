@@ -18,9 +18,9 @@
           <name>
             <simpleValue>IFCTASKTYPE</simpleValue>
           </name>
-          <subType>
+          <predefinedType>
             <simpleValue>TASKY</simpleValue>
-          </subType>
+          </predefinedType>
         </entity>
       </requirements>
     </specification>

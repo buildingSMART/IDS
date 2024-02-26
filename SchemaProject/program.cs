@@ -22,11 +22,37 @@ class Program
         bool inScript = false;
         string file = "";
         var buffer = new StringBuilder();
-        var allLines = File.ReadAllLines("C:\\Data\\Dev\\BuildingSmart\\IDS\\Documentation\\testcases\\scripts.md");
+        DirectoryInfo? testCasesFolder = new DirectoryInfo(".");
+        Console.WriteLine($"Process started in: {testCasesFolder.FullName}");
+        while (testCasesFolder is not null)
+        {
+            var p = Path.Combine(testCasesFolder.FullName, "Documentation", "testcases");
+            DirectoryInfo d = new DirectoryInfo (p);
+            if (d.Exists)
+            {
+                testCasesFolder = d;
+                break;
+            }
+            testCasesFolder = testCasesFolder.Parent;
+        } 
+        if (testCasesFolder is null)
+        {
+            Console.WriteLine("Dicrectory of testcases not found. Execution cancelled.");
+            return;
+        }
+        Console.WriteLine($"Testcase generation started in: {testCasesFolder.FullName}");
+        FileInfo scriptsFile = new FileInfo(Path.Combine(testCasesFolder.FullName, "scripts.md"));
+        if (!scriptsFile.Exists)
+        {
+            Console.WriteLine("Scripts file not found. Execution cancelled.");
+            return;
+        }
 
-        // clean all IDS away
-        var destFolder = new DirectoryInfo("C:\\Data\\Dev\\BuildingSmart\\IDS\\Documentation\\testcases\\");
-        foreach (var item in destFolder.GetFiles("*.ids", SearchOption.AllDirectories))
+        // reading script
+        var allLines = File.ReadAllLines(scriptsFile.FullName);
+
+        // clean all IDSs
+        foreach (var item in testCasesFolder.GetFiles("*.ids", SearchOption.AllDirectories))
         {
             item.Delete();
         }
@@ -47,7 +73,7 @@ class Program
             else if (line.StartsWith("```") && inScript)
             {
                 inScript = false;
-                var fName = Path.Combine(destFolder.FullName, file);
+                var fName = Path.Combine(testCasesFolder.FullName, file);
                 FileInfo fInfo = new FileInfo(fName);
 
                 var scr = new IdsScript(buffer.ToString());
@@ -71,7 +97,7 @@ class Program
 
         
         // extra ifcs
-        foreach (var item in destFolder.GetFiles("*.ifc", SearchOption.AllDirectories))
+        foreach (var item in testCasesFolder.GetFiles("*.ifc", SearchOption.AllDirectories))
         {
             if (!expectedIfcFileNames.Contains(item.FullName))
             {

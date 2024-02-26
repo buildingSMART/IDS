@@ -70,7 +70,7 @@ The order of dimensional exponent units is `(m, Kg, s, A, K, mol, cd)`.
 | IFCPLANEANGLEMEASURE                          | Angle                                   | radian       | rad         | (0, 0, 0, 0, 0, 0, 0)   | IfcUnitEnum.PLANEANGLEUNIT                                 |
 | IFCPOSITIVELENGTHMEASURE                      | Positive length                         | meter        | m           | (1, 0, 0, 0, 0, 0, 0)   | IfcUnitEnum.LENGTHUNIT                                     |
 | IFCPOSITIVEPLANEANGLEMEASURE                  | Positive plane angle                    | radian       | rad         | (0, 0, 0, 0, 0, 0, 0)   | IfcUnitEnum.PLANEANGLEUNIT                                 |
-| IFCPOSITIVERATIOMEASURE                       |                                         |              |             |                         |                                                            |
+| IFCPOSITIVERATIOMEASURE                       | Positive ratio                          |              |             |                         |                                                            |
 | IFCPOWERMEASURE                               | Power                                   | watt         | W           | (2, 1, -3, 0, 0, 0, 0)  | IfcUnitEnum.POWERUNIT                                      |
 | IFCPRESSUREMEASURE                            | Pressure                                | pascal       | Pa          | (-1, 1, -2, 0, 0, 0, 0) | IfcUnitEnum.PRESSUREUNIT                                   |
 | IFCRADIOACTIVITYMEASURE                       | Radio activity                          | Becqurel     | Bq          | (0, 0, -1, 0, 0, 0, 0)  | IfcUnitEnum.RADIOACTIVITYUNIT                              |

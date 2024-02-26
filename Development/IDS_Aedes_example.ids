@@ -11,9 +11,9 @@
                     <ids:name>
                         <ids:simpleValue>IFCWINDOW</ids:simpleValue>
                     </ids:name>
-                    <ids:subType>
+                    <ids:predefinedType>
 						<ids:simpleValue>WINDOW</ids:simpleValue>
-					</ids:subType>
+					</ids:predefinedType>
                 </ids:entity>
             </ids:applicability>
             <ids:requirements>

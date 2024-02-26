@@ -19,9 +19,9 @@
             <name>
               <simpleValue>IFCSLAB</simpleValue>
             </name>
-            <subType>
+            <predefinedType>
               <simpleValue>BASESLAB</simpleValue>
-            </subType>
+            </predefinedType>
           </entity>
         </partOf>
       </requirements>

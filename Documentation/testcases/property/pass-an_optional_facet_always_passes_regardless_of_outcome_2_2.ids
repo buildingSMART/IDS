@@ -18,9 +18,9 @@
           <propertySet>
             <simpleValue>Foo_Bar</simpleValue>
           </propertySet>
-          <name>
+          <baseName>
             <simpleValue>Bar</simpleValue>
-          </name>
+          </baseName>
         </property>
       </requirements>
     </specification>

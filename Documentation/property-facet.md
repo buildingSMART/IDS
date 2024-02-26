@@ -2,8 +2,8 @@
 
 IFC comes with a way to define custom data attached to objects called **Properties**.
 
-**Properties** have a **Name** (such as "FireRating") and can be grouped in into **Property Sets** that help keep them organised by similar subject matters.
-An property stores the relevant **Value** provided by the user (such as "180/180/180" in Australia), and the IFC format allows the specification of relevant units of measurement.
+**Properties** have a **BaseName** (such as "FireRating") grouped in into **Property Sets** that help keep them organised by similar subject matters.
+A property stores the relevant **Value** provided by the user (such as "180/180/180" in Australia); when appropriate the IFC format allows the specification of relevant units of measurement.
 
 buildingSMART provides standardised **Property Sets** and **Properties** to help seamless data-exchange around the world.
 For example, the "FireRating" **Property** is part of the "Pset\_WallCommon" **Property Set** as defined by buildingSMART.
@@ -11,17 +11,16 @@ For example, the "FireRating" **Property** is part of the "Pset\_WallCommon" **P
 Users can also define their own **Properties** and **Property Sets**, which may be unique to the project, or distributed using the **Property Set** templates feature of IFC.
 Naturally, it is encouraged to require **Properties** that are standardised by buildingSMART before inventing custom ones.
 
-All standardised **Property Set** have a name prefixed with either "Pset_" or "Qto_"; 
-It is currently prohibited to use the standardised prefixes "Pset_" and "Qto_" for custom properties.
+All standardised **Property Set** have a reserved name prefixed (either "Pset_" or "Qto_"); it is prohibited to use the standardised prefixes "Pset_" and "Qto_" for custom properties.
 
-**Properties** are applicable to different entities. For example, some properties such as **LoadBearing** can be applied to walls, columns, and beams, but not furniture, ducts, or cables.
+Standardised **Properties** are applicable to different entities. For example, some properties such as **LoadBearing** can be applied to walls, columns, and beams, but not furniture, ducts, or cables.
 This is known as the **Applicable Entity**.
 When specifying **Properties** in an IDS, it is important to consider which objects they can apply to.
 All sorts of objects can have **Properties** applied, not only physical objects like doors, windows, and slabs, but also non-physical objects like tasks, materials, structural profile cross sections, or labour resources.
 
 A special type of **Property** is known as a **Quantity**.
 Whereas **Properties** refer to any arbitrary information about an object, **Quantities** refer specifically to calculated dimensions of the object, such as length, width, height, surface area, or net volume.
-IFC makes a distinction between **Properties** and **Quantities**, but in IDS they are interchangeable, and you are allowed to specify **Quantities** just the same as a **Property** with this facet. 
+IFC makes a distinction between **Properties** and **Quantities**, but in IDS they are interchangeable, and you are allowed to specify **Quantities** just the same as a **Property** with this facet.
 Just like **Properties**, **Quantities** are grouped into **Quantity Sets** and have a **Value**.
 
 To see what **Properties** are standardised by buildingSMART, check the following lists below.
@@ -37,7 +36,7 @@ Note that IFC2X3 only has buildingSMART standardised properties, not quantities.
 
 Instead of checking the documentation, your IDS authoring software may help you to shortlist valid **Property Sets**.
 
-In IDS facets, **Properties** must always have a data type that constrains the expected format in which the property will be stored (e.g. text value, a boolean, or a number).
+In IDS facets, **Properties** may have a data type that constrains the expected format in which the property will be stored (e.g. text value, a boolean, or a number).
 If it is a number, the value may be unit-less, such as a count of a value, or have a unit, such as a length, area, or more complex unit like a flow rate, pressure, or voltage range.
 You can view a full list of units in the following links:
 
@@ -63,10 +62,10 @@ For your convenience, a short list of common data types are listed here:
 | IFCDURATION      | A time duration, such as 3 months, 1 week, 4 days, or 1 hour.                              |
 
 IDS currently specifies all measure-based values based on SI units. You can see the full list of units specified for each data type in the [IDS units table](units.md).
-Note that although you can use a data type to request a particular measurement (e.g. an IfcLengthMeasure), you cannot use IDS to request that the length is measured with a particular unit (e.g. meters, inches, millimeters). 
+Note that although you can use a data type to request a particular measurement (e.g. an IfcLengthMeasure), you cannot use IDS to request that the length is measured with a particular unit (e.g. meters, inches, or millimeters).
 This capability may be introduced in a future version of IDS.
 
-Specify properties are critical providing supplementary information to objects in a model.
+Properties are critical providing supplementary information to objects in a model.
 
 It is encouraged to follow buildingSMART standardised **Properties** wherever possible to ensure that data is highly structured and can be predictably retrieved.
 
@@ -77,8 +76,8 @@ The **Property Facet** is considered to be one of the most commonly used facets 
 | Parameter        | Required | Restrictions Allowed | Allowed Values                                                                                                                                                                                                        | Meaning                                                                                                                                                                                                                                                                                                                                           |
 | ---------------- | -------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Property Set** | ✔️     | ✔️                 | Any custom or buildingSMART standardised property set name. Standardised names must begin with "Pset_" or "Qto_" and can be found in the IFC documentation.                                                           | The object has the specified property set.                                                                                                                                                                                                                                                                                                        |
-| **Name**         | ✔️     | ✔️                 | Any text property name. Standardised buildingSMART property names can be found in the buildingSMART documentation.                                                                                                    | The property must exist in the specified property set and have a non-empty value.                                                                                                                                                                                                                                                                 |
-| **Data Type**    | ✔️     | ❌                   | A valid data type compatible with the referenced schema version, expressed in UPPERCASE.                                                                                                                              | The value must use the specified data type. The units specified in the IDS use the [IDS units table](units.md), though the project may use any unit, so project values will have to be converted to the SI unit before comparison. User Interfaces are permitted to display any unit that the developers or the users prefer.                     |
+| **Base Name**    | ✔️     | ✔️                 | Any text property name. Standardised buildingSMART property names can be found in the buildingSMART documentation.                                                                                                    | The property must exist in the specified property set and have a non-empty value.                                                                                                                                                                                                                                                                 |
+| **Data Type**    | ❌       | ✔️                 | A valid data type compatible with the referenced schema version, expressed in UPPERCASE.                                                                                                                              | The value must use the specified data type. The units specified in the IDS use the [IDS units table](units.md), though the project may use any unit, so project values will have to be converted to the SI unit before comparison. User Interfaces are permitted to display any unit that the developers or the users prefer.                     |
 | **Value**        | ❌       | ✔️                 | Any value appropriate to the data type of the property. If not specified, any non-empty value is allowed. The value of measures types will be stored according to the unit defined in the [IDS units table](units.md) | The value of the attribute must match. To specify numbers, you must use a dot as the decimal separator, and not use a thousands separator (e.g. `4.2` is valid, but `1.234,5` is invalid). Scientific notation is allowed (e.g. `1e3` to represent `1000`). To specify true or false, you must specify `TRUE` or `FALSE` as uppercase characters. |
 | **URI**          | ❌       | ❌                   | A URI identifying the property compliant with ISO 23386                                                                                                                                                               | You may find valid URIs using the [buildingSMART Data Dictionary](https://search.bsdd.buildingsmart.org/), for example for a [Fire Rating](https://search.bsdd.buildingsmart.org/Property/Index/115666) property.                                                                                                                                 |
 

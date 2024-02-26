@@ -44,25 +44,25 @@
 					<ids:propertySet>
 						<ids:simpleValue>Pset_BuildingCommon</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>OccupancyType</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/MarketCategory">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_BuildingUse</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>MarketCategory</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/MarketSubCategory">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_BuildingUse</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>MarketSubCategory</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
@@ -110,49 +110,49 @@
 					<ids:propertySet>
 						<ids:simpleValue>Pset_SpaceOccupancyRequirements</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>OccupancyNumberPeak</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireExit" instructions="Indicates if the space contains a fire exit.">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_SpaceFireSafetyRequirements</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>FireExit</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/HandicapAccessible" instructions="Indication whether this space (in case of e.g., a toilet) is designed to serve as a publicly accessible space, e.g., for a public toilet (TRUE) or not (FALSE).">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_SpaceCommon</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>HandicapAccessible</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCLABEL" instructions="Primary travel direction of people in a given area. For example, the flow direction of people in a one-way corridor.">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_SpaceOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>TravelDirection</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property cardinality="optional" dataType="IFCREAL" instructions="The maximum flow rate which the device is designed, theoretical or expected to achieve.">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_SpaceOccupancyRequirements</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>DesignFlowRate</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property cardinality="optional" dataType="IFCLENGTHMEASURE" instructions="Derived length, for example length of the corridor.">
 					<ids:propertySet>
 						<ids:simpleValue>Qto_SpaceBaseQuantities</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>NominalLength</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
@@ -207,9 +207,9 @@
 					<ids:propertySet>
 						<ids:simpleValue>ePset_OMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>MovementType</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction>
 							<xs:enumeration value="COUNTER"/>
@@ -242,14 +242,14 @@
 							<xs:enumeration value="IFCDOORTYPE"/>
 						</xs:restriction>
 					</ids:name>
-					<ids:subType>
+					<ids:predefinedType>
 						<xs:restriction base="xs:string">
 							<xs:enumeration value="DOOR"/>
 							<xs:enumeration value="TRAPDOOR"/>
 							<xs:enumeration value="USERDEFINED"/>
 							<xs:enumeration value="NOTDEFINED"/>
 						</xs:restriction>
-					</ids:subType>
+					</ids:predefinedType>
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
@@ -306,49 +306,49 @@
 					<ids:propertySet>
 						<ids:simpleValue>ePset_OMA_Door</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>DirectionOfTravel</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCBOOLEAN" instructions="Indicates if door will automatically close in the event of an alarm being set">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_DoorCommon</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>SelfClosing</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCBOOLEAN" instructions="Indicates whether the door is a fire exit">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_DoorCommon</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>FireExit</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCBOOLEAN" instructions="Flag to indicate of an accessible door.">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_DoorCommon</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>HandicapAccessible</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCREAL" instructions="The desired or capping flow rate for the door. Unit Flow Rate (in people/unit width/sec)/Flow rate">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_DoorOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>RequiredDoorFlowrate</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property cardinality="optional" dataType="IFCREAL" instructions="Relative attractiveness between exit, related to how likely they will be used (optional)">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_DoorOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>UsagePreferenceFactor</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
@@ -373,9 +373,9 @@
 							<xs:enumeration value="Pset_StairFlightCommon"/>
 						</xs:restriction>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>RiserHeight</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
@@ -389,9 +389,9 @@
 							<xs:enumeration value="Pset_StairFlightCommon"/>
 						</xs:restriction>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>NumberOfRiser</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCPOSITIVELENGTHMEASURE" instructions="Tread depth includes nosing overhang">
 					<ids:propertySet>
@@ -400,9 +400,9 @@
 							<xs:enumeration value="Pset_StairFlightCommon"/>
 						</xs:restriction>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>TreadLength</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
@@ -416,9 +416,9 @@
 							<xs:enumeration value="Pset_StairFlightCommon"/>
 						</xs:restriction>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>NumberOfTreads</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCLENGTHMEASURE" instructions="Vertical height of each step">
 					<ids:propertySet>
@@ -427,9 +427,9 @@
 							<xs:enumeration value="ePset_StairFlightOMA"/>
 						</xs:restriction>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>EffectiveWidth</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
@@ -440,17 +440,17 @@
 					<ids:propertySet>
 						<ids:simpleValue>CPset_OMA_Stairs</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>OccupancyNumberPeak</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCREAL" instructions="The designed flow rate of the stairs">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_OMA_Stairs</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>RequiredDoorFlowrate</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCLABEL" instructions="Up, down, bidirectional">
 					<ids:propertySet>
@@ -459,9 +459,9 @@
 							<xs:enumeration value="ePset_StairFlightOMA"/>
 						</xs:restriction>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>TravelDirection</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:enumeration value="Up"/>
@@ -478,9 +478,9 @@
 					<ids:name>
 						<ids:simpleValue>IFCTRANSPORTELEMENT</ids:simpleValue>
 					</ids:name>
-					<ids:subType>
+					<ids:predefinedType>
 						<ids:simpleValue>ELEVATOR</ids:simpleValue>
-					</ids:subType>
+					</ids:predefinedType>
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
@@ -493,9 +493,9 @@
 					<ids:propertySet>
 						<ids:simpleValue>Pset_TransportElementElevator</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>ClearWidth</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
@@ -506,9 +506,9 @@
 					<ids:propertySet>
 						<ids:simpleValue>Pset_TransportElementElevator</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>ClearDepth</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
@@ -519,89 +519,89 @@
 					<ids:propertySet>
 						<ids:simpleValue>Pset_TransportElementCommon</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>CapacityPeople</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCLINEARVELOCITYMEASURE" instructions="Peak, steady rated speed">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>MaximumConstantSpeed</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCREAL" instructions="Basic lift acceleration rate">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>AccelerationRate</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCREAL" instructions="Basic lift braking rate">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>DecelerationRate</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCTIMEMEASURE" instructions="Total time duration for doors to open">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>DoorOpeningTime</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCTIMEMEASURE" instructions="Total time duration for doors to close">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>DoorClosingTime</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCTIMEMEASURE" instructions="The time the lift doors remain open after fully opening once no person has passed">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_TransportElementElevatorOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>DoorDwellTime</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCTIMEMEASURE" instructions="The time it takes a lift motor to start moving the lift after the doors have fully closed">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_TransportElementElevatorOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>MotorDelayTime</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCCOUNTMEASURE" instructions="The floors which are serviced by the lift, but not necessarily stop at">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_TransportElementElevatorOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>StoriesServed</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCIDENTIFIER" instructions="which group of lifts this lift belongs to.">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_TransportElementElevatorOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Group</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCAREAMEASURE" instructions="The area where people wait to board ">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_TransportElementElevatorOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>LoadingArea</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
@@ -611,9 +611,9 @@
 					<ids:name>
 						<ids:simpleValue>IFCTRANSPORTELEMENT</ids:simpleValue>
 					</ids:name>
-					<ids:subType>
+					<ids:predefinedType>
 						<ids:simpleValue>ESCALATOR</ids:simpleValue>
-					</ids:subType>
+					</ids:predefinedType>
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
@@ -626,49 +626,49 @@
 					<ids:propertySet>
 						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>MaximumConstantSpeed</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCBOOLEAN" instructions="Indicates if available during the simulation">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>IsActive</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCCOUNTMEASURE" instructions="effective number of lanes of the escalator">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_TransportEscalatorOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>NumberOfLanes</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCLENGTHMEASURE" instructions="The depth of any step tread in the direction of travel">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_TransportEscalatorOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>DepthOfTread</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCREAL" instructions="The direction of the escalator when operational">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_TransportEscalatorOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>DirectionOfTravel</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCLENGTHMEASURE" instructions="Internal width (inside net platform)">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>ClearWidth</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
@@ -679,17 +679,17 @@
 					<ids:propertySet>
 						<ids:simpleValue>ePset_ElementKinematicsOIMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>LoadingArea</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property cardinality="optional" dataType="IFCREAL" instructions="The maximum flow rate which the device is designed, theoretical or expected to achieve.">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>DesignPassengerFlow</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
@@ -699,9 +699,9 @@
 					<ids:name>
 						<ids:simpleValue>IFCTRANSPORTELEMENT</ids:simpleValue>
 					</ids:name>
-					<ids:subType>
+					<ids:predefinedType>
 						<ids:simpleValue>MOVINGWALKWAY</ids:simpleValue>
-					</ids:subType>
+					</ids:predefinedType>
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
@@ -714,49 +714,49 @@
 					<ids:propertySet>
 						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>MaximumConstantSpeed</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCBOOLEAN" instructions="Indicates if available during the simulation">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>IsActive</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCCOUNTMEASURE" instructions="effective number of lanes of the walkway">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_TransportMovingWalkwayOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>NumberOfLanes</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCREAL" instructions="The direction of travel for the walkway">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_TransportMovingWalkwayOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>DirectionOfTravel</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCREAL" instructions="The maximum number of people who can occupy it">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_TransportMovingWalkwayOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>DesignCapacity</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCLENGTHMEASURE" instructions="Internal width (inside net platform)">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>ClearWidth</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
@@ -767,17 +767,17 @@
 					<ids:propertySet>
 						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>LoadingArea</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property cardinality="optional" dataType="IFCREAL" instructions="The maximum flow rate which the device is designed, theoretical or expected to achieve.">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>DesignPassengerFlow</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
@@ -802,7 +802,7 @@
 							<xs:enumeration value="IFCRAMPFLIGHT"/>
 						</xs:restriction>
 					</ids:name>
-					<ids:subType>
+					<ids:predefinedType>
 						<xs:restriction base="xs:string">
 							<xs:enumeration value="HALF_TURN_RAMP"/>
 							<xs:enumeration value="QUARTER_TURN_RAMP"/>
@@ -813,7 +813,7 @@
 							<xs:enumeration value="USERDEFINED"/>
 							<xs:enumeration value="NOTDEFINED"/>
 						</xs:restriction>
-					</ids:subType>
+					</ids:predefinedType>
 				</ids:entity>
 				<ids:attribute instructions="Descriptive name">
 					<ids:name>
@@ -829,25 +829,25 @@
 					<ids:propertySet>
 						<ids:simpleValue>Pset_RampCommon</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>HandicapAccessible</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCPLANEANGLEMEASURE" instructions="Required sloping angle of the object - relative to horizontal">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_RampCommon</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>RequiredSlope</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCREAL" instructions="Angle">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_RampOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>DirectionOfTravel</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
@@ -860,13 +860,13 @@
 							<xs:enumeration value="IFCDOORTYPE"/>
 						</xs:restriction>
 					</ids:name>
-					<ids:subType>
+					<ids:predefinedType>
 						<xs:restriction base="xs:string">
 							<xs:enumeration value="BOOM_BARRIER"/>
 							<xs:enumeration value="GATE"/>
 							<xs:enumeration value="TURNSTILE"/>
 						</xs:restriction>
-					</ids:subType>
+					</ids:predefinedType>
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
@@ -896,17 +896,17 @@
 					<ids:propertySet>
 						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>DesignPassengerFlow</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property cardinality="optional" dataType="IFCAREAMEASURE" instructions="The area where people decide to use the device">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>LoadingArea</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
@@ -936,17 +936,17 @@
 					<ids:propertySet>
 						<ids:simpleValue>CPset_OMA_Signage</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Title</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCLENGTHMEASURE" instructions="Derived height of the sign">
 					<ids:propertySet>
 						<ids:simpleValue>Qto_SpaceBaseQuantities</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Height</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
@@ -957,9 +957,9 @@
 					<ids:propertySet>
 						<ids:simpleValue>Qto_SpaceBaseQuantities</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Width</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
@@ -970,17 +970,17 @@
 					<ids:propertySet>
 						<ids:simpleValue>CPset_OMA_Signage</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>HeightFromTheGround</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCLENGTHMEASURE" instructions="Size of text or graphics on the sign">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_OMA_Signage</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>LetterHeight</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
@@ -991,33 +991,33 @@
 					<ids:propertySet>
 						<ids:simpleValue>CPset_OMA_Signage</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>TextColour</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCIDENTIFIER" instructions="background colour of sign">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_OMA_Signage</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>BackgroundColour</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCLABEL" instructions="Indication of function within building">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_OMA_Signage</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Usage</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property cardinality="optional" dataType="IFCILLUMINANCEMEASURE" instructions="Luminous intensity of the sign if illuminated">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_OMA_Signage</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>LuminousIntensity</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
@@ -1040,7 +1040,7 @@
 							<xs:enumeration value="IFCALARMTYPE"/>
 						</xs:restriction>
 					</ids:name>
-					<ids:subType>
+					<ids:predefinedType>
 						<xs:restriction base="xs:string">
 							<xs:enumeration value="BELL"/>
 							<xs:enumeration value="BREAKGLASSBUTTON"/>
@@ -1051,7 +1051,7 @@
 							<xs:enumeration value="USERDEFINED"/>
 							<xs:enumeration value="NOTDEFINED"/>
 						</xs:restriction>
-					</ids:subType>
+					</ids:predefinedType>
 				</ids:entity>
 			</ids:requirements>
 		</ids:specification>

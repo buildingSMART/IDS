@@ -18,9 +18,9 @@
           <name>
             <simpleValue>IFCWALL</simpleValue>
           </name>
-          <subType>
+          <predefinedType>
             <simpleValue>solidwall</simpleValue>
-          </subType>
+          </predefinedType>
         </entity>
       </requirements>
     </specification>

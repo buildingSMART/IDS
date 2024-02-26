@@ -23,7 +23,7 @@ namespace SchemaProject.Helpers
         {
             RequirementsTypeProperty rqp = new RequirementsTypeProperty();
             rqp.PropertySet = p.PropertySet;
-            rqp.Name = p.Name;
+            rqp.BaseName = p.BaseName;
             rqp.Cardinality = ConditionalCardinality.Required;
             spec.Requirements = new SpecificationTypeRequirements();
             spec.Requirements.Property.Add(rqp);

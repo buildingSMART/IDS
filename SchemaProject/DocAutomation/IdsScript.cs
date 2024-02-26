@@ -240,7 +240,7 @@ namespace SchemaProject.DocAutomation
             if (parts.Count > 0)
                 ret.PropertySet = MakeIdsValue(parts[0]);
             if (parts.Count > 1)
-                ret.Name = MakeIdsValue(parts[1]);
+                ret.BaseName = MakeIdsValue(parts[1]);
             if (parts.Count > 2)
                 ret.Value = MakeIdsValue(parts[2]);
             return ret;
@@ -274,7 +274,7 @@ namespace SchemaProject.DocAutomation
                 ret.Entity.Name = MakeIdsValue(parts[0]);
             if (parts.Count > 1)
             {
-                ret.Entity.SubType = MakeIdsValue(parts[1]);
+                ret.Entity.PredefinedType = MakeIdsValue(parts[1]);
             }
             return ret;
         }
@@ -365,7 +365,7 @@ namespace SchemaProject.DocAutomation
             if (parts.Count > 0)
                 ret.Name = MakeIdsValue(parts[0]);
             if (parts.Count > 1)
-                ret.SubType = MakeIdsValue(parts[1]);
+                ret.PredefinedType = MakeIdsValue(parts[1]);
             return ret;
         }
         private RequirementsTypeEntity MakeReqEntity(IList<object> parts)
@@ -374,7 +374,7 @@ namespace SchemaProject.DocAutomation
             if (parts.Count > 0)
                 ret.Name = MakeIdsValue(parts[0]);
             if (parts.Count > 1)
-                ret.SubType = MakeIdsValue(parts[1]);
+                ret.PredefinedType = MakeIdsValue(parts[1]);
             return ret;
         }
 

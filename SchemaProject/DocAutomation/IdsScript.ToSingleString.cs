@@ -46,8 +46,8 @@ namespace SchemaProject.DocAutomation
         {
             StringBuilder sb = new StringBuilder(EntityPrefix);
             sb.Append(ToSingleString(item.Name));
-            if (item.SubType is not null)
-                sb.Append($",{ToSingleString(item.SubType)}");
+            if (item.PredefinedType is not null)
+                sb.Append($",{ToSingleString(item.PredefinedType)}");
             return sb.ToString();
         }
 
@@ -58,7 +58,7 @@ namespace SchemaProject.DocAutomation
                 sb.Append($"{item.Cardinality},");
             sb.Append(ToSingleString(item.PropertySet));
             sb.Append(",");
-            sb.Append(ToSingleString(item.Name));
+            sb.Append(ToSingleString(item.BaseName));
             if (item.DataType is not null)
             {
                 sb.Append(",");
@@ -90,10 +90,10 @@ namespace SchemaProject.DocAutomation
             if (item.Cardinality != SimpleCardinality.Required)
                 sb.Append($"{item.Cardinality},");
             sb.Append(ToSingleString(item.Entity.Name));
-            if (item.Entity.SubType is not null)
+            if (item.Entity.PredefinedType is not null)
             {
                 sb.Append(",");
-                sb.Append(ToSingleString(item.Entity.SubType));
+                sb.Append(ToSingleString(item.Entity.PredefinedType));
             }
             if (item.Relation is not null)
             {

@@ -139,6 +139,14 @@ class Build : NukeBuild
             );
         });
 
+    Target CreateTestCases => _ => _
+        .DependsOn(CleanSchemaProject)
+        .Executes(() =>
+        {
+            DotNetTasks.DotNetRun(s => s
+                .SetProjectFile(SchemaProjectFileName).SetConfiguration("Release")
+            );
+        });
 
     private string IdsToolPath => Path.GetDirectoryName(ToolPathResolver.GetPackageExecutable("ids-tool.CommandLine", "tools/net6.0/ids-tool.dll"));
 

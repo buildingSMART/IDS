@@ -1,10 +1,22 @@
 # Documentation test cases
 
-Test cases are arranged by theme (e.g. attribute, entity, etc) and arranged in 3 groups (i.e. pass, fail, and invalid), depending on the expected of the verification outcome of the matching IFC/IDS couple.
+This document supports the automatic generation of testcases.
 
-- pass: all requirements are satisfied
-- fail: at least one requirement fails
-- invalid: just like fail, but since the IDS specifications do not comply with the Audit tool, they could never be satisfied, regardless of the content of the IFC file.
+All valid IDS implementations must demonstrate identical behaviour against the expected values of the provided test cases.
+
+They are designed to describe the expected behaviour of IFC verification, and should cover all standard and edge cases to remove  ambiguity from the expected implementation.
+
+Test cases are arranged in folders by theme (e.g. attribute, entity, etc) and organised in 3 groups (i.e. pass, fail, and invalid), depending on the outcome of verification of the matching IFC/IDS couple.
+
+| file name prefix | description                                                                                                                               |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| pass-            | all requirements are satisfied                                                                                                            |
+| fail-            | at least one requirement fails                                                                                                            |
+| invalid-         | at least one requirement fails (invalid files do not comply with the Audit tool, they could not be satisfied, regardless of IFC contents) |
+
+IDS files are generated from the data of this script executing the `CreateTestCases` target in the repository.
+
+IFC files have been imported from the work previously done in the [IfcOpenShell repository](https://blenderbim.org/docs-python/ifctester.html), and adepted where appropriate.
 
 ## attribute
 

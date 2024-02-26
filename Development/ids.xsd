@@ -33,7 +33,7 @@
 	<xs:complexType name="entityType">
 		<xs:sequence>
 			<xs:element name="name" type="ids:idsValue"/>
-			<xs:element name="subType" type="ids:idsValue" minOccurs="0"/>
+			<xs:element name="predefinedType" type="ids:idsValue" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="idsValue">
@@ -75,7 +75,14 @@
 	<xs:complexType name="propertyType">
 		<xs:sequence>
 			<xs:element name="propertySet" type="ids:idsValue"/>
-			<xs:element name="name" type="ids:idsValue"/>
+			<xs:element name="baseName" type="ids:idsValue">
+				<xs:annotation>
+					<xs:documentation>
+						the moniker 'baseName' is chosen to clarify that the data needs to reference the property name as stored in the IFC file, 
+						which might differ from the multiple language-dependent presentations (e.g. 'FireRating' vs. 'Fire rating').
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="value" type="ids:idsValue" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>

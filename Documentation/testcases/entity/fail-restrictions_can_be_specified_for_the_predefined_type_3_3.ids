@@ -18,11 +18,11 @@
           <name>
             <simpleValue>IFCWALL</simpleValue>
           </name>
-          <subType>
+          <predefinedType>
             <xs:restriction base="xs:string">
               <xs:pattern value="FOO.*" />
             </xs:restriction>
-          </subType>
+          </predefinedType>
         </entity>
       </requirements>
     </specification>

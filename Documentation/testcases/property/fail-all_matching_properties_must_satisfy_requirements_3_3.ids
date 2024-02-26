@@ -18,11 +18,11 @@
           <propertySet>
             <simpleValue>Foo_Bar</simpleValue>
           </propertySet>
-          <name>
+          <baseName>
             <xs:restriction base="xs:string">
               <xs:pattern value="Foo.*" />
             </xs:restriction>
-          </name>
+          </baseName>
           <value>
             <simpleValue>x</simpleValue>
           </value>

@@ -18,9 +18,9 @@
           <propertySet>
             <simpleValue>Foo_Bar</simpleValue>
           </propertySet>
-          <name>
+          <baseName>
             <simpleValue>PanelOperation</simpleValue>
-          </name>
+          </baseName>
           <value>
             <simpleValue>SWONGING</simpleValue>
           </value>

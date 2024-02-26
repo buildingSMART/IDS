@@ -19,9 +19,9 @@
             <name>
               <simpleValue>IFCFURNITURE</simpleValue>
             </name>
-            <subType>
+            <predefinedType>
               <simpleValue>WATERBOTTLE</simpleValue>
-            </subType>
+            </predefinedType>
           </entity>
         </partOf>
       </requirements>

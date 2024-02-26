@@ -19,9 +19,9 @@
             <name>
               <simpleValue>IFCSPACE</simpleValue>
             </name>
-            <subType>
+            <predefinedType>
               <simpleValue>BURROW</simpleValue>
-            </subType>
+            </predefinedType>
           </entity>
         </partOf>
       </requirements>

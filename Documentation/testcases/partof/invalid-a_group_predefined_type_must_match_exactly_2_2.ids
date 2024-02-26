@@ -19,9 +19,9 @@
             <name>
               <simpleValue>IFCINVENTORY</simpleValue>
             </name>
-            <subType>
+            <predefinedType>
               <simpleValue>BUNNARY</simpleValue>
-            </subType>
+            </predefinedType>
           </entity>
         </partOf>
       </requirements>

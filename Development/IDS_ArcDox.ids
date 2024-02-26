@@ -50,17 +50,17 @@
 					<ids:propertySet>
 						<ids:simpleValue>ArcDox</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Function</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCLABEL">
 					<ids:propertySet>
 						<ids:simpleValue>ArcDox</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Type of Work</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:enumeration value="New Build"/>
@@ -73,9 +73,9 @@
 					<ids:propertySet>
 						<ids:simpleValue>ArcDox</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Procurement Method</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:enumeration value="Design-Bid-Build"/>
@@ -88,9 +88,9 @@
 					<ids:propertySet>
 						<ids:simpleValue>ArcDox</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Expected Life</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>

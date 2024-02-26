@@ -23,9 +23,9 @@
 						<ids:name>
 							<ids:simpleValue>IFCELEMENTASSEMBLY</ids:simpleValue>
 						</ids:name>
-						<ids:subType>
+						<ids:predefinedType>
 							<ids:simpleValue>GIRDER</ids:simpleValue>
-						</ids:subType>
+						</ids:predefinedType>
 					</ids:entity>
 				</ids:partOf>
 			</ids:requirements>
@@ -50,9 +50,9 @@
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Kleurbinnenzijde</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:annotation>
@@ -66,17 +66,17 @@
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Kleurbuitenzijde</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Onderdeel</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:enumeration value="Stijl"/>
@@ -120,9 +120,9 @@
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Draairichting</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction>
 							<xs:enumeration value="DIN Links"/>
@@ -134,9 +134,9 @@
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Kleurbinnenzijde</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:annotation>
@@ -150,17 +150,17 @@
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Kleurbuitenzijde</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Onderdeel</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:material />
 			</ids:requirements>
@@ -186,17 +186,17 @@
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Draairichting</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Kleurbinnenzijde</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:annotation>
@@ -210,17 +210,17 @@
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Kleurbuitenzijde</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Onderdeel</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<ids:simpleValue>Raam</ids:simpleValue>
 						<!-- again, we know this will clash with beglazing, so good to see this happen -->
@@ -259,9 +259,9 @@
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Onderdeel</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<ids:simpleValue>Ruit</ids:simpleValue>
 						<!-- this should probably be in the applicability, or in the 'everything except' applicability of the other IfcWindow  -->
@@ -289,9 +289,9 @@
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Kleurbinnenzijde</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:annotation>
@@ -305,17 +305,17 @@
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Kleurbuitenzijde</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Onderdeel</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property uri="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-2x3/prop/acousticrating">
 					<!-- uri not live yet -->
@@ -324,26 +324,26 @@
 					<ids:propertySet>
 						<ids:simpleValue>Pset_PlateCommon</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>AcousticRating</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property>
 					<!-- in the example IFC file the PSet_PlateCommon is on Type level instead of instance. So this should turn up VALID -->
 					<ids:propertySet>
 						<ids:simpleValue>Pset_PlateCommon</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Reference</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 				<ids:property dataType="IFCTHERMALTRANSMITTANCEMEASURE">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_PlateCommon</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>ThermalTransmittance</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:decimal">
 							<xs:minExclusive value="0.5"/>
@@ -355,9 +355,9 @@
 					<ids:propertySet>
 						<ids:simpleValue>Pset_PlateCommon</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>FireRating</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<ids:simpleValue>30</ids:simpleValue>
 					</ids:value>
