@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/0.9.6/ids.xsd">
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/0.9.7/ids.xsd">
 	<ids:info>
 		<ids:title>Prefabrication of pipes - LOD200</ids:title>
 		<ids:copyright>buildingSMART International Ltd</ids:copyright>
@@ -8,8 +8,8 @@
 		<ids:milestone>LOD200</ids:milestone>
 	</ids:info>
 	<ids:specifications>
-		<ids:specification ifcVersion="IFC2X3" name="mounting part" maxOccurs="unbounded">
-			<ids:applicability>
+		<ids:specification ifcVersion="IFC2X3" name="mounting part">
+			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<ids:simpleValue>IFCDISCRETEACCESSORY</ids:simpleValue>
@@ -17,13 +17,13 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>medium</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction>
 							<xs:enumeration value="cold water"/>
@@ -31,13 +31,13 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>material</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction>
 							<xs:enumeration value="chrome steel 1.4401"/>
@@ -45,13 +45,13 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLENGTHMEASURE">
+				<ids:property dataType="IFCLENGTHMEASURE">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>pipe diameter</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:decimal">
 							<xs:minInclusive value="0.02"/>
@@ -59,13 +59,13 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>component designation</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction>
 							<xs:enumeration value="8000.18"/>
@@ -73,13 +73,13 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCTEXT" uri="https://www.igh.hr/en/reference/">
+				<ids:property dataType="IFCTEXT" uri="https://www.igh.hr/en/reference/">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>numbering system</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction>
 							<xs:enumeration value="first option"/>
@@ -87,13 +87,13 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Pipe system</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction>
 							<xs:enumeration value="first option"/>
@@ -103,8 +103,8 @@
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC2X3" name="pipe fittings and pipes" maxOccurs="unbounded">
-			<ids:applicability>
+		<ids:specification ifcVersion="IFC2X3" name="pipe fittings and pipes">
+			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<xs:restriction>
@@ -117,13 +117,13 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLABEL" uri="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-4.3/prop/Manufacturer">
+				<ids:property dataType="IFCLABEL" uri="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-4.3/prop/Manufacturer">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_ManufacturerTypeInformation</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Manufacturer</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction>
 							<xs:enumeration value="Manufacturer 1"/>
@@ -131,13 +131,13 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>medium</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction>
 							<xs:enumeration value="cold water"/>
@@ -145,13 +145,13 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>material</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction>
 							<xs:enumeration value="chrome steel 1.4401"/>
@@ -159,13 +159,13 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLENGTHMEASURE">
+				<ids:property dataType="IFCLENGTHMEASURE">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>pipe diameter</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:decimal">
 							<xs:minInclusive value="0.02"/>
@@ -173,13 +173,13 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>component designation</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction>
 							<xs:enumeration value="arc 45°"/>
@@ -187,13 +187,13 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="" uri="https://www.igh.hr/en/reference/">
+				<ids:property uri="https://www.igh.hr/en/reference/" dataType="IFCLABEL">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>numbering system</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:annotation>
@@ -203,13 +203,13 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Pipe system</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:enumeration value="first option"/>
@@ -217,13 +217,13 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLENGTHMEASURE">
+				<ids:property dataType="IFCLENGTHMEASURE">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>outside diameter_general</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:decimal">
 							<xs:minInclusive value="0.02"/>

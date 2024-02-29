@@ -8,15 +8,16 @@
     <NukeRootDirectory>..</NukeRootDirectory>
     <NukeScriptDirectory>..</NukeScriptDirectory>
     <NukeTelemetryVersion>1</NukeTelemetryVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ids-tool.CommandLine" Version="1.0.45" />
-    <PackageReference Include="Nuke.Common" Version="6.2.1" />
+    <PackageReference Include="Nuke.Common" Version="6.3.0" />
+    <PackageReference Include="ids-tool.CommandLine" Version="1.0.60" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageDownload Include="dotnet-xscgen" Version="[2.1.915]" />
+    <PackageDownload Include="dotnet-xscgen" Version="[2.1.1094]" />
   </ItemGroup>
-
+  
 </Project>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/0.9.6/ids.xsd">
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/0.9.7/ids.xsd">
 	<ids:info>
 		<ids:title>Prefabrication of pipes - LOD200</ids:title>
 		<ids:copyright>buildingSMART International Ltd</ids:copyright>
@@ -8,8 +8,8 @@
 		<ids:milestone>LOD200</ids:milestone>
 	</ids:info>
 	<ids:specifications>
-		<ids:specification ifcVersion="IFC4X3" name="pipe fittings and pipes" minOccurs="1" maxOccurs="unbounded">
-			<ids:applicability>
+		<ids:specification ifcVersion="IFC4X3" name="pipe fittings and pipes">
+			<ids:applicability minOccurs="1" maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<xs:restriction>
@@ -22,13 +22,13 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLABEL" uri="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-4.3/prop/manufacturer">
+				<ids:property dataType="IFCLABEL" uri="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-4.3/prop/manufacturer">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_ManufacturerTypeInformation</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Manufacturer</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction>
 							<xs:enumeration value="Manufacturer 1"/>
@@ -36,13 +36,13 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="" uri="http://identifier.buildingsmart.org/uri/buildingsmart-ch/UCM-CH-Demo-1.0/prop/PUCM001">
+				<ids:property dataType="IFCLABEL" uri="http://identifier.buildingsmart.org/uri/buildingsmart-ch/UCM-CH-Demo-1.0/prop/PUCM001">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>medium</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:enumeration value="cold water"/>
@@ -50,13 +50,13 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCTEXT" uri="http://identifier.buildingsmart.org/uri/etim/etim-8.0/prop/EF002169">
+				<ids:property dataType="IFCTEXT" uri="http://identifier.buildingsmart.org/uri/etim/etim-8.0/prop/EF002169">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>material</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:enumeration value="chrome steel 1.4401"/>
@@ -64,13 +64,13 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLENGTHMEASURE" uri="http://identifier.buildingsmart.org/uri/buildingsmart-ch/UCM-CH-Demo-1.0/prop/PUCM014">
+				<ids:property dataType="IFCLENGTHMEASURE" uri="http://identifier.buildingsmart.org/uri/buildingsmart-ch/UCM-CH-Demo-1.0/prop/PUCM014">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>pipe diameter</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:decimal">
 							<xs:minInclusive value="0.02"/>
@@ -78,13 +78,13 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCTEXT" uri="http://identifier.buildingsmart.org/uri/buildingsmart-ch/UCM-CH-Demo-1.0/prop/PUCM002">
+				<ids:property dataType="IFCTEXT" uri="http://identifier.buildingsmart.org/uri/buildingsmart-ch/UCM-CH-Demo-1.0/prop/PUCM002">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>component designation</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:enumeration value="arc 45°"/>
@@ -92,13 +92,13 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCTEXT" uri="https://www.igh.hr/en/reference/">
+				<ids:property dataType="IFCTEXT" uri="https://www.igh.hr/en/reference/">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>numbering system</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:annotation>
@@ -108,13 +108,13 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Pipe system</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:enumeration value="first option"/>
@@ -122,13 +122,13 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLENGTHMEASURE" uri="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-4.3/prop/outsidediameter">
+				<ids:property dataType="IFCLENGTHMEASURE" uri="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-4.3/prop/outsidediameter">
 					<ids:propertySet>
 						<ids:simpleValue>ePset_Pipe</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>outside diameter_general</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:decimal">
 							<xs:minInclusive value="0.02"/>

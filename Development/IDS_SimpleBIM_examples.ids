@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/0.9.6/ids.xsd">
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/0.9.7/ids.xsd">
 	<ids:info>
 		<ids:title>SimpleBIM use-case example</ids:title>
 	</ids:info>
 	<ids:specifications>
-		<ids:specification ifcVersion="IFC2X3 IFC4" name="Room requirement 1" description="the model must have rooms, every room must have a name from a list of allowed values, every room must have a (unique) room number" maxOccurs="unbounded">
-			<ids:applicability>
+		<ids:specification ifcVersion="IFC2X3 IFC4" name="Room requirement 1" description="the model must have rooms, every room must have a name from a list of allowed values, every room must have a (unique) room number">
+			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<ids:simpleValue>IFCSPACE</ids:simpleValue>
@@ -13,9 +13,12 @@
 				</ids:entity>
 				<ids:classification>
 					<ids:value>
-						<ids:simpleValue>room</ids:simpleValue>
+						<ids:simpleValue>SL_45_10_09</ids:simpleValue>
 						<!-- this could of course also be a list of things, a pattern, etc..  -->
 					</ids:value>
+					<ids:system>
+						<ids:simpleValue>Uniclass</ids:simpleValue>
+					</ids:system>
 				</ids:classification>
 			</ids:applicability>
 			<ids:requirements>
@@ -31,13 +34,13 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:attribute>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>MyProject</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Room number</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:annotation>
@@ -49,11 +52,9 @@
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<!-- currently there is no real good way to say 'all walls need to have a type'. An old solution was to state that all walls need to have a property on the 'type' level with any kind of value... This cannot be done now that we hav removed the type source constraint.  -->
-
-		
-		<ids:specification name="External wall requirement" ifcVersion="IFC2X3" description="if the model has exterior walls, each exterior wall must have a u-value" minOccurs="0" maxOccurs="unbounded">
-			<ids:applicability>
+		<!-- currently there is no real good way to say 'all walls need to have a type'. An old solution was to state that all walls need to have a property on the 'type' level with any kind of value... This cannot be done now that we hav removed the type source constraint.  -->		
+		<ids:specification name="External wall requirement" ifcVersion="IFC2X3" description="if the model has exterior walls, each exterior wall must have a u-value">
+			<ids:applicability minOccurs="0" maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<xs:restriction>
@@ -64,26 +65,26 @@
 						</xs:restriction>
 					</ids:name>
 				</ids:entity>
-				<ids:property datatype="IFCBOOLEAN">
+				<ids:property dataType="IFCBOOLEAN">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_WallCommon</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>IsExternal</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<ids:simpleValue>TRUE</ids:simpleValue>
 					</ids:value>
 				</ids:property>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:property maxOccurs="unbounded" datatype="">
+				<ids:property>
 					<ids:propertySet>
 						<ids:simpleValue>Pset_WallCommon</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>ThermalTransmittance</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>

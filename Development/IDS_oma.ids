@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/0.9.6/ids.xsd">
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/0.9.7/ids.xsd">
 	<ids:info>
 		<ids:title>OMA - Occupant Movement Analysis</ids:title>
 		<ids:copyright>buildingSMART International</ids:copyright>
@@ -8,8 +8,8 @@
       Analysis</ids:description>
 	</ids:info>
 	<ids:specifications>
-		<ids:specification ifcVersion="IFC4X3" name="Building" description="Occupant Movement Analysis - data properties list for Building" maxOccurs="unbounded">
-			<ids:applicability>
+		<ids:specification ifcVersion="IFC4X3" name="Building" description="Occupant Movement Analysis - data properties list for Building">
+			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<ids:simpleValue>IFCBUILDING</ids:simpleValue>
@@ -40,34 +40,34 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:attribute>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/OccupancyType">
+				<ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/OccupancyType">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_BuildingCommon</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>OccupancyType</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/MarketCategory">
+				<ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/MarketCategory">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_BuildingUse</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>MarketCategory</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/MarketSubCategory">
+				<ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/MarketSubCategory">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_BuildingUse</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>MarketSubCategory</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC4X3" name="Storey" description="Occupant Movement Analysis - data properties list for Storey" maxOccurs="unbounded">
-			<ids:applicability>
+		<ids:specification ifcVersion="IFC4X3" name="Storey" description="Occupant Movement Analysis - data properties list for Storey">
+			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<ids:simpleValue>IFCBUILDINGSTOREY</ids:simpleValue>
@@ -97,8 +97,8 @@
 				</ids:attribute>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC4X3" name="Space" description="Occupant Movement Analysis - data properties list for Space" maxOccurs="unbounded">
-			<ids:applicability>
+		<ids:specification ifcVersion="IFC4X3" name="Space" description="Occupant Movement Analysis - data properties list for Space">
+			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<ids:simpleValue>IFCSPACE</ids:simpleValue>
@@ -106,53 +106,53 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCCOUNTMEASURE" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/OccupancyNumberPeak" instructions="Design occupancy loading for this type of usage assigned to this space.">
+				<ids:property dataType="IFCCOUNTMEASURE" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/OccupancyNumberPeak" instructions="Design occupancy loading for this type of usage assigned to this space.">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_SpaceOccupancyRequirements</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>OccupancyNumberPeak</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireExit" instructions="Indicates if the space contains a fire exit.">
+				<ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireExit" instructions="Indicates if the space contains a fire exit.">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_SpaceFireSafetyRequirements</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>FireExit</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/HandicapAccessible" instructions="Indication whether this space (in case of e.g., a toilet) is designed to serve as a publicly accessible space, e.g., for a public toilet (TRUE) or not (FALSE).">
+				<ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/HandicapAccessible" instructions="Indication whether this space (in case of e.g., a toilet) is designed to serve as a publicly accessible space, e.g., for a public toilet (TRUE) or not (FALSE).">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_SpaceCommon</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>HandicapAccessible</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLABEL" instructions="Primary travel direction of people in a given area. For example, the flow direction of people in a one-way corridor.">
+				<ids:property dataType="IFCLABEL" instructions="Primary travel direction of people in a given area. For example, the flow direction of people in a one-way corridor.">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_SpaceCommon</ids:simpleValue>
+						<ids:simpleValue>ePset_SpaceOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>TravelDirection</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="0" maxOccurs="unbounded" datatype="IFCREAL" instructions="The maximum flow rate which the device is designed, theoretical or expected to achieve.">
+				<ids:property cardinality="optional" dataType="IFCREAL" instructions="The maximum flow rate which the device is designed, theoretical or expected to achieve.">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_SpaceOccupancyRequirements</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>DesignFlowRate</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="0" maxOccurs="unbounded" datatype="IFCLENGTHMEASURE" instructions="Derived length, for example length of the corridor.">
+				<ids:property cardinality="optional" dataType="IFCLENGTHMEASURE" instructions="Derived length, for example length of the corridor.">
 					<ids:propertySet>
 						<ids:simpleValue>Qto_SpaceBaseQuantities</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>NominalLength</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
@@ -161,8 +161,8 @@
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC4X3" name="Spatial Zone" description="Occupant Movement Analysis - data properties list for Zone" maxOccurs="unbounded">
-			<ids:applicability>
+		<ids:specification ifcVersion="IFC4X3" name="Spatial Zone" description="Occupant Movement Analysis - data properties list for Zone">
+			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<ids:simpleValue>IFCSPATIALZONE</ids:simpleValue>
@@ -203,10 +203,13 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:attribute>
-				<ids:attribute instructions="Describes the general type of occupant movement that we intend this zone to be used for (shuffling past seats, an ultimate destination etc.)">
-					<ids:name>
+				<ids:property dataType="IFCLABEL" instructions="Describes the general type of occupant movement that we intend this zone to be used for (shuffling past seats, an ultimate destination etc.)">
+					<ids:propertySet>
+						<ids:simpleValue>ePset_OMA</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
 						<ids:simpleValue>MovementType</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction>
 							<xs:enumeration value="COUNTER"/>
@@ -227,11 +230,11 @@
 							<xs:enumeration value="WAYPOINT"/>
 						</xs:restriction>
 					</ids:value>
-				</ids:attribute>
+				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC4X3" name="Door" description="Occupant Movement Analysis - data properties list for Door" maxOccurs="unbounded">
-			<ids:applicability>
+		<ids:specification ifcVersion="IFC4X3" name="Door" description="Occupant Movement Analysis - data properties list for Door">
+			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<xs:restriction base="xs:string">
@@ -299,58 +302,58 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:attribute>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCIDENTIFIER" instructions="The direction the door opens. For example 'towards room1', 'from room1'">
+				<ids:property dataType="IFCIDENTIFIER" instructions="The direction the door opens. For example 'towards room1', 'from room1'">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_OMA_Door</ids:simpleValue>
+						<ids:simpleValue>ePset_OMA_Door</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>DirectionOfTravel</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCBOOLEAN" instructions="Indicates if door will automatically close in the event of an alarm being set">
+				<ids:property dataType="IFCBOOLEAN" instructions="Indicates if door will automatically close in the event of an alarm being set">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_DoorCommon</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>SelfClosing</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCBOOLEAN" instructions="Indicates whether the door is a fire exit">
+				<ids:property dataType="IFCBOOLEAN" instructions="Indicates whether the door is a fire exit">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_DoorCommon</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>FireExit</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCBOOLEAN" instructions="Flag to indicate of an accessible door.">
+				<ids:property dataType="IFCBOOLEAN" instructions="Flag to indicate of an accessible door.">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_DoorCommon</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>HandicapAccessible</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCREAL" instructions="The desired or capping flow rate for the door. Unit Flow Rate (in people/unit width/sec)/Flow rate">
+				<ids:property dataType="IFCREAL" instructions="The desired or capping flow rate for the door. Unit Flow Rate (in people/unit width/sec)/Flow rate">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_DoorCommon</ids:simpleValue>
+						<ids:simpleValue>ePset_DoorOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>RequiredDoorFlowrate</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="0" maxOccurs="unbounded" datatype="IFCREAL" instructions="Relative attractiveness between exit, related to how likely they will be used (optional)">
+				<ids:property cardinality="optional" dataType="IFCREAL" instructions="Relative attractiveness between exit, related to how likely they will be used (optional)">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_DoorCommon</ids:simpleValue>
+						<ids:simpleValue>ePset_DoorOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>UsagePreferenceFactor</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC4X3" name="Stairs" description="Occupant Movement Analysis - data properties list for Stairs" maxOccurs="unbounded">
-			<ids:applicability>
+		<ids:specification ifcVersion="IFC4X3" name="Stairs" description="Occupant Movement Analysis - data properties list for Stairs">
+			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<xs:restriction base="xs:string">
@@ -363,102 +366,102 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCPOSITIVELENGTHMEASURE" instructions="Vertical height of each step">
+				<ids:property dataType="IFCPOSITIVELENGTHMEASURE" instructions="Vertical height of each step">
 					<ids:propertySet>
 						<xs:restriction base="xs:string">
 							<xs:enumeration value="Pset_StairCommon"/>
 							<xs:enumeration value="Pset_StairFlightCommon"/>
 						</xs:restriction>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>RiserHeight</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCCOUNTMEASURE" instructions="Number of treads is a function of the number of risers">
+				<ids:property dataType="IFCCOUNTMEASURE" instructions="Number of treads is a function of the number of risers">
 					<ids:propertySet>
 						<xs:restriction base="xs:string">
 							<xs:enumeration value="Pset_StairCommon"/>
 							<xs:enumeration value="Pset_StairFlightCommon"/>
 						</xs:restriction>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>NumberOfRiser</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCPOSITIVELENGTHMEASURE" instructions="Tread depth includes nosing overhang">
+				<ids:property dataType="IFCPOSITIVELENGTHMEASURE" instructions="Tread depth includes nosing overhang">
 					<ids:propertySet>
 						<xs:restriction base="xs:string">
 							<xs:enumeration value="Pset_StairCommon"/>
 							<xs:enumeration value="Pset_StairFlightCommon"/>
 						</xs:restriction>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>TreadLength</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCCOUNTMEASURE" instructions="Total number of treads in the flight">
+				<ids:property dataType="IFCCOUNTMEASURE" instructions="Total number of treads in the flight">
 					<ids:propertySet>
 						<xs:restriction base="xs:string">
 							<xs:enumeration value="Pset_StairCommon"/>
 							<xs:enumeration value="Pset_StairFlightCommon"/>
 						</xs:restriction>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>NumberOfTreads</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLENGTHMEASURE" instructions="Vertical height of each step">
+				<ids:property dataType="IFCLENGTHMEASURE" instructions="Vertical height of each step">
 					<ids:propertySet>
 						<xs:restriction base="xs:string">
-							<xs:enumeration value="Pset_StairCommon"/>
-							<xs:enumeration value="Pset_StairFlightCommon"/>
+							<xs:enumeration value="ePset_StairOMA"/>
+							<xs:enumeration value="ePset_StairFlightOMA"/>
 						</xs:restriction>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>EffectiveWidth</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCCOUNTMEASURE" instructions="Max. number of people who can stand on the stairs">
+				<ids:property dataType="IFCCOUNTMEASURE" instructions="Max. number of people who can stand on the stairs">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_OMA_Stairs</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>OccupancyNumberPeak</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCREAL" instructions="The designed flow rate of the stairs">
+				<ids:property dataType="IFCREAL" instructions="The designed flow rate of the stairs">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_OMA_Stairs</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>RequiredDoorFlowrate</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLABEL" instructions="Up, down, bidirectional">
+				<ids:property dataType="IFCLABEL" instructions="Up, down, bidirectional">
 					<ids:propertySet>
 						<xs:restriction base="xs:string">
-							<xs:enumeration value="Pset_StairCommon"/>
-							<xs:enumeration value="Pset_StairFlightCommon"/>
+							<xs:enumeration value="ePset_StairOMA"/>
+							<xs:enumeration value="ePset_StairFlightOMA"/>
 						</xs:restriction>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>TravelDirection</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:enumeration value="Up"/>
@@ -469,8 +472,8 @@
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC4X3" name="Transport entities (Lift/Elevator)" description="Occupant Movement Analysis - data properties list for transport entities (Lift/Elevator)" maxOccurs="unbounded">
-			<ids:applicability>
+		<ids:specification ifcVersion="IFC4X3" name="Transport entities (Lift/Elevator)" description="Occupant Movement Analysis - data properties list for transport entities (Lift/Elevator)">
+			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<ids:simpleValue>IFCTRANSPORTELEMENT</ids:simpleValue>
@@ -486,124 +489,124 @@
 						<ids:simpleValue>Name</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCPOSITIVELENGTHMEASURE" instructions="Internal width (inside net platform)">
+				<ids:property dataType="IFCPOSITIVELENGTHMEASURE" instructions="Internal width (inside net platform)">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_TransportElementElevator</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>ClearWidth</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCPOSITIVELENGTHMEASURE" instructions="Internal depth ( inside net platform)">
+				<ids:property dataType="IFCPOSITIVELENGTHMEASURE" instructions="Internal depth ( inside net platform)">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_TransportElementElevator</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>ClearDepth</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCCOUNTMEASURE" instructions="The maximum number of people who can occupy it">
+				<ids:property dataType="IFCCOUNTMEASURE" instructions="The maximum number of people who can occupy it">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_TransportElementCommon</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>CapacityPeople</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLINEARVELOCITYMEASURE" instructions="Peak, steady rated speed">
+				<ids:property dataType="IFCLINEARVELOCITYMEASURE" instructions="Peak, steady rated speed">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>MaximumConstantSpeed</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCREAL" instructions="Basic lift acceleration rate">
+				<ids:property dataType="IFCREAL" instructions="Basic lift acceleration rate">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
+						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>AccelerationRate</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCREAL" instructions="Basic lift braking rate">
+				<ids:property dataType="IFCREAL" instructions="Basic lift braking rate">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
+						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>DecelerationRate</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCTIMEMEASURE" instructions="Total time duration for doors to open">
+				<ids:property dataType="IFCTIMEMEASURE" instructions="Total time duration for doors to open">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
+						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>DoorOpeningTime</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCTIMEMEASURE" instructions="Total time duration for doors to close">
+				<ids:property dataType="IFCTIMEMEASURE" instructions="Total time duration for doors to close">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
+						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>DoorClosingTime</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCTIMEMEASURE" instructions="The time the lift doors remain open after fully opening once no person has passed">
+				<ids:property dataType="IFCTIMEMEASURE" instructions="The time the lift doors remain open after fully opening once no person has passed">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_TransportElementElevator</ids:simpleValue>
+						<ids:simpleValue>ePset_TransportElementElevatorOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>DoorDwellTime</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCTIMEMEASURE" instructions="The time it takes a lift motor to start moving the lift after the doors have fully closed">
+				<ids:property dataType="IFCTIMEMEASURE" instructions="The time it takes a lift motor to start moving the lift after the doors have fully closed">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_TransportElementElevator</ids:simpleValue>
+						<ids:simpleValue>ePset_TransportElementElevatorOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>MotorDelayTime</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCCOUNTMEASURE" instructions="The floors which are serviced by the lift, but not necessarily stop at">
+				<ids:property dataType="IFCCOUNTMEASURE" instructions="The floors which are serviced by the lift, but not necessarily stop at">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_TransportElementElevator</ids:simpleValue>
+						<ids:simpleValue>ePset_TransportElementElevatorOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>StoriesServed</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCIDENTIFIER" instructions="which group of lifts this lift belongs to.">
+				<ids:property dataType="IFCIDENTIFIER" instructions="which group of lifts this lift belongs to.">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
+						<ids:simpleValue>ePset_TransportElementElevatorOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Group</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCAREAMEASURE" instructions="The area where people wait to board ">
+				<ids:property dataType="IFCAREAMEASURE" instructions="The area where people wait to board ">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
+						<ids:simpleValue>ePset_TransportElementElevatorOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>LoadingArea</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC4X3" name="Transport entities (Escalator)" description="Occupant Movement Analysis - data properties list for transport entities (Escalator)" maxOccurs="unbounded">
-			<ids:applicability>
+		<ids:specification ifcVersion="IFC4X3" name="Transport entities (Escalator)" description="Occupant Movement Analysis - data properties list for transport entities (Escalator)">
+			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<ids:simpleValue>IFCTRANSPORTELEMENT</ids:simpleValue>
@@ -619,79 +622,79 @@
 						<ids:simpleValue>Name</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLINEARVELOCITYMEASURE" instructions="Horizontal velocity in m/s">
+				<ids:property dataType="IFCLINEARVELOCITYMEASURE" instructions="Horizontal velocity in m/s">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>MaximumConstantSpeed</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCBOOLEAN" instructions="Indicates if available during the simulation">
+				<ids:property dataType="IFCBOOLEAN" instructions="Indicates if available during the simulation">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
+						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>IsActive</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCCOUNTMEASURE" instructions="effective number of lanes of the escalator">
+				<ids:property dataType="IFCCOUNTMEASURE" instructions="effective number of lanes of the escalator">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_TransportEscalator</ids:simpleValue>
+						<ids:simpleValue>ePset_TransportEscalatorOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>NumberOfLanes</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLENGTHMEASURE" instructions="The depth of any step tread in the direction of travel">
+				<ids:property dataType="IFCLENGTHMEASURE" instructions="The depth of any step tread in the direction of travel">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_TransportEscalator</ids:simpleValue>
+						<ids:simpleValue>ePset_TransportEscalatorOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>DepthOfTread</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCREAL" instructions="The direction of the escalator when operational">
+				<ids:property dataType="IFCREAL" instructions="The direction of the escalator when operational">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_TransportEscalator</ids:simpleValue>
+						<ids:simpleValue>ePset_TransportEscalatorOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>DirectionOfTravel</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLENGTHMEASURE" instructions="Internal width (inside net platform)">
+				<ids:property dataType="IFCLENGTHMEASURE" instructions="Internal width (inside net platform)">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
+						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>ClearWidth</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCAREAMEASURE" instructions="The area where people decide to use the device">
+				<ids:property dataType="IFCAREAMEASURE" instructions="The area where people decide to use the device">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
+						<ids:simpleValue>ePset_ElementKinematicsOIMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>LoadingArea</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="0" maxOccurs="unbounded" datatype="IFCREAL" instructions="The maximum flow rate which the device is designed, theoretical or expected to achieve.">
+				<ids:property cardinality="optional" dataType="IFCREAL" instructions="The maximum flow rate which the device is designed, theoretical or expected to achieve.">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>DesignPassengerFlow</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC4X3" name="Transport entities (Moving Walkway)" description="Occupant Movement Analysis - data properties list for transport entities (Moving Walkway)" maxOccurs="unbounded">
-			<ids:applicability>
+		<ids:specification ifcVersion="IFC4X3" name="Transport entities (Moving Walkway)" description="Occupant Movement Analysis - data properties list for transport entities (Moving Walkway)">
+			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<ids:simpleValue>IFCTRANSPORTELEMENT</ids:simpleValue>
@@ -707,79 +710,79 @@
 						<ids:simpleValue>Name</ids:simpleValue>
 					</ids:name>
 				</ids:attribute>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLINEARVELOCITYMEASURE" instructions="Horizontal velocity in m/s">
+				<ids:property dataType="IFCLINEARVELOCITYMEASURE" instructions="Horizontal velocity in m/s">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>MaximumConstantSpeed</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCBOOLEAN" instructions="Indicates if available during the simulation">
+				<ids:property dataType="IFCBOOLEAN" instructions="Indicates if available during the simulation">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
+						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>IsActive</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCCOUNTMEASURE" instructions="effective number of lanes of the walkway">
+				<ids:property dataType="IFCCOUNTMEASURE" instructions="effective number of lanes of the walkway">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_TransportMovingWalkway</ids:simpleValue>
+						<ids:simpleValue>ePset_TransportMovingWalkwayOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>NumberOfLanes</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCREAL" instructions="The direction of travel for the walkway">
+				<ids:property dataType="IFCREAL" instructions="The direction of travel for the walkway">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_TransportMovingWalkway</ids:simpleValue>
+						<ids:simpleValue>ePset_TransportMovingWalkwayOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>DirectionOfTravel</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCREAL" instructions="The maximum number of people who can occupy it">
+				<ids:property dataType="IFCREAL" instructions="The maximum number of people who can occupy it">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_TransportMovingWalkway</ids:simpleValue>
+						<ids:simpleValue>ePset_TransportMovingWalkwayOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>DesignCapacity</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLENGTHMEASURE" instructions="Internal width (inside net platform)">
+				<ids:property dataType="IFCLENGTHMEASURE" instructions="Internal width (inside net platform)">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
+						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>ClearWidth</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCAREAMEASURE" instructions="The area where people decide to use the device">
+				<ids:property dataType="IFCAREAMEASURE" instructions="The area where people decide to use the device">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
+						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>LoadingArea</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="0" maxOccurs="unbounded" datatype="IFCREAL" instructions="The maximum flow rate which the device is designed, theoretical or expected to achieve.">
+				<ids:property cardinality="optional" dataType="IFCREAL" instructions="The maximum flow rate which the device is designed, theoretical or expected to achieve.">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>DesignPassengerFlow</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC4X3" name="Ramp" description="Occupant Movement Analysis - data properties list for Ramp" maxOccurs="unbounded">
-			<ids:applicability>
+		<ids:specification ifcVersion="IFC4X3" name="Ramp" description="Occupant Movement Analysis - data properties list for Ramp">
+			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<xs:restriction base="xs:string">
@@ -822,34 +825,34 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:attribute>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCBOOLEAN" instructions="Indication that this object is designed to be accessible by the handicapped">
+				<ids:property dataType="IFCBOOLEAN" instructions="Indication that this object is designed to be accessible by the handicapped">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_RampCommon</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>HandicapAccessible</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCPLANEANGLEMEASURE" instructions="Required sloping angle of the object - relative to horizontal">
+				<ids:property dataType="IFCPLANEANGLEMEASURE" instructions="Required sloping angle of the object - relative to horizontal">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_RampCommon</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>RequiredSlope</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCREAL" instructions="Angle">
+				<ids:property dataType="IFCREAL" instructions="Angle">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_RampCommon</ids:simpleValue>
+						<ids:simpleValue>ePset_RampOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>DirectionOfTravel</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC4X3" name="Gate" description="Occupant Movement Analysis - data properties list for Gate" maxOccurs="unbounded">
-			<ids:applicability>
+		<ids:specification ifcVersion="IFC4X3" name="Gate" description="Occupant Movement Analysis - data properties list for Gate">
+			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<xs:restriction base="xs:string">
@@ -889,26 +892,26 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:attribute>
-				<ids:property minOccurs="0" maxOccurs="unbounded" datatype="IFCREAL" instructions="The expected flow rate">
+				<ids:property cardinality="optional" dataType="IFCREAL" instructions="The expected flow rate">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>DesignPassengerFlow</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="0" maxOccurs="unbounded" datatype="IFCAREAMEASURE" instructions="The area where people decide to use the device">
+				<ids:property cardinality="optional" dataType="IFCAREAMEASURE" instructions="The area where people decide to use the device">
 					<ids:propertySet>
-						<ids:simpleValue>Pset_ElementKinematics</ids:simpleValue>
+						<ids:simpleValue>ePset_ElementKinematicsOMA</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>LoadingArea</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC4X3" name="Signage" description="Occupant Movement Analysis - data properties list for Signage" maxOccurs="unbounded">
-			<ids:applicability>
+		<ids:specification ifcVersion="IFC4X3" name="Signage" description="Occupant Movement Analysis - data properties list for Signage">
+			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<xs:restriction base="xs:string">
@@ -929,99 +932,97 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:attribute>
-				<ids:classification minOccurs="0" maxOccurs="unbounded">
-        </ids:classification>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCIDENTIFIER" instructions="Identifier used to identify the sign ">
+				<ids:property dataType="IFCIDENTIFIER" instructions="Identifier used to identify the sign ">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_OMA_Signage</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Title</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLENGTHMEASURE" instructions="Derived height of the sign">
+				<ids:property dataType="IFCLENGTHMEASURE" instructions="Derived height of the sign">
 					<ids:propertySet>
 						<ids:simpleValue>Qto_SpaceBaseQuantities</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Height</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLENGTHMEASURE" instructions="Derived width of the sign">
+				<ids:property dataType="IFCLENGTHMEASURE" instructions="Derived width of the sign">
 					<ids:propertySet>
 						<ids:simpleValue>Qto_SpaceBaseQuantities</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Width</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLENGTHMEASURE" instructions="Vertical position of the sign relative to given storey">
+				<ids:property dataType="IFCLENGTHMEASURE" instructions="Vertical position of the sign relative to given storey">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_OMA_Signage</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>HeightFromTheGround</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLENGTHMEASURE" instructions="Size of text or graphics on the sign">
+				<ids:property dataType="IFCLENGTHMEASURE" instructions="Size of text or graphics on the sign">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_OMA_Signage</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>LetterHeight</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCIDENTIFIER" instructions="Lettering or graphics colour">
+				<ids:property dataType="IFCIDENTIFIER" instructions="Lettering or graphics colour">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_OMA_Signage</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>TextColour</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCIDENTIFIER" instructions="background colour of sign">
+				<ids:property dataType="IFCIDENTIFIER" instructions="background colour of sign">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_OMA_Signage</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>BackgroundColour</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCLABEL" instructions="Indication of function within building">
+				<ids:property dataType="IFCLABEL" instructions="Indication of function within building">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_OMA_Signage</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Usage</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="0" maxOccurs="unbounded" datatype="IFCILLUMINANCEMEASURE" instructions="Luminous intensity of the sign if illuminated">
+				<ids:property cardinality="optional" dataType="IFCILLUMINANCEMEASURE" instructions="Luminous intensity of the sign if illuminated">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_OMA_Signage</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>LuminousIntensity</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC4X3" name="Alarm" description="Occupant Movement Analysis - data properties list for Alarm" maxOccurs="unbounded">
-			<ids:applicability>
+		<ids:specification ifcVersion="IFC4X3" name="Alarm" description="Occupant Movement Analysis - data properties list for Alarm">
+			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<xs:restriction base="xs:string">
