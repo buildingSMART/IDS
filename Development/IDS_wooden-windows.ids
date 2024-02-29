@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/0.9.6/ids.xsd">
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/0.9.7/ids.xsd">
 	<ids:info>
 		<ids:title>Wooden Windows</ids:title>
 		<ids:copyright>NBvT</ids:copyright>
@@ -8,9 +8,9 @@
 		<ids:milestone>Design handover to manufactuer</ids:milestone>
 	</ids:info>
 	<ids:specifications>
-		<!-- specification added to have at least one case of predefinedType in the documenetation -->
-		<ids:specification ifcVersion="IFC2X3" name="PredefinedTypeExample" minOccurs="1" maxOccurs="unbounded">
-			<ids:applicability>
+		<!-- specification added to have at least one case of subType in the documenetation -->
+		<ids:specification ifcVersion="IFC2X3" name="subTypeExample">
+			<ids:applicability minOccurs="1" maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<ids:simpleValue>IFCMEMBER</ids:simpleValue>
@@ -18,7 +18,7 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:partOf maxOccurs="unbounded" relation="IFCRELAGGREGATES">
+				<ids:partOf relation="IFCRELAGGREGATES">
 					<ids:entity>
 						<ids:name>
 							<ids:simpleValue>IFCELEMENTASSEMBLY</ids:simpleValue>
@@ -30,8 +30,8 @@
 				</ids:partOf>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC2X3" name="Stijlen en Dorpels" minOccurs="1" maxOccurs="unbounded">
-			<ids:applicability>
+		<ids:specification ifcVersion="IFC2X3" name="Stijlen en Dorpels">
+			<ids:applicability minOccurs="1" maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<ids:simpleValue>IFCMEMBER</ids:simpleValue>
@@ -39,20 +39,20 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:partOf maxOccurs="unbounded" relation="IFCRELAGGREGATES">
+				<ids:partOf relation="IFCRELAGGREGATES">
 					<ids:entity>
 						<ids:name>
 							<ids:simpleValue>IFCELEMENTASSEMBLY</ids:simpleValue>
 						</ids:name>
 					</ids:entity>
 				</ids:partOf>
-				<ids:property maxOccurs="unbounded" datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Kleurbinnenzijde</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:annotation>
@@ -62,21 +62,21 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property maxOccurs="unbounded" datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Kleurbuitenzijde</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property maxOccurs="unbounded" datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Onderdeel</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:enumeration value="Stijl"/>
@@ -84,7 +84,7 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:classification minOccurs="1" maxOccurs="unbounded">
+				<ids:classification>
 					<ids:value>
 						<xs:restriction>
 							<xs:annotation>
@@ -93,13 +93,15 @@
 							<xs:pattern value="3[1-2]\.[0-9][0-9]"/>
 						</xs:restriction>
 					</ids:value>
+					<ids:system>
+						<ids:simpleValue>Custom</ids:simpleValue>
+					</ids:system>
 				</ids:classification>
-				<ids:material minOccurs="1" maxOccurs="unbounded">
-                </ids:material>
+				<ids:material />
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC2X3" name="Deur" minOccurs="0" maxOccurs="unbounded">
-			<ids:applicability>
+		<ids:specification ifcVersion="IFC2X3" name="Deur">
+			<ids:applicability minOccurs="0" maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<ids:simpleValue>IFCDOOR</ids:simpleValue>
@@ -107,20 +109,20 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:partOf maxOccurs="unbounded" relation="IFCRELAGGREGATES">
+				<ids:partOf relation="IFCRELAGGREGATES">
 					<ids:entity>
 						<ids:name>
 							<ids:simpleValue>IFCELEMENTASSEMBLY</ids:simpleValue>
 						</ids:name>
 					</ids:entity>
 				</ids:partOf>
-				<ids:property maxOccurs="unbounded" datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Draairichting</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction>
 							<xs:enumeration value="DIN Links"/>
@@ -128,13 +130,13 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property maxOccurs="unbounded" datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Kleurbinnenzijde</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:annotation>
@@ -144,27 +146,27 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property maxOccurs="unbounded" datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Kleurbuitenzijde</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property maxOccurs="unbounded" datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Onderdeel</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:material minOccurs="1" maxOccurs="unbounded"/>
+				<ids:material />
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification minOccurs="0" maxOccurs="unbounded" name="Raam" ifcVersion="IFC2X3">
-			<ids:applicability>
+		<ids:specification name="Raam" ifcVersion="IFC2X3">
+			<ids:applicability minOccurs="0" maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<ids:simpleValue>IFCWINDOW</ids:simpleValue>
@@ -173,28 +175,28 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:partOf maxOccurs="unbounded" relation="IFCRELAGGREGATES">
+				<ids:partOf relation="IFCRELAGGREGATES">
 					<ids:entity>
 						<ids:name>
 							<ids:simpleValue>IFCELEMENTASSEMBLY</ids:simpleValue>
 						</ids:name>
 					</ids:entity>
 				</ids:partOf>
-				<ids:property maxOccurs="unbounded" datatype="">
+				<ids:property>
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Draairichting</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property maxOccurs="unbounded" datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Kleurbinnenzijde</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:annotation>
@@ -204,21 +206,21 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property maxOccurs="unbounded" datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Kleurbuitenzijde</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property maxOccurs="unbounded" datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Onderdeel</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<ids:simpleValue>Raam</ids:simpleValue>
 						<!-- again, we know this will clash with beglazing, so good to see this happen -->
@@ -226,9 +228,9 @@
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification name="Raam met glas" minOccurs="0" maxOccurs="unbounded" ifcVersion="IFC2X3">
+		<ids:specification name="Raam met glas" ifcVersion="IFC2X3">
 			<!-- this one will 'clash' with the previous one. We need some kind of 'alle values except' pattern. For example the ^ used in most regex languages, but not in XSD patterns -->
-			<ids:applicability>
+			<ids:applicability minOccurs="0" maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<ids:simpleValue>IFCWINDOW</ids:simpleValue>
@@ -246,20 +248,20 @@
 				</ids:material>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:partOf maxOccurs="unbounded" relation="IFCRELAGGREGATES">
+				<ids:partOf relation="IFCRELAGGREGATES">
 					<ids:entity>
 						<ids:name>
 							<ids:simpleValue>IFCELEMENTASSEMBLY</ids:simpleValue>
 						</ids:name>
 					</ids:entity>
 				</ids:partOf>
-				<ids:property maxOccurs="unbounded" datatype="">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Onderdeel</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<ids:simpleValue>Ruit</ids:simpleValue>
 						<!-- this should probably be in the applicability, or in the 'everything except' applicability of the other IfcWindow  -->
@@ -267,8 +269,8 @@
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification minOccurs="0" maxOccurs="unbounded" name="Paneel" ifcVersion="IFC2X3">
-			<ids:applicability>
+		<ids:specification name="Paneel" ifcVersion="IFC2X3">
+			<ids:applicability minOccurs="0" maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
 						<ids:simpleValue>IFCPLATE</ids:simpleValue>
@@ -276,20 +278,20 @@
 				</ids:entity>
 			</ids:applicability>
 			<ids:requirements>
-				<ids:partOf maxOccurs="unbounded" relation="IFCRELAGGREGATES">
+				<ids:partOf relation="IFCRELAGGREGATES">
 					<ids:entity>
 						<ids:name>
 							<ids:simpleValue>IFCELEMENTASSEMBLY</ids:simpleValue>
 						</ids:name>
 					</ids:entity>
 				</ids:partOf>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Kleurbinnenzijde</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:string">
 							<xs:annotation>
@@ -299,49 +301,49 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Kleurbuitenzijde</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property maxOccurs="unbounded" datatype="IFCTEXT">
+				<ids:property dataType="IFCTEXT">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_31</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Onderdeel</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property minOccurs="1" maxOccurs="unbounded" datatype="" uri="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-2x3/prop/acousticrating">
+				<ids:property uri="http://identifier.buildingsmart.org/uri/buildingsmart/ifc-2x3/prop/acousticrating">
 					<!-- uri not live yet -->
 					<!-- there is no datatype giving, which is invalid becasue there is a value restriction set for this property -->
 					<!-- in the example IFC file the PSet_PlateCommon is on Type level instead of instande. So this should turn up INvalid -->
 					<ids:propertySet>
 						<ids:simpleValue>Pset_PlateCommon</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>AcousticRating</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property maxOccurs="unbounded" datatype="">
+				<ids:property>
 					<!-- in the example IFC file the PSet_PlateCommon is on Type level instead of instance. So this should turn up VALID -->
 					<ids:propertySet>
 						<ids:simpleValue>Pset_PlateCommon</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>Reference</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 				</ids:property>
-				<ids:property maxOccurs="unbounded" datatype="IFCTHERMALTRANSMITTANCEMEASURE">
+				<ids:property dataType="IFCTHERMALTRANSMITTANCEMEASURE">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_PlateCommon</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>ThermalTransmittance</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<xs:restriction base="xs:decimal">
 							<xs:minExclusive value="0.5"/>
@@ -349,13 +351,13 @@
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
-				<ids:property maxOccurs="unbounded" datatype="">
+				<ids:property dataType="IFCLABEL">
 					<ids:propertySet>
 						<ids:simpleValue>Pset_PlateCommon</ids:simpleValue>
 					</ids:propertySet>
-					<ids:name>
+					<ids:baseName>
 						<ids:simpleValue>FireRating</ids:simpleValue>
-					</ids:name>
+					</ids:baseName>
 					<ids:value>
 						<ids:simpleValue>30</ids:simpleValue>
 					</ids:value>

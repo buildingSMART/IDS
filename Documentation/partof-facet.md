@@ -17,10 +17,10 @@ When the `relation` parameter is not specified, then all 6 are to be considered 
 
 ## Parameters
 
-| Parameter    | Required | Restrictions Allowed | Allowed Values                                                  | Meaning                                                                                                                                                                                           |
-| ------------ | -------- | -------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Entity**   | ✔️     | ❌                   | Any valid IFC entity (e.g. "IFCSYSTEM")                         | The IFC class of the larger object matches the required entity.                                                                                                                                            |
-| **Relation** | ❌       | ✔️                 | One relationship chosen from the 6 supported types listed above | If omitted any valid IFC relationship structure that directly or indirectly, and transitively (recursively) has to be evaluated, if specified only the given type must be evaluated (recursively) |
+| Parameter    | Required | Type            | Allowed Values                                                  | Meaning                                                                                                                                                                                           |
+| ------------ | -------- | --------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Entity**   | ✔️     | An entity facet | Any valid IDS `entityType`, nested in the XML (e.g. "IFCSYSTEM")                         | The IFC class of the larger object matches the required entity.                                                                                                                                   |
+| **Relation** | ❌       | string          | One relationship chosen from the 6 supported types listed above | If omitted any valid IFC relationship structure that directly or indirectly, and transitively (recursively) has to be evaluated, if specified only the given type must be evaluated (recursively) |
 
 ## Examples
 
@@ -31,4 +31,4 @@ When the `relation` parameter is not specified, then all 6 are to be considered 
 | Any entity that is part of a distribution system                 | The entity (e.g. duct) must be part of a distribution system | Relation="IFCRELASSIGNSTOGROUP", Entity="IFCDISTRIBUTIONSYSTEM" |
 | Any entity that is located in a space                            | The entity (e.g. pump) must be located in a space            | Relation="IFCRELCONTAINEDINSPATIALSTRUCTURE", Entity="IFCSPACE" |
 | Any entity that hosted by a hand wash basin                      | The entity (e.g. faucet) must be fixed on a hand wash basin  | Relation="IFCRELNESTS", Entity="IFCSANITARYTERMINAL"            |
-| Any window that hosted by a hand wash basin                      | The entity (e.g. faucet) must be fixed on a hand wash basin  | Relation="IFCRELNESTS", Entity="IFCSANITARYTERMINAL"            |                                                              |
+| Any window that hosted by a hand wash basin                      | The entity (e.g. faucet) must be fixed on a hand wash basin  | Relation="IFCRELNESTS", Entity="IFCSANITARYTERMINAL"            |
