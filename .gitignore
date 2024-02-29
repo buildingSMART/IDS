@@ -10,3 +10,5 @@ build/obj/
 /SchemaProject/bin/
 /SchemaProject/obj/
 /SchemaProject/Ids.cs
+.DS_Store
+
