@@ -515,11 +515,16 @@ Attribute: ''RefractionIndex'',xs:decimal MinInclusive(''42'') MaxInclusive(''42
 
 ### Typecast checking may also occur within enumeration restrictions
 
+The type defined in the enumeration needs to be compatible with the dataType.
+For attribute facets, the dataType is taken from the IDS schema.
+
+ROADMAP: inconsistent types should be captured by the Audit tool.
+
 ``` ids attribute/pass-typecast_checking_may_also_occur_within_enumeration_restrictions.ids
 Typecast checking may also occur within enumeration restrictions
 Entity: ''IFCSURFACESTYLEREFRACTION''
 Requirements:
-Attribute: ''RefractionIndex'',Enumeration(''42'',''43'')
+Attribute: ''RefractionIndex'',xs:double Enumeration(''42'',''43'')
 ```
 
 ### Value checks always fail for lists
@@ -1545,24 +1550,6 @@ An aggregate may specify the predefined type of the whole 2/2
 Entity: ''IFCBEAM''
 Requirements:
 PartOf: ''IFCSLAB'',''SLABRADOR'',IFCRELAGGREGATES
-```
-
-### An optional facet always passes regardless of outcome 1/2
-
-``` ids partof/pass-an_optional_facet_always_passes_regardless_of_outcome_1_2.ids
-An optional facet always passes regardless of outcome 1/2
-Entity: ''IFCELEMENTASSEMBLY''
-Requirements:
-PartOf: Pattern(''.*''),IFCRELAGGREGATES
-```
-
-### An optional facet always passes regardless of outcome 2/2
-
-``` ids partof/pass-an_optional_facet_always_passes_regardless_of_outcome_2_2.ids
-An optional facet always passes regardless of outcome 2/2
-Entity: ''IFCWALL''
-Requirements:
-PartOf: Pattern(''.*''),IFCRELAGGREGATES
 ```
 
 ### Any contained element passes a containment relationship 1/2

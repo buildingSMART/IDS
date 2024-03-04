@@ -19,7 +19,7 @@
             <simpleValue>RefractionIndex</simpleValue>
           </name>
           <value>
-            <xs:restriction base="xs:string">
+            <xs:restriction base="xs:double">
               <xs:enumeration value="42" />
               <xs:enumeration value="43" />
             </xs:restriction>
