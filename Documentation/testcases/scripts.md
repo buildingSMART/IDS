@@ -1075,18 +1075,6 @@ Requirements:
 Attribute: ''Name'',''Waldo''
 ```
 
-### A prohibited specification and a prohibited facet results in a double negative
-
-``` ids ids/pass-a_prohibited_specification_and_a_prohibited_facet_results_in_a_double_negative.ids
-A prohibited specification and a prohibited facet results in a double negative
-Prohibited
-IFC2X3
-Entity: ''IFCWALL''
-Requirements:
-Attribute: Prohibited,''Name'',''Waldo''
-Attribute: Prohibited,''Description'',''Foobar''
-```
-
 ### A specification passes only if all requirements pass (1/2)
 
 ``` ids ids/fail-a_specification_passes_only_if_all_requirements_pass_1_2.ids
@@ -1111,18 +1099,6 @@ Attribute: ''Name'',''Waldo''
 Attribute: ''Description'',''Foobar''
 ```
 
-### Multiple specifications are independent of one another
-
-``` ids ids/pass-multiple_specifications_are_independent_of_one_another.ids
-Multiple specifications are independent of one another
-Prohibited
-IFC2X3
-Entity: ''IFCWALL''
-Requirements:
-Attribute: Prohibited,''Name'',''Waldo''
-Attribute: Prohibited,''Description'',''Foobar''
-```
-
 ### Optional specifications may still pass if nothing is applicable
 
 ``` ids ids/pass-optional_specifications_may_still_pass_if_nothing_is_applicable.ids
@@ -1134,32 +1110,10 @@ Requirements:
 Attribute: ''Name'',''Waldo''
 ```
 
-### Prohibited specifications fail if at least one entity passes all requirements (1/3)
+### Prohibited specifications invalid if requirements are specified
 
-``` ids ids/pass-prohibited_specifications_fail_if_at_least_one_entity_passes_all_requirements_1_3.ids
-Prohibited specifications fail if at least one entity passes all requirements (1/3)
-Prohibited
-IFC2X3
-Entity: ''IFCWALL''
-Requirements:
-Attribute: ''Name'',''Waldo''
-```
-
-### Prohibited specifications fail if at least one entity passes all requirements (2/3)
-
-``` ids ids/pass-prohibited_specifications_fail_if_at_least_one_entity_passes_all_requirements_2_3.ids
-Prohibited specifications fail if at least one entity passes all requirements (2/3)
-Prohibited
-IFC2X3
-Entity: ''IFCWALL''
-Requirements:
-Attribute: ''Name'',''Waldo''
-```
-
-### Prohibited specifications fail if at least one entity passes all requirements (3/3)
-
-``` ids ids/fail-prohibited_specifications_fail_if_at_least_one_entity_passes_all_requirements_3_3.ids
-Prohibited specifications fail if at least one entity passes all requirements (3/3)
+``` ids ids/invalid-prohibited_specifications_invalid_if_requirements_are_specified.ids
+Prohibited specifications invalid if requirements are specified
 Prohibited
 IFC2X3
 Entity: ''IFCWALL''
