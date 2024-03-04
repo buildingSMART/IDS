@@ -664,7 +664,6 @@ Classification: ''Foobar'',''1''
 
 Since ifc4, IFCEXTERNALREFERENCERELATIONSHIP can relate an IFCEXTERNALREFERENCE to any IFCRESOURCEOBJECTSELECT.
 
-
 ``` ids classification/pass-non_rooted_resources_that_have_external_classification_references_should_also_pass.ids
 Non-rooted resources that have external classification references should also pass
 IFC4
@@ -2485,6 +2484,22 @@ Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCLENGTHMEASURE,''2''
 ```
 
+### Properties can be associated to relevant object types
+
+The audit tool restricts properties starting with the reserved prefix `Pset_` to the appropriate objects,
+but they can also be associated to the relevant types. E.g. `Pset_WallCommon` on `IFCWALLTYPE`.
+
+The provided IFC fails because one of the property sets defines the invalid value `FOOBAR`.
+
+``` ids property\fail-properties_can_be_associated_to_relevant_object_types.ids
+Properties can be associated to relevant object types
+Optional
+IFC4
+Entity: ''IFCWALLTYPE''
+Requirements:
+Property: ''Pset_WallCommon'',''FireRating'',IFCLABEL,Pattern(''(-|[0-9]{2,3})\/(-|[0-9]{2,3})\/(-|[0-9]{2,3})'')
+```
+
 ## restriction
 
 ### A bound can be inclusive 1/3
@@ -2685,4 +2700,3 @@ Entity: ''IFCWALL''
 Requirements:
 Attribute: ''Name'',Pattern(''[A-Z]{2}[0-9]{2}'')
 ```
-

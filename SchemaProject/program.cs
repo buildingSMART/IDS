@@ -1,3 +1,4 @@
+using DiffMatchPatch;
 using Ids;
 using SchemaProject.DocAutomation;
 using SchemaProject.Helpers;
@@ -19,117 +20,142 @@ class Program
 		// If this project does not compile, start a terminal in the root folder and execute the `./build CompileSchemaProject` command.
 		//
 		Console.WriteLine("Hello IDS!");
-        bool inScript = false;
-        string file = "";
-        var buffer = new StringBuilder();
-        DirectoryInfo? testCasesFolder = new DirectoryInfo(".");
-        Console.WriteLine($"Process started in: {testCasesFolder.FullName}");
-        while (testCasesFolder is not null)
-        {
-            var p = Path.Combine(testCasesFolder.FullName, "Documentation", "testcases");
-            DirectoryInfo d = new DirectoryInfo (p);
-            if (d.Exists)
-            {
-                testCasesFolder = d;
-                break;
-            }
-            testCasesFolder = testCasesFolder.Parent;
-        } 
-        if (testCasesFolder is null)
-        {
-            Console.WriteLine("Dicrectory of testcases not found. Execution cancelled.");
-            return;
-        }
-        Console.WriteLine($"Testcase generation started in: {testCasesFolder.FullName}");
-        FileInfo scriptsFile = new FileInfo(Path.Combine(testCasesFolder.FullName, "scripts.md"));
-        if (!scriptsFile.Exists)
-        {
-            Console.WriteLine("Scripts file not found. Execution cancelled.");
-            return;
-        }
+		RegenIDS();
+		Console.WriteLine("Done");
+	}
 
-        // reading script
-        var allLines = File.ReadAllLines(scriptsFile.FullName);
+	private static void RegenIDS()
+	{
+		bool inScript = false;
+		string file = "";
+		var buffer = new StringBuilder();
+		DirectoryInfo? testCasesFolder = new DirectoryInfo(".");
+		Console.WriteLine($"Process started in: {testCasesFolder.FullName}");
+		while (testCasesFolder is not null)
+		{
+			var p = Path.Combine(testCasesFolder.FullName, "Documentation", "testcases");
+			DirectoryInfo d = new DirectoryInfo(p);
+			if (d.Exists)
+			{
+				testCasesFolder = d;
+				break;
+			}
+			testCasesFolder = testCasesFolder.Parent;
+		}
+		if (testCasesFolder is null)
+		{
+			Message("Directory of testcases not found. Execution cancelled.", ConsoleColor.Red);
+			return;
+		}
+		Console.WriteLine($"Testcase generation started in: {testCasesFolder.FullName}");
+		FileInfo scriptsFile = new FileInfo(Path.Combine(testCasesFolder.FullName, "scripts.md"));
+		if (!scriptsFile.Exists)
+		{
+			Message("Scripts file not found. Execution cancelled.", ConsoleColor.Red);
+			return;
+		}
 
-        // clean all IDSs
-        foreach (var item in testCasesFolder.GetFiles("*.ids", SearchOption.AllDirectories))
-        {
-            item.Delete();
-        }
+		// reading script
+		var allLines = File.ReadAllLines(scriptsFile.FullName);
 
-        // Regenerate IDSs
-        // 
-        var allIfcFound = true;
-        var expectedIfcFileNames = new List<string>();
-        var missingIfcFileNames = new List<string>();
-        var title = "";
-        var firstLine = true;
-        foreach (var line in allLines)
-        {
-            if (line.StartsWith("``` ids "))
-            {
-                file = line.Substring(8);
-                inScript = true;
-                buffer = new StringBuilder();
-                firstLine = true;
-            }
-            else if (line.StartsWith("```") && inScript)
-            {
-                inScript = false;
-                var fName = Path.Combine(testCasesFolder.FullName, file);
-                FileInfo fInfo = new FileInfo(fName);
+		// get all IDSs
+		var allIDSs = testCasesFolder.GetFiles("*.ids", SearchOption.AllDirectories).Select(f => f.FullName).ToList();
+		var newIDSs = new List<string>();
 
-                var scr = new IdsScript(buffer.ToString());
-                var t2 = scr.GetIds();
-                IdsHelpers.WriteIds(fInfo.FullName, t2);
+		// Regenerate IDSs
+		// 
+		var allIfcFound = true;
+		var expectedIfcFileNames = new List<string>();
+		var missingIfcFileNames = new List<string>();
+		var title = "";
+		var firstLine = true;
+		foreach (var line in allLines)
+		{
+			if (line.StartsWith("``` ids "))
+			{
+				file = line.Substring(8);
+				inScript = true;
+				buffer = new StringBuilder();
+				firstLine = true;
+			}
+			else if (line.StartsWith("```") && inScript) // the script is finished
+			{
+				inScript = false;
+				var fName = Path.Combine(testCasesFolder.FullName, file);
+				FileInfo fInfo = new FileInfo(fName);
+				newIDSs.Add(fInfo.FullName);
 
-                var ifcName = Path.ChangeExtension(fInfo.FullName, "ifc");
-                expectedIfcFileNames.Add(ifcName);
-                if (!File.Exists(ifcName))
-                {
-                    missingIfcFileNames.Add(ifcName);
-                    Console.WriteLine($"Missing ifc: - {ifcName}");
-                    allIfcFound = false;
-                }
-            }
-            else if (line.StartsWith("### "))
-            {
-                title = line.Substring(4);
-            }
-            else if (inScript)
-            {
-                if (firstLine) // we check that the title matches the section
-                {
-                    if (line.Trim() != title.Trim())
-                    {
-                        Console.WriteLine($"- script title mismatch: `{line}` vs `{title}`");
-                    }
-                    firstLine = false;
-                }
-                buffer.AppendLine(line);
-            }
-        }
+				var scr = new IdsScript(buffer.ToString());
+				var t2 = scr.GetIds();
+				IdsHelpers.WriteIds(fInfo.FullName, t2);
 
-        
-        // extra ifcs
-        foreach (var item in testCasesFolder.GetFiles("*.ifc", SearchOption.AllDirectories))
-        {
-            if (!expectedIfcFileNames.Contains(item.FullName))
-            {
-                Console.WriteLine($"Extra IFC: - {item.FullName}");
-                var invalid = item.FullName.Replace("fail-", "invalid-");
-                if (missingIfcFileNames.Contains (invalid) )
-                {
-                    File.Move(item.FullName, invalid);
-                }
-                else if (allIfcFound)
-                {
-                    // item.Delete();
-                }
-            }
-        }
-        
-        Console.WriteLine("");
-        Console.WriteLine("Done");
-    }
+				var ifcName = Path.ChangeExtension(fInfo.FullName, "ifc");
+				expectedIfcFileNames.Add(ifcName);
+				if (!File.Exists(ifcName))
+				{
+					missingIfcFileNames.Add(ifcName);
+					Message($"Missing ifc file: - {ifcName}", ConsoleColor.Red);
+					allIfcFound = false;
+				}
+			}
+			else if (line.StartsWith("### "))
+			{
+				title = line.Substring(4);
+			}
+			else if (inScript)
+			{
+				if (firstLine) // we check that the title matches the section
+				{
+					if (line.Trim() != title.Trim())
+					{
+						Message($"- script title mismatch: `{line}` vs `{title}`", ConsoleColor.Red);
+					}
+					firstLine = false;
+				}
+				buffer.AppendLine(line);
+			}
+		}
+
+		// extra IDSs
+		foreach (var item in allIDSs.Except(newIDSs))
+		{
+			string t = IdsHelpers.CreateDiffReportHtml(item);
+			var reportFileName = Path.ChangeExtension(item, "html");
+			File.WriteAllText(reportFileName, t);
+			Console.WriteLine($"Extra IDS report generated: {reportFileName}");
+		}
+
+		// extra ifcs
+		foreach (var item in testCasesFolder.GetFiles("*.ifc", SearchOption.AllDirectories))
+		{
+			if (!expectedIfcFileNames.Contains(item.FullName))
+			{
+				Message($"Extra IFC: - {item.FullName}", ConsoleColor.DarkYellow);
+				var invalidFileName = item.FullName.Replace("fail-", "invalid-");
+				if (missingIfcFileNames.Contains(invalidFileName))
+				{
+					// File.Move(item.FullName, invalidFileName);
+					Console.WriteLine("A matching invalid IFC is required, should you rename this?");
+				}
+				//else if (allIfcFound)
+				//{
+				//	// item.Delete();
+				//}
+			}
+		}
+		if (allIfcFound)
+		{
+			Message("All scripting IFC files found", ConsoleColor.Green);
+		}
+
+		Console.WriteLine("");
+	}
+
+	internal static void Message(string v, ConsoleColor messageColor)
+	{
+		var restore = Console.ForegroundColor;
+		Console.ForegroundColor = messageColor;
+		Console.WriteLine(v);
+		Console.ForegroundColor = restore;
+	}
 }

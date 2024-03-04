@@ -117,12 +117,12 @@ namespace SchemaProject.DocAutomation
                 yield return $"{CollectionType}(''{string.Join("'',''", enumeration.Select(x=>x.Value))}'')";
         }
 
-        public static IdsScript? ScriptFromIds(FileInfo item)
+        public static IdsScript? ScriptFromIds(FileInfo item, out Ids.Ids? entireIDS)
         {
-            var ret = IdsHelpers.LoadIds(item);
-            if (ret == null)
+			entireIDS = IdsHelpers.LoadIds(item);
+            if (entireIDS == null)
                 return null;
-            return new IdsScript(ret);
+            return new IdsScript(entireIDS);
         }
 
         internal Ids.Ids GetIds()
@@ -544,7 +544,11 @@ namespace SchemaProject.DocAutomation
             return false;
         }
 
-        internal void WriteTo(StreamWriter writer)
+        /// <summary>
+        /// Persists the IDS Script
+        /// </summary>
+        /// <param name="writer"></param>
+        internal void WriteTo(TextWriter writer)
         {
             writer.WriteLine(Title);
             if (ApplicabilityCard != ConditionalCardinality.Required)
