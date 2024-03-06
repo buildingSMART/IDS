@@ -1,8 +1,8 @@
 # Entity facet
 
-Every entity in an IFC model has an "IFC Class" **Name**. For example, wall entities will have an IFC class of IfcWall, and door entities will have an IFC class of IfcDoor. Entities that don't represent individual building elements will also have a class. For example, the project has a class of IfcProject, window types have a class of IfcWindowType, and cost items have a class of IfcCostItem.
+Every instance in an IFC model has an "IFC Class" (also known as EXPRESS entity). For example, wall instances will have IFC class IfcWall, and door instances will have IFC class IfcDoor. Instances that don't represent individual building elements will also have a class. For example, project has class IfcProject, window types have class of IfcWindowType, and cost items have a class IfcCostItem.
 
-Classes aren’t just for categorising entities. They also indicate what types of properties and relationships it is allowed to have. For example, an IfcWall class can have a fire rating property, but an IfcGrid class cannot.
+Classes aren’t just for categorising instances. They also indicate what types of properties and relationships it is allowed to have. For example, an instance of IfcWall class can have a fire rating property, but an IfcGrid instance cannot.
 
 Different IFC schemas have different IFC classes. More recent IFC schemas contain richer and more diverse IFC classes, which you can compare here:
 
@@ -10,7 +10,7 @@ Different IFC schemas have different IFC classes. More recent IFC schemas contai
 - [IFC4 list of IFC class names](https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/link/alphabeticalorder-entities.htm)
 - [IFC2X3 list of IFC class names](https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/alphabeticalorder_entities.htm)
 
-Some entities may also optionally have a **Predefined Type**. This is a further level of entity categorisation in addition to the IFC Class **Name**. For example, an IfcWall may have a **Predefined Type** of SHEAR, or PARTITIONING. Whereas the IFC Class **Name** is specified by the IFC standard, the **Predefined Type** may also contain custom values by the user.
+Some classes may also optionally have a **Predefined Type**. This is a further level of instance categorisation in addition to the IFC Class **Name**. For example, an instance of IfcWall may have a **Predefined Type** of SHEAR, or PARTITIONING. Whereas the IFC Class **Name** is specified by the IFC standard, the **Predefined Type** may also contain custom values by the user.
 
 The IFC schema documentation contains a list of standard predefined types. Here is how you might find a list of valid **Predefined Types** for the IFC4X3 schema. The instructions will be similar for all IFC versions.
 
