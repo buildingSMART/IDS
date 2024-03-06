@@ -154,8 +154,8 @@
 						<ids:simpleValue>NominalLength</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<xs:restriction base="xs:string">
-							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
+						<xs:restriction base="xs:double">
+							<xs:minExclusive value="0"/>
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
@@ -211,7 +211,7 @@
 						<ids:simpleValue>MovementType</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<xs:restriction>
+						<xs:restriction base="xs:string" >
 							<xs:enumeration value="COUNTER"/>
 							<xs:enumeration value="DESTINATION"/>
 							<xs:enumeration value="ENTRY"/>
@@ -377,8 +377,8 @@
 						<ids:simpleValue>RiserHeight</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<xs:restriction base="xs:string">
-							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
+						<xs:restriction base="xs:double">
+							<xs:minExclusive value="0"/>
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
@@ -404,8 +404,8 @@
 						<ids:simpleValue>TreadLength</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<xs:restriction base="xs:string">
-							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
+						<xs:restriction base="xs:double">
+							<xs:minExclusive value="0"/>
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
@@ -431,8 +431,8 @@
 						<ids:simpleValue>EffectiveWidth</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<xs:restriction base="xs:string">
-							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
+						<xs:restriction base="xs:double">
+							<xs:minExclusive value="0"/>
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
@@ -497,8 +497,8 @@
 						<ids:simpleValue>ClearWidth</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<xs:restriction base="xs:string">
-							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
+						<xs:restriction base="xs:double">
+							<xs:minExclusive value="4"/>
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
@@ -510,8 +510,8 @@
 						<ids:simpleValue>ClearDepth</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<xs:restriction base="xs:string">
-							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
+						<xs:restriction base="xs:double">
+							<xs:minExclusive value="4"/>
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
@@ -670,8 +670,8 @@
 						<ids:simpleValue>ClearWidth</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<xs:restriction base="xs:string">
-							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
+						<xs:restriction base="xs:double">
+							<xs:minExclusive value="0"/>
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
@@ -758,8 +758,8 @@
 						<ids:simpleValue>ClearWidth</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<xs:restriction base="xs:string">
-							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
+						<xs:restriction base="xs:double">
+							<xs:minExclusive value="0"/>
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
@@ -948,8 +948,8 @@
 						<ids:simpleValue>Height</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<xs:restriction base="xs:string">
-							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
+						<xs:restriction base="xs:double">
+							<xs:minExclusive value="0"/>
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
@@ -961,8 +961,8 @@
 						<ids:simpleValue>Width</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<xs:restriction base="xs:string">
-							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
+						<xs:restriction base="xs:double">
+							<xs:minExclusive value="0"/>
 						</xs:restriction>
 					</ids:value>
 				</ids:property>
@@ -982,8 +982,8 @@
 						<ids:simpleValue>LetterHeight</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<xs:restriction base="xs:string">
-							<xs:pattern value="^(0*(\.\d+)|[1-9]\d*(\.\d+)?)$"/>
+						<xs:restriction base="xs:double">
+							<xs:minExclusive value="0"/>
 						</xs:restriction>
 					</ids:value>
 				</ids:property>

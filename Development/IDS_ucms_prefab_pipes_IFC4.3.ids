@@ -30,7 +30,7 @@
 						<ids:simpleValue>Manufacturer</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<xs:restriction>
+						<xs:restriction base="xs:string" >
 							<xs:enumeration value="Manufacturer 1"/>
 							<xs:enumeration value="Manufacturer 2"/>
 						</xs:restriction>
@@ -72,7 +72,7 @@
 						<ids:simpleValue>pipe diameter</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<xs:restriction base="xs:decimal">
+						<xs:restriction base="xs:double">
 							<xs:minInclusive value="0.02"/>
 							<xs:maxInclusive value="0.02"/>
 						</xs:restriction>
@@ -130,7 +130,7 @@
 						<ids:simpleValue>outside diameter_general</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<xs:restriction base="xs:decimal">
+						<xs:restriction base="xs:double">
 							<xs:minInclusive value="0.02"/>
 							<xs:maxInclusive value="0.06"/>
 						</xs:restriction>

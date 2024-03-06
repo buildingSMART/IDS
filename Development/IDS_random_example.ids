@@ -81,7 +81,7 @@
 						<ids:simpleValue>OverallWidth</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<xs:restriction>
+						<xs:restriction base="xs:double">
 							<xs:minInclusive value="0"/>
 							<xs:maxInclusive value="120"/>
 						</xs:restriction>

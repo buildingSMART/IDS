@@ -25,7 +25,7 @@
 						<ids:simpleValue>medium</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<xs:restriction>
+						<xs:restriction base="xs:string">
 							<xs:enumeration value="cold water"/>
 							<xs:enumeration value="something else"/>
 						</xs:restriction>
@@ -39,7 +39,7 @@
 						<ids:simpleValue>material</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<xs:restriction>
+						<xs:restriction base="xs:string">
 							<xs:enumeration value="chrome steel 1.4401"/>
 							<xs:enumeration value="something else"/>
 						</xs:restriction>
@@ -53,7 +53,7 @@
 						<ids:simpleValue>pipe diameter</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<xs:restriction base="xs:decimal">
+						<xs:restriction base="xs:double">
 							<xs:minInclusive value="0.02"/>
 							<xs:maxInclusive value="0.06"/>
 						</xs:restriction>
@@ -67,7 +67,7 @@
 						<ids:simpleValue>component designation</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<xs:restriction>
+						<xs:restriction base="xs:string">
 							<xs:enumeration value="8000.18"/>
 							<xs:enumeration value="something else"/>
 						</xs:restriction>
@@ -81,7 +81,7 @@
 						<ids:simpleValue>numbering system</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<xs:restriction>
+						<xs:restriction base="xs:string">
 							<xs:enumeration value="first option"/>
 							<xs:enumeration value="something else"/>
 						</xs:restriction>
@@ -95,7 +95,7 @@
 						<ids:simpleValue>Pipe system</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<xs:restriction>
+						<xs:restriction base="xs:string">
 							<xs:enumeration value="first option"/>
 							<xs:enumeration value="something else"/>
 						</xs:restriction>
@@ -125,7 +125,7 @@
 						<ids:simpleValue>Manufacturer</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<xs:restriction>
+						<xs:restriction base="xs:string">
 							<xs:enumeration value="Manufacturer 1"/>
 							<xs:enumeration value="Manufacturer 2"/>
 						</xs:restriction>
@@ -139,7 +139,7 @@
 						<ids:simpleValue>medium</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<xs:restriction>
+						<xs:restriction base="xs:string">
 							<xs:enumeration value="cold water"/>
 							<xs:enumeration value="something else"/>
 						</xs:restriction>
@@ -153,7 +153,7 @@
 						<ids:simpleValue>material</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<xs:restriction>
+						<xs:restriction base="xs:string">
 							<xs:enumeration value="chrome steel 1.4401"/>
 							<xs:enumeration value="something else"/>
 						</xs:restriction>
@@ -167,7 +167,7 @@
 						<ids:simpleValue>pipe diameter</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<xs:restriction base="xs:decimal">
+						<xs:restriction base="xs:double">
 							<xs:minInclusive value="0.02"/>
 							<xs:maxInclusive value="0.06"/>
 						</xs:restriction>
@@ -181,7 +181,7 @@
 						<ids:simpleValue>component designation</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<xs:restriction>
+						<xs:restriction base="xs:string">
 							<xs:enumeration value="arc 45°"/>
 							<xs:enumeration value="something else"/>
 						</xs:restriction>
@@ -225,7 +225,7 @@
 						<ids:simpleValue>outside diameter_general</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<xs:restriction base="xs:decimal">
+						<xs:restriction base="xs:double">
 							<xs:minInclusive value="0.02"/>
 							<xs:maxInclusive value="0.06"/>
 						</xs:restriction>

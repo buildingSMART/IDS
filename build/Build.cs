@@ -178,13 +178,13 @@ class Build : NukeBuild
             // we are omitting tests on the content of the Documentation/testcases folder, 
             // because they include IDSs that intentionally contain errors
             //
-            // todo: once stable, this could be improved to omit contens based on failure patter name
+            // todo: once stable, this could be improved to omit contents based on failure patter name
             // todo: once stable, constrained on expected auditing failures on the "fail-" cases should be added
             var schemaFile = RootDirectory / "Development" / "ids.xsd";
             var inputFolder = RootDirectory / "Documentation" / "testcases";
-            var arguments = $"audit \"{inputFolder}\" --omitContent -x \"{schemaFile}\"";
+            var arguments = $"audit \"{inputFolder}\" --omitContentAuditPattern \"\\\\invalid-\" -x \"{schemaFile}\"";
             IdsTool(arguments, workingDirectory: IdsToolPath);
-        });
+        }); 
 
     /// <summary>
     /// Perform all quality assurance of published IDS files; this is the one invoked by default
