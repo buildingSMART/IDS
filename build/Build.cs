@@ -182,7 +182,7 @@ class Build : NukeBuild
             // todo: once stable, constrained on expected auditing failures on the "fail-" cases should be added
             var schemaFile = RootDirectory / "Development" / "ids.xsd";
             var inputFolder = RootDirectory / "Documentation" / "testcases";
-            var arguments = $"audit \"{inputFolder}\" --omitContentAuditPattern \"\\\\invalid-\" -x \"{schemaFile}\"";
+            var arguments = $"audit \"{inputFolder}\" --omitContentAuditPattern \"[\\\\|/]invalid-\" -x \"{schemaFile}\"";
             IdsTool(arguments, workingDirectory: IdsToolPath);
         }); 
 
