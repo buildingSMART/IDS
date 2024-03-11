@@ -48,7 +48,7 @@
 	</xsl:template>
 	
 	<!-- IDS-0.9.6: remove the min- and maxOccurs from the attribute facet -->
-    <xsl:template match="attribute/@minOccurs" />
-    <xsl:template match="attribute/@maxOccurs" />
+    <xsl:template match="ids:attribute/@minOccurs" />
+    <xsl:template match="ids:attribute/@maxOccurs" />
     
 </xsl:stylesheet>
