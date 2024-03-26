@@ -22,7 +22,7 @@
 						<ids:simpleValue>ObjectType</ids:simpleValue>
 					</ids:name>
 					<ids:value>
-						<xs:restriction>
+						<xs:restriction base="xs:string">
 							<xs:enumeration value="Assembly"/>
 							<xs:enumeration value="Ambulatory Health Care"/>
 							<xs:enumeration value="Educational"/>
@@ -190,7 +190,7 @@
 						<ids:simpleValue>PredefinedType</ids:simpleValue>
 					</ids:name>
 					<ids:value>
-						<xs:restriction>
+						<xs:restriction base="xs:string">
 							<xs:enumeration value="CONSTRUCTION"/>
 							<xs:enumeration value="FIRESAFETY"/>
 							<xs:enumeration value="LIGHTING"/>
@@ -885,7 +885,7 @@
 						<ids:simpleValue>OperationType</ids:simpleValue>
 					</ids:name>
 					<ids:value>
-						<xs:restriction>
+						<xs:restriction base="xs:string">
 							<xs:enumeration value="LIMIT_RATE_INBOUND"/>
 							<xs:enumeration value="LIMIT_RATE_OUTBOUND"/>
 							<xs:enumeration value="NOTDEFINED"/>

@@ -115,6 +115,24 @@ class Program
 				buffer.AppendLine(line);
 			}
 		}
+		// extra ifcs
+		foreach (var item in testCasesFolder.GetFiles("*.ifc", SearchOption.AllDirectories))
+		{
+			if (!expectedIfcFileNames.Contains(item.FullName))
+			{
+				Message($"Extra IFC: - {item.FullName}", ConsoleColor.DarkYellow);
+				var invalidFileName = item.FullName.Replace("fail-", "invalid-");
+				if (missingIfcFileNames.Contains(invalidFileName))
+				{
+					File.Move(item.FullName, invalidFileName);
+					// Console.WriteLine("A matching invalid IFC is required, should you rename this?");
+				}
+				//else if (allIfcFound)
+				//{
+				//	// item.Delete();
+				//}
+			}
+		}
 
 		// extra IDSs
 		foreach (var item in allIDSs.Except(newIDSs))
@@ -125,24 +143,7 @@ class Program
 			Console.WriteLine($"Extra IDS report generated: {reportFileName}");
 		}
 
-		// extra ifcs
-		foreach (var item in testCasesFolder.GetFiles("*.ifc", SearchOption.AllDirectories))
-		{
-			if (!expectedIfcFileNames.Contains(item.FullName))
-			{
-				Message($"Extra IFC: - {item.FullName}", ConsoleColor.DarkYellow);
-				var invalidFileName = item.FullName.Replace("fail-", "invalid-");
-				if (missingIfcFileNames.Contains(invalidFileName))
-				{
-					// File.Move(item.FullName, invalidFileName);
-					Console.WriteLine("A matching invalid IFC is required, should you rename this?");
-				}
-				//else if (allIfcFound)
-				//{
-				//	// item.Delete();
-				//}
-			}
-		}
+		
 		if (allIfcFound)
 		{
 			Message("All scripting IFC files found", ConsoleColor.Green);

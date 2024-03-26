@@ -19,7 +19,7 @@
             <simpleValue>RefractionIndex</simpleValue>
           </name>
           <value>
-            <xs:restriction base="xs:decimal">
+            <xs:restriction base="xs:double">
               <xs:minInclusive value="42" />
               <xs:maxInclusive value="42" />
             </xs:restriction>

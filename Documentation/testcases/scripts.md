@@ -245,15 +245,16 @@ Attribute: ''IsMilestone'',''FALSE''
 
 ``` ids attribute/fail-dates_are_treated_as_strings_1_2.ids
 Dates are treated as strings 1/2
+IFC4
 Entity: ''IFCCLASSIFICATION''
 Requirements:
 Attribute: ''EditionDate'',''2022-01-01''
 ```
 
-### Dates are treated as strings 1/2
+### Dates are treated as strings 2/2
 
-``` ids attribute/pass-dates_are_treated_as_strings_1_2.ids
-Dates are treated as strings 1/2
+``` ids attribute/pass-dates_are_treated_as_strings_2_2.ids
+Dates are treated as strings 2/2
 IFC4
 Entity: ''IFCCLASSIFICATION''
 Requirements:
@@ -510,7 +511,7 @@ Attribute: Pattern(''NumberOfRiser(s)?''),''42.3''
 Strict numeric checking may be done with a bounds restriction
 Entity: ''IFCSURFACESTYLEREFRACTION''
 Requirements:
-Attribute: ''RefractionIndex'',xs:decimal MinInclusive(''42'') MaxInclusive(''42'')
+Attribute: ''RefractionIndex'',xs:double MinInclusive(''42'') MaxInclusive(''42'')
 ```
 
 ### Typecast checking may also occur within enumeration restrictions
@@ -529,7 +530,7 @@ Attribute: ''RefractionIndex'',xs:double Enumeration(''42'',''43'')
 
 ### Value checks always fail for lists
 
-``` ids attribute/fail-value_checks_always_fail_for_lists.ids
+``` ids attribute/invalid-value_checks_always_fail_for_lists.ids
 Value checks always fail for lists
 Entity: ''IFCCARTESIANPOINT''
 Requirements:
@@ -538,7 +539,7 @@ Attribute: ''Coordinates'',''Foobar''
 
 ### Value checks always fail for objects
 
-``` ids attribute/fail-value_checks_always_fail_for_objects.ids
+``` ids attribute/invalid-value_checks_always_fail_for_objects.ids
 Value checks always fail for objects
 IFC4
 Entity: ''IFCTASK''
@@ -548,7 +549,7 @@ Attribute: ''TaskTime'',''Foobar''
 
 ### Value checks always fail for selects
 
-``` ids attribute/fail-value_checks_always_fail_for_selects.ids
+``` ids attribute/invalid-value_checks_always_fail_for_selects.ids
 Value checks always fail for selects
 Entity: ''IFCSURFACESTYLERENDERING''
 Requirements:
@@ -2449,7 +2450,7 @@ Property: ''Pset_WallCommon'',''FireRating'',IFCLABEL,Pattern(''(-|[0-9]{2,3})\/
 A bound can be inclusive 1/3
 Entity: ''IFCSURFACESTYLEREFRACTION''
 Requirements:
-Attribute: ''RefractionIndex'',xs:integer MinExclusive(''0'') MaxExclusive(''10'')
+Attribute: ''RefractionIndex'',xs:double MinExclusive(''0'') MaxExclusive(''10'')
 ```
 
 ### A bound can be inclusive 1/4
@@ -2458,7 +2459,7 @@ Attribute: ''RefractionIndex'',xs:integer MinExclusive(''0'') MaxExclusive(''10'
 A bound can be inclusive 1/4
 Entity: ''IFCSURFACESTYLEREFRACTION''
 Requirements:
-Attribute: ''RefractionIndex'',xs:integer MinInclusive(''0'') MaxInclusive(''10'')
+Attribute: ''RefractionIndex'',xs:double MinInclusive(''0'') MaxInclusive(''10'')
 ```
 
 ### A bound can be inclusive 2/3
@@ -2467,7 +2468,7 @@ Attribute: ''RefractionIndex'',xs:integer MinInclusive(''0'') MaxInclusive(''10'
 A bound can be inclusive 2/3
 Entity: ''IFCSURFACESTYLEREFRACTION''
 Requirements:
-Attribute: ''RefractionIndex'',xs:integer MinExclusive(''0'') MaxExclusive(''10'')
+Attribute: ''RefractionIndex'',xs:double MinExclusive(''0'') MaxExclusive(''10'')
 ```
 
 ### A bound can be inclusive 2/4
@@ -2476,7 +2477,7 @@ Attribute: ''RefractionIndex'',xs:integer MinExclusive(''0'') MaxExclusive(''10'
 A bound can be inclusive 2/4
 Entity: ''IFCSURFACESTYLEREFRACTION''
 Requirements:
-Attribute: ''RefractionIndex'',xs:integer MinInclusive(''0'') MaxInclusive(''10'')
+Attribute: ''RefractionIndex'',xs:double MinInclusive(''0'') MaxInclusive(''10'')
 ```
 
 ### A bound can be inclusive 3/3
@@ -2485,7 +2486,7 @@ Attribute: ''RefractionIndex'',xs:integer MinInclusive(''0'') MaxInclusive(''10'
 A bound can be inclusive 3/3
 Entity: ''IFCSURFACESTYLEREFRACTION''
 Requirements:
-Attribute: ''RefractionIndex'',xs:integer MinExclusive(''0'') MaxExclusive(''10'')
+Attribute: ''RefractionIndex'',xs:double MinExclusive(''0'') MaxExclusive(''10'')
 ```
 
 ### A bound can be inclusive 3/4
@@ -2494,7 +2495,7 @@ Attribute: ''RefractionIndex'',xs:integer MinExclusive(''0'') MaxExclusive(''10'
 A bound can be inclusive 3/4
 Entity: ''IFCSURFACESTYLEREFRACTION''
 Requirements:
-Attribute: ''RefractionIndex'',xs:integer MinInclusive(''0'') MaxInclusive(''10'')
+Attribute: ''RefractionIndex'',xs:double MinInclusive(''0'') MaxInclusive(''10'')
 ```
 
 ### A bound can be inclusive 4/4
@@ -2503,7 +2504,7 @@ Attribute: ''RefractionIndex'',xs:integer MinInclusive(''0'') MaxInclusive(''10'
 A bound can be inclusive 4/4
 Entity: ''IFCSURFACESTYLEREFRACTION''
 Requirements:
-Attribute: ''RefractionIndex'',xs:integer MinInclusive(''0'') MaxInclusive(''10'')
+Attribute: ''RefractionIndex'',xs:double MinInclusive(''0'') MaxInclusive(''10'')
 ```
 
 ### An enumeration matches case sensitively 1/3
@@ -2596,10 +2597,10 @@ Requirements:
 Attribute: ''Name'',MinLength(''2'') MaxLength(''3'')
 ```
 
-### Patterns always fail on any number
+### Patterns always invalid on any number
 
-``` ids restriction/fail-patterns_always_fail_on_any_number.ids
-Patterns always fail on any number
+``` ids restriction/invalid-patterns_always_fail_on_any_number.ids
+Patterns always invalid on any number
 Optional
 Entity: ''IFCSURFACESTYLEREFRACTION''
 Requirements:
@@ -2608,7 +2609,7 @@ Attribute: ''RefractionIndex'',Pattern(''.*'')
 
 ### Patterns only work on strings and nothing else
 
-``` ids restriction/fail-patterns_only_work_on_strings_and_nothing_else.ids
+``` ids restriction/invalid-patterns_only_work_on_strings_and_nothing_else.ids
 Patterns only work on strings and nothing else
 Entity: ''IFCSURFACESTYLEREFRACTION''
 Requirements:
