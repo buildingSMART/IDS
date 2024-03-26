@@ -27,7 +27,7 @@
 						<ids:simpleValue>Name</ids:simpleValue>
 					</ids:name>
 					<ids:value>
-						<xs:restriction>
+						<xs:restriction base="xs:string">
 							<xs:enumeration value="first allowed value for room"/>
 							<xs:enumeration value="second allowed value for room"/>
 							<xs:enumeration value="third allowed value for room"/>
