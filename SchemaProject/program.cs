@@ -124,8 +124,8 @@ class Program
 				var invalidFileName = item.FullName.Replace("fail-", "invalid-");
 				if (missingIfcFileNames.Contains(invalidFileName))
 				{
+					Console.WriteLine("Suitable matching invalid IFC is found, it has been renamed.");
 					File.Move(item.FullName, invalidFileName);
-					// Console.WriteLine("A matching invalid IFC is required, should you rename this?");
 				}
 				//else if (allIfcFound)
 				//{

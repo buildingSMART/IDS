@@ -559,7 +559,7 @@ namespace SchemaProject.DocAutomation
             {
                 writer.WriteLine(item);
             }
-            if (RequirementFacetStrings != null)
+            if (RequirementFacetStrings != null && RequirementFacetStrings.Any())
             {
                 writer.WriteLine("Requirements:");
                 foreach (var item in RequirementFacetStrings)

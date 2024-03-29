@@ -1148,11 +1148,10 @@ Attribute: ''Name'',''Waldo''
 ### Prohibited specifications fails if the applicability matches
 
 ``` ids ids/fail-prohibited_specifications_fails_if_the_applicability_matches.ids
-Prohibited specifications fails if applicability matches
+Prohibited specifications fails if the applicability matches
 Prohibited
 IFC2X3
 Entity: ''IFCWALL''
-Requirements:
 ```
 
 ### Prohibited specifications passes if the applicability does not matches
@@ -1162,7 +1161,6 @@ Prohibited specifications passes if the applicability does not matches
 Prohibited
 IFC2X3
 Entity: ''IFCWINDOW''
-Requirements:
 ```
 
 ### Required specifications need at least one applicable entity (1/2)
