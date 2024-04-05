@@ -612,6 +612,15 @@ Requirements:
 Classification: Prohibited,Pattern(''\w+'')
 ```
 
+### A prohibited classification reference returns the opposite of a required facet
+
+``` ids classification/fail-a_prohibited_classification_reference_returns_the_opposite_of_a_required_facet.ids
+A prohibited classification reference returns the opposite of a required facet
+Entity: ''IFCSLAB''
+Requirements:
+Classification: Prohibited,''Foobar'',''1''
+```
+
 ### A required facet checks all parameters as normal
 
 ``` ids classification/pass-a_required_facet_checks_all_parameters_as_normal.ids
@@ -619,6 +628,15 @@ A required facet checks all parameters as normal
 Entity: ''IFCSLAB''
 Requirements:
 Classification: Pattern(''\w+'')
+```
+
+### A required classification system fails if no match
+
+``` ids classification/fail-a_required_classification_system_fails_if_no_match.ids
+A required classification system fails if no match
+Entity: ''IFCSLAB''
+Requirements:
+Classification: ''Foobar1''
 ```
 
 ### An optional classification value passes if specified
@@ -1125,6 +1143,24 @@ IFC2X3
 Entity: ''IFCWALL''
 Requirements:
 Attribute: ''Name'',''Waldo''
+```
+
+### Prohibited specifications fails if the applicability matches
+
+``` ids ids/fail-prohibited_specifications_fails_if_the_applicability_matches.ids
+Prohibited specifications fails if the applicability matches
+Prohibited
+IFC2X3
+Entity: ''IFCWALL''
+```
+
+### Prohibited specifications passes if the applicability does not matches
+
+``` ids ids/pass-prohibited_specifications_passes_if_the_applicability_does_not_matches.ids
+Prohibited specifications passes if the applicability does not matches
+Prohibited
+IFC2X3
+Entity: ''IFCWINDOW''
 ```
 
 ### Required specifications need at least one applicable entity (1/2)
