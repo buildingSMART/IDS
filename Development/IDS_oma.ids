@@ -940,32 +940,6 @@
 						<ids:simpleValue>Title</ids:simpleValue>
 					</ids:baseName>
 				</ids:property>
-				<ids:property dataType="IFCLENGTHMEASURE" instructions="Derived height of the sign">
-					<ids:propertySet>
-						<ids:simpleValue>Qto_SpaceBaseQuantities</ids:simpleValue>
-					</ids:propertySet>
-					<ids:baseName>
-						<ids:simpleValue>Height</ids:simpleValue>
-					</ids:baseName>
-					<ids:value>
-						<xs:restriction base="xs:double">
-							<xs:minExclusive value="0"/>
-						</xs:restriction>
-					</ids:value>
-				</ids:property>
-				<ids:property dataType="IFCLENGTHMEASURE" instructions="Derived width of the sign">
-					<ids:propertySet>
-						<ids:simpleValue>Qto_SpaceBaseQuantities</ids:simpleValue>
-					</ids:propertySet>
-					<ids:baseName>
-						<ids:simpleValue>Width</ids:simpleValue>
-					</ids:baseName>
-					<ids:value>
-						<xs:restriction base="xs:double">
-							<xs:minExclusive value="0"/>
-						</xs:restriction>
-					</ids:value>
-				</ids:property>
 				<ids:property dataType="IFCLENGTHMEASURE" instructions="Vertical position of the sign relative to given storey">
 					<ids:propertySet>
 						<ids:simpleValue>CPset_OMA_Signage</ids:simpleValue>
