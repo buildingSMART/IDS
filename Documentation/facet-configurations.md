@@ -258,9 +258,9 @@ APPLICABILITY:
 - Entity: A relation exists to the type of entity required (traversing all valid relationships)
 - Entity/Relation: A relation exists to the type of entity required (traversing only the defined relationship type)
 
-## Questions
+# Questions
 
-### restriction clone
+## restriction clone
 
 Spinning our own `xs:restriction` alternative, would remove some issues with basetype and embedded xml entities
 

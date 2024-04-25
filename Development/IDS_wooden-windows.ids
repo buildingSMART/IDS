@@ -86,7 +86,7 @@
 				</ids:property>
 				<ids:classification>
 					<ids:value>
-						<xs:restriction>
+						<xs:restriction base="xs:string">
 							<xs:annotation>
 								<xs:documentation>Value should be two numbers, a dot, and two numbers again. First number must be a 3, second number must be a one or a two. Valid examples are '31.00', '32.00', '31.23', '32.45'. Invalid examples are '33.32', '31.453', '32.3', '32.', etc.</xs:documentation>
 							</xs:annotation>
@@ -238,7 +238,7 @@
 				</ids:entity>
 				<ids:material>
 					<ids:value>
-						<xs:restriction>
+						<xs:restriction base="xs:string">
 							<xs:annotation>
 								<xs:documentation>The value should contain the word 'glas'. It doesnt't matter what is in front or behind 'glass'. Valid examples are 'xglass', 'x glass x', 'xglassccc', 'glas', 'glass', 'glas extra hard'.</xs:documentation>
 							</xs:annotation>

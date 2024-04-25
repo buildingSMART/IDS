@@ -250,7 +250,7 @@
             <ids:requirements>
                 <ids:classification>
                     <ids:value>
-                        <xs:restriction>
+                        <xs:restriction base="xs:string">
                             <xs:enumeration value="11.10" />
                             <xs:enumeration value="11.11" />
                             <xs:enumeration value="11.12" />

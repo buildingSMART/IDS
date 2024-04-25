@@ -107,7 +107,7 @@
 			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
-						<xs:restriction>
+						<xs:restriction base="xs:string">
 							<xs:annotation>
 								<xs:documentation>This applies to either 'IFCFLOWFITTING' ór 'IFCFLOWSEGMENT'</xs:documentation>
 							</xs:annotation>

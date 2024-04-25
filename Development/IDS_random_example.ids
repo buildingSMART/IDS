@@ -25,7 +25,7 @@
 			<ids:requirements>
 				<ids:property dataType="IFCLABEL">
 					<ids:propertySet>
-						<xs:restriction>
+						<xs:restriction base="xs:string">
 							<xs:annotation>
 								<xs:documentation>String should start with 'anas' but can have anything behind it (including nothing). For example 'anas example', 'anasabc', 'anas', 'anas demo', etc.</xs:documentation>
 							</xs:annotation>

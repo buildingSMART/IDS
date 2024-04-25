@@ -57,7 +57,7 @@
 			<ids:applicability minOccurs="0" maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
-						<xs:restriction>
+						<xs:restriction base="xs:string">
 							<xs:annotation>
 								<xs:documentation>This goed for either 'IFCWALL' ór 'IFCWALLSTANDARDCASE'</xs:documentation>
 							</xs:annotation>
