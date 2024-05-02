@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ids xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/0.9.7/ids.xsd" xmlns="http://standards.buildingsmart.org/IDS">
   <info>
-    <title>The container may be indirect</title>
+    <title>The containment can be indirect 1/2</title>
     <description>Generated via code automation in the Ids Repository on github.</description>
   </info>
   <specifications>
-    <specification name="The container may be indirect" ifcVersion="IFC2X3 IFC4">
+    <specification name="The containment can be indirect 1/2" ifcVersion="IFC2X3 IFC4">
       <applicability maxOccurs="unbounded">
         <entity>
           <name>
@@ -14,10 +14,10 @@
         </entity>
       </applicability>
       <requirements>
-        <partOf relation="IFCRELCONTAINEDINSPATIALSTRUCTURE">
+        <partOf relation="IFCRELAGGREGATES">
           <entity>
             <name>
-              <simpleValue>IFCSPACE</simpleValue>
+              <simpleValue>IFCBUILDING</simpleValue>
             </name>
           </entity>
         </partOf>
