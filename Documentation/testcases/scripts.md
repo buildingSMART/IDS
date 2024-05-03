@@ -2480,10 +2480,10 @@ Property: ''Pset_WallCommon'',''FireRating'',IFCLABEL,Pattern(''(-|[0-9]{2,3})\/
 
 ## restriction
 
-### A bound can be inclusive 1/3
+### A bound can be exclusive 1/3
 
-``` ids restriction/fail-a_bound_can_be_inclusive_1_3.ids
-A bound can be inclusive 1/3
+``` ids restriction/fail-a_bound_can_be_exclusive_1_3.ids
+A bound can be exclusive 1/3
 Entity: ''IFCSURFACESTYLEREFRACTION''
 Requirements:
 Attribute: ''RefractionIndex'',xs:double MinExclusive(''0'') MaxExclusive(''10'')
@@ -2498,10 +2498,10 @@ Requirements:
 Attribute: ''RefractionIndex'',xs:double MinInclusive(''0'') MaxInclusive(''10'')
 ```
 
-### A bound can be inclusive 2/3
+### A bound can be exclusive 2/3
 
-``` ids restriction/pass-a_bound_can_be_inclusive_2_3.ids
-A bound can be inclusive 2/3
+``` ids restriction/pass-a_bound_can_be_exclusive_2_3.ids
+A bound can be exclusive 2/3
 Entity: ''IFCSURFACESTYLEREFRACTION''
 Requirements:
 Attribute: ''RefractionIndex'',xs:double MinExclusive(''0'') MaxExclusive(''10'')
@@ -2516,10 +2516,10 @@ Requirements:
 Attribute: ''RefractionIndex'',xs:double MinInclusive(''0'') MaxInclusive(''10'')
 ```
 
-### A bound can be inclusive 3/3
+### A bound can be exclusive 3/3
 
-``` ids restriction/fail-a_bound_can_be_inclusive_3_3.ids
-A bound can be inclusive 3/3
+``` ids restriction/fail-a_bound_can_be_exclusive_3_3.ids
+A bound can be exclusive 3/3
 Entity: ''IFCSURFACESTYLEREFRACTION''
 Requirements:
 Attribute: ''RefractionIndex'',xs:double MinExclusive(''0'') MaxExclusive(''10'')
