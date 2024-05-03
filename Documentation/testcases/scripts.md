@@ -1704,40 +1704,13 @@ Requirements:
 PartOf: Pattern(''.*''),IFCRELCONTAINEDINSPATIALSTRUCTURE
 ```
 
-### The container must be related using specified relation 1/2
+### The container may be indirect
 
-``` ids partof/pass-the_container_must_be_related_using_specified_relation_1_2.ids
-The container must be related using specified relation 1/2
+``` ids partof/pass-the_container_may_be_indirect.ids
+The container may be indirect
 Entity: ''IFCBEAM''
 Requirements:
 PartOf: ''IFCSPACE'',IFCRELCONTAINEDINSPATIALSTRUCTURE
-```
-
-### The container must be related using specified relation 2/2
-
-``` ids partof/fail-the_container_must_be_related_using_specified_relation_2_2.ids
-The container must be related using specified relation 2/2
-Entity: ''IFCBEAM''
-Requirements:
-PartOf: ''IFCSPACE'',IFCRELCONTAINEDINSPATIALSTRUCTURE
-```
-
-### The containment can be indirect 1/2
-
-``` ids partof/pass-the_containment_can_be_indirect_1_2.ids
-The containment can be indirect 1/2
-Entity: ''IFCBEAM''
-Requirements:
-PartOf: ''IFCBUILDING'',IFCRELAGGREGATES
-```
-
-### The containment can be indirect 2/2
-
-``` ids partof/fail-the_containment_can_be_indirect_2_2.ids
-The containment can be indirect 2/2
-Entity: ''IFCBEAM''
-Requirements:
-PartOf: ''IFCBUILDING'',IFCRELAGGREGATES
 ```
 
 ### The container predefined type must match exactly 1/2
