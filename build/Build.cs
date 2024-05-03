@@ -10,7 +10,7 @@ using System.Reflection.Metadata;
 class Build : NukeBuild
 {
     public static int Main() => Execute<Build>(x => x.AuditAllIdsFiles);
-
+    
     [Parameter("Configuration to build - Default is 'Debug' (local) or 'Release' (server)")]
     private readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;
 
@@ -184,15 +184,53 @@ class Build : NukeBuild
             var inputFolder = RootDirectory / "Documentation" / "testcases";
             var arguments = $"audit \"{inputFolder}\" --omitContentAuditPattern \"[\\\\|/]invalid-\" -x \"{schemaFile}\"";
             IdsTool(arguments, workingDirectory: IdsToolPath);
-        }); 
+        });
 
-    /// <summary>
-    /// Perform all quality assurance of published IDS files; this is the one invoked by default
-    /// </summary>
-    Target AuditAllIdsFiles => _ => _
+	/// <summary>
+	/// Audits the validity of Documentation/testcases folder in the repository, using ids-tool.
+	/// The tool is deployed by the annotated <see cref="IdsTool"/>.
+	/// The schema is loaded from the repository to ensure internal coherence.
+	/// </summary>
+	Target TestAccurateInvalid => _ => _
+		.AssuredAfterFailure()
+		.Executes(() =>
+		{
+			// we are omitting tests on the content of the Documentation/testcases folder, 
+			// because they include IDSs that intentionally contain errors
+			//
+			// todo: once stable, this could be improved to omit contents based on failure patter name
+			// todo: once stable, constrained on expected auditing failures on the "fail-" cases should be added
+			var schemaFile = RootDirectory / "Development" / "ids.xsd";
+			var inputFolder = RootDirectory / "Documentation" / "testcases";
+
+            DirectoryInfo d = new DirectoryInfo(inputFolder);
+            foreach (var invalidFile in d.GetFiles("invalid-*.ids", SearchOption.AllDirectories))
+            {
+                Console.WriteLine(invalidFile.FullName); 
+				var arguments = $"audit \"{invalidFile}\" -x \"{schemaFile}\"";
+                try
+                {
+					var t = IdsTool(arguments, workingDirectory: IdsToolPath);
+				}
+                catch (ProcessException ex)
+                {
+                    if (ex.ExitCode != 16)
+                        throw new Exception("Unexpected exit code");
+                    
+                }
+			}
+
+
+		});
+
+	/// <summary>
+	/// Perform all quality assurance of published IDS files; this is the one invoked by default
+	/// </summary>
+	Target AuditAllIdsFiles => _ => _
         .AssuredAfterFailure()
         .DependsOn(AuditDocTestCases)
         .DependsOn(AuditDevelopment)
+        .DependsOn(TestAccurateInvalid)
         .Executes(() =>
         {
             Console.WriteLine("This is an utility target that launches all available IDS auditing targets.");

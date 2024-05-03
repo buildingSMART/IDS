@@ -77,7 +77,8 @@
               "AuditDocTestCases",
               "CleanSchemaProject",
               "CompileSchemaProject",
-              "CreateTestCases"
+              "CreateTestCases",
+              "TestAccurateInvalid"
             ]
           }
         },
@@ -92,7 +93,8 @@
               "AuditDocTestCases",
               "CleanSchemaProject",
               "CompileSchemaProject",
-              "CreateTestCases"
+              "CreateTestCases",
+              "TestAccurateInvalid"
             ]
           }
         },
