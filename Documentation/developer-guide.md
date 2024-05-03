@@ -72,7 +72,8 @@ To help you get started with development, here is a directory of IDS libraries t
 
 | Language | License           | Library                                      | Notes                                                               |
 | -------- | ----------------- | -------------------------------------------- | ------------------------------------------------------------------- |
-| C#       | CDDL              | [XBim](https://github.com/CBenghi/Xbim.Xids) | A verification library is also available, with a commercial license |
+| C#/.NET  | CDDL              | [xbim Xids](https://github.com/CBenghi/Xbim.Xids) | A library to read, write data in IDS files                     |
+| C#/.NET  | AGPL-3.0-only / commercial | [xbim Toolkit IDS Validator](https://github.com/xBimTeam/Xbim.IDS.Validator) | A complete IDS verification library for IFC models  |
 | Python   | LGPL-3.0-or-later | [IfcOpenShell](https://ifcopenshell.org/)    |                                                                     |
 | ?        | ?                 | ODA?                                         |                                                                     |
 
