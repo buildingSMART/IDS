@@ -2056,10 +2056,10 @@ Requirements:
 Property: ''Pset_WallCommon'',''Status'',IFCLABEL,''DEMOLISH''
 ```
 
-### Any matching value in an enumerated property will pass 3/3
+### No matching value in an enumerated property will fail 3/3
 
-``` ids property/fail-any_matching_value_in_an_enumerated_property_will_pass_3_3.ids
-Any matching value in an enumerated property will pass 3/3
+``` ids property/fail-no_matching_value_in_an_enumerated_property_will_fail_3_3.ids
+No matching value in an enumerated property will fail 3/3
 IFC4
 Entity: ''IFCWALL''
 Requirements:
