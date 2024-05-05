@@ -25,10 +25,10 @@ Following naming conventions and accurately describing elements are critical to 
 
 ## Parameters
 
-| Parameter | Required | Restrictions Allowed | Allowed Values                                          | Meaning                                                                                                                                                                                                                                                                                                                                                   |
-| --------- | -------- | -------------------- | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Name**  | ✔️     | ✔️                 | A valid attribute name from the IFC schema.             | The attribute must exist and have a non-empty value.                                                                                                                                                                                                                                                                                                      |
-| **Value** | ❌       | ✔️                 | Any value appropriate to the data type of the attribute | The value of the attribute must match exactly. To specify numbers, you must use a dot as the decimal separator, and not use a thousands separator (e.g. `4.2` is valid, but `1.234,5` is invalid). Scientific notation is allowed (e.g. `1e3` to represent `1000`). To specify true or false, you must specify `TRUE` or `FALSE` as uppercase characters. |
+| Parameter | Required | Restrictions Allowed | Allowed Values                                          | Meaning                                                                                                                |
+| --------- | -------- | -------------------- | ------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| **Name**  | ✔️     | ✔️                 | A valid attribute name from the IFC schema.             | The attribute must exist and have a non-empty value.                                                                   |
+| **Value** | ❌       | ✔️                 | Any value appropriate to the data type of the attribute | The value of the attribute must match, see [DataType documentation](DataTypes.md#xml-base-types) for more information. |
 
 ## Examples
 
