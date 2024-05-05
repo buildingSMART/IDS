@@ -2066,31 +2066,31 @@ Requirements:
 Property: ''Pset_WallCommon'',''Status'',IFCLABEL,''NEW''
 ```
 
-### Booleans must be specified as uppercase strings 1/3
+### Booleans must be specified as lowercase strings 1/3
 
-``` ids property/fail-booleans_must_be_specified_as_uppercase_strings_1_3.ids
-Booleans must be specified as uppercase strings 1/3
+``` ids property/fail-booleans_must_be_specified_as_lowercase_strings_1_3.ids
+Booleans must be specified as lowercase strings 1/3
 Entity: ''IFCWALL''
 Requirements:
-Property: ''Foo_Bar'',''Foo'',IFCBOOLEAN,''TRUE''
+Property: ''Foo_Bar'',''Foo'',IFCBOOLEAN,''true''
 ```
 
-### Booleans must be specified as uppercase strings 2/3
+### Booleans must be specified as lowercase strings 2/3
 
-``` ids property/pass-booleans_must_be_specified_as_uppercase_strings_2_3.ids
-Booleans must be specified as uppercase strings 2/3
+``` ids property/pass-booleans_must_be_specified_as_lowercase_strings_2_3.ids
+Booleans must be specified as lowercase strings 2/3
+Entity: ''IFCWALL''
+Requirements:
+Property: ''Foo_Bar'',''Foo'',IFCBOOLEAN,''false''
+```
+
+### Booleans must be specified as lowercase strings 3/3
+
+``` ids property/invalid-booleans_must_be_specified_as_lowercase_strings_3_3.ids
+Booleans must be specified as lowercase strings 3/3
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCBOOLEAN,''FALSE''
-```
-
-### Booleans must be specified as uppercase strings 3/3
-
-``` ids property/fail-booleans_must_be_specified_as_uppercase_strings_3_3.ids
-Booleans must be specified as uppercase strings 3/3
-Entity: ''IFCWALL''
-Requirements:
-Property: ''Foo_Bar'',''Foo'',IFCBOOLEAN,''False''
 ```
 
 ### Complex properties are not supported 1/2
