@@ -214,31 +214,31 @@ Requirements:
 Attribute: ''Name''
 ```
 
-### Booleans must be specified as uppercase strings 1/3
+### Booleans must be specified as lowercase strings 1/3
 
-``` ids attribute/fail-booleans_must_be_specified_as_uppercase_strings_1_3.ids
-Booleans must be specified as uppercase strings 1/3
+``` ids attribute/fail-booleans_must_be_specified_as_lowercase_strings_1_3.ids
+Booleans must be specified as lowercase strings 1/3
 Entity: ''IFCTASK''
 Requirements:
-Attribute: ''IsMilestone'',''TRUE''
+Attribute: ''IsMilestone'',''true''
 ```
 
-### Booleans must be specified as uppercase strings 2/3
+### Booleans must be specified as lowercase strings 2/3
 
-``` ids attribute/fail-booleans_must_be_specified_as_uppercase_strings_2_3.ids
-Booleans must be specified as uppercase strings 2/3
-Entity: ''IFCTASK''
-Requirements:
-Attribute: ''IsMilestone'',''False''
-```
-
-### Booleans must be specified as uppercase strings 2/3
-
-``` ids attribute/pass-booleans_must_be_specified_as_uppercase_strings_2_3.ids
-Booleans must be specified as uppercase strings 2/3
+``` ids attribute/invalid-booleans_must_be_specified_as_lowercase_strings_2_3.ids
+Booleans must be specified as lowercase strings 2/3
 Entity: ''IFCTASK''
 Requirements:
 Attribute: ''IsMilestone'',''FALSE''
+```
+
+### Booleans must be specified as lowercase strings 2/3
+
+``` ids attribute/pass-booleans_must_be_specified_as_lowercase_strings_2_3.ids
+Booleans must be specified as lowercase strings 2/3
+Entity: ''IFCTASK''
+Requirements:
+Attribute: ''IsMilestone'',''false''
 ```
 
 ### Dates are treated as strings 1/2
@@ -355,10 +355,10 @@ Requirements:
 Attribute: ''NumberOfRisers'',''42''
 ```
 
-### Integers follow the same rules as numbers 2/2
+### Integers cannot be expressed as floating point numbers 2/2
 
-``` ids attribute/pass-integers_follow_the_same_rules_as_numbers_2_2.ids
-Integers follow the same rules as numbers 2/2
+``` ids attribute/invalid-integers_cannot_be_expressed_as_floating_point_numbers_2_2.ids
+Integers cannot be expressed as floating point numbers 2/2
 IFC4
 Entity: ''IFCSTAIRFLIGHT''
 Requirements:
@@ -459,7 +459,7 @@ Attribute: ''RefractionIndex'',''42''
 
 ### Only specifically formatted numbers are allowed 1/4
 
-``` ids attribute/fail-only_specifically_formatted_numbers_are_allowed_1_4.ids
+``` ids attribute/invalid-only_specifically_formatted_numbers_are_allowed_1_4.ids
 Only specifically formatted numbers are allowed 1/4
 Entity: ''IFCSURFACESTYLEREFRACTION''
 Requirements:
@@ -468,7 +468,7 @@ Attribute: ''RefractionIndex'',''42,3''
 
 ### Only specifically formatted numbers are allowed 2/4
 
-``` ids attribute/fail-only_specifically_formatted_numbers_are_allowed_2_4.ids
+``` ids attribute/invalid-only_specifically_formatted_numbers_are_allowed_2_4.ids
 Only specifically formatted numbers are allowed 2/4
 Entity: ''IFCSURFACESTYLEREFRACTION''
 Requirements:
@@ -493,12 +493,12 @@ Requirements:
 Attribute: ''RefractionIndex'',''1.2345E3''
 ```
 
-### Specifying a float when the value is an integer will fail
+### Specifying a float when the value is an integer is invalid
 
 Note that the attribute name `NumberOfRiser` has been renamed to `NumberOfRisers` in IFC4
 
-``` ids attribute/fail-specifying_a_float_when_the_value_is_an_integer_will_fail.ids
-Specifying a float when the value is an integer will fail
+``` ids attribute/invalid-specifying_a_float_when_the_value_is_an_integer_is_invalid.ids
+Specifying a float when the value is an integer is invalid
 IFC4
 Entity: ''IFCSTAIRFLIGHT''
 Requirements:
@@ -2246,19 +2246,19 @@ Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCINTEGER,''42''
 ```
 
-### Integer values are checked using type casting 2/4
+### Integer values cannot be stored with decimal 2/4
 
-``` ids property/pass-integer_values_are_checked_using_type_casting_2_4.ids
-Integer values are checked using type casting 2/4
+``` ids property/invalid-integer_values_cannot_be_stored_with_decimal_2_4.ids
+Integer values cannot be stored with decimal 2/4
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCINTEGER,''42.''
 ```
 
-### Integer values are checked using type casting 3/4
+### Integer values cannot be stored with decimal 3/4
 
-``` ids property/pass-integer_values_are_checked_using_type_casting_3_4.ids
-Integer values are checked using type casting 3/4
+``` ids property/invalid-integer_values_cannot_be_stored_with_decimal_3_4.ids
+Integer values cannot be stored with decimal 3/4
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCINTEGER,''42.0''
@@ -2266,7 +2266,7 @@ Property: ''Foo_Bar'',''Foo'',IFCINTEGER,''42.0''
 
 ### Integer values are checked using type casting 4/4
 
-``` ids property/fail-integer_values_are_checked_using_type_casting_4_4.ids
+``` ids property/invalid-integer_values_are_checked_using_type_casting_4_4.ids
 Integer values are checked using type casting 4/4
 Entity: ''IFCWALL''
 Requirements:
@@ -2302,7 +2302,7 @@ Property: ''Foo_Bar'',''Foo'',IFCLABEL,''♫Don'tÄrgerhôtelЊет''
 
 ### Only specifically formatted numbers are allowed 1/4
 
-``` ids property/fail-only_specifically_formatted_numbers_are_allowed_1_4.ids
+``` ids property/invalid-only_specifically_formatted_numbers_are_allowed_1_4.ids
 Only specifically formatted numbers are allowed 1/4
 Entity: ''IFCWALL''
 Requirements:
@@ -2311,7 +2311,7 @@ Property: ''Foo_Bar'',''Foo'',IFCREAL,''42,3''
 
 ### Only specifically formatted numbers are allowed 2/4
 
-``` ids property/fail-only_specifically_formatted_numbers_are_allowed_2_4.ids
+``` ids property/invalid-only_specifically_formatted_numbers_are_allowed_2_4.ids
 Only specifically formatted numbers are allowed 2/4
 Entity: ''IFCWALL''
 Requirements:
