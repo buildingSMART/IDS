@@ -73,7 +73,7 @@
 						<ids:simpleValue>IsExternal</ids:simpleValue>
 					</ids:baseName>
 					<ids:value>
-						<ids:simpleValue>TRUE</ids:simpleValue>
+						<ids:simpleValue>true</ids:simpleValue>
 					</ids:value>
 				</ids:property>
 			</ids:applicability>
