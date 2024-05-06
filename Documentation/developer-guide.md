@@ -32,6 +32,7 @@ In addition, it is highly recommended to also provide the following features for
 - When a user is specifying a value with a unit, you should provide conversion tools so that the user can write the IDS in their preferred unit
 - You may also choose to preload standardised classification names for commonly known systems, as well as the classification references to prevent spelling errors. You may choose to use this [IFC directory for classification systems](https://github.com/Moult/ifcclassification).
 - When users are nominating a **Material Facet**, your interface should recommend the IFC recommended material categories (one of 'concrete', 'steel', 'aluminium', 'block', 'brick', 'stone', 'wood', 'glass', 'gypsum', 'plastic', or 'earth')
+- When specifying values, the XML strings (for simpleValue and restriction enumeration) should conform to the [regular expressions](DataTypes.md#xml-base-types) presented in the [DataType documentation](DataTypes.md).
 
 ## Checking IDS against IFC
 
