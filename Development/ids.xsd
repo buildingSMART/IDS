@@ -159,7 +159,11 @@
 				<xs:complexType>
 					<xs:complexContent>
 						<xs:extension base="ids:classificationType">
-							<xs:attribute name="uri" type="xs:anyURI" use="optional"/>
+							<xs:attribute name="uri" type="xs:anyURI" use="optional">
+									<xs:documentation>Uniform Resource Identifier of the classification. Content should comply with ISO 23386 and can include precise definition, translation, etc.</xs:documentation>
+								<xs:annotation>
+								</xs:annotation>
+							</xs:attribute>						
 							<xs:attribute name="cardinality" type="ids:conditionalCardinality" use="optional" default="required"/>
 							<xs:attribute name="instructions" type="xs:string" use="optional">
 								<xs:annotation>
@@ -188,7 +192,11 @@
 				<xs:complexType>
 					<xs:complexContent>
 						<xs:extension base="ids:propertyType">
-							<xs:attribute name="uri" type="xs:anyURI" use="optional"/>
+							<xs:attribute name="uri" type="xs:anyURI" use="optional">
+								<xs:annotation>
+									<xs:documentation>Uniform Resource Identifier of the property. Content should comply with ISO 23386 and can include precise definition, translation, etc.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>	
 							<xs:attribute name="cardinality" type="ids:conditionalCardinality" use="optional" default="required"/>
 							<xs:attribute name="instructions" type="xs:string" use="optional">
 								<xs:annotation>
@@ -203,7 +211,11 @@
 				<xs:complexType>
 					<xs:complexContent>
 						<xs:extension base="ids:materialType">
-							<xs:attribute name="uri" type="xs:anyURI" use="optional"/>
+							<xs:attribute name="uri" type="xs:anyURI" use="optional">
+								<xs:annotation>
+									<xs:documentation>Uniform Resource Identifier of the material. Content should comply with ISO 23386 and can include precise definition, translation, etc.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>	
 							<xs:attribute name="cardinality" type="ids:conditionalCardinality" use="optional" default="required"/>
 							<xs:attribute name="instructions" type="xs:string" use="optional">
 								<xs:annotation>
