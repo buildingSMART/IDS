@@ -41,3 +41,12 @@ One of the most important aspects of writing a specification is to ensure that i
 | All related documents, such as drawings, schedules, manuals, and specifications          | Must be a document            | Name="IFCDOCUMENTINFORMATION"                            |
 | All distribution systems, such as hot water systems, electrical circuits, etc            | Must be a distribution system | Name=["IFCDISTRIBUTIONSYSTEM", "IFCDISTRIBUTIONCIRCUIT"] |
 | All construction tasks, such as in construction scheduling in a work breakdown structure | Must be a construction task   | Name="IFCTASK", PredefinedType="CONSTRUCTION"            |
+
+## Special cases in IFC2X3
+
+Some occurrence entities in IFC2X3 are further specified by their type object. 
+An example is the definition of an air terminal, which is encoded in IFC2X3 by an occurrence instance of IfcFlowTerminal and a type instance of IfcAirTerminalType.
+The entity facet does not have a parameter to further specify the type entity name.
+In this case, the IDS follows the convention introduced in IFC4, which also makes the IDS-based check more schema-agnostic.
+In the given example, the **name** of the entity to be checked should be IfcAirTerminal (without type) and must be resolved by a given mapping table. 
+A full list is given in this [table](./Documentation/ifc2x3-occurrence-type-mapping-table.md)    
