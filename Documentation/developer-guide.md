@@ -69,16 +69,11 @@ Other configurations of `minOccurs` and `maxOccurs` are currently not allowed.
 
 ## Available developer libraries
 
-To help you get started with development, here is a directory of IDS libraries that you may use in your application. Please feel free to [submit your library](https://github.com/buildingSMART/IDS/pulls).
+To help you get started with development, there is a [directory of IDS libraries](https://technical.buildingsmart.org/resources/software-implementations/) that you may use in your application. 
 
-| Language | License           | Library                                      | Notes                                                               |
-| -------- | ----------------- | -------------------------------------------- | ------------------------------------------------------------------- |
-| C#/.NET  | CDDL              | [xbim Xids](https://github.com/CBenghi/Xbim.Xids) | A library to read, write data in IDS files                     |
-| C#/.NET  | AGPL-3.0-only / commercial | [xbim Toolkit IDS Validator](https://github.com/xBimTeam/Xbim.IDS.Validator) | A complete IDS verification library for IFC models  |
-| Python   | LGPL-3.0-or-later | [IfcOpenShell](https://ifcopenshell.org/)    |                                                                     |
-| ?        | ?                 | ODA?                                         |                                                                     |
+Please feel free to [submit your library](https://technical.buildingsmart.org/resources/software-implementations/) (you need to login).
 
-We welcome more libary contributors, feel free to propose a pull request, if you would like to update the list.
+
 
 ## More reading
 
