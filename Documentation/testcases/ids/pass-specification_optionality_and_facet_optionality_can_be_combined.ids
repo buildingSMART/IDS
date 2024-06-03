@@ -5,7 +5,7 @@
     <description>Generated via code automation in the Ids Repository on github.</description>
   </info>
   <specifications>
-    <specification name="Specification optionality and facet optionality can be combined" ifcVersion="IFC2X3">
+    <specification name="Specification optionality and facet optionality can be combined" ifcVersion="IFC2X3 IFC4">
       <applicability minOccurs="0" maxOccurs="unbounded">
         <entity>
           <name>
