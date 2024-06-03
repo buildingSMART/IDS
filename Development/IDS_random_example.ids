@@ -51,7 +51,7 @@
 				</ids:material>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC2X3 IFC4X3" name="ramen">
+		<ids:specification ifcVersion="IFC2X3 IFC4X3_ADD2" name="ramen">
 			<ids:applicability minOccurs="0" maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>

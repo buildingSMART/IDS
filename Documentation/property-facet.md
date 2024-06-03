@@ -28,7 +28,7 @@ To see what **Properties** are standardised by buildingSMART, check the followin
 You will see a list of **Property Sets**. Clicking on a **Property Set** will bring you to its page,
 which will show the **Applicable Entity** just below the page title, as well as a table of **Property Names** and expected data types for the **Values**, and have an **Applicable Entity**.
 
-- [IFC4X3 Property and Quantity Sets](http://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/annex-b3.html)
+- [IFC4X3_ADD2 Property and Quantity Sets](http://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/annex-b3.html)
 - [IFC4 Property Sets](https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/link/alphabeticalorder-property-sets.htm)
 - [IFC4 Quantity Sets](https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/link/alphabeticalorder-quantity-sets.htm)
 - [IFC2X3 Property Sets](https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/psd/psd_index.htm)
@@ -41,7 +41,7 @@ In IDS facets, **Properties** may have a data type that constrains the expected 
 If it is a number, the value will be unit-less, such as a count of a value and the unit dependent on the measure associated with teh specified `dataType`.
 Our [unit documentation](units.md) provides the list of acceptable measures and the SI unit used for their expression. For more information consult the IFC documentation at the following links:
 
-- [IFC4X3 data types](http://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/annex-b2.html)
+- [IFC4X3_ADD2 data types](http://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/annex-b2.html)
 - [IFC4 data types](https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/link/alphabeticalorder-defined-types.htm)
 - [IFC2X3 data types](https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/alphabeticalorder_definedtype.htm)
 

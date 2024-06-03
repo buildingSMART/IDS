@@ -24,7 +24,7 @@ IFC files have been imported from the work previously done in the [IfcOpenShell 
 
 ``` ids attribute/fail-a_prohibited_facet_returns_the_opposite_of_a_required_facet.ids
 A prohibited facet returns the opposite of a required facet
-IFC2X3 IFC4 IFC4X3
+IFC2X3 IFC4 IFC4X3_ADD2
 Entity: ''IFCWALL''
 Requirements:
 Attribute: Prohibited,''Name''

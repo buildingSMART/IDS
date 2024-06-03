@@ -8,7 +8,7 @@
 		<ids:milestone>LOD200</ids:milestone>
 	</ids:info>
 	<ids:specifications>
-		<ids:specification ifcVersion="IFC4X3" name="pipe fittings and pipes">
+		<ids:specification ifcVersion="IFC4X3_ADD2" name="pipe fittings and pipes">
 			<ids:applicability minOccurs="1" maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>

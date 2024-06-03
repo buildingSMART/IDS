@@ -232,7 +232,7 @@
 							<xs:minLength value="1"/>
 							<xs:enumeration value="IFC2X3"/>
 							<xs:enumeration value="IFC4"/>
-							<xs:enumeration value="IFC4X3"/>
+							<xs:enumeration value="IFC4X3_ADD2"/>
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:list>

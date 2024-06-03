@@ -8,7 +8,7 @@
       Analysis</ids:description>
 	</ids:info>
 	<ids:specifications>
-		<ids:specification ifcVersion="IFC4X3" name="Building" description="Occupant Movement Analysis - data properties list for Building">
+		<ids:specification ifcVersion="IFC4X3_ADD2" name="Building" description="Occupant Movement Analysis - data properties list for Building">
 			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
@@ -66,7 +66,7 @@
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC4X3" name="Storey" description="Occupant Movement Analysis - data properties list for Storey">
+		<ids:specification ifcVersion="IFC4X3_ADD2" name="Storey" description="Occupant Movement Analysis - data properties list for Storey">
 			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
@@ -97,7 +97,7 @@
 				</ids:attribute>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC4X3" name="Space" description="Occupant Movement Analysis - data properties list for Space">
+		<ids:specification ifcVersion="IFC4X3_ADD2" name="Space" description="Occupant Movement Analysis - data properties list for Space">
 			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
@@ -161,7 +161,7 @@
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC4X3" name="Spatial Zone" description="Occupant Movement Analysis - data properties list for Zone">
+		<ids:specification ifcVersion="IFC4X3_ADD2" name="Spatial Zone" description="Occupant Movement Analysis - data properties list for Zone">
 			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
@@ -233,7 +233,7 @@
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC4X3" name="Door" description="Occupant Movement Analysis - data properties list for Door">
+		<ids:specification ifcVersion="IFC4X3_ADD2" name="Door" description="Occupant Movement Analysis - data properties list for Door">
 			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
@@ -352,7 +352,7 @@
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC4X3" name="Stairs" description="Occupant Movement Analysis - data properties list for Stairs">
+		<ids:specification ifcVersion="IFC4X3_ADD2" name="Stairs" description="Occupant Movement Analysis - data properties list for Stairs">
 			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
@@ -472,7 +472,7 @@
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC4X3" name="Transport entities (Lift/Elevator)" description="Occupant Movement Analysis - data properties list for transport entities (Lift/Elevator)">
+		<ids:specification ifcVersion="IFC4X3_ADD2" name="Transport entities (Lift/Elevator)" description="Occupant Movement Analysis - data properties list for transport entities (Lift/Elevator)">
 			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
@@ -605,7 +605,7 @@
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC4X3" name="Transport entities (Escalator)" description="Occupant Movement Analysis - data properties list for transport entities (Escalator)">
+		<ids:specification ifcVersion="IFC4X3_ADD2" name="Transport entities (Escalator)" description="Occupant Movement Analysis - data properties list for transport entities (Escalator)">
 			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
@@ -693,7 +693,7 @@
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC4X3" name="Transport entities (Moving Walkway)" description="Occupant Movement Analysis - data properties list for transport entities (Moving Walkway)">
+		<ids:specification ifcVersion="IFC4X3_ADD2" name="Transport entities (Moving Walkway)" description="Occupant Movement Analysis - data properties list for transport entities (Moving Walkway)">
 			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
@@ -781,7 +781,7 @@
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC4X3" name="Ramp" description="Occupant Movement Analysis - data properties list for Ramp">
+		<ids:specification ifcVersion="IFC4X3_ADD2" name="Ramp" description="Occupant Movement Analysis - data properties list for Ramp">
 			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
@@ -851,7 +851,7 @@
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC4X3" name="Gate" description="Occupant Movement Analysis - data properties list for Gate">
+		<ids:specification ifcVersion="IFC4X3_ADD2" name="Gate" description="Occupant Movement Analysis - data properties list for Gate">
 			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
@@ -910,7 +910,7 @@
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC4X3" name="Signage" description="Occupant Movement Analysis - data properties list for Signage">
+		<ids:specification ifcVersion="IFC4X3_ADD2" name="Signage" description="Occupant Movement Analysis - data properties list for Signage">
 			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>
@@ -995,7 +995,7 @@
 				</ids:property>
 			</ids:requirements>
 		</ids:specification>
-		<ids:specification ifcVersion="IFC4X3" name="Alarm" description="Occupant Movement Analysis - data properties list for Alarm">
+		<ids:specification ifcVersion="IFC4X3_ADD2" name="Alarm" description="Occupant Movement Analysis - data properties list for Alarm">
 			<ids:applicability maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>

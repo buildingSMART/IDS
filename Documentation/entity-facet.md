@@ -6,13 +6,13 @@ Classes aren’t just for categorising instances. They also indicate what types 
 
 Different IFC schemas have different IFC classes. More recent IFC schemas contain richer and more diverse IFC classes, which you can compare here:
 
-- [IFC4X3 list of IFC class names](http://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/annex-b1.html)
+- [IFC4X3_ADD2 list of IFC class names](http://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/annex-b1.html)
 - [IFC4 list of IFC class names](https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/link/alphabeticalorder-entities.htm)
 - [IFC2X3 list of IFC class names](https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/alphabeticalorder_entities.htm)
 
 Some classes may also optionally have a **Predefined Type**. This is a further level of instance categorisation in addition to the IFC Class **Name**. For example, an instance of IfcWall may have a **Predefined Type** of SHEAR, or PARTITIONING. Whereas the IFC Class **Name** is specified by the IFC standard, the **Predefined Type** may also contain custom values by the user.
 
-The IFC schema documentation contains a list of standard predefined types. Here is how you might find a list of valid **Predefined Types** for the IFC4X3 schema. The instructions will be similar for all IFC versions.
+The IFC schema documentation contains a list of standard predefined types. Here is how you might find a list of valid **Predefined Types** for the IFC4X3_ADD2 schema. The instructions will be similar for all IFC versions.
 
  1. Browse to the documentation page for the IFC class you are specifying. You can get there from the list of IFC class names above. For example, [this is the IfcWall documentation page](http://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWall.htm).
  2. Scroll down to the **Attributes** section of the documentation and find the **PredefinedType** attribute.
