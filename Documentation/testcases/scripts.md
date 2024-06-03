@@ -845,6 +845,15 @@ Requirements:
 Entity: ''IFCWALLTYPE'',''WALDO''
 ```
 
+### A predefined type may specify a user-defined element type
+
+``` ids entity/pass-userdefuned_predefined_types_may_be_specified.ids
+A predefined type may specify a user-defined element type
+Entity: ''IFCWALLTYPE''
+Requirements:
+Entity: ''IFCWALLTYPE'',''USERDEFINED''
+```
+
 ### A predefined type may specify a user-defined object type
 
 This custom subType should be allowed, if custom is allowed in the enumeration.
@@ -866,17 +875,6 @@ IFC4
 Entity: ''IFCTASKTYPE''
 Requirements:
 Entity: ''IFCTASKTYPE'',''TASKY''
-```
-
-### A predefined type must always specify a meaningful type, not USERDEFINED itself
-
-TODO: the group agreed to allow userdefined as a valid option too.
-
-``` suspended ids entity/fail-a_predefined_type_must_always_specify_a_meaningful_type__not_userdefined_itself.ids
-A predefined type must always specify a meaningful type, not USERDEFINED itself
-Entity: ''IFCWALL''
-Requirements:
-Entity: ''IFCWALL'',''USERDEFINED''
 ```
 
 ### An entity not matching a specified predefined type will fail
