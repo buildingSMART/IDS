@@ -847,7 +847,7 @@ Entity: ''IFCWALLTYPE'',''WALDO''
 
 ### A predefined type may specify a user-defined element type
 
-``` ids entity/pass-userdefuned_predefined_types_may_be_specified.ids
+``` ids entity/pass-userdefined_predefined_types_may_be_specified.ids
 A predefined type may specify a user-defined element type
 Entity: ''IFCWALLTYPE''
 Requirements:
@@ -2858,7 +2858,6 @@ Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''-1000000.''
 ```
-
 
 ### Comparison tolerance for floating point negative high number lower bound
 

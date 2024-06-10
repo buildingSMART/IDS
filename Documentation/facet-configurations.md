@@ -108,9 +108,9 @@ For an evaluation of the rationale, see [these minutes](https://github.com/build
 
 REQUIRED
 
-IDS has PSET/PNAME : A pset/pname has to exist (null is accepted as a pass, any value of any datatype is accepted)
-IDS HAS PSET/PNAME/DATATYPE: A pset pname has to exist. The IFC value has to be of the required IDS datatype (check Empty values against validation) - Null values should be failing
-IDS HAS PSET/PNAME/DATATYPE/VALUE: Like the previous, PLUS: the IFC value needs to comply with the IDS restriction
+- IDS has PSET/PNAME : A pset/pname has to exist (null is accepted as a pass, any value of any datatype is accepted), whenever possible specifying the dataType is recommended.
+- IDS HAS PSET/PNAME/DATATYPE: A pset pname has to exist. The IFC value has to be of the required IDS datatype (check Empty values against validation) - Null values should be failing
+- IDS HAS PSET/PNAME/DATATYPE/VALUE: Like the previous, PLUS: the IFC value needs to comply with the IDS restriction
 
 OPTIONAL
 
