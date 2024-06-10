@@ -28,7 +28,7 @@ To see what **Properties** are standardised by buildingSMART, check the followin
 You will see a list of **Property Sets**. Clicking on a **Property Set** will bring you to its page,
 which will show the **Applicable Entity** just below the page title, as well as a table of **Property Names** and expected data types for the **Values**, and have an **Applicable Entity**.
 
-- [IFC4X3 Property and Quantity Sets](http://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/annex-b3.html)
+- [IFC4X3_ADD2 Property and Quantity Sets](http://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/annex-b3.html)
 - [IFC4 Property Sets](https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/link/alphabeticalorder-property-sets.htm)
 - [IFC4 Quantity Sets](https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/link/alphabeticalorder-quantity-sets.htm)
 - [IFC2X3 Property Sets](https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/psd/psd_index.htm)
@@ -41,7 +41,7 @@ In IDS facets, **Properties** may have a data type that constrains the expected 
 If it is a number, the value will be unit-less, such as a count of a value and the unit dependent on the measure associated with teh specified `dataType`.
 Our [unit documentation](units.md) provides the list of acceptable measures and the SI unit used for their expression. For more information consult the IFC documentation at the following links:
 
-- [IFC4X3 data types](http://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/annex-b2.html)
+- [IFC4X3_ADD2 data types](http://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/annex-b2.html)
 - [IFC4 data types](https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/link/alphabeticalorder-defined-types.htm)
 - [IFC2X3 data types](https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/alphabeticalorder_definedtype.htm)
 
@@ -77,7 +77,7 @@ It is encouraged to follow buildingSMART standardised **Properties** wherever po
 | **Base Name**    | ✔️     | ✔️                 | Any text property name. Standardised buildingSMART property names can be found in the buildingSMART documentation.                                                                                                    | The property must exist in the specified property set and have a non-empty value.                                                                                                                                                                                                                                             |
 | **Data Type**    | ❌       | ✔️                 | A valid data type compatible with the referenced schema version, expressed in UPPERCASE.                                                                                                                              | The value must use the specified data type. The units specified in the IDS use the [IDS units table](units.md), though the project may use any unit, so project values will have to be converted to the SI unit before comparison. User Interfaces are permitted to display any unit that the developers or the users prefer. |
 | **Value**        | ❌       | ✔️                 | Any value appropriate to the data type of the property. If not specified, any non-empty value is allowed. The value of measures types will be stored according to the unit defined in the [IDS units table](units.md) | The value of the property must match, see [DataType documentation](DataTypes.md#xml-base-types) for more information.                                                                                                                                                                                                         |
-| **URI**          | ❌       | ❌                   | A URI identifying the property compliant with ISO 23386                                                                                                                                                               | You may find valid URIs using the [buildingSMART Data Dictionary](https://search.bsdd.buildingsmart.org/), for example for a [Fire Rating](https://search.bsdd.buildingsmart.org/Property/Index/115666) property.                                                                                                             |
+| **URI**          | ❌       | ❌                   | Uniform Resource Identifier of the property. The resource should include a name and a definition, and preferably comply with ISO 23386. | One source of valid URIs is [the bSDD](https://search.bsdd.buildingsmart.org/). An example URI for a "Fire Rating": [https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireRating](https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireRating). |
 
 ## Examples
 

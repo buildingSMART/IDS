@@ -6,7 +6,7 @@ Property dataTypes can be set to any values according to the following table.
 
 Columns of the table determine the validity of the type depending on the schema version and the required `xs:base` type for any `xs:restriction` constraint.
 
-| dataType                                      | Ifc2x3 | Ifc4   | Ifc4x3 | Restriction base type |
+| dataType                                      | Ifc2x3 | Ifc4   | Ifc4.3 | Restriction base type |
 | --------------------------------------------- | ------ | ------ | ------ | --------------------- |
 | IFCABSORBEDDOSEMEASURE                        | ✔️      | ✔️      | ✔️      | xs:double             |
 | IFCACCELERATIONMEASURE                        | ✔️      | ✔️      | ✔️      | xs:double             |

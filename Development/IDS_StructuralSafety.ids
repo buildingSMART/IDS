@@ -4,7 +4,7 @@
 		<ids:title />
 	</ids:info>
 	<ids:specifications>
-		<ids:specification ifcVersion="IFC4X3" name="Structural safety" instructions="Beams must be assessed for security concerns">
+		<ids:specification ifcVersion="IFC4X3_ADD2" name="Structural safety" instructions="Beams must be assessed for security concerns">
 			<ids:applicability minOccurs="1" maxOccurs="unbounded">
 				<ids:entity>
 					<ids:name>

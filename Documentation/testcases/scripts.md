@@ -24,7 +24,7 @@ IFC files have been imported from the work previously done in the [IfcOpenShell 
 
 ``` ids attribute/fail-a_prohibited_facet_returns_the_opposite_of_a_required_facet.ids
 A prohibited facet returns the opposite of a required facet
-IFC2X3 IFC4 IFC4X3
+IFC2X3 IFC4 IFC4X3_ADD2
 Entity: ''IFCWALL''
 Requirements:
 Attribute: Prohibited,''Name''
@@ -845,6 +845,15 @@ Requirements:
 Entity: ''IFCWALLTYPE'',''WALDO''
 ```
 
+### A predefined type may specify a user-defined element type
+
+``` ids entity/pass-userdefuned_predefined_types_may_be_specified.ids
+A predefined type may specify a user-defined element type
+Entity: ''IFCWALLTYPE''
+Requirements:
+Entity: ''IFCWALLTYPE'',''USERDEFINED''
+```
+
 ### A predefined type may specify a user-defined object type
 
 This custom subType should be allowed, if custom is allowed in the enumeration.
@@ -866,17 +875,6 @@ IFC4
 Entity: ''IFCTASKTYPE''
 Requirements:
 Entity: ''IFCTASKTYPE'',''TASKY''
-```
-
-### A predefined type must always specify a meaningful type, not USERDEFINED itself
-
-TODO: the group agreed to allow userdefined as a valid option too.
-
-``` suspended ids entity/fail-a_predefined_type_must_always_specify_a_meaningful_type__not_userdefined_itself.ids
-A predefined type must always specify a meaningful type, not USERDEFINED itself
-Entity: ''IFCWALL''
-Requirements:
-Entity: ''IFCWALL'',''USERDEFINED''
 ```
 
 ### An entity not matching a specified predefined type will fail

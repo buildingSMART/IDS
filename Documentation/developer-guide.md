@@ -1,7 +1,5 @@
 # Developer guide
 
-**Warning: IDS is not yet formally released.**
-
 An IDS file is simply an XML file, with its schema defined in XSD. You may open any existing IDS file and inspect its contents to get a feel for how an IDS is structured.
 
 An IDS is considered valid if it passes the XSD-based validation check. All sample IDS files available in the buildingSMART directory of public IDS templates are guaranteed to be valid.
@@ -10,7 +8,7 @@ An IDS is considered valid if it passes the XSD-based validation check. All samp
 2. Download sample IDS files from the `Documentation/testcases` folder
 
 There are many freely available online tools and programming libraries that can perform XSD validation.
-However a valid IDS file requires more thatn bare XML schema compliance; buildingSMART provides an [IDS auditing tool](https://github.com/buildingSMART/IDS-Audit-tool/) to help ensure that the IDS files that you produce or receive are fully valid. The same tool is also available at [Xbim IDS auditing service](https://www.xbim.it/ids), which is executed locally in your web browser and does not upload your IDS files to any server.
+However, a valid IDS file requires more than bare XML schema compliance; buildingSMART provides an [IDS auditing tool](https://github.com/buildingSMART/IDS-Audit-tool/) to help ensure that the IDS files that you produce or receive are fully valid. The same tool is also available at [Xbim IDS auditing service](https://www.xbim.it/ids), which is executed locally in your web browser and does not upload your IDS files to any server.
 
 ## Authoring IDS
 
@@ -69,16 +67,11 @@ Other configurations of `minOccurs` and `maxOccurs` are currently not allowed.
 
 ## Available developer libraries
 
-To help you get started with development, here is a directory of IDS libraries that you may use in your application. Please feel free to [submit your library](https://github.com/buildingSMART/IDS/pulls).
+To help you get started with development, there is a [directory of IDS libraries](https://technical.buildingsmart.org/resources/software-implementations/) that you may use in your application. 
 
-| Language | License           | Library                                      | Notes                                                               |
-| -------- | ----------------- | -------------------------------------------- | ------------------------------------------------------------------- |
-| C#/.NET  | CDDL              | [xbim Xids](https://github.com/CBenghi/Xbim.Xids) | A library to read, write data in IDS files                     |
-| C#/.NET  | AGPL-3.0-only / commercial | [xbim Toolkit IDS Validator](https://github.com/xBimTeam/Xbim.IDS.Validator) | A complete IDS verification library for IFC models  |
-| Python   | LGPL-3.0-or-later | [IfcOpenShell](https://ifcopenshell.org/)    |                                                                     |
-| ?        | ?                 | ODA?                                         |                                                                     |
+Please feel free to [submit your library](https://technical.buildingsmart.org/resources/software-implementations/) (you need to login).
 
-We welcome more libary contributors, feel free to propose a pull request, if you would like to update the list.
+
 
 ## More reading
 

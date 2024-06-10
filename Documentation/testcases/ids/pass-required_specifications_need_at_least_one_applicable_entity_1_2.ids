@@ -5,7 +5,7 @@
     <description>Generated via code automation in the Ids Repository on github.</description>
   </info>
   <specifications>
-    <specification name="Required specifications need at least one applicable entity (1/2)" ifcVersion="IFC2X3">
+    <specification name="Required specifications need at least one applicable entity (1/2)" ifcVersion="IFC2X3 IFC4">
       <applicability maxOccurs="unbounded">
         <entity>
           <name>

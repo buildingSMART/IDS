@@ -37,7 +37,7 @@ The first line is always interpreted as the title of the IDS and the name of the
 
 ### Schemas
 
-If the following line is a sequence of `IFC2X3`, `IFC4`, and `IFC4X3` tokens, in any order, it defines schemas for the specification.
+If the following line is a sequence of `IFC2X3`, `IFC4`, and `IFC4X3_ADD2` tokens, in any order, it defines schemas for the specification.
 This line is optional, when the schema is omitted, the default schemas of the IDS are `IFC2X3 IFC4`. Note that the capitalization of this line matters.
 
 ### Applicability cardinality

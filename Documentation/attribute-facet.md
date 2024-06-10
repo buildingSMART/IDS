@@ -13,7 +13,7 @@ Information that is not critical to the definition of the IFC entity is stored a
 
 For this reason, **Attributes** are a good way to specify an **Applicability** to specific elements, or specify a **Requirement** that certain elements shall be identified, named, or described in a particular way.
 
-To see what **Attributes** are available for an IFC class and what their potential values may be, you will need to check the IFC documentation. Here is how you might find a list of valid **Attributes** for the IFC4X3 schema. The instructions will be similar for all IFC versions.
+To see what **Attributes** are available for an IFC class and what their potential values may be, you will need to check the IFC documentation. Here is how you might find a list of valid **Attributes** for the IFC4X3_ADD2 schema. The instructions will be similar for all IFC versions.
 
  1. Browse to the documentation page for the IFC class you are specifying. For example, [this is the IfcWall documentation page](http://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWall.htm).
  2. Scroll down to the **Attributes** section of the documentation. Note that by default, not all attributes are shown. Press "_Click to show hidden inherited attributes_" to show all attributes. For IFC4, click on the "_Attribute inheritance_" text header to toggle a table for all attributes.

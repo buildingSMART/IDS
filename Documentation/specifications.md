@@ -107,7 +107,7 @@ As a complete example, you might have a **Required** specification that applies 
 
 Each **Specification** defines the IFC schema(s) that it applies to. The supported IFC schemas are:
 
-- IFC4X3
+- IFC4X3_ADD2
 - IFC4
 - IFC2X3
 
