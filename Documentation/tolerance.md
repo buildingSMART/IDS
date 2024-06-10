@@ -46,16 +46,20 @@ The table below demonstrates characteristic ranges of values within the toleranc
 
 Note: the tolerance value is not configurable, as it is specific only for rounding errors, not for construction-related tolerances, for which users need to provide an explicit range.
 
-## Range tolerance
+## Ranges
 
-Adding tolerance to range checks would open up all kinds of strange edge cases like 41.999958 being both in the range 42-50 inclusive, but also  < 42 exclusive. For that reason, **exclusive ranges should be shrunk, while inclusive ranges should be stretched**.
+**The tolerance does not apply to ranges**, as it would open up all kinds of strange edge cases (for example: 41.999958 being both in the range 42-50 inclusive, but also < 42 exclusive). The values used in ranges (minExclusive/minInclusive/maxExclusive/maxInclusive) should therfore be compared explicitly. For example:
 
-For example:
-- `x > 0 ⇒ x > 1.0e⁻⁶` 
-- `x >= 0 ⇒ x >= -1.0e⁻⁶`
+| | >1.0 |	>=1.0 |  <1.0 |
+|---:|-------------:|-------------:|---------:|
+| 0.99999999 | fail |	fail |	pass |
+| 1.00000000 | fail |	pass |	fail |
+| 1.00000001 | pass |	pass |	fail |
 
-If a numeric range constraint's spread is lower than the agreed limit, the Audit-tool should raise a warning.
+This approach allows for specifying a custom tolerance in cases where the general rule is not applicable. For example:
+- `(v - 1e-10) <= x <= (v + 1e-10)` checks that `x` is equal `v` with the custom tolerance of 1e-10, which is much more precise than the default formula
+- `v <= x <= v` checks that `x` is exactly equal `v` with no tolerance
 
 # 
 
-Note: the history of these agreements can be traced in the history of [issue 78](https://github.com/buildingSMART/IDS/issues/78), [issue 36](https://github.com/buildingSMART/IDS/issues/36), and in [the summary by @giuseppeverduciALMA](https://github.com/buildingSMART/IDS/blob/0d50fd8f2dbd5b388f6fafb67da255cc3ce2b4ca/Documentation/tolerance.md).
+Note: the history of these agreements can be traced in the [issue 78](https://github.com/buildingSMART/IDS/issues/78), [issue 36](https://github.com/buildingSMART/IDS/issues/36), and in [the summary by @giuseppeverduciALMA](https://github.com/buildingSMART/IDS/blob/0d50fd8f2dbd5b388f6fafb67da255cc3ce2b4ca/Documentation/tolerance.md).
