@@ -6,7 +6,7 @@ Property dataTypes can be set to any values according to the following table.
 
 Columns of the table determine the validity of the type depending on the schema version and the required `xs:base` type for any `xs:restriction` constraint.
 
-| dataType                                      | Ifc2x3 | Ifc4   | Ifc4.3 | Restriction base type |
+| dataType                                      | Ifc2x3 | Ifc4   | Ifc4x3 | Restriction base type |
 | --------------------------------------------- | ------ | ------ | ------ | --------------------- |
 | IFCABSORBEDDOSEMEASURE                        | ✔️      | ✔️      | ✔️      | xs:double             |
 | IFCACCELERATIONMEASURE                        | ✔️      | ✔️      | ✔️      | xs:double             |
@@ -410,7 +410,7 @@ The list of valid XML base types for the `base` attribute of `xs:restriction`, a
 | xs:boolean  | ^(true&#124;false&#124;0&#124;1)$                                        |
 | xs:date     | ^\d{4}-\d{2}-\d{2}(Z&#124;([+-]\d{2}:\d{2}))?$                           |
 | xs:dateTime | ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z&#124;([+-]\d{2}:\d{2}))?$ |
-| xs:double   | ^([-+]?[0-9]*\.?[0-9]?([eE][-+]?[0-9]+)?&#124;NaN&#124;\+INF&#124;-INF)$ |
+| xs:double   | ^([-+]?[0-9]*\.?[0-9]*([eE][-+]?[0-9]+)?&#124;NaN&#124;\+INF&#124;-INF)$ |
 | xs:duration | ^[-+]?P(\d+Y)?(\d+M)?(\d+D)?(T(\d+H)?(\d+M)?(\d+S)?)?$                   |
 | xs:integer  | ^[+-]?(\d+)$                                                             |
 | xs:string   | ^.?$                                                                     |
