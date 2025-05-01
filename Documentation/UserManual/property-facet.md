@@ -32,23 +32,23 @@ Note that IFC2X3 only has buildingSMART standardised properties, not quantities.
 
 Instead of checking the documentation, your IDS authoring software may help you to shortlist valid **Property Sets**.
 
-### Supported types of properties
+## Supported types of properties
 
-There are various types of properties in IFC. The IDS allows specifying simple [single values](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm), [bounded values](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyBoundedValue.htm), [lists](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyListValue.htm), [tables](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTableValue.htm), and [enumerations](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyEnumeratedValue.htm), while [~~complex properties~~](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcComplexProperty.htm) and [~~reference values~~](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyReferenceValue.htm) are not supported by IDS. 
+There are various types of properties in IFC. The IDS allows specifying simple [single values](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm), [bounded values](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyBoundedValue.htm), [lists](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyListValue.htm), [tables](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTableValue.htm), and [enumerations](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyEnumeratedValue.htm), while [~~complex properties~~](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcComplexProperty.htm) and [~~reference values~~](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyReferenceValue.htm) are not supported by IDS.
 
-The interpretation of a list, table, bounded and enumerated property type requirement is that an IDS check should pass if any matching value of that property is present in IFC. 
-If an IDS value is specified as a range (with min/maxInc/Exclusive restriction), then all IFC values should be within that range. 
+The interpretation of a list, table, bounded and enumerated property type requirement is that an IDS check should pass if any matching value of that property is present in IFC.
+If an IDS value is specified as a range (with min/maxInc/Exclusive restriction), then all IFC values should be within that range.
 For example, if an IDS specifies the value to be >2 and <5
 
-| Lower Bound |	Upper Bound | Expected Result |
-| ------------| ---------- | -----------|
-|3 |	4 |	✔️ |
-|	| 4	 |❌ |
-|3	| 	| ❌ |
-|2	| 3	| ❌ |
-|4	| 6	| ❌ |
+| Lower Bound | Upper Bound | Expected Result |
+| ----------- | ----------- | --------------- |
+| 3           | 4           | ✔️            |
+|             | 4           | ❌              |
+| 3           |             | ❌              |
+| 2           | 3           | ❌              |
+| 4           | 6           | ❌              |
 
-### Property data types
+## Property data types
 
 In IDS facets, **Properties** may have a data type that constrains the expected format in which the property will be stored (e.g. text value, a boolean, or a number).
 If it is a number, the value will be unit-less, such as a count of a value and the unit dependent on the measure associated with the specified `dataType`.
