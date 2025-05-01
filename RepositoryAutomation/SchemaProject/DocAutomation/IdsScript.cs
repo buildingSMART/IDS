@@ -474,12 +474,18 @@ namespace SchemaProject.DocAutomation
                 inputString = reBase.Replace(inputString, "");
             }
 
-            foreach (var collection in Restriction.Collections)
+            var anyFound = true;
+            while (anyFound)
             {
-                if (TryGetCollection(inputString, collection, out var values, out rem))
+                anyFound = false;
+                foreach (var collection in Restriction.Collections)
                 {
-                    inputString = rem;
-                    v.Restriction.SetValues(values);
+                    while (TryGetCollection(inputString, collection, out var values, out rem))
+                    {
+                        inputString = rem;
+                        v.Restriction.SetValues(values);
+						anyFound = true;
+					}
                 }
             }
             if (inputString != "")
@@ -494,12 +500,7 @@ namespace SchemaProject.DocAutomation
         {
             inputString = inputString.Trim();
 
-            if (inputString.Contains(collection))
-            {
-
-            }
-
-            Regex r = new Regex($"^[ \\t]*\\b{collection}\\(''(.*?)''\\)");
+            var r = new Regex($"^[ \\t]*\\b{collection}\\(''(.*?)''\\)");
             var m = r.Match(inputString);   
             if (m.Success)
             {

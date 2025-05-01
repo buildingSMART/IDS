@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/1.0/ids.xsd">
+    <ids:info>
+        <ids:title>OMA - Occupant Movement Analysis (Simulation results)</ids:title>
+        <ids:copyright>buildingSMART International</ids:copyright>
+        <ids:version>2.2</ids:version>
+        <ids:description>Sample Occupant Movement Analysis - results checks</ids:description>
+    </ids:info>
+    <ids:specifications>
+        <ids:specification description="Occupant Movement Analysis - data properties list for Project" ifcVersion="IFC4X3_ADD2" name="Project">
+		<ids:applicability minOccurs="1" maxOccurs="unbounded">
+                <ids:entity>
+                    <ids:name>
+                        <ids:simpleValue>IFCPROJECT</ids:simpleValue>
+                    </ids:name>
+                </ids:entity>
+            </ids:applicability>
+            <ids:requirements>
+                <ids:property dataType="IFCTEXT" instructions="Developer of the pedestrian modelling tool">
+                    <ids:propertySet>
+                        <ids:simpleValue>ePset_OMA_SimResults</ids:simpleValue>
+                    </ids:propertySet>
+                    <ids:baseName>
+                        <ids:simpleValue>PEDmodToolDeveloper</ids:simpleValue>
+                    </ids:baseName>
+                </ids:property>
+                <ids:property dataType="IFCTEXT" instructions="Name of the pedestrian modelling tool">
+                    <ids:propertySet>
+                        <ids:simpleValue>ePset_OMA_SimResults</ids:simpleValue>
+                    </ids:propertySet>
+                    <ids:baseName>
+                        <ids:simpleValue>PEDmodToolName</ids:simpleValue>
+                    </ids:baseName>
+                </ids:property>
+				<ids:property dataType="IFCTEXT" instructions="Identifier of the pedestrian modelling tool">
+                    <ids:propertySet>
+                        <ids:simpleValue>ePset_OMA_SimResults</ids:simpleValue>
+                    </ids:propertySet>
+                    <ids:baseName>
+                        <ids:simpleValue>PEDmodToolIdentifier</ids:simpleValue>
+                    </ids:baseName>
+                </ids:property>
+				<ids:property dataType="IFCTEXT" instructions="Version number of the pedestrian modelling tool">
+                    <ids:propertySet>
+                        <ids:simpleValue>ePset_OMA_SimResults</ids:simpleValue>
+                    </ids:propertySet>
+                    <ids:baseName>
+                        <ids:simpleValue>PEDmodToolVersion</ids:simpleValue>
+                    </ids:baseName>
+                </ids:property>
+				<ids:property dataType="IFCTEXT" instructions="Contact person for the pedestrian modelling tool">
+                    <ids:propertySet> 
+                        <ids:simpleValue>ePset_OMA_SimResults</ids:simpleValue>
+                    </ids:propertySet>
+                    <ids:baseName>
+                        <ids:simpleValue>PEDmodToolContactPerson</ids:simpleValue>
+                    </ids:baseName>
+                </ids:property>
+				<ids:property dataType="IFCTEXT" instructions="Overall summary of the modelling results">
+                    <ids:propertySet>
+                        <ids:simpleValue>ePset_OMA_SimResults</ids:simpleValue>
+                    </ids:propertySet>
+                    <ids:baseName>
+                        <ids:simpleValue>OverallSimResultsSummary</ids:simpleValue>
+                    </ids:baseName>
+                </ids:property>
+				<ids:property dataType="IFCURIREFERENCE" instructions="Link to the simulation results files">
+                    <ids:propertySet>
+                        <ids:simpleValue>ePset_OMA_SimResults</ids:simpleValue>
+                    </ids:propertySet>
+                    <ids:baseName>
+                        <ids:simpleValue>SimScenarioResults</ids:simpleValue>
+                    </ids:baseName>					
+                </ids:property>				
+            </ids:requirements>
+        </ids:specification>                
+    </ids:specifications>
+</ids:ids>

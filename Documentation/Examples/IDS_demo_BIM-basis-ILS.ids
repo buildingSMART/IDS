@@ -80,7 +80,7 @@
                             <xs:enumeration value="15 vijftiende verdieping" />
                             <xs:enumeration value="16 zestiende verdieping" />
                             <xs:enumeration value="17 zeventiende verdieping" />
-                            <xs:enumeration value="18 achtiende verdieping" />
+                            <xs:enumeration value="18 achttiende verdieping" />
                             <xs:enumeration value="19 negentiende verdieping" />
                             <xs:enumeration value="20 twintigste verdieping" />
                             <xs:enumeration value="21 eenentwintigste verdieping" />

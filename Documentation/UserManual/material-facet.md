@@ -10,7 +10,7 @@ An element may also have multiple **Materials** in three possible scenarios:
 - **Profiled materials**: an element (e.g. a column or beam) is parametrically defined in terms of a profile (e.g. C-profile, Z-profile, or I-profile) extruded along a path. Composite columns and beams may have multiple profiles from different **Materials**.
 - **Constituent materials**: an element (e.g. a window, or slab) where portions of the element are made out of different **Materials** (e.g. the window glazing and the window frame) or mixed  (e.g. a concrete slab may be composed of a percentage of cement, aggregate, etc)
 
-![Material Facet](material-facet.png)
+![Material Facet](Graphics/material-facet.png)
 
 The **Material Facet** lets you filter elements where one of their **Materials** matches your specified **Material**.
 

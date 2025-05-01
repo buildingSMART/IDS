@@ -10,21 +10,24 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml;
+using System.Xml.Linq;
 using System.Xml.Serialization;
 
 class Program
 {
-	static public void Main()
+	static public void Main(params string[] args)
 	{
 		// this project depends on the execution of one of the repository targets defined in the /Build folder
 		// If this project does not compile, start a terminal in the root folder and execute the `./build CompileSchemaProject` command.
 		//
 		Console.WriteLine("Hello IDS!");
-		RegenIDS();
+		var rename_single_ifc = args.Any(x => x.Equals("--rename-single-ifc"));	
+		var delete_ids_first = args.Any(x => x.Equals("--delete-ids-first"));	
+		RegenIDS(rename_single_ifc, delete_ids_first);
 		Console.WriteLine("Done");
 	}
 
-	private static void RegenIDS()
+	private static void RegenIDS(bool rename_single_ifc, bool delete_ids_first)
 	{
 		bool inScript = false;
 		string file = "";
@@ -60,6 +63,13 @@ class Program
 
 		// get all IDSs
 		var allIDSs = testCasesFolder.GetFiles("*.ids", SearchOption.AllDirectories).Select(f => f.FullName).ToList();
+		if (delete_ids_first)
+		{
+			foreach (var item in allIDSs)
+			{
+				File.Delete(item);
+			}
+		}
 		var newIDSs = new List<string>();
 
 		// Regenerate IDSs
@@ -74,6 +84,7 @@ class Program
 			if (line.StartsWith("``` ids "))
 			{
 				file = line.Substring(8);
+				file = file.Replace(@"\", "/");
 				inScript = true;
 				buffer = new StringBuilder();
 				firstLine = true;
@@ -123,6 +134,7 @@ class Program
 
 
 		// extra ifcs
+		List<string> extraIfcFileNames = new List<string>();
 		foreach (var item in testCasesFolder.GetFiles("*.ifc", SearchOption.AllDirectories))
 		{
 			if (!expectedIfcFileNames.Contains(item.FullName))
@@ -131,23 +143,39 @@ class Program
 				var invalidFileName = item.FullName.Replace("fail-", "invalid-");
 				if (missingIfcFileNames.Contains(invalidFileName))
 				{
-					Console.WriteLine("Suitable matching invalid IFC is found, it has been renamed.");
+					Message("Suitable matching invalid IFC is found, it has been renamed.", ConsoleColor.Blue);
 					File.Move(item.FullName, invalidFileName);
 				}
-				//else if (allIfcFound)
-				//{
-				//	// item.Delete();
-				//}
+				else
+				{
+					extraIfcFileNames.Add(item.FullName);
+				}
+			}
+		}
+
+		if (rename_single_ifc)
+		{
+			if (extraIfcFileNames.Count == 1 && missingIfcFileNames.Count == 1)
+			{
+				var miss = missingIfcFileNames.First();
+				var extra = extraIfcFileNames.First();
+				Message($"Single IFC mismatch, {extra} renamed to {miss}.", ConsoleColor.Blue);
+				File.Move(extra, miss);
+				extraIfcFileNames.Clear();
+				missingIfcFileNames.Clear();
 			}
 		}
 
 		// extra IDSs
-		foreach (var item in allIDSs.Except(newIDSs))
+		if (!delete_ids_first)
 		{
-			string t = IdsHelpers.CreateDiffReportHtml(item);
-			var reportFileName = Path.ChangeExtension(item, "html");
-			File.WriteAllText(reportFileName, t);
-			Console.WriteLine($"Extra IDS report generated: {reportFileName}");
+			foreach (var item in allIDSs.Except(newIDSs))
+			{
+				string t = IdsHelpers.CreateDiffReportHtml(item);
+				var reportFileName = Path.ChangeExtension(item, "html");
+				File.WriteAllText(reportFileName, t);
+				Console.WriteLine($"Extra IDS report generated: {reportFileName}");
+			}
 		}
 
 		// If all found, make it clear

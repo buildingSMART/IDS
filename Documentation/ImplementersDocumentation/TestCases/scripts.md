@@ -232,10 +232,10 @@ Requirements:
 Attribute: ''IsMilestone'',''FALSE''
 ```
 
-### Booleans must be specified as lowercase strings 2/3
+### Booleans must be specified as lowercase strings 3/3
 
-``` ids attribute/pass-booleans_must_be_specified_as_lowercase_strings_2_3.ids
-Booleans must be specified as lowercase strings 2/3
+``` ids attribute/pass-booleans_must_be_specified_as_lowercase_strings_3_3.ids
+Booleans must be specified as lowercase strings 3/3
 Entity: ''IFCTASK''
 Requirements:
 Attribute: ''IsMilestone'',''false''
@@ -845,10 +845,10 @@ Requirements:
 Entity: ''IFCWALLTYPE'',''WALDO''
 ```
 
-### A predefined type may specify a user-defined element type
+### Userdefined predefined types may be specified
 
 ``` ids entity/pass-userdefined_predefined_types_may_be_specified.ids
-A predefined type may specify a user-defined element type
+Userdefined predefined types may be specified
 Entity: ''IFCWALLTYPE''
 Requirements:
 Entity: ''IFCWALLTYPE'',''USERDEFINED''
@@ -1422,6 +1422,15 @@ Requirements:
 Material: ''Foo''
 ```
 
+### A layer set name will pass the value check
+
+``` ids material/pass-a_layer_set_name_will_pass_a_value_check.ids
+A layer set name will pass the value check
+Entity: ''IFCWALL''
+Requirements:
+Material: ''Bar''
+```
+
 ## partof
 
 ### A group entity must match exactly 1/2
@@ -1442,10 +1451,10 @@ Requirements:
 PartOf: ''IFCINVENTORY'',IFCRELASSIGNSTOGROUP
 ```
 
-### A group predefined type must match exactly 2/2
+### A group predefined type must match exactly 1/2
 
-``` ids partof/invalid-a_group_predefined_type_must_match_exactly_2_2.ids
-A group predefined type must match exactly 2/2
+``` ids partof/invalid-a_group_predefined_type_must_match_exactly_1_2.ids
+A group predefined type must match exactly 1/2
 Entity: ''IFCELEMENTASSEMBLY''
 Requirements:
 PartOf: ''IFCINVENTORY'',''BUNNARY'',IFCRELASSIGNSTOGROUP
@@ -1740,16 +1749,16 @@ PartOf: ''IFCFURNITURE'',''WATERBOTTLE'',IFCRELNESTS
 
 ## property
 
-### A logical unknown is considered false and will not pass
+### A logical unknown is considered as not matching and will not pass
 
 IFCDURATION is not available in IFC2x3
 
 ``` ids property/fail-a_logical_unknown_is_considered_false_and_will_not_pass.ids
-A logical unknown is considered false and will not pass
+A logical unknown is considered as not matching and will not pass
 IFC4
 Entity: ''IFCWALL''
 Requirements:
-Property: ''Foo_Bar'',''Foo'',IFCDURATION
+Property: ''Foo_Bar'',''Foo'',IFCLOGICAL
 ```
 
 ### A name check will match any property with any string value
@@ -1881,13 +1890,13 @@ Requirements:
 Property: Pattern(''Foo_.*''),''Foo'',IFCLABEL
 ```
 
-### An empty string is considered false and will not pass
+### An empty string is considered not matching and will not pass
 
 ``` ids property/fail-an_empty_string_is_considered_false_and_will_not_pass.ids
-An empty string is considered false and will not pass
+An empty string is considered not matching and will not pass
 Entity: ''IFCWALL''
 Requirements:
-Property: ''Foo_Bar'',''Foo'',IFCLOGICAL
+Property: ''Foo_Bar'',''Foo'',IFCLABEL
 ```
 
 ### An optional facet always passes regardless of outcome 1/2
@@ -2105,12 +2114,12 @@ Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCDURATION,''PT16H''
 ```
 
-### Durations are treated as strings 1/2
+### Durations are treated as strings 2/2
 
 IFCDURATION is not available in IFC2x3
 
-``` ids property/pass-durations_are_treated_as_strings_1_2.ids
-Durations are treated as strings 1/2
+``` ids property/pass-durations_are_treated_as_strings_2_2.ids
+Durations are treated as strings 2/2
 IFC4
 Entity: ''IFCWALL''
 Requirements:
@@ -2422,7 +2431,7 @@ but they can also be associated to the relevant types. E.g. `Pset_WallCommon` on
 
 The provided IFC fails because one of the property sets defines the invalid value `FOOBAR`.
 
-``` ids property\fail-properties_can_be_associated_to_relevant_object_types.ids
+``` ids property/fail-properties_can_be_associated_to_relevant_object_types.ids
 Properties can be associated to relevant object types
 Optional
 IFC4
@@ -2541,10 +2550,10 @@ Requirements:
 Attribute: ''Name'',Length(''2'')
 ```
 
-### Length checks can be used 1/2
+### Length checks can be used 2/2
 
-``` ids restriction/pass-length_checks_can_be_used_1_2.ids
-Length checks can be used 1/2
+``` ids restriction/pass-length_checks_can_be_used_2_2.ids
+Length checks can be used 2/2
 Entity: ''IFCWALL''
 Requirements:
 Attribute: ''Name'',Length(''2'')
@@ -2632,327 +2641,354 @@ Requirements:
 Attribute: ''Name'',Pattern(''[A-Z]{2}[0-9]{2}'')
 ```
 
+### Regex patterns work in OR 1/3
+
+``` ids restriction/pass-regex_patterns_work_in_OR_1_3.ids
+Regex patterns work in OR 1/3
+Entity: ''IFCWALL''
+Requirements:
+Attribute: ''Name'',Pattern(''[A-Z]{2}[0-9]{2}'') Pattern(''[a-z]{2}[0-9]{2}'')
+```
+
+### Regex patterns work in OR 2/3
+
+``` ids restriction/pass-regex_patterns_work_in_OR_2_3.ids
+Regex patterns work in OR 2/3
+Entity: ''IFCWALL''
+Requirements:
+Attribute: ''Name'',Pattern(''[a-z]{2}[0-9]{2}'') Pattern(''[A-Z]{2}[0-9]{2}'')
+```
+
+### Regex patterns work in OR 3/3
+
+``` ids restriction/fail-regex_patterns_work_in_OR_3_3.ids
+Regex patterns work in OR 3/3
+Entity: ''IFCWALL''
+Requirements:
+Attribute: ''Name'',Pattern(''[a-z]{3}[0-9]{2}'') Pattern(''[A-Z]{3}[0-9]{2}'')
+```
+
 ## tolerance
 
-### Comparison tolerance for floating point positive high number lower bound
+### Comparison tolerance for floating point positive high number lower bound pass
 
 ``` ids tolerance/pass-comparison_tolerance_for_floating_point_positive_high_number_lower_bound.ids
-Comparison tolerance for floating point positive high number lower bound
+Comparison tolerance for floating point positive high number lower bound pass
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''100000.''
 ```
 
-### Comparison tolerance for floating point positive high number lower bound
+### Comparison tolerance for floating point positive high number lower bound fail
 
 ``` ids tolerance/fail-comparison_tolerance_for_floating_point_positive_high_number_lower_bound.ids
-Comparison tolerance for floating point positive high number lower bound
+Comparison tolerance for floating point positive high number lower bound fail
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''100000.''
 ```
 
-### Comparison tolerance for floating point positive high number upper bound
+### Comparison tolerance for floating point positive high number upper bound pass
 
 ``` ids tolerance/pass-comparison_tolerance_for_floating_point_positive_high_number_upper_bound.ids
-Comparison tolerance for floating point positive high number upper bound
+Comparison tolerance for floating point positive high number upper bound pass
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''100000.''
 ```
 
-### Comparison tolerance for floating point positive high number upper bound
+### Comparison tolerance for floating point positive high number upper bound fail
 
 ``` ids tolerance/fail-comparison_tolerance_for_floating_point_positive_high_number_upper_bound.ids
-Comparison tolerance for floating point positive high number upper bound
+Comparison tolerance for floating point positive high number upper bound fail
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''100000.''
 ```
 
-### Comparison tolerance for floating point one lower bound
+### Comparison tolerance for floating point one lower bound fail
 
 ``` ids tolerance/fail-comparison_tolerance_for_floating_point_one_lower_bound.ids
-Comparison tolerance for floating point one lower bound
+Comparison tolerance for floating point one lower bound fail
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''1.''
 ```
 
-### Comparison tolerance for floating point one lower bound
+### Comparison tolerance for floating point one lower bound pass
 
 ``` ids tolerance/pass-comparison_tolerance_for_floating_point_one_lower_bound.ids
-Comparison tolerance for floating point one lower bound
+Comparison tolerance for floating point one lower bound pass
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''1.''
 ```
 
-### Comparison tolerance for floating point one upper bound
+### Comparison tolerance for floating point one upper bound pass
 
 ``` ids tolerance/pass-comparison_tolerance_for_floating_point_one_upper_bound.ids
-Comparison tolerance for floating point one upper bound
+Comparison tolerance for floating point one upper bound pass
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''1.''
 ```
 
-### Comparison tolerance for floating point one upper bound
+### Comparison tolerance for floating point one upper bound fail
 
 ``` ids tolerance/fail-comparison_tolerance_for_floating_point_one_upper_bound.ids
-Comparison tolerance for floating point one upper bound
+Comparison tolerance for floating point one upper bound fail
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''1.''
 ```
 
-### Comparison tolerance for floating point positive low number lower bound
+### Comparison tolerance for floating point positive low number lower bound fail
 
 ``` ids tolerance/fail-comparison_tolerance_for_floating_point_positive_low_number_lower_bound.ids
-Comparison tolerance for floating point positive low number lower bound
+Comparison tolerance for floating point positive low number lower bound fail
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''0.0000001''
 ```
 
-### Comparison tolerance for floating point positive low number lower bound
+### Comparison tolerance for floating point positive low number lower bound pass
 
 ``` ids tolerance/pass-comparison_tolerance_for_floating_point_positive_low_number_lower_bound.ids
-Comparison tolerance for floating point positive low number lower bound
+Comparison tolerance for floating point positive low number lower bound pass
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''0.0000001''
 ```
 
-### Comparison tolerance for floating point positive low number upper bound
+### Comparison tolerance for floating point positive low number upper bound pass
 
 ``` ids tolerance/pass-comparison_tolerance_for_floating_point_positive_low_number_upper_bound.ids
-Comparison tolerance for floating point positive low number upper bound
+Comparison tolerance for floating point positive low number upper bound pass
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''0.0000001''
 ```
 
-### Comparison tolerance for floating point positive low number upper bound
+### Comparison tolerance for floating point positive low number upper bound fail
 
 ``` ids tolerance/fail-comparison_tolerance_for_floating_point_positive_low_number_upper_bound.ids
-Comparison tolerance for floating point positive low number upper bound
+Comparison tolerance for floating point positive low number upper bound fail
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''0.0000001''
 ```
 
-### Comparison tolerance for floating point zero lower bound
+### Comparison tolerance for floating point zero lower bound fail
 
 ``` ids tolerance/fail-comparison_tolerance_for_floating_point_zero_lower_bound.ids
-Comparison tolerance for floating point zero lower bound
+Comparison tolerance for floating point zero lower bound fail
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''0.''
 ```
 
-### Comparison tolerance for floating point zero lower bound
+### Comparison tolerance for floating point zero lower bound pass
 
 ``` ids tolerance/pass-comparison_tolerance_for_floating_point_zero_lower_bound.ids
-Comparison tolerance for floating point zero lower bound
+Comparison tolerance for floating point zero lower bound pass
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''0.''
 ```
 
-### Comparison tolerance for floating point zero upper bound
+### Comparison tolerance for floating point zero upper bound pass
 
 ``` ids tolerance/pass-comparison_tolerance_for_floating_point_zero_upper_bound.ids
-Comparison tolerance for floating point zero upper bound
+Comparison tolerance for floating point zero upper bound pass
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''0.''
 ```
 
-### Comparison tolerance for floating point zero upper bound
+### Comparison tolerance for floating point zero upper bound fail
 
 ``` ids tolerance/fail-comparison_tolerance_for_floating_point_zero_upper_bound.ids
-Comparison tolerance for floating point zero upper bound
+Comparison tolerance for floating point zero upper bound fail
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''0.''
 ```
 
-### Comparison tolerance for floating point negative low number lower bound
+### Comparison tolerance for floating point negative low number lower bound fail
 
 ``` ids tolerance/fail-comparison_tolerance_for_floating_point_negative_low_number_lower_bound.ids
-Comparison tolerance for floating point negative low number lower bound
+Comparison tolerance for floating point negative low number lower bound fail
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''-0.0000001''
 ```
 
-### Comparison tolerance for floating point negative low number lower bound
+### Comparison tolerance for floating point negative low number lower bound pass
 
 ``` ids tolerance/pass-comparison_tolerance_for_floating_point_negative_low_number_lower_bound.ids
-Comparison tolerance for floating point negative low number lower bound
+Comparison tolerance for floating point negative low number lower bound pass
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''-0.0000001''
 ```
 
-### Comparison tolerance for floating point negative low number upper bound
+### Comparison tolerance for floating point negative low number upper bound pass
 
 ``` ids tolerance/pass-comparison_tolerance_for_floating_point_negative_low_number_upper_bound.ids
-Comparison tolerance for floating point negative low number upper bound
+Comparison tolerance for floating point negative low number upper bound pass
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''-0.0000001''
 ```
 
-### Comparison tolerance for floating point negative low number upper bound
+### Comparison tolerance for floating point negative low number upper bound fail
 
 ``` ids tolerance/fail-comparison_tolerance_for_floating_point_negative_low_number_upper_bound.ids
-Comparison tolerance for floating point negative low number upper bound
+Comparison tolerance for floating point negative low number upper bound fail
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''-0.0000001''
 ```
 
-### Comparison tolerance for floating point negative one lower bound
+### Comparison tolerance for floating point negative one lower bound fail
 
 ``` ids tolerance/fail-comparison_tolerance_for_floating_point_negative_one_lower_bound.ids
-Comparison tolerance for floating point negative one lower bound
+Comparison tolerance for floating point negative one lower bound fail
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''-1.''
 ```
 
-### Comparison tolerance for floating point negative one lower bound
+### Comparison tolerance for floating point negative one lower bound pass
 
 ``` ids tolerance/pass-comparison_tolerance_for_floating_point_negative_one_lower_bound.ids
-Comparison tolerance for floating point negative one lower bound
+Comparison tolerance for floating point negative one lower bound pass
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''-1.''
 ```
 
-### Comparison tolerance for floating point negative one upper bound
+### Comparison tolerance for floating point negative one upper bound pass
 
 ``` ids tolerance/pass-comparison_tolerance_for_floating_point_negative_one_upper_bound.ids
-Comparison tolerance for floating point negative one upper bound
+Comparison tolerance for floating point negative one upper bound pass
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''-1.''
 ```
 
-### Comparison tolerance for floating point negative one upper bound
+### Comparison tolerance for floating point negative one upper bound fail
 
 ``` ids tolerance/fail-comparison_tolerance_for_floating_point_negative_one_upper_bound.ids
-Comparison tolerance for floating point negative one upper bound
+Comparison tolerance for floating point negative one upper bound fail
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''-1.''
 ```
 
-### Comparison tolerance for floating point negative high number lower bound
+### Comparison tolerance for floating point negative high number lower bound fail
 
 ``` ids tolerance/fail-comparison_tolerance_for_floating_point_negative_high_number_lower_bound.ids
-Comparison tolerance for floating point negative high number lower bound
+Comparison tolerance for floating point negative high number lower bound fail
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''-1000000.''
 ```
 
-### Comparison tolerance for floating point negative high number lower bound
+### Comparison tolerance for floating point negative high number lower bound pass
 
 ``` ids tolerance/pass-comparison_tolerance_for_floating_point_negative_high_number_lower_bound.ids
-Comparison tolerance for floating point negative high number lower bound
+Comparison tolerance for floating point negative high number lower bound pass
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''-1000000.''
 ```
 
-### Comparison tolerance for floating point negative high number upper bound
+### Comparison tolerance for floating point negative high number upper bound pass
 
 ``` ids tolerance/pass-comparison_tolerance_for_floating_point_negative_high_number_upper_bound.ids
-Comparison tolerance for floating point negative high number upper bound
+Comparison tolerance for floating point negative high number upper bound pass
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''-1000000.''
 ```
 
-### Comparison tolerance for floating point negative high number upper bound
+### Comparison tolerance for floating point negative high number upper bound fail
 
 ``` ids tolerance/fail-comparison_tolerance_for_floating_point_negative_high_number_upper_bound.ids
-Comparison tolerance for floating point negative high number upper bound
+Comparison tolerance for floating point negative high number upper bound fail
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,''-1000000.''
 ```
 
-### Comparison tolerance for floating point range greater than zero exclusive
+### Comparison tolerance for floating point range greater than zero exclusive fail
 
 ``` ids tolerance/fail-comparison_tolerance_for_floating_point_range_greater_than_zero_exclusive.ids
-Comparison tolerance for floating point range greater than zero exclusive
+Comparison tolerance for floating point range greater than zero exclusive fail
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,xs:double MinExclusive(''0.'')
 ```
 
-### Comparison tolerance for floating point range greater than zero exclusive
+### Comparison tolerance for floating point range greater than zero exclusive pass
 
 ``` ids tolerance/pass-comparison_tolerance_for_floating_point_range_greater_than_zero_exclusive.ids
-Comparison tolerance for floating point range greater than zero exclusive
+Comparison tolerance for floating point range greater than zero exclusive pass
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,xs:double MinExclusive(''0.'')
 ```
 
-### Comparison tolerance for floating point range greater than zero inclusive
+### Comparison tolerance for floating point range greater than zero inclusive fail
 
 ``` ids tolerance/fail-comparison_tolerance_for_floating_point_range_greater_than_zero_inclusive.ids
-Comparison tolerance for floating point range greater than zero inclusive
+Comparison tolerance for floating point range greater than zero inclusive fail
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,xs:double MinInclusive(''0.'')
 ```
 
-### Comparison tolerance for floating point range greater than zero inclusive
+### Comparison tolerance for floating point range greater than zero inclusive pass
 
 ``` ids tolerance/pass-comparison_tolerance_for_floating_point_range_greater_than_zero_inclusive.ids
-Comparison tolerance for floating point range greater than zero inclusive
+Comparison tolerance for floating point range greater than zero inclusive pass
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,xs:double MinInclusive(''0.'')
 ```
 
-### Comparison tolerance for floating point range lower than zero exclusive
+### Comparison tolerance for floating point range lower than zero exclusive fail
 
 ``` ids tolerance/fail-comparison_tolerance_for_floating_point_range_lower_than_zero_exclusive.ids
-Comparison tolerance for floating point range lower than zero exclusive
+Comparison tolerance for floating point range lower than zero exclusive fail
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,xs:double MaxExclusive(''0.'')
 ```
 
-### Comparison tolerance for floating point range lower than zero exclusive
+### Comparison tolerance for floating point range lower than zero exclusive pass
 
 ``` ids tolerance/pass-comparison_tolerance_for_floating_point_range_lower_than_zero_exclusive.ids
-Comparison tolerance for floating point range lower than zero exclusive
+Comparison tolerance for floating point range lower than zero exclusive pass
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,xs:double MaxExclusive(''0.'')
 ```
 
-### Comparison tolerance for floating point range lower than zero inclusive
+### Comparison tolerance for floating point range lower than zero inclusive fail
 
 ``` ids tolerance/fail-comparison_tolerance_for_floating_point_range_lower_than_zero_inclusive.ids
-Comparison tolerance for floating point range lower than zero inclusive
+Comparison tolerance for floating point range lower than zero inclusive fail
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,xs:double MaxInclusive(''0.'')
 ```
 
-### Comparison tolerance for floating point range lower than zero inclusive
+### Comparison tolerance for floating point range lower than zero inclusive pass
 
 ``` ids tolerance/pass-comparison_tolerance_for_floating_point_range_lower_than_zero_inclusive.ids
-Comparison tolerance for floating point range lower than zero inclusive
+Comparison tolerance for floating point range lower than zero inclusive pass
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCREAL,xs:double MaxInclusive(''0.'')

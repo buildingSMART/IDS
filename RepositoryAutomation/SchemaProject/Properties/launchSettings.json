@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "SchemaProject": {
+      "commandName": "Project"
+    },
+    "single ids renamed": {
+      "commandName": "Project",
+      "commandLineArgs": "--rename-single-ifc --delete-ids-first"
+    }
+  }
+}

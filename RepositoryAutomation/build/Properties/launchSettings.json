@@ -1,0 +1,19 @@
+{
+  "profiles": {
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    },
+    "CreateTestCases": {
+      "commandName": "Project",
+      "commandLineArgs": "CreateTestCases"
+    },
+    "Standard run": {
+      "commandName": "Project"
+    },
+    "CleanSchemaProject": {
+      "commandName": "Project",
+      "commandLineArgs": "CleanSchemaProject"
+    }
+  }
+}
