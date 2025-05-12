@@ -1,14 +1,20 @@
 # Property facet
 
-IFC **Properties** are the most common way to attach data to objects and the most used IDS facet.
+IFC **Properties** are the most common way to attach data to objects in IFC, and likely the most used IDS facet.
 
-**Properties** are identified by a name (**BaseName** in IDS), such as "FireRating", and are grouped into **Property Sets** that help keep them organised by similar subject matters. Properties also have **Values**, which are of particular types, measures and sometimes units.
+**Properties** are identified by a name (**BaseName** in IDS), such as "FireRating", and are grouped into **Property Sets**, such as "Pset_WallCommon" that help keep them organised by similar subject matters. IFC Properties have **Values**, which are of particular types, which, if relevant, express units.
 
-buildingSMART provides standardised **Property Sets** and **Properties** to help seamless data exchange. For example, the "FireRating" **Property** is part of the "Pset\_WallCommon" **Property Set**.
+buildingSMART provides standardised **Property Sets** and **Properties** to help seamless data exchange, by mandating the type.
+
+| BaseName             | Property set           | Type                           |
+| -------------------- | ---------------------- | ------------------------------ |
+| ThermalTransmittance | Pset_WallCommon        | IfcThermalTransmittanceMeasure |
+| FireRating           | Pset_WallCommon        | IfcLabel                       |
+| Length               | Qto_WallBaseQuantities | IfcLengthMeasure               |
 
 Users can also define their own (custom) **Properties** and **Property Sets**, which may be unique to the project or distributed using the **Property Set** templates feature of IFC. Naturally, it is encouraged to require **Properties** that are standardised by buildingSMART before inventing custom ones.
 
-All standardised **Property Set** have a reserved name prefixed (either "Pset_" or "Qto_"); it is prohibited to use the standardised prefixes "Pset_" and "Qto_" for custom properties.
+All standardised **Property Set** start with the reserved prefixes "Pset_" or "Qto_"; these prefixes are prohibited to use for custom properties.
 
 Standardised **Properties** apply to different entities. For example, some properties such as **LoadBearing** can be applied to walls, columns, and beams, but not furniture, ducts, or cables.
 This is known as the **Applicable Entity**.
@@ -38,15 +44,15 @@ There are various types of properties in IFC. The IDS allows specifying simple [
 
 The interpretation of a list, table, bounded and enumerated property type requirement is that an IDS check should pass if any matching value of that property is present in IFC.
 If an IDS value is specified as a range (with min/maxInc/Exclusive restriction), then all IFC values should be within that range.
-For example, if an IDS specifies the value to be >2 and <5
+For example, if an IDS specifies the value to be >2 and ≤5
 
-| Lower Bound | Upper Bound | Expected Result |
-| ----------- | ----------- | --------------- |
-| 3           | 4           | ✔️            |
-|             | 4           | ❌              |
-| 3           |             | ❌              |
-| 2           | 3           | ❌              |
-| 4           | 6           | ❌              |
+| Lower Bound | Upper Bound | Expected Result | Reason                                                                               |
+| ----------- | ----------- | --------------- | ------------------------------------------------------------------------------------ |
+| 3           | 4           | ✔️            | Both lower and upper bound are within the specified range                            |
+|             | 4           | ❌              | The lower bound potentially extends below the minimum value of the restriction       |
+| 3           |             | ❌              | The upper bound potentially extends above the maximum value of the restriction       |
+| 2           | 3           | ❌              | The lower bound is invalid because the restriction is exclusive of the minimum range |
+| 3           | 5           | ✔️            | The higher bound is valid because the restriction is inclusive of the maximum range |
 
 ## Property data types
 
