@@ -1,4 +1,4 @@
-<xs:schema xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://standards.buildingsmart.org/IDS" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0.0">
+<xs:schema xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://standards.buildingsmart.org/IDS" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.1.0">
 	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
 	<xs:import namespace="http://www.w3.org/2001/XMLSchema" schemaLocation="http://www.w3.org/2001/XMLSchema.xsd"/>
 	<xs:import namespace="http://www.w3.org/2001/XMLSchema-instance" schemaLocation="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -47,6 +47,7 @@
 			<xs:element name="value" type="ids:idsValue" minOccurs="0"/>
 			<xs:element name="system" type="ids:idsValue" minOccurs="1"/>
 		</xs:sequence>
+		<xs:attribute name="uri" type="xs:anyURI" use="optional"/>
 	</xs:complexType>
 	<xs:complexType name="partOfType">
 		<xs:sequence>
@@ -90,6 +91,7 @@
 				<xs:documentation>This is the name of an IFC Defined Type, all uppercase.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
+		<xs:attribute name="uri" type="xs:anyURI" use="optional"/>
 	</xs:complexType>
 	<xs:complexType name="attributeType">
 		<xs:sequence>
@@ -108,6 +110,7 @@
 		<xs:sequence>
 			<xs:element name="value" type="ids:idsValue" minOccurs="0"/>
 		</xs:sequence>
+		<xs:attribute name="uri" type="xs:anyURI" use="optional"/>
 	</xs:complexType>
 	<xs:complexType name="requirementsType">
 		<xs:sequence maxOccurs="unbounded">
@@ -152,7 +155,6 @@
 				<xs:complexType>
 					<xs:complexContent>
 						<xs:extension base="ids:classificationType">
-							<xs:attribute name="uri" type="xs:anyURI" use="optional"/>
 							<xs:attribute name="cardinality" type="ids:conditionalCardinality" use="optional" default="required"/>
 							<xs:attribute name="instructions" type="xs:string" use="optional">
 								<xs:annotation>
@@ -181,7 +183,6 @@
 				<xs:complexType>
 					<xs:complexContent>
 						<xs:extension base="ids:propertyType">
-							<xs:attribute name="uri" type="xs:anyURI" use="optional"/>
 							<xs:attribute name="cardinality" type="ids:conditionalCardinality" use="optional" default="required"/>
 							<xs:attribute name="instructions" type="xs:string" use="optional">
 								<xs:annotation>
@@ -196,7 +197,6 @@
 				<xs:complexType>
 					<xs:complexContent>
 						<xs:extension base="ids:materialType">
-							<xs:attribute name="uri" type="xs:anyURI" use="optional"/>
 							<xs:attribute name="cardinality" type="ids:conditionalCardinality" use="optional" default="required"/>
 							<xs:attribute name="instructions" type="xs:string" use="optional">
 								<xs:annotation>
