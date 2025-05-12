@@ -38,8 +38,8 @@ Note that IFC2X3 only has buildingSMART standardised properties, not quantities.
 Instead of checking the documentation, your IDS authoring software may help you to shortlist valid **Property Sets**.
 
 In IDS facets, **Properties** may have a data type that constrains the expected format in which the property will be stored (e.g. text value, a boolean, or a number).
-If it is a number, the value will be unit-less, such as a count of a value and the unit dependent on the measure associated with teh specified `dataType`.
-Our [unit documentation](units.md) provides the list of acceptable measures and the SI unit used for their expression. For more information consult the IFC documentation at the following links:
+If it is a number, the value will be unit-less, such as a count of a value and the unit dependent on the measure associated with the specified `dataType`.
+Our [unit documentation](units.md) provides the list of acceptable measures and the SI unit used for their expression. For more information, consult the IFC documentation at the following links:
 
 - [IFC4X3_ADD2 data types](http://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/annex-b2.html)
 - [IFC4 data types](https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/link/alphabeticalorder-defined-types.htm)
