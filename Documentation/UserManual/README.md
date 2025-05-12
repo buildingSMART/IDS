@@ -14,8 +14,6 @@ IDS file creation tools and model checking tools are provided by many [software 
 
 ## The IDS structure
 
-![IDS Diagram](Graphics/IDS-1.0-schema.svg)
-
 Each IDS file can be described with [metadata](ids-metadata.md), and can contain one or more [specifications](specifications.md). Specifications consist of two parts: applicability - describing what elements are subject to this specification, and requirements - listing what those applicable elements should or shouldn't have. Both applicability and requirements are built with facets, such as property, entity, classification, material or partOf.
 
 ## How to start
@@ -31,13 +29,13 @@ That's it! You may also find more sample IDS files in the [Examples](../Examples
 ## Learn more about IDS
 
  1. [How **Specifications** work?](specifications.md)
- 2. [Guidelines on specifying good **Specification** metadata](ids-metadata.md)
- 3. [Learn how to specify **Complex Restrictions**](restrictions.md)
- 4. [Learn how to use the **Entity Facet**](entity-facet.md)
- 5. [Learn how to use the **Attribute Facet**](attribute-facet.md)
- 6. [Learn how to use the **Classification Facet**](classification-facet.md)
- 7. [Learn how to use the **Property Facet**](property-facet.md)
- 8. [Learn how to use the **Material Facet**](material-facet.md)
- 9. [Learn how to use the **PartOf Facet**](partof-facet.md)
- 10. [Are you a software developer? Read the developer guide!](../ImplementersDocumentation/developer-guide.md)
+ 1. [Guidelines on specifying good **Specification** metadata](ids-metadata.md)
+ 1. [Learn how to specify **Complex Restrictions**](restrictions.md)
+ 1. [Learn how to use the **Entity Facet**](entity-facet.md)
+ 1. [Learn how to use the **Attribute Facet**](attribute-facet.md)
+ 1. [Learn how to use the **Classification Facet**](classification-facet.md)
+ 1. [Learn how to use the **Property Facet**](property-facet.md)
+ 1. [Learn how to use the **Material Facet**](material-facet.md)
+ 1. [Learn how to use the **PartOf Facet**](partof-facet.md)
+ 1. [Are you a software developer? Read the developer guide!](../ImplementersDocumentation/developer-guide.md)
 
