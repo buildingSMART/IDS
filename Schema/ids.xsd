@@ -50,9 +50,13 @@
 		<xs:attribute name="uri" type="xs:anyURI" use="optional"/>
 	</xs:complexType>
 	<xs:complexType name="partOfType">
-		<xs:sequence>
+		<xs:choice maxOccurs="unbounded">
 			<xs:element name="entity" type="ids:entityType" minOccurs="1"/>
-		</xs:sequence>
+			<xs:element name="classification" type="ids:classificationType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="attribute" type="ids:attributeType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="property" type="ids:propertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="material" type="ids:materialType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:choice>
 		<xs:attribute name="relation" type="ids:relations" use="optional" />
 	</xs:complexType>
 	<xs:complexType name="applicabilityType">
