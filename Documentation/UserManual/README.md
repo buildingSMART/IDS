@@ -2,7 +2,7 @@
 
 <img src="Graphics/IDS-logo-with-letters.png" alt="IDS Logo" width="300"/>
 
-**Information Delivery Specification (IDS)** is a buildingSMART standard for specifying and checking simple information requirements from IFC models. It is designed as a free, lightweight, standardised approach to model checking. Read more on the official website: https://www.buildingsmart.org/standards/bsi-standards/information-delivery-specification-ids/
+**Information Delivery Specification (IDS)** is a buildingSMART standard for specifying and checking simple information requirements from IFC models. It is designed as a free, lightweight, standardised approach to model checking. Read more on the [official website](https://www.buildingsmart.org/standards/bsi-standards/information-delivery-specification-ids/).
 
 ## Introduction
 
@@ -38,4 +38,3 @@ That's it! You may also find more sample IDS files in the [Examples](../Examples
  1. [Learn how to use the **Material Facet**](material-facet.md)
  1. [Learn how to use the **PartOf Facet**](partof-facet.md)
  1. [Are you a software developer? Read the developer guide!](../ImplementersDocumentation/developer-guide.md)
-
