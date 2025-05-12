@@ -28,7 +28,7 @@ Following naming conventions and accurately describing elements are critical to 
 | Parameter | Required | Restrictions Allowed | Allowed Values                                          | Meaning                                                                                                                |
 | --------- | -------- | -------------------- | ------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | **Name**  | ✔️     | ✔️                 | A valid attribute name from the IFC schema.             | The attribute must exist and have a non-empty value.                                                                   |
-| **Value** | ❌       | ✔️                 | Any value appropriate to the data type of the attribute | The value of the attribute must match, see [DataType documentation](DataTypes.md#xml-base-types) for more information. |
+| **Value** | ❌       | ✔️                 | Any value appropriate to the data type of the attribute | The value of the attribute must match, see [DataType documentation](../ImplementersDocumentation/DataTypes.md#xml-base-types) for more information. |
 
 ## Examples
 
