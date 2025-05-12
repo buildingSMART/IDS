@@ -12,9 +12,9 @@ buildingSMART provides standardised **Property Sets** and **Properties** to help
 | FireRating           | Pset_WallCommon        | IfcLabel                       |
 | Length               | Qto_WallBaseQuantities | IfcLengthMeasure               |
 
-Users can also define their own (custom) **Properties** and **Property Sets**, which may be unique to the project or distributed using the **Property Set** templates feature of IFC. Naturally, it is encouraged to require **Properties** that are standardised by buildingSMART before inventing custom ones.
+Users can also define custom **Properties** and **Property Sets**, which may be unique to the project or distributed using the **Property Set** templates feature of IFC. Naturally, it is encouraged to require **Properties** that are standardised by buildingSMART before inventing custom ones.
 
-All standardised **Property Set** start with the reserved prefixes "Pset_" or "Qto_"; these prefixes are prohibited to use for custom properties.
+All standardised **Property Sets** start with the reserved prefixes "Pset_" or "Qto_"; these prefixes are prohibited to use for custom properties.
 
 Standardised **Properties** apply to different entities. For example, some properties such as **LoadBearing** can be applied to walls, columns, and beams, but not furniture, ducts, or cables.
 This is known as the **Applicable Entity**.
@@ -42,17 +42,29 @@ Instead of checking the documentation, your IDS authoring software may help you 
 
 There are various types of properties in IFC. The IDS allows specifying simple [single values](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm), [bounded values](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyBoundedValue.htm), [lists](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyListValue.htm), [tables](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTableValue.htm), and [enumerations](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyEnumeratedValue.htm), while [~~complex properties~~](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcComplexProperty.htm) and [~~reference values~~](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyReferenceValue.htm) are not supported by IDS.
 
-The interpretation of a list, table, bounded and enumerated property type requirement is that an IDS check should pass if any matching value of that property is present in IFC.
-If an IDS value is specified as a range (with min/maxInc/Exclusive restriction), then all IFC values should be within that range.
-For example, if an IDS specifies the value to be >2 and ≤5
+The interpretation of a list, table, bounded and enumerated property changes depending on the IDS requirement as follows:
 
-| Lower Bound | Upper Bound | Expected Result | Reason                                                                               |
-| ----------- | ----------- | --------------- | ------------------------------------------------------------------------------------ |
-| 3           | 4           | ✔️            | Both lower and upper bound are within the specified range                            |
-|             | 4           | ❌              | The lower bound potentially extends below the minimum value of the restriction       |
-| 3           |             | ❌              | The upper bound potentially extends above the maximum value of the restriction       |
-| 2           | 3           | ❌              | The lower bound is invalid because the restriction is exclusive of the minimum range |
-| 3           | 5           | ✔️            | The higher bound is valid because the restriction is inclusive of the maximum range |
+- If the IDS value is a single value, at least one of the IFC values should match.
+- If the IDS value is a restriction (with min/maxInc/Exclusive ), all IFC values should respect the range.
+
+Furthermore, IFC bounded value properties follow specific behaviours:
+
+| IDS value | IFC Lower Bound | IFC Upper Bound | Expected Result | Reason                                                                               |
+| :-------: | :-------------: | :-------------: | :-------------: | ------------------------------------------------------------------------------------ |
+| >2 and ≤5 |        3        |        4        |      ✔️       | Both lower and upper bound are within the specified range                            |
+| >2 and ≤5 |                 |        4        |       ❌        | The lower bound potentially extends below the minimum value of the restriction       |
+| >2 and ≤5 |        3        |                 |       ❌        | The upper bound potentially extends above the maximum value of the restriction       |
+| >2 and ≤5 |        2        |        3        |       ❌        | The lower bound is invalid because the restriction is exclusive of the minimum range |
+| >2 and ≤5 |        3        |        5        |      ✔️       | The higher bound is valid because the restriction is inclusive of the maximum range  |
+|     3     |        2        |        4        |      ✔️       | The lower and upper bounds include the specified value                               |
+|     2     |        2        |        4        |      ✔️       | The lower bound matches the specified value                                          |
+|     2     |        2        |                 |      ✔️       | The only provided bound is compatible with the specified value                       |
+|     2     |                 |        2        |      ✔️       | The only provided bound is compatible with the specified value                       |
+|     5     |        2        |        4        |       ❌        | The lower and upper bounds exclude the specified value                               |
+|     5     |                 |        4        |       ❌        | The only provided bound is not compatible with the specified value                   |
+| >2 and ≤5 |                 |                 |       ❌        | at least one of the lower and upper bounds is required                               |
+|     3     |                 |                 |       ❌        | at least one of the lower and upper bounds is required                               |
+|           |        2        |                 |      ✔️       | No value comparison is performed, and at least one value is provided                 |
 
 ## Property data types
 
