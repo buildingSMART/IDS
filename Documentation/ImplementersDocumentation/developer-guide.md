@@ -14,9 +14,10 @@ However, a valid IDS file requires more than bare XML schema compliance; buildin
 
 If you are writing software to read and author IDS files only, you **must** meet the following criteria:
 
-- All IDS software must read and write valid IDS files only.
+- All IDS software must read and write valid IDS files only. If any recovery is needed to load an incorrect IDS file, the user should be notified of the problem, and of any automated recovery event.
 - No proprietary extensions are allowed. If auxiliary systems (e.g. additional loaded metadata) are used to augment IDS or the correlating IFC model, they should be made clear to the user that it is external to IDS.
 - No data loss shall occur. Loading an IDS and saving the IDS shall preserve all of its information. Minor syntax formatting changes are allowed, so long as the data remains unchanged.
+- The order of xml entities within any `xs:sequence` of the schema should be respected. The use of this xml feature is intended to simplify the comparison of contents across files.
 
 In addition, it is highly recommended to also provide the following features for users:
 
