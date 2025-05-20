@@ -14,7 +14,7 @@ buildingSMART provides standardised **Property Sets** and **Properties** to help
 
 Users can also define custom **Properties** and **Property Sets**, which may be unique to the project or distributed using the **Property Set** templates feature of IFC. Naturally, it is encouraged to require **Properties** that are standardised by buildingSMART before inventing custom ones.
 
-All standardised **Property Sets** start with the reserved prefixes "Pset_" or "Qto_"; these prefixes are prohibited from use for custom properties.
+All standardised **Property Sets** start with the reserved prefixes "Pset_" or "Qto_"; these prefixes are prohibited for custom properties.
 
 Standardised **Properties** apply to different entities. For example, some properties such as **LoadBearing** can be applied to walls, columns, and beams, but not furniture, ducts, or cables.
 This is known as the **Applicable Entity**.
