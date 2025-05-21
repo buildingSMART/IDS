@@ -1,167 +1,131 @@
-# Facet validity
-
-This working document defines the possible configurations and intents for the various facets and their configurations.
-
 ## Entities
 
-IDS Wall - SubType Marco
-IDS Wall - SubType USERDEFINED
+### Required fields
 
-WALL - PARAPET
-WALL - USERDEFINED -> Claudio's Type
-WALL - USERDEFINED -> Marco's Type
+`name` is mandatory.
+`predefinedType` is optional.
 
-NAME is mandatory.
+### Entity facet interpretation
 
-| Fields Entered   | Required | Optional | Prohibited | Applicability |
-| ---------------- | -------- | -------- | ---------- | ------------- |
-| NAME             | ✅       | ❌       | ❌         | ✅            |
-| NAME / [SUBTYPE] | ✅       | ❌       | ❌         | ✅            |
+| IDS Cardinality | Entity Name | Entity Predefined Type | Configuration Allowed? | IDS Interpretation                                                                                         |
+| --------------- | ----------- | ---------------------- | ------- | ---------------------------------------------------------------------------------------------------------- |
+| REQUIRED        | IFCEXAMPLE  | -                      | ✅      | Applicable objects must be of entity IFCEXAMPLE.                                                           |
+| REQUIRED        | IFCEXAMPLE  | EXAMPLE                | ✅      | Applicable objects must be of entity IFCEXAMPLE and predefined type EXAMPLE.                               |
+| OPTIONAL        | IFCEXAMPLE  |                        | ❌      | Optionality does not make sense - no added field to require.                                               |
+| OPTIONAL        | IFCEXAMPLE  | EXAMPLE                | ✅      | If applicable object is an IFCEXAMPLE entity, it must also have the EXAMPLE predefined type.               |
+| PROHIBITED      | IFCEXAMPLE  |                        | ✅      | Applicable objects can not be of IFCEXAMPLE entity.                                                        |
+| PROHIBITED      | IFCEXAMPLE  | EXAMPLE                | ✅      | Applicable objects can be of IFCEXAMPLE entity (or else), but not if it is of the EXAMPLE predefined type. |
 
-Optional Entity requirements have no meaning? An Applicable Element is a IFCDOOR or it is not.
+### IFC Predefined Types
 
-Always express entity in positive terms.
-Disallowed IFC types can be expressed prohibiting their applicability.
+The logic for the identification of `predefinedType` in an IFC file:
 
-The logic for the identification of values for SUBTYPE is to return an enumeration of values:
+----**IF:** [the object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm) is defined by [a type](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm) (look for [IfcRelDefinesByType](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm) relation)
 
-1. If a type is defined via the IfcRelDefinesByType relation
-  the PredefinedType of the type overrides the entity's PredefinedType (which should be empty according to IFC documentation)
-  1.1 if Type's PredefinedType is .USERDEFINED.
-    -> IfcElementType.ElementType
-    -> .USERDEFINED.
-  1.2 else Type's PredefinedType (if not null)
-    -> Type's - PredefinedType
-2. the value of the direct attribute PredefinedType
-  2.1 if the attribute PredefinedType == .USERDEFINED. then the value of the attribute IfcElement/ObjectType is used
-  2.2 else entity's PredefinedType (if not null)
-3. TODO document the same for ElementType and ProcessType
+-------- **IF:** the [type object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm) has a `PredefinedType` with a value `USERDEFINED`
 
-TODO: check if the validation service of IFC prevents entity level types to be defined when type's type is specified.
+------------ The value of the predefined type is in the `ElementType` attribute of that [type object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm). ⬅️
 
--> Userdefined
--> whatever the value is in the ifc
+-------- **ELSE IF:** the [type object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm) has a `PredefinedType` with a value other than `USERDEFINED`
 
-REQUIRED
+------------ The value of the predefined type is in the `PredefinedType` attribute of that [type object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm). ⬅️
 
-Name: Entity name must match with the constraint (enumerations/regex included)
-Name and PREDEFINEDTYPE:
-  IDS: IFCWALL/.USERDEFINED. -> IFC Wall with PREDEFINEDTYPE = .userdefined. -> Pass
-  IDS: IFCWALL/.USERDEFINED. -> IFC Wall with PREDEFINEDTYPE = .userdefined. with ObjectType = "FOO" -> Pass
-  IDS: IFCWALL/FOO -> IFC Wall with PREDEFINEDTYPE = .userdefined. with ObjectType = "FOO" -> Pass
+-------- **ELSE:** the [type object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm) does not define the predefined type - look in the object instance. ⬇️
 
-APPLICABILITY
+---- **ELSE:**
 
-Both must match with the constraint (enumerations/regex included)
+-------- **IF:** [the object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm) has a `PredefinedType` with a value `USERDEFINED`.
+
+------------ The value of the predefined type is in the `ObjectType` attribute of that [object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm). ⬅️
+
+--------**ELSE IF:** [the object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm) has a `PredefinedType` with a value other than `USERDEFINED`
+
+------------ The value of the predefined type is in the `PredefinedType` attribute of that [object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm). ⬅️
+
+-------- **ELSE:** the [object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm) does not have a predefined type. 🔚
+
+**Examples:**
+
+| IDS Entity | IDS Predefined Type | IFC Entity | IFC Predefined Type | IFC Element/Object Type | IFCxIDS Result |
+| ---------- | ------------------- | ---------- | ------------------- | ----------------------- | -------------- |
+| IFCWALL    | USERDEFINED         | IFCWALL    | USERDEFINED         | -                       | ✅             |
+| IFCWALL    | USERDEFINED         | IFCWALL    | USERDEFINED         | FOO                     | ✅             |
+| IFCWALL    | FOO                 | IFCWALL    | USERDEFINED         | FOO                     | ✅             |
+| IFCWALL    | FOO                 | IFCWALL    | FOO                 | -                       | ✅             |
 
 ## Attribute
 
-NAME is mandatory.
+### Required fields
 
-| Fields Entered | Required | Optional | Prohibited | Applicability |
-| -------------- | -------- | -------- | ---------- | ------------- |
-| NAME           | ✅       | ❌       | ✅         | ✅            |
-| NAME / [VALUE] | ✅       | ✅       | ✅         | ✅            |
+`name` is mandatory. `value` is optional.
 
 ### Attribute facet interpretation
 
-REQUIRED
-
-NAME: The Attribute should be populated (i.e. not null) (this is different from the Property facets, which accepts a null)
-NAME/VALUE: all matching attributes must match the value constraints (excludes null)
-
-PROHIBITED
-
-- NAME: The Attribute should not be populated
-- NAME / [VALUE]: all matching attributes cannot match the value constraints (null is valid!)
-  - Name = Red IFC: NULL -> pass
-  - Name = Red IFC: green -> pass
-  - Name = Red IFC: red -> fail
-
-OPTIONAL
-
-NAME / [VALUE]: the attribute value could either be null or match the constraint
-
-APPLICABILITY
-
-- NAME: Any entity where the Attribute is not null
-- NAME/VALUE: entity where the Attribute and the value constraint is satisfied (null is not evaluated)
+| IDS Cardinality | Attribute Name | Attribute Value | Configuration Allowed? | IDS Interpretation                                                                                                            |
+| --------------- | -------------- | --------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| REQUIRED        | Example        | -               | ✅                     | Applicable objects must have the attribute *Example* populated (i.e. not null).                                               |
+| REQUIRED        | Example        | Answer          | ✅                     | The attribute *Example* must have the value *Answer* (on applicable objects).                                                 |
+| OPTIONAL        | Example        | Answer          | ✅                     | If the attribute *Example* exists on applicable objects, it needs to have the value *Answer*.                                 |
+| OPTIONAL        | Example        | -               | ❌                     | Optionality does not make sense - no added field to require.                                                                  |
+| PROHIBITED      | Example        | -               | ✅                     | The attribute *Example* must not exist on applicable objects, even if empty.                                                  |
+| PROHIBITED      | Example        | Answer          | ✅                     | The attribute *Example* must not have the value *Answer* (on applicable objects). Null is also an allowed value in this case. |
 
 ## Properties
 
-PSET and NAME are mandatory.
+### Required fields
 
-| Fields Entered                     | Required | Optional | Prohibited | Applicability |
-| ---------------------------------- | -------- | -------- | ---------- | ------------- |
-| PSET / NAME                        | ✅       | ❌       | ✅         | ✅            |
-| PSET / NAME / [DATATYPE]           | ✅       | ✅       | ❌         | ✅            |
-| PSET / NAME / [DATATYPE] / [VALUE] | ✅       | ✅       | ❌         | ✅            |
-| PSET / NAME / [VALUE]              | ❌       | ❌       | ❌         | ❌            |
-
-⚠️TODO: should we discuss the case of multiple PSET / NAME matches that is possible with patterns?
-
-For an evaluation of the rationale, see [these minutes](https://github.com/buildingSMART/IDS/issues/206#issuecomment-1820696088).
-
-⚠️TODO: is IFCLABEL($) valid IFC?
+Both `propertySet` and `baseName` are mandatory. Both `dataType*` and `value` are optional, but if `value` is provided, it requires also `dataType*`. Optional attribute `uri` is only a metadata, not subject to IDS checking.
 
 ### Property facet interpretation
 
-REQUIRED
+| IDS Cardinality | Property Set | Base Name | Data Type | Value | Configuration Allowed? | IDS Interpretation                                                                                                                    |
+| --------------- | ------------ | --------- | --------- | ----- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| REQUIRED        | My_Set       | My_Prop   | -         | -     | ✅                     | Applicable objects need to have the property *My_Prop* in the *My_Set*.                                                               |
+| REQUIRED        | My_Set       | My_Prop   | IFCTEXT   | -     | ✅                     | (as above) + of data type *IFCTEXT*.                                                                                                  |
+| REQUIRED        | My_Set       | My_Prop   | IFCTEXT   | Test  | ✅                     | (as above) + of value *Test*.                                                                                                         |
+| REQUIRED        | My_Set       | My_Prop   | -         | Test  | ❌                     | Not allowed. If value is specified, it requires specification of a data type.                                                         |
+| OPTIONAL        | My_Set       | My_Prop   | -         | -     | ❌                     | Optionality does not make sense - no added field to require.                                                                          |
+| OPTIONAL        | My_Set       | My_Prop   | IFCTEXT   | -     | ✅                     | If applicable object have the property *My_Prop* in *My_Set* set, it needs to be an *IFCTEXT* data type. Lack of property is allowed. |
+| OPTIONAL        | My_Set       | My_Prop   | IFCTEXT   | Test  | ✅                     | (as above) + have the value equal *Test*. Lack of property is allowed.                                                                |
+| OPTIONAL        | My_Set       | My_Prop   | -         | Test  | ❌                     | Not allowed. If value is specified, it requires specification of a data type.                                                         |
+| PROHIBITED      | My_Set       | My_Prop   | -         | -     | ✅                     | The property *My_Prop* must not exist, regardless of the value, even if empty.                                                        |
+| PROHIBITED      | My_Set       | My_Prop   | IFCTEXT   | -     | ❌                     | Not allowed. Either prohibit whole property or specify values with REQUIRED/OPTIONAL.                                                 |
+| PROHIBITED      | My_Set       | My_Prop   | IFCTEXT   | Test  | ❌                     | Not allowed. Either prohibit whole property or specify values with REQUIRED/OPTIONAL.                                                 |
+| PROHIBITED      | My_Set       | My_Prop   | -         | Test  | ❌                     | Not allowed. If value is specified, it requires specification of a data type.                                                         |
 
-- IDS has PSET/PNAME : A pset/pname has to exist (null is accepted as a pass, any value of any datatype is accepted), whenever possible specifying the dataType is recommended.
-- IDS HAS PSET/PNAME/DATATYPE: A pset pname has to exist. The IFC value has to be of the required IDS datatype (check Empty values against validation) - Null values should be failing
-- IDS HAS PSET/PNAME/DATATYPE/VALUE: Like the previous, PLUS: the IFC value needs to comply with the IDS restriction
-
-OPTIONAL
-
-IDS has: PSET/PNAME : This is useless -> Prohibited by the tool
-IDS HAS PSET/PNAME/DATATYPE: We might not have the property at all -> pass. If we have the property: the value has got to be non null and of correct data type
-IDS HAS PSET/PNAME/DATATYPE/VALUE: We might not have the property at all -> pass. If we have the property: the value has got to be non null and of correct data type. The IFC value must comply with the IDS VALUE restriction
-
-PROHIBITED
-
-IDS has: PSET/PNAME: We cannot have the pset/pname combination in the IFC file, regardless of any value
-IDS HAS PSET/PNAME/DATATYPE: This does not sound like a valid use case -> Prohibited by the tool
-IDS HAS PSET/PNAME/DATATYPE/VALUE: This does not sound like a valid use case -> Prohibited by the tool (there are ways to limit the values accepted in the positive by the REQUIRED/OPTIONAL branches)
-
-APPLICABILITY
-
-IDS has: PSET/PNAME : A pset/pname exists (null is accepted as a pass, any value of any datatype is accepted)
-IDS HAS PSET/PNAME/DATATYPE: A pset pname exists. The IFC value type has to match the required IDS datatype (null values fail)
-IDS HAS PSET/PNAME/DATATYPE/VALUE: Like the previous, PLUS: the IFC value needs to comply with the IDS restriction
+<!-- For an evaluation of the rationale, see [these minutes](https://github.com/buildingSMART/IDS/issues/206#issuecomment-1820696088). -->
 
 ## Classification
 
-We want to change the specs so that SYSTEM is mandatory (schema change!!!)
+The `system` field is mandatory.
+Optional attribute `uri` is only a metadata, not subject to IDS checking.
 
-| Fields Entered   | Required | Optional | Prohibited | Applicability | Notes                                                |
-| ---------------- | -------- | -------- | ---------- | ------------- | ---------------------------------------------------- |
-|                  | ❌       | ❌       | ❌         | ❌            | prohibited in schema, audit to exclude empty strings |
-| [VALUE]          | ❌       | ❌       | ❌         | ❌            | prohibited in schema, audit to exclude empty strings |
-| SYSTEM           | ✅       | ❌       | ✅         | ✅            |                                                      |
-| SYSTEM / [VALUE] | ✅       | ✅       | ✅         | ✅            |                                                      |
+| Fields Entered   | Required | Optional | Prohibited | Applicability | Notes |
+| ---------------- | -------- | -------- | ---------- | ------------- | ----- |
+| `system`         | ✅       | ❌       | ✅         | ✅            |       |
+| `system`,`value` | ✅       | ✅       | ✅         | ✅            |       |
 
 Optional = If the applicable element has classifications at least one should match the value/system.
 
 REQUIRED
 
-- SYSTEM: ANY IFC VALUE -> Pass
+- `system`: ANY IFC VALUE -> Pass
   - entity -> at least one classifications for the entity being tested must match system and its value must be not null
-- SYSTEM/VALUE
-  - SYSTEM AND VALUE match: at least one classification entry in the ifc file, matches both system and value
+- `system`/`value`
+  - `system` AND `value` match: at least one classification entry in the ifc file, matches both system and value
     entity -> at least one classifications for the entity being tested must match system and value
 
 OPTIONAL
 
-- SYSTEM: this can never fail, we should never have a requirement that cannot fail, so the solution is to provide a broad inclusive value instead (e.g. regex)
-- SYSTEM/VALUE:
+- `system`: this can never fail, we should never have a requirement that cannot fail, so the solution is to provide a broad inclusive value instead (e.g. regex)
+- `system`/`value`:
   - entity -> if a classifications system exists for the entity being tested its value must match
     - Todo: null would be acceptable
 
 PROHIBITED
 
-- SYSTEM: no specification of the entity can match the system
-- SYSTEM/VALUE
+- `system`: no specification of the entity can match the system
+- `system`/`value`
   - UNICLASS/EF_25_10: UNICLASS/EF_25_10 -> fail
   - UNICLASS/EF_25_10: OMNICLASS/EF_25_10 -> pass
   - UNICLASS/EF_25_10: UNICLASS/EF_25_30_25 -> pass
@@ -169,13 +133,18 @@ PROHIBITED
 
 APPLICABILITY
 
-- SYSTEM: ANY IFC VALUE -> Pass
+- `system`: ANY IFC VALUE -> Pass
   - entity -> at least one classifications for the entity being tested must match system and its value must be not null
-- SYSTEM/VALUE
-  - SYSTEM AND VALUE match: at least one classification entry in the ifc file, matches both system and value
+- `system`/`value`
+  - `system` AND `value` match: at least one classification entry in the ifc file, matches both system and value
     entity -> at least one classifications for the entity being tested must match system and value
 
+
+
+
 ## Material
+
+Optional attribute `uri` is only a metadata, not subject to IDS checking.
 
 - in the requirements we have to allow multiple materials to enable prohibited/optional (already possible)
 - in the applicability we have to allow multiple materials to target elements with multiple materials in AND (already possible)
@@ -183,7 +152,7 @@ APPLICABILITY
 | Fields Entered | Required | Optional | Prohibited | Applicability |
 | -------------- | -------- | -------- | ---------- | ------------- |
 |                | ✅       | ❌       | ✅         | ✅            |
-| [VALUE]        | ✅       | ✅       | ✅         | ✅            |
+| `value`        | ✅       | ✅       | ✅         | ✅            |
 
 Optional is intended to help provide a closed list of values (useful for bim authors).
 
@@ -226,13 +195,10 @@ The relevant conversation issue is [#198](https://github.com/buildingSMART/IDS/i
 
 ## PartOf
 
-Should relation become a list? NO! Keep as an attribute with one value, because we can distinguish (e.g. sensor/door) filtering by type.
-We encourage a smart use of type filtering to avoid false positives and negatives (⚠️TODO: document this meaningfully)
-
-| Fields Entered      | Required | Optional | Prohibited | Applicability |
-| ------------------- | -------- | -------- | ---------- | ------------- |
-| ENTITY              | ✅       | ❌       | ✅         | ✅            |
-| ENTITY / [RELATION] | ✅       | ❌       | ✅         | ✅            |
+| Fields Entered        | Required | Optional | Prohibited | Applicability |
+| --------------------- | -------- | -------- | ---------- | ------------- |
+| `entity`              | ✅       | ❌       | ✅         | ✅            |
+| `entity`, `relation*` | ✅       | ❌       | ✅         | ✅            |
 
 REQUIRED:
 
@@ -256,21 +222,5 @@ APPLICABILITY:
 - Entity: A relation exists to the type of entity required (traversing all valid relationships)
 - Entity/Relation: A relation exists to the type of entity required (traversing only the defined relationship type)
 
-## Questions
-
-### restriction clone
-
-Spinning our own `xs:restriction` alternative, would remove some issues with basetype and embedded xml entities
-
-A special case of the restriction for values would give us the opportunity to explicitly allow/disallow a few scenarios, such as
-
-- Null
-  - Must be null
-  - Cannot be null
-  - Null is accepted as one of the possible values
-- N/A as not applicable?
-- N/A as not available?
-
-With these logical cases handled explicitly in the in check perhaps scenarios become more straightforward.
-
-However this needs to be evaluated carefully for both the applicability and requirements cases.
+___
+\* the field is an XML attribute
