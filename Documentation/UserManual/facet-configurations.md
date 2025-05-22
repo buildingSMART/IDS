@@ -24,11 +24,11 @@ The logic for the identification of `predefinedType` in an IFC file:
 
 -------- **IF:** the [type object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm) has a `PredefinedType` with a value `USERDEFINED`
 
------------- The value of the predefined type is in the `ElementType` attribute of that [type object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm). ⬅️
+------------ The value of the predefined type is in the `ElementType` attribute of that [type object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm). ✅
 
 -------- **ELSE IF:** the [type object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm) has a `PredefinedType` with a value other than `USERDEFINED`
 
------------- The value of the predefined type is in the `PredefinedType` attribute of that [type object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm). ⬅️
+------------ The value of the predefined type is in the `PredefinedType` attribute of that [type object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm). ✅
 
 -------- **ELSE:** the [type object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm) does not define the predefined type - look in the object instance. ⬇️
 
@@ -36,11 +36,11 @@ The logic for the identification of `predefinedType` in an IFC file:
 
 -------- **IF:** [the object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm) has a `PredefinedType` with a value `USERDEFINED`.
 
------------- The value of the predefined type is in the `ObjectType` attribute of that [object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm). ⬅️
+------------ The value of the predefined type is in the `ObjectType` attribute of that [object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm). ✅
 
 --------**ELSE IF:** [the object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm) has a `PredefinedType` with a value other than `USERDEFINED`
 
------------- The value of the predefined type is in the `PredefinedType` attribute of that [object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm). ⬅️
+------------ The value of the predefined type is in the `PredefinedType` attribute of that [object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm). ✅
 
 -------- **ELSE:** the [object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm) does not have a predefined type. 🔚
 
@@ -65,8 +65,8 @@ The logic for the identification of `predefinedType` in an IFC file:
 | --------------- | -------------- | --------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | REQUIRED        | Example        | -               | ✅                     | Applicable objects must have the attribute *Example* populated (i.e. not null).                                               |
 | REQUIRED        | Example        | Answer          | ✅                     | The attribute *Example* must have the value *Answer* (on applicable objects).                                                 |
-| OPTIONAL        | Example        | Answer          | ✅                     | If the attribute *Example* exists on applicable objects, it needs to have the value *Answer*.                                 |
 | OPTIONAL        | Example        | -               | ❌                     | Optionality does not make sense - no added field to require.                                                                  |
+| OPTIONAL        | Example        | Answer          | ✅                     | If the attribute *Example* exists on applicable objects, it needs to have the value *Answer*.                                 |
 | PROHIBITED      | Example        | -               | ✅                     | The attribute *Example* must not exist on applicable objects, even if empty.                                                  |
 | PROHIBITED      | Example        | Answer          | ✅                     | The attribute *Example* must not have the value *Answer* (on applicable objects). Null is also an allowed value in this case. |
 
@@ -97,101 +97,44 @@ Both `propertySet` and `baseName` are mandatory. Both `dataType*` and `value` ar
 
 ## Classification
 
-The `system` field is mandatory.
-Optional attribute `uri` is only a metadata, not subject to IDS checking.
+### Required fields
 
-| Fields Entered   | Required | Optional | Prohibited | Applicability | Notes |
-| ---------------- | -------- | -------- | ---------- | ------------- | ----- |
-| `system`         | ✅       | ❌       | ✅         | ✅            |       |
-| `system`,`value` | ✅       | ✅       | ✅         | ✅            |       |
+The `system` field is mandatory, the `value` is optional. Optional attribute `uri` is only a metadata, not subject to IDS checking.
 
-Optional = If the applicable element has classifications at least one should match the value/system.
+### Classification facet interpretation
 
-REQUIRED
-
-- `system`: ANY IFC VALUE -> Pass
-  - entity -> at least one classifications for the entity being tested must match system and its value must be not null
-- `system`/`value`
-  - `system` AND `value` match: at least one classification entry in the ifc file, matches both system and value
-    entity -> at least one classifications for the entity being tested must match system and value
-
-OPTIONAL
-
-- `system`: this can never fail, we should never have a requirement that cannot fail, so the solution is to provide a broad inclusive value instead (e.g. regex)
-- `system`/`value`:
-  - entity -> if a classifications system exists for the entity being tested its value must match
-    - Todo: null would be acceptable
-
-PROHIBITED
-
-- `system`: no specification of the entity can match the system
-- `system`/`value`
-  - UNICLASS/EF_25_10: UNICLASS/EF_25_10 -> fail
-  - UNICLASS/EF_25_10: OMNICLASS/EF_25_10 -> pass
-  - UNICLASS/EF_25_10: UNICLASS/EF_25_30_25 -> pass
-  - UNICLASS/EF_25_10: OMNICLASS/EF_25_30_25 -> pass
-
-APPLICABILITY
-
-- `system`: ANY IFC VALUE -> Pass
-  - entity -> at least one classifications for the entity being tested must match system and its value must be not null
-- `system`/`value`
-  - `system` AND `value` match: at least one classification entry in the ifc file, matches both system and value
-    entity -> at least one classifications for the entity being tested must match system and value
-
-
+| IDS Cardinality | Classification System | Classification Value | Configuration Allowed? | IDS Interpretation                                                                                                            |
+| --------------- | --------------------- | -------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| REQUIRED        | Example               | -                    | ✅                     | Applicable objects must have the classification system *Example* populated (i.e. not null).                                               |
+| REQUIRED        | Example               | Code                 | ✅                     | The classification *Example* must have the value *Code* (on applicable objects).                                                 |
+| OPTIONAL        | Example               | -                    | ❌                     | Not allowed. Optionality does not make sense - no added field to require.                                                                  |
+| OPTIONAL        | Example               | Code                 | ✅                     | If the classification *Example* exists on applicable objects, it needs to have the value *Code*.                                 |
+| PROHIBITED      | Example               | -                    | ✅                     | The classification *Example* must not exist on applicable objects, even if empty.                                                  |
+| PROHIBITED      | Example               | Code                 | ✅                     | The classification *Example* must not have the value *Code* (on applicable objects). Null is also an allowed value in this case. |
 
 
 ## Material
 
-Optional attribute `uri` is only a metadata, not subject to IDS checking.
+The `value` field is optional. Optional attribute `uri` is only a metadata, not subject to IDS checking.
 
-- in the requirements we have to allow multiple materials to enable prohibited/optional (already possible)
-- in the applicability we have to allow multiple materials to target elements with multiple materials in AND (already possible)
+| IDS Cardinality | Material Value | Configuration Allowed? | IDS Interpretation                                                                               |
+| --------------- | -------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| REQUIRED        | -              | ✅                     | Applicable objects must have at least one related material, no matter its name.                                      |
+| REQUIRED        | Steel          | ✅                     | Applicable objects must have the material *Steel* related. More materials are allowed.     |
+| OPTIONAL        | -              | ❌                     | Not allowed. No added value in specifying that it can have material or not.                      |
+| OPTIONAL        | Steel          | ✅                     | Applicable objects don't need to have any materials, but if they do, *Steel* must be among them. |
+| PROHIBITED      | -              | ✅                     | Applicable objects must not have any materials associated.                                       |
+| PROHIBITED      | Steel          | ✅                     | *Steel* must not be among the materials associated with applicable objects.                      |
 
-| Fields Entered | Required | Optional | Prohibited | Applicability |
-| -------------- | -------- | -------- | ---------- | ------------- |
-|                | ✅       | ❌       | ✅         | ✅            |
-| `value`        | ✅       | ✅       | ✅         | ✅            |
+### IFC Material Relations
 
-Optional is intended to help provide a closed list of values (useful for bim authors).
+In IFC (4x3 and before) materials ([IfcMaterial](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm)), can be associated to objects ([IfcObject](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm)) through [IfcRelAssociatesMaterial](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm) relation. 
 
-Optional = If the applicable element has materials at least one should match the value
+However, the relation is not always direct. Sometimes objects are defined by a type or are parts aggregated in a larger assembly. Also, there are multiple ways to associate material with an object, for example, through a set of layers or as a list of constituents. 
 
-REQUIRED
+![Material-relation](Graphics/material-relation.svg)
 
-- No value: at least one material association of any value, not null, must be found
-- value: at least one material association, matching the IDS value constraint must be found (null is not allowed)
-  - Value will look at all the names of the various forms of material definition that are associated with an element:
-    e.g. MaterialLayerSet -> Name + all the associated material names
-
-OPTIONAL
-
-- No value: it can never fail, therefore it's not allowed in the IDS (audit tool will flag as error)
-- Value: If any materials exist then at least one material should match the value constraint
-
-PROHIBITED
-
-- No value: no material can be associated with the entity
-- Value: no material can match the value (a material can have null value)
-  - IDS: Wood, No IFC materials -> pass
-  - IDS: Wood, IFC = null name -> pass
-  - IDS: Wood, IFC Stone -> Pass
-  - IDS: Wood, IFC Wood -> Fail
-
-APPLICABILITY
-
-- No value: at least one material association of any value, not null, was found for the entity
-- value: at least one material association, matching the IDS value constraint was found (excluding null)
-  - Value will look at all the names of the various forms of material definition that are associated with an element:
-    e.g. MaterialLayerSet -> Name + all the associated material names
-
-### Implementation
-
-⚠️TODO: in the documentation we will be explicit that traversing IfcRelDecomposition for the purpose of material evaluation will not be implemented in 1.0.
-
-We need to define what is the behaviour when it comes to the IfcRelDecomposition and the propagation of materials.
-The relevant conversation issue is [#198](https://github.com/buildingSMART/IDS/issues/198)
+⚠️TODO: in the documentation we will be explicit that traversing IfcRelDecomposition for the purpose of material evaluation will not be implemented in 1.0. We need to define what is the behaviour when it comes to the IfcRelDecomposition and the propagation of materials.
 
 ## PartOf
 
