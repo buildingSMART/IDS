@@ -4,13 +4,44 @@ Every instance in an IFC model has an "IFC Class" (also known as EXPRESS entity)
 
 Classes aren’t just for categorising instances. They also indicate what types of properties and relationships it is allowed to have. For example, an instance of IfcWall class can have a fire rating property, but an IfcGrid instance cannot.
 
-Different IFC schemas have different IFC classes. More recent IFC schemas contain richer and more diverse IFC classes, which you can compare here:
+One of the most important aspects of writing a specification is to ensure that it applies to the appropriate IFC class. Typically, every single **Specification** will have an **Entity Facet** used in its **Applicability** section.
+
+There are differences in classes between IFC schema versions. More recent IFC schemas contain richer and more diverse IFC classes, which you can compare here:
 
 - [IFC4X3_ADD2 list of IFC class names](http://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/annex-b1.html)
 - [IFC4 list of IFC class names](https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/link/alphabeticalorder-entities.htm)
 - [IFC2X3 list of IFC class names](https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/alphabeticalorder_entities.htm)
 
-Some classes may also optionally have a **Predefined Type**. This is a further level of instance categorisation in addition to the IFC Class **Name**. For example, an instance of IfcWall may have a **Predefined Type** of SHEAR, or PARTITIONING. Whereas the IFC Class **Name** is specified by the IFC standard, the **Predefined Type** may also contain custom values by the user.
+Some classes may also optionally have a **Predefined Type**. This is a further level of categorisation in addition to the IFC Class **Name**. For example, an instance of IfcWall may have a **Predefined Type** of SHEAR, or PARTITIONING. Whereas the IFC Class **Name** is specified by the IFC standard, the **Predefined Type** can be specified by the standard but may also contain custom values defined by the user. Read below about [using the IFC Predefined Types](#ifc-predefined-types).
+
+## Parameters
+
+| Parameter                              | Required | Restrictions Allowed | Meaning                                                                                                |
+| -------------------------------------- | -------- | -------------------- | ------------------------------------------------------------------------------------------------------------- |
+| **Name** (`name`)                      | ✔️     | ✔️                 | A valid IFC class from the IFC schema. The IFC Class must match exactly. Expressed in UPPERCASE.                                    |
+| **Predefined Type** (`predefinedType`) | ❌       | ✔️                 | A valid predefined type from the IFC schema, or any custom text value. The Predefined Type must match exactly. Expressed in UPPERCASE. |
+
+## Entity facet interpretation
+
+### Applicability
+
+| Entity Name | Entity Predefined Type | IDS Interpretation                                      |
+| ----------- | ---------------------- | ------------------------------------------------------- |
+| IFCWINDOW   | -                      | Applies to all *IfcWindow* entities.                    |
+| IFCWINDOW   | SKYLIGHT               | Applies to all *IfcWindow* entities of type *Skylight*. |
+
+### Requirements
+
+| IDS Cardinality | Entity Name | Entity Predefined Type | Configuration Allowed? | IDS Interpretation                                                                                         |
+| --------------- | ----------- | ---------------------- | ---------------------- | ---------------------------------------------------------------------------------------------------------- |
+| REQUIRED        | IFCWINDOW  | -                      | ✅                     | Applicable objects must be of entity IFCWINDOW.                                                           |
+| REQUIRED        | IFCWINDOW  | SKYLIGHT                | ✅                     | Applicable objects must be of entity IFCWINDOW and predefined type SKYLIGHT.                               |
+| OPTIONAL        | IFCWINDOW  |                        | ❌                     | Optionality does not make sense - no added field to require.                                               |
+| OPTIONAL        | IFCWINDOW  | SKYLIGHT                | ✅                     | If applicable object is an IFCWINDOW entity, it must also have the SKYLIGHT predefined type.               |
+| PROHIBITED      | IFCWINDOW  |                        | ✅                     | Applicable objects can not be of IFCWINDOW entity.                                                        |
+| PROHIBITED      | IFCWINDOW  | SKYLIGHT                | ✅                     | Applicable objects can be of IFCWINDOW entity (or else), but not if it is of the SKYLIGHT predefined type. |
+
+## IFC Predefined Types
 
 The IFC schema documentation contains a list of standard predefined types. Here is how you might find a list of valid **Predefined Types** for the IFC4X3_ADD2 schema. The instructions will be similar for all IFC versions.
 
@@ -19,28 +50,43 @@ The IFC schema documentation contains a list of standard predefined types. Here 
  3. Click on the enumeration link next to the **PredefinedType** attribute to view the list of valid values. For example, for an IfcWall, you will click the link to bring you to [the documentation for IfcWallTypeEnum](http://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWallTypeEnum.htm).
  4. A list of valid **Predefined Types** are shown in a table.
 
-Choosing from the list of standardised **Predefined Types** is highly recommended. However, if they do not apply to your project you may specify any custom value. For example, you may specify "RADIATIONBARRIER" as a custom **PredefinedType** for an **IfcWall**.
+If **Predefined Types** are needed, choosing from the standard list is highly recommended. However, if they do not apply to your project you may specify any custom value.
 
-One of the most important aspects of writing a specification is to ensure that it applies to the appropriate IFC class. Typically, every single **Specification** will have an **Entity Facet** used in its **Applicability** section.
+### The logic for the identification of `predefinedType` in an IFC file:
 
-## Parameters
+----**IF:** [the object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm) is defined by [a type](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm) (look for [IfcRelDefinesByType](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm) relation)
 
-| Parameter           | Required | Restrictions Allowed | Allowed Values                                                         | Meaning                                    |
-| ------------------- | -------- | -------------------- | ---------------------------------------------------------------------- | ------------------------------------------ |
-| **Name**            | ✔️     | ✔️                 | A valid IFC class from the IFC schema.                                 | The IFC Class must match exactly           |
-| **Predefined Type** | ❌       | ✔️                 | A valid predefined type from the IFC schema, or any custom text value. | The IFC Predefined Type must match exactly |
+-------- **IF:** the [type object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm) has a `PredefinedType` with a value `USERDEFINED`
 
-## Examples
+------------ The value of the predefined type is in the `ElementType` attribute of that [type object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm). ✅
 
-| Applicability Intention                                                                  | Requirement Intention         | Facet Definition                                         |
-| ---------------------------------------------------------------------------------------- | ----------------------------- | -------------------------------------------------------- |
-| All partition walls                                                                      | Must be a partition wall      | Name="IFCWALL", PredefinedType="PARTITIONING"            |
-| All floor slabs                                                                          | Must be a floor slab          | Name="IFCSLAB", PredefinedType="FLOOR"                   |
-| All door types, such that may be documented in a door types schedule                     | Must be a door type           | Name="IFCDOORTYPE"                                       |
-| All building storeys                                                                     | Must be a building storey     | Name="IFCBUILDINGSTOREY"                                 |
-| All related documents, such as drawings, schedules, manuals, and specifications          | Must be a document            | Name="IFCDOCUMENTINFORMATION"                            |
-| All distribution systems, such as hot water systems, electrical circuits, etc            | Must be a distribution system | Name=["IFCDISTRIBUTIONSYSTEM", "IFCDISTRIBUTIONCIRCUIT"] |
-| All construction tasks, such as in construction scheduling in a work breakdown structure | Must be a construction task   | Name="IFCTASK", PredefinedType="CONSTRUCTION"            |
+-------- **ELSE IF:** the [type object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm) has a `PredefinedType` with a value other than `USERDEFINED`
+
+------------ The value of the predefined type is in the `PredefinedType` attribute of that [type object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm). ✅
+
+-------- **ELSE:** the [type object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm) does not define the predefined type - look in the object instance. ⬇️
+
+---- **ELSE:**
+
+-------- **IF:** [the object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm) has a `PredefinedType` with a value `USERDEFINED`.
+
+------------ The value of the predefined type is in the `ObjectType` attribute of that [object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm). ✅
+
+--------**ELSE IF:** [the object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm) has a `PredefinedType` with a value other than `USERDEFINED`
+
+------------ The value of the predefined type is in the `PredefinedType` attribute of that [object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm). ✅
+
+-------- **ELSE:** the [object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm) does not have a predefined type. 🔚
+
+### Examples of interpering IFC Predefined Types
+
+| IDS Entity | IDS Predefined Type | IFC Entity | IFC Predefined Type | IFC Element/Object Type | IFCxIDS Result |
+| ---------- | ------------------- | ---------- | ------------------- | ----------------------- | -------------- |
+| IFCWALL    | USERDEFINED         | IFCWALL    | USERDEFINED         | -                       | ✅             |
+| IFCWALL    | USERDEFINED         | IFCWALL    | USERDEFINED         | FOO                     | ✅             |
+| IFCWALL    | FOO                 | IFCWALL    | USERDEFINED         | FOO                     | ✅             |
+| IFCWALL    | FOO                 | IFCWALL    | FOO                 | -                       | ✅             |
+
 
 ## Special cases in IFC2X3
 

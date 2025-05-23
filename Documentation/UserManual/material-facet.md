@@ -1,10 +1,26 @@
 # Material facet
 
-Elements (e.g. walls, doors, windows, etc) in IFC and element types (e.g. wall types, door types, window types, etc) may have a **Material** associated with it. These **Materials** are typically specified as construction materials, as opposed to chemical **Materials**. For example, concrete of two different grades are considered two separate **Materials**.
+Elements like walls, doors, windows, etc. in IFC may have a **Material** associated with them. In the simplest case, an element may have a single **Material**. For example, a chair may be made from a "wood" material. The **Material Facet** lets you filter, require or prohibit elements having this **Material**.
 
-In the simplest case, an element may have a single **Material**. For example, a chair may be made from a "wood" material. The **Material Facet** lets you filter by elements having this **Material**.
+Many disciplines, such as costing, scheduling, sustainability and structural analysis depend on correct **Material** association and exact spelling.
 
-An element may also have multiple **Materials** in three possible scenarios:
+## Parameters
+
+| Parameter | Required | Restrictions Allowed | Meaning                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| --------- | -------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Value** | ❌       | ✔️                 | Any material name or category. The material name is typically specific to the project or local convention. The element must be made out of a **Material** with the specified name or category. If there are multiple **Materials**, then any **Material**, **Layer**, **Profile** or **Constituent** with that name or category will also satisfy the requirement.                                                                                                                                                                                                                                                                                                                                                                                       |
+| **URI**   | ❌       | ❌                   | Uniform Resource Identifier of the material. Used to reference a standardized definition of a material, to ensure consistency of interpretation. The target resource should include a name and definition, and preferably comply with the ISO 12006-3 and ISO 23386. This is an optional attribute that is not subject to IDS checking - the IFC model does not need to have the same or any URI. One source of valid URIs is [the bSDD](https://search.bsdd.buildingsmart.org/), and an example URI is that of a "Plywood": [https://identifier.buildingsmart.org/uri/cei-bois.org/wood/1.0.0/class/8dca70a2-01a2-489b-9381-fbeff09db8dc](https://identifier.buildingsmart.org/uri/cei-bois.org/wood/1.0.0/class/8dca70a2-01a2-489b-9381-fbeff09db8dc). |
+|           |          |                      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+
+\* The material Category is an optional attribute of [IfcMaterial](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm), and is recommended by the IFC to be one of 'concrete', 'steel', 'aluminium', 'block', 'brick', 'stone', 'wood', 'glass', 'gypsum', 'plastic', or 'earth'.
+
+The `value` field is optional. Optional attribute `uri` is only a metadata, not subject to IDS checking.
+
+If no parameters are specified, then it means that any **Material** should be present, regardless of name or category.
+
+## IFC Material Relations
+
+An element may have multiple **Materials** associated in three possible scenarios:
 
 - **Layered materials**: an element (e.g. a wall or slab) is parametrically defined in terms of material layers with a thickness (e.g. stud layer, insulation layer, and gypsum layer). Each layer may have a different **Material**.
 - **Profiled materials**: an element (e.g. a column or beam) is parametrically defined in terms of a profile (e.g. C-profile, Z-profile, or I-profile) extruded along a path. Composite columns and beams may have multiple profiles from different **Materials**.
@@ -12,25 +28,42 @@ An element may also have multiple **Materials** in three possible scenarios:
 
 ![Material Facet](Graphics/material-facet.png)
 
-The **Material Facet** lets you filter elements where one of their **Materials** matches your specified **Material**.
+In IFC (4x3 and before) materials ([IfcMaterial](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm)) can be associated to objects ([IfcObject](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm)) through [IfcRelAssociatesMaterial](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm) relation. 
 
-Many disciplines, such as costing, scheduling, sustainability analysis, or construction trade packages depend on correct **Material** association. The **Material Facet** is especially useful for domain specific information **Specifications**.
+However, the relation is not always direct. Sometimes objects are defined by a type or are parts aggregated in a larger assembly. Also, there are multiple ways to associate material with an object, for example, through a set of layers or as a list of constituents.
 
-## Parameters
+![Material-relation](Graphics/material-relation.svg)
 
-| Parameter | Required | Restrictions Allowed | Allowed Values                                                                                                                                                                                                                                                                       | Meaning                                                                                                                                                                                                                                                 |
-| --------- | -------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Value** | ❌       | ✔️                 | Any material name or material category. The material name is typically specific to the project or local convention. The material category is recommended to be one of 'concrete', 'steel', 'aluminium', 'block', 'brick', 'stone', 'wood', 'glass', 'gypsum', 'plastic', or 'earth'. | The element must be made out of a **Material** with the specified name or category. If there are multiple **Materials**, then any **Material**, **Layer**, **Profile** or **Constituent** with that name or category will also satisfy the requirement. |
-| **URI**   | ❌       | ❌                   | Uniform Resource Identifier of the material. The resource should include a name and a definition, and preferably comply with ISO 23386. | One source of valid URIs is [the bSDD](https://search.bsdd.buildingsmart.org/). An example URI for a "Plywood": [https://identifier.buildingsmart.org/uri/cei-bois.org/wood/1.0.0/class/8dca70a2-01a2-489b-9381-fbeff09db8dc](https://identifier.buildingsmart.org/uri/cei-bois.org/wood/1.0.0/class/8dca70a2-01a2-489b-9381-fbeff09db8dc). |
+The IDS simplifies the material relation for its users, allowing them to simply specify material association, shifting the interpretation of various possible relations to IFC-IDS checking tools.
 
-If no parameters are specified, then it means that any **Material** should be present, regardless of name or category.
+<!-- ⚠️TODO: in the documentation we will be explicit that traversing IfcRelDecomposition for the purpose of material evaluation will not be implemented in 1.0. We need to define what is the behaviour when it comes to the IfcRelDecomposition and the propagation of materials. -->
 
-## Examples
 
-| Applicability Intention                                                                                         | Requirement Intention                                                                                               | Facet Definition            |
-| --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | --------------------------- |
-| Any entity with a material                                                                                      | The entity must have a material                                                                                     | No parameters               |
-| All entities made from wood                                                                                     | The entity must be made out of wood                                                                                 | Value="wood"                |
-| All entities made from brick                                                                                    | The entity must be made out of brick                                                                                | Value="brick"               |
-| All entities made from either concrete or steel                                                                 | The entity (e.g. foundation piles) must be made of either concrete or steel                                         | Value=["concrete", "steel"] |
-| Any entities with a material named with a code starting with "CON" followed by 2 digits, like CON01, CON02, etc | The entity shall have a material with the naming scheme of "CON" followed by two digits, such as CON01, CON02, etc. | Value="CON[0-9]{2}"         |
+## Material facet interpretation
+
+### Applicability
+
+| Material Value | IDS Interpretation                                                                                                                                            |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -              | Applies to all entities with any associated material. Good way to filter only physical objects, given they have a material relation.                          |
+| Steel          | Applies to all entities with an associated material named *Steel* (exact spelling and case). It is not relevant if the entity has more material associations. |
+
+### Requirements
+
+| IDS Cardinality | Material Value | Configuration Allowed? | IDS Interpretation                                                                               |
+| --------------- | -------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| REQUIRED        | -              | ✅                     | Applicable objects must have at least one related material, no matter its name.                  |
+| REQUIRED        | Steel          | ✅                     | Applicable objects must have the material *Steel* related. More materials are allowed.           |
+| OPTIONAL        | -              | ❌                     | Not allowed. No added value in specifying that it can have material or not.                      |
+| OPTIONAL        | Steel          | ✅                     | Applicable objects don't need to have any materials, but if they do, *Steel* must be among them. |
+| PROHIBITED      | -              | ✅                     | Applicable objects must not have any materials associated.                                       |
+| PROHIBITED      | Steel          | ✅                     | *Steel* must not be among the materials associated with applicable objects.                      |
+
+### Examples of interpering IFC materials
+
+| IDS Material Value | IFC Material.Name           | IFC Material.Category | IFCxIDS Result |
+| ------------------ | --------------------------- | --------------------- | -------------- |
+| Steel              | Steel                       | -                     | ✅             |
+| Steel              | S275                        | -                     | ❌             |
+| Steel              | S275                        | Steel                 | ✅             |
+| Brick              | [Gypsum, Brick, Insulation] | -                     | ✅             |
