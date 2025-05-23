@@ -44,6 +44,7 @@
   <a xlink:href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBuildingElementPart.htm" target="_blank">
   <text xml:space="preserve" text-anchor="start" font-family="'Quicksand'" font-size="24" id="svg_31" y="209.14243" x="171.44882" stroke-width="0" stroke="#000" fill="#000000">IfcBuildingElementPart</text>
    </a>
+  <text xml:space="preserve" text-anchor="start" font-family="'Quicksand'" font-size="24" id="svg_46" y="174.57116" x="234.44882" stroke-width="0" stroke="#000" fill="#000000">+</text>
   <a xlink:href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm" target="_blank">  
   <text xml:space="preserve" text-anchor="start" font-family="'Quicksand'" font-size="24" id="svg_32" y="283.99862" x="171.44882" stroke-width="0" stroke="#000" fill="#000000">IfcRelDefinesByType</text>
    </a>
@@ -55,7 +56,6 @@
   <path d="m433.59998,-9.20001c2,0 2,1 2,1c2,2 2,3 3,3c1,0 2,0 5,1l0,0l2,0" id="svg_42" stroke-width="0" stroke="#000" fill="none"/>
   <line stroke="#000" id="svg_44" y2="238.79999" x2="1117.85749" y1="238.79999" x1="751.59999" fill="none"/>
   <text xml:space="preserve" text-anchor="start" font-family="'Quicksand'" font-size="24" id="svg_45" y="316.30298" x="234.44882" stroke-width="0" stroke="#000" fill="#000000">+</text>
-  <text xml:space="preserve" text-anchor="start" font-family="'Quicksand'" font-size="24" id="svg_46" y="174.57116" x="234.44882" stroke-width="0" stroke="#000" fill="#000000">+</text>
  </g>
 
 </svg>

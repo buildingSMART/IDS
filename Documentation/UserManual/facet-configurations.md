@@ -115,55 +115,50 @@ The `system` field is mandatory, the `value` is optional. Optional attribute `ur
 
 ## Material
 
+### Required fields
+
 The `value` field is optional. Optional attribute `uri` is only a metadata, not subject to IDS checking.
+
+### IFC Material Relations
+
+In IFC (4x3 and before) materials ([IfcMaterial](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm)) can be associated to objects ([IfcObject](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm)) through [IfcRelAssociatesMaterial](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm) relation. 
+
+However, the relation is not always direct. Sometimes objects are defined by a type or are parts aggregated in a larger assembly. Also, there are multiple ways to associate material with an object, for example, through a set of layers or as a list of constituents.
+
+![Material-relation](Graphics/material-relation.svg)
+
+The IDS simplifies the material relation for its users, allowing them to simply specify material association, shifting the interpretation of various possible relations to IFC-IDS checking tools.
+
+<!-- ⚠️TODO: in the documentation we will be explicit that traversing IfcRelDecomposition for the purpose of material evaluation will not be implemented in 1.0. We need to define what is the behaviour when it comes to the IfcRelDecomposition and the propagation of materials. -->
+
+### Material facet interpretation
 
 | IDS Cardinality | Material Value | Configuration Allowed? | IDS Interpretation                                                                               |
 | --------------- | -------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
-| REQUIRED        | -              | ✅                     | Applicable objects must have at least one related material, no matter its name.                                      |
-| REQUIRED        | Steel          | ✅                     | Applicable objects must have the material *Steel* related. More materials are allowed.     |
+| REQUIRED        | -              | ✅                     | Applicable objects must have at least one related material, no matter its name.                  |
+| REQUIRED        | Steel          | ✅                     | Applicable objects must have the material *Steel* related. More materials are allowed.           |
 | OPTIONAL        | -              | ❌                     | Not allowed. No added value in specifying that it can have material or not.                      |
 | OPTIONAL        | Steel          | ✅                     | Applicable objects don't need to have any materials, but if they do, *Steel* must be among them. |
 | PROHIBITED      | -              | ✅                     | Applicable objects must not have any materials associated.                                       |
 | PROHIBITED      | Steel          | ✅                     | *Steel* must not be among the materials associated with applicable objects.                      |
 
-### IFC Material Relations
-
-In IFC (4x3 and before) materials ([IfcMaterial](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm)), can be associated to objects ([IfcObject](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm)) through [IfcRelAssociatesMaterial](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm) relation. 
-
-However, the relation is not always direct. Sometimes objects are defined by a type or are parts aggregated in a larger assembly. Also, there are multiple ways to associate material with an object, for example, through a set of layers or as a list of constituents. 
-
-![Material-relation](Graphics/material-relation.svg)
-
-⚠️TODO: in the documentation we will be explicit that traversing IfcRelDecomposition for the purpose of material evaluation will not be implemented in 1.0. We need to define what is the behaviour when it comes to the IfcRelDecomposition and the propagation of materials.
 
 ## PartOf
 
-| Fields Entered        | Required | Optional | Prohibited | Applicability |
-| --------------------- | -------- | -------- | ---------- | ------------- |
-| `entity`              | ✅       | ❌       | ✅         | ✅            |
-| `entity`, `relation*` | ✅       | ❌       | ✅         | ✅            |
+### Required fields
 
-REQUIRED:
+The `entity` field is required. The `relation` attribute is optional. If not specified, all allowed relations should be considered. 
 
-- Entity: A relation is needed to the type of entity required (traversing all valid relationships)
-- Entity/Relation: A relation is needed to the type of entity required (traversing only the defined relationship type)
+### 'Part Of' facet interpretation
 
-OPTIONAL:
-
-- IDS Entity: IfcWall: If the element has a matching relationship the target should match the Entity.
-  - IFC ENtity has a relation, it must be to a wall (but the relation is optional)
-  - IFC Opening in a slab -> fail (no relation to the of the entity encounters a wall)
-  - Ifc opening in a wall -> pass
-
-PROHIBITED:
-
-- Entity: A relation cannot exist with needed to the type of entity required (traversing all valid relationships)
-- Entity/Relation: A relation cannot exist to the type of entity required (traversing only the defined relationship type)
-
-APPLICABILITY:
-
-- Entity: A relation exists to the type of entity required (traversing all valid relationships)
-- Entity/Relation: A relation exists to the type of entity required (traversing only the defined relationship type)
+| IDS Cardinality | PartOf Entity | PartOf Relation*                  | Configuration Allowed? | IDS Interpretation                                                                                          |
+| --------------- | ------------- | --------------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------- |
+| REQUIRED        | IfcSpace      | -                                 | ✅                     | Applicable objects must have a relation to the *IfcSpace* entity (traversing all valid relationships).      |
+| REQUIRED        | IfcSpace      | IfcRelContainedInSpatialStructure | ✅                     | Applicable objects must have the *IfcRelContainedInSpatialStructure* relation to the *IfcSpace* entity.     |
+| OPTIONAL        | IfcSpace      | -                                 | ❌                     | Not allowed. No added value in specifying that it can be a part or not.                                     |
+| OPTIONAL        | IfcSpace      | IfcRelContainedInSpatialStructure | ❌                     | Not allowed. No added value in specifying that it can be a part or not.                                     |
+| PROHIBITED      | IfcSpace      | -                                 | ✅                     | Applicable objects must not have any relation to *IfcSpace* associated.                                     |
+| PROHIBITED      | IfcSpace      | IfcRelContainedInSpatialStructure | ✅                     | Applicable objects must not have the *IfcRelContainedInSpatialStructure* relation to *IfcSpace* associated. |
 
 ___
 \* the field is an XML attribute
