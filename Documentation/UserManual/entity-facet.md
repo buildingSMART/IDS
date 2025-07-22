@@ -101,7 +101,7 @@ A full list is given in this [table](./Documentation/ImplementersDocumentation/i
 
 There is no automatic inheritance in IDS entity facet interpretation. In other words, all the entities need to be listed explicitly. This allows for precise and unambiguous specifications.
 
-For example, to create a requirement applicable to all IfcElement objects, one should list all IfcElement sub-entities, such as IfcWall, IfcDoor, etc. Also, the IfcElement should not be listed, as it is an abstract entity - it can't be instantiated, therefore would not appear in a model (except for old IFC2X3).
+For example, to create a requirement applicable to all IfcElement objects, one should list all IfcElement sub-entities, such as IfcWall, IfcDoor, etc. Also, the IfcElement should not be listed, as it is an abstract entity - it can't be instantiated, therefore would not appear in a model.
 
 To help users and software implementers specify all commonly used sub-entities of IfcElement, IfcBuiltElement, IfcFlowSegment or else, we provide the table below.
 
@@ -109,8 +109,8 @@ To help users and software implementers specify all commonly used sub-entities o
 
 |                                                     | IFC4X3 | IFC4 | IFC2X3 |
 |-----------------------------------------------------|--------|------|--------|
-| IfcElement                                          | ⚠️      | ⚠️    | ✅      |
-| --- IfcBuildingElement                              |        | ⚠️    | ✅      |
+| IfcElement                                          | ⚠️      | ⚠️    | ⚠️      |
+| --- IfcBuildingElement                              |        | ⚠️    | ⚠️      |
 | --- IfcBuiltElement                                 | ✅      |      |        |
 | ------ IfcBeam                                      | ✅      | ✅    | ✅      |
 | --------- IfcBeamStandardCase                       |        | 🚫    |        |
