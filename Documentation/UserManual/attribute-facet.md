@@ -4,10 +4,10 @@ Every entity in an IFC model has a list of standardised **Attributes**. **Attrib
 
 Here are some common attributes and what they mean:
 
-- **GlobalId**: a unique ID for the element useful for computer geeks
-- **Name**: a short name, code, number, or label to identify the object for a human. If you had to annotate the object on a drawing or a schedule, the Name is what you should see. For example, a pump Name might be P-10-A.
-- **Description**: typically the longer form of the name, written to be descriptive and readable for humans. For example a pump Description might be Water Suction Pump.
-- **Tag**: this is an ID that may link it back to another BIM application. For example if the IFC model was produced using Revit or ArchiCAD, it might hold the Revit or ArchiCAD element ID.
+- **GlobalId**: A unique identifier for the element
+- **Name**: a short name or label to identify the object for a human. If you had to annotate the object on a drawing or a schedule, the *Name* is often used. For example, a pump *Name* might be P-10-A.
+- **Description**: "provided for exchanging informative comments". Typically a longer form of the name, written to be descriptive and readable for humans. For example, a pump *Description* might be *Water Suction Pump*.
+- **Tag**: "identifier at the particular instance of a product, e.g. the serial number, or the position number. It is the identifier at the occurrence level.". Usually a short code or number, that may link it back to another BIM application or product specification.
 
 Information that is not critical to the definition of the IFC entity is stored as a **Property**, not an **Attribute**. For more information view the documentation on the [**Property Facet**](property-facet.md).
 
@@ -21,22 +21,29 @@ To see what **Attributes** are available for an IFC class and what their potenti
 
 Instead of checking the documentation, your IDS authoring software may help you to shortlist valid **Attributes**.
 
-Following naming conventions and accurately describing elements are critical to many usecases in the AECO industry. For this reason, it is very common to use the **Attribute Facet** in both the **Applicability** and **Requirements** section of **Specifications**.
-
 ## Parameters
 
-| Parameter | Required | Restrictions Allowed | Allowed Values                                          | Meaning                                                                                                                |
-| --------- | -------- | -------------------- | ------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| **Name**  | ✔️     | ✔️                 | A valid attribute name from the IFC schema.             | The attribute must exist and have a non-empty value.                                                                   |
-| **Value** | ❌       | ✔️                 | Any value appropriate to the data type of the attribute | The value of the attribute must match, see [DataType documentation](../ImplementersDocumentation/DataTypes.md#xml-base-types) for more information. |
+| Parameter | Required | Restrictions Allowed | Meaning                                                                                                                                                        |
+| --------- | -------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Name**  | ✔️     | ✔️                 | A valid attribute name from the IFC schema.                                                                                                                           |
+| **Value** | ❌       | ✔️                 | Any value appropriate to the data type of the attribute. See [DataType documentation](../ImplementersDocumentation/DataTypes.md#xml-base-types) for more information. |
 
-## Examples
+## Attribute facet interpretation
 
-| Applicability Intention                                                                               | Requirement Intention                                                                                          | Facet Definition                                            |
-| ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| Any entity with a Name of "ABC123"                                                                    | The entity (e.g. Project) must be named "ABC123"                                                               | Name="Name", Value="ABC123"                                 |
-| Any entity (but typically IfcMapConversion) with an Easting of 312345                                 | The entity (e.g. IfcMapConversion) must be geolocated such that the origin is at the Easting of 312345         | Name="Easting", Value="312345"                              |
-| Any entity with a name starting with "WT" followed by 2 digits, such as WT01, WT02, etc.              | The element must have the naming scheme of WT01, WT02, etc                                                     | Name="Name", value="WT[0-9]{2}"                             |
-| Any entity with a non-empty Description                                                               | The entity must have a description                                                                             | Name="Description"                                          |
-| Any entity (typically an IfcTask) with a Status set to either "NOTSTARTED", "STARTED", or "COMPLETED" | The entity Status (e.g. for an IfcTask) must be filled out with either "NOTSTARTED", "STARTED", or "COMPLETED" | Name="Status", Value=["NOTSTARTED", "STARTED", "COMPLETED"] |
-| Any entity (typically an IfcTaskTime) with a DurationType set to WORKTIME (i.e. based on a calendar)  | The duration type (e.g. for an IfcTaskTime) must be based on a calendar, not elapsed time                      | Name="DurationType", Value="WORKTIME"                       |
+### Applicability
+
+| Attribute Name | Attribute Value | IDS Interpretation                                                              |
+| -------------- | --------------- | ------------------------------------------------------------------------------- |
+| Description    | -               | Applies to all entities having a *Description* filled in (not Null or missing). |
+| Description    | Answer          | Applies to all entities in which *Description* has a value *Answer*.            |
+
+### Requirements
+
+| IDS Cardinality | Attribute Name | Attribute Value | Configuration Allowed? | IDS Interpretation                                                                                                            |
+| --------------- | -------------- | --------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| REQUIRED        | Description        | -               | ✅                     | Applicable objects must have the attribute *Description* populated (i.e. not null).                                               |
+| REQUIRED        | Description        | Answer          | ✅                     | The attribute *Description* must have the value *Answer* (on applicable objects).                                                 |
+| OPTIONAL        | Description        | -               | ❌                     | Optionality does not make sense - no added field to require.                                                                  |
+| OPTIONAL        | Description        | Answer          | ✅                     | If the attribute *Description* exists on applicable objects, it needs to have the value *Answer*.                                 |
+| PROHIBITED      | Description        | -               | ✅                     | The attribute *Description* must not exist on applicable objects, even if empty.                                                  |
+| PROHIBITED      | Description        | Answer          | ✅                     | The attribute *Example* must not have the value *Answer* (on applicable objects). Null is also an allowed value in this case. |

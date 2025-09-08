@@ -1,0 +1,61 @@
+<svg width="1270" height="450" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g>
+  <title>Material Relation</title>
+    <rect width="100%" height="100%" fill="white"/>
+  <a xlink:href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm" target="_blank">
+  <text xml:space="preserve" text-anchor="start" font-family="'Quicksand'" font-size="24" id="svg_2" y="245.84441" x="18.82963" stroke-width="0" stroke="#000" fill="#000000">IfcObject</text>
+  </a>
+  <a xlink:href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm" target="_blank">
+  <text xml:space="preserve" text-anchor="start" font-family="'Quicksand'" font-size="24" id="svg_6" y="245.84441" x="1130.64817" stroke-width="0" stroke="#000" fill="#000000">IfcMaterial</text>
+  </a>
+  <a xlink:href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm" target="_blank">
+  <text xml:space="preserve" text-anchor="start" font-family="'Quicksand'" font-size="24" id="svg_8" y="245.84441" x="467.96698" stroke-width="0" stroke="#000" fill="#000000">IfcRelAssociatesMaterial</text>
+  </a>
+  <a xlink:href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayer.htm" target="_blank">
+  <text xml:space="preserve" text-anchor="start" font-family="'Quicksand'" font-size="24" id="svg_12" y="122.68964" x="793.44882" stroke-width="0" stroke="#000" fill="#000000">IfcMaterialLayer</text>
+  </a>
+  <a xlink:href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayerSet.htm" target="_blank">
+  <text xml:space="preserve" text-anchor="start" font-family="'Quicksand'" font-size="24" id="svg_13" y="164.28291" x="793.44882" stroke-width="0" stroke="#000" fill="#000000">IfcMaterialLayerSet</text>
+  </a>
+  <a xlink:href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayerSetUsage.htm" target="_blank">  
+  <text xml:space="preserve" text-anchor="start" font-family="'Quicksand'" font-size="24" id="svg_14" y="204.09496" x="793.44882" stroke-width="0" stroke="#000" fill="#000000">IfcMaterialLayerSetUsage</text>
+ </a>
+  <a xlink:href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialProfile.htm" target="_blank">    
+  <text xml:space="preserve" text-anchor="start" font-family="'Quicksand'" font-size="24" id="svg_15" y="288.55534" x="794.44882" stroke-width="0" stroke="#000" fill="#000000">IfcMaterialProfile</text>
+  </a>
+  <a xlink:href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialProfileSet.htm" target="_blank">  
+  <text xml:space="preserve" text-anchor="start" font-family="'Quicksand'" font-size="24" id="svg_16" y="331.1486" x="794.44882" stroke-width="0" stroke="#000" fill="#000000">IfcMaterialProfileSet</text>
+ </a>
+  <a xlink:href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialProfileSetUsage.htm" target="_blank">  
+  <text xml:space="preserve" text-anchor="start" font-family="'Quicksand'" font-size="24" id="svg_17" y="370.96066" x="794.44882" stroke-width="0" stroke="#000" fill="#000000">IfcMaterialProfileSetUsage</text>
+  </a>
+  <a xlink:href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialConstituent.htm" target="_blank">  
+  <text xml:space="preserve" text-anchor="start" font-family="'Quicksand'" font-size="24" id="svg_21" y="43.90738" x="794.44882" stroke-width="0" stroke="#000" fill="#000000">IfcMaterialConstituent</text>
+</a>
+  <a xlink:href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialConstituentSet.htm" target="_blank">    
+  <text xml:space="preserve" text-anchor="start" font-family="'Quicksand'" font-size="24" id="svg_22" y="85.50065" x="794.44882" stroke-width="0" stroke="#000" fill="#000000">IfcMaterialConstituentSet</text>
+ </a>
+  <a xlink:href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialList.htm" target="_blank">
+  <text xml:space="preserve" text-anchor="start" font-family="'Quicksand'" font-size="24" id="svg_23" y="409.42819" x="794.44882" stroke-width="0" stroke="#000" fill="#000000">IfcMaterialList (in IFC2x3)</text>
+  </a>
+  <a xlink:href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm" target="_blank">
+  <text xml:space="preserve" text-anchor="start" font-family="'Quicksand'" font-size="24" id="svg_30" y="141.53488" x="171.44882" stroke-width="0" stroke="#000" fill="#000000">IfcRelAggregates</text>
+    </a>
+  <a xlink:href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBuildingElementPart.htm" target="_blank">
+  <text xml:space="preserve" text-anchor="start" font-family="'Quicksand'" font-size="24" id="svg_31" y="209.14243" x="171.44882" stroke-width="0" stroke="#000" fill="#000000">IfcBuildingElementPart</text>
+   </a>
+  <text xml:space="preserve" text-anchor="start" font-family="'Quicksand'" font-size="24" id="svg_46" y="174.57116" x="234.44882" stroke-width="0" stroke="#000" fill="#000000">+</text>
+  <a xlink:href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm" target="_blank">  
+  <text xml:space="preserve" text-anchor="start" font-family="'Quicksand'" font-size="24" id="svg_32" y="283.99862" x="171.44882" stroke-width="0" stroke="#000" fill="#000000">IfcRelDefinesByType</text>
+   </a>
+  <a xlink:href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm" target="_blank">
+  <text xml:space="preserve" text-anchor="start" font-family="'Quicksand'" font-size="24" id="svg_33" y="347.81096" x="172.44882" stroke-width="0" stroke="#000" fill="#000000">IfcObjectType</text>
+  </a>
+  <line id="svg_34" y2="238.79999" x2="459.8575" y1="238.79999" x1="131.59999" stroke="#000" fill="none"/>
+  <path id="svg_29" d="m679.59998,183.79999" opacity="NaN" stroke-width="0" stroke="#000" fill="#000000"/>
+  <path d="m433.59998,-9.20001c2,0 2,1 2,1c2,2 2,3 3,3c1,0 2,0 5,1l0,0l2,0" id="svg_42" stroke-width="0" stroke="#000" fill="none"/>
+  <line stroke="#000" id="svg_44" y2="238.79999" x2="1117.85749" y1="238.79999" x1="751.59999" fill="none"/>
+  <text xml:space="preserve" text-anchor="start" font-family="'Quicksand'" font-size="24" id="svg_45" y="316.30298" x="234.44882" stroke-width="0" stroke="#000" fill="#000000">+</text>
+ </g>
+
+</svg>
