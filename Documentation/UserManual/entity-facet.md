@@ -54,29 +54,14 @@ If **Predefined Types** are needed, choosing from the standard list is highly re
 
 ### The logic for the identification of `predefinedType` in an IFC file:
 
-----**IF:** [the object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm) is defined by [a type](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm) (look for [IfcRelDefinesByType](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm) relation)
-
--------- **IF:** the [type object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm) has a `PredefinedType` with a value `USERDEFINED`
-
------------- The value of the predefined type is in the `ElementType` attribute of that [type object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm). ✅
-
--------- **ELSE IF:** the [type object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm) has a `PredefinedType` with a value other than `USERDEFINED`
-
------------- The value of the predefined type is in the `PredefinedType` attribute of that [type object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm). ✅
-
--------- **ELSE:** the [type object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm) does not define the predefined type - look in the object instance. ⬇️
-
----- **ELSE:**
-
--------- **IF:** [the object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm) has a `PredefinedType` with a value `USERDEFINED`.
-
------------- The value of the predefined type is in the `ObjectType` attribute of that [object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm). ✅
-
---------**ELSE IF:** [the object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm) has a `PredefinedType` with a value other than `USERDEFINED`
-
------------- The value of the predefined type is in the `PredefinedType` attribute of that [object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm). ✅
-
--------- **ELSE:** the [object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm) does not have a predefined type. 🔚
+- **IF:** [the object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm) is defined by [a type](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm) (look for [IfcRelDefinesByType](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm) relation)  
+  - **IF:** the [type object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm) has a `PredefinedType` with a value `USERDEFINED` ➡️✅ The value of the predefined type is in the `ElementType` attribute of that [type object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm). 
+  - **ELSE IF:** the [type object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm) has a `PredefinedType` with a value other than `USERDEFINED` ➡️✅ The value of the predefined type is in the `PredefinedType` attribute of that [type object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm).  
+  - **ELSE:** the [type object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm) does not define the predefined type - look in the object instance. ⬇️  
+- **ELSE:**  
+  - **IF:** [the object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm) has a `PredefinedType` with a value `USERDEFINED` ➡️✅ The value of the predefined type is in the `ObjectType` attribute of that [object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm).
+  - **ELSE IF:** [the object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm) has a `PredefinedType` with a value other than `USERDEFINED` ➡️✅ The value of the predefined type is in the `PredefinedType` attribute of that [object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm).
+  - **ELSE:** the [object](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm) does not have a predefined type. 🔚  
 
 ### Examples of interpering IFC Predefined Types
 
@@ -110,183 +95,185 @@ To help users and software implementers specify all commonly used sub-entities o
 |                                                     | IFC2X3 | IFC4 | IFC4X3 |
 |-----------------------------------------------------|--------|------|--------|
 | IfcElement                                          | ⚠️      | ⚠️    | ⚠️      |
-| --- IfcBuildingElement                              | ⚠️      | ⚠️    |        |
-| --- IfcBuiltElement                                 |        |      | ✅      |
-| ------ IfcBeam                                      | ✅      | ✅    | ✅      |
-| --------- IfcBeamStandardCase                       |        | 🚫    | 🚫      |
-| ------ IfcBearing                                   |        |      | ✅      |
-| ------ IfcBuildingElementProxy                      | ✅      | ✅    | ✅      |
-| ------ IfcChimney                                   |        | ✅    | ✅      |
-| ------ IfcColumn                                    | ✅      | ✅    | ✅      |
-| ---------   IfcColumnStandardCase                   |        | 🚫    |        |
-| ------ IfcCourse                                    |        |      | ✅      |
-| ------ IfcCovering                                  | ✅      | ✅    | ✅      |
-| ------ IfcCurtainWall                               | ✅      | ✅    | ✅      |
-| ------ IfcDeepFoundation                            |        |      | ✅      |
-| --------- IfcCaissonFoundation                      |        |      | ✅      |
-| --------- IfcPile                                   | ✅      | ✅    | ✅      |
-| ------ IfcDoor                                      | ✅      | ✅    | ✅      |
-| --------- IfcDoorStandardCase                       |        | 🚫    |        |
-| ------ IfcEarthworksElement                         |        |      | ✅      |
-| --------- IfcEarthworksFill                         |        |      | ✅      |
-| --------- IfcReinforcedSoil                         |        |      | ✅      |
-| ------ IfcFooting                                   | ✅      | ✅    | ✅      |
-| ------ IfcKerb                                      |        |      | ✅      |
-| ------ IfcMember                                    | ✅      | ✅    | ✅      |
-| ---------   IfcMemberStandardCase                   |        | 🚫    |        |
-| ------ IfcMooringDevice                             |        |      | ✅      |
-| ------ IfcNavigationElement                         |        |      | ✅      |
-| ------ IfcPavement                                  |        |      | ✅      |
-| ------ IfcPlate                                     | ✅      | ✅    | ✅      |
-| --------- IfcPlateStandardCase                      |        | 🚫    |        |
-| ------ IfcRail                                      |        |      | ✅      |
-| ------ IfcRailing                                   | ✅      | ✅    | ✅      |
-| ------ IfcRamp                                      | ✅      | ✅    | ✅      |
-| ------ IfcRampFlight                                | ✅      | ✅    | ✅      |
-| ------ IfcRoof                                      | ✅      | ✅    | ✅      |
-| ------ IfcShadingDevice                             |        | ✅    | ✅      |
-| ------ IfcSlab                                      | ✅      | ✅    | ✅      |
-| --------- IfcSlabElementedCase                      |        | 🚫    |        |
-| --------- IfcSlabStandardCase                       |        | 🚫    |        |
-| ------ IfcStair                                     | ✅      | ✅    | ✅      |
-| ------ IfcStairFlight                               | ✅      | ✅    | ✅      |
-| ------ IfcTrackElement                              |        |      | ✅      |
-| ------ IfcWall                                      | ✅      | ✅    | ✅      |
-| --------- IfcWallElementedCase                      |        | 🚫    |        |
-| --------- IfcWallStandardCase                       |        | 🚫    | 🚫      |
-| ------ IfcWindow                                    | ✅      | ✅    | ✅      |
-| ---------   IfcWindowStandardCase                   |        | 🚫    |        |
-| --- IfcDistributionElement                          | ✅      | ✅    | ✅      |
-| ------   IfcDistributionFlowElement                 | ✅      | ✅    | ✅      |
-| ---------   IfcEnergyConversionDevice               | ⚠️      | ✅    |        |
-| ------------ IfcCoolingTower                        |        | ✅    | ✅      |
-| ------------   IfcAirToAirHeatRecovery              | ✅      | ✅    |        |
-| ------------ IfcBoiler                              |        | ✅    | ✅      |
-| ------------ IfcBurner                              |        | ✅    | ✅      |
-| ------------ IfcChiller                             |        | ✅    | ✅      |
-| ------------ IfcCoil                                |        | ✅    | ✅      |
-| ------------ IfcCondenser                           |        | ✅    | ✅      |
-| ------------ IfcCooledBeam                          |        | ✅    | ✅      |
-| ------------   IfcElectricGenerator                 |        | ✅    | ✅      |
-| ------------ IfcElectricMotor                       |        | ✅    | ✅      |
-| ------------ IfcEngine                              |        | ✅    | ✅      |
-| ------------   IfcEvaporativeCooler                 | ✅      | ✅    |        |
-| ------------ IfcEvaporator                          |        | ✅    | ✅      |
-| ------------ IfcHeatExchanger                       |        | ✅    | ✅      |
-| ------------ IfcHumidifier                          |        | ✅    | ✅      |
-| ------------   IfcMotorConnection                   |        | ✅    | ✅      |
-| ------------ IfcSolarDevice                         |        | ✅    | ✅      |
-| ------------ IfcTransformer                         |        | ✅    | ✅      |
-| ------------ IfcTubeBundle                          |        | ✅    | ✅      |
-| ------------   IfcUnitaryEquipment                  | ✅      | ✅    |        |
-| ---------   IfcDistributionChamberElement           | ✅      | ✅    |        |
-| --------- IfcFlowController                         | ✅      | ⚠️    | ✅      |
-| ------------ IfcAirTerminalBox                      |        | ✅    | ✅      |
-| ------------ IfcDamper                              |        | ✅    | ✅      |
-| ------------   IfcDistributionBoard                 |        |      | ✅      |
-| ------------   IfcElectricDistributionBoard         | ✅      | 🚫    |   🚫     |
-| ------------   IfcElectricTimeControl               | ✅      | ✅    |        |
-| ------------ IfcFlowMeter                           |        | ✅    | ✅      |
-| ------------   IfcProtectiveDevice                  |        | ✅    | ✅      |
-| ------------   IfcSwitchingDevice                   |        | ✅    | ✅      |
-| ------------ IfcValve                               |        | ✅    | ✅      |
-| --------- IfcFlowFitting                            | ✅      | ⚠️    | ✅      |
-| ------------   IfcCableCarrierFitting               | ✅      | ✅    |        |
-| ------------ IfcCableFitting                        |        | ✅    | ✅      |
-| ------------ IfcDuctFitting                         |        | ✅    | ✅      |
-| ------------ IfcJunctionBox                         |        | ✅    | ✅      |
-| ------------ IfcPipeFitting                         |        | ✅    | ✅      |
-| --------- IfcFlowMovingDevice                       | ✅      | ⚠️    | ✅      |
-| ------------ IfcCompressor                          |        | ✅    | ✅      |
-| ------------ IfcFan                                 |        | ✅    | ✅      |
-| ------------ IfcPump                                |        | ✅    | ✅      |
-| --------- IfcFlowSegment                            | ✅      | ⚠️    | ✅      |
-| ------------   IfcCableCarrierSegment               | ✅      | ✅    |        |
-| ------------ IfcCableSegment                        |        | ✅    | ✅      |
-| ------------   IfcConveyorSegment                   |        | ✅    |        |
-| ------------ IfcDuctSegment                         |        | ✅    | ✅      |
-| ------------ IfcPipeSegment                         |        | ✅    | ✅      |
-| --------- IfcFlowStorageDevice                      | ✅      | ⚠️    | ✅      |
-| ------------   IfcElectricFlowStorageDevice         | ✅      | ✅    |        |
-| ------------ IfcTank                                |        | ✅    | ✅      |
-| --------- IfcFlowTerminal                           | ✅      | ⚠️    | ✅      |
-| ------------ IfcAirTerminal                         |        | ✅    | ✅      |
-| ------------   IfcAudioVisualAppliance              | ✅      | ✅    |        |
-| ------------   IfcCommunicationsAppliance           | ✅      | ✅    |        |
-| ------------   IfcElectricAppliance                 |        | ✅    | ✅      |
-| ------------   IfcFireSuppressionTerminal           | ✅      | ✅    |        |
-| ------------ IfcLamp                                |        | ✅    | ✅      |
-| ------------ IfcLightFixture                        |        | ✅    | ✅      |
-| ------------ IfcLiquidTerminal                      |        |      | ✅      |
-| ------------ IfcMedicalDevice                       |        | ✅    | ✅      |
-| ------------   IfcMobileTelecommunicationsAppliance |        | ✅    |        |
-| ------------ IfcOutlet                              |        | ✅    | ✅      |
-| ------------   IfcSanitaryTerminal                  |        | ✅    | ✅      |
-| ------------ IfcSignal                              |        |      | ✅      |
-| ------------ IfcSpaceHeater                         |        | ✅    | ✅      |
-| ------------ IfcStackTerminal                       |        | ✅    | ✅      |
-| ------------ IfcWasteTerminal                       |        | ✅    | ✅      |
-| ---------   IfcFlowTreatmentDevice                  | ✅      | ⚠️    | ✅      |
-| ------------ IfcDuctSilencer                        |        | ✅    | ✅      |
-| ------------   IfcElectricFlowTreatmentDevice       |        | ✅    |        |
-| ------------ IfcFilter                              |        | ✅    | ✅      |
-| ------------ IfcInterceptor                         |        | ✅    | ✅      |
-| ------   IfcDistributionControlElement              | ✅      | ✅    | ✅      |
-| --------- IfcActuator                               |        | ✅    | ✅      |
-| --------- IfcAlarm                                  |        | ✅    | ✅      |
-| --------- IfcController                             |        | ✅    | ✅      |
-| --------- IfcFlowInstrument                         |        | ✅    | ✅      |
-| ---------   IfcProtectiveDeviceTrippingUnit         | ✅      | ✅    |        |
-| --------- IfcSensor                                 |        | ✅    | ✅      |
-| ---------   IfcUnitaryControlElement                |        | ✅    | ✅      |
-| --- IfcCivilElement                                 |        | ✅    | 🚫      |
-| --- IfcElementAssembly                              | ✅      | ✅    | ✅      |
-| ---   IfcBuildingElementComponent                   | ✅      |      |        |
-| --- IfcElementComponent                             |        | ⚠️    | ⚠️      |
-| ------ IfcBuildingElementPart                       |        | ✅    | ✅      |
-| ------ IfcDiscreteAccessory                         |        | ✅    | ✅      |
-| ------ IfcFastener                                  |        | ✅    | ✅      |
-| ------   IfcImpactProtectionDevice                  |        |      | ✅      |
-| ------ IfcMechanicalFastener                        |        | ✅    | ✅      |
-| ------ IfcReinforcingElement                        |        | ⚠️    | ⚠️      |
-| --------- IfcReinforcingBar                         |        | ✅    | ✅      |
-| --------- IfcReinforcingMesh                        |        | ✅    | ✅      |
-| --------- IfcTendon                                 |        | ✅    | ✅      |
-| --------- IfcTendonAnchor                           |        | ✅    | ✅      |
-| --------- IfcTendonConduit                          |        |      | ✅      |
-| ------ IfcSign                                      |        |      | ✅      |
-| ------ IfcVibrationDamper                           |        |      | ✅      |
-| ------ IfcVibrationIsolator                         |        | ✅    | ✅      |
-| --- IfcFeatureElement                               | ✅      | ⚠️    | ⚠️      |
-| ------   IfcFeatureElementAddition                  | ✅      | ⚠️    | ⚠️      |
-| --------- IfcProjectionElement                      | ✅      | ✅    | ✅      |
-| ------   IfcFeatureElementSubtraction               | ✅      | ⚠️    | ⚠️      |
-| --------- IfcEarthworksCut                          |        |      | ✅      |
-| --------- IfcOpeningElement                         | ✅      | ✅    | ✅      |
-| --------- IfcVoidingFeature                         |        | ✅    | ✅      |
-| ------ IfcSurfaceFeature                            |        | ✅    | ✅      |
-| --- IfcFurnishingElement                            | ✅      | ✅    | ✅      |
-| ------ IfcFurniture                                 |        | ✅    | ✅      |
-| ------   IfcSystemFurnitureElement                  |        | ✅    | ✅      |
-| --- IfcGeographicElement                            |        | ✅    | ✅      |
-| --- IfcGeotechnicalElement                          |        |      | ⚠️      |
-| ------ IfcGeotechnicalAssembly                      |        |      | ⚠️      |
-| --------- IfcBorehole                               |        |      | ✅      |
-| --------- IfcGeomodel                               |        |      | ✅      |
-| --------- IfcGeoslice                               |        |      | ✅      |
-| ------ IfcGeotechnicalStratum                       |        |      | ✅      |
-| --- IfcTransportationDevice                         |        |      | ⚠️      |
-| ------ IfcTransportElement                          | ✅      | ✅    | ✅      |
-| ------ IfcVehicle                                   |        |      | ✅      |
-| --- IfcVirtualElement                               | ✅      | ✅    | ✅      |
-| --- IfcElectricalElement                            | 🚫      |      |        |
-| --- IfcEquipmentElement                             | ✅      |      |        |
+| ── IfcBuildingElement                              | ⚠️      | ⚠️    |        |
+| ── IfcBuiltElement                                 |        |      | ✅      |
+| ──── IfcBeam                                      | ✅      | ✅    | ✅      |
+| ────── IfcBeamStandardCase                       |        | 🚫    | 🚫      |
+| ──── IfcBearing                                   |        |      | ✅      |
+| ──── IfcBuildingElementProxy                      | ✅      | ✅    | ✅      |
+| ──── IfcChimney                                   |        | ✅    | ✅      |
+| ──── IfcColumn                                    | ✅      | ✅    | ✅      |
+| ──────   IfcColumnStandardCase                   |        | 🚫    |        |
+| ──── IfcCourse                                    |        |      | ✅      |
+| ──── IfcCovering                                  | ✅      | ✅    | ✅      |
+| ──── IfcCurtainWall                               | ✅      | ✅    | ✅      |
+| ──── IfcDeepFoundation                            |        |      | ✅      |
+| ────── IfcCaissonFoundation                      |        |      | ✅      |
+| ────── IfcPile                                   | ✅      | ✅    | ✅      |
+| ──── IfcDoor                                      | ✅      | ✅    | ✅      |
+| ────── IfcDoorStandardCase                       |        | 🚫    |        |
+| ──── IfcEarthworksElement                         |        |      | ✅      |
+| ────── IfcEarthworksFill                         |        |      | ✅      |
+| ────── IfcReinforcedSoil                         |        |      | ✅      |
+| ──── IfcFooting                                   | ✅      | ✅    | ✅      |
+| ──── IfcKerb                                      |        |      | ✅      |
+| ──── IfcMember                                    | ✅      | ✅    | ✅      |
+| ──────   IfcMemberStandardCase                   |        | 🚫    |        |
+| ──── IfcMooringDevice                             |        |      | ✅      |
+| ──── IfcNavigationElement                         |        |      | ✅      |
+| ──── IfcPavement                                  |        |      | ✅      |
+| ──── IfcPlate                                     | ✅      | ✅    | ✅      |
+| ────── IfcPlateStandardCase                      |        | 🚫    |        |
+| ──── IfcRail                                      |        |      | ✅      |
+| ──── IfcRailing                                   | ✅      | ✅    | ✅      |
+| ──── IfcRamp                                      | ✅      | ✅    | ✅      |
+| ──── IfcRampFlight                                | ✅      | ✅    | ✅      |
+| ──── IfcRoof                                      | ✅      | ✅    | ✅      |
+| ──── IfcShadingDevice                             |        | ✅    | ✅      |
+| ──── IfcSlab                                      | ✅      | ✅    | ✅      |
+| ────── IfcSlabElementedCase                      |        | 🚫    |        |
+| ────── IfcSlabStandardCase                       |        | 🚫    |        |
+| ──── IfcStair                                     | ✅      | ✅    | ✅      |
+| ──── IfcStairFlight                               | ✅      | ✅    | ✅      |
+| ──── IfcTrackElement                              |        |      | ✅      |
+| ──── IfcWall                                      | ✅      | ✅    | ✅      |
+| ────── IfcWallElementedCase                      |        | 🚫    |        |
+| ────── IfcWallStandardCase                       |        | 🚫    | 🚫      |
+| ──── IfcWindow                                    | ✅      | ✅    | ✅      |
+| ──────   IfcWindowStandardCase                   |        | 🚫    |        |
+| ── IfcDistributionElement                          | ✅      | ✅    | ✅      |
+| ────   IfcDistributionFlowElement                 | ✅      | ✅    | ✅      |
+| ──────   IfcEnergyConversionDevice               | ⚠️      | ✅    |        |
+| ──────── IfcCoolingTower                        |        | ✅    | ✅      |
+| ────────   IfcAirToAirHeatRecovery              | ✅      | ✅    |        |
+| ──────── IfcBoiler                              |        | ✅    | ✅      |
+| ──────── IfcBurner                              |        | ✅    | ✅      |
+| ──────── IfcChiller                             |        | ✅    | ✅      |
+| ──────── IfcCoil                                |        | ✅    | ✅      |
+| ──────── IfcCondenser                           |        | ✅    | ✅      |
+| ──────── IfcCooledBeam                          |        | ✅    | ✅      |
+| ────────   IfcElectricGenerator                 |        | ✅    | ✅      |
+| ──────── IfcElectricMotor                       |        | ✅    | ✅      |
+| ──────── IfcEngine                              |        | ✅    | ✅      |
+| ────────   IfcEvaporativeCooler                 | ✅      | ✅    |        |
+| ──────── IfcEvaporator                          |        | ✅    | ✅      |
+| ──────── IfcHeatExchanger                       |        | ✅    | ✅      |
+| ──────── IfcHumidifier                          |        | ✅    | ✅      |
+| ────────   IfcMotorConnection                   |        | ✅    | ✅      |
+| ──────── IfcSolarDevice                         |        | ✅    | ✅      |
+| ──────── IfcTransformer                         |        | ✅    | ✅      |
+| ──────── IfcTubeBundle                          |        | ✅    | ✅      |
+| ────────   IfcUnitaryEquipment                  | ✅      | ✅    |        |
+| ──────   IfcDistributionChamberElement           | ✅      | ✅    |        |
+| ────── IfcFlowController                         | ✅      | ⚠️    | ✅      |
+| ──────── IfcAirTerminalBox                      |        | ✅    | ✅      |
+| ──────── IfcDamper                              |        | ✅    | ✅      |
+| ────────   IfcDistributionBoard                 |        |      | ✅      |
+| ────────   IfcElectricDistributionBoard         | ✅      | 🚫    |   🚫     |
+| ────────   IfcElectricTimeControl               | ✅      | ✅    |        |
+| ──────── IfcFlowMeter                           |        | ✅    | ✅      |
+| ────────   IfcProtectiveDevice                  |        | ✅    | ✅      |
+| ────────   IfcSwitchingDevice                   |        | ✅    | ✅      |
+| ──────── IfcValve                               |        | ✅    | ✅      |
+| ────── IfcFlowFitting                            | ✅      | ⚠️    | ✅      |
+| ────────   IfcCableCarrierFitting               | ✅      | ✅    |        |
+| ──────── IfcCableFitting                        |        | ✅    | ✅      |
+| ──────── IfcDuctFitting                         |        | ✅    | ✅      |
+| ──────── IfcJunctionBox                         |        | ✅    | ✅      |
+| ──────── IfcPipeFitting                         |        | ✅    | ✅      |
+| ────── IfcFlowMovingDevice                       | ✅      | ⚠️    | ✅      |
+| ──────── IfcCompressor                          |        | ✅    | ✅      |
+| ──────── IfcFan                                 |        | ✅    | ✅      |
+| ──────── IfcPump                                |        | ✅    | ✅      |
+| ────── IfcFlowSegment                            | ✅      | ⚠️    | ✅      |
+| ────────   IfcCableCarrierSegment               | ✅      | ✅    |        |
+| ──────── IfcCableSegment                        |        | ✅    | ✅      |
+| ────────   IfcConveyorSegment                   |        | ✅    |        |
+| ──────── IfcDuctSegment                         |        | ✅    | ✅      |
+| ──────── IfcPipeSegment                         |        | ✅    | ✅      |
+| ────── IfcFlowStorageDevice                      | ✅      | ⚠️    | ✅      |
+| ────────   IfcElectricFlowStorageDevice         | ✅      | ✅    |        |
+| ──────── IfcTank                                |        | ✅    | ✅      |
+| ────── IfcFlowTerminal                           | ✅      | ⚠️    | ✅      |
+| ──────── IfcAirTerminal                         |        | ✅    | ✅      |
+| ────────   IfcAudioVisualAppliance              | ✅      | ✅    |        |
+| ────────   IfcCommunicationsAppliance           | ✅      | ✅    |        |
+| ────────   IfcElectricAppliance                 |        | ✅    | ✅      |
+| ────────   IfcFireSuppressionTerminal           | ✅      | ✅    |        |
+| ──────── IfcLamp                                |        | ✅    | ✅      |
+| ──────── IfcLightFixture                        |        | ✅    | ✅      |
+| ──────── IfcLiquidTerminal                      |        |      | ✅      |
+| ──────── IfcMedicalDevice                       |        | ✅    | ✅      |
+| ────────   IfcMobileTelecommunicationsAppliance |        | ✅    |        |
+| ──────── IfcOutlet                              |        | ✅    | ✅      |
+| ────────   IfcSanitaryTerminal                  |        | ✅    | ✅      |
+| ──────── IfcSignal                              |        |      | ✅      |
+| ──────── IfcSpaceHeater                         |        | ✅    | ✅      |
+| ──────── IfcStackTerminal                       |        | ✅    | ✅      |
+| ──────── IfcWasteTerminal                       |        | ✅    | ✅      |
+| ──────   IfcFlowTreatmentDevice                  | ✅      | ⚠️    | ✅      |
+| ──────── IfcDuctSilencer                        |        | ✅    | ✅      |
+| ────────   IfcElectricFlowTreatmentDevice       |        | ✅    |        |
+| ──────── IfcFilter                              |        | ✅    | ✅      |
+| ──────── IfcInterceptor                         |        | ✅    | ✅      |
+| ────   IfcDistributionControlElement              | ✅      | ✅    | ✅      |
+| ────── IfcActuator                               |        | ✅    | ✅      |
+| ────── IfcAlarm                                  |        | ✅    | ✅      |
+| ────── IfcController                             |        | ✅    | ✅      |
+| ────── IfcFlowInstrument                         |        | ✅    | ✅      |
+| ──────   IfcProtectiveDeviceTrippingUnit         | ✅      | ✅    |        |
+| ────── IfcSensor                                 |        | ✅    | ✅      |
+| ──────   IfcUnitaryControlElement                |        | ✅    | ✅      |
+| ── IfcCivilElement                                 |        | ✅    | 🚫      |
+| ── IfcElementAssembly                              | ✅      | ✅    | ✅      |
+| ──   IfcBuildingElementComponent                   | ✅      |      |        |
+| ── IfcElementComponent                             |        | ⚠️    | ⚠️      |
+| ──── IfcBuildingElementPart                       |        | ✅    | ✅      |
+| ──── IfcDiscreteAccessory                         |        | ✅    | ✅      |
+| ──── IfcFastener                                  |        | ✅    | ✅      |
+| ────   IfcImpactProtectionDevice                  |        |      | ✅      |
+| ──── IfcMechanicalFastener                        |        | ✅    | ✅      |
+| ──── IfcReinforcingElement                        |        | ⚠️    | ⚠️      |
+| ────── IfcReinforcingBar                         |        | ✅    | ✅      |
+| ────── IfcReinforcingMesh                        |        | ✅    | ✅      |
+| ────── IfcTendon                                 |        | ✅    | ✅      |
+| ────── IfcTendonAnchor                           |        | ✅    | ✅      |
+| ────── IfcTendonConduit                          |        |      | ✅      |
+| ──── IfcSign                                      |        |      | ✅      |
+| ──── IfcVibrationDamper                           |        |      | ✅      |
+| ──── IfcVibrationIsolator                         |        | ✅    | ✅      |
+| ── IfcFeatureElement                               | ✅      | ⚠️    | ⚠️      |
+| ────   IfcFeatureElementAddition                  | ✅      | ⚠️    | ⚠️      |
+| ────── IfcProjectionElement                      | ✅      | ✅    | ✅      |
+| ────   IfcFeatureElementSubtraction               | ✅      | ⚠️    | ⚠️      |
+| ────── IfcEarthworksCut                          |        |      | ✅      |
+| ────── IfcOpeningElement                         | ✅      | ✅    | ✅      |
+| ────── IfcVoidingFeature                         |        | ✅    | ✅      |
+| ──── IfcSurfaceFeature                            |        | ✅    | ✅      |
+| ── IfcFurnishingElement                            | ✅      | ✅    | ✅      |
+| ──── IfcFurniture                                 |        | ✅    | ✅      |
+| ────   IfcSystemFurnitureElement                  |        | ✅    | ✅      |
+| ── IfcGeographicElement                            |        | ✅    | ✅      |
+| ── IfcGeotechnicalElement                          |        |      | ⚠️      |
+| ──── IfcGeotechnicalAssembly                      |        |      | ⚠️      |
+| ────── IfcBorehole                               |        |      | ✅      |
+| ────── IfcGeomodel                               |        |      | ✅      |
+| ────── IfcGeoslice                               |        |      | ✅      |
+| ──── IfcGeotechnicalStratum                       |        |      | ✅      |
+| ── IfcTransportationDevice                         |        |      | ⚠️      |
+| ──── IfcTransportElement                          | ✅      | ✅    | ✅      |
+| ──── IfcVehicle                                   |        |      | ✅      |
+| ── IfcVirtualElement                               | ✅      | ✅    | ✅      |
+| ── IfcElectricalElement                            | 🚫      |      |        |
+| ── IfcEquipmentElement                             | ✅      |      |        |
 
 ✅ - included in IFC version \
 ⚠️ - included but abstract, can't be instantiated \
 🚫 - deprecated
 
 ### Listings of IfcElement sub-entities in different IFC versions
+
+Below are the lists of IfcElement subentities in a form easy to copy-paste to IDS files. The lists do not include Type objects for simplicity.
 
 **Comma-separated IfcElement subentities in IFC4X3:**
 ```
