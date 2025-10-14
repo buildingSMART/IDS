@@ -1,4 +1,4 @@
-# IFC2X3 enitities mapping
+# IFC2X3 entities mapping
 
 The following table lists all special cases for checking IFC2X3 models identification of model subsets is is further restricted by the type object.
 
@@ -28,6 +28,7 @@ The second and third columns define the properties of matching IFC2X3 entity and
 | IfcHeatExchanger             | IfcEnergyConversionDevice     | IfcHeatExchangerType             |
 | IfcHumidifier                | IfcEnergyConversionDevice     | IfcHumidifierType                |
 | IfcMotorConnection           | IfcEnergyConversionDevice     | IfcMotorConnectionType           |
+| IfcSpaceHeater               | IfcEnergyConversionDevice     | IfcSpaceHeaterType               |
 | IfcTransformer               | IfcEnergyConversionDevice     | IfcTransformerType               |
 | IfcTubeBundle                | IfcEnergyConversionDevice     | IfcTubeBundleType                |
 | IfcUnitaryEquipment          | IfcEnergyConversionDevice     | IfcUnitaryEquipmentType          |
@@ -58,12 +59,11 @@ The second and third columns define the properties of matching IFC2X3 entity and
 | IfcLightFixture              | IfcFlowTerminal               | IfcLightFixtureType              |
 | IfcOutlet                    | IfcFlowTerminal               | IfcOutletType                    |
 | IfcSanitaryTerminal          | IfcFlowTerminal               | IfcSanitaryTerminalType          |
-| IfcSpaceHeater               | IfcFlowTerminal               | IfcSpaceHeaterType               |
 | IfcStackTerminal             | IfcFlowTerminal               | IfcStackTerminalType             |
 | IfcWasteTerminal             | IfcFlowTerminal               | IfcWasteTerminalType             |
 | IfcDuctSilencer              | IfcFlowTreatmentDevice        | IfcDuctSilencerType              |
 | IfcFilter                    | IfcFlowTreatmentDevice        | IfcFilterType                    |
-| IfcVibrationIsolator         | IfcElementComponent           | IfcVibrationIsolatorType         |
+| IfcVibrationIsolator         | IfcEquipmentElement           | IfcVibrationIsolatorType         |
 
 ## Examples
 
