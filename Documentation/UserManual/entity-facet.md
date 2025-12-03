@@ -32,14 +32,12 @@ Some classes may also optionally have a **Predefined Type**. This is a further l
 
 ### Requirements
 
-| IDS Cardinality | Entity Name | Entity Predefined Type | Configuration Allowed? | IDS Interpretation                                                                                         |
-| --------------- | ----------- | ---------------------- | ---------------------- | ---------------------------------------------------------------------------------------------------------- |
-| REQUIRED        | IFCWINDOW  | -                      | ✅                     | Applicable objects must be of entity IFCWINDOW.                                                           |
-| REQUIRED        | IFCWINDOW  | SKYLIGHT                | ✅                     | Applicable objects must be of entity IFCWINDOW and predefined type SKYLIGHT.                               |
-| OPTIONAL        | IFCWINDOW  |                        | ❌                     | Optionality does not make sense - no added field to require.                                               |
-| OPTIONAL        | IFCWINDOW  | SKYLIGHT                | ✅                     | If applicable object is an IFCWINDOW entity, it must also have the SKYLIGHT predefined type.               |
-| PROHIBITED      | IFCWINDOW  |                        | ✅                     | Applicable objects can not be of IFCWINDOW entity.                                                        |
-| PROHIBITED      | IFCWINDOW  | SKYLIGHT                | ✅                     | Applicable objects can be of IFCWINDOW entity (or else), but not if it is of the SKYLIGHT predefined type. |
+| Entity Name | Entity Predefined Type | Configuration Allowed? | IDS Interpretation                                                                                         |
+| ----------- | ---------------------- | ---------------------- | ---------------------------------------------------------------------------------------------------------- |
+| IFCWINDOW  | -                      | ✅                     | Applicable objects must be of entity IFCWINDOW.                                                           |
+| IFCWINDOW  | SKYLIGHT                | ✅                     | Applicable objects must be of entity IFCWINDOW and predefined type SKYLIGHT.                               |
+
+* Unlike other facets, there is no cardinality on the entity facet ([source](https://github.com/buildingSMART/IDS/blob/6705c99036ad7caba62679dbe56c81c87b53fa5b/Schema/ids.xsd#L122)). 
 
 ## IFC Predefined Types
 
