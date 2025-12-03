@@ -7,8 +7,6 @@ When IFC models are verified, their values need to be converted to the default u
 The following table lists the measures that need to be converted, along with the metadata to support the conversion process.
 A full list of IFC-defined types can be found in the IFC documentation.
 
-Dimensional exponents are specified according to the [International System of Quantities](https://en.wikipedia.org/wiki/International_System_of_Quantities), as defined in ISO 80000-1. The order is: length, mass, time, electric current, thermodynamic temperature, amount of substance, and luminous intensity (m, kg, s, A, K, mol, cd). For example, speed (m/s) would be denoted as _(1, 0, -1, 0, 0, 0, 0)_.
-
 | Ifc Defined Type name                         | Physical Quantity description           | Unit         | Unit Symbol | Default display | Dimensional exponents   | Unit enumeration                                           | IfcSIUnitName enumerations                         |
 | --------------------------------------------- | --------------------------------------- | ------------ | ----------- | --------------- | ----------------------- | ---------------------------------------------------------- | -------------------------------------------------- |
 | IFCABSORBEDDOSEMEASURE                        | Absorbed radioactivity dose             | gray         | Gy          | J / kg          | (2, 0, -2, 0, 0, 0, 0)  | IfcUnitEnum.ABSORBEDDOSEUNIT                               | IfcSIUnitName.GRAY                                 |
@@ -97,19 +95,9 @@ Dimensional exponents are specified according to the [International System of Qu
 
 ## Dimensional units
 
-Each of the dimensional exponents references the default SI unit
+Dimensional exponents are specified according to the [International System of Quantities](https://en.wikipedia.org/wiki/International_System_of_Quantities), as defined in ISO 80000-1. The order is: length, mass, time, electric current, thermodynamic temperature, amount of substance, and luminous intensity (m, kg, s, A, K, mol, cd). For example, speed (m/s) would be denoted as _(1, 0, -1, 0, 0, 0, 0)_.
 
-| Position in the dimensional exponents list | Physical Quantity | SI Unit                   |
-| ------------------------------------------ | ----------------- | ------------------------- |
-| 1                                          | length            | metre                     |
-| 2                                          | mass              | kilogram                  |
-| 3                                          | time              | second                    |
-| 4                                          | ampere            | electric current          |
-| 5                                          | kelvin            | thermodynamic temperature |
-| 6                                          | mole              | amount of substance       |
-| 7                                          | candela           | luminous intensity        |
-
-## Examples
+## Conversion examples
 
 In software, values are typically presented in local units. The following table lists some examples of how things are represented to the user and how they are represented in IDS.
 
