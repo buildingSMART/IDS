@@ -5,9 +5,7 @@ Numerical measure values are represented in IDS files using SI units.
 When IFC models are verified, their values need to be converted to the default unit before comparison.
 
 The following table lists the measures that need to be converted, along with the metadata to support the conversion process.
-A full list of IFC Defined types can be found in the IFC documentation.
-
-The order of dimensional exponent units is `(m, kg, s, A, K, mol, cd)`.
+A full list of IFC-defined types can be found in the IFC documentation.
 
 | Ifc Defined Type name                         | Physical Quantity description           | Unit         | Unit Symbol | Default display | Dimensional exponents   | Unit enumeration                                           | IfcSIUnitName enumerations                         |
 | --------------------------------------------- | --------------------------------------- | ------------ | ----------- | --------------- | ----------------------- | ---------------------------------------------------------- | -------------------------------------------------- |
@@ -30,7 +28,7 @@ The order of dimensional exponent units is `(m, kg, s, A, K, mol, cd)`.
 | IFCFORCEMEASURE                               | Force                                   | newton       | N           | N               | (1, 1, -2, 0, 0, 0, 0)  | IfcUnitEnum.FORCEUNIT                                      | IfcSIUnitName.NEWTON                               |
 | IFCFREQUENCYMEASURE                           | Frequency                               | hertz        | Hz          | Hz              | (0, 0, -1, 0, 0, 0, 0)  | IfcUnitEnum.FREQUENCYUNIT                                  | IfcSIUnitName.HERTZ                                |
 | IFCHEATFLUXDENSITYMEASURE                     | Heat flux density                       |              |             | W / m2          | (0, 1, -3, 0, 0, 0, 0)  | IfcDerivedUnitEnum.HEATFLUXDENSITYUNIT                     |                                                    |
-| IFCHEATINGVALUEMEASURE                        | Heating                                 |              |             | J / K           | (2, 1, -2, 0, -1, 0, 0) | IfcDerivedUnitEnum.HEATINGVALUEUNIT                        |                                                    |
+| IFCHEATINGVALUEMEASURE                        | Heating                                 |              |             | J / Kg           | (2, 0, -2, 0, 0, 0, 0) | IfcDerivedUnitEnum.HEATINGVALUEUNIT                        |                                                    |
 | IFCILLUMINANCEMEASURE                         | Illuminance                             | lux          | lx          | lx              | (-2, 0, 0, 0, 0, 0, 1)  | IfcUnitEnum.ILLUMINANCEUNIT                                | IfcSIUnitName.LUX                                  |
 | IFCINDUCTANCEMEASURE                          | Inductance                              | henry        | H           | Wb / A          | (2, 1, -2, -2, 0, 0, 0) | IfcUnitEnum.INDUCTANCEUNIT                                 | IfcSIUnitName.HENRY                                |
 | IFCINTEGERCOUNTRATEMEASURE                    | Count rate                              |              |             | 1 / s           | (0, 0, -1, 0, 0, 0, 0)  | IfcDerivedUnitEnum.INTEGERCOUNTRATEUNIT                    |                                                    |
@@ -97,21 +95,11 @@ The order of dimensional exponent units is `(m, kg, s, A, K, mol, cd)`.
 
 ## Dimensional units
 
-Each of the dimensional exponents references the default SI unit
+Dimensional exponents are specified according to the [International System of Quantities](https://en.wikipedia.org/wiki/International_System_of_Quantities), as defined in ISO 80000-1. The order is: length, mass, time, electric current, thermodynamic temperature, amount of substance, and luminous intensity (m, kg, s, A, K, mol, cd). For example, speed (m/s) would be denoted as _(1, 0, -1, 0, 0, 0, 0)_.
 
-| Position in the dimensional exponents list | Physical Quantity | SI Unit                   |
-| ------------------------------------------ | ----------------- | ------------------------- |
-| 1                                          | length            | metre                     |
-| 2                                          | mass              | kilogram                  |
-| 3                                          | time              | second                    |
-| 4                                          | ampere            | electric current          |
-| 5                                          | kelvin            | thermodynamic temperature |
-| 6                                          | mole              | amount of substance       |
-| 7                                          | candela           | luminous intensity        |
+## Conversion examples
 
-## Examples
-
-In software values are typically presented in local units. The following table lists some examples how things are represented to the user and how they are represented in IDS.
+In software, values are typically presented in local units. The following table lists some examples of how things are represented to the user and how they are represented in IDS.
 
 | User Perspective | IDS value  | Physical Quantity |
 | ---------------- | ---------- | ----------------- |
