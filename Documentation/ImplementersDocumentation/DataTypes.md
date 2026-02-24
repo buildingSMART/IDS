@@ -400,7 +400,7 @@ Columns of the table determine the validity of the type depending on the schema 
 | IFCWORKSCHEDULETYPEENUM                       |    ✗    |    ✓    |    ✓    | xs:string             |
 | IFCYEARNUMBER                                 |    ✓    |    ✗    |    ✗    | xs:integer            |
 
-Please note that [IFCSTRIPPEDOPTIONAL](https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcStrippedOptional.htm) is a special data type that should never be isntantiated, but it is listed here for schema tolerance reasons.
+Please note that [IFCSTRIPPEDOPTIONAL](https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcStrippedOptional.htm) is a special data type that should never be instantiated, but it is listed here for schema tolerance reasons.
 
 ## XML base types
 
@@ -416,7 +416,16 @@ The list of valid XML base types for the `base` attribute of `xs:restriction`, a
 | xs:integer  | <code>^&#91;+-&#93;?(\d+)$</code>                                                                                                     | annotation, pattern, whiteSpace, enumeration, maxInclusive, maxExclusive, minInclusive, minExclusive |
 | xs:string   | <code>^.*$</code>                                                                                                                     | annotation, pattern, enumeration, whiteSpace, minLength, maxLength, length                           |
 | xs:time     | <code>^\d{2}:\d{2}:\d{2}(\.\d+)?(Z&#124;(&#91;+-&#93;\d{2}:\d{2}))?$</code>                                                           | annotation, pattern, enumeration, whiteSpace, minExclusive, maxExclusive, minInclusive, maxInclusive |
-
+| Base type   | Value string regex constraint                                        | pattern | enumeration | minExclusive | maxExclusive | minInclusive | maxInclusive | minLength | maxLength | length |
+|-------------|----------------------------------------------------------------------|---------|-------------|--------------|--------------|--------------|--------------|-----------|-----------|--------|
+| xs:boolean  | ^(true\|false\|0\|1)$                                                | ✓       |             |              |              |              |              |           |           |        |
+| xs:integer  | ^[+-]?(\d+)$                                                         | ✓       | ✓           | ✓            | ✓            | ✓            | ✓            |           |           |        |
+| xs:double   | ^([-+]?[0-9]*\.?[0-9]*([eE][-+]?[0-9]+)?\|NaN\|\+INF\|-INF)$         | ✓       | ✓           | ✓            | ✓            | ✓            | ✓            |           |           |        |
+| xs:string   | ^.*$                                                                 | ✓       | ✓           |              |              |              |              | ✓         | ✓         | ✓      |
+| xs:date     | ^\d{4}-\d{2}-\d{2}(Z\|([+-]\d{2}:\d{2}))?$                           | ✓       | ✓           | ✓            | ✓            | ✓            | ✓            |           |           |        |
+| xs:dateTime | ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z\|([+-]\d{2}:\d{2}))?$ | ✓       | ✓           | ✓            | ✓            | ✓            | ✓            |           |           |        |
+| xs:duration | ^[-+]?P(\d+Y)?(\d+M)?(\d+D)?(T(\d+H)?(\d+M)?(\d+S)?)?$               | ✓       | ✓           | ✓            | ✓            | ✓            | ✓            |           |           |        |
+| xs:time     | ^\d{2}:\d{2}:\d{2}(\.\d+)?(Z\|([+-]\d{2}:\d{2}))?$                   | ✓       | ✓           | ✓            | ✓            | ✓            | ✓            |           |           |        |
 For example:
 
 - To specify numbers: you must use a dot as the decimal separator, and not use a thousands separator (e.g. `4.2` is valid, but `1.234,5` is invalid). Scientific notation is allowed (e.g. `1e3` to represent `1000`).
