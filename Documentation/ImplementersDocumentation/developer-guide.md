@@ -51,7 +51,7 @@ This is a compromise and simplification that allows precision to scale from smal
 
 ### Restrictions
 
-XSD also includes a **Total Digits** and a **Fraction Digits** restriction. These will not be supported in IDS as they have limited utility, for the complete list of valid restrictions see the
+XSD also includes a **Total Digits** and a **Fraction Digits** restriction. These will not be supported in IDS as they have limited utility.
 For the complete list of valid restrictions, see the [XML base types table](DataTypes.md#XML-base-types).
 
 ### Optionality
