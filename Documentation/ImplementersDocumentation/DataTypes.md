@@ -10,7 +10,7 @@ Columns of the table determine the validity of the type depending on the schema 
 | --------------------------------------------- | :-----: | :-----: | :-----: | --------------------- |
 | IFCABSORBEDDOSEMEASURE                        |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCACCELERATIONMEASURE                        |    ✓    |    ✓    |    ✓    | xs:double             |
-| IFCACTIONREQUESTTYPEENUM                      |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCACTIONREQUESTTYPEENUM                      |         |    ✓    |    ✓    | xs:string             |
 | IFCACTIONSOURCETYPEENUM                       |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCACTIONTYPEENUM                             |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCACTUATORTYPEENUM                           |    ✓    |    ✓    |    ✓    | xs:string             |
@@ -19,113 +19,113 @@ Columns of the table determine the validity of the type depending on the schema 
 | IFCAIRTERMINALTYPEENUM                        |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCAIRTOAIRHEATRECOVERYTYPEENUM               |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCALARMTYPEENUM                              |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCALIGNMENTCANTSEGMENTTYPEENUM               |    ✗    |    ✗    |    ✓    | xs:string             |
-| IFCALIGNMENTHORIZONTALSEGMENTTYPEENUM         |    ✗    |    ✗    |    ✓    | xs:string             |
-| IFCALIGNMENTTYPEENUM                          |    ✗    |    ✗    |    ✓    | xs:string             |
-| IFCALIGNMENTVERTICALSEGMENTTYPEENUM           |    ✗    |    ✗    |    ✓    | xs:string             |
+| IFCALIGNMENTCANTSEGMENTTYPEENUM               |         |         |    ✓    | xs:string             |
+| IFCALIGNMENTHORIZONTALSEGMENTTYPEENUM         |         |         |    ✓    | xs:string             |
+| IFCALIGNMENTTYPEENUM                          |         |         |    ✓    | xs:string             |
+| IFCALIGNMENTVERTICALSEGMENTTYPEENUM           |         |         |    ✓    | xs:string             |
 | IFCAMOUNTOFSUBSTANCEMEASURE                   |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCANALYSISMODELTYPEENUM                      |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCANALYSISTHEORYTYPEENUM                     |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCANGULARVELOCITYMEASURE                     |    ✓    |    ✓    |    ✓    | xs:double             |
-| IFCANNOTATIONTYPEENUM                         |    ✗    |    ✗    |    ✓    | xs:string             |
-| IFCAREADENSITYMEASURE                         |    ✗    |    ✓    |    ✓    | xs:double             |
+| IFCANNOTATIONTYPEENUM                         |         |         |    ✓    | xs:string             |
+| IFCAREADENSITYMEASURE                         |         |    ✓    |    ✓    | xs:double             |
 | IFCAREAMEASURE                                |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCARITHMETICOPERATORENUM                     |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCASSEMBLYPLACEENUM                          |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCAUDIOVISUALAPPLIANCETYPEENUM               |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCAUDIOVISUALAPPLIANCETYPEENUM               |         |    ✓    |    ✓    | xs:string             |
 | IFCBEAMTYPEENUM                               |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCBEARINGTYPEENUM                            |    ✗    |    ✗    |    ✓    | xs:string             |
+| IFCBEARINGTYPEENUM                            |         |         |    ✓    | xs:string             |
 | IFCBENCHMARKENUM                              |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCBINARY                                     |    ✗    |    ✓    |    ✓    |                       |
+| IFCBINARY                                     |         |    ✓    |    ✓    |                       |
 | IFCBOILERTYPEENUM                             |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCBOOLEAN                                    |    ✓    |    ✓    |    ✓    | xs:boolean            |
 | IFCBOXALIGNMENT                               |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCBRIDGEPARTTYPEENUM                         |    ✗    |    ✗    |    ✓    | xs:string             |
-| IFCBRIDGETYPEENUM                             |    ✗    |    ✗    |    ✓    | xs:string             |
-| IFCBUILDINGELEMENTPARTTYPEENUM                |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCBRIDGEPARTTYPEENUM                         |         |         |    ✓    | xs:string             |
+| IFCBRIDGETYPEENUM                             |         |         |    ✓    | xs:string             |
+| IFCBUILDINGELEMENTPARTTYPEENUM                |         |    ✓    |    ✓    | xs:string             |
 | IFCBUILDINGELEMENTPROXYTYPEENUM               |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCBUILDINGSYSTEMTYPEENUM                     |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCBUILTSYSTEMTYPEENUM                        |    ✗    |    ✗    |    ✓    | xs:string             |
-| IFCBURNERTYPEENUM                             |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCBUILDINGSYSTEMTYPEENUM                     |         |    ✓    |    ✓    | xs:string             |
+| IFCBUILTSYSTEMTYPEENUM                        |         |         |    ✓    | xs:string             |
+| IFCBURNERTYPEENUM                             |         |    ✓    |    ✓    | xs:string             |
 | IFCCABLECARRIERFITTINGTYPEENUM                |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCCABLECARRIERSEGMENTTYPEENUM                |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCCABLEFITTINGTYPEENUM                       |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCCABLEFITTINGTYPEENUM                       |         |    ✓    |    ✓    | xs:string             |
 | IFCCABLESEGMENTTYPEENUM                       |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCCAISSONFOUNDATIONTYPEENUM                  |    ✗    |    ✗    |    ✓    | xs:string             |
-| IFCCARDINALPOINTREFERENCE                     |    ✗    |    ✓    |    ✓    | xs:integer            |
+| IFCCAISSONFOUNDATIONTYPEENUM                  |         |         |    ✓    | xs:string             |
+| IFCCARDINALPOINTREFERENCE                     |         |    ✓    |    ✓    | xs:integer            |
 | IFCCHANGEACTIONENUM                           |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCCHILLERTYPEENUM                            |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCCHIMNEYTYPEENUM                            |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCCHIMNEYTYPEENUM                            |         |    ✓    |    ✓    | xs:string             |
 | IFCCOILTYPEENUM                               |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCCOLUMNTYPEENUM                             |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCCOMMUNICATIONSAPPLIANCETYPEENUM            |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCCOMPLEXPROPERTYTEMPLATETYPEENUM            |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCCOMMUNICATIONSAPPLIANCETYPEENUM            |         |    ✓    |    ✓    | xs:string             |
+| IFCCOMPLEXPROPERTYTEMPLATETYPEENUM            |         |    ✓    |    ✓    | xs:string             |
 | IFCCOMPRESSORTYPEENUM                         |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCCONDENSERTYPEENUM                          |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCCONNECTIONTYPEENUM                         |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCCONSTRAINTENUM                             |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCCONSTRUCTIONEQUIPMENTRESOURCETYPEENUM      |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCCONSTRUCTIONMATERIALRESOURCETYPEENUM       |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCCONSTRUCTIONPRODUCTRESOURCETYPEENUM        |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCCONSTRUCTIONEQUIPMENTRESOURCETYPEENUM      |         |    ✓    |    ✓    | xs:string             |
+| IFCCONSTRUCTIONMATERIALRESOURCETYPEENUM       |         |    ✓    |    ✓    | xs:string             |
+| IFCCONSTRUCTIONPRODUCTRESOURCETYPEENUM        |         |    ✓    |    ✓    | xs:string             |
 | IFCCONTEXTDEPENDENTMEASURE                    |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCCONTROLLERTYPEENUM                         |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCCONVEYORSEGMENTTYPEENUM                    |    ✗    |    ✗    |    ✓    | xs:string             |
+| IFCCONVEYORSEGMENTTYPEENUM                    |         |         |    ✓    | xs:string             |
 | IFCCOOLEDBEAMTYPEENUM                         |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCCOOLINGTOWERTYPEENUM                       |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCCOSTITEMTYPEENUM                           |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCCOSTITEMTYPEENUM                           |         |    ✓    |    ✓    | xs:string             |
 | IFCCOSTSCHEDULETYPEENUM                       |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCCOUNTMEASURE                               |    ✓    |    ✓    |    ✓    | xs:integer            |
-| IFCCOURSETYPEENUM                             |    ✗    |    ✗    |    ✓    | xs:string             |
+| IFCCOURSETYPEENUM                             |         |         |    ✓    | xs:string             |
 | IFCCOVERINGTYPEENUM                           |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCCREWRESOURCETYPEENUM                       |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCCURRENCYENUM                               |    ✓    |    ✗    |    ✗    | xs:string             |
+| IFCCREWRESOURCETYPEENUM                       |         |    ✓    |    ✓    | xs:string             |
+| IFCCURRENCYENUM                               |    ✓    |         |         | xs:string             |
 | IFCCURTAINWALLTYPEENUM                        |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCCURVATUREMEASURE                           |    ✓    |    ✓    |    ✓    | xs:double             |
-| IFCCURVEINTERPOLATIONENUM                     |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCCURVEINTERPOLATIONENUM                     |         |    ✓    |    ✓    | xs:string             |
 | IFCDAMPERTYPEENUM                             |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCDATAORIGINENUM                             |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCDATE                                       |    ✗    |    ✓    |    ✓    | xs:date               |
-| IFCDATETIME                                   |    ✗    |    ✓    |    ✓    | xs:dateTime           |
+| IFCDATE                                       |         |    ✓    |    ✓    | xs:date               |
+| IFCDATETIME                                   |         |    ✓    |    ✓    | xs:dateTime           |
 | IFCDAYINMONTHNUMBER                           |    ✓    |    ✓    |    ✓    | xs:integer            |
-| IFCDAYINWEEKNUMBER                            |    ✗    |    ✓    |    ✓    | xs:integer            |
-| IFCDAYLIGHTSAVINGHOUR                         |    ✓    |    ✗    |    ✗    | xs:integer            |
+| IFCDAYINWEEKNUMBER                            |         |    ✓    |    ✓    | xs:integer            |
+| IFCDAYLIGHTSAVINGHOUR                         |    ✓    |         |         | xs:integer            |
 | IFCDERIVEDUNITENUM                            |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCDESCRIPTIVEMEASURE                         |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCDIMENSIONCOUNT                             |    ✓    |    ✓    |    ✓    | xs:integer            |
 | IFCDIRECTIONSENSEENUM                         |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCDISCRETEACCESSORYTYPEENUM                  |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCDISTRIBUTIONBOARDTYPEENUM                  |    ✗    |    ✗    |    ✓    | xs:string             |
+| IFCDISCRETEACCESSORYTYPEENUM                  |         |    ✓    |    ✓    | xs:string             |
+| IFCDISTRIBUTIONBOARDTYPEENUM                  |         |         |    ✓    | xs:string             |
 | IFCDISTRIBUTIONCHAMBERELEMENTTYPEENUM         |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCDISTRIBUTIONPORTTYPEENUM                   |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCDISTRIBUTIONSYSTEMENUM                     |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCDISTRIBUTIONPORTTYPEENUM                   |         |    ✓    |    ✓    | xs:string             |
+| IFCDISTRIBUTIONSYSTEMENUM                     |         |    ✓    |    ✓    | xs:string             |
 | IFCDOCUMENTCONFIDENTIALITYENUM                |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCDOCUMENTSTATUSENUM                         |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCDOORPANELOPERATIONENUM                     |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCDOORPANELPOSITIONENUM                      |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCDOORSTYLECONSTRUCTIONENUM                  |    ✓    |    ✓    |    ✗    | xs:string             |
-| IFCDOORSTYLEOPERATIONENUM                     |    ✓    |    ✓    |    ✗    | xs:string             |
-| IFCDOORTYPEENUM                               |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCDOORTYPEOPERATIONENUM                      |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCDOORSTYLECONSTRUCTIONENUM                  |    ✓    |    ✓    |         | xs:string             |
+| IFCDOORSTYLEOPERATIONENUM                     |    ✓    |    ✓    |         | xs:string             |
+| IFCDOORTYPEENUM                               |         |    ✓    |    ✓    | xs:string             |
+| IFCDOORTYPEOPERATIONENUM                      |         |    ✓    |    ✓    | xs:string             |
 | IFCDOSEEQUIVALENTMEASURE                      |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCDUCTFITTINGTYPEENUM                        |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCDUCTSEGMENTTYPEENUM                        |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCDUCTSILENCERTYPEENUM                       |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCDURATION                                   |    ✗    |    ✓    |    ✓    | xs:duration           |
+| IFCDURATION                                   |         |    ✓    |    ✓    | xs:duration           |
 | IFCDYNAMICVISCOSITYMEASURE                    |    ✓    |    ✓    |    ✓    | xs:double             |
-| IFCEARTHWORKSCUTTYPEENUM                      |    ✗    |    ✗    |    ✓    | xs:string             |
-| IFCEARTHWORKSFILLTYPEENUM                     |    ✗    |    ✗    |    ✓    | xs:string             |
+| IFCEARTHWORKSCUTTYPEENUM                      |         |         |    ✓    | xs:string             |
+| IFCEARTHWORKSFILLTYPEENUM                     |         |         |    ✓    | xs:string             |
 | IFCELECTRICAPPLIANCETYPEENUM                  |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCELECTRICCAPACITANCEMEASURE                 |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCELECTRICCHARGEMEASURE                      |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCELECTRICCONDUCTANCEMEASURE                 |    ✓    |    ✓    |    ✓    | xs:double             |
-| IFCELECTRICCURRENTENUM                        |    ✓    |    ✗    |    ✗    | xs:string             |
+| IFCELECTRICCURRENTENUM                        |    ✓    |         |         | xs:string             |
 | IFCELECTRICCURRENTMEASURE                     |    ✓    |    ✓    |    ✓    | xs:double             |
-| IFCELECTRICDISTRIBUTIONBOARDTYPEENUM          |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCELECTRICDISTRIBUTIONPOINTFUNCTIONENUM      |    ✓    |    ✗    |    ✗    | xs:string             |
+| IFCELECTRICDISTRIBUTIONBOARDTYPEENUM          |         |    ✓    |    ✓    | xs:string             |
+| IFCELECTRICDISTRIBUTIONPOINTFUNCTIONENUM      |    ✓    |         |         | xs:string             |
 | IFCELECTRICFLOWSTORAGEDEVICETYPEENUM          |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCELECTRICFLOWTREATMENTDEVICETYPEENUM        |    ✗    |    ✗    |    ✓    | xs:string             |
+| IFCELECTRICFLOWTREATMENTDEVICETYPEENUM        |         |         |    ✓    | xs:string             |
 | IFCELECTRICGENERATORTYPEENUM                  |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCELECTRICHEATERTYPEENUM                     |    ✓    |    ✗    |    ✗    | xs:string             |
+| IFCELECTRICHEATERTYPEENUM                     |    ✓    |         |         | xs:string             |
 | IFCELECTRICMOTORTYPEENUM                      |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCELECTRICRESISTANCEMEASURE                  |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCELECTRICTIMECONTROLTYPEENUM                |    ✓    |    ✓    |    ✓    | xs:string             |
@@ -133,18 +133,18 @@ Columns of the table determine the validity of the type depending on the schema 
 | IFCELEMENTASSEMBLYTYPEENUM                    |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCELEMENTCOMPOSITIONENUM                     |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCENERGYMEASURE                              |    ✓    |    ✓    |    ✓    | xs:double             |
-| IFCENERGYSEQUENCEENUM                         |    ✓    |    ✗    |    ✗    | xs:string             |
-| IFCENGINETYPEENUM                             |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCENVIRONMENTALIMPACTCATEGORYENUM            |    ✓    |    ✗    |    ✗    | xs:string             |
+| IFCENERGYSEQUENCEENUM                         |    ✓    |         |         | xs:string             |
+| IFCENGINETYPEENUM                             |         |    ✓    |    ✓    | xs:string             |
+| IFCENVIRONMENTALIMPACTCATEGORYENUM            |    ✓    |         |         | xs:string             |
 | IFCEVAPORATIVECOOLERTYPEENUM                  |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCEVAPORATORTYPEENUM                         |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCEVENTTRIGGERTYPEENUM                       |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCEVENTTYPEENUM                              |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCEXTERNALSPATIALELEMENTTYPEENUM             |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCFACILITYPARTCOMMONTYPEENUM                 |    ✗    |    ✗    |    ✓    | xs:string             |
-| IFCFACILITYUSAGEENUM                          |    ✗    |    ✗    |    ✓    | xs:string             |
+| IFCEVENTTRIGGERTYPEENUM                       |         |    ✓    |    ✓    | xs:string             |
+| IFCEVENTTYPEENUM                              |         |    ✓    |    ✓    | xs:string             |
+| IFCEXTERNALSPATIALELEMENTTYPEENUM             |         |    ✓    |    ✓    | xs:string             |
+| IFCFACILITYPARTCOMMONTYPEENUM                 |         |         |    ✓    | xs:string             |
+| IFCFACILITYUSAGEENUM                          |         |         |    ✓    | xs:string             |
 | IFCFANTYPEENUM                                |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCFASTENERTYPEENUM                           |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCFASTENERTYPEENUM                           |         |    ✓    |    ✓    | xs:string             |
 | IFCFILTERTYPEENUM                             |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCFIRESUPPRESSIONTERMINALTYPEENUM            |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCFLOWDIRECTIONENUM                          |    ✓    |    ✓    |    ✓    | xs:string             |
@@ -156,37 +156,37 @@ Columns of the table determine the validity of the type depending on the schema 
 | IFCFOOTINGTYPEENUM                            |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCFORCEMEASURE                               |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCFREQUENCYMEASURE                           |    ✓    |    ✓    |    ✓    | xs:double             |
-| IFCFURNITURETYPEENUM                          |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCGASTERMINALTYPEENUM                        |    ✓    |    ✗    |    ✗    | xs:string             |
-| IFCGEOGRAPHICELEMENTTYPEENUM                  |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCFURNITURETYPEENUM                          |         |    ✓    |    ✓    | xs:string             |
+| IFCGASTERMINALTYPEENUM                        |    ✓    |         |         | xs:string             |
+| IFCGEOGRAPHICELEMENTTYPEENUM                  |         |    ✓    |    ✓    | xs:string             |
 | IFCGEOMETRICPROJECTIONENUM                    |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCGEOTECHNICALSTRATUMTYPEENUM                |    ✗    |    ✗    |    ✓    | xs:string             |
+| IFCGEOTECHNICALSTRATUMTYPEENUM                |         |         |    ✓    | xs:string             |
 | IFCGLOBALLYUNIQUEID                           |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCGLOBALORLOCALENUM                          |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCGRIDTYPEENUM                               |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCGRIDTYPEENUM                               |         |    ✓    |    ✓    | xs:string             |
 | IFCHEATEXCHANGERTYPEENUM                      |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCHEATFLUXDENSITYMEASURE                     |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCHEATINGVALUEMEASURE                        |    ✓    |    ✓    |    ✓    | xs:double             |
-| IFCHOURINDAY                                  |    ✓    |    ✗    |    ✗    | xs:integer            |
+| IFCHOURINDAY                                  |    ✓    |         |         | xs:integer            |
 | IFCHUMIDIFIERTYPEENUM                         |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCIDENTIFIER                                 |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCILLUMINANCEMEASURE                         |    ✓    |    ✓    |    ✓    | xs:double             |
-| IFCIMPACTPROTECTIONDEVICETYPEENUM             |    ✗    |    ✗    |    ✓    | xs:string             |
+| IFCIMPACTPROTECTIONDEVICETYPEENUM             |         |         |    ✓    | xs:string             |
 | IFCINDUCTANCEMEASURE                          |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCINTEGER                                    |    ✓    |    ✓    |    ✓    | xs:integer            |
 | IFCINTEGERCOUNTRATEMEASURE                    |    ✓    |    ✓    |    ✓    | xs:integer            |
-| IFCINTERCEPTORTYPEENUM                        |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCINTERCEPTORTYPEENUM                        |         |    ✓    |    ✓    | xs:string             |
 | IFCINTERNALOREXTERNALENUM                     |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCINVENTORYTYPEENUM                          |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCIONCONCENTRATIONMEASURE                    |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCISOTHERMALMOISTURECAPACITYMEASURE          |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCJUNCTIONBOXTYPEENUM                        |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCKERBTYPEENUM                               |    ✗    |    ✗    |    ✓    | xs:string             |
+| IFCKERBTYPEENUM                               |         |         |    ✓    | xs:string             |
 | IFCKINEMATICVISCOSITYMEASURE                  |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCLABEL                                      |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCLABORRESOURCETYPEENUM                      |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCLABORRESOURCETYPEENUM                      |         |    ✓    |    ✓    | xs:string             |
 | IFCLAMPTYPEENUM                               |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCLANGUAGEID                                 |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCLANGUAGEID                                 |         |    ✓    |    ✓    | xs:string             |
 | IFCLAYERSETDIRECTIONENUM                      |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCLENGTHMEASURE                              |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCLIGHTDISTRIBUTIONCURVEENUM                 |    ✓    |    ✓    |    ✓    | xs:string             |
@@ -196,7 +196,7 @@ Columns of the table determine the validity of the type depending on the schema 
 | IFCLINEARMOMENTMEASURE                        |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCLINEARSTIFFNESSMEASURE                     |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCLINEARVELOCITYMEASURE                      |    ✓    |    ✓    |    ✓    | xs:double             |
-| IFCLIQUIDTERMINALTYPEENUM                     |    ✗    |    ✗    |    ✓    | xs:string             |
+| IFCLIQUIDTERMINALTYPEENUM                     |         |         |    ✓    | xs:string             |
 | IFCLOADGROUPTYPEENUM                          |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCLOGICAL                                    |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCLOGICALOPERATORENUM                        |    ✓    |    ✓    |    ✓    | xs:string             |
@@ -205,17 +205,17 @@ Columns of the table determine the validity of the type depending on the schema 
 | IFCLUMINOUSINTENSITYMEASURE                   |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCMAGNETICFLUXDENSITYMEASURE                 |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCMAGNETICFLUXMEASURE                        |    ✓    |    ✓    |    ✓    | xs:double             |
-| IFCMARINEFACILITYTYPEENUM                     |    ✗    |    ✗    |    ✓    | xs:string             |
-| IFCMARINEPARTTYPEENUM                         |    ✗    |    ✗    |    ✓    | xs:string             |
+| IFCMARINEFACILITYTYPEENUM                     |         |         |    ✓    | xs:string             |
+| IFCMARINEPARTTYPEENUM                         |         |         |    ✓    | xs:string             |
 | IFCMASSDENSITYMEASURE                         |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCMASSFLOWRATEMEASURE                        |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCMASSMEASURE                                |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCMASSPERLENGTHMEASURE                       |    ✓    |    ✓    |    ✓    | xs:double             |
-| IFCMECHANICALFASTENERTYPEENUM                 |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCMEDICALDEVICETYPEENUM                      |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCMECHANICALFASTENERTYPEENUM                 |         |    ✓    |    ✓    | xs:string             |
+| IFCMEDICALDEVICETYPEENUM                      |         |    ✓    |    ✓    | xs:string             |
 | IFCMEMBERTYPEENUM                             |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCMINUTEINHOUR                               |    ✓    |    ✗    |    ✗    | xs:integer            |
-| IFCMOBILETELECOMMUNICATIONSAPPLIANCETYPEENUM  |    ✗    |    ✗    |    ✓    | xs:string             |
+| IFCMINUTEINHOUR                               |    ✓    |         |         | xs:integer            |
+| IFCMOBILETELECOMMUNICATIONSAPPLIANCETYPEENUM  |         |         |    ✓    | xs:string             |
 | IFCMODULUSOFELASTICITYMEASURE                 |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCMODULUSOFLINEARSUBGRADEREACTIONMEASURE     |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCMODULUSOFROTATIONALSUBGRADEREACTIONMEASURE |    ✓    |    ✓    |    ✓    | xs:double             |
@@ -225,23 +225,23 @@ Columns of the table determine the validity of the type depending on the schema 
 | IFCMOMENTOFINERTIAMEASURE                     |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCMONETARYMEASURE                            |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCMONTHINYEARNUMBER                          |    ✓    |    ✓    |    ✓    | xs:integer            |
-| IFCMOORINGDEVICETYPEENUM                      |    ✗    |    ✗    |    ✓    | xs:string             |
+| IFCMOORINGDEVICETYPEENUM                      |         |         |    ✓    | xs:string             |
 | IFCMOTORCONNECTIONTYPEENUM                    |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCNAVIGATIONELEMENTTYPEENUM                  |    ✗    |    ✗    |    ✓    | xs:string             |
-| IFCNONNEGATIVELENGTHMEASURE                   |    ✗    |    ✓    |    ✓    | xs:double             |
+| IFCNAVIGATIONELEMENTTYPEENUM                  |         |         |    ✓    | xs:string             |
+| IFCNONNEGATIVELENGTHMEASURE                   |         |    ✓    |    ✓    | xs:double             |
 | IFCNORMALISEDRATIOMEASURE                     |    ✓    |    ✓    |    ✓    | xs:double             |
-| IFCNULLSTYLE                                  |    ✓    |    ✓    |    ✗    | xs:string             |
+| IFCNULLSTYLE                                  |    ✓    |    ✓    |         | xs:string             |
 | IFCNUMERICMEASURE                             |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCOBJECTIVEENUM                              |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCOBJECTTYPEENUM                             |    ✓    |    ✓    |    ✗    | xs:string             |
+| IFCOBJECTTYPEENUM                             |    ✓    |    ✓    |         | xs:string             |
 | IFCOCCUPANTTYPEENUM                           |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCOPENINGELEMENTTYPEENUM                     |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCOPENINGELEMENTTYPEENUM                     |         |    ✓    |    ✓    | xs:string             |
 | IFCOUTLETTYPEENUM                             |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCPARAMETERVALUE                             |    ✓    |    ✓    |    ✓    | xs:double             |
-| IFCPAVEMENTTYPEENUM                           |    ✗    |    ✗    |    ✓    | xs:string             |
-| IFCPERFORMANCEHISTORYTYPEENUM                 |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCPAVEMENTTYPEENUM                           |         |         |    ✓    | xs:string             |
+| IFCPERFORMANCEHISTORYTYPEENUM                 |         |    ✓    |    ✓    | xs:string             |
 | IFCPERMEABLECOVERINGOPERATIONENUM             |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCPERMITTYPEENUM                             |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCPERMITTYPEENUM                             |         |    ✓    |    ✓    | xs:string             |
 | IFCPHMEASURE                                  |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCPHYSICALORVIRTUALENUM                      |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCPILECONSTRUCTIONENUM                       |    ✓    |    ✓    |    ✓    | xs:string             |
@@ -251,7 +251,7 @@ Columns of the table determine the validity of the type depending on the schema 
 | IFCPLANARFORCEMEASURE                         |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCPLANEANGLEMEASURE                          |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCPLATETYPEENUM                              |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCPOSITIVEINTEGER                            |    ✗    |    ✓    |    ✓    | xs:integer            |
+| IFCPOSITIVEINTEGER                            |         |    ✓    |    ✓    | xs:integer            |
 | IFCPOSITIVELENGTHMEASURE                      |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCPOSITIVEPLANEANGLEMEASURE                  |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCPOSITIVERATIOMEASURE                       |    ✓    |    ✓    |    ✓    | xs:double             |
@@ -261,65 +261,65 @@ Columns of the table determine the validity of the type depending on the schema 
 | IFCPROCEDURETYPEENUM                          |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCPROFILETYPEENUM                            |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCPROJECTEDORTRUELENGTHENUM                  |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCPROJECTIONELEMENTTYPEENUM                  |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCPROJECTORDERRECORDTYPEENUM                 |    ✓    |    ✗    |    ✗    | xs:string             |
+| IFCPROJECTIONELEMENTTYPEENUM                  |         |    ✓    |    ✓    | xs:string             |
+| IFCPROJECTORDERRECORDTYPEENUM                 |    ✓    |         |         | xs:string             |
 | IFCPROJECTORDERTYPEENUM                       |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCPROPERTYSETTEMPLATETYPEENUM                |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCPROPERTYSOURCEENUM                         |    ✓    |    ✗    |    ✗    | xs:string             |
-| IFCPROTECTIVEDEVICETRIPPINGUNITTYPEENUM       |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCPROPERTYSETTEMPLATETYPEENUM                |         |    ✓    |    ✓    | xs:string             |
+| IFCPROPERTYSOURCEENUM                         |    ✓    |         |         | xs:string             |
+| IFCPROTECTIVEDEVICETRIPPINGUNITTYPEENUM       |         |    ✓    |    ✓    | xs:string             |
 | IFCPROTECTIVEDEVICETYPEENUM                   |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCPUMPTYPEENUM                               |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCRADIOACTIVITYMEASURE                       |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCRAILINGTYPEENUM                            |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCRAILTYPEENUM                               |    ✗    |    ✗    |    ✓    | xs:string             |
-| IFCRAILWAYPARTTYPEENUM                        |    ✗    |    ✗    |    ✓    | xs:string             |
-| IFCRAILWAYTYPEENUM                            |    ✗    |    ✗    |    ✓    | xs:string             |
+| IFCRAILTYPEENUM                               |         |         |    ✓    | xs:string             |
+| IFCRAILWAYPARTTYPEENUM                        |         |         |    ✓    | xs:string             |
+| IFCRAILWAYTYPEENUM                            |         |         |    ✓    | xs:string             |
 | IFCRAMPFLIGHTTYPEENUM                         |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCRAMPTYPEENUM                               |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCRATIOMEASURE                               |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCREAL                                       |    ✓    |    ✓    |    ✓    | xs:double             |
-| IFCRECURRENCETYPEENUM                         |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCREFERENTTYPEENUM                           |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCRECURRENCETYPEENUM                         |         |    ✓    |    ✓    | xs:string             |
+| IFCREFERENTTYPEENUM                           |         |    ✓    |    ✓    | xs:string             |
 | IFCREFLECTANCEMETHODENUM                      |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCREINFORCEDSOILTYPEENUM                     |    ✗    |    ✗    |    ✓    | xs:string             |
+| IFCREINFORCEDSOILTYPEENUM                     |         |         |    ✓    | xs:string             |
 | IFCREINFORCINGBARROLEENUM                     |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCREINFORCINGBARSURFACEENUM                  |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCREINFORCINGBARTYPEENUM                     |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCREINFORCINGMESHTYPEENUM                    |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCRESOURCECONSUMPTIONENUM                    |    ✓    |    ✗    |    ✗    | xs:string             |
-| IFCRIBPLATEDIRECTIONENUM                      |    ✓    |    ✗    |    ✗    | xs:string             |
-| IFCROADPARTTYPEENUM                           |    ✗    |    ✗    |    ✓    | xs:string             |
-| IFCROADTYPEENUM                               |    ✗    |    ✗    |    ✓    | xs:string             |
+| IFCREINFORCINGBARTYPEENUM                     |         |    ✓    |    ✓    | xs:string             |
+| IFCREINFORCINGMESHTYPEENUM                    |         |    ✓    |    ✓    | xs:string             |
+| IFCRESOURCECONSUMPTIONENUM                    |    ✓    |         |         | xs:string             |
+| IFCRIBPLATEDIRECTIONENUM                      |    ✓    |         |         | xs:string             |
+| IFCROADPARTTYPEENUM                           |         |         |    ✓    | xs:string             |
+| IFCROADTYPEENUM                               |         |         |    ✓    | xs:string             |
 | IFCROLEENUM                                   |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCROOFTYPEENUM                               |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCROTATIONALFREQUENCYMEASURE                 |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCROTATIONALMASSMEASURE                      |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCROTATIONALSTIFFNESSMEASURE                 |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCSANITARYTERMINALTYPEENUM                   |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCSECONDINMINUTE                             |    ✓    |    ✗    |    ✗    | xs:double             |
+| IFCSECONDINMINUTE                             |    ✓    |         |         | xs:double             |
 | IFCSECTIONALAREAINTEGRALMEASURE               |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCSECTIONMODULUSMEASURE                      |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCSECTIONTYPEENUM                            |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCSENSORTYPEENUM                             |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCSEQUENCEENUM                               |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCSERVICELIFEFACTORTYPEENUM                  |    ✓    |    ✗    |    ✗    | xs:string             |
-| IFCSERVICELIFETYPEENUM                        |    ✓    |    ✗    |    ✗    | xs:string             |
-| IFCSHADINGDEVICETYPEENUM                      |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCSERVICELIFEFACTORTYPEENUM                  |    ✓    |         |         | xs:string             |
+| IFCSERVICELIFETYPEENUM                        |    ✓    |         |         | xs:string             |
+| IFCSHADINGDEVICETYPEENUM                      |         |    ✓    |    ✓    | xs:string             |
 | IFCSHEARMODULUSMEASURE                        |    ✓    |    ✓    |    ✓    | xs:double             |
-| IFCSIGNALTYPEENUM                             |    ✗    |    ✗    |    ✓    | xs:string             |
-| IFCSIGNTYPEENUM                               |    ✗    |    ✗    |    ✓    | xs:string             |
-| IFCSIMPLEPROPERTYTEMPLATETYPEENUM             |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCSIGNALTYPEENUM                             |         |         |    ✓    | xs:string             |
+| IFCSIGNTYPEENUM                               |         |         |    ✓    | xs:string             |
+| IFCSIMPLEPROPERTYTEMPLATETYPEENUM             |         |    ✓    |    ✓    | xs:string             |
 | IFCSLABTYPEENUM                               |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCSOLARDEVICETYPEENUM                        |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCSOLARDEVICETYPEENUM                        |         |    ✓    |    ✓    | xs:string             |
 | IFCSOLIDANGLEMEASURE                          |    ✓    |    ✓    |    ✓    | xs:double             |
-| IFCSOUNDPOWERLEVELMEASURE                     |    ✗    |    ✓    |    ✓    | xs:double             |
+| IFCSOUNDPOWERLEVELMEASURE                     |         |    ✓    |    ✓    | xs:double             |
 | IFCSOUNDPOWERMEASURE                          |    ✓    |    ✓    |    ✓    | xs:double             |
-| IFCSOUNDPRESSURELEVELMEASURE                  |    ✗    |    ✓    |    ✓    | xs:double             |
+| IFCSOUNDPRESSURELEVELMEASURE                  |         |    ✓    |    ✓    | xs:double             |
 | IFCSOUNDPRESSUREMEASURE                       |    ✓    |    ✓    |    ✓    | xs:double             |
-| IFCSOUNDSCALEENUM                             |    ✓    |    ✗    |    ✗    | xs:string             |
+| IFCSOUNDSCALEENUM                             |    ✓    |         |         | xs:string             |
 | IFCSPACEHEATERTYPEENUM                        |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCSPACETYPEENUM                              |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCSPATIALZONETYPEENUM                        |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCSPATIALZONETYPEENUM                        |         |    ✓    |    ✓    | xs:string             |
 | IFCSPECIFICHEATCAPACITYMEASURE                |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCSPECULAREXPONENT                           |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCSPECULARROUGHNESS                          |    ✓    |    ✓    |    ✓    | xs:double             |
@@ -327,25 +327,25 @@ Columns of the table determine the validity of the type depending on the schema 
 | IFCSTAIRFLIGHTTYPEENUM                        |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCSTAIRTYPEENUM                              |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCSTATEENUM                                  |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCSTRIPPEDOPTIONAL                           |    ✗    |    ✓    |    ✓    | xs:boolean            |
-| IFCSTRUCTURALCURVEACTIVITYTYPEENUM            |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCSTRUCTURALCURVEMEMBERTYPEENUM              |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCSTRUCTURALCURVETYPEENUM                    |    ✓    |    ✗    |    ✗    | xs:string             |
-| IFCSTRUCTURALSURFACEACTIVITYTYPEENUM          |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCSTRUCTURALSURFACEMEMBERTYPEENUM            |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCSTRUCTURALSURFACETYPEENUM                  |    ✓    |    ✗    |    ✗    | xs:string             |
-| IFCSUBCONTRACTRESOURCETYPEENUM                |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCSURFACEFEATURETYPEENUM                     |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCSURFACETEXTUREENUM                         |    ✓    |    ✗    |    ✗    | xs:string             |
+| IFCSTRIPPEDOPTIONAL                           |         |    ✓    |    ✓    | xs:boolean            |
+| IFCSTRUCTURALCURVEACTIVITYTYPEENUM            |         |    ✓    |    ✓    | xs:string             |
+| IFCSTRUCTURALCURVEMEMBERTYPEENUM              |         |    ✓    |    ✓    | xs:string             |
+| IFCSTRUCTURALCURVETYPEENUM                    |    ✓    |         |         | xs:string             |
+| IFCSTRUCTURALSURFACEACTIVITYTYPEENUM          |         |    ✓    |    ✓    | xs:string             |
+| IFCSTRUCTURALSURFACEMEMBERTYPEENUM            |         |    ✓    |    ✓    | xs:string             |
+| IFCSTRUCTURALSURFACETYPEENUM                  |    ✓    |         |         | xs:string             |
+| IFCSUBCONTRACTRESOURCETYPEENUM                |         |    ✓    |    ✓    | xs:string             |
+| IFCSURFACEFEATURETYPEENUM                     |         |    ✓    |    ✓    | xs:string             |
+| IFCSURFACETEXTUREENUM                         |    ✓    |         |         | xs:string             |
 | IFCSWITCHINGDEVICETYPEENUM                    |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCSYSTEMFURNITUREELEMENTTYPEENUM             |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCSYSTEMFURNITUREELEMENTTYPEENUM             |         |    ✓    |    ✓    | xs:string             |
 | IFCTANKTYPEENUM                               |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCTASKDURATIONENUM                           |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCTASKTYPEENUM                               |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCTASKDURATIONENUM                           |         |    ✓    |    ✓    | xs:string             |
+| IFCTASKTYPEENUM                               |         |    ✓    |    ✓    | xs:string             |
 | IFCTEMPERATUREGRADIENTMEASURE                 |    ✓    |    ✓    |    ✓    | xs:double             |
-| IFCTEMPERATURERATEOFCHANGEMEASURE             |    ✗    |    ✓    |    ✓    | xs:double             |
-| IFCTENDONANCHORTYPEENUM                       |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCTENDONCONDUITTYPEENUM                      |    ✗    |    ✗    |    ✓    | xs:string             |
+| IFCTEMPERATURERATEOFCHANGEMEASURE             |         |    ✓    |    ✓    | xs:double             |
+| IFCTENDONANCHORTYPEENUM                       |         |    ✓    |    ✓    | xs:string             |
+| IFCTENDONCONDUITTYPEENUM                      |         |         |    ✓    | xs:string             |
 | IFCTENDONTYPEENUM                             |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCTEXT                                       |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCTEXTALIGNMENT                              |    ✓    |    ✓    |    ✓    | xs:string             |
@@ -355,77 +355,68 @@ Columns of the table determine the validity of the type depending on the schema 
 | IFCTHERMALADMITTANCEMEASURE                   |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCTHERMALCONDUCTIVITYMEASURE                 |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCTHERMALEXPANSIONCOEFFICIENTMEASURE         |    ✓    |    ✓    |    ✓    | xs:double             |
-| IFCTHERMALLOADSOURCEENUM                      |    ✓    |    ✗    |    ✗    | xs:string             |
-| IFCTHERMALLOADTYPEENUM                        |    ✓    |    ✗    |    ✗    | xs:string             |
+| IFCTHERMALLOADSOURCEENUM                      |    ✓    |         |         | xs:string             |
+| IFCTHERMALLOADTYPEENUM                        |    ✓    |         |         | xs:string             |
 | IFCTHERMALRESISTANCEMEASURE                   |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCTHERMALTRANSMITTANCEMEASURE                |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCTHERMODYNAMICTEMPERATUREMEASURE            |    ✓    |    ✓    |    ✓    | xs:double             |
-| IFCTIME                                       |    ✗    |    ✓    |    ✓    | xs:time               |
+| IFCTIME                                       |         |    ✓    |    ✓    | xs:time               |
 | IFCTIMEMEASURE                                |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCTIMESERIESDATATYPEENUM                     |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCTIMESERIESSCHEDULETYPEENUM                 |    ✓    |    ✗    |    ✗    | xs:string             |
+| IFCTIMESERIESSCHEDULETYPEENUM                 |    ✓    |         |         | xs:string             |
 | IFCTIMESTAMP                                  |    ✓    |    ✓    |    ✓    | xs:integer            |
 | IFCTORQUEMEASURE                              |    ✓    |    ✓    |    ✓    | xs:double             |
-| IFCTRACKELEMENTTYPEENUM                       |    ✗    |    ✗    |    ✓    | xs:string             |
+| IFCTRACKELEMENTTYPEENUM                       |         |         |    ✓    | xs:string             |
 | IFCTRANSFORMERTYPEENUM                        |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCTRANSPORTELEMENTTYPEENUM                   |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCTUBEBUNDLETYPEENUM                         |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCUNITARYCONTROLELEMENTTYPEENUM              |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCUNITARYCONTROLELEMENTTYPEENUM              |         |    ✓    |    ✓    | xs:string             |
 | IFCUNITARYEQUIPMENTTYPEENUM                   |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCUNITENUM                                   |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCURIREFERENCE                               |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCURIREFERENCE                               |         |    ✓    |    ✓    | xs:string             |
 | IFCVALVETYPEENUM                              |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCVAPORPERMEABILITYMEASURE                   |    ✓    |    ✓    |    ✓    | xs:double             |
-| IFCVEHICLETYPEENUM                            |    ✗    |    ✗    |    ✓    | xs:string             |
-| IFCVIBRATIONDAMPERTYPEENUM                    |    ✗    |    ✗    |    ✓    | xs:string             |
+| IFCVEHICLETYPEENUM                            |         |         |    ✓    | xs:string             |
+| IFCVIBRATIONDAMPERTYPEENUM                    |         |         |    ✓    | xs:string             |
 | IFCVIBRATIONISOLATORTYPEENUM                  |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCVIRTUALELEMENTTYPEENUM                     |    ✗    |    ✗    |    ✓    | xs:string             |
-| IFCVOIDINGFEATURETYPEENUM                     |    ✗    |    ✓    |    ✓    | xs:string             |
+| IFCVIRTUALELEMENTTYPEENUM                     |         |         |    ✓    | xs:string             |
+| IFCVOIDINGFEATURETYPEENUM                     |         |    ✓    |    ✓    | xs:string             |
 | IFCVOLUMEMEASURE                              |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCVOLUMETRICFLOWRATEMEASURE                  |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCWALLTYPEENUM                               |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCWARPINGCONSTANTMEASURE                     |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCWARPINGMOMENTMEASURE                       |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCWASTETERMINALTYPEENUM                      |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCWELLKNOWNTEXTLITERAL                       |    ✗    |    ✗    |    ✓    | xs:string             |
+| IFCWELLKNOWNTEXTLITERAL                       |         |         |    ✓    | xs:string             |
 | IFCWINDOWPANELOPERATIONENUM                   |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCWINDOWPANELPOSITIONENUM                    |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCWINDOWSTYLECONSTRUCTIONENUM                |    ✓    |    ✓    |    ✗    | xs:string             |
-| IFCWINDOWSTYLEOPERATIONENUM                   |    ✓    |    ✓    |    ✗    | xs:string             |
-| IFCWINDOWTYPEENUM                             |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCWINDOWTYPEPARTITIONINGENUM                 |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCWORKCALENDARTYPEENUM                       |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCWORKCONTROLTYPEENUM                        |    ✓    |    ✗    |    ✗    | xs:string             |
-| IFCWORKPLANTYPEENUM                           |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCWORKSCHEDULETYPEENUM                       |    ✗    |    ✓    |    ✓    | xs:string             |
-| IFCYEARNUMBER                                 |    ✓    |    ✗    |    ✗    | xs:integer            |
+| IFCWINDOWSTYLECONSTRUCTIONENUM                |    ✓    |    ✓    |         | xs:string             |
+| IFCWINDOWSTYLEOPERATIONENUM                   |    ✓    |    ✓    |         | xs:string             |
+| IFCWINDOWTYPEENUM                             |         |    ✓    |    ✓    | xs:string             |
+| IFCWINDOWTYPEPARTITIONINGENUM                 |         |    ✓    |    ✓    | xs:string             |
+| IFCWORKCALENDARTYPEENUM                       |         |    ✓    |    ✓    | xs:string             |
+| IFCWORKCONTROLTYPEENUM                        |    ✓    |         |         | xs:string             |
+| IFCWORKPLANTYPEENUM                           |         |    ✓    |    ✓    | xs:string             |
+| IFCWORKSCHEDULETYPEENUM                       |         |    ✓    |    ✓    | xs:string             |
+| IFCYEARNUMBER                                 |    ✓    |         |         | xs:integer            |
 
-Please note that [IFCSTRIPPEDOPTIONAL](https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcStrippedOptional.htm) is a special data type that should never be instantiated, but it is listed here for schema tolerance reasons.
+Please note that [IFCSTRIPPEDOPTIONAL](https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcStrippedOptional.htm) is a special data type that should never be isntantiated, but it is listed here for schema tolerance reasons.
 
 ## XML base types
 
 The list of valid XML base types for the `base` attribute of `xs:restriction`, and the associated regex expression to check for the validity of string representation is as follows:
 
-| Base type   | Value string regex constraint                                                                                                               | Valid restriction nodes                                                                              |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| xs:boolean  | <code>^(true&#124;false&#124;0&#124;1)$</code>                                                                                        | annotation, pattern, whiteSpace                                                                      |
-| xs:date     | <code>^\d{4}-\d{2}-\d{2}(Z&#124;(&#91;+-&#93;\d{2}:\d{2}))?$</code>                                                                   | annotation, pattern, enumeration, whiteSpace, minExclusive, maxExclusive, minInclusive, maxInclusive |
-| xs:dateTime | <code>^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z&#124;(&#91;+-&#93;\d{2}:\d{2}))?$</code>                                         | annotation, pattern, enumeration, whiteSpace, minExclusive, maxExclusive, minInclusive, maxInclusive |
-| xs:double   | <code>^(&#91;-+&#93;?&#91;0-9&#93;*\.?&#91;0-9&#93;*(&#91;eE&#93;&#91;-+&#93;?&#91;0-9&#93;+)?&#124;NaN&#124;\+INF&#124;-INF)$</code> | annotation, pattern, enumeration, whiteSpace, minExclusive, maxExclusive, minInclusive, maxInclusive |
-| xs:duration | <code>^&#91;-+&#93;?P(\d+Y)?(\d+M)?(\d+D)?(T(\d+H)?(\d+M)?(\d+S)?)?$</code>                                                           | annotation, pattern, enumeration, whiteSpace, minExclusive, maxExclusive, minInclusive, maxInclusive |
-| xs:integer  | <code>^&#91;+-&#93;?(\d+)$</code>                                                                                                     | annotation, pattern, whiteSpace, enumeration, maxInclusive, maxExclusive, minInclusive, minExclusive |
-| xs:string   | <code>^.*$</code>                                                                                                                     | annotation, pattern, enumeration, whiteSpace, minLength, maxLength, length                           |
-| xs:time     | <code>^\d{2}:\d{2}:\d{2}(\.\d+)?(Z&#124;(&#91;+-&#93;\d{2}:\d{2}))?$</code>                                                           | annotation, pattern, enumeration, whiteSpace, minExclusive, maxExclusive, minInclusive, maxInclusive |
-| Base type   | Value string regex constraint                                        | pattern | enumeration | minExclusive | maxExclusive | minInclusive | maxInclusive | minLength | maxLength | length |
-|-------------|----------------------------------------------------------------------|---------|-------------|--------------|--------------|--------------|--------------|-----------|-----------|--------|
-| xs:boolean  | ^(true\|false\|0\|1)$                                                | ✓       |             |              |              |              |              |           |           |        |
-| xs:integer  | ^[+-]?(\d+)$                                                         | ✓       | ✓           | ✓            | ✓            | ✓            | ✓            |           |           |        |
-| xs:double   | ^([-+]?[0-9]*\.?[0-9]*([eE][-+]?[0-9]+)?\|NaN\|\+INF\|-INF)$         | ✓       | ✓           | ✓            | ✓            | ✓            | ✓            |           |           |        |
-| xs:string   | ^.*$                                                                 | ✓       | ✓           |              |              |              |              | ✓         | ✓         | ✓      |
-| xs:date     | ^\d{4}-\d{2}-\d{2}(Z\|([+-]\d{2}:\d{2}))?$                           | ✓       | ✓           | ✓            | ✓            | ✓            | ✓            |           |           |        |
-| xs:dateTime | ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z\|([+-]\d{2}:\d{2}))?$ | ✓       | ✓           | ✓            | ✓            | ✓            | ✓            |           |           |        |
-| xs:duration | ^[-+]?P(\d+Y)?(\d+M)?(\d+D)?(T(\d+H)?(\d+M)?(\d+S)?)?$               | ✓       | ✓           | ✓            | ✓            | ✓            | ✓            |           |           |        |
-| xs:time     | ^\d{2}:\d{2}:\d{2}(\.\d+)?(Z\|([+-]\d{2}:\d{2}))?$                   | ✓       | ✓           | ✓            | ✓            | ✓            | ✓            |           |           |        |
+| Base type   | Value string regex constraint                                                                                                         | annotation    | pattern       | enumeration   | minLength     | maxLength     | length        | minExclusive  | maxExclusive  | minInclusive  | maxInclusive  |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------- | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: |
+| xs:boolean  | <code>^(true&#124;false&#124;0&#124;1)$</code>                                                                                        |       ✓       |       ✓       |               |               |               |               |               |               |               |               |
+| xs:date     | <code>^\d{4}-\d{2}-\d{2}(Z&#124;(&#91;+-&#93;\d{2}:\d{2}))?$</code>                                                                   |       ✓       |       ✓       |       ✓       |               |               |               |       ✓       |       ✓       |       ✓       |       ✓       |
+| xs:dateTime | <code>^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z&#124;(&#91;+-&#93;\d{2}:\d{2}))?$</code>                                         |       ✓       |       ✓       |       ✓       |               |               |               |       ✓       |       ✓       |       ✓       |       ✓       |
+| xs:double   | <code>^(&#91;-+&#93;?&#91;0-9&#93;*\.?&#91;0-9&#93;*(&#91;eE&#93;&#91;-+&#93;?&#91;0-9&#93;+)?&#124;NaN&#124;\+INF&#124;-INF)$</code> |       ✓       |       ✓       |       ✓       |               |               |               |       ✓       |       ✓       |       ✓       |       ✓       |
+| xs:duration | <code>^&#91;-+&#93;?P(\d+Y)?(\d+M)?(\d+D)?(T(\d+H)?(\d+M)?(\d+S)?)?$</code>                                                           |       ✓       |       ✓       |       ✓       |               |               |               |       ✓       |       ✓       |       ✓       |       ✓       |
+| xs:integer  | <code>^&#91;+-&#93;?(\d+)$</code>                                                                                                     |       ✓       |       ✓       |       ✓       |               |               |               |       ✓       |       ✓       |       ✓       |       ✓       |
+| xs:string   | <code>^.*$</code>                                                                                                                     |       ✓       |       ✓       |       ✓       |       ✓       |       ✓       |       ✓       |               |               |               |               |
+| xs:time     | <code>^\d{2}:\d{2}:\d{2}(\.\d+)?(Z&#124;(&#91;+-&#93;\d{2}:\d{2}))?$</code>                                                           |       ✓       |       ✓       |       ✓       |               |               |               |       ✓       |       ✓       |       ✓       |       ✓       |
+
 For example:
 
 - To specify numbers: you must use a dot as the decimal separator, and not use a thousands separator (e.g. `4.2` is valid, but `1.234,5` is invalid). Scientific notation is allowed (e.g. `1e3` to represent `1000`).
