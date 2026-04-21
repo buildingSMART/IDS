@@ -8,8 +8,7 @@ While objects in IFC can have multiple relationships to other objects. IDS part-
 - The **IFCRELASSIGNSTOGROUP** relationship describes how multiple objects can be grouped into a collection of objects any use-case. For example, ducts, AHUs, fans, and louvres may all be grouped into a single distribution system.  Alternatively, cables, distribution boards, and GPOs may be grouped into a single circuit. Or perhaps spaces are grouped into zones, or maintainable assets are grouped into an inventory.
 - The **IFCRELCONTAINEDINSPATIALSTRUCTURE** relationship describes how multiple objects can be located in a particular location. For example, a pump might be in a space, a column might be on the level 2 building storey, or some street furniture might be on the building site. Every object must have a single primary location container in IFC, even though they may be referenced in multiple locations (such as a multi-storey column). This relationship only targets the primary location container.
 - The **IFCRELNESTS** relationship describes how a physical object may be connected to a larger host object, typically through a physical connection such as a pre-drilled hole or connection terminal. When the host moves, the attached nested objects move with it.
-- The **IFCRELVOIDSELEMENT** relationship describes how a void belongs to an element.
-- The **IFCRELFILLSELEMENT** relationship describes how an element fills a void, making it part of the void.
+- The **IFCRELVOIDSELEMENT IFCRELFILLSELEMENT** relationship describes how element relates to another element through the opening.
 
 When the `relation` parameter is not specified, then all 6 are to be considered (recursively) to identify containing entities, otherwise only the specified relation type should be considered (also recursively).
 
