@@ -373,7 +373,7 @@ Columns of the table determine the validity of the type depending on the schema 
 | IFCUNITARYCONTROLELEMENTTYPEENUM              |         |    ✓    |    ✓    | xs:string             |
 | IFCUNITARYEQUIPMENTTYPEENUM                   |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCUNITENUM                                   |    ✓    |    ✓    |    ✓    | xs:string             |
-| IFCURIREFERENCE                               |         |    ✓    |    ✓    | xs:anyUri             |
+| IFCURIREFERENCE                               |         |    ✓    |    ✓    | xs:anyURI             |
 | IFCVALVETYPEENUM                              |    ✓    |    ✓    |    ✓    | xs:string             |
 | IFCVAPORPERMEABILITYMEASURE                   |    ✓    |    ✓    |    ✓    | xs:double             |
 | IFCVEHICLETYPEENUM                            |         |         |    ✓    | xs:string             |
@@ -408,7 +408,7 @@ The list of valid XML base types for the `base` attribute of `xs:restriction`, t
 
 | Base type   | Value string regex constraint                                                                                                         | annotation    | pattern       | enumeration   | minLength     | maxLength     | length        | minExclusive  | maxExclusive  | minInclusive  | maxInclusive  |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------- | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: |
-| xs:anyUri   | <code>^\S+$</code>                                                                                                                    |       ✓       |       ✓       |       ✓       |       ✓       |       ✓       |       ✓       |               |               |               |               |
+| xs:anyURI   | <code>^\S+$</code>                                                                                                                    |       ✓       |       ✓       |       ✓       |       ✓       |       ✓       |       ✓       |               |               |               |               |
 | xs:boolean  | <code>^(true&#124;false&#124;0&#124;1)$</code>                                                                                        |       ✓       |       ✓       |               |               |               |               |               |               |               |               |
 | xs:date     | <code>^\d{4}-\d{2}-\d{2}(Z&#124;(&#91;+-&#93;\d{2}:\d{2}))?$</code>                                                                   |       ✓       |       ✓       |       ✓       |               |               |               |       ✓       |       ✓       |       ✓       |       ✓       |
 | xs:dateTime | <code>^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z&#124;(&#91;+-&#93;\d{2}:\d{2}))?$</code>                                         |       ✓       |       ✓       |       ✓       |               |               |               |       ✓       |       ✓       |       ✓       |       ✓       |
