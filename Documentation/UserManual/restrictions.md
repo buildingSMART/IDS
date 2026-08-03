@@ -45,6 +45,12 @@ Here are some common examples you can use:
 
 Note that Regex has multiple "flavours" or "dialects", so although the first two links are useful learning resources, they may also include Regex features not available in IDS. The third link (XML Regular expressions) can be referenced as an authoritative source on what can be used in IDS. In general, Regex in IDS is simpler and does not include advanced Regex features.
 
+One flavour difference is worth calling out on its own, because it does not cause an error, it silently changes the result. **IDS patterns must match the whole value, not part of it.** Every example in the table above relies on this. `DT[0-9]` rejects "`DT123`" precisely because the pattern has to account for the entire value, not just find "`DT1`" inside it.
+
+Most general purpose Regex testers, including regex101.com, search for a *matching part* of the value instead. Testing `DT[0-9]` against "`DT123`" there reports a match, which is the opposite of what IDS does. To reproduce IDS behaviour in such a tool, wrap the pattern in `^` and `$`, for example `^DT[0-9]$`. **Do not copy those anchors back into the IDS pattern**, they are not needed and `^` and `$` are not part of the XML Schema Regex syntax.
+
+Testers that implement XML Schema Regex directly avoid this problem, since they apply whole value matching automatically. Two free online examples are [DevToys XSD Regex Tester](https://devtoys.pro/testers/xsd-regex) and [Xsd Pattern Tester](https://online-xsd-pattern.vercel.app/). These are third party tools and are not affiliated with buildingSMART.
+
 ## Bounds
 
 A **Bounds** restriction allows you to specify that the value is a number and has to fall within a range of values. You can specify either a minimum, maximum, or both. You can also specify whether the minimum or maximum is inclusive (e.g. `>=` and `<=`) or exclusive (e.g. `>` and `<`). For example, you might specify that a value needs to be "more than 3" and "less than or equal to 10".
