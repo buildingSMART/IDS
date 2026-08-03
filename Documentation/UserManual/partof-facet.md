@@ -20,6 +20,9 @@ When the `relation` parameter is not specified, then all 6 are to be considered 
 | ------------ | -------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Entity**   | ✔️     | An entity facet | Any valid IDS `entityType`, nested in the XML (e.g. "IFCSYSTEM"). The IFC class of the larger object matches the required entity. Expressed in UPPERCASE.                                                                                                                                   |
 | **Relation** | ❌       | string          | One relationship chosen from the 6 supported types listed above. If omitted any valid IFC relationship structure that directly or indirectly, and transitively (recursively) has to be evaluated, if specified only the given type must be evaluated (recursively). Expressed in UPPERCASE. |
+
+The nested entity is a full `entityType`, the same complex type the Entity facet uses, so it may also carry a `predefinedType`. The rules for resolving it are exactly those given in the [Entity facet](entity-facet.md#ifc-predefined-types), including the case where `predefinedType` is the literal string `USERDEFINED`, which matches the raw IFC `PredefinedType` attribute rather than the substituted `ObjectType` text.
+
                                                                                                                                                                                                        
 
 ## 'Part Of' facet interpretation
