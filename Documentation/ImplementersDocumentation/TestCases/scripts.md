@@ -2208,6 +2208,60 @@ Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCINTEGER,''42.3''
 ```
 
+### Material properties are supported under IFC2X3 via extended material properties
+
+Proposed alongside issue #435. IFC2X3's `IfcMaterial` carries properties
+through `IfcExtendedMaterialProperties`, not `IfcMaterialProperties`
+(that entity only gained a usable property list in IFC4). This case
+is the control that shows the general property mechanism reaches
+materials at all under IFC2X3.
+
+``` ids property/pass-material_properties_are_supported_under_ifc2x3_via_extendedmaterialproperties.ids
+Material properties are supported under IFC2X3 via extended material properties
+IFC2X3
+Entity: ''IFCMATERIAL''
+Requirements:
+Property: ''Pset_Foo'',''Foo'',IFCLABEL
+```
+
+### Material properties that are absent fail under IFC2X3
+
+Same specification as the case above, run against a material with no
+extended properties, so a false pass could not be mistaken for a
+correctly-checked absence.
+
+``` ids property/fail-material_properties_that_are_absent_fail_under_ifc2x3.ids
+Material properties that are absent fail under IFC2X3
+IFC2X3
+Entity: ''IFCMATERIAL''
+Requirements:
+Property: ''Pset_Foo'',''Foo'',IFCLABEL
+```
+
+### Material properties are supported under IFC4 via IfcMaterialProperties
+
+Proposed alongside issue #435. The IFC4 counterpart of the two cases
+above, confirming `IfcMaterialDefinition` properties are reachable via
+`IfcMaterialProperties` under IFC4.
+
+``` ids property/pass-material_properties_are_supported_under_ifc4_via_ifcmaterialproperties.ids
+Material properties are supported under IFC4 via IfcMaterialProperties
+IFC4
+Entity: ''IFCMATERIAL''
+Requirements:
+Property: ''Pset_Foo'',''Foo'',IFCLABEL
+```
+
+### Material properties that are absent fail under IFC4
+
+``` ids property/fail-material_properties_that_are_absent_fail_under_ifc4.ids
+Material properties that are absent fail under IFC4
+IFC4
+Entity: ''IFCMATERIAL''
+Requirements:
+Property: ''Pset_Foo'',''Foo'',IFCLABEL
+```
+
 ### Measures are used to specify an IFC data type 1/2
 
 ``` ids property/fail-measures_are_used_to_specify_an_ifc_data_type_1_2.ids
@@ -2287,6 +2341,61 @@ Predefined properties are supported but discouraged 2/2
 Entity: ''IFCDOOR''
 Requirements:
 Property: ''Foo_Bar'',''PanelOperation'',IFCDOORPANELOPERATIONENUM,''SWONGING''
+```
+
+### Project properties are supported under IFC4 via IfcContext
+
+Proposed alongside issue #435. `IfcProject` moved from being a subtype
+of `IfcObject` in IFC2X3 to a subtype of the new `IfcContext` in IFC4.
+`IfcContext` independently declares its own `IsDefinedBy` inverse
+attribute, so an implementation that special-cases `IfcObject` for
+property lookups without also covering `IfcContext` will not find
+properties on an IFC4 `IfcProject`.
+
+``` ids property/pass-project_properties_are_supported_under_ifc4_via_ifccontext.ids
+Project properties are supported under IFC4 via IfcContext
+IFC4
+Entity: ''IFCPROJECT''
+Requirements:
+Property: ''Pset_Foo'',''Foo'',IFCLABEL
+```
+
+### Project properties that are absent fail under IFC4 via IfcContext
+
+Same specification as the case above, run against a project with no
+properties, so a false pass could not be mistaken for a
+correctly-checked absence.
+
+``` ids property/fail-project_properties_that_are_absent_fail_under_ifc4_via_ifccontext.ids
+Project properties that are absent fail under IFC4 via IfcContext
+IFC4
+Entity: ''IFCPROJECT''
+Requirements:
+Property: ''Pset_Foo'',''Foo'',IFCLABEL
+```
+
+### Project properties are supported under IFC2X3 via IfcObject
+
+The IFC2X3 control for the two cases above: `IfcProject` is a plain
+`IfcObject` here, so this is the case that should already work and
+proves the IFC4 cases are the interesting ones.
+
+``` ids property/pass-project_properties_are_supported_under_ifc2x3_via_ifcobject.ids
+Project properties are supported under IFC2X3 via IfcObject
+IFC2X3
+Entity: ''IFCPROJECT''
+Requirements:
+Property: ''Pset_Foo'',''Foo'',IFCLABEL
+```
+
+### Project properties that are absent fail under IFC2X3 via IfcObject
+
+``` ids property/fail-project_properties_that_are_absent_fail_under_ifc2x3_via_ifcobject.ids
+Project properties that are absent fail under IFC2X3 via IfcObject
+IFC2X3
+Entity: ''IFCPROJECT''
+Requirements:
+Property: ''Pset_Foo'',''Foo'',IFCLABEL
 ```
 
 ### Properties can be inherited from the type 1/2
