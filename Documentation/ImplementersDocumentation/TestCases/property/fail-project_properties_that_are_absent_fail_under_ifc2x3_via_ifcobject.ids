@@ -16,7 +16,7 @@
       <requirements>
         <property dataType="IFCLABEL">
           <propertySet>
-            <simpleValue>Pset_Foo</simpleValue>
+            <simpleValue>Custom_Pset</simpleValue>
           </propertySet>
           <baseName>
             <simpleValue>Foo</simpleValue>

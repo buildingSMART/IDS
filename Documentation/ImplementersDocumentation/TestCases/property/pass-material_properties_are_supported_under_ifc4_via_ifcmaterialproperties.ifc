@@ -8,6 +8,6 @@ DATA;
 #1=IFCPROJECT('1hqIFTRjfV6AWq_bMtnZwI',$,'P',$,$,$,$,$,$);
 #2=IFCMATERIAL('Concrete',$,$);
 #3=IFCPROPERTYSINGLEVALUE('Foo',$,IFCLABEL('Bar'),$);
-#4=IFCMATERIALPROPERTIES('Pset_Foo',$,(#3),#2);
+#4=IFCMATERIALPROPERTIES('Custom_Pset',$,(#3),#2);
 ENDSEC;
 END-ISO-10303-21;

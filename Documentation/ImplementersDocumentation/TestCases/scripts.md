@@ -2221,7 +2221,7 @@ Material properties are supported under IFC2X3 via extended material properties
 IFC2X3
 Entity: ''IFCMATERIAL''
 Requirements:
-Property: ''Pset_Foo'',''Foo'',IFCLABEL
+Property: ''Custom_Pset'',''Foo'',IFCLABEL
 ```
 
 ### Material properties that are absent fail under IFC2X3
@@ -2235,7 +2235,7 @@ Material properties that are absent fail under IFC2X3
 IFC2X3
 Entity: ''IFCMATERIAL''
 Requirements:
-Property: ''Pset_Foo'',''Foo'',IFCLABEL
+Property: ''Custom_Pset'',''Foo'',IFCLABEL
 ```
 
 ### Material properties are supported under IFC4 via IfcMaterialProperties
@@ -2249,7 +2249,7 @@ Material properties are supported under IFC4 via IfcMaterialProperties
 IFC4
 Entity: ''IFCMATERIAL''
 Requirements:
-Property: ''Pset_Foo'',''Foo'',IFCLABEL
+Property: ''Custom_Pset'',''Foo'',IFCLABEL
 ```
 
 ### Material properties that are absent fail under IFC4
@@ -2259,7 +2259,7 @@ Material properties that are absent fail under IFC4
 IFC4
 Entity: ''IFCMATERIAL''
 Requirements:
-Property: ''Pset_Foo'',''Foo'',IFCLABEL
+Property: ''Custom_Pset'',''Foo'',IFCLABEL
 ```
 
 ### Measures are used to specify an IFC data type 1/2
@@ -2357,7 +2357,7 @@ Project properties are supported under IFC4 via IfcContext
 IFC4
 Entity: ''IFCPROJECT''
 Requirements:
-Property: ''Pset_Foo'',''Foo'',IFCLABEL
+Property: ''Custom_Pset'',''Foo'',IFCLABEL
 ```
 
 ### Project properties that are absent fail under IFC4 via IfcContext
@@ -2371,7 +2371,7 @@ Project properties that are absent fail under IFC4 via IfcContext
 IFC4
 Entity: ''IFCPROJECT''
 Requirements:
-Property: ''Pset_Foo'',''Foo'',IFCLABEL
+Property: ''Custom_Pset'',''Foo'',IFCLABEL
 ```
 
 ### Project properties are supported under IFC2X3 via IfcObject
@@ -2385,7 +2385,7 @@ Project properties are supported under IFC2X3 via IfcObject
 IFC2X3
 Entity: ''IFCPROJECT''
 Requirements:
-Property: ''Pset_Foo'',''Foo'',IFCLABEL
+Property: ''Custom_Pset'',''Foo'',IFCLABEL
 ```
 
 ### Project properties that are absent fail under IFC2X3 via IfcObject
@@ -2395,7 +2395,7 @@ Project properties that are absent fail under IFC2X3 via IfcObject
 IFC2X3
 Entity: ''IFCPROJECT''
 Requirements:
-Property: ''Pset_Foo'',''Foo'',IFCLABEL
+Property: ''Custom_Pset'',''Foo'',IFCLABEL
 ```
 
 ### Properties can be inherited from the type 1/2
