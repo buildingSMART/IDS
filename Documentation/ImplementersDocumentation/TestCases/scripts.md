@@ -959,6 +959,36 @@ Requirements:
 Entity: ''IfcWall''
 ```
 
+### In IFC2X3 an entity name resolves via the type mapping table 1/2
+
+The [IFC2X3 occurrence and type mapping table](../ifc2x3-occurrence-type-mapping-table.md)
+lets an IFC2X3 model be checked with the IFC4 entity name `IfcAirTerminal`
+even though that class does not exist in IFC2X3. Applicability matches the
+real IFC2X3 occurrence class `IfcFlowTerminal`, and the requirement checks
+that it is typed by `IfcAirTerminalType`.
+
+``` ids entity/pass-in_ifc2x3_an_entity_name_resolves_via_the_type_mapping_table_1_2.ids
+In IFC2X3 an entity name resolves via the type mapping table 1/2
+IFC2X3
+Entity: ''IFCFLOWTERMINAL''
+Requirements:
+Entity: ''IFCAIRTERMINAL''
+```
+
+### In IFC2X3 an entity name resolves via the type mapping table 2/2
+
+Same specification as the case above, run against an `IfcFlowTerminal`
+typed by `IfcElectricApplianceType` instead, so a false pass could not be
+mistaken for a correctly-checked type mismatch.
+
+``` ids entity/fail-in_ifc2x3_an_entity_name_resolves_via_the_type_mapping_table_2_2.ids
+In IFC2X3 an entity name resolves via the type mapping table 2/2
+IFC2X3
+Entity: ''IFCFLOWTERMINAL''
+Requirements:
+Entity: ''IFCAIRTERMINAL''
+```
+
 ### Inherited predefined types should pass
 
 ``` ids entity/pass-inherited_predefined_types_should_pass.ids
