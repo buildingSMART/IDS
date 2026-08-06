@@ -23,8 +23,8 @@
           </baseName>
           <value>
             <xs:restriction base="xs:double">
-              <xs:minExclusive value="20" />
               <xs:maxInclusive value="40" />
+              <xs:minExclusive value="20" />
             </xs:restriction>
           </value>
         </property>
