@@ -959,34 +959,122 @@ Requirements:
 Entity: ''IfcWall''
 ```
 
-### In IFC2X3 an entity name resolves via the type mapping table 1/2
+### In IFC2X3 an AirTerminal can be checked by name via the type mapping table 1/2
 
 The [IFC2X3 occurrence and type mapping table](../ifc2x3-occurrence-type-mapping-table.md)
-lets an IFC2X3 model be checked with the IFC4 entity name `IfcAirTerminal`
-even though that class does not exist in IFC2X3. Applicability matches the
-real IFC2X3 occurrence class `IfcFlowTerminal`, and the requirement checks
-that it is typed by `IfcAirTerminalType`.
+lets an IFC2X3 model be checked directly with the IFC4 entity name
+`IfcAirTerminal`, even though that class does not exist in IFC2X3.
+Applicability is expressed against `IFCAIRTERMINAL` itself, which resolves
+to the real IFC2X3 occurrence class `IfcFlowTerminal` typed by
+`IfcAirTerminalType`. A common real-world requirement, naming, is checked
+on the resolved occurrence: "All AirTerminals should be named like AIR-XXX".
 
-``` ids entity/pass-in_ifc2x3_an_entity_name_resolves_via_the_type_mapping_table_1_2.ids
-In IFC2X3 an entity name resolves via the type mapping table 1/2
+``` ids entity/pass-in_ifc2x3_an_airterminal_can_be_checked_by_name_via_the_type_mapping_table_1_2.ids
+In IFC2X3 an AirTerminal can be checked by name via the type mapping table 1/2
 IFC2X3
-Entity: ''IFCFLOWTERMINAL''
+Entity: ''IFCAIRTERMINAL''
 Requirements:
+Attribute: ''Name'',Pattern(''AIR-.*'')
+```
+
+### In IFC2X3 an AirTerminal can be checked by name via the type mapping table 2/2
+
+Same specification as the case above, run against an `IfcFlowTerminal`
+typed by `IfcAirTerminalType` whose `Name` does not match the pattern, so
+the failure is a naming mismatch rather than an unresolved applicability.
+
+``` ids entity/fail-in_ifc2x3_an_airterminal_can_be_checked_by_name_via_the_type_mapping_table_2_2.ids
+In IFC2X3 an AirTerminal can be checked by name via the type mapping table 2/2
+IFC2X3
+Entity: ''IFCAIRTERMINAL''
+Requirements:
+Attribute: ''Name'',Pattern(''AIR-.*'')
+```
+
+### In IFC2X3 there must be an AirTerminal per the type mapping table 1/2
+
+Applicability alone can express "There must be AirTerminals in the model".
+The default specification cardinality is Required, so the specification
+fails if no element resolves against `IFCAIRTERMINAL` through the type
+mapping table, without needing a separate requirement.
+
+``` ids entity/pass-in_ifc2x3_there_must_be_an_airterminal_per_the_type_mapping_table_1_2.ids
+In IFC2X3 there must be an AirTerminal per the type mapping table 1/2
+IFC2X3
 Entity: ''IFCAIRTERMINAL''
 ```
 
-### In IFC2X3 an entity name resolves via the type mapping table 2/2
+### In IFC2X3 there must be an AirTerminal per the type mapping table 2/2
 
-Same specification as the case above, run against an `IfcFlowTerminal`
-typed by `IfcElectricApplianceType` instead, so a false pass could not be
-mistaken for a correctly-checked type mismatch.
+Same specification as the case above, run against a model that contains no
+`IfcFlowTerminal` typed by `IfcAirTerminalType` at all, so the specification
+fails for having zero applicable entities rather than for a failed
+requirement.
 
-``` ids entity/fail-in_ifc2x3_an_entity_name_resolves_via_the_type_mapping_table_2_2.ids
-In IFC2X3 an entity name resolves via the type mapping table 2/2
+``` ids entity/fail-in_ifc2x3_there_must_be_an_airterminal_per_the_type_mapping_table_2_2.ids
+In IFC2X3 there must be an AirTerminal per the type mapping table 2/2
 IFC2X3
-Entity: ''IFCFLOWTERMINAL''
-Requirements:
 Entity: ''IFCAIRTERMINAL''
+```
+
+### In IFC2X3 an AirTerminal predefined type resolves via the type mapping table 1/2
+
+In IFC2X3 the predefined type lives on the type object, not the occurrence.
+Applicability resolves `IFCAIRTERMINAL` through the type mapping table, and
+the requirement checks `IfcAirTerminalType.PredefinedType` against a named
+enumeration value.
+
+``` ids entity/pass-in_ifc2x3_an_airterminal_predefined_type_resolves_via_the_type_mapping_table_1_2.ids
+In IFC2X3 an AirTerminal predefined type resolves via the type mapping table 1/2
+IFC2X3
+Entity: ''IFCAIRTERMINAL''
+Requirements:
+Entity: ''IFCAIRTERMINAL'',''DIFFUSER''
+```
+
+### In IFC2X3 an AirTerminal predefined type resolves via the type mapping table 2/2
+
+Same specification as the case above, run against an `IfcAirTerminalType`
+whose `PredefinedType` is a different enumeration value (`GRILLE`), so the
+failure is a predefined type mismatch rather than an unresolved
+applicability.
+
+``` ids entity/fail-in_ifc2x3_an_airterminal_predefined_type_resolves_via_the_type_mapping_table_2_2.ids
+In IFC2X3 an AirTerminal predefined type resolves via the type mapping table 2/2
+IFC2X3
+Entity: ''IFCAIRTERMINAL''
+Requirements:
+Entity: ''IFCAIRTERMINAL'',''DIFFUSER''
+```
+
+### In IFC2X3 a user-defined AirTerminal predefined type resolves via the type mapping table 1/2
+
+`USERDEFINED` predefined types have their own nuance in IFC2X3: the custom
+label lives on `IfcAirTerminalType.ElementType`, not on the occurrence's
+`ObjectType`. The requirement only checks that `PredefinedType` itself is
+`USERDEFINED`.
+
+``` ids entity/pass-in_ifc2x3_a_user_defined_airterminal_predefined_type_resolves_via_the_type_mapping_table_1_2.ids
+In IFC2X3 a user-defined AirTerminal predefined type resolves via the type mapping table 1/2
+IFC2X3
+Entity: ''IFCAIRTERMINAL''
+Requirements:
+Entity: ''IFCAIRTERMINAL'',''USERDEFINED''
+```
+
+### In IFC2X3 a user-defined AirTerminal predefined type resolves via the type mapping table 2/2
+
+Same specification as the case above, run against an `IfcAirTerminalType`
+with a named `PredefinedType` (`DIFFUSER`) instead of `USERDEFINED`, so the
+failure is a predefined type mismatch rather than an unresolved
+applicability.
+
+``` ids entity/fail-in_ifc2x3_a_user_defined_airterminal_predefined_type_resolves_via_the_type_mapping_table_2_2.ids
+In IFC2X3 a user-defined AirTerminal predefined type resolves via the type mapping table 2/2
+IFC2X3
+Entity: ''IFCAIRTERMINAL''
+Requirements:
+Entity: ''IFCAIRTERMINAL'',''USERDEFINED''
 ```
 
 ### Inherited predefined types should pass
