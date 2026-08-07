@@ -20,7 +20,7 @@
             <simpleValue>LoadBearing</simpleValue>
           </baseName>
           <value>
-            <simpleValue>TRUE</simpleValue>
+            <simpleValue>true</simpleValue>
           </value>
         </property>
       </applicability>

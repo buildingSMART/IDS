@@ -2195,7 +2195,7 @@ Hand authored to close the applicability coverage gap identified in buildingSMAR
 ``` ids property/pass-external_load_bearing_walls_need_a_fire_rating_property_1_2.ids
 External load bearing walls need a fire rating property 1/2
 Entity: ''IFCWALL''
-Property: ''Pset_WallCommon'',''LoadBearing'',IFCBOOLEAN,''TRUE''
+Property: ''Pset_WallCommon'',''LoadBearing'',IFCBOOLEAN,''true''
 Requirements:
 Property: ''Pset_WallCommon'',''FireRating'',IFCLABEL
 ```
@@ -2205,7 +2205,7 @@ Property: ''Pset_WallCommon'',''FireRating'',IFCLABEL
 ``` ids property/fail-external_load_bearing_walls_need_a_fire_rating_property_2_2.ids
 External load bearing walls need a fire rating property 2/2
 Entity: ''IFCWALL''
-Property: ''Pset_WallCommon'',''LoadBearing'',IFCBOOLEAN,''TRUE''
+Property: ''Pset_WallCommon'',''LoadBearing'',IFCBOOLEAN,''true''
 Requirements:
 Property: ''Pset_WallCommon'',''FireRating'',IFCLABEL
 ```

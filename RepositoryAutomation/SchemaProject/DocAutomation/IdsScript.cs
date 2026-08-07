@@ -183,6 +183,21 @@ namespace SchemaProject.DocAutomation
                 case EntityPrefix:
                     spec.Applicability.Entity = MakeEntity(parts);
                     break;
+                case AttributePrefix:
+                    spec.Applicability.Attribute.Add(MakeAttribute(parts));
+                    break;
+                case ClassificationPrefix:
+                    spec.Applicability.Classification.Add(MakeClassification(parts));
+                    break;
+                case MaterialPrefix:
+                    spec.Applicability.Material.Add(MakeMaterial(parts));
+                    break;
+                case PartOfPrefix:
+                    spec.Applicability.PartOf.Add(MakePartOf(parts));
+                    break;
+                case PropertyPrefix:
+                    spec.Applicability.Property.Add(MakeProperty(parts));
+                    break;
                 default:
                     break;
             }
@@ -349,6 +364,112 @@ namespace SchemaProject.DocAutomation
             if (parts.Count > 0 && parts[0] is ConditionalCardinality crd)
             {
                 ret.Cardinality = crd;
+                parts.RemoveAt(0);
+            }
+            if (parts.Count > 0)
+                ret.Name = MakeIdsValue(parts[0]);
+            if (parts.Count > 1)
+                ret.Value = MakeIdsValue(parts[1]);
+
+            return ret;
+        }
+
+        private PropertyType MakeProperty(IList<object> parts)
+        {
+            var ret = new PropertyType();
+            if (parts.Count > 0 && parts[0] is ConditionalCardinality)
+            {
+                // cardinality is a requirements-only concept, not available on applicability facets
+                parts.RemoveAt(0);
+            }
+
+            // try get datatype
+            for (int i = 0; i < parts.Count;)
+            {
+                if (parts[i] is IfcClassName st)
+                {
+                    ret.DataType = st.Value;
+                    parts.RemoveAt(i);
+                    continue;
+                }
+                i++;
+            }
+
+            if (parts.Count > 0)
+                ret.PropertySet = MakeIdsValue(parts[0]);
+            if (parts.Count > 1)
+                ret.BaseName = MakeIdsValue(parts[1]);
+            if (parts.Count > 2)
+                ret.Value = MakeIdsValue(parts[2]);
+            return ret;
+        }
+
+        private PartOfType MakePartOf(IList<object> parts)
+        {
+            var ret = new PartOfType();
+            if (parts.Count > 0 && parts[0] is ConditionalCardinality)
+            {
+                // cardinality is a requirements-only concept, not available on applicability facets
+                parts.RemoveAt(0);
+            }
+            for (int i = 0; i < parts.Count; )
+            {
+                if (parts[i] is IfcClassName st)
+                {
+                    if (TryGetRelation(st.Value, out var rel))
+                    {
+                        ret.Relation = rel;
+                        parts.RemoveAt(i);
+                        continue;
+                    }
+                }
+                i++;
+            }
+            ret.Entity = new EntityType();
+            if (parts.Count > 0)
+                ret.Entity.Name = MakeIdsValue(parts[0]);
+            if (parts.Count > 1)
+            {
+                ret.Entity.PredefinedType = MakeIdsValue(parts[1]);
+            }
+            return ret;
+        }
+
+        private MaterialType MakeMaterial(IList<object> parts)
+        {
+            var ret = new MaterialType();
+            if (parts.Count > 0 && parts[0] is ConditionalCardinality)
+            {
+                // cardinality is a requirements-only concept, not available on applicability facets
+                parts.RemoveAt(0);
+            }
+            if (parts.Count > 0)
+                ret.Value = MakeIdsValue(parts[0]);
+            return ret;
+        }
+
+        private ClassificationType MakeClassification(IList<object> parts)
+        {
+            var ret = new ClassificationType();
+            if (parts.Count > 0 && parts[0] is ConditionalCardinality)
+            {
+                // cardinality is a requirements-only concept, not available on applicability facets
+                parts.RemoveAt(0);
+            }
+            if (parts.Count > 0)
+                ret.System = MakeIdsValue(parts[0]);
+            if (parts.Count > 1)
+                ret.Value = MakeIdsValue(parts[1]);
+
+            return ret;
+        }
+
+        private AttributeType MakeAttribute(IList<object> parts)
+        {
+            var ret = new AttributeType();
+            if (parts.Count > 0 && parts[0] is ConditionalCardinality)
+            {
+                // cardinality is a requirements-only concept, not available on applicability facets
                 parts.RemoveAt(0);
             }
             if (parts.Count > 0)
