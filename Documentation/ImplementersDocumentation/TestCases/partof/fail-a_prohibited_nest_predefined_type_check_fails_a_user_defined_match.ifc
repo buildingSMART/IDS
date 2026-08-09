@@ -1,0 +1,12 @@
+ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(('ViewDefinition [CoordinationView]'),'2;1');
+FILE_NAME('','2026-08-09T19:08:45',(),(),'IfcOpenShell 0.8.5-1c5b825','IfcOpenShell 0.8.5-1c5b825','');
+FILE_SCHEMA(('IFC4'));
+ENDSEC;
+DATA;
+#1=IFCFURNITURE('1RqA_N2aHESB6WMzZU5OnD',$,$,$,'WATERBOTTLE',$,$,$,.USERDEFINED.);
+#2=IFCDISCRETEACCESSORY('1CODJQTNf8fgtBo8jyk$Je',$,$,$,$,$,$,$,$);
+#3=IFCRELNESTS('3ZfTsF94L9Yv$EmT_jj0Pw',$,$,$,#1,(#2));
+ENDSEC;
+END-ISO-10303-21;
