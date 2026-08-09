@@ -8,6 +8,10 @@
       "commandName": "Project",
       "commandLineArgs": "CreateTestCases"
     },
+    "AuditAllIdsFiles": {
+      "commandName": "Project",
+      "commandLineArgs": "AuditAllIdsFiles"
+    },
     "Standard run": {
       "commandName": "Project"
     },
