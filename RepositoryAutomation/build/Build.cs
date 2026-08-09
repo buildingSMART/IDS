@@ -14,7 +14,7 @@ class Build : NukeBuild
 	[Parameter("Configuration to build - Default is 'Debug' (local) or 'Release' (server)")]
 	private readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;
 
-	private Tool IdsTool => ToolResolver.GetNuGetTool("ids-tool.CommandLine", "tools/net8.0/ids-tool.dll");
+	private Tool IdsTool => ToolResolver.GetNuGetTool("ids-tool.CommandLine", "tools/net8.0/any/ids-tool.dll");
 
 	private Tool SchemaTool => ToolResolver.GetNuGetTool("dotnet-xscgen", "tools/net8.0/any/xscgen.dll");
 
