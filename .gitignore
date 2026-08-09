@@ -1,13 +1,27 @@
-2021 Detailed Project Plan/2021 IDS detailed project plan.docx
-/RepositoryAutomation/build/bin
-/RepositoryAutomation/build/obj/
+# User files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studo 2015 cache/options directory
+.vs/
 .vscode/
 .tmp/
-/RepositoryAutomation/build/.vs/
-**/.nuke/temp/
-/.vs/
-/RepositoryAutomation/SchemaProject/.vs/
-/RepositoryAutomation/SchemaProject/bin/
-/RepositoryAutomation/SchemaProject/obj/
-/RepositoryAutomation/SchemaProject/Ids.cs
+
 .DS_Store
+
+**/.nuke/temp/
+/RepositoryAutomation/SchemaProject/Ids.cs
