@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <PackageReference Include="Nuke.Common" Version="9.0.4" />
-    <PackageReference Include="ids-tool.CommandLine" Version="1.0.121" />
+    <PackageReference Include="ids-tool.CommandLine" Version="1.0.123" />
     <PackageDownload Include="dotnet-xscgen" Version="[2.1.1182]" />
   </ItemGroup>
   
