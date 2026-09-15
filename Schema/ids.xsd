@@ -38,7 +38,11 @@
 	<xs:complexType name="idsValue">
 		<xs:choice minOccurs="1">
 			<!-- place for potential additional rules for idsValue -->
-			<xs:element name="simpleValue" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="simpleValue" minOccurs="1" maxOccurs="1">
+				<xs:simpleType>
+					<xs:union memberTypes="xs:string xs:decimal xs:integer xs:boolean"/>
+				</xs:simpleType>
+			</xs:element>
 			<xs:element ref="xs:restriction" minOccurs="1" maxOccurs="1"/>
 		</xs:choice>
 	</xs:complexType>
