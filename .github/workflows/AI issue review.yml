@@ -61,7 +61,7 @@ jobs:
             echo "COMMENTS:"
 
             gh api --paginate \
-              -R "$GH_REPO" \
+              --repo "$GH_REPO" \
               "repos/{owner}/{repo}/issues/$ISSUE_NUMBER/comments?per_page=100" \
               --jq '
                 .[]
