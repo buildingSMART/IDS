@@ -1,5 +1,3 @@
-.github/workflows/AI issue review.yml
----
 name: AI-summarise issue discussion
 
 on:
