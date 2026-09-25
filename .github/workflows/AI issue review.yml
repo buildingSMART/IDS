@@ -158,12 +158,15 @@ jobs:
 
       - name: Run AI inference
         id: inference
-        uses: github/copilot-chat-action@v1
-        with:
-          prompt-file: prompt.txt
-          model: gpt-4.1
+        shell: bash
         env:
           GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          
+          copilot explain --target file --input prompt.txt > response.json 2>&1
+          
+          echo "response-file=response.json" >> "$GITHUB_OUTPUT"
 
       - name: Validate AI response
         id: result
