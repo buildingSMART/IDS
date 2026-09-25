@@ -158,7 +158,7 @@ jobs:
 
       - name: Run AI inference
         id: inference
-        uses: actions/ai-inference@v3
+        uses: github/copilot-chat-action@v1
         with:
           prompt-file: prompt.txt
           model: gpt-4.1
