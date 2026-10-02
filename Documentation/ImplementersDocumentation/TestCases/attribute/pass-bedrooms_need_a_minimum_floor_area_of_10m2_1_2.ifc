@@ -1,0 +1,16 @@
+ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(('ViewDefinition [CoordinationView]'),'2;1');
+FILE_NAME('','2024-01-01T00:00:00',(),(),'','','');
+FILE_SCHEMA(('IFC4'));
+ENDSEC;
+DATA;
+#1=IFCPROJECT('0nAJhbwG5A0uNieL5ozGvv',$,$,$,$,$,$,$,#2);
+#2=IFCUNITASSIGNMENT((#3));
+#3=IFCSIUNIT(*,.AREAUNIT.,$,.SQUARE_METRE.);
+#4=IFCSPACE('0eA6m4fELI9QBIhP3wiLAp',$,$,'BEDROOM 1',$,$,$,$,$,$,$);
+#5=IFCELEMENTQUANTITY('16MocU_IDOF8_x3Iqllz0d',$,'Qto_SpaceBaseQuantities',$,$,(#6));
+#6=IFCQUANTITYAREA('NetFloorArea',$,$,12.,$);
+#7=IFCRELDEFINESBYPROPERTIES('1xdwj8qGXK4hzoNbvMdXJW',$,$,$,(#4),#5);
+ENDSEC;
+END-ISO-10303-21;

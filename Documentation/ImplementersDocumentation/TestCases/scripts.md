@@ -214,6 +214,28 @@ Requirements:
 Attribute: ''Name''
 ```
 
+### Bedrooms need a minimum floor area of 10m2 1/2
+
+Hand authored to close the applicability coverage gap identified in buildingSMART/IDS#181. Mirrors the "Bedrooms should have a minimum area of 10m2" worked example in specifications.md, which uses an Attribute facet in the applicability to select bedrooms by their Description.
+
+``` ids attribute/pass-bedrooms_need_a_minimum_floor_area_of_10m2_1_2.ids
+Bedrooms need a minimum floor area of 10m2 1/2
+Entity: ''IFCSPACE''
+Attribute: ''Description'',Pattern(''.*BEDROOM.*'')
+Requirements:
+Property: ''Qto_SpaceBaseQuantities'',''NetFloorArea'',IFCAREAMEASURE,xs:double MinInclusive(''10'')
+```
+
+### Bedrooms need a minimum floor area of 10m2 2/2
+
+``` ids attribute/fail-bedrooms_need_a_minimum_floor_area_of_10m2_2_2.ids
+Bedrooms need a minimum floor area of 10m2 2/2
+Entity: ''IFCSPACE''
+Attribute: ''Description'',Pattern(''.*BEDROOM.*'')
+Requirements:
+Property: ''Qto_SpaceBaseQuantities'',''NetFloorArea'',IFCAREAMEASURE,xs:double MinInclusive(''10'')
+```
+
 ### Booleans must be specified as lowercase strings 1/3
 
 ``` ids attribute/fail-booleans_must_be_specified_as_lowercase_strings_1_3.ids
@@ -548,6 +570,28 @@ Attribute: ''Name'',Enumeration(''Foo'',''Bar'')
 ```
 
 ## classification
+
+### A classification facet can be used for applicability 1/2
+
+Hand authored to close the applicability coverage gap identified in buildingSMART/IDS#181. Every applicability block in the shipped test suite uses only the Entity facet; berlotti confirmed on #181 that "as you see in the XSD there is symmetry in applicability and requirements", so a classification facet should also be usable there. Only classified walls become applicable, so an unclassified wall with the wrong name is never checked, while a classified wall with the wrong name fails.
+
+``` ids classification/pass-a_classification_facet_can_be_used_for_applicability_1_2.ids
+A classification facet can be used for applicability 1/2
+Entity: ''IFCWALL''
+Classification: Pattern(''\w+'')
+Requirements:
+Attribute: ''Name'',''Waldo''
+```
+
+### A classification facet can be used for applicability 2/2
+
+``` ids classification/fail-a_classification_facet_can_be_used_for_applicability_2_2.ids
+A classification facet can be used for applicability 2/2
+Entity: ''IFCWALL''
+Classification: Pattern(''\w+'')
+Requirements:
+Attribute: ''Name'',''Waldo''
+```
 
 ### A classification facet with no data matches any classification 1/2
 
@@ -2260,6 +2304,28 @@ Elements with no properties always fail
 Entity: ''IFCWALL''
 Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCLABEL
+```
+
+### External load bearing walls need a fire rating property 1/2
+
+Hand authored to close the applicability coverage gap identified in buildingSMART/IDS#181, and to add conformance coverage for the "External load bearing walls need to have a fire rating property for code compliance" worked example in specifications.md, which combines an Entity facet and a Property facet in the applicability with AND (intersection) semantics.
+
+``` ids property/pass-external_load_bearing_walls_need_a_fire_rating_property_1_2.ids
+External load bearing walls need a fire rating property 1/2
+Entity: ''IFCWALL''
+Property: ''Pset_WallCommon'',''LoadBearing'',IFCBOOLEAN,''true''
+Requirements:
+Property: ''Pset_WallCommon'',''FireRating'',IFCLABEL
+```
+
+### External load bearing walls need a fire rating property 2/2
+
+``` ids property/fail-external_load_bearing_walls_need_a_fire_rating_property_2_2.ids
+External load bearing walls need a fire rating property 2/2
+Entity: ''IFCWALL''
+Property: ''Pset_WallCommon'',''LoadBearing'',IFCBOOLEAN,''true''
+Requirements:
+Property: ''Pset_WallCommon'',''FireRating'',IFCLABEL
 ```
 
 ### IDS does not handle string truncation such as for identifiers
