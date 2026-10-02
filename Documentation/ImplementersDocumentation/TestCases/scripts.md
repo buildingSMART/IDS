@@ -1551,6 +1551,16 @@ Material: ''Bar''
 
 ## partof
 
+### A containment relationship may be indirect
+
+``` ids partof/pass-a_containment_relationship_may_be_indirect.ids
+A containment relationship may be indirect
+IFC4
+Entity: ''IFCSENSOR''
+Requirements:
+PartOf: ''IFCBUILDINGSTOREY'',IFCRELCONTAINEDINSPATIALSTRUCTURE
+```
+
 ### A group entity must match exactly 1/2
 
 ``` ids partof/fail-a_group_entity_must_match_exactly_1_2.ids
@@ -1588,6 +1598,16 @@ Requirements:
 PartOf: ''IFCINVENTORY'',''BUNNY'',IFCRELASSIGNSTOGROUP
 ```
 
+### A group relationship may be indirect
+
+``` ids partof/pass-a_group_relationship_may_be_indirect.ids
+A group relationship may be indirect
+IFC4
+Entity: ''IFCDUCTSEGMENT''
+Requirements:
+PartOf: ''IFCZONE'',IFCRELASSIGNSTOGROUP
+```
+
 ### A grouped element passes a group relationship
 
 ``` ids partof/pass-a_grouped_element_passes_a_group_relationship.ids
@@ -1615,6 +1635,16 @@ Requirements:
 PartOf: Pattern(''.*''),IFCRELASSIGNSTOGROUP
 ```
 
+### A prohibited containment relationship detects an indirect container
+
+``` ids partof/fail-a_prohibited_containment_relationship_detects_an_indirect_container.ids
+A prohibited containment relationship detects an indirect container
+IFC4
+Entity: ''IFCSENSOR''
+Requirements:
+PartOf: Prohibited,''IFCBUILDINGSTOREY'',IFCRELCONTAINEDINSPATIALSTRUCTURE
+```
+
 ### A prohibited facet returns the opposite of a required facet
 
 ``` ids partof/fail-a_prohibited_facet_returns_the_opposite_of_a_required_facet.ids
@@ -1622,6 +1652,16 @@ A prohibited facet returns the opposite of a required facet
 Entity: ''IFCWALL''
 Requirements:
 PartOf: Prohibited,Pattern(''.*''),IFCRELAGGREGATES
+```
+
+### A prohibited group relationship detects an indirect group
+
+``` ids partof/fail-a_prohibited_group_relationship_detects_an_indirect_group.ids
+A prohibited group relationship detects an indirect group
+IFC4
+Entity: ''IFCDUCTSEGMENT''
+Requirements:
+PartOf: Prohibited,''IFCZONE'',IFCRELASSIGNSTOGROUP
 ```
 
 ### A required facet checks all parameters as normal
