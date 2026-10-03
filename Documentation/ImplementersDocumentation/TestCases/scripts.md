@@ -2071,6 +2071,80 @@ Requirements:
 Property: ''Foo_Bar'',''Foo'',IFCLENGTHMEASURE,''2''
 ```
 
+### A restriction on a bounded property requires both bounds within range 1/3
+
+A restriction facet (minInclusive, maxInclusive, minExclusive, maxExclusive) applied to a
+property checks an IfcPropertyBoundedValue by its LowerBoundValue and UpperBoundValue.
+SetPointValue is not considered, as it does not constrain the range of the property.
+Both bounds must lie within the restriction for the specification to pass.
+
+``` ids property/pass-a_restriction_on_a_bounded_property_requires_both_bounds_within_range_1_3.ids
+A restriction on a bounded property requires both bounds within range 1/3
+Entity: ''IFCWALL''
+Requirements:
+Property: ''Foo_Bar'',''Foo'',IFCLENGTHMEASURE,xs:double MinExclusive(''20'') MaxInclusive(''40'')
+```
+
+### A restriction on a bounded property requires both bounds within range 2/3
+
+The lower bound sits exactly on the excluded end of the restriction, so it fails.
+
+``` ids property/fail-a_restriction_on_a_bounded_property_requires_both_bounds_within_range_2_3.ids
+A restriction on a bounded property requires both bounds within range 2/3
+Entity: ''IFCWALL''
+Requirements:
+Property: ''Foo_Bar'',''Foo'',IFCLENGTHMEASURE,xs:double MinExclusive(''20'') MaxInclusive(''40'')
+```
+
+### A restriction on a bounded property requires both bounds within range 3/3
+
+The upper bound sits exactly on the included end of the restriction, so it passes.
+
+``` ids property/pass-a_restriction_on_a_bounded_property_requires_both_bounds_within_range_3_3.ids
+A restriction on a bounded property requires both bounds within range 3/3
+Entity: ''IFCWALL''
+Requirements:
+Property: ''Foo_Bar'',''Foo'',IFCLENGTHMEASURE,xs:double MinExclusive(''20'') MaxInclusive(''40'')
+```
+
+### A one sided restriction on a bounded property requires the matching bound 1/3
+
+When a restriction only constrains one end (here minInclusive), only the corresponding
+bound of the IfcPropertyBoundedValue needs to be present and within range. The unconstrained
+end may be absent.
+
+``` ids property/pass-a_one_sided_restriction_on_a_bounded_property_requires_the_matching_bound_1_3.ids
+A one sided restriction on a bounded property requires the matching bound 1/3
+Entity: ''IFCWALL''
+Requirements:
+Property: ''Foo_Bar'',''Foo'',IFCLENGTHMEASURE,xs:double MinInclusive(''20'')
+```
+
+### A one sided restriction on a bounded property requires the matching bound 2/3
+
+The constrained end (LowerBoundValue) is missing, so the specification fails even though an
+UpperBoundValue is present.
+
+``` ids property/fail-a_one_sided_restriction_on_a_bounded_property_requires_the_matching_bound_2_3.ids
+A one sided restriction on a bounded property requires the matching bound 2/3
+Entity: ''IFCWALL''
+Requirements:
+Property: ''Foo_Bar'',''Foo'',IFCLENGTHMEASURE,xs:double MinInclusive(''20'')
+```
+
+### A one sided restriction on a bounded property requires the matching bound 3/3
+
+Only a SetPointValue is present, with neither a LowerBoundValue nor an UpperBoundValue.
+SetPointValue is excluded from restriction checking, so this fails even though its value
+would otherwise satisfy the restriction.
+
+``` ids property/fail-a_one_sided_restriction_on_a_bounded_property_requires_the_matching_bound_3_3.ids
+A one sided restriction on a bounded property requires the matching bound 3/3
+Entity: ''IFCWALL''
+Requirements:
+Property: ''Foo_Bar'',''Foo'',IFCLENGTHMEASURE,xs:double MinInclusive(''20'')
+```
+
 ### Any matching value in a list property will pass 1/3
 
 ``` ids property/pass-any_matching_value_in_a_list_property_will_pass_1_3.ids
