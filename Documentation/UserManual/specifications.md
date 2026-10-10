@@ -28,6 +28,7 @@ A **Facet** describes its information precisely using fixed **Facet Parameters**
 When a **Facet** is used in the **Applicability** section, it describes the information that we use to identify the relevant parts of the model.
 
 When a **Facet** is used in the **Requirements** section, it describes the information constraints that the model parts must fulfill to comply with the **Specification**.
+Each facet in the requirements can be enriched with an optional `instructions` text to help end-users complete the model.
 
 ![IDS Structure](Graphics/ids-structure.png)
 
