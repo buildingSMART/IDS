@@ -402,6 +402,8 @@ Columns of the table determine the validity of the type depending on the schema 
 
 Please note that [IFCSTRIPPEDOPTIONAL](https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcStrippedOptional.htm) is a special data type that should never be instantiated, but it is listed here for schema tolerance reasons.
 
+`IFCCOMPOUNDPLANEANGLEMEASURE` and `IFCCOMPLEXNUMBER` are intentionally absent from this table. Unlike every other measure, both are declared as aggregates in the IFC schema (`IfcCompoundPlaneAngleMeasure` is a `LIST [3:4] OF INTEGER` holding degrees, minutes, seconds and optionally millionths of a second; `IfcComplexNumber` is an `ARRAY [1:2] OF REAL`), so neither reduces to the single scalar value an `xs:restriction` requires and no `xs:base` type applies. Their data type can still be required on a property facet, for example `dataType="IFCCOMPOUNDPLANEANGLEMEASURE"`, to assert that a property exists with the correct IFC type. Only value level restriction is unsupported for these two.
+
 ## XML base types
 
 The list of valid XML base types for the `base` attribute of `xs:restriction`, the associated regex expression to check for the validity of string representation, and the allowed nodes inside the `xs:restriction` are as follows:
