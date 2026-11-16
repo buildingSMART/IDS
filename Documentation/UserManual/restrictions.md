@@ -1,6 +1,6 @@
 # Complex restrictions
 
-When specifying a **Facet Parameter**, you may either specify a **Simple Value** or a **Complex Restriction**. A **Simple Value** may be text, a number, or a boolean (TRUE / FALSE). In contrast, a **Complex Restriction** may represent pick lists of valid values, naming schemes and conventions, numeric ranges, or more. A restriction may be specified in four different ways:
+When specifying a **Facet Parameter**, you may either specify a **Simple Value** or a **Complex Restriction**. A **Simple Value** may be text, a number, or a boolean ("true" / "false", in lowercase). In contrast, a **Complex Restriction** may represent pick lists of valid values, naming schemes and conventions, numeric ranges, or more. A restriction may be specified in four different ways:
 
 - Enumeration
 - Pattern
@@ -13,7 +13,7 @@ An **Enumeration** restriction means that the value must be one of a list of all
 
 Numbers may also be specified as a list. For example, you may specify that a concrete strength grade may be either "25", "30", "35, or "40". If the user has the value of "30", then that will comply with your **Enumeration**. However, if they choose "31", then it does not.
 
-Booleans may also be specified, such as "TRUE" or "FALSE". However, it is generally meaningless to specify a boolean as an enumeration because the nature of a boolean implies that the user always has to choose either "TRUE" or "FALSE".
+Booleans may also be specified, such as "true" or "false". However, it is generally meaningless to specify a boolean as an enumeration because the nature of a boolean implies that the user always has to choose either "true" or "false".
 
 Note that even if you specify a list of allowed values, the user can still only choose one value from that list.
 
