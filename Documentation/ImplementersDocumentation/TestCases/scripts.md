@@ -2664,7 +2664,7 @@ Optional
 IFC4
 Entity: ''IFCWALLTYPE''
 Requirements:
-Property: ''Pset_WallCommon'',''FireRating'',IFCLABEL,Pattern(''(-|[0-9]{2,3})\/(-|[0-9]{2,3})\/(-|[0-9]{2,3})'')
+Property: ''Pset_WallCommon'',''FireRating'',IFCLABEL,Pattern(''(-|[0-9]{2,3})/(-|[0-9]{2,3})/(-|[0-9]{2,3})'')
 ```
 
 ## restriction
