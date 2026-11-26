@@ -1433,6 +1433,16 @@ Material: ''Bar''
 
 ## partof
 
+### A default (no-relation) predefined type may specify USERDEFINED itself
+
+``` ids partof/pass-a_default__no_relation__predefined_type_may_specify_userdefined_itself.ids
+A default (no-relation) predefined type may specify USERDEFINED itself
+IFC4
+Entity: ''IFCELEMENTASSEMBLY''
+Requirements:
+PartOf: ''IFCSPACE'',''USERDEFINED''
+```
+
 ### A group entity must match exactly 1/2
 
 ``` ids partof/fail-a_group_entity_must_match_exactly_1_2.ids
@@ -1497,6 +1507,26 @@ Requirements:
 PartOf: Pattern(''.*''),IFCRELASSIGNSTOGROUP
 ```
 
+### A prohibited container predefined type check fails a user-defined match
+
+``` ids partof/fail-a_prohibited_container_predefined_type_check_fails_a_user_defined_match.ids
+A prohibited container predefined type check fails a user-defined match
+IFC4
+Entity: ''IFCELEMENTASSEMBLY''
+Requirements:
+PartOf: Prohibited,''IFCSPACE'',''USERDEFINED'',IFCRELCONTAINEDINSPATIALSTRUCTURE
+```
+
+### A prohibited default (no-relation) predefined type check fails a user-defined match
+
+``` ids partof/fail-a_prohibited_default__no_relation__predefined_type_check_fails_a_user_defined_match.ids
+A prohibited default (no-relation) predefined type check fails a user-defined match
+IFC4
+Entity: ''IFCELEMENTASSEMBLY''
+Requirements:
+PartOf: Prohibited,''IFCSPACE'',''USERDEFINED''
+```
+
 ### A prohibited facet returns the opposite of a required facet
 
 ``` ids partof/fail-a_prohibited_facet_returns_the_opposite_of_a_required_facet.ids
@@ -1504,6 +1534,16 @@ A prohibited facet returns the opposite of a required facet
 Entity: ''IFCWALL''
 Requirements:
 PartOf: Prohibited,Pattern(''.*''),IFCRELAGGREGATES
+```
+
+### A prohibited nest predefined type check fails a user-defined match
+
+``` ids partof/fail-a_prohibited_nest_predefined_type_check_fails_a_user_defined_match.ids
+A prohibited nest predefined type check fails a user-defined match
+IFC4
+Entity: ''IFCDISCRETEACCESSORY''
+Requirements:
+PartOf: Prohibited,''IFCFURNITURE'',''USERDEFINED'',IFCRELNESTS
 ```
 
 ### A required facet checks all parameters as normal
@@ -1688,6 +1728,16 @@ Requirements:
 PartOf: ''IFCBUILDING'',IFCRELAGGREGATES
 ```
 
+### The container predefined type may specify USERDEFINED itself
+
+``` ids partof/pass-the_container_predefined_type_may_specify_userdefined_itself.ids
+The container predefined type may specify USERDEFINED itself
+IFC4
+Entity: ''IFCELEMENTASSEMBLY''
+Requirements:
+PartOf: ''IFCSPACE'',''USERDEFINED'',IFCRELCONTAINEDINSPATIALSTRUCTURE
+```
+
 ### The container predefined type must match exactly 1/2
 
 ``` ids partof/fail-the_container_predefined_type_must_match_exactly_1_2.ids
@@ -1725,6 +1775,16 @@ IFC4
 Entity: ''IFCDISCRETEACCESSORY''
 Requirements:
 PartOf: ''IFCFURNITURE'',IFCRELNESTS
+```
+
+### The nest predefined type may specify USERDEFINED itself
+
+``` ids partof/pass-the_nest_predefined_type_may_specify_userdefined_itself.ids
+The nest predefined type may specify USERDEFINED itself
+IFC4
+Entity: ''IFCDISCRETEACCESSORY''
+Requirements:
+PartOf: ''IFCFURNITURE'',''USERDEFINED'',IFCRELNESTS
 ```
 
 ### The nest predefined type must match exactly 1/2
