@@ -80,6 +80,12 @@ the following interpretation applies:
 | 0         | unbounded | **optional**   | Walls with IsExternal property _are optional_ in the model, if any such wall is present, they must all have fire rating property   |
 | 0         | 0         | **prohibited** | No wall with IsExternal property should be found in the model, requirements are ignored in the verification of models              |
 
+When evaluating a specification against a model, applicability cardinality determines both whether matching elements are expected and how requirement checks apply:
+
+- **Required (`1` to `unbounded`):** At least one matching element must exist in the model, and every matching element must satisfy the specification's requirements. If no matching elements exist, the specification fails.
+- **Optional (`0` to `unbounded`):** Matching elements do not need to exist in the model. If matching elements are present, they must satisfy the specification's requirements; if none are present, the specification does not fail due to missing applicable elements.
+- **Prohibited (`0` to `0`):** Matching elements must not exist in the model. If any matching element is found, the specification fails regardless of the requirements.
+
 ### Cardinality of requirements
 
 Individual requirement facets may also specify whether they are **Required**, **Optional**, or **Prohibited**.
